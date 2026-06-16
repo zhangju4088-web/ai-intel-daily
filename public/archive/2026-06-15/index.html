@@ -1,0 +1,1101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 情报日报 2026-06-15</title>
+  <style>
+    :root {
+      --bg: #050912;
+      --panel: rgba(7, 17, 32, .82);
+      --panel-strong: rgba(10, 24, 44, .94);
+      --text: #e7f1ff;
+      --muted: #8da3bd;
+      --line: rgba(118, 154, 190, .22);
+      --line-strong: rgba(96, 214, 255, .30);
+      --cyan: #5ee7ff;
+      --cyan-soft: rgba(94, 231, 255, .10);
+      --green: #60f0b7;
+      --violet: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(20, 184, 166, .16), transparent 34%),
+        radial-gradient(circle at 80% 12%, rgba(59, 130, 246, .14), transparent 30%),
+        linear-gradient(180deg, #06111f 0%, #050912 52%, #03060b 100%);
+      color: var(--text);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+    #digital-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+    }
+    .grid-glow {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(94, 231, 255, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(94, 231, 255, .035) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(4, 9, 18, .82);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(14px);
+    }
+    .head {
+      padding: 18px 0 12px;
+      display: grid;
+      gap: 12px;
+    }
+    .topline {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    h1 {
+      margin: 0 0 4px;
+      font-size: 26px;
+      line-height: 1.18;
+      letter-spacing: 0;
+    }
+    .sub { color: var(--muted); font-size: 13px; }
+    .stats { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
+    .stat {
+      min-height: 28px;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: #b9d4ef;
+      background: rgba(9, 22, 40, .62);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .search {
+      width: 100%;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 11px;
+      color: var(--text);
+      background: rgba(8, 18, 32, .76);
+      font-size: 14px;
+      outline: none;
+    }
+    .search::placeholder { color: #6f849d; }
+    .search:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(94, 231, 255, .12); }
+    .tabs, .dates {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: thin;
+    }
+    .tab, .date-link {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(8, 18, 32, .72);
+      color: #b9d4ef;
+      min-height: 32px;
+      padding: 6px 10px;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .tab[aria-selected="true"], .date-link.active {
+      border-color: var(--cyan);
+      color: #fff;
+      background: var(--cyan-soft);
+    }
+    main { padding: 18px 0 40px; }
+    .view { display: none; }
+    .view.active { display: block; }
+    .view-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 8px 0 10px;
+    }
+    h2 { margin: 0; font-size: 19px; letter-spacing: 0; }
+    .count { color: var(--muted); font-size: 13px; }
+    .list { display: flex; flex-direction: column; gap: 8px; }
+    .item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow: hidden;
+    }
+    .item[data-hidden="true"] { display: none; }
+    .item[open] { border-color: var(--line-strong); background: var(--panel-strong); }
+    .item summary {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      cursor: pointer;
+      list-style: none;
+    }
+    .item summary::-webkit-details-marker { display: none; }
+    .score {
+      width: 40px;
+      height: 26px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      border: 1px solid rgba(94, 231, 255, .30);
+      background: var(--cyan-soft);
+      color: var(--cyan);
+      font-weight: 800;
+      font-size: 12px;
+    }
+    .title {
+      min-width: 0;
+      font-size: 16px;
+      font-weight: 680;
+      line-height: 1.36;
+      overflow-wrap: anywhere;
+    }
+    .side {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
+    }
+    .body { padding: 0 12px 12px 66px; color: #cfe0f2; }
+    .summary { margin: 0; color: #dbeafe; }
+    .why { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .badge {
+      display: inline-flex;
+      border: 1px solid rgba(141, 163, 189, .24);
+      border-radius: 999px;
+      padding: 2px 8px;
+      color: #a9bdd3;
+      font-size: 12px;
+    }
+    .points { margin: 10px 0 0; padding-left: 18px; color: #c5d5e8; font-size: 14px; }
+    .points li { margin: 3px 0; }
+    .links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+    .links a {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      padding: 4px 9px;
+      border: 1px solid rgba(167, 139, 250, .36);
+      border-radius: 999px;
+      background: rgba(88, 54, 168, .18);
+      color: #ddd6fe;
+      text-decoration: none;
+      font-size: 13px;
+    }
+    .empty {
+      padding: 16px;
+      border: 1px dashed var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: rgba(8, 18, 32, .52);
+    }
+    .hidden-json { display: none; }
+    @media (max-width: 720px) {
+      .wrap { padding: 0 14px; }
+      .topline { align-items: flex-start; flex-direction: column; }
+      .stats { justify-content: flex-start; }
+      h1 { font-size: 23px; }
+      .item summary { grid-template-columns: 40px minmax(0, 1fr); }
+      .side { grid-column: 2; }
+      .body { padding: 0 12px 12px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <canvas id="digital-bg" aria-hidden="true"></canvas>
+  <div class="grid-glow" aria-hidden="true"></div>
+  <header>
+    <div class="wrap head">
+      <div class="topline">
+        <div>
+          <h1>AI 情报日报 2026-06-15</h1>
+          <div class="sub">主页只看今日选题池。切换栏目查看对应情报。</div>
+        </div>
+        <div class="stats">
+          <span class="stat">候选 30</span>
+          <span class="stat">去重 30</span>
+          <span class="stat">事件 30</span>
+          <span class="stat">精选 29</span>
+        </div>
+      </div>
+      <input id="searchInput" class="search" type="search" placeholder="搜索当前视图">
+      <nav class="tabs" aria-label="栏目">
+        <button class="tab" type="button" data-view="topics" aria-selected="true">今日选题池</button>
+        <button class="tab" type="button" data-view="models">大模型动态</button><button class="tab" type="button" data-view="industry">AI行业资讯</button><button class="tab" type="button" data-view="geopolitics">国际形势影响</button><button class="tab" type="button" data-view="finance">国际金融</button>
+        <button class="tab" type="button" data-view="archive">归档</button>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      
+    <section class="view active" data-view="topics">
+      <div class="view-head">
+        <h2>今日选题池</h2>
+        <span class="count">显示 <span data-visible-count>10</span> / 10</span>
+      </div>
+      <div class="list">
+            <details class="item" data-search="从基准测试看Agentic AI基础设施选型：为什么能效比算力更重要？ Agentic AI正成为企业部署重点，但缺乏标准化性能评估。AgentPerf基准为基础设施选型提供了关键参考，NVIDIA的领先性能将影响企业采购决策，并推动代理AI应用的规模化落地。 NVIDIA GB300 NVL72在AgentPerf基准中每兆瓦运行代理数比Hopper高20倍。 单纯罗列NVIDIA产品参数，缺乏对基准测试方法和行业意义的深度解读。" data-hidden="false">
+              <summary>
+                <span class="score">1</span>
+                <span class="title">从基准测试看Agentic AI基础设施选型：为什么能效比算力更重要？</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">Agentic AI正成为企业部署重点，但缺乏标准化性能评估。AgentPerf基准为基础设施选型提供了关键参考，NVIDIA的领先性能将影响企业采购决策，并推动代理AI应用的规模化落地。</p>
+                <p class="why">NVIDIA GB300 NVL72在AgentPerf基准中每兆瓦运行代理数比Hopper高20倍。</p>
+                <p class="why"><strong>差异化：</strong>单纯罗列NVIDIA产品参数，缺乏对基准测试方法和行业意义的深度解读。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="从安全认证角度解读NVIDIA Halos OS如何解决Robotaxi规模化痛点，可结合合作案例分析其全球布局策略。 Robotaxi商业化面临的最大障碍是安全认证和公众信任。Halos OS提供了一个经过认证的、可复用的安全基础，可能降低行业准入门槛，加速全球Robotaxi部署。同时，NVIDIA通过开放框架（如TensorRT Edge-LLM）和合作案例，巩固了其在自动驾驶计算平台的主导地位。 NVIDIA发布Halos OS，为自动驾驶出租车提供从底层OS到AI安全护栏的全栈安全方案。 避免单纯罗列技术参数或重复官方宣传语，应聚焦安全对商业化的实际意义。" data-hidden="false">
+              <summary>
+                <span class="score">2</span>
+                <span class="title">从安全认证角度解读NVIDIA Halos OS如何解决Robotaxi规模化痛点，可结合合作案例分析其全球布局策略。</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">Robotaxi商业化面临的最大障碍是安全认证和公众信任。Halos OS提供了一个经过认证的、可复用的安全基础，可能降低行业准入门槛，加速全球Robotaxi部署。同时，NVIDIA通过开放框架（如TensorRT Edge-LLM）和合作案例，巩固了其在自动驾驶计算平台的主导地位。</p>
+                <p class="why">NVIDIA发布Halos OS，为自动驾驶出租车提供从底层OS到AI安全护栏的全栈安全方案。</p>
+                <p class="why"><strong>差异化：</strong>避免单纯罗列技术参数或重复官方宣传语，应聚焦安全对商业化的实际意义。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">3</span>
+                <span class="title">从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="从能力、成本和生态角度解读：Introducing the OpenAI Partner Network 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">4</span>
+                <span class="title">从能力、成本和生态角度解读：Introducing the OpenAI Partner Network</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="云游戏促销策略分析：NVIDIA如何通过折扣和独家内容抢占市场？ 云游戏市场持续增长，NVIDIA通过大幅折扣和独家内容巩固GeForce NOW的竞争力，同时展示其硬件升级和跨平台能力，对游戏玩家和行业格局有直接影响。 NVIDIA GeForce NOW夏季促销，年费最高省70美元，并新增《激战3》等8款游戏。 单纯罗列促销细节或游戏列表，缺乏行业视角。" data-hidden="false">
+              <summary>
+                <span class="score">5</span>
+                <span class="title">云游戏促销策略分析：NVIDIA如何通过折扣和独家内容抢占市场？</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">云游戏市场持续增长，NVIDIA通过大幅折扣和独家内容巩固GeForce NOW的竞争力，同时展示其硬件升级和跨平台能力，对游戏玩家和行业格局有直接影响。</p>
+                <p class="why">NVIDIA GeForce NOW夏季促销，年费最高省70美元，并新增《激战3》等8款游戏。</p>
+                <p class="why"><strong>差异化：</strong>单纯罗列促销细节或游戏列表，缺乏行业视角。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="从能力、成本和生态角度解读：Which Models Perform Better in Inheritance Reasoning? 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">6</span>
+                <span class="title">从能力、成本和生态角度解读：Which Models Perform Better in Inheritance Reasoning?</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">7</span>
+                <span class="title">从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="从能力、成本和生态角度解读：A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">8</span>
+                <span class="title">从能力、成本和生态角度解读：A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="从能力、成本和生态角度解读：UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">9</span>
+                <span class="title">从能力、成本和生态角度解读：UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+              </div>
+            </details>
+            
+            <details class="item" data-search="从能力、成本和生态角度解读：History of the Muddy Children Puzzle 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">10</span>
+                <span class="title">从能力、成本和生态角度解读：History of the Muddy Children Puzzle</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+              </div>
+            </details>
+            </div>
+    </section>
+    
+      
+    <section class="view" data-view="models">
+      <div class="view-head">
+        <h2>大模型动态</h2>
+        <span class="count">显示 <span data-visible-count>15</span> / 15</span>
+      </div>
+      <div class="list">
+    <details class="item" data-search="大模型｜NVIDIA Blog：NVIDIA Blackwell在首个Agentic AI基准测试中领先 NVIDIA Blackwell在首个Agentic AI基准测试中领先 NVIDIA GB300 NVL72在AgentPerf基准中每兆瓦运行代理数比Hopper高20倍。 2026年6月12日，NVIDIA发布博客称，其Blackwell Ultra NVL72平台在Artificial Analysis推出的首个Agentic AI基准测试AgentPerf中取得领先性能。该基准测试基于真实编码代理工作负载，衡量系统同时支持代理任务的数量和效率。结果显示，NVIDIA GB300 NVL72每兆瓦可运行比NVIDIA HGX H200多20倍的代理。性能优势源于全栈协同设计，包括72 GPU的机架级系统、CUDA内核重叠通信与计算、TensorRT LLM优化等。测试使用DeepSeek V4 Pro模型。合作伙伴Baseten、DeepInfra和Together AI已在Blackwell上部署代理应用。NVIDIA Vera Rubin架构已全面投产。 Agentic AI正成为企业部署重点，但缺乏标准化性能评估。AgentPerf基准为基础设施选型提供了关键参考，NVIDIA的领先性能将影响企业采购决策，并推动代理AI应用的规模化落地。 从基准测试看Agentic AI基础设施选型：为什么能效比算力更重要？ 单纯罗列NVIDIA产品参数，缺乏对基准测试方法和行业意义的深度解读。 AgentPerf是首个针对Agentic AI的行业基准，由Artificial Analysis推出。 NVIDIA GB300 NVL72每兆瓦可运行比H200多20倍的代理。 基准测试基于真实编码代理轨迹，模拟工具调用延迟。 DeepSeek V4 Pro作为测试模型，代表前沿MoE模型。 NVIDIA Vera Rubin架构已全面投产。 NVIDIA Blog official NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark" data-hidden="false">
+      <summary>
+        <span class="score">85.0</span>
+        <span class="title">大模型｜NVIDIA Blog：NVIDIA Blackwell在首个Agentic AI基准测试中领先</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">NVIDIA GB300 NVL72在AgentPerf基准中每兆瓦运行代理数比Hopper高20倍。</p>
+        <p class="why">Agentic AI正成为企业部署重点，但缺乏标准化性能评估。AgentPerf基准为基础设施选型提供了关键参考，NVIDIA的领先性能将影响企业采购决策，并推动代理AI应用的规模化落地。</p>
+        <div class="badges">
+          <span class="badge">official</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>AgentPerf是首个针对Agentic AI的行业基准，由Artificial Analysis推出。</li><li>NVIDIA GB300 NVL72每兆瓦可运行比H200多20倍的代理。</li><li>基准测试基于真实编码代理轨迹，模拟工具调用延迟。</li><li>DeepSeek V4 Pro作为测试模型，代表前沿MoE模型。</li></ul>
+        <p class="why"><strong>选题角度：</strong>从基准测试看Agentic AI基础设施选型：为什么能效比算力更重要？</p>
+        <p class="why"><strong>避开同质化：</strong>单纯罗列NVIDIA产品参数，缺乏对基准测试方法和行业意义的深度解读。</p>
+        <div class="links"><a href="https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/" target="_blank" rel="noopener noreferrer">NVIDIA Blog * · official</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.CL：The Coin Flip Judge? Reliability and... The Coin Flip Judge? Reliability and... arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward... arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward models, and populate public leaderboards, but its run-to-run reliability remains under-characterized. We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini and GPT-4.1-mini), with 50 pairwise trials and 50 pointwise trials per question, supplemented by temperature and prompt-sensitivity ablations. Across judges, p... 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward... We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini... Across judges, pairwise preferences flip on average 13.6% of the time, with 28% of questions exceeding a 20% flip rat... GPT-4o-mini also exhibits a significant first-position bias (72% A-majority, p = 0.024). At the same time, mean pointwise score gaps are small (0.19--0.36 on a 10-point scale) and not statistically signific... arXiv cs.CL research The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation" data-hidden="false">
+      <summary>
+        <span class="score">78.2</span>
+        <span class="title">大模型｜arXiv cs.CL：The Coin Flip Judge? Reliability and...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...</li><li>We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini...</li><li>Across judges, pairwise preferences flip on average 13.6% of the time, with 28% of questions exceeding a 20% flip rat...</li><li>GPT-4o-mini also exhibits a significant first-position bias (72% A-majority, p = 0.024).</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13685" target="_blank" rel="noopener noreferrer">arXiv cs.CL * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜OpenAI News：Introducing the OpenAI Partner Network Introducing the OpenAI Partner Network OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Introducing the OpenAI Partner Network 避免只复述消息本身，优先补充产业、政策或商业影响。 OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... OpenAI News official Introducing the OpenAI Partner Network" data-hidden="false">
+      <summary>
+        <span class="score">76.8</span>
+        <span class="title">大模型｜OpenAI News：Introducing the OpenAI Partner Network</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">official</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：Introducing the OpenAI Partner Network</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://openai.com/index/introducing-openai-partner-network" target="_blank" rel="noopener noreferrer">OpenAI News * · official</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.CL：Which Models Perform Better in Inher... Which Models Perform Better in Inher... arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh... arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Shared Task on Arabic Islamic inheritance reasoning. The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation, multi-step reasoning, and precise numerical computation. We compare \textit{commercial} and \textit{open-source} models under a unified prompting strategy to assess their effectiveness in structured legal reason... 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Which Models Perform Better in Inheritance Reasoning? 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh... The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation,... We compare \textit{commercial} and \textit{open-source} models under a unified prompting strategy to assess their eff... \\ Our results show a clear gap in reliability between the two model families. Commercial models demonstrate stronger performance in identifying eligible heirs, applying exclusion rules, and maint... arXiv cs.CL research Which Models Perform Better in Inheritance Reasoning?" data-hidden="false">
+      <summary>
+        <span class="score">73.6</span>
+        <span class="title">大模型｜arXiv cs.CL：Which Models Perform Better in Inher...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...</li><li>The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation,...</li><li>We compare \textit{commercial} and \textit{open-source} models under a unified prompting strategy to assess their eff...</li><li>\\ Our results show a clear gap in reliability between the two model families.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：Which Models Perform Better in Inheritance Reasoning?</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13751" target="_blank" rel="noopener noreferrer">arXiv cs.CL * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜OpenAI News：New OpenAI Academy courses for the n... New OpenAI Academy courses for the n... OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work 避免只复述消息本身，优先补充产业、政策或商业影响。 OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... OpenAI News official New OpenAI Academy courses for the next era of work" data-hidden="false">
+      <summary>
+        <span class="score">70.8</span>
+        <span class="title">大模型｜OpenAI News：New OpenAI Academy courses for the n...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">official</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://openai.com/index/academy-courses-applying-ai-at-work" target="_blank" rel="noopener noreferrer">OpenAI News * · official</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.AI：A Deep Reinforcement Learning (DRL)-... A Deep Reinforcement Learning (DRL)-... arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and... arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and service settings but remains computationally challenging as the number of jobs and machines increases. While exact methods quickly become intractable, classical dispatching rules and metaheuristics may require substantial tuning to maintain solution quality at large scales. This study develops a Transformer-based scheduling policy for OSSP using an encoder-decoder architecture... 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and... While exact methods quickly become intractable, classical dispatching rules and metaheuristics may require substantia... This study develops a Transformer-based scheduling policy for OSSP using an encoder-decoder architecture with multi-h... The model is trained on Taillard benchmark instances (4x4, 5x5, 7x7, and 10x10) using only the processing-time matrix... To evaluate scalability, the trained policy is applied without retraining to randomly generated instances from 40x40... arXiv cs.AI research A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem" data-hidden="false">
+      <summary>
+        <span class="score">69.0</span>
+        <span class="title">大模型｜arXiv cs.AI：A Deep Reinforcement Learning (DRL)-...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and...</li><li>While exact methods quickly become intractable, classical dispatching rules and metaheuristics may require substantia...</li><li>This study develops a Transformer-based scheduling policy for OSSP using an encoder-decoder architecture with multi-h...</li><li>The model is trained on Taillard benchmark instances (4x4, 5x5, 7x7, and 10x10) using only the processing-time matrix...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13682" target="_blank" rel="noopener noreferrer">arXiv cs.AI * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.AI：UP-NRPA: User Portrait based Nested... UP-NRPA: User Portrait based Nested... arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method... arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning methods struggle to dynamically adapt to diverse user characteristics, this paper proposes a User Portrait based Nested Rollout Policy Adaptation (UP-NRPA) online framework with Large Language Models. In contrast to conventional approaches dependent on model training and require offline reinforcement learning policy models for user groups, UP-NRPA enables dynamic customization of dia... 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method... In contrast to conventional approaches dependent on model training and require offline reinforcement learning policy... This is achieved by leveraging real-time user feedback alongside personality, preferences, and objectives mapped from... In collaborative and non-collaborative dialogue benchmarks, UP-NRPA demonstrated considerable benefits, achieving an... Particularly in negotiation tasks, the sale-to-list ratio (SL) increased by 56.41%. arXiv cs.AI research UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems" data-hidden="false">
+      <summary>
+        <span class="score">69.0</span>
+        <span class="title">大模型｜arXiv cs.AI：UP-NRPA: User Portrait based Nested...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method...</li><li>In contrast to conventional approaches dependent on model training and require offline reinforcement learning policy...</li><li>This is achieved by leveraging real-time user feedback alongside personality, preferences, and objectives mapped from...</li><li>In collaborative and non-collaborative dialogue benchmarks, UP-NRPA demonstrated considerable benefits, achieving an...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13683" target="_blank" rel="noopener noreferrer">arXiv cs.AI * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.AI：History of the Muddy Children Puzzle History of the Muddy Children Puzzle arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t... arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance that has been inspiring for the development of epistemic logic. Who came up with it first? This is unclear. We trace the origin of the Muddy Children Puzzle through logical and literary publications over the past two centuries. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：History of the Muddy Children Puzzle 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t... Who came up with it first? This is unclear. We trace the origin of the Muddy Children Puzzle through logical and literary publications over the past two centuries. The puzzle inspired a numerous variations such as involving numbers or coloured hats. arXiv cs.AI research History of the Muddy Children Puzzle" data-hidden="false">
+      <summary>
+        <span class="score">69.0</span>
+        <span class="title">大模型｜arXiv cs.AI：History of the Muddy Children Puzzle</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t...</li><li>Who came up with it first?</li><li>This is unclear.</li><li>We trace the origin of the Muddy Children Puzzle through logical and literary publications over the past two centuries.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：History of the Muddy Children Puzzle</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13703" target="_blank" rel="noopener noreferrer">arXiv cs.AI * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.CL：Benchmarking Web Agent Safety under... Benchmarking Web Agent Safety under... arXiv:2606.13686v1 Announce Type: new Abstract: As autonomous web agents are increasingly deployed to perform real-wo... arXiv:2606.13686v1 Announce Type: new Abstract: As autonomous web agents are increasingly deployed to perform real-world tasks, ensuring their safety has become a critical concern. In this work, we study web agent behavior under realistic deceptive interfaces in the e-commerce domain. We introduce WebDecept, a lightweight and configurable plugin framework that enables controlled injection of deceptive interface patterns into existing web environments. Using WebDecept, we instantiate seven dec... 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Benchmarking Web Agent Safety under E-commerce Deceptive Interfaces 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13686v1 Announce Type: new Abstract: As autonomous web agents are increasingly deployed to perform real-wo... In this work, we study web agent behavior under realistic deceptive interfaces in the e-commerce domain. We introduce WebDecept, a lightweight and configurable plugin framework that enables controlled injection of deceptiv... Using WebDecept, we instantiate seven deceptive patterns commonly observed on the open web, including targeted advert... By injecting these patterns into the frontend during task execution, we perform controlled evaluation of multiple mul... arXiv cs.CL research Benchmarking Web Agent Safety under E-commerce Deceptive Interfaces" data-hidden="false">
+      <summary>
+        <span class="score">69.0</span>
+        <span class="title">大模型｜arXiv cs.CL：Benchmarking Web Agent Safety under...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13686v1 Announce Type: new Abstract: As autonomous web agents are increasingly deployed to perform real-wo...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13686v1 Announce Type: new Abstract: As autonomous web agents are increasingly deployed to perform real-wo...</li><li>In this work, we study web agent behavior under realistic deceptive interfaces in the e-commerce domain.</li><li>We introduce WebDecept, a lightweight and configurable plugin framework that enables controlled injection of deceptiv...</li><li>Using WebDecept, we instantiate seven deceptive patterns commonly observed on the open web, including targeted advert...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：Benchmarking Web Agent Safety under E-commerce Deceptive Interfaces</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13686" target="_blank" rel="noopener noreferrer">arXiv cs.CL * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.LG：Can Editing 1 Neuron Fix Repetition... Can Editing 1 Neuron Fix Repetition... arXiv:2606.13705v1 Announce Type: new Abstract: Yes. Can it cure doom loops? Probably not. The Gemma 4 instruction-tu... arXiv:2606.13705v1 Announce Type: new Abstract: Yes. Can it cure doom loops? Probably not. The Gemma 4 instruction-tuned models share a reproducible failure: on long factual enumeration prompts, such as listing every episode of a TV series, the 88 IAU constellations, or the 151 original Pokemon, they collapse into repetition, either a tight verbatim loop or a list whose entries decay onto a single answer. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Can Editing 1 Neuron Fix Repetition Loops in LLMs? 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13705v1 Announce Type: new Abstract: Yes. Can it cure doom loops? Probably not. The Gemma 4 instruction-tuned models share a reproducible failure: on long factual enumeration prompts, such as listi... These loops occur at rates as high as 95% and survive prompt rewording, inference-engine changes, and most sampling a... arXiv cs.LG research Can Editing 1 Neuron Fix Repetition Loops in LLMs?" data-hidden="false">
+      <summary>
+        <span class="score">69.0</span>
+        <span class="title">大模型｜arXiv cs.LG：Can Editing 1 Neuron Fix Repetition...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13705v1 Announce Type: new Abstract: Yes. Can it cure doom loops? Probably not. The Gemma 4 instruction-tu...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13705v1 Announce Type: new Abstract: Yes.</li><li>Can it cure doom loops?</li><li>Probably not.</li><li>The Gemma 4 instruction-tuned models share a reproducible failure: on long factual enumeration prompts, such as listi...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：Can Editing 1 Neuron Fix Repetition Loops in LLMs?</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13705" target="_blank" rel="noopener noreferrer">arXiv cs.LG * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.LG：Efficient On-Device Diffusion LLM In... Efficient On-Device Diffusion LLM In... arXiv:2606.13740v1 Announce Type: new Abstract: Diffusion large language models (dLLMs) accelerate generation by deno... arXiv:2606.13740v1 Announce Type: new Abstract: Diffusion large language models (dLLMs) accelerate generation by denoising multiple tokens in parallel, making them attractive for latency-sensitive mobile inference. However, repeated denoising introduces substantial computation on smartphones. Mobile neural processing units (NPUs) offer high-throughput dense matrix computation, but efficiently exploiting them remains challenging: token commitment shrinks per-block effective workloads, token re... 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Efficient On-Device Diffusion LLM Inference with Mobile NPU 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13740v1 Announce Type: new Abstract: Diffusion large language models (dLLMs) accelerate generation by deno... However, repeated denoising introduces substantial computation on smartphones. Mobile neural processing units (NPUs) offer high-throughput dense matrix computation, but efficiently exploiting them... In this paper, we propose llada.cpp, the first NPU-aware inference framework for accelerating dLLMs on smartphones. llada.cpp aligns block-wise dLLM inference with the execution characteristics of mobile NPUs through three techniques. arXiv cs.LG research Efficient On-Device Diffusion LLM Inference with Mobile NPU" data-hidden="false">
+      <summary>
+        <span class="score">69.0</span>
+        <span class="title">大模型｜arXiv cs.LG：Efficient On-Device Diffusion LLM In...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13740v1 Announce Type: new Abstract: Diffusion large language models (dLLMs) accelerate generation by deno...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13740v1 Announce Type: new Abstract: Diffusion large language models (dLLMs) accelerate generation by deno...</li><li>However, repeated denoising introduces substantial computation on smartphones.</li><li>Mobile neural processing units (NPUs) offer high-throughput dense matrix computation, but efficiently exploiting them...</li><li>In this paper, we propose llada.cpp, the first NPU-aware inference framework for accelerating dLLMs on smartphones.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：Efficient On-Device Diffusion LLM Inference with Mobile NPU</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13740" target="_blank" rel="noopener noreferrer">arXiv cs.LG * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜arXiv cs.LG：High-Frequency Pricing at Scale for... High-Frequency Pricing at Scale for... arXiv:2606.13741v1 Announce Type: new Abstract: This paper presents the design, development, and implementation of a... arXiv:2606.13741v1 Announce Type: new Abstract: This paper presents the design, development, and implementation of a specialized forecast-then-optimize algorithmic pricing tool for sales campaigns in fashion e-commerce. Sales events present unique challenges for pricing including volatile demand patterns, rapid pricing decisions, and the need to balance short-term revenue with long-term profitability. We describe our approach combining daily-resolution demand forecasting using gradient-booste... 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：High-Frequency Pricing at Scale for E-Commerce 避免只复述消息本身，优先补充产业、政策或商业影响。 arXiv:2606.13741v1 Announce Type: new Abstract: This paper presents the design, development, and implementation of a... Sales events present unique challenges for pricing including volatile demand patterns, rapid pricing decisions, and t... We describe our approach combining daily-resolution demand forecasting using gradient-boosted trees with a multi-obje... Our solution addresses key limitations of existing weekly-granularity systems by implementing a forecast-then-optimiz... We validate our approach through 23 A/B tests across 12 markets during 2023-2024 sales campaigns at Zalando, one of E... arXiv cs.LG research High-Frequency Pricing at Scale for E-Commerce" data-hidden="false">
+      <summary>
+        <span class="score">69.0</span>
+        <span class="title">大模型｜arXiv cs.LG：High-Frequency Pricing at Scale for...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">arXiv:2606.13741v1 Announce Type: new Abstract: This paper presents the design, development, and implementation of a...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>arXiv:2606.13741v1 Announce Type: new Abstract: This paper presents the design, development, and implementation of a...</li><li>Sales events present unique challenges for pricing including volatile demand patterns, rapid pricing decisions, and t...</li><li>We describe our approach combining daily-resolution demand forecasting using gradient-boosted trees with a multi-obje...</li><li>Our solution addresses key limitations of existing weekly-granularity systems by implementing a forecast-then-optimiz...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：High-Frequency Pricing at Scale for E-Commerce</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://arxiv.org/abs/2606.13741" target="_blank" rel="noopener noreferrer">arXiv cs.LG * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜OpenAI News：How Preply combines AI and human tut... How Preply combines AI and human tut... Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exe... Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exercises. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：How Preply combines AI and human tutors to personalize learning 避免只复述消息本身，优先补充产业、政策或商业影响。 Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exe... OpenAI News official How Preply combines AI and human tutors to personalize learning" data-hidden="false">
+      <summary>
+        <span class="score">64.8</span>
+        <span class="title">大模型｜OpenAI News：How Preply combines AI and human tut...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exe...</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">official</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exe...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：How Preply combines AI and human tutors to personalize learning</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://openai.com/index/preply" target="_blank" rel="noopener noreferrer">OpenAI News * · official</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜Hugging Face Blog：olmo-eval: An evaluation workbench f... olmo-eval: An evaluation workbench f... olmo-eval: An evaluation workbench for the model development loop olmo-eval: An evaluation workbench for the model development loop 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：olmo-eval: An evaluation workbench for the model development loop 避免只复述消息本身，优先补充产业、政策或商业影响。 olmo-eval: An evaluation workbench for the model development loop Hugging Face Blog research olmo-eval: An evaluation workbench for the model development loop" data-hidden="false">
+      <summary>
+        <span class="score">63.25</span>
+        <span class="title">大模型｜Hugging Face Blog：olmo-eval: An evaluation workbench f...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">olmo-eval: An evaluation workbench for the model development loop</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>olmo-eval: An evaluation workbench for the model development loop</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：olmo-eval: An evaluation workbench for the model development loop</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://huggingface.co/blog/allenai/olmo-eval" target="_blank" rel="noopener noreferrer">Hugging Face Blog * · research</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜Hugging Face Blog：Profiling in PyTorch (Part 2): From... Profiling in PyTorch (Part 2): From... Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP 避免只复述消息本身，优先补充产业、政策或商业影响。 Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP Hugging Face Blog research Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP" data-hidden="false">
+      <summary>
+        <span class="score">57.5</span>
+        <span class="title">大模型｜Hugging Face Blog：Profiling in PyTorch (Part 2): From...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP</p>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
+          <span class="badge">research</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://huggingface.co/blog/torch-mlp-fusion" target="_blank" rel="noopener noreferrer">Hugging Face Blog * · research</a></div>
+      </div>
+    </details>
+    </div>
+    </section>
+    
+    <section class="view" data-view="industry">
+      <div class="view-head">
+        <h2>AI行业资讯</h2>
+        <span class="count">显示 <span data-visible-count>8</span> / 8</span>
+      </div>
+      <div class="list">
+    <details class="item" data-search="AI产业｜NVIDIA Blog：NVIDIA Halos OS：为Robotaxi安全构建基石 NVIDIA Halos OS：为Robotaxi安全构建基石 NVIDIA发布Halos OS，为自动驾驶出租车提供从底层OS到AI安全护栏的全栈安全方案。 NVIDIA于2026年6月10日发布博客，介绍其Halos操作系统（Halos OS），这是NVIDIA Halos全栈安全系统的一部分，旨在为自动驾驶出租车（Robotaxi）提供内建的安全基础。文章指出，Robotaxi行业已从原型进入商业运营，但安全必须从设计之初就融入系统，而非事后添加。Halos OS包含四个核心组件：Halos Core（符合ISO 26262 ASIL D认证的实时操作系统，基于DriveOS）、Halos SDK（标准化传感器和车辆抽象层，简化硬件集成）、Halos Applications（提供确定性安全护栏，包括主动安全功能如AEB、LKA等，并支持端到端AI模型如Alpamago）、以及Halos Infra（云端开发基础设施，包含Halos Safety Evaluation Framework，用于训练、仿真和验证）。文章还提及多个合作案例：Uber与Autobrains在慕尼黑基于DRIVE Hyperion推出Robotaxi；富士康扩大与NVIDIA合作在台湾部署Robotaxi；VinFast与Autobrains合作在东南亚推出L4车辆；HUMAIN在沙特阿拉伯部署DRIVE Hyperion Robotaxi。 Robotaxi商业化面临的最大障碍是安全认证和公众信任。Halos OS提供了一个经过认证的、可复用的安全基础，可能降低行业准入门槛，加速全球Robotaxi部署。同时，NVIDIA通过开放框架（如TensorRT Edge-LLM）和合作案例，巩固了其在自动驾驶计算平台的主导地位。 从安全认证角度解读NVIDIA Halos OS如何解决Robotaxi规模化痛点，可结合合作案例分析其全球布局策略。 避免单纯罗列技术参数或重复官方宣传语，应聚焦安全对商业化的实际意义。 Halos OS是NVIDIA为自动驾驶出租车打造的全栈安全系统，包含Halos Core、SDK、Applications和Infra四部分。 Halos Core已通过ISO 26262 ASIL D认证，提供安全隔离的虚拟化环境。 Halos SDK通过传感器和车辆抽象层简化硬件集成，降低开发成本。 Halos Applications提供确定性安全护栏，并支持端到端AI模型的可解释性。 Halos Safety Evaluation Framework基于330多篇论文和1000多项专利，用于构建可信安全案例。 NVIDIA Blog official For Robotaxis, Safety Must Be Built In, Not Bolted On" data-hidden="false">
+      <summary>
+        <span class="score">85.0</span>
+        <span class="title">AI产业｜NVIDIA Blog：NVIDIA Halos OS：为Robotaxi安全构建基石</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">NVIDIA发布Halos OS，为自动驾驶出租车提供从底层OS到AI安全护栏的全栈安全方案。</p>
+        <p class="why">Robotaxi商业化面临的最大障碍是安全认证和公众信任。Halos OS提供了一个经过认证的、可复用的安全基础，可能降低行业准入门槛，加速全球Robotaxi部署。同时，NVIDIA通过开放框架（如TensorRT Edge-LLM）和合作案例，巩固了其在自动驾驶计算平台的主导地位。</p>
+        <div class="badges">
+          <span class="badge">official</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Halos OS是NVIDIA为自动驾驶出租车打造的全栈安全系统，包含Halos Core、SDK、Applications和Infra四部分。</li><li>Halos Core已通过ISO 26262 ASIL D认证，提供安全隔离的虚拟化环境。</li><li>Halos SDK通过传感器和车辆抽象层简化硬件集成，降低开发成本。</li><li>Halos Applications提供确定性安全护栏，并支持端到端AI模型的可解释性。</li></ul>
+        <p class="why"><strong>选题角度：</strong>从安全认证角度解读NVIDIA Halos OS如何解决Robotaxi规模化痛点，可结合合作案例分析其全球布局策略。</p>
+        <p class="why"><strong>避开同质化：</strong>避免单纯罗列技术参数或重复官方宣传语，应聚焦安全对商业化的实际意义。</p>
+        <div class="links"><a href="https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/" target="_blank" rel="noopener noreferrer">NVIDIA Blog * · official</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="GeForce NOW夏季促销：年费最高省70美元 GeForce NOW夏季促销：年费最高省70美元 NVIDIA GeForce NOW夏季促销，年费最高省70美元，并新增《激战3》等8款游戏。 NVIDIA于2026年6月11日启动GeForce NOW夏季促销，提供12个月Performance会员立减35美元、Ultimate会员立减70美元的限时优惠。Performance会员支持1080p/60fps流式传输，Ultimate会员提供RTX 4080/5080级性能，支持4K、120fps、光线追踪、DLSS和Reflex。促销期间还宣布《激战3》将登陆云平台，现有《激战2》和《激战：重制版》提供限时独家奖励。本周新增8款游戏，包括《Duet Night Abyss》。NVIDIA强调云游戏免安装、跨设备（Linux、Fire TV）等优势，并提及免费升级至Blackwell架构。 云游戏市场持续增长，NVIDIA通过大幅折扣和独家内容巩固GeForce NOW的竞争力，同时展示其硬件升级和跨平台能力，对游戏玩家和行业格局有直接影响。 云游戏促销策略分析：NVIDIA如何通过折扣和独家内容抢占市场？ 单纯罗列促销细节或游戏列表，缺乏行业视角。 GeForce NOW夏季促销：12个月Performance会员省35美元，Ultimate会员省70美元。 《激战3》即将登陆GeForce NOW，现可加入愿望单。 《激战2》和《激战：重制版》提供限时独家奖励，Premium会员即日起可领，所有会员6月12日起可领。 本周新增8款游戏，包括《Duet Night Abyss》。 Ultimate会员享受RTX 4080/5080级性能，支持4K、120fps、光线追踪、DLSS和Reflex。 NVIDIA Blog official Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings" data-hidden="false">
+      <summary>
+        <span class="score">75.0</span>
+        <span class="title">GeForce NOW夏季促销：年费最高省70美元</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">NVIDIA GeForce NOW夏季促销，年费最高省70美元，并新增《激战3》等8款游戏。</p>
+        <p class="why">云游戏市场持续增长，NVIDIA通过大幅折扣和独家内容巩固GeForce NOW的竞争力，同时展示其硬件升级和跨平台能力，对游戏玩家和行业格局有直接影响。</p>
+        <div class="badges">
+          <span class="badge">official</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>GeForce NOW夏季促销：12个月Performance会员省35美元，Ultimate会员省70美元。</li><li>《激战3》即将登陆GeForce NOW，现可加入愿望单。</li><li>《激战2》和《激战：重制版》提供限时独家奖励，Premium会员即日起可领，所有会员6月12日起可领。</li><li>本周新增8款游戏，包括《Duet Night Abyss》。</li></ul>
+        <p class="why"><strong>选题角度：</strong>云游戏促销策略分析：NVIDIA如何通过折扣和独家内容抢占市场？</p>
+        <p class="why"><strong>避开同质化：</strong>单纯罗列促销细节或游戏列表，缺乏行业视角。</p>
+        <div class="links"><a href="https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/" target="_blank" rel="noopener noreferrer">NVIDIA Blog * · official</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="AI产业｜TechCrunch AI：The AI layoff wave is becoming a pow... The AI layoff wave is becoming a pow... What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small c... What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small cohort of AI insiders is becoming wealthy on a scale that&#x27;s hard to comprehend. 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：The AI layoff wave is becoming a powder keg 避免只复述消息本身，优先补充产业、政策或商业影响。 What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small c... TechCrunch AI media The AI layoff wave is becoming a powder keg" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">AI产业｜TechCrunch AI：The AI layoff wave is becoming a pow...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small c...</p>
+        <p class="why">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small c...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从商业化和产业竞争角度解读：The AI layoff wave is becoming a powder keg</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/" target="_blank" rel="noopener noreferrer">TechCrunch AI * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="AI产业｜TechCrunch AI：As AI companies race to go public, w... As AI companies race to go public, w... Startups are trying to &quot;ride that SpaceX IPO wave.&quot; Startups are trying to &quot;ride that SpaceX IPO wave.&quot; 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：As AI companies race to go public, who else is along for the ride? 避免只复述消息本身，优先补充产业、政策或商业影响。 Startups are trying to &quot;ride that SpaceX IPO wave.&quot; TechCrunch AI media As AI companies race to go public, who else is along for the ride?" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">AI产业｜TechCrunch AI：As AI companies race to go public, w...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">Startups are trying to &quot;ride that SpaceX IPO wave.&quot;</p>
+        <p class="why">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Startups are trying to &quot;ride that SpaceX IPO wave.&quot;</li></ul>
+        <p class="why"><strong>选题角度：</strong>从商业化和产业竞争角度解读：As AI companies race to go public, who else is along for the ride?</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/" target="_blank" rel="noopener noreferrer">TechCrunch AI * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="AI产业｜BBC Technology：When will social media ban start, an... When will social media ban start, an... The measures will see apps including TikTok and Snapchat blocked for UK teens early in 2027. The measures will see apps including TikTok and Snapchat blocked for UK teens early in 2027. 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：When will social media ban start, and which platforms are affected? 避免只复述消息本身，优先补充产业、政策或商业影响。 The measures will see apps including TikTok and Snapchat blocked for UK teens early in 2027. BBC Technology media When will social media ban start, and which platforms are affected?" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">AI产业｜BBC Technology：When will social media ban start, an...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">The measures will see apps including TikTok and Snapchat blocked for UK teens early in 2027.</p>
+        <p class="why">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>The measures will see apps including TikTok and Snapchat blocked for UK teens early in 2027.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从商业化和产业竞争角度解读：When will social media ban start, and which platforms are affected?</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.bbc.com/news/articles/ceqdny4l3jdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">BBC Technology * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="AI产业｜TechCrunch AI：As Anthropic suspends access to new... As Anthropic suspends access to new... Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions. Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions. 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：As Anthropic suspends access to new models, India debates its AI future 避免只复述消息本身，优先补充产业、政策或商业影响。 Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions. TechCrunch AI media As Anthropic suspends access to new models, India debates its AI future" data-hidden="false">
+      <summary>
+        <span class="score">59.0</span>
+        <span class="title">AI产业｜TechCrunch AI：As Anthropic suspends access to new...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions.</p>
+        <p class="why">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从商业化和产业竞争角度解读：As Anthropic suspends access to new models, India debates its AI future</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/" target="_blank" rel="noopener noreferrer">TechCrunch AI * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="AI产业｜BBC Technology：Elon Musk&#x27;s stratospheric rise to tr... Elon Musk&#x27;s stratospheric rise to tr... The BBC breaks down how the tech mogul&#x27;s fortune has grown. The BBC breaks down how the tech mogul&#x27;s fortune has grown. 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：Elon Musk&#x27;s stratospheric rise to trillionaire status - in charts 避免只复述消息本身，优先补充产业、政策或商业影响。 The BBC breaks down how the tech mogul&#x27;s fortune has grown. BBC Technology media Elon Musk&#x27;s stratospheric rise to trillionaire status - in charts" data-hidden="false">
+      <summary>
+        <span class="score">55.0</span>
+        <span class="title">AI产业｜BBC Technology：Elon Musk&#x27;s stratospheric rise to tr...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">The BBC breaks down how the tech mogul&#x27;s fortune has grown.</p>
+        <p class="why">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>The BBC breaks down how the tech mogul&#x27;s fortune has grown.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从商业化和产业竞争角度解读：Elon Musk&#x27;s stratospheric rise to trillionaire status - in charts</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.bbc.com/news/articles/c4gyp523ly8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">BBC Technology * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="AI产业｜BBC Technology：Who is Elon Musk and what is his net... Who is Elon Musk and what is his net... The boss of X, Tesla and SpaceX, already the world&#x27;s richest person, is now also its first trillionaire. The boss of X, Tesla and SpaceX, already the world&#x27;s richest person, is now also its first trillionaire. 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：Who is Elon Musk and what is his net worth? 避免只复述消息本身，优先补充产业、政策或商业影响。 The boss of X, Tesla and SpaceX, already the world&#x27;s richest person, is now also its first trillionaire. BBC Technology media Who is Elon Musk and what is his net worth?" data-hidden="false">
+      <summary>
+        <span class="score">55.0</span>
+        <span class="title">AI产业｜BBC Technology：Who is Elon Musk and what is his net...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">The boss of X, Tesla and SpaceX, already the world&#x27;s richest person, is now also its first trillionaire.</p>
+        <p class="why">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>The boss of X, Tesla and SpaceX, already the world&#x27;s richest person, is now also its first trillionaire.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从商业化和产业竞争角度解读：Who is Elon Musk and what is his net worth?</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.bbc.com/news/articles/c0r1975ded7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">BBC Technology * · media</a></div>
+      </div>
+    </details>
+    </div>
+    </section>
+    
+    <section class="view" data-view="geopolitics">
+      <div class="view-head">
+        <h2>国际形势影响</h2>
+        <span class="count">显示 <span data-visible-count>6</span> / 6</span>
+      </div>
+      <div class="list">
+    <details class="item" data-search="国际形势｜BBC World：Oil prices fall and shares jump afte... Oil prices fall and shares jump afte... Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said. Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said. 可能影响 AI 产业链、芯片供应、跨境合作或监管预期。 从国际形势对 AI 产业链的影响解读：Oil prices fall and shares jump after US-Iran deal announced 避免只复述消息本身，优先补充产业、政策或商业影响。 Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said. BBC World media Oil prices fall and shares jump after US-Iran deal announced" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">国际形势｜BBC World：Oil prices fall and shares jump afte...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.</p>
+        <p class="why">可能影响 AI 产业链、芯片供应、跨境合作或监管预期。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从国际形势对 AI 产业链的影响解读：Oil prices fall and shares jump after US-Iran deal announced</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.bbc.com/news/articles/c6217106px6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">BBC World * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="国际形势｜BBC World：Norwegian crown princess&#x27;s son found... Norwegian crown princess&#x27;s son found... Marius Borg Høiby, the 29-year-old son of Norway&#x27;s Crown Princess Mette Marit, has been found guilty of two counts of... Marius Borg Høiby, the 29-year-old son of Norway&#x27;s Crown Princess Mette Marit, has been found guilty of two counts of rape and given four years in jail. 可能影响 AI 产业链、芯片供应、跨境合作或监管预期。 从国际形势对 AI 产业链的影响解读：Norwegian crown princess&#x27;s son found guilty of two counts of rape 避免只复述消息本身，优先补充产业、政策或商业影响。 Marius Borg Høiby, the 29-year-old son of Norway&#x27;s Crown Princess Mette Marit, has been found guilty of two counts of... BBC World media Norwegian crown princess&#x27;s son found guilty of two counts of rape" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">国际形势｜BBC World：Norwegian crown princess&#x27;s son found...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">Marius Borg Høiby, the 29-year-old son of Norway&#x27;s Crown Princess Mette Marit, has been found guilty of two counts of...</p>
+        <p class="why">可能影响 AI 产业链、芯片供应、跨境合作或监管预期。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Marius Borg Høiby, the 29-year-old son of Norway&#x27;s Crown Princess Mette Marit, has been found guilty of two counts of...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从国际形势对 AI 产业链的影响解读：Norwegian crown princess&#x27;s son found guilty of two counts of rape</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.bbc.com/news/articles/cly9d10l5p4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">BBC World * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="国际形势｜BBC World：Russian strikes kill nine and set hi... Russian strikes kill nine and set hi... A Ukrainian drone attack in the Russian city of Tula, south of Moscow, killed three people and wounded three others. A Ukrainian drone attack in the Russian city of Tula, south of Moscow, killed three people and wounded three others. 可能影响 AI 产业链、芯片供应、跨境合作或监管预期。 从国际形势对 AI 产业链的影响解读：Russian strikes kill nine and set historic cathedral in Kyiv ablaze 避免只复述消息本身，优先补充产业、政策或商业影响。 A Ukrainian drone attack in the Russian city of Tula, south of Moscow, killed three people and wounded three others. BBC World media Russian strikes kill nine and set historic cathedral in Kyiv ablaze" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">国际形势｜BBC World：Russian strikes kill nine and set hi...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">A Ukrainian drone attack in the Russian city of Tula, south of Moscow, killed three people and wounded three others.</p>
+        <p class="why">可能影响 AI 产业链、芯片供应、跨境合作或监管预期。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>A Ukrainian drone attack in the Russian city of Tula, south of Moscow, killed three people and wounded three others.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从国际形势对 AI 产业链的影响解读：Russian strikes kill nine and set historic cathedral in Kyiv ablaze</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.bbc.com/news/articles/c4gy037gjz3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">BBC World * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="国际形势｜Al Jazeera：Pakistani police mistakenly open fir... Pakistani police mistakenly open fir... Fatal shooting of nine-year-old Hania Ahmed by Punjab Police officer causes furore. Fatal shooting of nine-year-old Hania Ahmed by Punjab Police officer causes furore. 可能影响 AI 产业链、芯片供应、跨境合作或监管预期。 从国际形势对 AI 产业链的影响解读：Pakistani police mistakenly open fire on Australian family, killing child 避免只复述消息本身，优先补充产业、政策或商业影响。 Fatal shooting of nine-year-old Hania Ahmed by Punjab Police officer causes furore. Al Jazeera media Pakistani police mistakenly open fire on Australian family, killing child" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">国际形势｜Al Jazeera：Pakistani police mistakenly open fir...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">Fatal shooting of nine-year-old Hania Ahmed by Punjab Police officer causes furore.</p>
+        <p class="why">可能影响 AI 产业链、芯片供应、跨境合作或监管预期。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Fatal shooting of nine-year-old Hania Ahmed by Punjab Police officer causes furore.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从国际形势对 AI 产业链的影响解读：Pakistani police mistakenly open fire on Australian family, killing child</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.aljazeera.com/news/2026/6/15/pakistani-police-mistakenly-open-fire-on-australian-family-killing-child?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="国际形势｜Al Jazeera：How Trump is relaunching a tariff wa... How Trump is relaunching a tariff wa... Trade analysts predict Trump’s latest push could accelerate the &#x27;reorientation&#x27; of global trade away from the US. Trade analysts predict Trump’s latest push could accelerate the &#x27;reorientation&#x27; of global trade away from the US. 可能影响 AI 产业链、芯片供应、跨境合作或监管预期。 从国际形势对 AI 产业链的影响解读：How Trump is relaunching a tariff war citing ‘forced labour’ concerns 避免只复述消息本身，优先补充产业、政策或商业影响。 Trade analysts predict Trump’s latest push could accelerate the &#x27;reorientation&#x27; of global trade away from the US. Al Jazeera media How Trump is relaunching a tariff war citing ‘forced labour’ concerns" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">国际形势｜Al Jazeera：How Trump is relaunching a tariff wa...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">Trade analysts predict Trump’s latest push could accelerate the &#x27;reorientation&#x27; of global trade away from the US.</p>
+        <p class="why">可能影响 AI 产业链、芯片供应、跨境合作或监管预期。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>Trade analysts predict Trump’s latest push could accelerate the &#x27;reorientation&#x27; of global trade away from the US.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从国际形势对 AI 产业链的影响解读：How Trump is relaunching a tariff war citing ‘forced labour’ concerns</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.aljazeera.com/news/2026/6/15/how-trump-is-relaunching-a-tariff-war-citing-forced-labour-concerns?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera * · media</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="国际形势｜Al Jazeera：El-Geneina’s struggle: Life amid Sud... El-Geneina’s struggle: Life amid Sud... El-Geneina residents face soaring food and water costs as aid struggles to meet the needs of displaced families. El-Geneina residents face soaring food and water costs as aid struggles to meet the needs of displaced families. 可能影响 AI 产业链、芯片供应、跨境合作或监管预期。 从国际形势对 AI 产业链的影响解读：El-Geneina’s struggle: Life amid Sudan war and humanitarian challenges 避免只复述消息本身，优先补充产业、政策或商业影响。 El-Geneina residents face soaring food and water costs as aid struggles to meet the needs of displaced families. Al Jazeera media El-Geneina’s struggle: Life amid Sudan war and humanitarian challenges" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">国际形势｜Al Jazeera：El-Geneina’s struggle: Life amid Sud...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
+        <p class="summary">El-Geneina residents face soaring food and water costs as aid struggles to meet the needs of displaced families.</p>
+        <p class="why">可能影响 AI 产业链、芯片供应、跨境合作或监管预期。</p>
+        <div class="badges">
+          <span class="badge">media</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>El-Geneina residents face soaring food and water costs as aid struggles to meet the needs of displaced families.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从国际形势对 AI 产业链的影响解读：El-Geneina’s struggle: Life amid Sudan war and humanitarian challenges</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://www.aljazeera.com/features/2026/6/15/el-geneinas-struggle-life-amid-sudan-war-and-humanitarian-challenges?traffic_source=rss" target="_blank" rel="noopener noreferrer">Al Jazeera * · media</a></div>
+      </div>
+    </details>
+    </div>
+    </section>
+    
+    <section class="view" data-view="finance">
+      <div class="view-head">
+        <h2>国际金融</h2>
+        <span class="count">显示 <span data-visible-count>0</span> / 0</span>
+      </div>
+      <div class="list"><div class="empty">暂无内容。</div></div>
+    </section>
+    
+      
+    <section class="view" data-view="archive">
+      <div class="view-head">
+        <h2>归档日期</h2>
+        <span class="count">可上下滑动页面，也可左右滑动日期</span>
+      </div>
+      <div class="dates"><a class="date-link active" href="archive/2026-06-15/">2026-06-15 · 29条</a><a class="date-link" href="archive/2026-06-14/">2026-06-14 · 4条</a></div>
+    </section>
+    
+    </div>
+  </main>
+  <script id="digest-data" class="hidden-json" type="application/json">{"digest_date": "2026-06-15", "generated_at": "2026-06-15T09:19:30.574219+00:00", "generated_by": "intelhub-local-pipeline", "settings": {"per_source": 3, "top_per_category": 15, "extract_text": true, "extract_limit": 10, "summarize_with": "deepseek"}, "stats": {"fetched_candidate_count": 30, "unique_candidate_count": 30, "analysis_count": 30, "deepseek_analysis_count": 3, "local_analysis_count": 27, "extracted_text_count": 3, "extraction_error_count": 7, "event_count": 30, "selected_event_count": 29, "fetch_error_count": 1}, "fetch_errors": [{"source_id": "venturebeat_ai", "source_name": "VentureBeat AI", "error": "HTTP Error 308: Permanent Redirect"}], "categories": {"大模型动态": [{"id": "d1442353-1a67-5520-b43c-1bcae2d29dec", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "NVIDIA Blackwell在首个Agentic AI基准测试中领先", "one_sentence_summary": "NVIDIA GB300 NVL72在AgentPerf基准中每兆瓦运行代理数比Hopper高20倍。", "detailed_summary": "2026年6月12日，NVIDIA发布博客称，其Blackwell Ultra NVL72平台在Artificial Analysis推出的首个Agentic AI基准测试AgentPerf中取得领先性能。该基准测试基于真实编码代理工作负载，衡量系统同时支持代理任务的数量和效率。结果显示，NVIDIA GB300 NVL72每兆瓦可运行比NVIDIA HGX H200多20倍的代理。性能优势源于全栈协同设计，包括72 GPU的机架级系统、CUDA内核重叠通信与计算、TensorRT LLM优化等。测试使用DeepSeek V4 Pro模型。合作伙伴Baseten、DeepInfra和Together AI已在Blackwell上部署代理应用。NVIDIA Vera Rubin架构已全面投产。", "key_points": ["AgentPerf是首个针对Agentic AI的行业基准，由Artificial Analysis推出。", "NVIDIA GB300 NVL72每兆瓦可运行比H200多20倍的代理。", "基准测试基于真实编码代理轨迹，模拟工具调用延迟。", "DeepSeek V4 Pro作为测试模型，代表前沿MoE模型。", "NVIDIA Vera Rubin架构已全面投产。"], "why_it_matters": "Agentic AI正成为企业部署重点，但缺乏标准化性能评估。AgentPerf基准为基础设施选型提供了关键参考，NVIDIA的领先性能将影响企业采购决策，并推动代理AI应用的规模化落地。", "impact_analysis": {"technology": "AgentPerf基准可能成为行业标准，推动其他厂商优化代理工作负载性能。NVIDIA的全栈优化方法（硬件-软件协同）为AI系统设计提供新范式。", "business": "NVIDIA Blackwell的能效优势将吸引更多企业采用其基础设施，加速Hopper的淘汰。合作伙伴如Together AI、DeepInfra的案例表明代理AI应用已进入生产阶段。", "policy": "", "finance": "NVIDIA在代理AI基础设施的领先地位可能提振投资者信心，但需关注竞争对手（如AMD、Intel）的应对策略。"}, "topic_angle": "从基准测试看Agentic AI基础设施选型：为什么能效比算力更重要？", "avoid_angle": "单纯罗列NVIDIA产品参数，缺乏对基准测试方法和行业意义的深度解读。", "recommended": true, "priority_score": 85.0, "confidence": 0.9, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/", "published_at": "Fri, 12 Jun 2026 21:00:08 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "7b4ea656-09d9-5a7e-a41a-c5b5d6f529df", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "The Coin Flip Judge? Reliability and...", "one_sentence_summary": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...", "detailed_summary": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward models, and populate public leaderboards, but its run-to-run reliability remains under-characterized. We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini and GPT-4.1-mini), with 50 pairwise trials and 50 pointwise trials per question, supplemented by temperature and prompt-sensitivity ablations. Across judges, p...", "key_points": ["arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...", "We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini...", "Across judges, pairwise preferences flip on average 13.6% of the time, with 28% of questions exceeding a 20% flip rat...", "GPT-4o-mini also exhibits a significant first-position bias (72% A-majority, p = 0.024).", "At the same time, mean pointwise score gaps are small (0.19--0.36 on a 10-point scale) and not statistically signific..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 78.2, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_cl", "source_name": "arXiv cs.CL", "source_type": "research", "source_role": "primary", "original_title": "The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation", "url": "https://arxiv.org/abs/2606.13685", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.CL", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "8359d3a0-ae87-596b-850a-7d5bac3522f3", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "Introducing the OpenAI Partner Network", "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.", "key_points": ["OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 76.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "Introducing the OpenAI Partner Network", "url": "https://openai.com/index/introducing-openai-partner-network", "published_at": "Sun, 14 Jun 2026 17:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "c43e141e-711b-5eb2-93f4-3a9092835cad", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "Which Models Perform Better in Inher...", "one_sentence_summary": "arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...", "detailed_summary": "arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Shared Task on Arabic Islamic inheritance reasoning. The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation, multi-step reasoning, and precise numerical computation. We compare \\textit{commercial} and \\textit{open-source} models under a unified prompting strategy to assess their effectiveness in structured legal reason...", "key_points": ["arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...", "The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation,...", "We compare \\textit{commercial} and \\textit{open-source} models under a unified prompting strategy to assess their eff...", "\\\\ Our results show a clear gap in reliability between the two model families.", "Commercial models demonstrate stronger performance in identifying eligible heirs, applying exclusion rules, and maint..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Which Models Perform Better in Inheritance Reasoning?", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 73.6, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_cl", "source_name": "arXiv cs.CL", "source_type": "research", "source_role": "primary", "original_title": "Which Models Perform Better in Inheritance Reasoning?", "url": "https://arxiv.org/abs/2606.13751", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.CL", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "e08d2596-6d45-5ff9-8248-6dc88256386e", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "New OpenAI Academy courses for the n...", "one_sentence_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "detailed_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.", "key_points": ["OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "New OpenAI Academy courses for the next era of work", "url": "https://openai.com/index/academy-courses-applying-ai-at-work", "published_at": "Fri, 12 Jun 2026 10:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "92c90e65-5693-5702-aefc-fc79ae862688", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "A Deep Reinforcement Learning (DRL)-...", "one_sentence_summary": "arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and...", "detailed_summary": "arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and service settings but remains computationally challenging as the number of jobs and machines increases. While exact methods quickly become intractable, classical dispatching rules and metaheuristics may require substantial tuning to maintain solution quality at large scales. This study develops a Transformer-based scheduling policy for OSSP using an encoder-decoder architecture...", "key_points": ["arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and...", "While exact methods quickly become intractable, classical dispatching rules and metaheuristics may require substantia...", "This study develops a Transformer-based scheduling policy for OSSP using an encoder-decoder architecture with multi-h...", "The model is trained on Taillard benchmark instances (4x4, 5x5, 7x7, and 10x10) using only the processing-time matrix...", "To evaluate scalability, the trained policy is applied without retraining to randomly generated instances from 40x40..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_ai", "source_name": "arXiv cs.AI", "source_type": "research", "source_role": "primary", "original_title": "A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem", "url": "https://arxiv.org/abs/2606.13682", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "73ded584-4a47-5882-bbe7-dfc2610d7e8d", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "UP-NRPA: User Portrait based Nested...", "one_sentence_summary": "arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method...", "detailed_summary": "arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning methods struggle to dynamically adapt to diverse user characteristics, this paper proposes a User Portrait based Nested Rollout Policy Adaptation (UP-NRPA) online framework with Large Language Models. In contrast to conventional approaches dependent on model training and require offline reinforcement learning policy models for user groups, UP-NRPA enables dynamic customization of dia...", "key_points": ["arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method...", "In contrast to conventional approaches dependent on model training and require offline reinforcement learning policy...", "This is achieved by leveraging real-time user feedback alongside personality, preferences, and objectives mapped from...", "In collaborative and non-collaborative dialogue benchmarks, UP-NRPA demonstrated considerable benefits, achieving an...", "Particularly in negotiation tasks, the sale-to-list ratio (SL) increased by 56.41%."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_ai", "source_name": "arXiv cs.AI", "source_type": "research", "source_role": "primary", "original_title": "UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems", "url": "https://arxiv.org/abs/2606.13683", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "946d3b9c-e8b3-5bc6-8cbb-03269c46434b", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "History of the Muddy Children Puzzle", "one_sentence_summary": "arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t...", "detailed_summary": "arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance that has been inspiring for the development of epistemic logic. Who came up with it first? This is unclear. We trace the origin of the Muddy Children Puzzle through logical and literary publications over the past two centuries.", "key_points": ["arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t...", "Who came up with it first?", "This is unclear.", "We trace the origin of the Muddy Children Puzzle through logical and literary publications over the past two centuries.", "The puzzle inspired a numerous variations such as involving numbers or coloured hats."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：History of the Muddy Children Puzzle", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_ai", "source_name": "arXiv cs.AI", "source_type": "research", "source_role": "primary", "original_title": "History of the Muddy Children Puzzle", "url": "https://arxiv.org/abs/2606.13703", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "e9da0510-966c-57b2-bd77-ee902e019362", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "Benchmarking Web Agent Safety under...", "one_sentence_summary": "arXiv:2606.13686v1 Announce Type: new Abstract: As autonomous web agents are increasingly deployed to perform real-wo...", "detailed_summary": "arXiv:2606.13686v1 Announce Type: new Abstract: As autonomous web agents are increasingly deployed to perform real-world tasks, ensuring their safety has become a critical concern. In this work, we study web agent behavior under realistic deceptive interfaces in the e-commerce domain. We introduce WebDecept, a lightweight and configurable plugin framework that enables controlled injection of deceptive interface patterns into existing web environments. Using WebDecept, we instantiate seven dec...", "key_points": ["arXiv:2606.13686v1 Announce Type: new Abstract: As autonomous web agents are increasingly deployed to perform real-wo...", "In this work, we study web agent behavior under realistic deceptive interfaces in the e-commerce domain.", "We introduce WebDecept, a lightweight and configurable plugin framework that enables controlled injection of deceptiv...", "Using WebDecept, we instantiate seven deceptive patterns commonly observed on the open web, including targeted advert...", "By injecting these patterns into the frontend during task execution, we perform controlled evaluation of multiple mul..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Benchmarking Web Agent Safety under E-commerce Deceptive Interfaces", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_cl", "source_name": "arXiv cs.CL", "source_type": "research", "source_role": "primary", "original_title": "Benchmarking Web Agent Safety under E-commerce Deceptive Interfaces", "url": "https://arxiv.org/abs/2606.13686", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.CL", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "bc20e9e3-fde9-518a-a555-35a66ec16b5e", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "Can Editing 1 Neuron Fix Repetition...", "one_sentence_summary": "arXiv:2606.13705v1 Announce Type: new Abstract: Yes. Can it cure doom loops? Probably not. The Gemma 4 instruction-tu...", "detailed_summary": "arXiv:2606.13705v1 Announce Type: new Abstract: Yes. Can it cure doom loops? Probably not. The Gemma 4 instruction-tuned models share a reproducible failure: on long factual enumeration prompts, such as listing every episode of a TV series, the 88 IAU constellations, or the 151 original Pokemon, they collapse into repetition, either a tight verbatim loop or a list whose entries decay onto a single answer.", "key_points": ["arXiv:2606.13705v1 Announce Type: new Abstract: Yes.", "Can it cure doom loops?", "Probably not.", "The Gemma 4 instruction-tuned models share a reproducible failure: on long factual enumeration prompts, such as listi...", "These loops occur at rates as high as 95% and survive prompt rewording, inference-engine changes, and most sampling a..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Can Editing 1 Neuron Fix Repetition Loops in LLMs?", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_lg", "source_name": "arXiv cs.LG", "source_type": "research", "source_role": "primary", "original_title": "Can Editing 1 Neuron Fix Repetition Loops in LLMs?", "url": "https://arxiv.org/abs/2606.13705", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.LG", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "cfdd2d71-d19f-57f1-8795-c322eced8205", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "Efficient On-Device Diffusion LLM In...", "one_sentence_summary": "arXiv:2606.13740v1 Announce Type: new Abstract: Diffusion large language models (dLLMs) accelerate generation by deno...", "detailed_summary": "arXiv:2606.13740v1 Announce Type: new Abstract: Diffusion large language models (dLLMs) accelerate generation by denoising multiple tokens in parallel, making them attractive for latency-sensitive mobile inference. However, repeated denoising introduces substantial computation on smartphones. Mobile neural processing units (NPUs) offer high-throughput dense matrix computation, but efficiently exploiting them remains challenging: token commitment shrinks per-block effective workloads, token re...", "key_points": ["arXiv:2606.13740v1 Announce Type: new Abstract: Diffusion large language models (dLLMs) accelerate generation by deno...", "However, repeated denoising introduces substantial computation on smartphones.", "Mobile neural processing units (NPUs) offer high-throughput dense matrix computation, but efficiently exploiting them...", "In this paper, we propose llada.cpp, the first NPU-aware inference framework for accelerating dLLMs on smartphones.", "llada.cpp aligns block-wise dLLM inference with the execution characteristics of mobile NPUs through three techniques."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Efficient On-Device Diffusion LLM Inference with Mobile NPU", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_lg", "source_name": "arXiv cs.LG", "source_type": "research", "source_role": "primary", "original_title": "Efficient On-Device Diffusion LLM Inference with Mobile NPU", "url": "https://arxiv.org/abs/2606.13740", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.LG", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "de792a8d-338b-5843-8a06-5f7863d26a9f", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "High-Frequency Pricing at Scale for...", "one_sentence_summary": "arXiv:2606.13741v1 Announce Type: new Abstract: This paper presents the design, development, and implementation of a...", "detailed_summary": "arXiv:2606.13741v1 Announce Type: new Abstract: This paper presents the design, development, and implementation of a specialized forecast-then-optimize algorithmic pricing tool for sales campaigns in fashion e-commerce. Sales events present unique challenges for pricing including volatile demand patterns, rapid pricing decisions, and the need to balance short-term revenue with long-term profitability. We describe our approach combining daily-resolution demand forecasting using gradient-booste...", "key_points": ["arXiv:2606.13741v1 Announce Type: new Abstract: This paper presents the design, development, and implementation of a...", "Sales events present unique challenges for pricing including volatile demand patterns, rapid pricing decisions, and t...", "We describe our approach combining daily-resolution demand forecasting using gradient-boosted trees with a multi-obje...", "Our solution addresses key limitations of existing weekly-granularity systems by implementing a forecast-then-optimiz...", "We validate our approach through 23 A/B tests across 12 markets during 2023-2024 sales campaigns at Zalando, one of E..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：High-Frequency Pricing at Scale for E-Commerce", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_lg", "source_name": "arXiv cs.LG", "source_type": "research", "source_role": "primary", "original_title": "High-Frequency Pricing at Scale for E-Commerce", "url": "https://arxiv.org/abs/2606.13741", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.LG", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "0fe14f55-2377-5131-89fb-e4ed344db3bd", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "How Preply combines AI and human tut...", "one_sentence_summary": "Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exe...", "detailed_summary": "Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exercises.", "key_points": ["Preply uses OpenAI to launch AI-generated lesson summaries, providing personalised feedback and language learning exe..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：How Preply combines AI and human tutors to personalize learning", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 64.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "How Preply combines AI and human tutors to personalize learning", "url": "https://openai.com/index/preply", "published_at": "Fri, 12 Jun 2026 00:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "9016150d-408c-5c12-aacc-02f9cc261512", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "olmo-eval: An evaluation workbench f...", "one_sentence_summary": "olmo-eval: An evaluation workbench for the model development loop", "detailed_summary": "olmo-eval: An evaluation workbench for the model development loop", "key_points": ["olmo-eval: An evaluation workbench for the model development loop"], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：olmo-eval: An evaluation workbench for the model development loop", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 63.25, "confidence": 0.55, "reading_links": [{"source_id": "huggingface_blog", "source_name": "Hugging Face Blog", "source_type": "research", "source_role": "primary", "original_title": "olmo-eval: An evaluation workbench for the model development loop", "url": "https://huggingface.co/blog/allenai/olmo-eval", "published_at": "Fri, 12 Jun 2026 15:56:10 GMT", "link_label": "Hugging Face Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "13e9ecd9-f096-5c9f-9298-33f23952ea84", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "Profiling in PyTorch (Part 2): From...", "one_sentence_summary": "Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP", "detailed_summary": "Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP", "key_points": ["Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP"], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 57.5, "confidence": 0.55, "reading_links": [{"source_id": "huggingface_blog", "source_name": "Hugging Face Blog", "source_type": "research", "source_role": "primary", "original_title": "Profiling in PyTorch (Part 2): From nn.Linear to a Fused MLP", "url": "https://huggingface.co/blog/torch-mlp-fusion", "published_at": "Thu, 11 Jun 2026 00:00:00 GMT", "link_label": "Hugging Face Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}], "AI行业资讯": [{"id": "b5343718-c904-5b28-b293-073bb8a939f7", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "NVIDIA Halos OS：为Robotaxi安全构建基石", "one_sentence_summary": "NVIDIA发布Halos OS，为自动驾驶出租车提供从底层OS到AI安全护栏的全栈安全方案。", "detailed_summary": "NVIDIA于2026年6月10日发布博客，介绍其Halos操作系统（Halos OS），这是NVIDIA Halos全栈安全系统的一部分，旨在为自动驾驶出租车（Robotaxi）提供内建的安全基础。文章指出，Robotaxi行业已从原型进入商业运营，但安全必须从设计之初就融入系统，而非事后添加。Halos OS包含四个核心组件：Halos Core（符合ISO 26262 ASIL D认证的实时操作系统，基于DriveOS）、Halos SDK（标准化传感器和车辆抽象层，简化硬件集成）、Halos Applications（提供确定性安全护栏，包括主动安全功能如AEB、LKA等，并支持端到端AI模型如Alpamago）、以及Halos Infra（云端开发基础设施，包含Halos Safety Evaluation Framework，用于训练、仿真和验证）。文章还提及多个合作案例：Uber与Autobrains在慕尼黑基于DRIVE Hyperion推出Robotaxi；富士康扩大与NVIDIA合作在台湾部署Robotaxi；VinFast与Autobrains合作在东南亚推出L4车辆；HUMAIN在沙特阿拉伯部署DRIVE Hyperion Robotaxi。", "key_points": ["Halos OS是NVIDIA为自动驾驶出租车打造的全栈安全系统，包含Halos Core、SDK、Applications和Infra四部分。", "Halos Core已通过ISO 26262 ASIL D认证，提供安全隔离的虚拟化环境。", "Halos SDK通过传感器和车辆抽象层简化硬件集成，降低开发成本。", "Halos Applications提供确定性安全护栏，并支持端到端AI模型的可解释性。", "Halos Safety Evaluation Framework基于330多篇论文和1000多项专利，用于构建可信安全案例。"], "why_it_matters": "Robotaxi商业化面临的最大障碍是安全认证和公众信任。Halos OS提供了一个经过认证的、可复用的安全基础，可能降低行业准入门槛，加速全球Robotaxi部署。同时，NVIDIA通过开放框架（如TensorRT Edge-LLM）和合作案例，巩固了其在自动驾驶计算平台的主导地位。", "impact_analysis": {"technology": "Halos OS的模块化设计和安全认证可能成为行业参考架构，推动自动驾驶软件栈的标准化。其AI安全护栏和可解释性技术（如Alpamago模型）将影响端到端自动驾驶的研发方向。", "business": "NVIDIA通过DRIVE Hyperion和Halos OS构建了从芯片到云的全栈方案，可能吸引更多车企和出行公司采用其平台，形成生态锁定。合作案例显示其正在全球扩张，尤其在新兴市场。", "policy": "Halos Safety Evaluation Framework提供了构建安全案例的工具，可能被监管机构采纳为参考标准，影响各国Robotaxi法规的制定。", "finance": "NVIDIA在自动驾驶领域的持续投入和生态扩张可能增强投资者对其长期增长信心，但短期财务影响有限。"}, "topic_angle": "从安全认证角度解读NVIDIA Halos OS如何解决Robotaxi规模化痛点，可结合合作案例分析其全球布局策略。", "avoid_angle": "避免单纯罗列技术参数或重复官方宣传语，应聚焦安全对商业化的实际意义。", "recommended": true, "priority_score": 85.0, "confidence": 0.9, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "For Robotaxis, Safety Must Be Built In, Not Bolted On", "url": "https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/", "published_at": "Wed, 10 Jun 2026 19:00:12 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "0427d6dd-38a2-5cda-9791-34776decb1d2", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "GeForce NOW夏季促销：年费最高省70美元", "one_sentence_summary": "NVIDIA GeForce NOW夏季促销，年费最高省70美元，并新增《激战3》等8款游戏。", "detailed_summary": "NVIDIA于2026年6月11日启动GeForce NOW夏季促销，提供12个月Performance会员立减35美元、Ultimate会员立减70美元的限时优惠。Performance会员支持1080p/60fps流式传输，Ultimate会员提供RTX 4080/5080级性能，支持4K、120fps、光线追踪、DLSS和Reflex。促销期间还宣布《激战3》将登陆云平台，现有《激战2》和《激战：重制版》提供限时独家奖励。本周新增8款游戏，包括《Duet Night Abyss》。NVIDIA强调云游戏免安装、跨设备（Linux、Fire TV）等优势，并提及免费升级至Blackwell架构。", "key_points": ["GeForce NOW夏季促销：12个月Performance会员省35美元，Ultimate会员省70美元。", "《激战3》即将登陆GeForce NOW，现可加入愿望单。", "《激战2》和《激战：重制版》提供限时独家奖励，Premium会员即日起可领，所有会员6月12日起可领。", "本周新增8款游戏，包括《Duet Night Abyss》。", "Ultimate会员享受RTX 4080/5080级性能，支持4K、120fps、光线追踪、DLSS和Reflex。"], "why_it_matters": "云游戏市场持续增长，NVIDIA通过大幅折扣和独家内容巩固GeForce NOW的竞争力，同时展示其硬件升级和跨平台能力，对游戏玩家和行业格局有直接影响。", "impact_analysis": {"technology": "云游戏技术持续进步，支持更高分辨率、帧率和光线追踪，降低玩家硬件门槛。", "business": "NVIDIA通过促销和独家游戏吸引订阅，可能提升GeForce NOW用户数和收入，同时挤压竞品空间。", "policy": "", "finance": "短期促销可能影响NVIDIA云游戏业务收入，但长期有助于扩大用户基础，对股价有潜在正面影响。"}, "topic_angle": "云游戏促销策略分析：NVIDIA如何通过折扣和独家内容抢占市场？", "avoid_angle": "单纯罗列促销细节或游戏列表，缺乏行业视角。", "recommended": true, "priority_score": 75.0, "confidence": 0.9, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/", "published_at": "Thu, 11 Jun 2026 13:00:17 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "e22fe96f-0d0e-524c-b458-6d97efbc6477", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "The AI layoff wave is becoming a pow...", "one_sentence_summary": "What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small c...", "detailed_summary": "What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small cohort of AI insiders is becoming wealthy on a scale that's hard to comprehend.", "key_points": ["What makes this combustible: at the very moment that tens of thousands of workers are being shown the door, a small c..."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：The AI layoff wave is becoming a powder keg", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "techcrunch_ai", "source_name": "TechCrunch AI", "source_type": "media", "source_role": "primary", "original_title": "The AI layoff wave is becoming a powder keg", "url": "https://techcrunch.com/2026/06/15/the-ai-layoff-wave-is-becoming-a-powder-keg/", "published_at": "Mon, 15 Jun 2026 07:25:41 +0000", "link_label": "TechCrunch AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "949d9ee3-913e-5bbf-9f19-2dfbbcdef181", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "As AI companies race to go public, w...", "one_sentence_summary": "Startups are trying to \"ride that SpaceX IPO wave.\"", "detailed_summary": "Startups are trying to \"ride that SpaceX IPO wave.\"", "key_points": ["Startups are trying to \"ride that SpaceX IPO wave.\""], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：As AI companies race to go public, who else is along for the ride?", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "techcrunch_ai", "source_name": "TechCrunch AI", "source_type": "media", "source_role": "primary", "original_title": "As AI companies race to go public, who else is along for the ride?", "url": "https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/", "published_at": "Sun, 14 Jun 2026 16:38:09 +0000", "link_label": "TechCrunch AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "1a397134-81ca-5def-9158-e1ad8c77caa6", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "When will social media ban start, an...", "one_sentence_summary": "The measures will see apps including TikTok and Snapchat blocked for UK teens early in 2027.", "detailed_summary": "The measures will see apps including TikTok and Snapchat blocked for UK teens early in 2027.", "key_points": ["The measures will see apps including TikTok and Snapchat blocked for UK teens early in 2027."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：When will social media ban start, and which platforms are affected?", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "bbc_technology", "source_name": "BBC Technology", "source_type": "media", "source_role": "primary", "original_title": "When will social media ban start, and which platforms are affected?", "url": "https://www.bbc.com/news/articles/ceqdny4l3jdo?at_medium=RSS&amp;at_campaign=rss", "published_at": "Mon, 15 Jun 2026 09:00:25 GMT", "link_label": "BBC Technology", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "2595581e-d12d-5d8d-bbc6-5566e845c4d1", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "As Anthropic suspends access to new...", "one_sentence_summary": "Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions.", "detailed_summary": "Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions.", "key_points": ["Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：As Anthropic suspends access to new models, India debates its AI future", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 59.0, "confidence": 0.55, "reading_links": [{"source_id": "techcrunch_ai", "source_name": "TechCrunch AI", "source_type": "media", "source_role": "primary", "original_title": "As Anthropic suspends access to new models, India debates its AI future", "url": "https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/", "published_at": "Sun, 14 Jun 2026 03:00:00 +0000", "link_label": "TechCrunch AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "447cfed1-6ec0-58e2-bb16-864766b0371e", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "Elon Musk's stratospheric rise to tr...", "one_sentence_summary": "The BBC breaks down how the tech mogul's fortune has grown.", "detailed_summary": "The BBC breaks down how the tech mogul's fortune has grown.", "key_points": ["The BBC breaks down how the tech mogul's fortune has grown."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：Elon Musk's stratospheric rise to trillionaire status - in charts", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 55.0, "confidence": 0.55, "reading_links": [{"source_id": "bbc_technology", "source_name": "BBC Technology", "source_type": "media", "source_role": "primary", "original_title": "Elon Musk's stratospheric rise to trillionaire status - in charts", "url": "https://www.bbc.com/news/articles/c4gyp523ly8o?at_medium=RSS&amp;at_campaign=rss", "published_at": "Fri, 12 Jun 2026 23:05:39 GMT", "link_label": "BBC Technology", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "8d7ab17e-ce64-518f-94c6-e32c90b8ec6d", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "Who is Elon Musk and what is his net...", "one_sentence_summary": "The boss of X, Tesla and SpaceX, already the world's richest person, is now also its first trillionaire.", "detailed_summary": "The boss of X, Tesla and SpaceX, already the world's richest person, is now also its first trillionaire.", "key_points": ["The boss of X, Tesla and SpaceX, already the world's richest person, is now also its first trillionaire."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：Who is Elon Musk and what is his net worth?", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 55.0, "confidence": 0.55, "reading_links": [{"source_id": "bbc_technology", "source_name": "BBC Technology", "source_type": "media", "source_role": "primary", "original_title": "Who is Elon Musk and what is his net worth?", "url": "https://www.bbc.com/news/articles/c0r1975ded7o?at_medium=RSS&amp;at_campaign=rss", "published_at": "Fri, 12 Jun 2026 16:44:29 GMT", "link_label": "BBC Technology", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}], "国际形势影响": [{"id": "9d65bb6a-e72d-5ccd-9269-15ca75d47b2f", "event_date": "2026-06-15", "category": "国际形势影响", "ai_title": "Oil prices fall and shares jump afte...", "one_sentence_summary": "Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.", "detailed_summary": "Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said.", "key_points": ["Under the agreement, the key Strait of Hormuz waterway will be reopened, US President Donald Trump said."], "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。", "impact_analysis": {"technology": "", "business": "", "policy": "可关注监管、地缘政治和跨境产业链影响。", "finance": ""}, "topic_angle": "从国际形势对 AI 产业链的影响解读：Oil prices fall and shares jump after US-Iran deal announced", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "bbc_world", "source_name": "BBC World", "source_type": "media", "source_role": "primary", "original_title": "Oil prices fall and shares jump after US-Iran deal announced", "url": "https://www.bbc.com/news/articles/c6217106px6o?at_medium=RSS&amp;at_campaign=rss", "published_at": "Mon, 15 Jun 2026 07:38:09 GMT", "link_label": "BBC World", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "63863f04-81a9-59fd-a540-c7a93b800494", "event_date": "2026-06-15", "category": "国际形势影响", "ai_title": "Norwegian crown princess's son found...", "one_sentence_summary": "Marius Borg Høiby, the 29-year-old son of Norway's Crown Princess Mette Marit, has been found guilty of two counts of...", "detailed_summary": "Marius Borg Høiby, the 29-year-old son of Norway's Crown Princess Mette Marit, has been found guilty of two counts of rape and given four years in jail.", "key_points": ["Marius Borg Høiby, the 29-year-old son of Norway's Crown Princess Mette Marit, has been found guilty of two counts of..."], "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。", "impact_analysis": {"technology": "", "business": "", "policy": "可关注监管、地缘政治和跨境产业链影响。", "finance": ""}, "topic_angle": "从国际形势对 AI 产业链的影响解读：Norwegian crown princess's son found guilty of two counts of rape", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "bbc_world", "source_name": "BBC World", "source_type": "media", "source_role": "primary", "original_title": "Norwegian crown princess's son found guilty of two counts of rape", "url": "https://www.bbc.com/news/articles/cly9d10l5p4o?at_medium=RSS&amp;at_campaign=rss", "published_at": "Mon, 15 Jun 2026 09:14:45 GMT", "link_label": "BBC World", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "7ed093fb-b591-5cff-8222-31296767c6b4", "event_date": "2026-06-15", "category": "国际形势影响", "ai_title": "Russian strikes kill nine and set hi...", "one_sentence_summary": "A Ukrainian drone attack in the Russian city of Tula, south of Moscow, killed three people and wounded three others.", "detailed_summary": "A Ukrainian drone attack in the Russian city of Tula, south of Moscow, killed three people and wounded three others.", "key_points": ["A Ukrainian drone attack in the Russian city of Tula, south of Moscow, killed three people and wounded three others."], "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。", "impact_analysis": {"technology": "", "business": "", "policy": "可关注监管、地缘政治和跨境产业链影响。", "finance": ""}, "topic_angle": "从国际形势对 AI 产业链的影响解读：Russian strikes kill nine and set historic cathedral in Kyiv ablaze", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "bbc_world", "source_name": "BBC World", "source_type": "media", "source_role": "primary", "original_title": "Russian strikes kill nine and set historic cathedral in Kyiv ablaze", "url": "https://www.bbc.com/news/articles/c4gy037gjz3o?at_medium=RSS&amp;at_campaign=rss", "published_at": "Mon, 15 Jun 2026 07:20:32 GMT", "link_label": "BBC World", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "ff703745-a9fd-5e36-86d3-5517893d1860", "event_date": "2026-06-15", "category": "国际形势影响", "ai_title": "Pakistani police mistakenly open fir...", "one_sentence_summary": "Fatal shooting of nine-year-old Hania Ahmed by Punjab Police officer causes furore.", "detailed_summary": "Fatal shooting of nine-year-old Hania Ahmed by Punjab Police officer causes furore.", "key_points": ["Fatal shooting of nine-year-old Hania Ahmed by Punjab Police officer causes furore."], "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。", "impact_analysis": {"technology": "", "business": "", "policy": "可关注监管、地缘政治和跨境产业链影响。", "finance": ""}, "topic_angle": "从国际形势对 AI 产业链的影响解读：Pakistani police mistakenly open fire on Australian family, killing child", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "aljazeera_all", "source_name": "Al Jazeera", "source_type": "media", "source_role": "primary", "original_title": "Pakistani police mistakenly open fire on Australian family, killing child", "url": "https://www.aljazeera.com/news/2026/6/15/pakistani-police-mistakenly-open-fire-on-australian-family-killing-child?traffic_source=rss", "published_at": "Mon, 15 Jun 2026 08:54:49 +0000", "link_label": "Al Jazeera", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "3a23ae1c-37af-5971-ac7f-091ff5f93e3d", "event_date": "2026-06-15", "category": "国际形势影响", "ai_title": "How Trump is relaunching a tariff wa...", "one_sentence_summary": "Trade analysts predict Trump’s latest push could accelerate the 'reorientation' of global trade away from the US.", "detailed_summary": "Trade analysts predict Trump’s latest push could accelerate the 'reorientation' of global trade away from the US.", "key_points": ["Trade analysts predict Trump’s latest push could accelerate the 'reorientation' of global trade away from the US."], "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。", "impact_analysis": {"technology": "", "business": "", "policy": "可关注监管、地缘政治和跨境产业链影响。", "finance": ""}, "topic_angle": "从国际形势对 AI 产业链的影响解读：How Trump is relaunching a tariff war citing ‘forced labour’ concerns", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "aljazeera_all", "source_name": "Al Jazeera", "source_type": "media", "source_role": "primary", "original_title": "How Trump is relaunching a tariff war citing ‘forced labour’ concerns", "url": "https://www.aljazeera.com/news/2026/6/15/how-trump-is-relaunching-a-tariff-war-citing-forced-labour-concerns?traffic_source=rss", "published_at": "Mon, 15 Jun 2026 08:43:28 +0000", "link_label": "Al Jazeera", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}, {"id": "21bf28df-bd6e-5a1a-9dd6-fc73f84b095e", "event_date": "2026-06-15", "category": "国际形势影响", "ai_title": "El-Geneina’s struggle: Life amid Sud...", "one_sentence_summary": "El-Geneina residents face soaring food and water costs as aid struggles to meet the needs of displaced families.", "detailed_summary": "El-Geneina residents face soaring food and water costs as aid struggles to meet the needs of displaced families.", "key_points": ["El-Geneina residents face soaring food and water costs as aid struggles to meet the needs of displaced families."], "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。", "impact_analysis": {"technology": "", "business": "", "policy": "可关注监管、地缘政治和跨境产业链影响。", "finance": ""}, "topic_angle": "从国际形势对 AI 产业链的影响解读：El-Geneina’s struggle: Life amid Sudan war and humanitarian challenges", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "aljazeera_all", "source_name": "Al Jazeera", "source_type": "media", "source_role": "primary", "original_title": "El-Geneina’s struggle: Life amid Sudan war and humanitarian challenges", "url": "https://www.aljazeera.com/features/2026/6/15/el-geneinas-struggle-life-amid-sudan-war-and-humanitarian-challenges?traffic_source=rss", "published_at": "Mon, 15 Jun 2026 08:43:00 +0000", "link_label": "Al Jazeera", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["media"]}], "国际金融": []}, "top10": [{"id": "d1442353-1a67-5520-b43c-1bcae2d29dec", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "NVIDIA Blackwell在首个Agentic AI基准测试中领先", "one_sentence_summary": "NVIDIA GB300 NVL72在AgentPerf基准中每兆瓦运行代理数比Hopper高20倍。", "detailed_summary": "2026年6月12日，NVIDIA发布博客称，其Blackwell Ultra NVL72平台在Artificial Analysis推出的首个Agentic AI基准测试AgentPerf中取得领先性能。该基准测试基于真实编码代理工作负载，衡量系统同时支持代理任务的数量和效率。结果显示，NVIDIA GB300 NVL72每兆瓦可运行比NVIDIA HGX H200多20倍的代理。性能优势源于全栈协同设计，包括72 GPU的机架级系统、CUDA内核重叠通信与计算、TensorRT LLM优化等。测试使用DeepSeek V4 Pro模型。合作伙伴Baseten、DeepInfra和Together AI已在Blackwell上部署代理应用。NVIDIA Vera Rubin架构已全面投产。", "key_points": ["AgentPerf是首个针对Agentic AI的行业基准，由Artificial Analysis推出。", "NVIDIA GB300 NVL72每兆瓦可运行比H200多20倍的代理。", "基准测试基于真实编码代理轨迹，模拟工具调用延迟。", "DeepSeek V4 Pro作为测试模型，代表前沿MoE模型。", "NVIDIA Vera Rubin架构已全面投产。"], "why_it_matters": "Agentic AI正成为企业部署重点，但缺乏标准化性能评估。AgentPerf基准为基础设施选型提供了关键参考，NVIDIA的领先性能将影响企业采购决策，并推动代理AI应用的规模化落地。", "impact_analysis": {"technology": "AgentPerf基准可能成为行业标准，推动其他厂商优化代理工作负载性能。NVIDIA的全栈优化方法（硬件-软件协同）为AI系统设计提供新范式。", "business": "NVIDIA Blackwell的能效优势将吸引更多企业采用其基础设施，加速Hopper的淘汰。合作伙伴如Together AI、DeepInfra的案例表明代理AI应用已进入生产阶段。", "policy": "", "finance": "NVIDIA在代理AI基础设施的领先地位可能提振投资者信心，但需关注竞争对手（如AMD、Intel）的应对策略。"}, "topic_angle": "从基准测试看Agentic AI基础设施选型：为什么能效比算力更重要？", "avoid_angle": "单纯罗列NVIDIA产品参数，缺乏对基准测试方法和行业意义的深度解读。", "recommended": true, "priority_score": 85.0, "confidence": 0.9, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/", "published_at": "Fri, 12 Jun 2026 21:00:08 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "b5343718-c904-5b28-b293-073bb8a939f7", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "NVIDIA Halos OS：为Robotaxi安全构建基石", "one_sentence_summary": "NVIDIA发布Halos OS，为自动驾驶出租车提供从底层OS到AI安全护栏的全栈安全方案。", "detailed_summary": "NVIDIA于2026年6月10日发布博客，介绍其Halos操作系统（Halos OS），这是NVIDIA Halos全栈安全系统的一部分，旨在为自动驾驶出租车（Robotaxi）提供内建的安全基础。文章指出，Robotaxi行业已从原型进入商业运营，但安全必须从设计之初就融入系统，而非事后添加。Halos OS包含四个核心组件：Halos Core（符合ISO 26262 ASIL D认证的实时操作系统，基于DriveOS）、Halos SDK（标准化传感器和车辆抽象层，简化硬件集成）、Halos Applications（提供确定性安全护栏，包括主动安全功能如AEB、LKA等，并支持端到端AI模型如Alpamago）、以及Halos Infra（云端开发基础设施，包含Halos Safety Evaluation Framework，用于训练、仿真和验证）。文章还提及多个合作案例：Uber与Autobrains在慕尼黑基于DRIVE Hyperion推出Robotaxi；富士康扩大与NVIDIA合作在台湾部署Robotaxi；VinFast与Autobrains合作在东南亚推出L4车辆；HUMAIN在沙特阿拉伯部署DRIVE Hyperion Robotaxi。", "key_points": ["Halos OS是NVIDIA为自动驾驶出租车打造的全栈安全系统，包含Halos Core、SDK、Applications和Infra四部分。", "Halos Core已通过ISO 26262 ASIL D认证，提供安全隔离的虚拟化环境。", "Halos SDK通过传感器和车辆抽象层简化硬件集成，降低开发成本。", "Halos Applications提供确定性安全护栏，并支持端到端AI模型的可解释性。", "Halos Safety Evaluation Framework基于330多篇论文和1000多项专利，用于构建可信安全案例。"], "why_it_matters": "Robotaxi商业化面临的最大障碍是安全认证和公众信任。Halos OS提供了一个经过认证的、可复用的安全基础，可能降低行业准入门槛，加速全球Robotaxi部署。同时，NVIDIA通过开放框架（如TensorRT Edge-LLM）和合作案例，巩固了其在自动驾驶计算平台的主导地位。", "impact_analysis": {"technology": "Halos OS的模块化设计和安全认证可能成为行业参考架构，推动自动驾驶软件栈的标准化。其AI安全护栏和可解释性技术（如Alpamago模型）将影响端到端自动驾驶的研发方向。", "business": "NVIDIA通过DRIVE Hyperion和Halos OS构建了从芯片到云的全栈方案，可能吸引更多车企和出行公司采用其平台，形成生态锁定。合作案例显示其正在全球扩张，尤其在新兴市场。", "policy": "Halos Safety Evaluation Framework提供了构建安全案例的工具，可能被监管机构采纳为参考标准，影响各国Robotaxi法规的制定。", "finance": "NVIDIA在自动驾驶领域的持续投入和生态扩张可能增强投资者对其长期增长信心，但短期财务影响有限。"}, "topic_angle": "从安全认证角度解读NVIDIA Halos OS如何解决Robotaxi规模化痛点，可结合合作案例分析其全球布局策略。", "avoid_angle": "避免单纯罗列技术参数或重复官方宣传语，应聚焦安全对商业化的实际意义。", "recommended": true, "priority_score": 85.0, "confidence": 0.9, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "For Robotaxis, Safety Must Be Built In, Not Bolted On", "url": "https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/", "published_at": "Wed, 10 Jun 2026 19:00:12 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "7b4ea656-09d9-5a7e-a41a-c5b5d6f529df", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "The Coin Flip Judge? Reliability and...", "one_sentence_summary": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...", "detailed_summary": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward models, and populate public leaderboards, but its run-to-run reliability remains under-characterized. We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini and GPT-4.1-mini), with 50 pairwise trials and 50 pointwise trials per question, supplemented by temperature and prompt-sensitivity ablations. Across judges, p...", "key_points": ["arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...", "We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini...", "Across judges, pairwise preferences flip on average 13.6% of the time, with 28% of questions exceeding a 20% flip rat...", "GPT-4o-mini also exhibits a significant first-position bias (72% A-majority, p = 0.024).", "At the same time, mean pointwise score gaps are small (0.19--0.36 on a 10-point scale) and not statistically signific..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 78.2, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_cl", "source_name": "arXiv cs.CL", "source_type": "research", "source_role": "primary", "original_title": "The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation", "url": "https://arxiv.org/abs/2606.13685", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.CL", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "8359d3a0-ae87-596b-850a-7d5bac3522f3", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "Introducing the OpenAI Partner Network", "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.", "key_points": ["OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 76.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "Introducing the OpenAI Partner Network", "url": "https://openai.com/index/introducing-openai-partner-network", "published_at": "Sun, 14 Jun 2026 17:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "0427d6dd-38a2-5cda-9791-34776decb1d2", "event_date": "2026-06-15", "category": "AI行业资讯", "ai_title": "GeForce NOW夏季促销：年费最高省70美元", "one_sentence_summary": "NVIDIA GeForce NOW夏季促销，年费最高省70美元，并新增《激战3》等8款游戏。", "detailed_summary": "NVIDIA于2026年6月11日启动GeForce NOW夏季促销，提供12个月Performance会员立减35美元、Ultimate会员立减70美元的限时优惠。Performance会员支持1080p/60fps流式传输，Ultimate会员提供RTX 4080/5080级性能，支持4K、120fps、光线追踪、DLSS和Reflex。促销期间还宣布《激战3》将登陆云平台，现有《激战2》和《激战：重制版》提供限时独家奖励。本周新增8款游戏，包括《Duet Night Abyss》。NVIDIA强调云游戏免安装、跨设备（Linux、Fire TV）等优势，并提及免费升级至Blackwell架构。", "key_points": ["GeForce NOW夏季促销：12个月Performance会员省35美元，Ultimate会员省70美元。", "《激战3》即将登陆GeForce NOW，现可加入愿望单。", "《激战2》和《激战：重制版》提供限时独家奖励，Premium会员即日起可领，所有会员6月12日起可领。", "本周新增8款游戏，包括《Duet Night Abyss》。", "Ultimate会员享受RTX 4080/5080级性能，支持4K、120fps、光线追踪、DLSS和Reflex。"], "why_it_matters": "云游戏市场持续增长，NVIDIA通过大幅折扣和独家内容巩固GeForce NOW的竞争力，同时展示其硬件升级和跨平台能力，对游戏玩家和行业格局有直接影响。", "impact_analysis": {"technology": "云游戏技术持续进步，支持更高分辨率、帧率和光线追踪，降低玩家硬件门槛。", "business": "NVIDIA通过促销和独家游戏吸引订阅，可能提升GeForce NOW用户数和收入，同时挤压竞品空间。", "policy": "", "finance": "短期促销可能影响NVIDIA云游戏业务收入，但长期有助于扩大用户基础，对股价有潜在正面影响。"}, "topic_angle": "云游戏促销策略分析：NVIDIA如何通过折扣和独家内容抢占市场？", "avoid_angle": "单纯罗列促销细节或游戏列表，缺乏行业视角。", "recommended": true, "priority_score": 75.0, "confidence": 0.9, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/", "published_at": "Thu, 11 Jun 2026 13:00:17 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "c43e141e-711b-5eb2-93f4-3a9092835cad", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "Which Models Perform Better in Inher...", "one_sentence_summary": "arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...", "detailed_summary": "arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Shared Task on Arabic Islamic inheritance reasoning. The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation, multi-step reasoning, and precise numerical computation. We compare \\textit{commercial} and \\textit{open-source} models under a unified prompting strategy to assess their effectiveness in structured legal reason...", "key_points": ["arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...", "The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation,...", "We compare \\textit{commercial} and \\textit{open-source} models under a unified prompting strategy to assess their eff...", "\\\\ Our results show a clear gap in reliability between the two model families.", "Commercial models demonstrate stronger performance in identifying eligible heirs, applying exclusion rules, and maint..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Which Models Perform Better in Inheritance Reasoning?", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 73.6, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_cl", "source_name": "arXiv cs.CL", "source_type": "research", "source_role": "primary", "original_title": "Which Models Perform Better in Inheritance Reasoning?", "url": "https://arxiv.org/abs/2606.13751", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.CL", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "e08d2596-6d45-5ff9-8248-6dc88256386e", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "New OpenAI Academy courses for the n...", "one_sentence_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "detailed_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.", "key_points": ["OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "New OpenAI Academy courses for the next era of work", "url": "https://openai.com/index/academy-courses-applying-ai-at-work", "published_at": "Fri, 12 Jun 2026 10:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "92c90e65-5693-5702-aefc-fc79ae862688", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "A Deep Reinforcement Learning (DRL)-...", "one_sentence_summary": "arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and...", "detailed_summary": "arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and service settings but remains computationally challenging as the number of jobs and machines increases. While exact methods quickly become intractable, classical dispatching rules and metaheuristics may require substantial tuning to maintain solution quality at large scales. This study develops a Transformer-based scheduling policy for OSSP using an encoder-decoder architecture...", "key_points": ["arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and...", "While exact methods quickly become intractable, classical dispatching rules and metaheuristics may require substantia...", "This study develops a Transformer-based scheduling policy for OSSP using an encoder-decoder architecture with multi-h...", "The model is trained on Taillard benchmark instances (4x4, 5x5, 7x7, and 10x10) using only the processing-time matrix...", "To evaluate scalability, the trained policy is applied without retraining to randomly generated instances from 40x40..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_ai", "source_name": "arXiv cs.AI", "source_type": "research", "source_role": "primary", "original_title": "A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem", "url": "https://arxiv.org/abs/2606.13682", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "73ded584-4a47-5882-bbe7-dfc2610d7e8d", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "UP-NRPA: User Portrait based Nested...", "one_sentence_summary": "arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method...", "detailed_summary": "arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning methods struggle to dynamically adapt to diverse user characteristics, this paper proposes a User Portrait based Nested Rollout Policy Adaptation (UP-NRPA) online framework with Large Language Models. In contrast to conventional approaches dependent on model training and require offline reinforcement learning policy models for user groups, UP-NRPA enables dynamic customization of dia...", "key_points": ["arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method...", "In contrast to conventional approaches dependent on model training and require offline reinforcement learning policy...", "This is achieved by leveraging real-time user feedback alongside personality, preferences, and objectives mapped from...", "In collaborative and non-collaborative dialogue benchmarks, UP-NRPA demonstrated considerable benefits, achieving an...", "Particularly in negotiation tasks, the sale-to-list ratio (SL) increased by 56.41%."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_ai", "source_name": "arXiv cs.AI", "source_type": "research", "source_role": "primary", "original_title": "UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems", "url": "https://arxiv.org/abs/2606.13683", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}, {"id": "946d3b9c-e8b3-5bc6-8cbb-03269c46434b", "event_date": "2026-06-15", "category": "大模型动态", "ai_title": "History of the Muddy Children Puzzle", "one_sentence_summary": "arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t...", "detailed_summary": "arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance that has been inspiring for the development of epistemic logic. Who came up with it first? This is unclear. We trace the origin of the Muddy Children Puzzle through logical and literary publications over the past two centuries.", "key_points": ["arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t...", "Who came up with it first?", "This is unclear.", "We trace the origin of the Muddy Children Puzzle through logical and literary publications over the past two centuries.", "The puzzle inspired a numerous variations such as involving numbers or coloured hats."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：History of the Muddy Children Puzzle", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 69.0, "confidence": 0.55, "reading_links": [{"source_id": "arxiv_cs_ai", "source_name": "arXiv cs.AI", "source_type": "research", "source_role": "primary", "original_title": "History of the Muddy Children Puzzle", "url": "https://arxiv.org/abs/2606.13703", "published_at": "Mon, 15 Jun 2026 00:00:00 -0400", "link_label": "arXiv cs.AI", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["research"]}], "topic_pool": [{"rank": 1, "title": "从基准测试看Agentic AI基础设施选型：为什么能效比算力更重要？", "source_event_ids": ["d1442353-1a67-5520-b43c-1bcae2d29dec"], "core_argument": "Agentic AI正成为企业部署重点，但缺乏标准化性能评估。AgentPerf基准为基础设施选型提供了关键参考，NVIDIA的领先性能将影响企业采购决策，并推动代理AI应用的规模化落地。", "why_today": "NVIDIA GB300 NVL72在AgentPerf基准中每兆瓦运行代理数比Hopper高20倍。", "differentiation": "单纯罗列NVIDIA产品参数，缺乏对基准测试方法和行业意义的深度解读。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 2, "title": "从安全认证角度解读NVIDIA Halos OS如何解决Robotaxi规模化痛点，可结合合作案例分析其全球布局策略。", "source_event_ids": ["b5343718-c904-5b28-b293-073bb8a939f7"], "core_argument": "Robotaxi商业化面临的最大障碍是安全认证和公众信任。Halos OS提供了一个经过认证的、可复用的安全基础，可能降低行业准入门槛，加速全球Robotaxi部署。同时，NVIDIA通过开放框架（如TensorRT Edge-LLM）和合作案例，巩固了其在自动驾驶计算平台的主导地位。", "why_today": "NVIDIA发布Halos OS，为自动驾驶出租车提供从底层OS到AI安全护栏的全栈安全方案。", "differentiation": "避免单纯罗列技术参数或重复官方宣传语，应聚焦安全对商业化的实际意义。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 3, "title": "从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation", "source_event_ids": ["7b4ea656-09d9-5a7e-a41a-c5b5d6f529df"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 4, "title": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "source_event_ids": ["8359d3a0-ae87-596b-850a-7d5bac3522f3"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 5, "title": "云游戏促销策略分析：NVIDIA如何通过折扣和独家内容抢占市场？", "source_event_ids": ["0427d6dd-38a2-5cda-9791-34776decb1d2"], "core_argument": "云游戏市场持续增长，NVIDIA通过大幅折扣和独家内容巩固GeForce NOW的竞争力，同时展示其硬件升级和跨平台能力，对游戏玩家和行业格局有直接影响。", "why_today": "NVIDIA GeForce NOW夏季促销，年费最高省70美元，并新增《激战3》等8款游戏。", "differentiation": "单纯罗列促销细节或游戏列表，缺乏行业视角。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 6, "title": "从能力、成本和生态角度解读：Which Models Perform Better in Inheritance Reasoning?", "source_event_ids": ["c43e141e-711b-5eb2-93f4-3a9092835cad"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 7, "title": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "source_event_ids": ["e08d2596-6d45-5ff9-8248-6dc88256386e"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 8, "title": "从能力、成本和生态角度解读：A Deep Reinforcement Learning (DRL)-Based Transformer Method for Solving the Open Shop Scheduling Problem", "source_event_ids": ["92c90e65-5693-5702-aefc-fc79ae862688"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "arXiv:2606.13682v1 Announce Type: new Abstract: The open shop scheduling problem (OSSP) arises in many industrial and...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 9, "title": "从能力、成本和生态角度解读：UP-NRPA: User Portrait based Nested Rollout Policy Adaptation for Planning with Large Language Models in Goal-oriented Dialogue Systems", "source_event_ids": ["73ded584-4a47-5882-bbe7-dfc2610d7e8d"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "arXiv:2606.13683v1 Announce Type: new Abstract: To address the challenge that current dialogue policy planning method...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 10, "title": "从能力、成本和生态角度解读：History of the Muddy Children Puzzle", "source_event_ids": ["946d3b9c-e8b3-5bc6-8cbb-03269c46434b"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "arXiv:2606.13703v1 Announce Type: new Abstract: The Muddy Children Puzzle is a puzzle about knowledge and ignorance t...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}], "archive_entries": [{"date": "2026-06-15", "generated_at": "2026-06-15T09:19:30.574219+00:00", "selected_event_count": 29, "event_count": 30, "top10_count": 10, "url": "archive/2026-06-15/", "json_url": "archive/2026-06-15/daily-digest.json"}, {"date": "2026-06-14", "generated_at": "2026-06-15T09:03:34.504376+00:00", "selected_event_count": 4, "event_count": 4, "top10_count": 4, "url": "archive/2026-06-14/", "json_url": "archive/2026-06-14/daily-digest.json"}]}</script>
+  <script>
+    const input = document.getElementById('searchInput');
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    const views = Array.from(document.querySelectorAll('.view'));
+    let currentView = 'topics';
+
+    function setView(name) {
+      currentView = name;
+      tabs.forEach(tab => tab.setAttribute('aria-selected', tab.dataset.view === name ? 'true' : 'false'));
+      views.forEach(view => view.classList.toggle('active', view.dataset.view === name));
+      input.value = '';
+      applySearch();
+    }
+    tabs.forEach(tab => tab.addEventListener('click', () => setView(tab.dataset.view)));
+
+    function applySearch() {
+      const query = input.value.trim().toLowerCase();
+      const active = document.querySelector(`.view[data-view="${currentView}"]`);
+      if (!active) return;
+      active.querySelectorAll('.item').forEach(item => {
+        const visible = !query || (item.dataset.search || '').toLowerCase().includes(query);
+        item.dataset.hidden = visible ? 'false' : 'true';
+      });
+      active.querySelectorAll('[data-visible-count]').forEach(label => {
+        const visibleCount = active.querySelectorAll('.item[data-hidden="false"]').length;
+        label.textContent = visibleCount;
+      });
+    }
+    input.addEventListener('input', applySearch);
+
+    document.querySelectorAll('.item summary').forEach(summary => {
+      summary.addEventListener('click', event => {
+        event.preventDefault();
+        const details = summary.closest('details');
+        details.open = !details.open;
+      });
+    });
+
+    const canvas = document.getElementById('digital-bg');
+    const ctx = canvas.getContext('2d');
+    const pointer = { x: -9999, y: -9999 };
+    let cells = [];
+    function resizeCanvas() {
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.floor(innerWidth * ratio);
+      canvas.height = Math.floor(innerHeight * ratio);
+      canvas.style.width = innerWidth + 'px';
+      canvas.style.height = innerHeight + 'px';
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      cells = [];
+      for (let y = 10; y < innerHeight; y += 18) {
+        for (let x = 10; x < innerWidth; x += 18) {
+          cells.push({ x, y, bit: Math.random() > .5 ? '1' : '0', seed: Math.random() });
+        }
+      }
+    }
+    function draw() {
+      ctx.clearRect(0, 0, innerWidth, innerHeight);
+      ctx.font = '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      for (const cell of cells) {
+        const dx = cell.x - pointer.x;
+        const dy = cell.y - pointer.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const hover = Math.max(0, 1 - dist / 150);
+        const alpha = Math.min(.95, .025 + cell.seed * .025 + hover * .82);
+        if (alpha < .04) continue;
+        ctx.fillStyle = `rgba(94, 231, 255, ${alpha})`;
+        ctx.fillText(cell.bit, cell.x, cell.y);
+      }
+      requestAnimationFrame(draw);
+    }
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('mousemove', event => { pointer.x = event.clientX; pointer.y = event.clientY; });
+    window.addEventListener('mouseleave', () => { pointer.x = -9999; pointer.y = -9999; });
+    resizeCanvas();
+    draw();
+    setView('topics');
+  </script>
+</body>
+</html>

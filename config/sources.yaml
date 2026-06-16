@@ -1,0 +1,452 @@
+# First-pass source pool for the AI intelligence MVP.
+# RSS is preferred. Crawl/manual_link entries should fetch only public pages and store summaries, not full articles.
+
+defaults:
+  timezone: Asia/Shanghai
+  rsshub_base_url: ${RSSHUB_BASE_URL}
+  deepseek_model: deepseek-v4-pro
+  daily_top_per_category: 15
+
+categories:
+  - 大模型动态
+  - AI行业资讯
+  - 国际形势影响
+  - 国际金融
+
+sources:
+  - id: openai_news
+    name: OpenAI News
+    category_hint: 大模型动态
+    source_type: official
+    method: rss
+    url: https://openai.com/news/rss.xml
+    language: en
+    weight: 1.20
+
+  - id: anthropic_news
+    name: Anthropic News
+    category_hint: 大模型动态
+    source_type: official
+    method: crawl
+    url: https://www.anthropic.com/news
+    language: en
+    weight: 1.20
+
+  - id: anthropic_engineering
+    name: Anthropic Engineering
+    category_hint: 大模型动态
+    source_type: official
+    method: crawl
+    url: https://www.anthropic.com/engineering
+    language: en
+    weight: 1.20
+
+  - id: google_deepmind_blog
+    name: Google DeepMind Blog
+    category_hint: 大模型动态
+    source_type: official
+    method: crawl
+    url: https://deepmind.google/blog/
+    language: en
+    weight: 1.20
+
+  - id: google_ai_blog
+    name: Google AI Blog
+    category_hint: 大模型动态
+    source_type: official
+    method: crawl
+    url: https://blog.google/technology/ai/
+    language: en
+    weight: 1.15
+
+  - id: meta_ai_blog
+    name: Meta AI Blog
+    category_hint: 大模型动态
+    source_type: official
+    method: crawl
+    url: https://ai.meta.com/blog/
+    language: en
+    weight: 1.15
+
+  - id: microsoft_ai_blog
+    name: Microsoft AI Blog
+    category_hint: AI行业资讯
+    source_type: official
+    method: crawl
+    url: https://blogs.microsoft.com/ai/
+    language: en
+    weight: 1.15
+
+  - id: nvidia_blog
+    name: NVIDIA Blog
+    category_hint: AI行业资讯
+    source_type: official
+    method: rss
+    url: https://blogs.nvidia.com/feed/
+    language: en
+    weight: 1.15
+
+  - id: huggingface_blog
+    name: Hugging Face Blog
+    category_hint: 大模型动态
+    source_type: research
+    method: rss
+    url: https://huggingface.co/blog/feed.xml
+    language: en
+    weight: 1.10
+
+  - id: arxiv_cs_ai
+    name: arXiv cs.AI
+    category_hint: 大模型动态
+    source_type: research
+    method: rss
+    url: https://rss.arxiv.org/rss/cs.AI
+    language: en
+    weight: 1.05
+
+  - id: arxiv_cs_cl
+    name: arXiv cs.CL
+    category_hint: 大模型动态
+    source_type: research
+    method: rss
+    url: https://rss.arxiv.org/rss/cs.CL
+    language: en
+    weight: 1.05
+
+  - id: arxiv_cs_lg
+    name: arXiv cs.LG
+    category_hint: 大模型动态
+    source_type: research
+    method: rss
+    url: https://rss.arxiv.org/rss/cs.LG
+    language: en
+    weight: 1.05
+
+  - id: papers_with_code_latest
+    name: Papers with Code
+    category_hint: 大模型动态
+    source_type: research
+    method: crawl
+    url: https://paperswithcode.com/latest
+    language: en
+    weight: 1.00
+
+  - id: techcrunch_ai
+    name: TechCrunch AI
+    category_hint: AI行业资讯
+    source_type: media
+    method: rss
+    url: https://techcrunch.com/category/artificial-intelligence/feed/
+    language: en
+    weight: 1.00
+
+  - id: venturebeat_ai
+    name: VentureBeat AI
+    category_hint: AI行业资讯
+    source_type: media
+    method: rss
+    url: https://venturebeat.com/category/ai/feed/
+    language: en
+    weight: 1.00
+
+  - id: mit_tech_review_ai
+    name: MIT Technology Review AI
+    category_hint: AI行业资讯
+    source_type: media
+    method: crawl
+    url: https://www.technologyreview.com/topic/artificial-intelligence/
+    language: en
+    weight: 1.05
+
+  - id: the_verge_ai
+    name: The Verge AI
+    category_hint: AI行业资讯
+    source_type: media
+    method: crawl
+    url: https://www.theverge.com/ai-artificial-intelligence
+    language: en
+    weight: 0.95
+
+  - id: wired_ai
+    name: WIRED AI
+    category_hint: AI行业资讯
+    source_type: media
+    method: crawl
+    url: https://www.wired.com/tag/artificial-intelligence/
+    language: en
+    weight: 0.95
+
+  - id: qbitai_site
+    name: 量子位
+    category_hint: auto
+    source_type: media
+    method: crawl
+    url: https://www.qbitai.com/
+    language: zh
+    weight: 0.95
+
+  - id: jiqizhixin_site
+    name: 机器之心
+    category_hint: auto
+    source_type: media
+    method: crawl
+    url: https://www.jiqizhixin.com/
+    language: zh
+    weight: 1.00
+
+  - id: baai_hub
+    name: 智源社区
+    category_hint: auto
+    source_type: research
+    method: crawl
+    url: https://hub.baai.ac.cn/
+    language: zh
+    weight: 0.95
+
+  - id: bbc_world
+    name: BBC World
+    category_hint: 国际形势影响
+    source_type: media
+    method: rss
+    url: https://feeds.bbci.co.uk/news/world/rss.xml
+    language: en
+    weight: 1.00
+
+  - id: bbc_technology
+    name: BBC Technology
+    category_hint: AI行业资讯
+    source_type: media
+    method: rss
+    url: https://feeds.bbci.co.uk/news/technology/rss.xml
+    language: en
+    weight: 0.95
+
+  - id: aljazeera_all
+    name: Al Jazeera
+    category_hint: 国际形势影响
+    source_type: media
+    method: rss
+    url: https://www.aljazeera.com/xml/rss/all.xml
+    language: en
+    weight: 0.95
+
+  - id: cfr
+    name: Council on Foreign Relations
+    category_hint: 国际形势影响
+    source_type: media
+    method: crawl
+    url: https://www.cfr.org/
+    language: en
+    weight: 1.05
+
+  - id: csis
+    name: CSIS
+    category_hint: 国际形势影响
+    source_type: media
+    method: crawl
+    url: https://www.csis.org/analysis
+    language: en
+    weight: 1.05
+
+  - id: federal_reserve_press
+    name: Federal Reserve Press Releases
+    category_hint: 国际金融
+    source_type: finance
+    method: crawl
+    url: https://www.federalreserve.gov/newsevents/pressreleases.htm
+    language: en
+    weight: 1.20
+
+  - id: federal_reserve_speeches
+    name: Federal Reserve Speeches
+    category_hint: 国际金融
+    source_type: finance
+    method: crawl
+    url: https://www.federalreserve.gov/newsevents/speeches.htm
+    language: en
+    weight: 1.15
+
+  - id: us_treasury_press
+    name: U.S. Treasury Press Releases
+    category_hint: 国际金融
+    source_type: finance
+    method: crawl
+    url: https://home.treasury.gov/news/press-releases
+    language: en
+    weight: 1.15
+
+  - id: bls_news
+    name: U.S. Bureau of Labor Statistics
+    category_hint: 国际金融
+    source_type: finance
+    method: crawl
+    url: https://www.bls.gov/news.release/
+    language: en
+    weight: 1.15
+
+  - id: bea_news
+    name: U.S. Bureau of Economic Analysis
+    category_hint: 国际金融
+    source_type: finance
+    method: crawl
+    url: https://www.bea.gov/news/current-releases
+    language: en
+    weight: 1.15
+
+  - id: ecb_press
+    name: European Central Bank Press
+    category_hint: 国际金融
+    source_type: finance
+    method: crawl
+    url: https://www.ecb.europa.eu/press/html/index.en.html
+    language: en
+    weight: 1.15
+
+  - id: boj_releases
+    name: Bank of Japan Releases
+    category_hint: 国际金融
+    source_type: finance
+    method: crawl
+    url: https://www.boj.or.jp/en/mopo/mpmdeci/index.htm
+    language: en
+    weight: 1.10
+
+  - id: imf_news
+    name: IMF News
+    category_hint: 国际金融
+    source_type: finance
+    method: crawl
+    url: https://www.imf.org/en/News
+    language: en
+    weight: 1.05
+
+  - id: yahoo_finance_news
+    name: Yahoo Finance News
+    category_hint: 国际金融
+    source_type: media
+    method: crawl
+    url: https://finance.yahoo.com/news/
+    language: en
+    weight: 0.90
+
+wechat_sources:
+  - id: wx_qbitai
+    name: 量子位
+    account_id: QbitAI
+    category_hint: auto
+    source_type: wechat
+    method: manual_link
+    weight: 0.95
+
+  - id: wx_appso
+    name: APPSO
+    account_id: appsolution
+    category_hint: AI行业资讯
+    source_type: wechat
+    method: manual_link
+    weight: 0.85
+
+  - id: wx_jiqizhixin
+    name: 机器之心
+    account_id: almosthuman2014
+    category_hint: auto
+    source_type: wechat
+    method: manual_link
+    weight: 1.00
+
+  - id: wx_xinzhiyuan
+    name: 新智元
+    account_id: AI_era
+    category_hint: auto
+    source_type: wechat
+    method: manual_link
+    weight: 0.85
+
+  - id: wx_geekpark
+    name: 极客公园
+    account_id: geekpark
+    category_hint: AI行业资讯
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_si_planet
+    name: 硅星人Pro
+    account_id: Si-Planet
+    category_hint: AI行业资讯
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_rockhazix
+    name: 数字生命卡兹克
+    account_id: Rockhazix
+    category_hint: auto
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_zhidx
+    name: 智东西
+    account_id: zhidxcom
+    category_hint: AI行业资讯
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_jazzyear
+    name: 甲子光年
+    account_id: jazzyear
+    category_hint: AI行业资讯
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_aitechtalk
+    name: AI科技评论
+    account_id: aitechtalk
+    category_hint: auto
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_deeptechchina
+    name: DeepTech深科技
+    account_id: deeptechchina
+    category_hint: auto
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_ai_front
+    name: AI前线
+    account_id: ai-front
+    category_hint: auto
+    source_type: wechat
+    method: manual_link
+    weight: 0.85
+
+  - id: wx_founder_park
+    name: Founder Park
+    account_id: Founder-Park
+    category_hint: AI行业资讯
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_ai_emergence
+    name: 智能涌现
+    account_id: AIEmergence
+    category_hint: auto
+    source_type: wechat
+    method: manual_link
+    weight: 0.90
+
+  - id: wx_tmtpost_agi
+    name: 钛媒体AGI
+    account_id: TMTPOSTAGI
+    category_hint: AI行业资讯
+    source_type: wechat
+    method: manual_link
+    weight: 0.85
+

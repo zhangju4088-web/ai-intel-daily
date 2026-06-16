@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "natural-comment-generator"
+version = "0.1.0"
+description = "Generate natural WeChat official account comments for AI vertical articles."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+commentgen = "commentgen.cli:main"
+intelhub = "intelhub.cli:main"

@@ -1,0 +1,13 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+*.tar.gz
+
+# Local run outputs. Keep public/ deployable previews tracked when needed.
+outputs/*
+!outputs/sample-comments.json
+!outputs/sample-comments.md
+!outputs/today-work-review.html

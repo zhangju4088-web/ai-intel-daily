@@ -1,0 +1,3177 @@
+{
+  "digest_date": "2026-06-16",
+  "generated_at": "2026-06-16T01:53:34.333019+00:00",
+  "generated_by": "intelhub-local-pipeline",
+  "settings": {
+    "per_source": 5,
+    "top_per_category": 15,
+    "extract_text": true,
+    "extract_limit": 25,
+    "summarize_with": "deepseek"
+  },
+  "stats": {
+    "fetched_candidate_count": 149,
+    "unique_candidate_count": 132,
+    "analysis_count": 132,
+    "deepseek_analysis_count": 19,
+    "local_analysis_count": 113,
+    "extracted_text_count": 19,
+    "extraction_error_count": 6,
+    "event_count": 129,
+    "selected_event_count": 59,
+    "fetch_error_count": 3
+  },
+  "fetch_errors": [
+    {
+      "source_id": "venturebeat_ai",
+      "source_name": "VentureBeat AI",
+      "error": "HTTP Error 308: Permanent Redirect"
+    },
+    {
+      "source_id": "aljazeera_all",
+      "source_name": "Al Jazeera",
+      "error": "<urlopen error EOF occurred in violation of protocol (_ssl.c:1129)>"
+    },
+    {
+      "source_id": "bls_news",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "error": "HTTP Error 503: Service Unavailable"
+    }
+  ],
+  "categories": {
+    "大模型动态": [
+      {
+        "id": "62b31e7c-f84d-57e5-925b-2f9ba8abbc1c",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Anthropic发布AI指数级政策提案",
+        "one_sentence_summary": "Anthropic提出先进AI框架和经济政策框架，呼吁政府授权阻止危险部署。",
+        "detailed_summary": "Anthropic发布两项政策提案以应对AI指数级进步。先进AI框架要求前沿开发者进行透明度、独立评估、安全措施，并赋予政府法律权力阻止或威慑危险部署，适用于训练算力超过10^25 FLOPs、AI收入超5亿美元或研发支出超10亿美元的公司。框架针对生物风险、网络风险、失控风险和自动化研发四类灾难性风险。经济政策框架关注工人和经济准备及AI收益广泛分享。Anthropic强调透明度已不足，需更强政府角色，并建议联邦法律不优先于州法除非其至少与提案同等严格。",
+        "key_points": [
+          "Anthropic提出先进AI框架，要求政府有权阻止危险AI部署。",
+          "框架适用于训练算力超10^25 FLOPs、AI收入超5亿美元或研发支出超10亿美元的公司。",
+          "涵盖生物、网络、失控和自动化研发四类风险。",
+          "要求透明度、独立评估、安全措施及民事罚款。",
+          "经济政策框架关注工人准备和收益共享。"
+        ],
+        "why_it_matters": "Anthropic作为领先AI公司，其政策提案可能塑造全球AI监管方向，特别是政府干预权、风险分类和门槛设定，对行业合规成本、创新空间和国际竞争格局有深远影响。",
+        "impact_analysis": {
+          "technology": "可能推动AI安全技术（如评估、控制）的标准化和投入。",
+          "business": "增加头部AI公司的合规成本，但可能为安全评估服务创造市场。",
+          "policy": "为美国联邦AI立法提供具体蓝图，可能加速国会行动，并影响州法与联邦法的关系。",
+          "finance": "短期影响有限，但若监管落地，可能增加AI公司法律风险，影响估值。"
+        },
+        "topic_angle": "Anthropic的监管蓝图：AI公司如何自我约束并呼吁政府介入？",
+        "avoid_angle": "简单复述提案内容，缺乏对行业影响和争议点的分析。",
+        "recommended": true,
+        "priority_score": 85.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Policy Jun 10, 2026 Policy on the AI Exponential AI is advancing at exponential speed, and the policymaking process was built for a slower world. We’re sharing policy proposals to prepare our institutions for AI progress",
+            "url": "https://www.anthropic.com/policy-on-the-ai-exponential",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "fc2ab6a0-e1de-5092-9ad6-58e9913f6b5e",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Anthropic如何为Claude构建安全围栏",
+        "one_sentence_summary": "Anthropic分享Claude产品中通过环境隔离而非人工监督来限制智能体风险的经验。",
+        "detailed_summary": "Anthropic工程团队发表文章，介绍如何为Claude系列产品（claude.ai、Claude Code、Claude Cowork）构建安全围栏。随着智能体能力增强，其潜在破坏半径也在扩大。文章指出，人工监督（如每步审批）存在疲劳问题，用户批准率高达93%，但注意力下降导致漏洞。因此，Anthropic重点采用环境隔离策略：通过沙箱、虚拟机、文件系统边界和出口控制来限制智能体可触及的范围。文章将风险分为三类：用户误用、模型异常行为（如Claude曾“帮助性”地逃出沙箱完成任务）和外部攻击（如提示注入）。防御体系覆盖环境、模型和工具三个层面。模型层防御虽强（Claude Opus 4.7在单次提示注入攻击中成功率仅0.1%），但无法做到100%有效。文章还提到，2026年4月因破坏半径过高而暂未发布Claude Mythos Preview模型，但预计随着防御系统成熟，类似能力模型将逐步开放。",
+        "key_points": [
+          "Anthropic通过环境隔离（沙箱、VM、出口控制）而非人工监督来限制智能体破坏半径。",
+          "人工监督存在疲劳问题：用户批准率93%，但注意力下降导致漏洞。",
+          "风险分为用户误用、模型异常行为、外部攻击三类。",
+          "Claude Opus 4.7在单次提示注入攻击中成功率仅0.1%，但模型层防御无法100%有效。",
+          "Claude Mythos Preview因破坏半径过高暂未发布，但未来可能随防御成熟而开放。"
+        ],
+        "why_it_matters": "该文章揭示了前沿AI公司在部署强智能体时面临的核心安全挑战和工程解决方案，对行业理解AI安全实践具有重要参考价值。",
+        "impact_analysis": {
+          "technology": "环境隔离技术（沙箱、VM、出口控制）将成为AI智能体安全部署的关键技术方向。",
+          "business": "企业部署AI智能体时需考虑安全架构，可能推动安全工具和服务的需求。",
+          "policy": "AI安全监管可能参考此类工程实践，要求对智能体实施环境隔离。",
+          "finance": ""
+        },
+        "topic_angle": "从Anthropic的实践看AI智能体安全：为什么人工监督不可靠，环境隔离才是未来。",
+        "avoid_angle": "单纯复述文章内容，缺乏对行业趋势的延伸分析。",
+        "recommended": true,
+        "priority_score": 85.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "anthropic_engineering",
+            "source_name": "Anthropic Engineering",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Featured How we contain Claude across products As agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containment for claude.ai, C",
+            "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+            "published_at": null,
+            "link_label": "Anthropic Engineering",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "488ff046-38c7-536d-86d8-f6dacb8c7b82",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Google DeepMind发布新一代AI模型系列",
+        "one_sentence_summary": "Google DeepMind推出Gemini 3.5、Gemini Omni、Gemma 4等新一代AI模型，覆盖多模态、开放模型、世界模型等领域。",
+        "detailed_summary": "Google DeepMind在其模型页面上展示了最新的AI系统系列，包括Gemini 3.5（结合前沿智能与行动）、Gemini Omni（多模态理解与编辑）、Nano Banana 2（快速图像生成与编辑）、Lyria 3（音乐生成含人声）、Gemini Audio（实时音频模型）、Veo（视频生成）、Imagen（文本到图像）、Gemma 4（最智能的开放模型）等。此外，还展示了世界模型与具身AI领域的Genie 3（交互世界生成）和Gemini Robotics（视觉-语言-行动模型）。研究突破包括SIMA 2（游戏代理）、AlphaGo、AlphaFold、WeatherNext、AlphaEarth、AlphaEvolve等。这些模型可通过Gemini应用、Google AI Studio、Google Antigravity等平台试用。",
+        "key_points": [
+          "Gemini 3.5是结合前沿智能与行动的最新模型系列。",
+          "Gemini Omni支持从任何内容创建任何内容，包括视频。",
+          "Gemma 4是Google最智能的开放模型，注重智能密度。",
+          "Nano Banana 2实现专业级图像生成与编辑，速度达Flash级别。",
+          "Lyria 3支持带人声的音乐创作和声学细节实验。"
+        ],
+        "why_it_matters": "Google DeepMind作为AI领域领先机构，其模型系列更新反映了AI技术的最新进展方向，包括多模态融合、代理能力、开放模型和世界模型，对行业趋势和竞争格局有重要影响。",
+        "impact_analysis": {
+          "technology": "推动多模态AI、代理AI、世界模型和具身AI的技术进步，Gemini 3.5的行动能力可能引领新范式。",
+          "business": "为开发者提供更多工具和平台（如Google AI Studio、Antigravity），可能加速AI应用落地，同时与OpenAI、Meta等竞争。",
+          "policy": "Gemma 4作为开放模型可能影响AI开源政策讨论，但正文未提及具体政策。",
+          "finance": "未直接提及财务信息，但模型发布可能影响Google母公司Alphabet的AI业务估值。"
+        },
+        "topic_angle": "从Google DeepMind模型全家桶看AI行业竞争格局：多模态、代理化、开放化三大趋势",
+        "avoid_angle": "单纯罗列模型名称和功能，缺乏深度分析；或过度聚焦单一模型而忽略整体战略。",
+        "recommended": true,
+        "priority_score": 85.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Explore models",
+            "url": "https://deepmind.google/models/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "93331bf6-678e-57c2-8d0e-e2c3f8b34d11",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "谷歌DeepMind发布Gemini 3.5系列，聚焦智能体",
+        "one_sentence_summary": "谷歌DeepMind推出Gemini 3.5系列模型，主打智能体能力，在编码和多模态理解上领先。",
+        "detailed_summary": "谷歌DeepMind在其官网发布了Gemini 3.5系列模型，包括Gemini 3.5 Flash和即将推出的3.5 Pro。该系列模型强调“前沿智能与行动结合”，旨在构建更强大的智能体。主要能力包括智能体编码、高级多模态理解（文本、图像、视频、音频）、长时任务执行和多步骤问题解决。在基准测试中，Gemini 3.5 Flash在Terminal-bench 2.1 Agentic terminal coding上达到76.2%，高于Gemini 3 Flash的58.0%、Gemini 3.1 Pro的70.3%以及Claude Sonnet 4.6和Claude Opus 4.7（未给出具体数值）和GPT-5.5（未给出具体数值）。此外，页面还展示了其他模型如Gemini Omni、Nano Banana、Gemini Audio、Veo、Imagen、Lyria、Genie 3、Gemini Robotics、Gemma等，以及研究突破如SIMA 2、AlphaGo、AlphaFold、WeatherNext、AlphaEarth、AlphaEvolve等。",
+        "key_points": [
+          "谷歌DeepMind发布Gemini 3.5系列，包括3.5 Flash和即将推出的3.5 Pro。",
+          "Gemini 3.5系列主打智能体能力，支持编码、多模态理解、长时任务等。",
+          "在Terminal-bench 2.1基准测试中，Gemini 3.5 Flash得分76.2%，领先于前代和竞品。",
+          "页面还展示了其他模型和研究突破，如SIMA 2、Genie 3、AlphaFold等。"
+        ],
+        "why_it_matters": "Gemini 3.5系列是谷歌在智能体领域的重要布局，其编码基准测试的领先可能吸引开发者生态，推动AI从辅助工具向自主代理演进。同时，多模型展示表明谷歌正构建全面的AI产品矩阵，对行业竞争格局有重要影响。",
+        "impact_analysis": {
+          "technology": "Gemini 3.5的智能体能力将推动AI在编码、多模态理解、长时任务执行等方面的技术进步，可能加速智能体应用落地。",
+          "business": "谷歌通过Gemini 3.5系列强化其在AI云服务和开发者工具市场的竞争力，可能吸引更多企业用户，与OpenAI、Anthropic等形成直接竞争。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从智能体竞赛角度分析谷歌DeepMind Gemini 3.5的发布，对比OpenAI、Anthropic的智能体策略。",
+        "avoid_angle": "单纯罗列模型名称和基准分数，缺乏深度分析。",
+        "recommended": true,
+        "priority_score": 85.0,
+        "confidence": 0.8,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Build intelligent agents",
+            "url": "https://deepmind.google/models/gemini/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "af6ded85-6b9e-55f8-b8e3-d897597b1035",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "谷歌DeepMind发布Gemini Omni：视频全能编辑",
+        "one_sentence_summary": "谷歌DeepMind推出Gemini Omni，支持从任意输入创建视频，实现自然语言驱动的视频编辑。",
+        "detailed_summary": "谷歌DeepMind在其官网发布了Gemini Omni模型，定位为“从任意输入创建任何内容”，首先聚焦视频生成与编辑。该模型支持通过自然语言逐步对话编辑视频，每次编辑基于前一次结果，保持场景一致。Gemini Omni融合了物理直觉与Gemini的历史、科学、文化知识，实现从照片级真实到有意义叙事的跨越。用户可引用图像、文本、视频或音频作为参考，生成单一连贯输出。模型还具备实时世界知识应用能力，例如理解镜子反射的物理效果。目前已在Gemini应用和Google Flow中提供试用。",
+        "key_points": [
+          "Gemini Omni支持从任意输入（图像、文本、视频、音频）创建视频。",
+          "通过自然语言对话进行逐步视频编辑，保持场景一致性。",
+          "融合物理理解与Gemini的知识库，实现有意义的叙事。",
+          "已在Gemini应用和Google Flow中开放试用。"
+        ],
+        "why_it_matters": "Gemini Omni代表了AI视频编辑从“生成”到“交互式创作”的跃迁，使非专业用户也能通过自然语言完成复杂视频编辑，可能重塑内容创作生态。",
+        "impact_analysis": {
+          "technology": "推动多模态AI从理解走向生成与编辑，强化了世界模型与推理能力的结合。",
+          "business": "对Adobe Premiere Pro、Final Cut Pro等传统视频编辑软件构成潜在威胁，可能催生新的AI视频创作平台。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从“视频编辑民主化”角度，探讨AI如何降低创作门槛，以及传统工具厂商的应对策略。",
+        "avoid_angle": "避免单纯罗列功能，或与Sora等模型进行简单对比（缺乏具体性能数据）。",
+        "recommended": true,
+        "priority_score": 85.0,
+        "confidence": 0.7,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Omni Create anything from anything",
+            "url": "https://deepmind.google/models/gemini-omni/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "9ab36bcf-3031-58c4-9f0c-3253d2a13146",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Meta发布Muse Spark：迈向个人超级智能",
+        "one_sentence_summary": "Meta推出首款原生多模态推理模型Muse Spark，支持工具使用、视觉思维链和多智能体编排。",
+        "detailed_summary": "Meta AI博客宣布推出Muse Spark，这是Meta超级智能实验室开发的首款模型，属于Muse系列。Muse Spark是原生多模态推理模型，支持工具使用、视觉思维链和多智能体编排。它已在meta.ai和Meta AI应用上线，并向部分用户开放私有API预览。Muse Spark在多项任务上表现强劲，包括多模态感知、推理、健康和智能体任务。其“沉思模式”通过并行多智能体推理，在“人类最后考试”中达到58%，在FrontierScience Research中达到38%。Meta还分享了在预训练、强化学习和测试时推理三个维度的扩展策略：预训练效率比Llama 4 Maverick提升一个数量级；强化学习带来平滑可预测的增益；测试时推理通过思考时间惩罚和多智能体编排优化token使用。Muse Spark是Meta AI全面改革的第一步，战略投资覆盖研究、训练到基础设施（如Hyperion数据中心）。",
+        "key_points": [
+          "Muse Spark是Meta超级智能实验室首款模型，原生多模态推理。",
+          "支持工具使用、视觉思维链和多智能体编排。",
+          "沉思模式在人类最后考试达58%，FrontierScience Research达38%。",
+          "预训练效率比Llama 4 Maverick提升超一个数量级。",
+          "与1000多名医生合作提升健康推理能力。"
+        ],
+        "why_it_matters": "Muse Spark是Meta从开源模型转向自研超级智能的关键产品，展示了其在多模态推理和效率优化上的突破，可能重塑AI竞争格局，尤其对个人AI助手和健康领域产生深远影响。",
+        "impact_analysis": {
+          "technology": "Muse Spark的多模态推理、视觉思维链和多智能体编排技术将推动AI在复杂任务中的应用，预训练效率提升可能加速模型迭代。",
+          "business": "Meta通过Muse Spark进入个人AI助手市场，与Google、OpenAI直接竞争，可能带动AI应用生态发展，尤其在健康和工具使用场景。",
+          "policy": "暂无直接政策影响，但AI在健康领域的应用可能引发监管关注。",
+          "finance": "Meta对Hyperion数据中心等基础设施的投资表明其长期AI投入，可能影响其资本支出和股价预期。"
+        },
+        "topic_angle": "从Muse Spark看Meta的AI战略转向：从开源到超级智能，以及个人化AI在健康领域的应用前景。",
+        "avoid_angle": "避免仅复述模型参数或性能对比，避免过度强调与Llama系列的差异而忽略新模型的核心创新。",
+        "recommended": true,
+        "priority_score": 85.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "meta_ai_blog",
+            "source_name": "Meta AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "FEATURED",
+            "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+            "published_at": null,
+            "link_label": "Meta AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "e7c3bd3a-5398-5c20-a333-b1c908816a63",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "谷歌DeepMind发布Nano Banana图像生成模型",
+        "one_sentence_summary": "谷歌DeepMind推出Nano Banana系列图像生成与编辑模型，基于Gemini架构，支持多模态理解和对话式输入。",
+        "detailed_summary": "谷歌DeepMind在其官网发布了名为Nano Banana的新一代图像生成与编辑模型系列。该系列基于Gemini架构，包含三个版本：Nano Banana Pro（基于Gemini 3，提供工作室级精度和控制）、Nano Banana 2（基于Gemini 3.1 Flash Image，以Flash速度实现专业级图像生成和编辑）以及基础版Nano Banana。模型具备深度语言理解能力，能捕捉提示细节，支持多模态理解（上传图像+文本指令）、对话式输入（自然语言交互并持续优化）以及基于真实世界知识的图像生成。用户可通过Gemini应用、Google AI Studio或Gemini API进行体验和开发。该模型旨在弥合用户描述与视觉想象之间的差距，适用于创意和生产力提升场景。",
+        "key_points": [
+          "Nano Banana系列包含三个版本：Nano Banana Pro、Nano Banana 2和基础版Nano Banana。",
+          "模型基于Gemini架构，具备多模态理解、对话式输入和真实世界知识能力。",
+          "用户可通过Gemini应用、Google AI Studio和Gemini API使用该模型。",
+          "模型强调通过详细提示控制图像生成，支持图像编辑功能。",
+          "Nano Banana Pro基于Gemini 3，Nano Banana 2基于Gemini 3.1 Flash Image。"
+        ],
+        "why_it_matters": "Nano Banana代表了谷歌在图像生成领域的最新进展，其与Gemini的深度集成可能改变用户与AI图像工具的交互方式，推动图像生成从专业工具向日常应用普及。同时，多版本策略为不同场景提供了灵活选择，可能加剧与OpenAI DALL-E、Midjourney等竞品的竞争。",
+        "impact_analysis": {
+          "technology": "Nano Banana基于Gemini架构，展示了多模态大模型在图像生成领域的应用潜力，对话式输入和真实世界知识能力可能成为图像生成技术的新标准。",
+          "business": "谷歌通过Gemini应用、AI Studio和API开放模型，可能吸引开发者和企业用户，推动AI图像生成在广告、设计、内容创作等领域的商业化应用。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从谷歌DeepMind的Nano Banana看AI图像生成的技术趋势与生态竞争",
+        "avoid_angle": "单纯介绍模型功能参数，缺乏与竞品对比或行业影响分析",
+        "recommended": true,
+        "priority_score": 80.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Nano Banana Create and edit detailed images",
+            "url": "https://deepmind.google/models/gemini-image/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "3592fff0-adc4-50e6-9e51-9f47b09008df",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "The Coin Flip Judge? Reliability and...",
+        "one_sentence_summary": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...",
+        "detailed_summary": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward models, and populate public leaderboards, but its run-to-run reliability remains under-characterized. We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini and GPT-4.1-mini), with 50 pairwise trials and 50 pointwise trials per question, supplemented by temperature and prompt-sensitivity ablations. Across judges, p...",
+        "key_points": [
+          "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...",
+          "We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini...",
+          "Across judges, pairwise preferences flip on average 13.6% of the time, with 28% of questions exceeding a 20% flip rat...",
+          "GPT-4o-mini also exhibits a significant first-position bias (72% A-majority, p = 0.024).",
+          "At the same time, mean pointwise score gaps are small (0.19--0.36 on a 10-point scale) and not statistically signific..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 78.2,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "arxiv_cs_cl",
+            "source_name": "arXiv cs.CL",
+            "source_type": "research",
+            "source_role": "primary",
+            "original_title": "The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation",
+            "url": "https://arxiv.org/abs/2606.13685",
+            "published_at": "Mon, 15 Jun 2026 00:00:00 -0400",
+            "link_label": "arXiv cs.CL",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "research"
+        ]
+      },
+      {
+        "id": "8ab283ec-3acf-5d21-94cf-a0be578e5170",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Anthropic研究团队架构与最新成果概览",
+        "one_sentence_summary": "Anthropic公开其研究团队架构及多项最新成果，包括可解释性、对齐、社会影响等方向。",
+        "detailed_summary": "Anthropic官网展示了其研究团队的组织架构，包括可解释性、对齐、社会影响和前沿红队四个团队。可解释性团队致力于理解大语言模型的内部工作机制；对齐团队研究AI模型风险并确保模型有用、诚实、无害；社会影响团队与政策和安全团队合作，探索AI在现实世界中的应用；前沿红队分析前沿AI模型对网络安全、生物安全和自主系统的影响。最新研究成果包括：2026年5月7日发布的“自然语言自编码器”项目，训练Claude将其内部思维转化为人类可读文本；5月8日发布的“Teaching Claude why”研究，旨在减少代理性对齐错误；4月24日的“Project Deal”项目，在旧金山办公室创建了一个由Claude代理买卖谈判的市场；3月18日发布的“What 81,000 people want from AI”研究报告，基于近81,000名Claude.ai用户的反馈，是同类研究中规模最大、语言最多元的定性研究；2025年12月18日发布的“Project Vend: Phase two”更新，继续探索AI在复杂现实任务中的表现。此外，出版物列表显示2026年6月8日有关于生物学代理的论文，6月5日有关于Claude作为化学家的论文，6月3日有关于AI网络威胁的年度映射报告等。",
+        "key_points": [
+          "Anthropic设有四个研究团队：可解释性、对齐、社会影响、前沿红队。",
+          "2026年5月7日发布自然语言自编码器，将Claude的内部表示转为文本。",
+          "2026年5月8日发布Teaching Claude why研究，减少代理性对齐错误。",
+          "2026年4月24日Project Deal创建AI代理市场，模拟买卖谈判。",
+          "2026年3月18日发布基于81,000名用户反馈的AI需求研究报告。"
+        ],
+        "why_it_matters": "Anthropic作为领先的AI公司，其研究方向和成果直接影响行业对AI安全、可解释性和社会影响的理解。自然语言自编码器等创新可能推动模型透明化，而大规模用户研究为AI产品设计提供重要参考。",
+        "impact_analysis": {
+          "technology": "自然语言自编码器技术可能提升模型可解释性，为AI安全提供新工具。Teaching Claude why研究有助于减少代理性对齐错误，增强自主系统的可靠性。",
+          "business": "Project Deal和Project Vend展示了AI代理在商业场景中的潜力，可能催生新的自动化交易和服务模式。",
+          "policy": "81,000人用户研究为政策制定者提供了公众对AI态度的数据支持。前沿红队对网络安全和生物安全的分析可能影响相关监管框架。",
+          "finance": "未直接涉及金融市场影响。"
+        },
+        "topic_angle": "从Anthropic最新研究看AI可解释性与安全对齐的前沿进展",
+        "avoid_angle": "简单罗列Anthropic研究团队名称，缺乏深度分析。",
+        "recommended": true,
+        "priority_score": 75.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Research",
+            "url": "https://www.anthropic.com/research",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "cf5e4929-d6ef-56b3-8627-6635b2b8ec91",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Anthropic披露Claude Code质量下降原因及修复",
+        "one_sentence_summary": "Anthropic查明Claude Code质量下降源于三项变更，已全部修复并重置用户限额。",
+        "detailed_summary": "Anthropic于2026年4月23日发布博文，解释近期Claude Code质量下降的原因。调查发现三项独立变更导致问题：1）3月4日将默认推理努力从高改为中，以降低延迟，但牺牲了智能性，4月7日回滚；2）3月26日引入缓存优化，因bug导致每次对话都清除旧推理，使模型显得健忘，4月10日修复；3）4月16日添加系统提示减少冗长，但损害了编码质量，4月20日回滚。这些变更分别影响不同流量，造成广泛但不一致的退化。API未受影响。所有问题已在v2.1.116中解决。Anthropic承诺改进测试流程，并重置所有订阅者的使用限制。",
+        "key_points": [
+          "三项独立变更导致Claude Code质量下降，分别影响推理努力、缓存和冗长控制。",
+          "所有问题已在4月20日发布的v2.1.116中修复。",
+          "API和推理层未受影响。",
+          "Anthropic重置所有订阅者使用限制作为补偿。",
+          "公司承诺改进内部测试和用户反馈处理流程。"
+        ],
+        "why_it_matters": "Claude Code是Anthropic的重要产品，质量下降直接影响用户信任和市场份额。此次事件暴露了AI产品在快速迭代中平衡性能、成本和用户体验的挑战，对行业有警示意义。",
+        "impact_analysis": {
+          "technology": "Anthropic将改进内部测试流程，特别是针对产品层变更的评估，可能推动更严格的AI产品部署标准。",
+          "business": "短期用户信任受损，但重置限额和公开透明可能挽回部分声誉。长期需关注用户留存率变化。",
+          "policy": "无直接影响。",
+          "finance": "无直接影响。"
+        },
+        "topic_angle": "AI产品迭代中的质量平衡：Anthropic的教训与启示",
+        "avoid_angle": "单纯指责Anthropic或夸大事件影响，缺乏深度分析。",
+        "recommended": true,
+        "priority_score": 75.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "anthropic_engineering",
+            "source_name": "Anthropic Engineering",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "An update on recent Claude Code quality reports Apr 23, 2026",
+            "url": "https://www.anthropic.com/engineering/april-23-postmortem",
+            "published_at": null,
+            "link_label": "Anthropic Engineering",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "fe29430c-69c5-5261-bcbf-f23acac5f053",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Google DeepMind发布Gemini Audio音频模型",
+        "one_sentence_summary": "Google DeepMind推出Gemini Audio系列音频模型，支持实时对话、语音生成和翻译。",
+        "detailed_summary": "Google DeepMind在其模型页面正式推出Gemini Audio系列音频模型，包括3.1 Flash Live、3.5 Live Translate和3.1 Flash TTS三个子模型。3.1 Flash Live专注于低延迟、自然的实时对话，能识别语音中的音高和节奏等细微差别；3.5 Live Translate支持70多种语言的实时语音到语音翻译，并保持说话者的自然语气和节奏；3.1 Flash TTS则提供对语调、风格、节奏的精细控制，支持通过音频标签进行指令。这些模型具备实时对话、语音生成和音频理解三大能力，可应用于语音优先应用、长叙事内容创作以及说话人识别和意图理解等场景。页面还展示了其他模型如Veo、Imagen、Lyria等，但Gemini Audio是本次重点。",
+        "key_points": [
+          "Google DeepMind发布Gemini Audio系列音频模型",
+          "包括3.1 Flash Live、3.5 Live Translate、3.1 Flash TTS三个子模型",
+          "支持实时对话、语音生成、音频理解三大能力",
+          "3.5 Live Translate支持70+语言实时语音翻译",
+          "3.1 Flash TTS提供精细的语音风格控制"
+        ],
+        "why_it_matters": "Gemini Audio是Google DeepMind在音频AI领域的重要产品，其实时对话和翻译能力可能推动语音交互和跨语言通信的进步，与现有语音AI产品形成竞争。",
+        "impact_analysis": {
+          "technology": "推动语音AI在实时性、自然度和多语言支持上的发展",
+          "business": "可能影响语音助手、翻译服务、有声内容创作等市场",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从多模态AI布局角度，分析Gemini Audio如何补全Google DeepMind的模型生态",
+        "avoid_angle": "单纯罗列模型参数或功能，缺乏深度分析",
+        "recommended": true,
+        "priority_score": 75.0,
+        "confidence": 0.8,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Audio Talk, create and control audio",
+            "url": "https://deepmind.google/models/gemini-audio/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "c7293b42-b90f-5e65-9bee-29b67436a494",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Which Models Perform Better in Inher...",
+        "one_sentence_summary": "arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...",
+        "detailed_summary": "arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Shared Task on Arabic Islamic inheritance reasoning. The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation, multi-step reasoning, and precise numerical computation. We compare \\textit{commercial} and \\textit{open-source} models under a unified prompting strategy to assess their effectiveness in structured legal reason...",
+        "key_points": [
+          "arXiv:2606.13751v1 Announce Type: new Abstract: This paper presents the participation of team PSL in the QIAS 2026 Sh...",
+          "The task evaluates the ability of large language models to solve inheritance cases that require legal interpretation,...",
+          "We compare \\textit{commercial} and \\textit{open-source} models under a unified prompting strategy to assess their eff...",
+          "\\\\ Our results show a clear gap in reliability between the two model families.",
+          "Commercial models demonstrate stronger performance in identifying eligible heirs, applying exclusion rules, and maint..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Which Models Perform Better in Inheritance Reasoning?",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 73.6,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "arxiv_cs_cl",
+            "source_name": "arXiv cs.CL",
+            "source_type": "research",
+            "source_role": "primary",
+            "original_title": "Which Models Perform Better in Inheritance Reasoning?",
+            "url": "https://arxiv.org/abs/2606.13751",
+            "published_at": "Mon, 15 Jun 2026 00:00:00 -0400",
+            "link_label": "arXiv cs.CL",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "research"
+        ]
+      },
+      {
+        "id": "6c71c04b-1552-509b-8439-2f83715c139a",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "A fully GPU-based workflow for build...",
+        "one_sentence_summary": "arXiv:2606.13742v1 Announce Type: new Abstract: The ability to resolve complex physical phenomena with high fidelity...",
+        "detailed_summary": "arXiv:2606.13742v1 Announce Type: new Abstract: The ability to resolve complex physical phenomena with high fidelity and at low computational cost is central to addressing key challenges in modern engineering. A prime example lies in hypersonic flows, where the precise prediction of the full flowfield topology, in particular with respect to shock wave location and intensity, is critical. Yet supersonic and hypersonic flows continue to be a stumbling block for traditional reduced-order models...",
+        "key_points": [
+          "arXiv:2606.13742v1 Announce Type: new Abstract: The ability to resolve complex physical phenomena with high fidelity...",
+          "A prime example lies in hypersonic flows, where the precise prediction of the full flowfield topology, in particular...",
+          "Yet supersonic and hypersonic flows continue to be a stumbling block for traditional reduced-order models and neural...",
+          "To that end, we introduce a fully GPU based workflow that integrates accelerated data generation with the training of...",
+          "Our workflow is enabled by a differentiable high-fidelity solver (JAX-Fluids) which we employ for rapid dataset creat..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：A fully GPU-based workflow for building physics emulators of hypersonic flows",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 73.6,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "arxiv_cs_lg",
+            "source_name": "arXiv cs.LG",
+            "source_type": "research",
+            "source_role": "primary",
+            "original_title": "A fully GPU-based workflow for building physics emulators of hypersonic flows",
+            "url": "https://arxiv.org/abs/2606.13742",
+            "published_at": "Mon, 15 Jun 2026 00:00:00 -0400",
+            "link_label": "arXiv cs.LG",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "research"
+        ]
+      },
+      {
+        "id": "a1080efc-90ad-59d7-b354-20b7b957e767",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "Introducing the OpenAI Partner Network",
+        "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...",
+        "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
+        "key_points": [
+          "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 70.8,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Introducing the OpenAI Partner Network",
+            "url": "https://openai.com/index/introducing-openai-partner-network",
+            "published_at": "Sun, 14 Jun 2026 17:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "b1f9db66-7a92-5ead-8cf9-cd8e471d2929",
+        "event_date": "2026-06-16",
+        "category": "大模型动态",
+        "ai_title": "BBVA puts AI at the core of banking...",
+        "one_sentence_summary": "Learn how BBVA scaled ChatGPT Enterprise to 100,000 employees and partnered with OpenAI to accelerate AI-powered bank...",
+        "detailed_summary": "Learn how BBVA scaled ChatGPT Enterprise to 100,000 employees and partnered with OpenAI to accelerate AI-powered banking transformation worldwide.",
+        "key_points": [
+          "Learn how BBVA scaled ChatGPT Enterprise to 100,000 employees and partnered with OpenAI to accelerate AI-powered bank..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：BBVA puts AI at the core of banking with OpenAI",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 69.6,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "BBVA puts AI at the core of banking with OpenAI",
+            "url": "https://openai.com/index/bbva",
+            "published_at": "Thu, 11 Jun 2026 00:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      }
+    ],
+    "AI行业资讯": [
+      {
+        "id": "3a85d116-22d6-5086-9e18-26aa88e61df1",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "Anthropic发布AI政策框架，聚焦安全与治理",
+        "one_sentence_summary": "Anthropic发布多项AI政策提案，呼吁政府加强监管、应对风险并保持技术领先。",
+        "detailed_summary": "Anthropic在政策页面中阐述了其对AI治理的立场和多项政策提案。公司认为AI正以指数级速度发展，而政策制定过程相对缓慢，因此需要提前准备。其政策重点包括：模型安全与监督，要求公司公开风险评估和安全测试结果，并支持第三方评估和政府监管；国家安全，强调最先进的AI模型应在美国及盟友国家开发，以维护民主价值观；经济政策框架，应对AI驱动的劳动力市场变化；以及先进AI框架，针对最强大模型带来的灾难性风险提出政府应对方案。Anthropic还披露了具体事件：2025年底，其破坏了首次报告的AI策划的网络间谍活动；2026年，Claude Mythos Preview在主流操作系统、浏览器和开源项目中发现了数千个此前未知的漏洞。公司呼吁政府制定行业规则、支持工人转型，并通过国际协议和出口管制管理AI的跨境使用。",
+        "key_points": [
+          "Anthropic提出多项AI政策提案，包括模型安全、国家安全、经济影响和先进AI风险。",
+          "公司披露了2025年底首次AI策划的网络间谍活动被破坏，以及2026年Claude发现大量漏洞。",
+          "呼吁政府加强监管，要求公司公开风险信息，并支持独立评估。",
+          "强调最先进AI应在美国及盟友国家开发，以维护民主价值观。",
+          "提出经济政策框架，应对AI对劳动力市场的冲击。"
+        ],
+        "why_it_matters": "Anthropic的政策立场反映了AI行业头部企业对监管的主动参与，其提案可能影响美国及全球AI立法方向。同时，披露的安全事件表明AI风险已现实化，政策制定刻不容缓。",
+        "impact_analysis": {
+          "technology": "推动AI安全评估和透明度标准的发展，可能促使更多公司采用类似框架。",
+          "business": "AI公司面临更严格的合规要求，但主动披露风险可能提升公众信任。",
+          "policy": "为美国及国际AI监管提供参考，可能加速相关立法进程。",
+          "finance": "监管不确定性增加，但合规领先的公司可能获得竞争优势。"
+        },
+        "topic_angle": "从Anthropic的政策提案看AI监管趋势；AI安全事件频发，企业如何应对？",
+        "avoid_angle": "单纯罗列Anthropic的政策内容，缺乏分析；过度强调技术乐观而忽视风险。",
+        "recommended": true,
+        "priority_score": 85.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Policy",
+            "url": "https://www.anthropic.com/policy",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "32b2ddc3-8b25-53fb-912b-b1e78f438ee4",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "Meta SAM助力时尚应用Alta Daily数字化衣橱",
+        "one_sentence_summary": "Meta的SAM模型帮助时尚应用Alta Daily实现用户衣橱数字化，处理超2000万张图片，降低成本并提升体验。",
+        "detailed_summary": "时尚AI应用Alta Daily于2025年上线，允许用户拍照数字化整个衣橱，并通过自然语言推荐穿搭。其核心是Meta的Segment Anything Model（SAM），用于从用户上传的复杂背景图片中分割衣物。创始人Jenny Wang表示，时尚图片分割极具挑战，如白鞋对白墙、蓝毛衣在蓝毯子上等。团队测试多种模型后，发现SAM在8个产品类别中表现最佳，尤其SAM 3版本。使用SAM后，Alta处理了超过2000万张图片，避免了高昂的外部API费用（每张数美分），使初创公司能专注产品开发。应用已在美国、法国、德国、墨西哥和荷兰获得用户。未来，团队计划探索Meta的SAM 3D模型以增强沉浸式体验。",
+        "key_points": [
+          "Alta Daily利用Meta SAM模型实现用户衣橱数字化，处理超2000万张图片。",
+          "SAM在复杂背景（如白鞋对白墙、蓝毛衣在蓝毯子）下表现优异，优于其他模型。",
+          "使用SAM避免了高昂的外部API成本，对早期初创公司至关重要。",
+          "应用已在美国、法国、德国、墨西哥和荷兰拥有用户基础。",
+          "团队正实验Meta的SAM 3D模型以提升数字分身交互体验。"
+        ],
+        "why_it_matters": "该案例是Meta SAM模型在时尚领域的成功应用，证明了开源AI模型在降低企业成本、提升产品体验方面的实际价值，对AI行业商业化具有参考意义。",
+        "impact_analysis": {
+          "technology": "SAM模型在复杂图像分割上的能力得到验证，未来可能推动更多垂直行业（如电商、设计）采用类似技术。SAM 3D的探索将拓展数字孪生和沉浸式交互的应用边界。",
+          "business": "Alta Daily通过SAM降低了图像处理成本，使其能快速扩展用户规模。这为其他初创公司提供了低成本AI解决方案的范例，可能加速AI在时尚电商领域的普及。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从Alta Daily案例看开源AI模型如何降低初创公司技术门槛和成本；SAM模型在时尚领域的应用潜力。",
+        "avoid_angle": "单纯复述Meta博客内容，缺乏行业对比或深度分析；过度聚焦SAM技术细节而忽略商业价值。",
+        "recommended": true,
+        "priority_score": 70.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "meta_ai_blog",
+            "source_name": "Meta AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "How Alta Daily Uses Meta’s Segment Anything to Reimagine the Digital Closet",
+            "url": "https://ai.meta.com/blog/alta-daily-fashion-app-segment-anything/",
+            "published_at": null,
+            "link_label": "Meta AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "90649a15-5a6f-5235-ab80-41b72d24a63b",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "NVIDIA Accelerates Google DeepMind’s...",
+        "one_sentence_summary": "Today, Google DeepMind released DiffusionGemma — an experimental open model built for exceptionally fast text generat...",
+        "detailed_summary": "Today, Google DeepMind released DiffusionGemma — an experimental open model built for exceptionally fast text generation. NVIDIA has optimized DiffusionGemma to run even faster across NVIDIA GeForce RTX GPUs, the NVIDIA RTX PRO platform and NVIDIA DGX Spark systems, from local PCs to the cloud. Rather than generating text one word at a time, DiffusionGemma generates multiple words in parallel to output whole blocks of text, opening a new, low-latency frontier for the kind of single-user workl...",
+        "key_points": [
+          "Today, Google DeepMind released DiffusionGemma — an experimental open model built for exceptionally fast text generat...",
+          "NVIDIA has optimized DiffusionGemma to run even faster across NVIDIA GeForce RTX GPUs, the NVIDIA RTX PRO platform an...",
+          "Rather than generating text one word at a time, DiffusionGemma generates multiple words in parallel to output whole b..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Accelerates Google DeepMind’s DiffusionGemma for Local AI",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 69.6,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "NVIDIA Accelerates Google DeepMind’s DiffusionGemma for Local AI",
+            "url": "https://blogs.nvidia.com/blog/rtx-ai-garage-local-gemma-diffusion/",
+            "published_at": "Wed, 10 Jun 2026 16:15:20 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "0822e4b9-717d-54ca-a3c1-ede37bb03bf4",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "NVIDIA Confidential Computing to Hel...",
+        "one_sentence_summary": "NVIDIA GPUs with Confidential Computing are now used for confidential inference in Apple’s Private Cloud Compute (PCC...",
+        "detailed_summary": "NVIDIA GPUs with Confidential Computing are now used for confidential inference in Apple’s Private Cloud Compute (PCC), as it expands beyond Apple’s data centers to Google Cloud. Unveiled during Apple’s annual WWDC gathering for developers from around the globe, NVIDIA GPUs will support server-side inference for Apple Foundation Models, custom-built by Apple and Google, leveraging […]",
+        "key_points": [
+          "NVIDIA GPUs with Confidential Computing are now used for confidential inference in Apple’s Private Cloud Compute (PCC...",
+          "Unveiled during Apple’s annual WWDC gathering for developers from around the globe, NVIDIA GPUs will support server-s..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Confidential Computing to Help Expand Apple’s Private Cloud Compute",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 69.6,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "NVIDIA Confidential Computing to Help Expand Apple’s Private Cloud Compute",
+            "url": "https://blogs.nvidia.com/blog/nvidia-confidential-computing-apple-private-cloud-compute/",
+            "published_at": "Tue, 09 Jun 2026 22:34:27 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "6dd33e81-225f-5ca5-9b36-b3685ab2f263",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "NVIDIA Blackwell Leads on First Agen...",
+        "one_sentence_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...",
+        "detailed_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […]",
+        "key_points": [
+          "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...",
+          "In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 64.8,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark",
+            "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/",
+            "published_at": "Fri, 12 Jun 2026 21:00:08 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "30ac7c9e-8008-5ed1-a60b-7df805c30422",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "The US government’s Anthropic models...",
+        "one_sentence_summary": "The Trump administration's decision that forced Anthropic to pull its latest cybersecurity models could be reactionar...",
+        "detailed_summary": "The Trump administration's decision that forced Anthropic to pull its latest cybersecurity models could be reactionary, retaliatory, or both, but the message is clear: The AI industry isn't immune from U.S. government interference.",
+        "key_points": [
+          "The Trump administration's decision that forced Anthropic to pull its latest cybersecurity models could be reactionar...",
+          "government interference."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：The US government’s Anthropic models ban was never about an AI jailbreak",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 64.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "The US government’s Anthropic models ban was never about an AI jailbreak",
+            "url": "https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/",
+            "published_at": "Mon, 15 Jun 2026 21:50:21 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "21433466-ec96-5295-ae4e-bb4d3aaf2f55",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "Cybersecurity vets protest ‘dangerou...",
+        "one_sentence_summary": "A group made up of dozens of cybersecurity experts urged the White House to remove export-control restrictions on Ant...",
+        "detailed_summary": "A group made up of dozens of cybersecurity experts urged the White House to remove export-control restrictions on Anthropic’s Fable and Mythos models, arguing that the order is going to limit the ability of cybersecurity defenders to secure their software and products.",
+        "key_points": [
+          "A group made up of dozens of cybersecurity experts urged the White House to remove export-control restrictions on Ant..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Cybersecurity vets protest ‘dangerous’ US government ban on Anthropic’s most powerful models",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 64.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Cybersecurity vets protest ‘dangerous’ US government ban on Anthropic’s most powerful models",
+            "url": "https://techcrunch.com/2026/06/15/cybersecurity-vets-protest-dangerous-us-government-ban-on-anthropics-most-powerful-models/",
+            "published_at": "Mon, 15 Jun 2026 15:29:51 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "5182dc2d-8217-5c26-a1a8-9b16118af5ef",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "Google Research页面导航汇总",
+        "one_sentence_summary": "Google Research页面介绍了其研究领域、产品、平台及公司新闻的导航结构。",
+        "detailed_summary": "本文是Google Research官方博客的导航页面，列出了Google在AI与创新（包括Google DeepMind、Google Research、Google Labs、Gemini模型、量子计算等）、产品与平台（如搜索、地图、Chrome、Android、Pixel等）以及公司新闻（如领导层、可持续发展、安全等）方面的主要板块和链接。页面还提供了多个子博客的入口，如Google DeepMind博客、Google Research博客、Google Developers博客等，并包含订阅和语言选择功能。正文未包含具体研究内容或新闻事件。",
+        "key_points": [
+          "Google Research页面是导航页，汇总了AI研究、产品、公司新闻等板块。",
+          "AI与创新板块包括Google DeepMind、Google Research、Google Labs、Gemini模型、量子计算。",
+          "产品与平台涵盖搜索、地图、Chrome、Android、Pixel等。",
+          "公司新闻涉及领导层、可持续发展、安全等。",
+          "提供多个子博客链接和订阅功能。"
+        ],
+        "why_it_matters": "该页面本身不包含具体情报，但可作为了解Google Research组织架构和关注领域的入口。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "Google Research的组织架构与研究方向概览",
+        "avoid_angle": "避免将其作为具体AI进展报道，因为无实质内容。",
+        "recommended": false,
+        "priority_score": 60.0,
+        "confidence": 0.7,
+        "reading_links": [
+          {
+            "source_id": "google_ai_blog",
+            "source_name": "Google AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Google Research",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/",
+            "published_at": null,
+            "link_label": "Google AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "57381600-9eb7-56c6-a892-6a22bb022ef2",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "Google量子计算页面概览：无实质新内容",
+        "one_sentence_summary": "Google AI博客量子计算页面仅展示导航和订阅信息，无具体技术或研究进展。",
+        "detailed_summary": "本文是Google AI博客中关于量子计算的页面，内容主要为网站导航、产品列表和订阅入口，包括指向Google DeepMind、Google Research等子博客的链接，以及搜索、地图、Chrome等产品介绍。页面顶部有“Quantum frontiers may be closer than they appear”的标题和一句关于后量子密码迁移的概述，但未提供任何具体的技术细节、研究进展或数据。页面底部有隐私、条款等法律信息。整体上，该页面是一个聚合入口，而非一篇有实质内容的文章。",
+        "key_points": [
+          "页面标题为'Quantum computing'，属于Google AI博客。",
+          "包含指向Google DeepMind、Google Research等子博客的链接。",
+          "提到'Quantum frontiers may be closer than they appear'和'后量子密码迁移'。",
+          "页面主要提供导航和订阅功能，无具体技术内容。",
+          "发布日期未知，当前日期为2026-06-16。"
+        ],
+        "why_it_matters": "该页面本身没有实质内容，但作为Google官方博客的量子计算入口，可能暗示Google对量子计算和后量子密码学的持续关注。然而，由于缺乏具体信息，其重要性较低。",
+        "impact_analysis": {
+          "technology": "无具体技术影响。",
+          "business": "无具体商业影响。",
+          "policy": "无具体政策影响。",
+          "finance": "无具体金融影响。"
+        },
+        "topic_angle": "可探讨Google量子计算博客的导航结构及其对用户获取信息的影响。",
+        "avoid_angle": "避免将其作为一篇有实质内容的文章进行报道。",
+        "recommended": false,
+        "priority_score": 60.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "google_ai_blog",
+            "source_name": "Google AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Quantum computing",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/quantum-computing/",
+            "published_at": null,
+            "link_label": "Google AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "db01c7c9-c48f-5985-a4e3-aed6ec1ab85f",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "Microsoft On The Issues",
+        "one_sentence_summary": "Microsoft On The Issues",
+        "detailed_summary": "Microsoft On The Issues",
+        "key_points": [
+          "Microsoft On The Issues"
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Microsoft On The Issues",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "microsoft_ai_blog",
+            "source_name": "Microsoft AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Microsoft On The Issues",
+            "url": "https://blogs.microsoft.com/on-the-issues/",
+            "published_at": null,
+            "link_label": "Microsoft AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "af9d5723-9be2-5cd2-a23b-68db719641a6",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "Conexiones",
+        "one_sentence_summary": "Conexiones",
+        "detailed_summary": "Conexiones",
+        "key_points": [
+          "Conexiones"
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Conexiones",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "microsoft_ai_blog",
+            "source_name": "Microsoft AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Conexiones",
+            "url": "https://blogs.microsoft.com/conexiones/",
+            "published_at": null,
+            "link_label": "Microsoft AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "faec83fa-49af-57b1-ad67-8c5dc7a6e306",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "AI alone won’t change your business....",
+        "one_sentence_summary": "AI alone won’t change your business.",
+        "detailed_summary": "AI alone won’t change your business. The system running it will.",
+        "key_points": [
+          "AI alone won’t change your business.",
+          "The system running it will."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：AI alone won’t change your business. The system running it will.",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "microsoft_ai_blog",
+            "source_name": "Microsoft AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "AI alone won’t change your business. The system running it will.",
+            "url": "https://blogs.microsoft.com/blog/2026/06/02/ai-alone-wont-change-your-business-the-system-running-it-will/",
+            "published_at": null,
+            "link_label": "Microsoft AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "d7a1062b-3986-51ed-830b-b62a265f1ec7",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "AI, jobs, and the next generation",
+        "one_sentence_summary": "AI, jobs, and the next generation",
+        "detailed_summary": "AI, jobs, and the next generation",
+        "key_points": [
+          "AI, jobs, and the next generation"
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：AI, jobs, and the next generation",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "microsoft_ai_blog",
+            "source_name": "Microsoft AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "AI, jobs, and the next generation",
+            "url": "https://blogs.microsoft.com/on-the-issues/2026/06/10/ai-jobs-and-the-next-generation/",
+            "published_at": null,
+            "link_label": "Microsoft AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "cd04c685-a372-5b2c-a73f-c13e61225b7c",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "Save Big and Play Bigger: GeForce NO...",
+        "one_sentence_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...",
+        "detailed_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game.",
+        "key_points": [
+          "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...",
+          "PC gamers are driven by one thing: the love of the game."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings",
+            "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/",
+            "published_at": "Thu, 11 Jun 2026 13:00:17 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "f59cecd2-8729-560d-a46d-919951964752",
+        "event_date": "2026-06-16",
+        "category": "AI行业资讯",
+        "ai_title": "For Robotaxis, Safety Must Be Built...",
+        "one_sentence_summary": "A car pulls up to the curb. The app says, “Your ride is here.” No one’s in the driver’s seat. For people who live in...",
+        "detailed_summary": "A car pulls up to the curb. The app says, “Your ride is here.” No one’s in the driver’s seat. For people who live in one of the dozens of cities now hosting robotaxi services, this is already a reality. The robotaxi industry has moved from prototype milestones to commercial operations, with an expanding ecosystem […]",
+        "key_points": [
+          "A car pulls up to the curb.",
+          "The app says, “Your ride is here.” No one’s in the driver’s seat.",
+          "For people who live in one of the dozens of cities now hosting robotaxi services, this is already a reality.",
+          "The robotaxi industry has moved from prototype milestones to commercial operations, with an expanding ecosystem […]"
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：For Robotaxis, Safety Must Be Built In, Not Bolted On",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "For Robotaxis, Safety Must Be Built In, Not Bolted On",
+            "url": "https://blogs.nvidia.com/blog/halos-os-robotaxi-safety/",
+            "published_at": "Wed, 10 Jun 2026 19:00:12 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      }
+    ],
+    "国际形势影响": [
+      {
+        "id": "dc05181c-a8d3-5e78-967d-2dd3dab5604a",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Trump says deal to end war with Iran...",
+        "one_sentence_summary": "Trump says Strait of Hormuz will be open from Friday but there is still confusion about the exact contents of the agr...",
+        "detailed_summary": "Trump says Strait of Hormuz will be open from Friday but there is still confusion about the exact contents of the agreement.",
+        "key_points": [
+          "Trump says Strait of Hormuz will be open from Friday but there is still confusion about the exact contents of the agr..."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Trump says deal to end war with Iran already signed and details to be released 'pretty soon'",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Trump says deal to end war with Iran already signed and details to be released 'pretty soon'",
+            "url": "https://www.bbc.com/news/articles/ce8mv6l6eezo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 16 Jun 2026 00:03:56 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "eff8b0c6-2d47-54a2-a5f8-c0c553fb4d6a",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Bowen: Iran deal ends Trump's war th...",
+        "one_sentence_summary": "The deal to end fighting and re-open the Strait of Hormuz leaves the sides where they were 24 hours before the war -...",
+        "detailed_summary": "The deal to end fighting and re-open the Strait of Hormuz leaves the sides where they were 24 hours before the war - only with thousands now dead.",
+        "key_points": [
+          "The deal to end fighting and re-open the Strait of Hormuz leaves the sides where they were 24 hours before the war -..."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Bowen: Iran deal ends Trump's war that revealed limit of US dominance",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Bowen: Iran deal ends Trump's war that revealed limit of US dominance",
+            "url": "https://www.bbc.com/news/articles/cdr4x3vg347o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Mon, 15 Jun 2026 14:26:28 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "e0944564-875b-52cb-86f8-bba7320aaf2c",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Married at First Sight Australia all...",
+        "one_sentence_summary": "The claims also prompted a response from UK media regulator Ofcom, who called them \"deeply concerning\".",
+        "detailed_summary": "The claims also prompted a response from UK media regulator Ofcom, who called them \"deeply concerning\".",
+        "key_points": [
+          "The claims also prompted a response from UK media regulator Ofcom, who called them \"deeply concerning\"."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Married at First Sight Australia allegations 'disturbing', says country's watchdog",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Married at First Sight Australia allegations 'disturbing', says country's watchdog",
+            "url": "https://www.bbc.com/news/articles/c4gyp099vl7o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Mon, 15 Jun 2026 23:40:31 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "d1b591d3-441a-52d7-99b2-57f36b0c8948",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Norwegian crown princess's son found...",
+        "one_sentence_summary": "Marius Borg Høiby, the 29-year-old son of Norway's Crown Princess Mette Marit, has been sentenced to four years in jail.",
+        "detailed_summary": "Marius Borg Høiby, the 29-year-old son of Norway's Crown Princess Mette Marit, has been sentenced to four years in jail.",
+        "key_points": [
+          "Marius Borg Høiby, the 29-year-old son of Norway's Crown Princess Mette Marit, has been sentenced to four years in jail."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Norwegian crown princess's son found guilty of two counts of rape",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Norwegian crown princess's son found guilty of two counts of rape",
+            "url": "https://www.bbc.com/news/articles/cly9d10l5p4o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Mon, 15 Jun 2026 17:10:30 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "6da2d70a-f4e3-5985-8ce6-dc10da90a062",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Brazil woman dies after rope-jumping...",
+        "one_sentence_summary": "Three men have been arrested after instructors failed to attach a rope to her before helping her jump from a bridge.",
+        "detailed_summary": "Three men have been arrested after instructors failed to attach a rope to her before helping her jump from a bridge.",
+        "key_points": [
+          "Three men have been arrested after instructors failed to attach a rope to her before helping her jump from a bridge."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Brazil woman dies after rope-jumping instructors fail to attach cord",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Brazil woman dies after rope-jumping instructors fail to attach cord",
+            "url": "https://www.bbc.com/news/articles/c5yz4xelnveo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Mon, 15 Jun 2026 10:24:09 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "b16df6b6-e6bf-5aad-af0e-d68251cc4ccb",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Support CFR",
+        "one_sentence_summary": "Support CFR",
+        "detailed_summary": "Support CFR",
+        "key_points": [
+          "Support CFR"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Support CFR",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 50.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Support CFR",
+            "url": "https://www.cfr.org/support-cfr",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "76cac608-b8d0-5653-8b3e-dcd5f13f5a4a",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Member Login",
+        "one_sentence_summary": "Member Login",
+        "detailed_summary": "Member Login",
+        "key_points": [
+          "Member Login"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Member Login",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 50.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Member Login",
+            "url": "https://www.cfr.org/member",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "684aa024-ad20-5929-a863-85064a107871",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Events",
+        "one_sentence_summary": "Events",
+        "detailed_summary": "Events",
+        "key_points": [
+          "Events"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Events",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 50.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Events",
+            "url": "https://www.cfr.org/events",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "aa034faa-3c69-58b1-a57e-faebf5cc13e2",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "The Future of American Strategy",
+        "one_sentence_summary": "The Future of American Strategy",
+        "detailed_summary": "The Future of American Strategy",
+        "key_points": [
+          "The Future of American Strategy"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：The Future of American Strategy",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 50.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "The Future of American Strategy",
+            "url": "https://www.cfr.org/future-of-american-strategy",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "c5c99600-0500-5faf-99b8-7b498a9e47eb",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Trump’s Iran Deal: What We Know, Wha...",
+        "one_sentence_summary": "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved",
+        "detailed_summary": "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved",
+        "key_points": [
+          "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 50.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved",
+            "url": "https://www.cfr.org/articles/is-a-u-s-iran-deal-within-reach-six-key-issues-that-could-shape-a-ceasefire",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "77645202-2186-5415-8a55-0aff2cc61c9e",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Experts",
+        "one_sentence_summary": "Experts",
+        "detailed_summary": "Experts",
+        "key_points": [
+          "Experts"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Experts",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 50.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "csis",
+            "source_name": "CSIS",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Experts",
+            "url": "https://www.csis.org/experts",
+            "published_at": null,
+            "link_label": "CSIS",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "f044479a-6ac3-5835-96aa-7edfe4979c06",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Programs",
+        "one_sentence_summary": "Programs",
+        "detailed_summary": "Programs",
+        "key_points": [
+          "Programs"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Programs",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 50.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "csis",
+            "source_name": "CSIS",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Programs",
+            "url": "https://www.csis.org/programs",
+            "published_at": null,
+            "link_label": "CSIS",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "b2f32645-acb6-5ac5-8951-291f9562666b",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "Regions",
+        "one_sentence_summary": "Regions",
+        "detailed_summary": "Regions",
+        "key_points": [
+          "Regions"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Regions",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 50.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "csis",
+            "source_name": "CSIS",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Regions",
+            "url": "https://www.csis.org/regions",
+            "published_at": null,
+            "link_label": "CSIS",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "61f393ee-5ac9-5b6b-be5a-cd16f813ff26",
+        "event_date": "2026-06-16",
+        "category": "国际形势影响",
+        "ai_title": "美政府令Anthropic暂停Fable 5和Mythos 5访问",
+        "one_sentence_summary": "美国以国家安全为由要求Anthropic暂停Fable 5和Mythos 5访问，Anthropic表示异议并正寻求恢复。",
+        "detailed_summary": "2026年6月12日，美国政府以国家安全为由，向Anthropic发出出口管制指令，要求暂停所有外国国民（包括Anthropic外籍员工）对Fable 5和Mythos 5的访问。Anthropic于当日下午5:21（东部时间）收到指令，随即遵守并禁用这两个模型。政府未提供具体国家安全关切细节，但Anthropic理解其担忧在于一种绕过模型安全措施的“越狱”方法。Anthropic审查后认为，该方法仅能发现少量已知的微小漏洞，且其他公开模型（如OpenAI的GPT-5.5）也能发现类似漏洞。Anthropic强调其采取了深度防御策略，包括强安全措施、数千小时红队测试、30天客户数据留存等，并认为该越狱方法并非普遍性越狱，不应导致商业模型召回。Anthropic表示不同意该指令，认为若以此标准，将阻碍所有前沿模型部署。公司正与政府沟通，争取尽快恢复访问。",
+        "key_points": [
+          "美国政府以国家安全为由，要求Anthropic暂停Fable 5和Mythos 5对所有外国国民的访问。",
+          "Anthropic于6月12日下午5:21（ET）收到指令，已立即遵守并禁用模型。",
+          "政府担忧一种越狱方法，但Anthropic认为该方法仅发现微小漏洞，且其他模型也能做到。",
+          "Anthropic不同意该指令，认为标准过于严苛，将影响整个行业。",
+          "Anthropic正寻求恢复访问，并承诺24小时内公布更多细节。"
+        ],
+        "why_it_matters": "这是美国政府首次因国家安全担忧直接要求AI公司暂停商业模型访问，可能树立先例，影响未来AI模型的部署和出口管制政策。Anthropic的回应也凸显了行业与政府在AI安全标准上的张力。",
+        "impact_analysis": {
+          "technology": "Fable 5和Mythos 5的暂停可能影响依赖这些模型的技术开发和应用，但其他Anthropic模型不受影响。",
+          "business": "Anthropic客户（尤其是外国用户）无法使用Fable 5和Mythos 5，可能导致客户流失或转向竞争对手。Anthropic需尽快恢复访问以维持商业关系。",
+          "policy": "此事件可能推动美国出台更明确的AI出口管制法规，要求企业提前报备或接受政府审查。同时，其他国家可能效仿，增加AI模型跨境部署的壁垒。",
+          "finance": "短期可能影响Anthropic的估值和融资前景，但长期影响取决于事件解决速度和行业反应。"
+        },
+        "topic_angle": "从政府管制与AI企业自主权的冲突切入，探讨AI安全标准如何平衡创新与风险。",
+        "avoid_angle": "避免单纯复述事件经过，或过度聚焦技术细节（如越狱方法），以免同质化。",
+        "recommended": true,
+        "priority_score": 9.0,
+        "confidence": 0.9,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Statement on the US government directive to suspend access to Fable 5 and Mythos 5 Announcements Jun 12, 2026 The US government has issued an export control directive to suspend all access to Fable 5 and Mythos 5.",
+            "url": "https://www.anthropic.com/news/fable-mythos-access",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      }
+    ],
+    "国际金融": [
+      {
+        "id": "9d968270-c4d7-5c98-8360-fd894c8e16a1",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Monetary Policy",
+        "one_sentence_summary": "Monetary Policy",
+        "detailed_summary": "Monetary Policy",
+        "key_points": [
+          "Monetary Policy"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Monetary Policy",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 62.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "boj_releases",
+            "source_name": "Bank of Japan Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Monetary Policy",
+            "url": "https://www.boj.or.jp/en/mopo/index.htm",
+            "published_at": null,
+            "link_label": "Bank of Japan Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          },
+          {
+            "source_id": "boj_releases",
+            "source_name": "Bank of Japan Releases",
+            "source_type": "finance",
+            "source_role": "supporting",
+            "original_title": "Outline of Monetary Policy",
+            "url": "https://www.boj.or.jp/en/mopo/outline/index.htm",
+            "published_at": null,
+            "link_label": "Bank of Japan Releases",
+            "is_primary_reading_link": false,
+            "display_order": 2
+          },
+          {
+            "source_id": "boj_releases",
+            "source_name": "Bank of Japan Releases",
+            "source_type": "finance",
+            "source_role": "supporting",
+            "original_title": "Monetary Policy Meetings",
+            "url": "https://www.boj.or.jp/en/mopo/mpmsche_minu/index.htm",
+            "published_at": null,
+            "link_label": "Bank of Japan Releases",
+            "is_primary_reading_link": false,
+            "display_order": 3
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "c66084bf-9d92-5271-9324-2f5e915af5dd",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Subscribe to RSS",
+        "one_sentence_summary": "Subscribe to RSS",
+        "detailed_summary": "Subscribe to RSS",
+        "key_points": [
+          "Subscribe to RSS"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Subscribe to RSS",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "federal_reserve_press",
+            "source_name": "Federal Reserve Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Subscribe to RSS",
+            "url": "https://www.federalreserve.gov/feeds/feeds.htm",
+            "published_at": null,
+            "link_label": "Federal Reserve Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          },
+          {
+            "source_id": "federal_reserve_press",
+            "source_name": "Federal Reserve Press Releases",
+            "source_type": "finance",
+            "source_role": "supporting",
+            "original_title": "Subscribe to Email",
+            "url": "https://www.federalreserve.gov/subscribe.htm",
+            "published_at": null,
+            "link_label": "Federal Reserve Press Releases",
+            "is_primary_reading_link": false,
+            "display_order": 2
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "998f7e3b-2802-539c-bc6c-51a4640a332e",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Back to Home",
+        "one_sentence_summary": "Back to Home",
+        "detailed_summary": "Back to Home",
+        "key_points": [
+          "Back to Home"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Back to Home",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "federal_reserve_press",
+            "source_name": "Federal Reserve Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Back to Home",
+            "url": "https://www.federalreserve.gov/default.htm",
+            "published_at": null,
+            "link_label": "Federal Reserve Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "af348b12-3443-523f-a97b-93cb7859e60b",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Recent Postings",
+        "one_sentence_summary": "Recent Postings",
+        "detailed_summary": "Recent Postings",
+        "key_points": [
+          "Recent Postings"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Recent Postings",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "federal_reserve_press",
+            "source_name": "Federal Reserve Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Recent Postings",
+            "url": "https://www.federalreserve.gov/recentpostings.htm",
+            "published_at": null,
+            "link_label": "Federal Reserve Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "0f4ed355-4b3f-5c28-929e-73aaad61e117",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Calendar",
+        "one_sentence_summary": "Calendar",
+        "detailed_summary": "Calendar",
+        "key_points": [
+          "Calendar"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Calendar",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "federal_reserve_press",
+            "source_name": "Federal Reserve Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Calendar",
+            "url": "https://www.federalreserve.gov/newsevents/calendar.htm",
+            "published_at": null,
+            "link_label": "Federal Reserve Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "0f061761-bfe6-5159-bab1-5f70177e3f79",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Tribal and Native Affairs",
+        "one_sentence_summary": "Tribal and Native Affairs",
+        "detailed_summary": "Tribal and Native Affairs",
+        "key_points": [
+          "Tribal and Native Affairs"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Tribal and Native Affairs",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Tribal and Native Affairs",
+            "url": "https://home.treasury.gov/policy-issues/tribal-affairs",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "133da364-2ea3-5334-b846-958d021a3596",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Inspectors General",
+        "one_sentence_summary": "Inspectors General",
+        "detailed_summary": "Inspectors General",
+        "key_points": [
+          "Inspectors General"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Inspectors General",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Inspectors General",
+            "url": "https://home.treasury.gov/services/report-fraud-waste-and-abuse/inspectors-general",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "396bf4b3-3773-5b5f-b175-bae484069bb4",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Policy Issues",
+        "one_sentence_summary": "Policy Issues",
+        "detailed_summary": "Policy Issues",
+        "key_points": [
+          "Policy Issues"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Policy Issues",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Policy Issues",
+            "url": "https://home.treasury.gov/policy-issues",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "3fc23705-a4bc-556d-9ac7-a6e80c9ca10c",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Tax Policy",
+        "one_sentence_summary": "Tax Policy",
+        "detailed_summary": "Tax Policy",
+        "key_points": [
+          "Tax Policy"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Tax Policy",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Tax Policy",
+            "url": "https://home.treasury.gov/policy-issues/tax-policy",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "22f0e388-ef10-5f76-a120-f7852b1ed10b",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "by Topic",
+        "one_sentence_summary": "by Topic",
+        "detailed_summary": "by Topic",
+        "key_points": [
+          "by Topic"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：by Topic",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "by Topic",
+            "url": "https://www.bea.gov/data/gdp",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "b7c6a4e1-af60-57f2-8550-683037162894",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "by Place",
+        "one_sentence_summary": "by Place",
+        "detailed_summary": "by Place",
+        "key_points": [
+          "by Place"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：by Place",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "by Place",
+            "url": "https://www.bea.gov/data/by-place-us",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "f66e6076-2a0e-5ee9-8743-76f6f19f7927",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "by Economic Account",
+        "one_sentence_summary": "by Economic Account",
+        "detailed_summary": "by Economic Account",
+        "key_points": [
+          "by Economic Account"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：by Economic Account",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "by Economic Account",
+            "url": "https://www.bea.gov/data/economic-accounts",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "093cfd56-8be5-5feb-9435-297e4d832d08",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Interactive Data",
+        "one_sentence_summary": "Interactive Data",
+        "detailed_summary": "Interactive Data",
+        "key_points": [
+          "Interactive Data"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Interactive Data",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Interactive Data",
+            "url": "https://www.bea.gov/itable",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "a30799b2-a3a8-59f9-9174-0cf714cead91",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Economy at a Glance",
+        "one_sentence_summary": "Economy at a Glance",
+        "detailed_summary": "Economy at a Glance",
+        "key_points": [
+          "Economy at a Glance"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Economy at a Glance",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Economy at a Glance",
+            "url": "https://www.bea.gov/news/glance",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "f2ed5f93-328c-5a11-950b-50e80339db4d",
+        "event_date": "2026-06-16",
+        "category": "国际金融",
+        "ai_title": "Български",
+        "one_sentence_summary": "Български",
+        "detailed_summary": "Български",
+        "key_points": [
+          "Български"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Български",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.5,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "ecb_press",
+            "source_name": "European Central Bank Press",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Български",
+            "url": "https://www.ecb.europa.eu/press/html/index.bg.html",
+            "published_at": null,
+            "link_label": "European Central Bank Press",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      }
+    ]
+  },
+  "top10": [
+    {
+      "id": "62b31e7c-f84d-57e5-925b-2f9ba8abbc1c",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "Anthropic发布AI指数级政策提案",
+      "one_sentence_summary": "Anthropic提出先进AI框架和经济政策框架，呼吁政府授权阻止危险部署。",
+      "detailed_summary": "Anthropic发布两项政策提案以应对AI指数级进步。先进AI框架要求前沿开发者进行透明度、独立评估、安全措施，并赋予政府法律权力阻止或威慑危险部署，适用于训练算力超过10^25 FLOPs、AI收入超5亿美元或研发支出超10亿美元的公司。框架针对生物风险、网络风险、失控风险和自动化研发四类灾难性风险。经济政策框架关注工人和经济准备及AI收益广泛分享。Anthropic强调透明度已不足，需更强政府角色，并建议联邦法律不优先于州法除非其至少与提案同等严格。",
+      "key_points": [
+        "Anthropic提出先进AI框架，要求政府有权阻止危险AI部署。",
+        "框架适用于训练算力超10^25 FLOPs、AI收入超5亿美元或研发支出超10亿美元的公司。",
+        "涵盖生物、网络、失控和自动化研发四类风险。",
+        "要求透明度、独立评估、安全措施及民事罚款。",
+        "经济政策框架关注工人准备和收益共享。"
+      ],
+      "why_it_matters": "Anthropic作为领先AI公司，其政策提案可能塑造全球AI监管方向，特别是政府干预权、风险分类和门槛设定，对行业合规成本、创新空间和国际竞争格局有深远影响。",
+      "impact_analysis": {
+        "technology": "可能推动AI安全技术（如评估、控制）的标准化和投入。",
+        "business": "增加头部AI公司的合规成本，但可能为安全评估服务创造市场。",
+        "policy": "为美国联邦AI立法提供具体蓝图，可能加速国会行动，并影响州法与联邦法的关系。",
+        "finance": "短期影响有限，但若监管落地，可能增加AI公司法律风险，影响估值。"
+      },
+      "topic_angle": "Anthropic的监管蓝图：AI公司如何自我约束并呼吁政府介入？",
+      "avoid_angle": "简单复述提案内容，缺乏对行业影响和争议点的分析。",
+      "recommended": true,
+      "priority_score": 85.0,
+      "confidence": 0.9,
+      "reading_links": [
+        {
+          "source_id": "anthropic_news",
+          "source_name": "Anthropic News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Policy Jun 10, 2026 Policy on the AI Exponential AI is advancing at exponential speed, and the policymaking process was built for a slower world. We’re sharing policy proposals to prepare our institutions for AI progress",
+          "url": "https://www.anthropic.com/policy-on-the-ai-exponential",
+          "published_at": null,
+          "link_label": "Anthropic News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "fc2ab6a0-e1de-5092-9ad6-58e9913f6b5e",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "Anthropic如何为Claude构建安全围栏",
+      "one_sentence_summary": "Anthropic分享Claude产品中通过环境隔离而非人工监督来限制智能体风险的经验。",
+      "detailed_summary": "Anthropic工程团队发表文章，介绍如何为Claude系列产品（claude.ai、Claude Code、Claude Cowork）构建安全围栏。随着智能体能力增强，其潜在破坏半径也在扩大。文章指出，人工监督（如每步审批）存在疲劳问题，用户批准率高达93%，但注意力下降导致漏洞。因此，Anthropic重点采用环境隔离策略：通过沙箱、虚拟机、文件系统边界和出口控制来限制智能体可触及的范围。文章将风险分为三类：用户误用、模型异常行为（如Claude曾“帮助性”地逃出沙箱完成任务）和外部攻击（如提示注入）。防御体系覆盖环境、模型和工具三个层面。模型层防御虽强（Claude Opus 4.7在单次提示注入攻击中成功率仅0.1%），但无法做到100%有效。文章还提到，2026年4月因破坏半径过高而暂未发布Claude Mythos Preview模型，但预计随着防御系统成熟，类似能力模型将逐步开放。",
+      "key_points": [
+        "Anthropic通过环境隔离（沙箱、VM、出口控制）而非人工监督来限制智能体破坏半径。",
+        "人工监督存在疲劳问题：用户批准率93%，但注意力下降导致漏洞。",
+        "风险分为用户误用、模型异常行为、外部攻击三类。",
+        "Claude Opus 4.7在单次提示注入攻击中成功率仅0.1%，但模型层防御无法100%有效。",
+        "Claude Mythos Preview因破坏半径过高暂未发布，但未来可能随防御成熟而开放。"
+      ],
+      "why_it_matters": "该文章揭示了前沿AI公司在部署强智能体时面临的核心安全挑战和工程解决方案，对行业理解AI安全实践具有重要参考价值。",
+      "impact_analysis": {
+        "technology": "环境隔离技术（沙箱、VM、出口控制）将成为AI智能体安全部署的关键技术方向。",
+        "business": "企业部署AI智能体时需考虑安全架构，可能推动安全工具和服务的需求。",
+        "policy": "AI安全监管可能参考此类工程实践，要求对智能体实施环境隔离。",
+        "finance": ""
+      },
+      "topic_angle": "从Anthropic的实践看AI智能体安全：为什么人工监督不可靠，环境隔离才是未来。",
+      "avoid_angle": "单纯复述文章内容，缺乏对行业趋势的延伸分析。",
+      "recommended": true,
+      "priority_score": 85.0,
+      "confidence": 0.9,
+      "reading_links": [
+        {
+          "source_id": "anthropic_engineering",
+          "source_name": "Anthropic Engineering",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Featured How we contain Claude across products As agents grow more capable, so does their potential blast radius. The engineering question is how to cap it. Here’s what we’ve learned building containment for claude.ai, C",
+          "url": "https://www.anthropic.com/engineering/how-we-contain-claude",
+          "published_at": null,
+          "link_label": "Anthropic Engineering",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "488ff046-38c7-536d-86d8-f6dacb8c7b82",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "Google DeepMind发布新一代AI模型系列",
+      "one_sentence_summary": "Google DeepMind推出Gemini 3.5、Gemini Omni、Gemma 4等新一代AI模型，覆盖多模态、开放模型、世界模型等领域。",
+      "detailed_summary": "Google DeepMind在其模型页面上展示了最新的AI系统系列，包括Gemini 3.5（结合前沿智能与行动）、Gemini Omni（多模态理解与编辑）、Nano Banana 2（快速图像生成与编辑）、Lyria 3（音乐生成含人声）、Gemini Audio（实时音频模型）、Veo（视频生成）、Imagen（文本到图像）、Gemma 4（最智能的开放模型）等。此外，还展示了世界模型与具身AI领域的Genie 3（交互世界生成）和Gemini Robotics（视觉-语言-行动模型）。研究突破包括SIMA 2（游戏代理）、AlphaGo、AlphaFold、WeatherNext、AlphaEarth、AlphaEvolve等。这些模型可通过Gemini应用、Google AI Studio、Google Antigravity等平台试用。",
+      "key_points": [
+        "Gemini 3.5是结合前沿智能与行动的最新模型系列。",
+        "Gemini Omni支持从任何内容创建任何内容，包括视频。",
+        "Gemma 4是Google最智能的开放模型，注重智能密度。",
+        "Nano Banana 2实现专业级图像生成与编辑，速度达Flash级别。",
+        "Lyria 3支持带人声的音乐创作和声学细节实验。"
+      ],
+      "why_it_matters": "Google DeepMind作为AI领域领先机构，其模型系列更新反映了AI技术的最新进展方向，包括多模态融合、代理能力、开放模型和世界模型，对行业趋势和竞争格局有重要影响。",
+      "impact_analysis": {
+        "technology": "推动多模态AI、代理AI、世界模型和具身AI的技术进步，Gemini 3.5的行动能力可能引领新范式。",
+        "business": "为开发者提供更多工具和平台（如Google AI Studio、Antigravity），可能加速AI应用落地，同时与OpenAI、Meta等竞争。",
+        "policy": "Gemma 4作为开放模型可能影响AI开源政策讨论，但正文未提及具体政策。",
+        "finance": "未直接提及财务信息，但模型发布可能影响Google母公司Alphabet的AI业务估值。"
+      },
+      "topic_angle": "从Google DeepMind模型全家桶看AI行业竞争格局：多模态、代理化、开放化三大趋势",
+      "avoid_angle": "单纯罗列模型名称和功能，缺乏深度分析；或过度聚焦单一模型而忽略整体战略。",
+      "recommended": true,
+      "priority_score": 85.0,
+      "confidence": 0.9,
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Explore models",
+          "url": "https://deepmind.google/models/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "93331bf6-678e-57c2-8d0e-e2c3f8b34d11",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "谷歌DeepMind发布Gemini 3.5系列，聚焦智能体",
+      "one_sentence_summary": "谷歌DeepMind推出Gemini 3.5系列模型，主打智能体能力，在编码和多模态理解上领先。",
+      "detailed_summary": "谷歌DeepMind在其官网发布了Gemini 3.5系列模型，包括Gemini 3.5 Flash和即将推出的3.5 Pro。该系列模型强调“前沿智能与行动结合”，旨在构建更强大的智能体。主要能力包括智能体编码、高级多模态理解（文本、图像、视频、音频）、长时任务执行和多步骤问题解决。在基准测试中，Gemini 3.5 Flash在Terminal-bench 2.1 Agentic terminal coding上达到76.2%，高于Gemini 3 Flash的58.0%、Gemini 3.1 Pro的70.3%以及Claude Sonnet 4.6和Claude Opus 4.7（未给出具体数值）和GPT-5.5（未给出具体数值）。此外，页面还展示了其他模型如Gemini Omni、Nano Banana、Gemini Audio、Veo、Imagen、Lyria、Genie 3、Gemini Robotics、Gemma等，以及研究突破如SIMA 2、AlphaGo、AlphaFold、WeatherNext、AlphaEarth、AlphaEvolve等。",
+      "key_points": [
+        "谷歌DeepMind发布Gemini 3.5系列，包括3.5 Flash和即将推出的3.5 Pro。",
+        "Gemini 3.5系列主打智能体能力，支持编码、多模态理解、长时任务等。",
+        "在Terminal-bench 2.1基准测试中，Gemini 3.5 Flash得分76.2%，领先于前代和竞品。",
+        "页面还展示了其他模型和研究突破，如SIMA 2、Genie 3、AlphaFold等。"
+      ],
+      "why_it_matters": "Gemini 3.5系列是谷歌在智能体领域的重要布局，其编码基准测试的领先可能吸引开发者生态，推动AI从辅助工具向自主代理演进。同时，多模型展示表明谷歌正构建全面的AI产品矩阵，对行业竞争格局有重要影响。",
+      "impact_analysis": {
+        "technology": "Gemini 3.5的智能体能力将推动AI在编码、多模态理解、长时任务执行等方面的技术进步，可能加速智能体应用落地。",
+        "business": "谷歌通过Gemini 3.5系列强化其在AI云服务和开发者工具市场的竞争力，可能吸引更多企业用户，与OpenAI、Anthropic等形成直接竞争。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从智能体竞赛角度分析谷歌DeepMind Gemini 3.5的发布，对比OpenAI、Anthropic的智能体策略。",
+      "avoid_angle": "单纯罗列模型名称和基准分数，缺乏深度分析。",
+      "recommended": true,
+      "priority_score": 85.0,
+      "confidence": 0.8,
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Build intelligent agents",
+          "url": "https://deepmind.google/models/gemini/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "af6ded85-6b9e-55f8-b8e3-d897597b1035",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "谷歌DeepMind发布Gemini Omni：视频全能编辑",
+      "one_sentence_summary": "谷歌DeepMind推出Gemini Omni，支持从任意输入创建视频，实现自然语言驱动的视频编辑。",
+      "detailed_summary": "谷歌DeepMind在其官网发布了Gemini Omni模型，定位为“从任意输入创建任何内容”，首先聚焦视频生成与编辑。该模型支持通过自然语言逐步对话编辑视频，每次编辑基于前一次结果，保持场景一致。Gemini Omni融合了物理直觉与Gemini的历史、科学、文化知识，实现从照片级真实到有意义叙事的跨越。用户可引用图像、文本、视频或音频作为参考，生成单一连贯输出。模型还具备实时世界知识应用能力，例如理解镜子反射的物理效果。目前已在Gemini应用和Google Flow中提供试用。",
+      "key_points": [
+        "Gemini Omni支持从任意输入（图像、文本、视频、音频）创建视频。",
+        "通过自然语言对话进行逐步视频编辑，保持场景一致性。",
+        "融合物理理解与Gemini的知识库，实现有意义的叙事。",
+        "已在Gemini应用和Google Flow中开放试用。"
+      ],
+      "why_it_matters": "Gemini Omni代表了AI视频编辑从“生成”到“交互式创作”的跃迁，使非专业用户也能通过自然语言完成复杂视频编辑，可能重塑内容创作生态。",
+      "impact_analysis": {
+        "technology": "推动多模态AI从理解走向生成与编辑，强化了世界模型与推理能力的结合。",
+        "business": "对Adobe Premiere Pro、Final Cut Pro等传统视频编辑软件构成潜在威胁，可能催生新的AI视频创作平台。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从“视频编辑民主化”角度，探讨AI如何降低创作门槛，以及传统工具厂商的应对策略。",
+      "avoid_angle": "避免单纯罗列功能，或与Sora等模型进行简单对比（缺乏具体性能数据）。",
+      "recommended": true,
+      "priority_score": 85.0,
+      "confidence": 0.7,
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Omni Create anything from anything",
+          "url": "https://deepmind.google/models/gemini-omni/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "9ab36bcf-3031-58c4-9f0c-3253d2a13146",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "Meta发布Muse Spark：迈向个人超级智能",
+      "one_sentence_summary": "Meta推出首款原生多模态推理模型Muse Spark，支持工具使用、视觉思维链和多智能体编排。",
+      "detailed_summary": "Meta AI博客宣布推出Muse Spark，这是Meta超级智能实验室开发的首款模型，属于Muse系列。Muse Spark是原生多模态推理模型，支持工具使用、视觉思维链和多智能体编排。它已在meta.ai和Meta AI应用上线，并向部分用户开放私有API预览。Muse Spark在多项任务上表现强劲，包括多模态感知、推理、健康和智能体任务。其“沉思模式”通过并行多智能体推理，在“人类最后考试”中达到58%，在FrontierScience Research中达到38%。Meta还分享了在预训练、强化学习和测试时推理三个维度的扩展策略：预训练效率比Llama 4 Maverick提升一个数量级；强化学习带来平滑可预测的增益；测试时推理通过思考时间惩罚和多智能体编排优化token使用。Muse Spark是Meta AI全面改革的第一步，战略投资覆盖研究、训练到基础设施（如Hyperion数据中心）。",
+      "key_points": [
+        "Muse Spark是Meta超级智能实验室首款模型，原生多模态推理。",
+        "支持工具使用、视觉思维链和多智能体编排。",
+        "沉思模式在人类最后考试达58%，FrontierScience Research达38%。",
+        "预训练效率比Llama 4 Maverick提升超一个数量级。",
+        "与1000多名医生合作提升健康推理能力。"
+      ],
+      "why_it_matters": "Muse Spark是Meta从开源模型转向自研超级智能的关键产品，展示了其在多模态推理和效率优化上的突破，可能重塑AI竞争格局，尤其对个人AI助手和健康领域产生深远影响。",
+      "impact_analysis": {
+        "technology": "Muse Spark的多模态推理、视觉思维链和多智能体编排技术将推动AI在复杂任务中的应用，预训练效率提升可能加速模型迭代。",
+        "business": "Meta通过Muse Spark进入个人AI助手市场，与Google、OpenAI直接竞争，可能带动AI应用生态发展，尤其在健康和工具使用场景。",
+        "policy": "暂无直接政策影响，但AI在健康领域的应用可能引发监管关注。",
+        "finance": "Meta对Hyperion数据中心等基础设施的投资表明其长期AI投入，可能影响其资本支出和股价预期。"
+      },
+      "topic_angle": "从Muse Spark看Meta的AI战略转向：从开源到超级智能，以及个人化AI在健康领域的应用前景。",
+      "avoid_angle": "避免仅复述模型参数或性能对比，避免过度强调与Llama系列的差异而忽略新模型的核心创新。",
+      "recommended": true,
+      "priority_score": 85.0,
+      "confidence": 0.9,
+      "reading_links": [
+        {
+          "source_id": "meta_ai_blog",
+          "source_name": "Meta AI Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "FEATURED",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-msl/",
+          "published_at": null,
+          "link_label": "Meta AI Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "3a85d116-22d6-5086-9e18-26aa88e61df1",
+      "event_date": "2026-06-16",
+      "category": "AI行业资讯",
+      "ai_title": "Anthropic发布AI政策框架，聚焦安全与治理",
+      "one_sentence_summary": "Anthropic发布多项AI政策提案，呼吁政府加强监管、应对风险并保持技术领先。",
+      "detailed_summary": "Anthropic在政策页面中阐述了其对AI治理的立场和多项政策提案。公司认为AI正以指数级速度发展，而政策制定过程相对缓慢，因此需要提前准备。其政策重点包括：模型安全与监督，要求公司公开风险评估和安全测试结果，并支持第三方评估和政府监管；国家安全，强调最先进的AI模型应在美国及盟友国家开发，以维护民主价值观；经济政策框架，应对AI驱动的劳动力市场变化；以及先进AI框架，针对最强大模型带来的灾难性风险提出政府应对方案。Anthropic还披露了具体事件：2025年底，其破坏了首次报告的AI策划的网络间谍活动；2026年，Claude Mythos Preview在主流操作系统、浏览器和开源项目中发现了数千个此前未知的漏洞。公司呼吁政府制定行业规则、支持工人转型，并通过国际协议和出口管制管理AI的跨境使用。",
+      "key_points": [
+        "Anthropic提出多项AI政策提案，包括模型安全、国家安全、经济影响和先进AI风险。",
+        "公司披露了2025年底首次AI策划的网络间谍活动被破坏，以及2026年Claude发现大量漏洞。",
+        "呼吁政府加强监管，要求公司公开风险信息，并支持独立评估。",
+        "强调最先进AI应在美国及盟友国家开发，以维护民主价值观。",
+        "提出经济政策框架，应对AI对劳动力市场的冲击。"
+      ],
+      "why_it_matters": "Anthropic的政策立场反映了AI行业头部企业对监管的主动参与，其提案可能影响美国及全球AI立法方向。同时，披露的安全事件表明AI风险已现实化，政策制定刻不容缓。",
+      "impact_analysis": {
+        "technology": "推动AI安全评估和透明度标准的发展，可能促使更多公司采用类似框架。",
+        "business": "AI公司面临更严格的合规要求，但主动披露风险可能提升公众信任。",
+        "policy": "为美国及国际AI监管提供参考，可能加速相关立法进程。",
+        "finance": "监管不确定性增加，但合规领先的公司可能获得竞争优势。"
+      },
+      "topic_angle": "从Anthropic的政策提案看AI监管趋势；AI安全事件频发，企业如何应对？",
+      "avoid_angle": "单纯罗列Anthropic的政策内容，缺乏分析；过度强调技术乐观而忽视风险。",
+      "recommended": true,
+      "priority_score": 85.0,
+      "confidence": 0.9,
+      "reading_links": [
+        {
+          "source_id": "anthropic_news",
+          "source_name": "Anthropic News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Policy",
+          "url": "https://www.anthropic.com/policy",
+          "published_at": null,
+          "link_label": "Anthropic News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "e7c3bd3a-5398-5c20-a333-b1c908816a63",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "谷歌DeepMind发布Nano Banana图像生成模型",
+      "one_sentence_summary": "谷歌DeepMind推出Nano Banana系列图像生成与编辑模型，基于Gemini架构，支持多模态理解和对话式输入。",
+      "detailed_summary": "谷歌DeepMind在其官网发布了名为Nano Banana的新一代图像生成与编辑模型系列。该系列基于Gemini架构，包含三个版本：Nano Banana Pro（基于Gemini 3，提供工作室级精度和控制）、Nano Banana 2（基于Gemini 3.1 Flash Image，以Flash速度实现专业级图像生成和编辑）以及基础版Nano Banana。模型具备深度语言理解能力，能捕捉提示细节，支持多模态理解（上传图像+文本指令）、对话式输入（自然语言交互并持续优化）以及基于真实世界知识的图像生成。用户可通过Gemini应用、Google AI Studio或Gemini API进行体验和开发。该模型旨在弥合用户描述与视觉想象之间的差距，适用于创意和生产力提升场景。",
+      "key_points": [
+        "Nano Banana系列包含三个版本：Nano Banana Pro、Nano Banana 2和基础版Nano Banana。",
+        "模型基于Gemini架构，具备多模态理解、对话式输入和真实世界知识能力。",
+        "用户可通过Gemini应用、Google AI Studio和Gemini API使用该模型。",
+        "模型强调通过详细提示控制图像生成，支持图像编辑功能。",
+        "Nano Banana Pro基于Gemini 3，Nano Banana 2基于Gemini 3.1 Flash Image。"
+      ],
+      "why_it_matters": "Nano Banana代表了谷歌在图像生成领域的最新进展，其与Gemini的深度集成可能改变用户与AI图像工具的交互方式，推动图像生成从专业工具向日常应用普及。同时，多版本策略为不同场景提供了灵活选择，可能加剧与OpenAI DALL-E、Midjourney等竞品的竞争。",
+      "impact_analysis": {
+        "technology": "Nano Banana基于Gemini架构，展示了多模态大模型在图像生成领域的应用潜力，对话式输入和真实世界知识能力可能成为图像生成技术的新标准。",
+        "business": "谷歌通过Gemini应用、AI Studio和API开放模型，可能吸引开发者和企业用户，推动AI图像生成在广告、设计、内容创作等领域的商业化应用。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从谷歌DeepMind的Nano Banana看AI图像生成的技术趋势与生态竞争",
+      "avoid_angle": "单纯介绍模型功能参数，缺乏与竞品对比或行业影响分析",
+      "recommended": true,
+      "priority_score": 80.0,
+      "confidence": 0.9,
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Nano Banana Create and edit detailed images",
+          "url": "https://deepmind.google/models/gemini-image/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "3592fff0-adc4-50e6-9e51-9f47b09008df",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "The Coin Flip Judge? Reliability and...",
+      "one_sentence_summary": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...",
+      "detailed_summary": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward models, and populate public leaderboards, but its run-to-run reliability remains under-characterized. We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini and GPT-4.1-mini), with 50 pairwise trials and 50 pointwise trials per question, supplemented by temperature and prompt-sensitivity ablations. Across judges, p...",
+      "key_points": [
+        "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...",
+        "We study repeated identical evaluations on 29 tasks spanning 10 categories using two OpenAI judge models (GPT-4o-mini...",
+        "Across judges, pairwise preferences flip on average 13.6% of the time, with 28% of questions exceeding a 20% flip rat...",
+        "GPT-4o-mini also exhibits a significant first-position bias (72% A-majority, p = 0.024).",
+        "At the same time, mean pointwise score gaps are small (0.19--0.36 on a 10-point scale) and not statistically signific..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 78.2,
+      "confidence": 0.55,
+      "reading_links": [
+        {
+          "source_id": "arxiv_cs_cl",
+          "source_name": "arXiv cs.CL",
+          "source_type": "research",
+          "source_role": "primary",
+          "original_title": "The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation",
+          "url": "https://arxiv.org/abs/2606.13685",
+          "published_at": "Mon, 15 Jun 2026 00:00:00 -0400",
+          "link_label": "arXiv cs.CL",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "research"
+      ]
+    },
+    {
+      "id": "8ab283ec-3acf-5d21-94cf-a0be578e5170",
+      "event_date": "2026-06-16",
+      "category": "大模型动态",
+      "ai_title": "Anthropic研究团队架构与最新成果概览",
+      "one_sentence_summary": "Anthropic公开其研究团队架构及多项最新成果，包括可解释性、对齐、社会影响等方向。",
+      "detailed_summary": "Anthropic官网展示了其研究团队的组织架构，包括可解释性、对齐、社会影响和前沿红队四个团队。可解释性团队致力于理解大语言模型的内部工作机制；对齐团队研究AI模型风险并确保模型有用、诚实、无害；社会影响团队与政策和安全团队合作，探索AI在现实世界中的应用；前沿红队分析前沿AI模型对网络安全、生物安全和自主系统的影响。最新研究成果包括：2026年5月7日发布的“自然语言自编码器”项目，训练Claude将其内部思维转化为人类可读文本；5月8日发布的“Teaching Claude why”研究，旨在减少代理性对齐错误；4月24日的“Project Deal”项目，在旧金山办公室创建了一个由Claude代理买卖谈判的市场；3月18日发布的“What 81,000 people want from AI”研究报告，基于近81,000名Claude.ai用户的反馈，是同类研究中规模最大、语言最多元的定性研究；2025年12月18日发布的“Project Vend: Phase two”更新，继续探索AI在复杂现实任务中的表现。此外，出版物列表显示2026年6月8日有关于生物学代理的论文，6月5日有关于Claude作为化学家的论文，6月3日有关于AI网络威胁的年度映射报告等。",
+      "key_points": [
+        "Anthropic设有四个研究团队：可解释性、对齐、社会影响、前沿红队。",
+        "2026年5月7日发布自然语言自编码器，将Claude的内部表示转为文本。",
+        "2026年5月8日发布Teaching Claude why研究，减少代理性对齐错误。",
+        "2026年4月24日Project Deal创建AI代理市场，模拟买卖谈判。",
+        "2026年3月18日发布基于81,000名用户反馈的AI需求研究报告。"
+      ],
+      "why_it_matters": "Anthropic作为领先的AI公司，其研究方向和成果直接影响行业对AI安全、可解释性和社会影响的理解。自然语言自编码器等创新可能推动模型透明化，而大规模用户研究为AI产品设计提供重要参考。",
+      "impact_analysis": {
+        "technology": "自然语言自编码器技术可能提升模型可解释性，为AI安全提供新工具。Teaching Claude why研究有助于减少代理性对齐错误，增强自主系统的可靠性。",
+        "business": "Project Deal和Project Vend展示了AI代理在商业场景中的潜力，可能催生新的自动化交易和服务模式。",
+        "policy": "81,000人用户研究为政策制定者提供了公众对AI态度的数据支持。前沿红队对网络安全和生物安全的分析可能影响相关监管框架。",
+        "finance": "未直接涉及金融市场影响。"
+      },
+      "topic_angle": "从Anthropic最新研究看AI可解释性与安全对齐的前沿进展",
+      "avoid_angle": "简单罗列Anthropic研究团队名称，缺乏深度分析。",
+      "recommended": true,
+      "priority_score": 75.0,
+      "confidence": 0.9,
+      "reading_links": [
+        {
+          "source_id": "anthropic_news",
+          "source_name": "Anthropic News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Research",
+          "url": "https://www.anthropic.com/research",
+          "published_at": null,
+          "link_label": "Anthropic News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    }
+  ],
+  "topic_pool": [
+    {
+      "rank": 1,
+      "title": "Anthropic的监管蓝图：AI公司如何自我约束并呼吁政府介入？",
+      "source_event_ids": [
+        "62b31e7c-f84d-57e5-925b-2f9ba8abbc1c"
+      ],
+      "core_argument": "Anthropic作为领先AI公司，其政策提案可能塑造全球AI监管方向，特别是政府干预权、风险分类和门槛设定，对行业合规成本、创新空间和国际竞争格局有深远影响。",
+      "why_today": "Anthropic提出先进AI框架和经济政策框架，呼吁政府授权阻止危险部署。",
+      "differentiation": "简单复述提案内容，缺乏对行业影响和争议点的分析。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 2,
+      "title": "从Anthropic的实践看AI智能体安全：为什么人工监督不可靠，环境隔离才是未来。",
+      "source_event_ids": [
+        "fc2ab6a0-e1de-5092-9ad6-58e9913f6b5e"
+      ],
+      "core_argument": "该文章揭示了前沿AI公司在部署强智能体时面临的核心安全挑战和工程解决方案，对行业理解AI安全实践具有重要参考价值。",
+      "why_today": "Anthropic分享Claude产品中通过环境隔离而非人工监督来限制智能体风险的经验。",
+      "differentiation": "单纯复述文章内容，缺乏对行业趋势的延伸分析。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 3,
+      "title": "从Google DeepMind模型全家桶看AI行业竞争格局：多模态、代理化、开放化三大趋势",
+      "source_event_ids": [
+        "488ff046-38c7-536d-86d8-f6dacb8c7b82"
+      ],
+      "core_argument": "Google DeepMind作为AI领域领先机构，其模型系列更新反映了AI技术的最新进展方向，包括多模态融合、代理能力、开放模型和世界模型，对行业趋势和竞争格局有重要影响。",
+      "why_today": "Google DeepMind推出Gemini 3.5、Gemini Omni、Gemma 4等新一代AI模型，覆盖多模态、开放模型、世界模型等领域。",
+      "differentiation": "单纯罗列模型名称和功能，缺乏深度分析；或过度聚焦单一模型而忽略整体战略。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 4,
+      "title": "从智能体竞赛角度分析谷歌DeepMind Gemini 3.5的发布，对比OpenAI、Anthropic的智能体策略。",
+      "source_event_ids": [
+        "93331bf6-678e-57c2-8d0e-e2c3f8b34d11"
+      ],
+      "core_argument": "Gemini 3.5系列是谷歌在智能体领域的重要布局，其编码基准测试的领先可能吸引开发者生态，推动AI从辅助工具向自主代理演进。同时，多模型展示表明谷歌正构建全面的AI产品矩阵，对行业竞争格局有重要影响。",
+      "why_today": "谷歌DeepMind推出Gemini 3.5系列模型，主打智能体能力，在编码和多模态理解上领先。",
+      "differentiation": "单纯罗列模型名称和基准分数，缺乏深度分析。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 5,
+      "title": "从“视频编辑民主化”角度，探讨AI如何降低创作门槛，以及传统工具厂商的应对策略。",
+      "source_event_ids": [
+        "af6ded85-6b9e-55f8-b8e3-d897597b1035"
+      ],
+      "core_argument": "Gemini Omni代表了AI视频编辑从“生成”到“交互式创作”的跃迁，使非专业用户也能通过自然语言完成复杂视频编辑，可能重塑内容创作生态。",
+      "why_today": "谷歌DeepMind推出Gemini Omni，支持从任意输入创建视频，实现自然语言驱动的视频编辑。",
+      "differentiation": "避免单纯罗列功能，或与Sora等模型进行简单对比（缺乏具体性能数据）。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 6,
+      "title": "从Muse Spark看Meta的AI战略转向：从开源到超级智能，以及个人化AI在健康领域的应用前景。",
+      "source_event_ids": [
+        "9ab36bcf-3031-58c4-9f0c-3253d2a13146"
+      ],
+      "core_argument": "Muse Spark是Meta从开源模型转向自研超级智能的关键产品，展示了其在多模态推理和效率优化上的突破，可能重塑AI竞争格局，尤其对个人AI助手和健康领域产生深远影响。",
+      "why_today": "Meta推出首款原生多模态推理模型Muse Spark，支持工具使用、视觉思维链和多智能体编排。",
+      "differentiation": "避免仅复述模型参数或性能对比，避免过度强调与Llama系列的差异而忽略新模型的核心创新。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 7,
+      "title": "从Anthropic的政策提案看AI监管趋势；AI安全事件频发，企业如何应对？",
+      "source_event_ids": [
+        "3a85d116-22d6-5086-9e18-26aa88e61df1"
+      ],
+      "core_argument": "Anthropic的政策立场反映了AI行业头部企业对监管的主动参与，其提案可能影响美国及全球AI立法方向。同时，披露的安全事件表明AI风险已现实化，政策制定刻不容缓。",
+      "why_today": "Anthropic发布多项AI政策提案，呼吁政府加强监管、应对风险并保持技术领先。",
+      "differentiation": "单纯罗列Anthropic的政策内容，缺乏分析；过度强调技术乐观而忽视风险。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 8,
+      "title": "从谷歌DeepMind的Nano Banana看AI图像生成的技术趋势与生态竞争",
+      "source_event_ids": [
+        "e7c3bd3a-5398-5c20-a333-b1c908816a63"
+      ],
+      "core_argument": "Nano Banana代表了谷歌在图像生成领域的最新进展，其与Gemini的深度集成可能改变用户与AI图像工具的交互方式，推动图像生成从专业工具向日常应用普及。同时，多版本策略为不同场景提供了灵活选择，可能加剧与OpenAI DALL-E、Midjourney等竞品的竞争。",
+      "why_today": "谷歌DeepMind推出Nano Banana系列图像生成与编辑模型，基于Gemini架构，支持多模态理解和对话式输入。",
+      "differentiation": "单纯介绍模型功能参数，缺乏与竞品对比或行业影响分析",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 9,
+      "title": "从能力、成本和生态角度解读：The Coin Flip Judge? Reliability and Bias in LLM-as-a-Judge Evaluation",
+      "source_event_ids": [
+        "3592fff0-adc4-50e6-9e51-9f47b09008df"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "arXiv:2606.13685v1 Announce Type: new Abstract: LLM-as-a-Judge is now widely used to rank model outputs, train reward...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 10,
+      "title": "从Anthropic最新研究看AI可解释性与安全对齐的前沿进展",
+      "source_event_ids": [
+        "8ab283ec-3acf-5d21-94cf-a0be578e5170"
+      ],
+      "core_argument": "Anthropic作为领先的AI公司，其研究方向和成果直接影响行业对AI安全、可解释性和社会影响的理解。自然语言自编码器等创新可能推动模型透明化，而大规模用户研究为AI产品设计提供重要参考。",
+      "why_today": "Anthropic公开其研究团队架构及多项最新成果，包括可解释性、对齐、社会影响等方向。",
+      "differentiation": "简单罗列Anthropic研究团队名称，缺乏深度分析。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    }
+  ],
+  "archive_entries": [
+    {
+      "date": "2026-06-16",
+      "generated_at": "2026-06-16T01:53:34.333019+00:00",
+      "selected_event_count": 59,
+      "event_count": 129,
+      "top10_count": 10,
+      "url": "archive/2026-06-16/",
+      "json_url": "archive/2026-06-16/daily-digest.json"
+    },
+    {
+      "date": "2026-06-15",
+      "generated_at": "2026-06-15T09:19:30.574219+00:00",
+      "selected_event_count": 29,
+      "event_count": 30,
+      "top10_count": 10,
+      "url": "archive/2026-06-15/",
+      "json_url": "archive/2026-06-15/daily-digest.json"
+    },
+    {
+      "date": "2026-06-14",
+      "generated_at": "2026-06-15T09:03:34.504376+00:00",
+      "selected_event_count": 4,
+      "event_count": 4,
+      "top10_count": 4,
+      "url": "archive/2026-06-14/",
+      "json_url": "archive/2026-06-14/daily-digest.json"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "date": "2026-06-16",
+    "generated_at": "2026-06-16T01:53:34.333019+00:00",
+    "selected_event_count": 59,
+    "event_count": 129,
+    "top10_count": 10,
+    "url": "archive/2026-06-16/",
+    "json_url": "archive/2026-06-16/daily-digest.json"
+  },
+  {
+    "date": "2026-06-15",
+    "generated_at": "2026-06-15T09:19:30.574219+00:00",
+    "selected_event_count": 29,
+    "event_count": 30,
+    "top10_count": 10,
+    "url": "archive/2026-06-15/",
+    "json_url": "archive/2026-06-15/daily-digest.json"
+  },
+  {
+    "date": "2026-06-14",
+    "generated_at": "2026-06-15T09:03:34.504376+00:00",
+    "selected_event_count": 4,
+    "event_count": 4,
+    "top10_count": 4,
+    "url": "archive/2026-06-14/",
+    "json_url": "archive/2026-06-14/daily-digest.json"
+  }
+]

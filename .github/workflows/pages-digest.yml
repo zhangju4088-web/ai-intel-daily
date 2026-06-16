@@ -1,0 +1,84 @@
+name: Publish Daily Digest to GitHub Pages
+
+on:
+  schedule:
+    # Beijing 08:00 = UTC 00:00
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      DEEPSEEK_BASE_URL: https://api.deepseek.com
+      DEEPSEEK_MODEL: deepseek-v4-pro
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build static digest
+        run: |
+          mkdir -p outputs public
+          if [ -n "${DEEPSEEK_API_KEY}" ]; then
+            python -m intelhub.cli daily \
+              --extract-text \
+              --extract-limit 80 \
+              --summarize-with deepseek \
+              --site-dir public \
+              --out-json outputs/daily-digest.json \
+              --out-html outputs/daily-digest.html
+          else
+            python -m intelhub.cli daily \
+              --summarize-with local \
+              --site-dir public \
+              --out-json outputs/daily-digest.json \
+              --out-html outputs/daily-digest.html
+          fi
+
+      - name: Commit updated archive
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public
+          if git diff --cached --quiet; then
+            echo "No public archive changes to commit"
+          else
+            git commit -m "chore: update daily digest archive [skip ci]"
+            git push
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
