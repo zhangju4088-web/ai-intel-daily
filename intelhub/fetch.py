@@ -88,7 +88,7 @@ def fetch_links(source: Source, *, limit: int = 10) -> list[ArticleCandidate]:
             continue
         seen.add(key)
         title = normalize_link_text(link.text)
-        if not title:
+        if not title or is_navigation_text(title):
             continue
         candidates.append(_candidate(source, title, key, None, None))
         if len(candidates) >= limit:
@@ -175,6 +175,72 @@ def normalize_link_text(text: str) -> str:
     return text[:220]
 
 
+def is_navigation_text(text: str) -> bool:
+    normalized = re.sub(r"\s+", " ", text).strip().lower()
+    if not normalized:
+        return True
+    exact_blocked = {
+        "a-z index",
+        "archive",
+        "back to home",
+        "calendar",
+        "careers",
+        "data transparency",
+        "economy at a glance",
+        "foreign account tax compliance act (fatca)",
+        "for journalists",
+        "français",
+        "deutsch",
+        "español",
+        "eesti keel",
+        "gaeilge",
+        "imf finances",
+        "interactive data",
+        "international tax",
+        "inspectors general",
+        "monetary policy",
+        "my portfolio",
+        "news & events",
+        "photo gallery",
+        "policy issues",
+        "press briefing",
+        "publications",
+        "recent postings",
+        "readouts",
+        "reports",
+        "revenue proposals",
+        "remarks and statements",
+        "site map",
+        "speeches & testimony",
+        "subscribe",
+        "subscribe to rss",
+        "tax expenditures",
+        "tax policy",
+        "the bea wire | bea's official blog",
+        "treaties and related documents",
+        "tribal and native affairs",
+        "videos",
+        "by economic account",
+        "by place",
+        "by topic",
+        "العربية",
+        "русский",
+        "български",
+        "čeština",
+        "eλληνικά",
+    }
+    if normalized in exact_blocked:
+        return True
+    if re.fullmatch(r"20\d{2}\s+fomc", normalized):
+        return True
+    if normalized.startswith(("subscribe ", "back to ", "view all ", "browse by ")):
+        return True
+    words = re.findall(r"[A-Za-z\u4e00-\u9fff]+", normalized)
+    if len(words) <= 2 and any(word in {"home", "rss", "calendar", "topic", "place"} for word in words):
+        return True
+    return False
+
+
 def is_article_like(url: str, source_url: str) -> bool:
     parsed = urllib.parse.urlparse(url)
     source = urllib.parse.urlparse(source_url)
@@ -185,8 +251,59 @@ def is_article_like(url: str, source_url: str) -> bool:
     path = parsed.path.rstrip("/")
     if not path or path == urllib.parse.urlparse(source_url).path.rstrip("/"):
         return False
-    blocked = ("/tag/", "/tags/", "/category/", "/author/", "/about", "/contact", "/login", "/privacy")
+    blocked = (
+        "/tag/",
+        "/tags/",
+        "/category/",
+        "/author/",
+        "/about",
+        "/contact",
+        "/login",
+        "/privacy",
+        "/calendar",
+        "/rss",
+        "/subscribe",
+    )
     if any(part in path.lower() for part in blocked):
+        return False
+    if not is_known_source_article_path(parsed, source):
         return False
     return True
 
+
+def is_known_source_article_path(parsed: urllib.parse.ParseResult, source: urllib.parse.ParseResult) -> bool:
+    netloc = parsed.netloc.lower()
+    path = parsed.path.lower()
+    source_path = source.path.lower()
+
+    if "federalreserve.gov" in netloc:
+        name = path.rsplit("/", 1)[-1]
+        if name == "press-release-archive.htm" or re.fullmatch(r"20\d{2}-press-fomc\.htm", name):
+            return False
+        return (
+            path.startswith("/newsevents/pressreleases/")
+            or path.startswith("/newsevents/speech/")
+            or path.startswith("/newsevents/testimony/")
+        ) and path.endswith(".htm")
+
+    if "home.treasury.gov" in netloc and "/news/press-releases" in source_path:
+        if "/statements-remarks" in path or path.endswith(("/readouts", "/testimonies")):
+            return False
+        return path.startswith("/news/press-releases/")
+
+    if "bls.gov" in netloc and source_path.startswith("/news.release"):
+        return path.startswith("/news.release/") and path != "/news.release/"
+
+    if "bea.gov" in netloc and "/news/current-releases" in source_path:
+        return path.startswith("/news/20")
+
+    if "ecb.europa.eu" in netloc and "/press/" in source_path:
+        return "/press/" in path and "/date/" in path and path.endswith(".html")
+
+    if "boj.or.jp" in netloc and "/mopo/mpmdeci/" in source_path:
+        return "/mopo/mpmdeci/" in path and not path.endswith("/index.htm")
+
+    if "imf.org" in netloc and "/news" in source_path:
+        return path.startswith("/en/news/articles/") or path.startswith("/en/news/press-releases/")
+
+    return True

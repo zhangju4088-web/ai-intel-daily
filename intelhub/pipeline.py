@@ -181,11 +181,12 @@ def analyze_candidates(
     if summarize_with == "deepseek" and os.getenv("DEEPSEEK_API_KEY"):
         client = DeepSeekClient(DeepSeekSettings.from_env())
 
+    extraction_indexes = choose_extraction_indexes(candidates, extract_limit) if extract_text else set()
     analyses: list[ArticleAnalysis] = []
     for index, candidate in enumerate(candidates):
         extracted_text = None
         extraction_error = None
-        if extract_text and index < extract_limit:
+        if index in extraction_indexes:
             try:
                 extracted_text = extract_url_text(candidate.url)
             except Exception as exc:
@@ -200,6 +201,33 @@ def analyze_candidates(
         analysis.extraction_error = extraction_error
         analyses.append(analysis)
     return analyses
+
+
+def choose_extraction_indexes(candidates: list[ArticleCandidate], extract_limit: int) -> set[int]:
+    if extract_limit <= 0:
+        return set()
+
+    pools: dict[str, list[int]] = {category: [] for category in CATEGORIES}
+    for index, candidate in enumerate(candidates):
+        pools[coerce_category(candidate.category_hint, candidate)].append(index)
+
+    for category, indexes in pools.items():
+        indexes.sort(key=lambda item: rough_priority_score(candidates[item]), reverse=True)
+
+    selected: list[int] = []
+    cursors = {category: 0 for category in CATEGORIES}
+    while len(selected) < extract_limit:
+        progressed = False
+        for category in CATEGORIES:
+            cursor = cursors[category]
+            if cursor >= len(pools[category]) or len(selected) >= extract_limit:
+                continue
+            selected.append(pools[category][cursor])
+            cursors[category] = cursor + 1
+            progressed = True
+        if not progressed:
+            break
+    return set(selected)
 
 
 def deepseek_analysis(
@@ -246,11 +274,16 @@ def local_analysis(candidate: ArticleCandidate, extracted_text: str | None) -> A
     one_sentence = candidate.summary or (sentences[0] if sentences else candidate.title)
     detailed = " ".join(sentences[:4]) if sentences else one_sentence
     key_points = sentences[:5] or [candidate.title]
+    ai_title = rewrite_title(candidate.title, category, candidate)
+    if category == "国际金融" and not re.search(r"[\u4e00-\u9fff]", one_sentence):
+        one_sentence = ai_title
+        detailed = f"{ai_title}。该条来自{candidate.source_name}，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。"
+        key_points = [ai_title, "原文为英文，发布前需复核具体日期、金额和政策表述。"]
     score = rough_priority_score(candidate)
     return ArticleAnalysis(
         candidate=candidate,
         category=category,
-        ai_title=rewrite_title(candidate.title),
+        ai_title=ai_title,
         one_sentence_summary=trim(one_sentence, 120),
         detailed_summary=trim(detailed, 500),
         key_points=[trim(item, 120) for item in key_points],
@@ -409,11 +442,101 @@ def coerce_category(category_hint: str, candidate: ArticleCandidate) -> str:
     return "AI行业资讯"
 
 
-def rewrite_title(title: str) -> str:
+def rewrite_title(title: str, category: str | None = None, candidate: ArticleCandidate | None = None) -> str:
     title = re.sub(r"\s+", " ", title).strip()
+    if not re.search(r"[\u4e00-\u9fff]", title) and category:
+        localized = localize_english_title(title, category)
+        if len(localized) <= 38:
+            return localized
+        return localized[:36].rstrip() + "..."
     if len(title) <= 38:
         return title
     return title[:36].rstrip() + "..."
+
+
+def localize_english_title(title: str, category: str) -> str:
+    if category == "国际金融":
+        finance_title = localize_finance_title(title)
+        if finance_title:
+            return finance_title
+
+    replacements = [
+        ("Federal Reserve", "美联储"),
+        ("Fed", "美联储"),
+        ("European Central Bank", "欧洲央行"),
+        ("ECB", "欧洲央行"),
+        ("Bank of Japan", "日本央行"),
+        ("BOJ", "日本央行"),
+        ("U.S. Treasury", "美国财政部"),
+        ("Treasury", "美国财政部"),
+        ("inflation", "通胀"),
+        ("interest rate", "利率"),
+        ("rates", "利率"),
+        ("rate", "利率"),
+        ("dollar", "美元"),
+        ("stocks", "股市"),
+        ("market", "市场"),
+        ("markets", "市场"),
+        ("economy", "经济"),
+        ("economic", "经济"),
+        ("monetary policy", "货币政策"),
+        ("press release", "新闻稿"),
+        ("speech", "讲话"),
+        ("AI", "AI"),
+    ]
+    localized = title
+    for source, target in replacements:
+        localized = re.sub(re.escape(source), target, localized, flags=re.IGNORECASE)
+    if re.search(r"[\u4e00-\u9fff]", localized):
+        return localized
+    return f"{category}｜{localized}"
+
+
+def localize_finance_title(title: str) -> str:
+    compact = re.sub(r"\s+", " ", title).strip()
+    lowered = compact.lower()
+
+    if "fincen issues guidance" in lowered and "fraud" in lowered:
+        return "FinCEN发布信息共享指引，帮助金融机构打击欺诈"
+    if "petroleum club of houston" in lowered:
+        return "美国财政部长贝森特在休斯敦石油俱乐部发表讲话"
+    if "texas bankers" in lowered:
+        return "美国财政部长贝森特与德州银行家活动讲话"
+    if "trump accounts for foster youth" in lowered:
+        return "美国财政部宣布寄养青年可获得“特朗普账户”支持"
+    if "ways and means committee" in lowered:
+        return "美国财政部长贝森特在众议院筹款委员会作证"
+    if "new foreign direct investment in the united states" in lowered:
+        return "2025年美国新增外国直接投资数据发布"
+    if "u.s. international trade in goods and services" in lowered or "international trade in goods and services" in lowered:
+        return "美国4月国际货物和服务贸易数据发布"
+    if "personal income and outlays" in lowered:
+        return "美国4月个人收入和支出数据发布"
+    if "gdp (second estimate)" in lowered and "corporate profits" in lowered:
+        return "美国一季度GDP二次估算和企业利润公布"
+    if "ecb launches pilot project" in lowered and "confidential statistical data" in lowered:
+        return "欧洲央行启动保密统计数据研究访问试点"
+    if "budget credibility" in lowered and "africa" in lowered:
+        return "预算可信度成为改善非洲经济结果的关键锚点"
+    if "africa's golden future" in lowered:
+        return "IMF谈非洲“黄金未来”"
+
+    dated = re.sub(r"^[A-Z][a-z]+ \d{1,2}, 20\d{2}\s+", "", compact)
+    lowered_dated = dated.lower()
+    if "imf staff concludes visit to kazakhstan" in lowered_dated:
+        return "IMF工作人员结束哈萨克斯坦访问"
+    if "imf executive board concludes" in lowered_dated and "serbia" in lowered_dated:
+        return "IMF完成塞尔维亚政策协调工具第三次审查"
+    if "article iv consultation" in lowered_dated and "st. vincent" in lowered_dated:
+        return "IMF完成圣文森特和格林纳丁斯2026年第四条磋商"
+    if "guinea-bissau" in lowered_dated and "extended credit facility" in lowered_dated:
+        return "IMF完成几内亚比绍扩展信贷安排第十一次审查"
+    if "ukraine" in lowered_dated and "extended fund facility" in lowered_dated:
+        return "IMF与乌克兰就扩展基金安排审查达成工作人员级协议"
+    if "niger" in lowered_dated and "extended credit facility" in lowered_dated:
+        return "IMF与尼日尔就扩展信贷安排第九次审查达成协议"
+
+    return ""
 
 
 def split_sentences(text: str) -> list[str]:

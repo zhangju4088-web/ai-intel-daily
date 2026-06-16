@@ -1,14 +1,17 @@
 from __future__ import annotations
 
 import html
+import os
 import re
 import urllib.request
 from html.parser import HTMLParser
 
 from .fetch import USER_AGENT
+from .timeouts import operation_timeout
 
 
 def extract_url_text(url: str) -> str:
+    timeout_seconds = float(os.getenv("EXTRACT_TIMEOUT_SECONDS", "15"))
     request = urllib.request.Request(
         url,
         headers={
@@ -16,8 +19,9 @@ def extract_url_text(url: str) -> str:
             "Accept": "text/html,application/xhtml+xml;q=0.9,*/*;q=0.8",
         },
     )
-    with urllib.request.urlopen(request, timeout=60) as response:
-        body = response.read()
+    with operation_timeout(timeout_seconds):
+        with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
+            body = response.read()
     parser = TextExtractor()
     parser.feed(body.decode("utf-8", errors="replace"))
     return normalize_text(parser.text())
@@ -60,4 +64,3 @@ class TextExtractor(HTMLParser):
 
     def text(self) -> str:
         return "".join(self.parts)
-

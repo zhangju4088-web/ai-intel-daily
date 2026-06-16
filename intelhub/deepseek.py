@@ -3,8 +3,8 @@ from __future__ import annotations
 import json
 import os
 import re
-import urllib.error
-import urllib.request
+import subprocess
+import tempfile
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
@@ -30,6 +30,7 @@ class DeepSeekSettings:
     api_key: str
     base_url: str = DEFAULT_BASE_URL
     model: str = DEFAULT_MODEL
+    timeout_seconds: float = 35.0
 
     @classmethod
     def from_env(cls) -> "DeepSeekSettings":
@@ -40,6 +41,7 @@ class DeepSeekSettings:
             api_key=api_key,
             base_url=os.getenv("DEEPSEEK_BASE_URL", DEFAULT_BASE_URL).rstrip("/"),
             model=os.getenv("DEEPSEEK_MODEL", DEFAULT_MODEL),
+            timeout_seconds=float(os.getenv("DEEPSEEK_TIMEOUT_SECONDS", "35")),
         )
 
 
@@ -63,26 +65,66 @@ class DeepSeekClient:
         if thinking:
             payload["reasoning_effort"] = "medium"
 
-        request = urllib.request.Request(
-            f"{self.settings.base_url}/chat/completions",
-            data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        data = post_json_with_timeout(
+            url=f"{self.settings.base_url}/chat/completions",
+            payload=payload,
             headers={
                 "Authorization": f"Bearer {self.settings.api_key}",
                 "Accept": "application/json",
                 "Connection": "close",
                 "Content-Type": "application/json",
             },
-            method="POST",
+            timeout_seconds=self.settings.timeout_seconds,
         )
-        try:
-            with urllib.request.urlopen(request, timeout=75) as response:
-                data = json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as exc:
-            detail = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"DeepSeek request failed: {exc.code} {detail}") from exc
 
         content = data["choices"][0]["message"]["content"]
         return parse_json_object(content)
+
+
+def post_json_with_timeout(
+    *,
+    url: str,
+    payload: dict[str, Any],
+    headers: dict[str, str],
+    timeout_seconds: float,
+) -> dict[str, Any]:
+    payload_file = tempfile.NamedTemporaryFile("w", encoding="utf-8", delete=False)
+    try:
+        with payload_file:
+            json.dump(payload, payload_file, ensure_ascii=False)
+        curl_config = "\n".join(
+            [
+                f'url = "{url}"',
+                'request = "POST"',
+                'silent',
+                'show-error',
+                f"max-time = {timeout_seconds:g}",
+                *[f'header = "{key}: {value}"' for key, value in headers.items()],
+            ]
+        )
+        completed = subprocess.run(
+            ["curl", "--config", "-", "--data-binary", f"@{payload_file.name}"],
+            input=curl_config,
+            capture_output=True,
+            text=True,
+            timeout=timeout_seconds + 2,
+            check=False,
+        )
+    finally:
+        try:
+            os.unlink(payload_file.name)
+        except OSError:
+            pass
+
+    if completed.returncode != 0:
+        detail = completed.stderr.strip() or completed.stdout.strip()
+        raise RuntimeError(f"DeepSeek request failed: curl exit {completed.returncode} {detail}")
+    parsed = json.loads(completed.stdout)
+    if not isinstance(parsed, dict):
+        raise ValueError("DeepSeek response is not a JSON object")
+    if "error" in parsed:
+        raise RuntimeError(f"DeepSeek request failed: {parsed['error']}")
+    return parsed
 
 
 def parse_json_object(text: str) -> dict[str, Any]:

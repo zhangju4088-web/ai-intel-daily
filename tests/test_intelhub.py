@@ -7,7 +7,8 @@ from pathlib import Path
 
 from intelhub.config import Source
 from intelhub.models import ArticleCandidate
-from intelhub.pipeline import local_analysis, merge_analyses
+from intelhub.fetch import is_navigation_text
+from intelhub.pipeline import choose_extraction_indexes, local_analysis, merge_analyses
 from intelhub.site import publish_static_site
 
 
@@ -74,6 +75,44 @@ class IntelHubTest(unittest.TestCase):
 
             archive_json = (site_dir / "archive" / "index.json").read_text(encoding="utf-8")
             self.assertLess(archive_json.find("2026-06-15"), archive_json.find("2026-06-14"))
+
+    def test_fetch_filters_navigation_text(self) -> None:
+        self.assertTrue(is_navigation_text("Subscribe to RSS"))
+        self.assertTrue(is_navigation_text("Back to Home"))
+        self.assertTrue(is_navigation_text("Calendar"))
+        self.assertFalse(is_navigation_text("Federal Reserve issues FOMC statement"))
+
+    def test_extraction_indexes_cover_finance(self) -> None:
+        candidates = [
+            ArticleCandidate(
+                source_id=f"ai_{index}",
+                source_name="AI Source",
+                source_type="media",
+                category_hint="大模型动态",
+                title=f"OpenAI model update {index}",
+                url=f"https://example.com/ai/{index}",
+                summary=None,
+                language="en",
+            )
+            for index in range(8)
+        ]
+        candidates.extend(
+            ArticleCandidate(
+                source_id=f"finance_{index}",
+                source_name="Finance Source",
+                source_type="finance",
+                category_hint="国际金融",
+                title=f"Federal Reserve rate signal {index}",
+                url=f"https://example.com/finance/{index}",
+                summary=None,
+                language="en",
+            )
+            for index in range(4)
+        )
+
+        selected = choose_extraction_indexes(candidates, 4)
+
+        self.assertTrue(any(candidates[index].category_hint == "国际金融" for index in selected))
 
 def sample_digest(digest_date: str, selected_count: int) -> dict:
     return {
