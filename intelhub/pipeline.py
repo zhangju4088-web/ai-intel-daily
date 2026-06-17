@@ -150,9 +150,13 @@ def build_daily_digest(
     )
     events = merge_analyses(analyses, digest_date=digest_date)
     selected = select_top_events(events, top_per_category=top_per_category)
+    localized_count = localize_selected_events(selected, summarize_with=summarize_with, digest_date=digest_date)
     topic_pool = build_topic_pool(selected)
     top10 = sorted(selected, key=lambda item: item.priority_score, reverse=True)[:10]
-    log_progress(f"selected events total={len(events)} selected={len(selected)} topic_pool={len(topic_pool)}")
+    log_progress(
+        f"selected events total={len(events)} selected={len(selected)} "
+        f"localized={localized_count} topic_pool={len(topic_pool)}"
+    )
 
     return {
         "digest_date": digest_date.isoformat(),
@@ -176,6 +180,7 @@ def build_daily_digest(
             "event_count": len(events),
             "selected_event_count": len(selected),
             "fetch_error_count": len(fetch_errors),
+            "title_localized_count": localized_count,
         },
         "fetch_errors": fetch_errors,
         "categories": {
@@ -235,6 +240,153 @@ def analyze_candidates(
         analyses.append(analysis)
     log_progress(f"analysis complete total={len(analyses)}")
     return analyses
+
+
+def localize_selected_events(
+    events: list[EventCard],
+    *,
+    summarize_with: str,
+    digest_date: date,
+) -> int:
+    if summarize_with != "deepseek" or not os.getenv("DEEPSEEK_API_KEY"):
+        return 0
+
+    targets = [event for event in events if needs_chinese_polish(event)]
+    if not targets:
+        return 0
+
+    try:
+        client = DeepSeekClient(DeepSeekSettings.from_env())
+    except Exception as exc:
+        log_progress(f"title localization unavailable error={exc}")
+        return 0
+
+    chunk_size = max(1, int(os.getenv("TITLE_LOCALIZATION_CHUNK_SIZE", "20")))
+    updated = 0
+    for start in range(0, len(targets), chunk_size):
+        chunk = targets[start : start + chunk_size]
+        log_progress(f"title localization {start + 1}-{start + len(chunk)}/{len(targets)}")
+        try:
+            localized_items = deepseek_localize_event_chunk(client, chunk, digest_date)
+        except Exception as exc:
+            log_progress(f"title localization failed error={exc}")
+            continue
+        by_id = {str(item.get("id")): item for item in localized_items if isinstance(item, dict)}
+        for event in chunk:
+            item = by_id.get(event.id)
+            if not item:
+                continue
+            changed = apply_localized_event_fields(event, item)
+            if changed:
+                updated += 1
+    return updated
+
+
+def needs_chinese_polish(event: EventCard) -> bool:
+    fields = [event.ai_title, event.one_sentence_summary, event.detailed_summary, event.topic_angle]
+    return any(has_english_words(field) for field in fields)
+
+
+def has_english_words(text: str) -> bool:
+    return bool(re.search(r"[A-Za-z]{3,}", text or ""))
+
+
+def deepseek_localize_event_chunk(
+    client: DeepSeekClient,
+    events: list[EventCard],
+    digest_date: date,
+) -> list[dict[str, Any]]:
+    items = []
+    for event in events:
+        primary_link = event.reading_links[0] if event.reading_links else None
+        items.append(
+            {
+                "id": event.id,
+                "category": event.category,
+                "source_name": primary_link.source_name if primary_link else "",
+                "source_type": primary_link.source_type if primary_link else "",
+                "original_title": primary_link.original_title if primary_link else event.ai_title,
+                "current_title": event.ai_title,
+                "current_one_sentence_summary": event.one_sentence_summary,
+                "current_detailed_summary": event.detailed_summary,
+            }
+        )
+
+    system = """
+你是一个中文 AI 情报站的标题编辑。你的任务是把入选资讯的英文标题和英文摘要改写成简洁中文，供公众号博主快速浏览。
+
+要求：
+1. 只基于输入中的标题和已有摘要，不新增输入没有的事实。
+2. 公司名、模型名、产品名、论文名可以保留英文，例如 OpenAI、Claude Code、Blackwell、MLPerf。
+3. 不要保留栏目名前缀，例如“AI行业资讯｜”“大模型动态｜”。
+4. 不要使用省略号，不要输出 Markdown。
+5. 输出必须是合法 JSON。
+""".strip()
+    user = json.dumps(
+        {
+            "digest_date": digest_date.isoformat(),
+            "items": items,
+            "output_schema": {
+                "items": [
+                    {
+                        "id": "原样返回",
+                        "ai_title": "不超过32个中文字符；必要专名可保留英文",
+                        "one_sentence_summary": "不超过60个中文字符",
+                        "detailed_summary": "80-160字中文摘要；信息不足时说明基于标题和来源判断",
+                    }
+                ]
+            },
+        },
+        ensure_ascii=False,
+    )
+    result = client.complete_json(system, user, max_tokens=3600)
+    value = result.get("items", [])
+    if not isinstance(value, list):
+        return []
+    return [item for item in value if isinstance(item, dict)]
+
+
+def apply_localized_event_fields(event: EventCard, item: dict[str, Any]) -> bool:
+    changed = False
+    title = clean_localized_text(str(item.get("ai_title") or ""), limit=48)
+    if is_useful_chinese(title):
+        event.ai_title = title
+        changed = True
+
+    one_sentence = clean_localized_text(str(item.get("one_sentence_summary") or ""), limit=90)
+    if is_useful_chinese(one_sentence):
+        event.one_sentence_summary = one_sentence
+        changed = True
+
+    detailed = clean_localized_text(str(item.get("detailed_summary") or ""), limit=260)
+    if is_useful_chinese(detailed):
+        event.detailed_summary = detailed
+        changed = True
+
+    if changed and has_english_words(event.topic_angle):
+        event.topic_angle = default_topic_angle(event)
+    return changed
+
+
+def clean_localized_text(text: str, *, limit: int) -> str:
+    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"^(大模型动态|AI行业资讯|国际形势影响|国际金融)[｜|:：]\s*", "", text)
+    text = text.replace("...", "").replace("…", "")
+    return trim(text, limit)
+
+
+def is_useful_chinese(text: str) -> bool:
+    return bool(text and re.search(r"[\u4e00-\u9fff]", text))
+
+
+def default_topic_angle(event: EventCard) -> str:
+    if event.category == "大模型动态":
+        return f"从模型能力、评测和开发者生态角度解读：{event.ai_title}"
+    if event.category == "AI行业资讯":
+        return f"从商业化、算力和产业竞争角度解读：{event.ai_title}"
+    if event.category == "国际形势影响":
+        return f"从国际形势对 AI 产业链的影响解读：{event.ai_title}"
+    return f"从利率、汇率和科技股估值角度解读：{event.ai_title}"
 
 
 def choose_extraction_indexes(candidates: list[ArticleCandidate], extract_limit: int) -> set[int]:

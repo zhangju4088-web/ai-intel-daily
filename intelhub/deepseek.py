@@ -49,7 +49,7 @@ class DeepSeekClient:
     def __init__(self, settings: DeepSeekSettings) -> None:
         self.settings = settings
 
-    def complete_json(self, system: str, user: str, *, thinking: bool = False) -> dict[str, Any]:
+    def complete_json(self, system: str, user: str, *, thinking: bool = False, max_tokens: int = 1800) -> dict[str, Any]:
         payload: dict[str, Any] = {
             "model": self.settings.model,
             "messages": [
@@ -58,7 +58,7 @@ class DeepSeekClient:
             ],
             "thinking": {"type": "enabled" if thinking else "disabled"},
             "temperature": 0.2,
-            "max_tokens": 1800,
+            "max_tokens": max_tokens,
             "response_format": {"type": "json_object"},
             "stream": False,
         }
