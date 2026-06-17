@@ -1,6 +1,6 @@
 {
   "digest_date": "2026-06-17",
-  "generated_at": "2026-06-17T04:23:56.802664+00:00",
+  "generated_at": "2026-06-17T04:35:02.231910+00:00",
   "generated_by": "intelhub-local-pipeline",
   "settings": {
     "per_source": 5,
@@ -13,13 +13,14 @@
     "fetched_candidate_count": 140,
     "unique_candidate_count": 130,
     "analysis_count": 130,
-    "deepseek_analysis_count": 7,
-    "local_analysis_count": 123,
+    "deepseek_analysis_count": 5,
+    "local_analysis_count": 125,
     "extracted_text_count": 9,
     "extraction_error_count": 7,
     "event_count": 128,
     "selected_event_count": 60,
-    "fetch_error_count": 1
+    "fetch_error_count": 1,
+    "title_localized_count": 12
   },
   "fetch_errors": [
     {
@@ -790,6 +791,51 @@
         ]
       },
       {
+        "id": "6bb28595-27f8-5e75-bafc-bbae8262b664",
+        "event_date": "2026-06-17",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Fastest, Largest, Strongest:...",
+        "one_sentence_summary": "Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs...",
+        "detailed_summary": "NVIDIA Blackwell Sweeps MLPerf Training 6.0 | NVIDIA Blog Skip to content Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0 NVIDIA delivers the performance, scale and reliability that frontier training requires — in benchmarks and beyond. June 16, 2026 by Shruti Koparkar 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs shapes...",
+        "key_points": [
+          "NVIDIA Blackwell Sweeps MLPerf Training 6.0 | NVIDIA Blog Skip to content Fastest, Largest, Strongest: NVIDIA Blackwe...",
+          "June 16, 2026 by Shruti Koparkar 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+          "Every breakthrough AI model starts the same way: with a training run.",
+          "The infrastructure running those training jobs shapes everything: how fast teams can iterate, what scale of model the...",
+          "As models grow in size, complexity and intelligence, the demands on training infrastructure are also rising."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 76.8,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
+            "url": "https://blogs.nvidia.com/blog/blackwell-mlperf-training-6-0/",
+            "published_at": "Tue, 16 Jun 2026 15:00:36 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
         "id": "8a09a871-d58a-54d0-8363-9ca3a1db9221",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
@@ -1292,39 +1338,45 @@
         "source_types": [
           "media"
         ]
-      },
+      }
+    ],
+    "国际形势影响": [
       {
-        "id": "7139f9ff-0b37-5037-a062-0491c78d4fa4",
+        "id": "f8703491-dded-5376-afbe-7be7eec26732",
         "event_date": "2026-06-17",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Five big questions about the...",
-        "one_sentence_summary": "A ban is coming - but it's still not clear what it will mean for sites including Roblox, YouTube and WhatsApp.",
-        "detailed_summary": "A ban is coming - but it's still not clear what it will mean for sites including Roblox, YouTube and WhatsApp.",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Tehran selling deal with US a...",
+        "one_sentence_summary": "For many Iranians, the question is not whether the deal means victory, but whether it lowers prices and reduces fear...",
+        "detailed_summary": "How Iran is trying to sell a deal with the US as victory Skip to content Watch Live Home News Football 2026 Sport Business Technology Health Culture Arts Travel Earth Audio Video Live Documentaries Site search Home News Sport Football 2026 Business Technology Health Culture Arts Travel Earth Audio Video Live Documentaries Weather Newsletters Watch Live Tehran selling deal with US as victory – but for Iranians it was necessity 13 hours ago Share Save Add as preferred on Google Amir Azimi Senio...",
         "key_points": [
-          "A ban is coming - but it's still not clear what it will mean for sites including Roblox, YouTube and WhatsApp."
+          "How Iran is trying to sell a deal with the US as victory Skip to content Watch Live Home News Football 2026 Sport Bus...",
+          "That is not an easy argument to make.",
+          "The country has just gone through a damaging war, the economy is under severe pressure, and parts of the Islamic Repu...",
+          "There are also Iranians, both inside the country and abroad, who see the crisis not as a moment for diplomacy, but as...",
+          "This is the divided political landscape in which Tehran is now trying to sell the deal."
         ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Five big questions about the UK's under-16s social media ban",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Tehran selling deal with US as victory – but for Iranians it was necessity",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
         "confidence": 0.55,
         "reading_links": [
           {
-            "source_id": "bbc_technology",
-            "source_name": "BBC Technology",
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Five big questions about the UK's under-16s social media ban",
-            "url": "https://www.bbc.com/news/articles/c9824zvpz9po?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 16 Jun 2026 15:28:15 GMT",
-            "link_label": "BBC Technology",
+            "original_title": "Tehran selling deal with US as victory – but for Iranians it was necessity",
+            "url": "https://www.bbc.com/news/articles/cn4rwzxvl8ko?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 16 Jun 2026 15:31:24 GMT",
+            "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
           }
@@ -1333,9 +1385,7 @@
         "source_types": [
           "media"
         ]
-      }
-    ],
-    "国际形势影响": [
+      },
       {
         "id": "3a8d7238-a1cf-5191-97f0-6a9984fe61a8",
         "event_date": "2026-06-17",
@@ -1413,6 +1463,47 @@
             "url": "https://www.bbc.com/news/articles/c0jyzp9z9deo?at_medium=RSS&at_campaign=rss",
             "published_at": "Tue, 16 Jun 2026 17:57:00 GMT",
             "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "8480e16c-72be-5ad5-942f-f5bd4e37cd0b",
+        "event_date": "2026-06-17",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Lionel Messi rewrites history...",
+        "one_sentence_summary": "Messi scores three exactly 20 years to the day he made his World Cup debut for Argentina.",
+        "detailed_summary": "Messi scores three exactly 20 years to the day he made his World Cup debut for Argentina.",
+        "key_points": [
+          "Messi scores three exactly 20 years to the day he made his World Cup debut for Argentina."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Lionel Messi rewrites history books at record sixth World Cup",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Lionel Messi rewrites history books at record sixth World Cup",
+            "url": "https://www.aljazeera.com/sports/2026/6/17/lionel-messi-rewrites-history-books-at-record-sixth-world-cup?traffic_source=rss",
+            "published_at": "Wed, 17 Jun 2026 03:51:34 +0000",
+            "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
           }
@@ -1508,9 +1599,9 @@
         "id": "f1cdb94a-8c61-5a14-b82a-a7443c0012e4",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Messi hat-trick fires holders...",
-        "one_sentence_summary": "Argentina open defence of their World Cup crown with a Lionel Messi-inspired 3-0 win against Algeria at 2026 edition.",
-        "detailed_summary": "Argentina open defence of their World Cup crown with a Lionel Messi-inspired 3-0 win against Algeria at 2026 edition.",
+        "ai_title": "梅西帽子戏法助阿根廷世界杯开门红",
+        "one_sentence_summary": "梅西帽子戏法助阿根廷3-0胜阿尔及利亚，开启卫冕征程。",
+        "detailed_summary": "在2026年世界杯小组赛中，阿根廷凭借梅西的帽子戏法以3-0击败阿尔及利亚，成功开启卫冕之旅。梅西在重大国际赛事中再次展现决定性作用，帮助球队取得开门红。",
         "key_points": [
           "Argentina open defence of their World Cup crown with a Lionel Messi-inspired 3-0 win against Algeria at 2026 edition."
         ],
@@ -1521,7 +1612,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Messi hat-trick fires holders Argentina to win over Algeria at World Cup",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：梅西帽子戏法助阿根廷世界杯开门红",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1549,9 +1640,9 @@
         "id": "1283ad98-830e-5b7a-9a4f-794d3ca1b904",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Haaland scores two goals as N...",
-        "one_sentence_summary": "The Manchester City striker scored his first goals at a major international tournament as Norway powered past Iraq.",
-        "detailed_summary": "The Manchester City striker scored his first goals at a major international tournament as Norway powered past Iraq.",
+        "ai_title": "哈兰德双响挪威4-1伊拉克重返世界杯",
+        "one_sentence_summary": "哈兰德梅开二度，挪威4-1大胜伊拉克，取得世界杯回归首胜。",
+        "detailed_summary": "挪威在重返世界杯的首场比赛中，凭借曼城前锋哈兰德的两粒进球，以4-1战胜伊拉克。这是哈兰德在重大国际赛事中的首次进球，帮助球队强势开局。",
         "key_points": [
           "The Manchester City striker scored his first goals at a major international tournament as Norway powered past Iraq."
         ],
@@ -1562,7 +1653,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Haaland scores two goals as Norway beat Iraq 4-1 on World Cup return",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：哈兰德双响挪威4-1伊拉克重返世界杯",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1587,53 +1678,12 @@
         ]
       },
       {
-        "id": "23f0fd3c-00ae-586e-9f44-34d773eb6705",
-        "event_date": "2026-06-17",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Smotrich says Israel taking c...",
-        "one_sentence_summary": "Israeli Finance Minister Bezalel Smotrich says Israel has transferred authority over Hebron to the army.",
-        "detailed_summary": "Israeli Finance Minister Bezalel Smotrich says Israel has transferred authority over Hebron to the army.",
-        "key_points": [
-          "Israeli Finance Minister Bezalel Smotrich says Israel has transferred authority over Hebron to the army."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Smotrich says Israel taking control of Hebron",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 60.0,
-        "confidence": 0.55,
-        "reading_links": [
-          {
-            "source_id": "aljazeera_all",
-            "source_name": "Al Jazeera",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Smotrich says Israel taking control of Hebron",
-            "url": "https://www.aljazeera.com/video/newsfeed/2026/6/17/smotrich-says-israel-taking-control-of-hebron?traffic_source=rss",
-            "published_at": "Wed, 17 Jun 2026 01:24:32 +0000",
-            "link_label": "Al Jazeera",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
         "id": "87d52462-0b43-5bfc-ba68-f6391694b728",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Support CFR",
-        "one_sentence_summary": "Support CFR",
-        "detailed_summary": "Support CFR",
+        "ai_title": "CFR呼吁支持",
+        "one_sentence_summary": "外交关系委员会呼吁支持其工作。",
+        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）的募捐或支持呼吁，无更多详细信息。",
         "key_points": [
           "Support CFR"
         ],
@@ -1644,7 +1694,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Support CFR",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：CFR呼吁支持",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1672,9 +1722,9 @@
         "id": "320857e5-c6ee-5eeb-ae42-d4cc64d894c3",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Member Login",
-        "one_sentence_summary": "Member Login",
-        "detailed_summary": "Member Login",
+        "ai_title": "CFR会员登录",
+        "one_sentence_summary": "外交关系委员会会员登录入口。",
+        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）网站的会员登录页面，无更多详细信息。",
         "key_points": [
           "Member Login"
         ],
@@ -1685,7 +1735,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Member Login",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：CFR会员登录",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1713,9 +1763,9 @@
         "id": "81118d99-e6c7-51cf-b9ed-b33798b5284f",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Events",
-        "one_sentence_summary": "Events",
-        "detailed_summary": "Events",
+        "ai_title": "CFR活动",
+        "one_sentence_summary": "外交关系委员会活动页面。",
+        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）的活动列表或介绍，无更多详细信息。",
         "key_points": [
           "Events"
         ],
@@ -1726,7 +1776,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Events",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：CFR活动",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1754,9 +1804,9 @@
         "id": "e2d5a3b3-97c0-558c-97d2-16e8bb6506d2",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "The Future of American St利率gy",
-        "one_sentence_summary": "The Future of American Strategy",
-        "detailed_summary": "The Future of American Strategy",
+        "ai_title": "美国战略的未来",
+        "one_sentence_summary": "探讨美国战略的未来方向。",
+        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）关于美国战略未来的分析或讨论，无更多详细信息。",
         "key_points": [
           "The Future of American Strategy"
         ],
@@ -1767,7 +1817,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：The Future of American Strategy",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：美国战略的未来",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1795,9 +1845,9 @@
         "id": "f2968d0e-515a-57c9-8474-3e0dc05a534c",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Trump’s Iran Deal: What We Kn...",
-        "one_sentence_summary": "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved",
-        "detailed_summary": "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved",
+        "ai_title": "特朗普伊朗协议：已知、争议与未解",
+        "one_sentence_summary": "分析特朗普伊朗协议的已知事实、争议点和未解决问题。",
+        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）对特朗普政府伊朗协议的分析，涵盖已知信息、存在争议的方面以及尚未解决的议题，无更多详细信息。",
         "key_points": [
           "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved"
         ],
@@ -1808,7 +1858,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：特朗普伊朗协议：已知、争议与未解",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1836,9 +1886,9 @@
         "id": "64f6dc04-ea6e-59d0-9dbe-ef74dee3632c",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Experts",
-        "one_sentence_summary": "Experts",
-        "detailed_summary": "Experts",
+        "ai_title": "CSIS专家",
+        "one_sentence_summary": "战略与国际研究中心专家页面。",
+        "detailed_summary": "基于标题和来源判断，该条目为战略与国际研究中心（CSIS）的专家列表或介绍，无更多详细信息。",
         "key_points": [
           "Experts"
         ],
@@ -1849,7 +1899,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Experts",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：CSIS专家",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1877,9 +1927,9 @@
         "id": "a14754a0-d2b6-58f0-b702-b27dcfba2e20",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Programs",
-        "one_sentence_summary": "Programs",
-        "detailed_summary": "Programs",
+        "ai_title": "CSIS项目",
+        "one_sentence_summary": "战略与国际研究中心项目页面。",
+        "detailed_summary": "基于标题和来源判断，该条目为战略与国际研究中心（CSIS）的项目列表或介绍，无更多详细信息。",
         "key_points": [
           "Programs"
         ],
@@ -1890,7 +1940,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Programs",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：CSIS项目",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1913,47 +1963,6 @@
         "source_types": [
           "media"
         ]
-      },
-      {
-        "id": "a43576cd-cf46-5714-8d32-60724a093de6",
-        "event_date": "2026-06-17",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Regions",
-        "one_sentence_summary": "Regions",
-        "detailed_summary": "Regions",
-        "key_points": [
-          "Regions"
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Regions",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": false,
-        "priority_score": 50.0,
-        "confidence": 0.55,
-        "reading_links": [
-          {
-            "source_id": "csis",
-            "source_name": "CSIS",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Regions",
-            "url": "https://www.csis.org/regions",
-            "published_at": null,
-            "link_label": "CSIS",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
       }
     ],
     "国际金融": [
@@ -1962,8 +1971,8 @@
         "event_date": "2026-06-17",
         "category": "国际金融",
         "ai_title": "美国4月国际货物和服务贸易数据发布",
-        "one_sentence_summary": "美国4月国际货物和服务贸易数据发布",
-        "detailed_summary": "美国4月国际货物和服务贸易数据发布。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "one_sentence_summary": "美国4月国际货物和服务贸易数据发布。",
+        "detailed_summary": "美国经济分析局发布2026年4月国际货物和服务贸易数据。该数据可能影响利率、汇率、风险资产和科技股估值，建议结合原文关注其对金融市场的影响。",
         "key_points": [
           "美国4月国际货物和服务贸易数据发布",
           "原文为英文，发布前需复核具体日期、金额和政策表述。"
@@ -1975,7 +1984,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：U.S. International Trade in Goods and Services, April 2026",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：美国4月国际货物和服务贸易数据发布",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -2015,9 +2024,9 @@
         "id": "076e239f-262e-5ae7-81fa-72d728a4f360",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "FinCEN发布信息共享指引，帮助金融机构打击欺诈",
-        "one_sentence_summary": "FinCEN发布信息共享指引，帮助金融机构打击欺诈",
-        "detailed_summary": "FinCEN发布信息共享指引，帮助金融机构打击欺诈。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "ai_title": "FinCEN发布信息共享指引打击欺诈",
+        "one_sentence_summary": "FinCEN发布指引，帮助金融机构通过信息共享消除欺诈。",
+        "detailed_summary": "美国财政部金融犯罪执法网络（FinCEN）发布新指引，旨在帮助金融机构通过信息共享机制更有效地识别和消除欺诈行为。该指引可能对金融监管和合规产生影响，建议结合原文关注其对利率、汇率、风险资产和科技股估值的潜在影响。",
         "key_points": [
           "FinCEN发布信息共享指引，帮助金融机构打击欺诈",
           "原文为英文，发布前需复核具体日期、金额和政策表述。"
@@ -2029,7 +2038,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：FinCEN Issues Guidance to Help Financial Institutions Eliminate Fraud Through Information Sharing",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：FinCEN发布信息共享指引打击欺诈",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2057,9 +2066,9 @@
         "id": "ea3998be-945c-503b-b6c5-05a01478415e",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "美国财政部长贝森特在休斯敦石油俱乐部发表讲话",
-        "one_sentence_summary": "美国财政部长贝森特在休斯敦石油俱乐部发表讲话",
-        "detailed_summary": "美国财政部长贝森特在休斯敦石油俱乐部发表讲话。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "ai_title": "美财长贝森特在休斯敦石油俱乐部讲话",
+        "one_sentence_summary": "美国财政部长贝森特在休斯敦石油俱乐部发表讲话。",
+        "detailed_summary": "美国财政部长斯科特·贝森特在休斯敦石油俱乐部发表讲话，内容可能涉及经济政策、能源市场或财政议题。该讲话可能影响利率、汇率、风险资产和科技股估值，建议结合原文关注其对金融市场的影响。",
         "key_points": [
           "美国财政部长贝森特在休斯敦石油俱乐部发表讲话",
           "原文为英文，发布前需复核具体日期、金额和政策表述。"
@@ -2071,7 +2080,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Remarks by Treasury Secretary Scott Bessent before the Petroleum Club of Houston",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：美财长贝森特在休斯敦石油俱乐部讲话",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2693,6 +2702,51 @@
       ]
     },
     {
+      "id": "6bb28595-27f8-5e75-bafc-bbae8262b664",
+      "event_date": "2026-06-17",
+      "category": "AI行业资讯",
+      "ai_title": "AI行业资讯｜Fastest, Largest, Strongest:...",
+      "one_sentence_summary": "Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs...",
+      "detailed_summary": "NVIDIA Blackwell Sweeps MLPerf Training 6.0 | NVIDIA Blog Skip to content Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0 NVIDIA delivers the performance, scale and reliability that frontier training requires — in benchmarks and beyond. June 16, 2026 by Shruti Koparkar 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs shapes...",
+      "key_points": [
+        "NVIDIA Blackwell Sweeps MLPerf Training 6.0 | NVIDIA Blog Skip to content Fastest, Largest, Strongest: NVIDIA Blackwe...",
+        "June 16, 2026 by Shruti Koparkar 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+        "Every breakthrough AI model starts the same way: with a training run.",
+        "The infrastructure running those training jobs shapes everything: how fast teams can iterate, what scale of model the...",
+        "As models grow in size, complexity and intelligence, the demands on training infrastructure are also rising."
+      ],
+      "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从商业化和产业竞争角度解读：Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 76.8,
+      "confidence": 0.55,
+      "reading_links": [
+        {
+          "source_id": "nvidia_blog",
+          "source_name": "NVIDIA Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
+          "url": "https://blogs.nvidia.com/blog/blackwell-mlperf-training-6-0/",
+          "published_at": "Tue, 16 Jun 2026 15:00:36 +0000",
+          "link_label": "NVIDIA Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
       "id": "8a09a871-d58a-54d0-8363-9ca3a1db9221",
       "event_date": "2026-06-17",
       "category": "AI行业资讯",
@@ -2997,51 +3051,6 @@
       "source_types": [
         "research"
       ]
-    },
-    {
-      "id": "60a2e606-9dd7-524d-8085-b003f2bed6ac",
-      "event_date": "2026-06-17",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜PhoneHarness: Harnessing Phone...",
-      "one_sentence_summary": "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workfl...",
-      "detailed_summary": "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workflows rather than merely predict the next screen action. However, much of the current mobile-agent literature still evaluates agents primarily as GUI controllers that observe a screen, emit taps and swipes, and are scored by target app state. Real phone-use tasks are broader: they require deciding when to use app GUIs, device-side commands, or structured tools, while leaving evid...",
-      "key_points": [
-        "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workfl...",
-        "However, much of the current mobile-agent literature still evaluates agents primarily as GUI controllers that observe...",
-        "Real phone-use tasks are broader: they require deciding when to use app GUIs, device-side commands, or structured too...",
-        "We introduce PhoneHarness, a mixed-action benchmark and execution harness for studying phone-use agents on verifiable...",
-        "PhoneHarness runs a device-side agent loop over GUI, CLI, and host-side tool actions, combining deterministic action..."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 69.0,
-      "confidence": 0.55,
-      "reading_links": [
-        {
-          "source_id": "arxiv_cs_cl",
-          "source_name": "arXiv cs.CL",
-          "source_type": "research",
-          "source_role": "primary",
-          "original_title": "PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
-          "url": "https://arxiv.org/abs/2606.14832",
-          "published_at": "Wed, 17 Jun 2026 00:00:00 -0400",
-          "link_label": "arXiv cs.CL",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "research"
-      ]
     }
   ],
   "topic_pool": [
@@ -3069,6 +3078,17 @@
     },
     {
       "rank": 3,
+      "title": "从商业化和产业竞争角度解读：Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
+      "source_event_ids": [
+        "6bb28595-27f8-5e75-bafc-bbae8262b664"
+      ],
+      "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+      "why_today": "Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
+    },
+    {
+      "rank": 4,
       "title": "从商业化和产业竞争角度解读：Coherent Breaks Ground on Expanded Texas Facility, Scaling AI’s Optical Backbone",
       "source_event_ids": [
         "8a09a871-d58a-54d0-8363-9ca3a1db9221"
@@ -3079,7 +3099,7 @@
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
-      "rank": 4,
+      "rank": 5,
       "title": "从能力、成本和生态角度解读：Predicting model behavior before release by simulating deployment",
       "source_event_ids": [
         "bd0cb0bf-5082-5cd1-9f9d-f90d880ea2e8"
@@ -3090,7 +3110,7 @@
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
-      "rank": 5,
+      "rank": 6,
       "title": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network",
       "source_event_ids": [
         "9b044100-c1a7-52c4-bb6b-18724809ca90"
@@ -3101,7 +3121,7 @@
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
-      "rank": 6,
+      "rank": 7,
       "title": "从能力、成本和生态角度解读：Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search",
       "source_event_ids": [
         "3d437827-c016-56d4-9417-064909f7e1ed"
@@ -3112,7 +3132,7 @@
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
-      "rank": 7,
+      "rank": 8,
       "title": "从能力、成本和生态角度解读：When Rules Learn: A Self-Evolving Agent for Legal Case Retrieval",
       "source_event_ids": [
         "b9383628-4634-5a7c-b35d-006b9a4059fb"
@@ -3123,7 +3143,7 @@
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
-      "rank": 8,
+      "rank": 9,
       "title": "从能力、成本和生态角度解读：SkillChain-Gym: A Benchmark for Reskilling-Aware Production-Inventory Control under Disruptions",
       "source_event_ids": [
         "81b76f6d-4018-501d-abf9-ab8b6ada01f5"
@@ -3134,7 +3154,7 @@
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
-      "rank": 9,
+      "rank": 10,
       "title": "从能力、成本和生态角度解读：Skill-Constrained Model Predictive Control for Resilient Manufacturing Supply Chains",
       "source_event_ids": [
         "c5feafbe-a3db-57d0-9990-986572eea2da"
@@ -3143,23 +3163,12 @@
       "why_today": "arXiv:2606.17269v1 Announce Type: new Abstract: In skill-constrained production-inventory systems, the qualified huma...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
-    },
-    {
-      "rank": 10,
-      "title": "从能力、成本和生态角度解读：PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
-      "source_event_ids": [
-        "60a2e606-9dd7-524d-8085-b003f2bed6ac"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workfl...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     }
   ],
   "archive_entries": [
     {
       "date": "2026-06-17",
-      "generated_at": "2026-06-17T04:23:56.802664+00:00",
+      "generated_at": "2026-06-17T04:35:02.231910+00:00",
       "selected_event_count": 60,
       "event_count": 128,
       "top10_count": 10,
