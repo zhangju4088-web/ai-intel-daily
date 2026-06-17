@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-06-17",
+    "generated_at": "2026-06-17T04:23:56.802664+00:00",
+    "selected_event_count": 60,
+    "event_count": 128,
+    "top10_count": 10,
+    "url": "archive/2026-06-17/",
+    "json_url": "archive/2026-06-17/daily-digest.json"
+  },
+  {
     "date": "2026-06-16",
     "generated_at": "2026-06-16T03:25:50.900961+00:00",
     "selected_event_count": 60,
