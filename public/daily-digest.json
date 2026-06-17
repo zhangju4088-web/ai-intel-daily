@@ -1,6 +1,6 @@
 {
   "digest_date": "2026-06-17",
-  "generated_at": "2026-06-17T04:35:02.231910+00:00",
+  "generated_at": "2026-06-17T04:41:58.718373+00:00",
   "generated_by": "intelhub-local-pipeline",
   "settings": {
     "per_source": 5,
@@ -10,19 +10,29 @@
     "summarize_with": "deepseek"
   },
   "stats": {
-    "fetched_candidate_count": 140,
-    "unique_candidate_count": 130,
-    "analysis_count": 130,
-    "deepseek_analysis_count": 5,
-    "local_analysis_count": 125,
+    "fetched_candidate_count": 130,
+    "unique_candidate_count": 120,
+    "analysis_count": 120,
+    "deepseek_analysis_count": 6,
+    "local_analysis_count": 114,
     "extracted_text_count": 9,
     "extraction_error_count": 7,
-    "event_count": 128,
+    "event_count": 118,
     "selected_event_count": 60,
-    "fetch_error_count": 1,
-    "title_localized_count": 12
+    "fetch_error_count": 3,
+    "title_localized_count": 57
   },
   "fetch_errors": [
+    {
+      "source_id": "huggingface_blog",
+      "source_name": "Hugging Face Blog",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": "papers_with_code_latest",
+      "source_name": "Papers with Code",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
     {
       "source_id": "bls_news",
       "source_name": "U.S. Bureau of Labor Statistics",
@@ -35,8 +45,8 @@
         "id": "bd0cb0bf-5082-5cd1-9f9d-f90d880ea2e8",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Predicting model behavior befo...",
-        "one_sentence_summary": "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversat...",
+        "ai_title": "OpenAI推出部署模拟，提前预测模型行为",
+        "one_sentence_summary": "OpenAI发布部署模拟方法，通过真实对话在发布前预测AI模型行为。",
         "detailed_summary": "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversation data to improve safety and evaluation accuracy.",
         "key_points": [
           "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversat..."
@@ -48,7 +58,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Predicting model behavior before release by simulating deployment",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：OpenAI推出部署模拟，提前预测模型行为",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 70.8,
@@ -76,8 +86,8 @@
         "id": "9b044100-c1a7-52c4-bb6b-18724809ca90",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Introducing the OpenAI Partner...",
-        "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...",
+        "ai_title": "OpenAI启动合作伙伴网络，投资1.5亿美元",
+        "one_sentence_summary": "OpenAI推出合作伙伴网络，投资1.5亿助全球伙伴加速企业AI落地。",
         "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
         "key_points": [
           "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."
@@ -89,7 +99,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：OpenAI启动合作伙伴网络，投资1.5亿美元",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 70.8,
@@ -117,8 +127,8 @@
         "id": "3d437827-c016-56d4-9417-064909f7e1ed",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Beyond Parallel Sampling: Dive...",
-        "one_sentence_summary": "arXiv:2606.17209v1 Announce Type: new Abstract: Test-time scaling for agentic search typically increases depth (i.e.,...",
+        "ai_title": "超越并行采样：智能体搜索的多样化查询初始化",
+        "one_sentence_summary": "论文提出多样化查询初始化，提升智能体搜索的测试时扩展效果。",
         "detailed_summary": "arXiv:2606.17209v1 Announce Type: new Abstract: Test-time scaling for agentic search typically increases depth (i.e., more turns and tokens per trajectory) or breadth (i.e., more parallel rollouts). Here we focus on breadth scaling, showing that standard parallel sampling yields diminishing returns, tracing this to query redundancy at the first turn. When models issue similar first queries across rollouts, the threads retrieve overlapping evidence, and subsequent turns are conditioned on this...",
         "key_points": [
           "arXiv:2606.17209v1 Announce Type: new Abstract: Test-time scaling for agentic search typically increases depth (i.e.,...",
@@ -134,7 +144,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：超越并行采样：智能体搜索的多样化查询初始化",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -162,8 +172,8 @@
         "id": "b9383628-4634-5a7c-b35d-006b9a4059fb",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜When Rules Learn: A Self-Evolv...",
-        "one_sentence_summary": "arXiv:2606.17220v1 Announce Type: new Abstract: Legal case retrieval remains challenging due to the complexity of leg...",
+        "ai_title": "当规则学习：自进化智能体用于法律案例检索",
+        "one_sentence_summary": "论文提出自进化智能体，应对法律案例检索的复杂性挑战。",
         "detailed_summary": "arXiv:2606.17220v1 Announce Type: new Abstract: Legal case retrieval remains challenging due to the complexity of legal language and the need for precise lexical alignment between queries and relevant cases. Although dense retrieval models have achieved notable progress, empirical studies show that BM25 continues to serve as a strong baseline in this domain. It motivates us to propose a self-evolving framework for rule-driven query rewriting that enhances BM25 without any parameter training....",
         "key_points": [
           "arXiv:2606.17220v1 Announce Type: new Abstract: Legal case retrieval remains challenging due to the complexity of leg...",
@@ -179,7 +189,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：When Rules Learn: A Self-Evolving Agent for Legal Case Retrieval",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：当规则学习：自进化智能体用于法律案例检索",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -207,8 +217,8 @@
         "id": "81b76f6d-4018-501d-abf9-ab8b6ada01f5",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜SkillChAIn-Gym: A Benchmark fo...",
-        "one_sentence_summary": "arXiv:2606.17266v1 Announce Type: new Abstract: Production planning increasingly has to treat workforce capability as...",
+        "ai_title": "SkillChain-Gym：面向中断的再培训生产库存控制基准",
+        "one_sentence_summary": "提出SkillChain-Gym基准，评估生产规划中劳动力再培训与库存控制的联合决策。",
         "detailed_summary": "arXiv:2606.17266v1 Announce Type: new Abstract: Production planning increasingly has to treat workforce capability as a decision variable: certifications lapse when skills are not maintained, new products require skills the current workforce does not hold, and reskilling competes for the same worker hours needed for production. Existing operations benchmarks usually treat labor as exogenous, while workforce-planning models with skills and learning are rarely released as reusable testbeds. We...",
         "key_points": [
           "arXiv:2606.17266v1 Announce Type: new Abstract: Production planning increasingly has to treat workforce capability as...",
@@ -224,7 +234,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：SkillChain-Gym: A Benchmark for Reskilling-Aware Production-Inventory Control under Disruptions",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：SkillChain-Gym：面向中断的再培训生产库存控制基准",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -252,8 +262,8 @@
         "id": "c5feafbe-a3db-57d0-9990-986572eea2da",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Skill-ConstrAIned Model Predic...",
-        "one_sentence_summary": "arXiv:2606.17269v1 Announce Type: new Abstract: In skill-constrained production-inventory systems, the qualified huma...",
+        "ai_title": "技能约束模型预测控制实现弹性制造供应链",
+        "one_sentence_summary": "研究技能受限生产库存系统的模型预测控制，提升供应链韧性。",
         "detailed_summary": "arXiv:2606.17269v1 Announce Type: new Abstract: In skill-constrained production-inventory systems, the qualified human capacity available tomorrow depends on training decisions made today: production requires certified workers, certifications decay unless maintained, and training consumes the same scarce worker hours that production needs now. We study a closed-loop skill-constrained model predictive controller that, at every shift, solves a finite-horizon mixed-integer program over productio...",
         "key_points": [
           "arXiv:2606.17269v1 Announce Type: new Abstract: In skill-constrained production-inventory systems, the qualified huma...",
@@ -269,7 +279,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Skill-Constrained Model Predictive Control for Resilient Manufacturing Supply Chains",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：技能约束模型预测控制实现弹性制造供应链",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -297,8 +307,8 @@
         "id": "60a2e606-9dd7-524d-8085-b003f2bed6ac",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜PhoneHarness: Harnessing Phone...",
-        "one_sentence_summary": "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workfl...",
+        "ai_title": "PhoneHarness：混合GUI、CLI与工具操作的手机智能体",
+        "one_sentence_summary": "提出PhoneHarness框架，让手机智能体通过混合界面完成真实移动工作流。",
         "detailed_summary": "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workflows rather than merely predict the next screen action. However, much of the current mobile-agent literature still evaluates agents primarily as GUI controllers that observe a screen, emit taps and swipes, and are scored by target app state. Real phone-use tasks are broader: they require deciding when to use app GUIs, device-side commands, or structured tools, while leaving evid...",
         "key_points": [
           "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workfl...",
@@ -314,7 +324,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：PhoneHarness：混合GUI、CLI与工具操作的手机智能体",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -342,8 +352,8 @@
         "id": "8ed41dc4-5a0d-5265-9883-4b2bb05d3014",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Evaluating the Robustness of P...",
-        "one_sentence_summary": "arXiv:2606.14867v1 Announce Type: new Abstract: Proof autoformalization aims to translate a mathematical informal pro...",
+        "ai_title": "评估Lean 4中证明自动形式化的鲁棒性",
+        "one_sentence_summary": "评估将非正式数学证明自动转化为Lean 4形式化证明的鲁棒性。",
         "detailed_summary": "arXiv:2606.14867v1 Announce Type: new Abstract: Proof autoformalization aims to translate a mathematical informal proof written in natural language into a formal proof in a formal language such as Lean~4. Several works have developed LLM-based models for proof autoformalization. However, existing evaluations have typically focused on translating well-formed informal proofs from curated datasets. We argue that a robust proof autoformalizer must remain faithful even for informal proofs that div...",
         "key_points": [
           "arXiv:2606.14867v1 Announce Type: new Abstract: Proof autoformalization aims to translate a mathematical informal pro...",
@@ -359,7 +369,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Evaluating the Robustness of Proof Autoformalization in Lean 4",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：评估Lean 4中证明自动形式化的鲁棒性",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -387,8 +397,8 @@
         "id": "cfc1ee97-a4d0-5606-9301-21809aa4dfdb",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Context Compression Is Not One...",
-        "one_sentence_summary": "arXiv:2606.14875v1 Announce Type: new Abstract: We study context compression for multi-hop question answering with sm...",
+        "ai_title": "上下文压缩非单一任务：可读符号重表达与连贯摘要",
+        "one_sentence_summary": "研究多跳问答中上下文压缩，在相同预算下对比可读符号重表达与连贯摘要两种方式。",
         "detailed_summary": "arXiv:2606.14875v1 Announce Type: new Abstract: We study context compression for multi-hop question answering with small language models. We propose Telegraph English, a readable symbolic format that rewrites retrieved passages into structured entity-relation statements, preserving reasoning evidence at lower token cost. In controlled experiments on MuSiQue, TwoWiki, and HotpotQA, Telegraph English outperforms three matched-budget compression baselines (character-level deletion, truncation, a...",
         "key_points": [
           "arXiv:2606.14875v1 Announce Type: new Abstract: We study context compression for multi-hop question answering with sm...",
@@ -404,7 +414,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Context Compression Is Not One Thing: Readable Symbolic Re-expression vs. Coherent Summary at Matched Budget",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：上下文压缩非单一任务：可读符号重表达与连贯摘要",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -432,8 +442,8 @@
         "id": "6ffa1861-1bee-53a0-a0f2-1f597df6e90c",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜CoRA: Confidence-Rationale Ali...",
-        "one_sentence_summary": "arXiv:2606.14961v1 Announce Type: new Abstract: Chain-of-thought (CoT) reasoning can improve LLM performance, but hig...",
+        "ai_title": "CoRA：通过置信度与推理对齐提升思维链可靠性",
+        "one_sentence_summary": "提出CoRA方法，对齐置信度与推理过程，缓解思维链推理中的高置信度错误。",
         "detailed_summary": "arXiv:2606.14961v1 Announce Type: new Abstract: Chain-of-thought (CoT) reasoning can improve LLM performance, but high answer confidence may be misleading when the accompanying CoT rationale is plausible yet incomplete or poorly supported. We study confidence--rationale alignment: whether a model's confidence in its committed answer is justified by its generated rationale. We introduce a GRPO-based reinforcement learning framework that jointly rewards answer correctness, committed-answer prob...",
         "key_points": [
           "arXiv:2606.14961v1 Announce Type: new Abstract: Chain-of-thought (CoT) reasoning can improve LLM performance, but hig...",
@@ -449,7 +459,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：CoRA: Confidence-Rationale Alignment for Reliable Chain-of-Thought Reasoning",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：CoRA：通过置信度与推理对齐提升思维链可靠性",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -477,8 +487,8 @@
         "id": "a5b83fb1-6c8d-5f3f-b8fc-372659f7fb7a",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Correct When PAIred, Wrong Whe...",
-        "one_sentence_summary": "arXiv:2606.17057v1 Announce Type: new Abstract: Although Knowledge Editing provides an efficient mechanism for updati...",
+        "ai_title": "配对正确拆分错误：解耦并编辑多模态大模型模态神经元",
+        "one_sentence_summary": "发现多模态大模型中存在模态特定神经元，解耦并编辑它们可解决配对正确但拆分错误的问题。",
         "detailed_summary": "arXiv:2606.17057v1 Announce Type: new Abstract: Although Knowledge Editing provides an efficient mechanism for updating the knowledge of Multimodal Large Language Models (MLLMs), we find that current paradigms still suffer from an important yet remain underexplored issue : editing decoupling failure, where entity-related knowledge can be updated when the model is triggered by multimodal inputs (text--image query pairs), however, it often reverts to outdated pre-edit facts when the paired inpu...",
         "key_points": [
           "arXiv:2606.17057v1 Announce Type: new Abstract: Although Knowledge Editing provides an efficient mechanism for updati...",
@@ -494,7 +504,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Correct When Paired, Wrong When Split: Decoupling and Editing Modality-Specific Neurons in MLLMs",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：配对正确拆分错误：解耦并编辑多模态大模型模态神经元",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -522,8 +532,8 @@
         "id": "d2ebdf58-fcf8-5be3-8a2a-2885ede0c964",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Diagnosing and RepAIring Shape...",
-        "one_sentence_summary": "arXiv:2606.17093v1 Announce Type: new Abstract: Learning-based single-shot fringe projection profilometry (FPP) has b...",
+        "ai_title": "诊断并修复单帧条纹投影轮廓术中的形状先验捷径",
+        "one_sentence_summary": "针对学习型单帧条纹投影轮廓术，诊断并修复模型依赖形状先验捷径导致的长距离测量失败。",
         "detailed_summary": "arXiv:2606.17093v1 Announce Type: new Abstract: Learning-based single-shot fringe projection profilometry (FPP) has been studied mostly at close range. The long-range regime (standoff beyond 1 m) remains largely unaddressed: inverse-square intensity falloff lowers fringe signal-to-noise ratio and degrades physical ground truth, the single-shot problem is ill-posed because fringe-order information is absent from one image, and these architectures have not been studied mechanistically. We prese...",
         "key_points": [
           "arXiv:2606.17093v1 Announce Type: new Abstract: Learning-based single-shot fringe projection profilometry (FPP) has b...",
@@ -539,7 +549,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Diagnosing and Repairing Shape-Prior Shortcuts in Long-Range Single-Shot Fringe Projection Profilometry",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：诊断并修复单帧条纹投影轮廓术中的形状先验捷径",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -567,8 +577,8 @@
         "id": "2e922242-9bc8-552d-b331-7b4c249bb227",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "Informative Missingness to Gene利率 Ir...",
-        "one_sentence_summary": "arXiv:2606.17106v1 Announce Type: new Abstract: Laboratory tests in electronic health records are collected irregular...",
+        "ai_title": "信息性缺失生成不规则临床时间序列",
+        "one_sentence_summary": "利用电子健康记录中实验室检测的缺失模式，生成不规则临床时间序列。",
         "detailed_summary": "arXiv:2606.17106v1 Announce Type: new Abstract: Laboratory tests in electronic health records are collected irregularly, and the absence of a test order can be as informative as the measurement itself. Such missingness reflects clinicians' decisions and patient physiology, making it important to model it directly rather than treat it as a preprocessing artifact. Here we present a diffusion-based approach for generating clinical time series that jointly models laboratory values and their obser...",
         "key_points": [
           "arXiv:2606.17106v1 Announce Type: new Abstract: Laboratory tests in electronic health records are collected irregular...",
@@ -584,7 +594,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Informative Missingness to Generate Irregular Clinical Time Series",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：信息性缺失生成不规则临床时间序列",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -612,8 +622,8 @@
         "id": "f130b52c-2055-56bf-98e2-88c6e94bcb6e",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Models Take Notes at Prefill:...",
-        "one_sentence_summary": "arXiv:2606.17107v1 Announce Type: new Abstract: Prefix caching reuses prefill only across an exactly shared prefix, s...",
+        "ai_title": "模型在预填充时做笔记：KV缓存可编辑可组合",
+        "one_sentence_summary": "提出可编辑和可组合的KV缓存，突破前缀缓存仅共享完全一致前缀的限制。",
         "detailed_summary": "arXiv:2606.17107v1 Announce Type: new Abstract: Prefix caching reuses prefill only across an exactly shared prefix, so one changed field invalidates the entire downstream cache. Yet overwriting the field's own key/value vectors and reusing the rest leaves the model acting on the old value. The reason, established causally across four model families: at prefill the model has already written the field-conditioned conclusion onto downstream notes; the field's own key/value drives under 1% of the...",
         "key_points": [
           "arXiv:2606.17107v1 Announce Type: new Abstract: Prefix caching reuses prefill only across an exactly shared prefix, s...",
@@ -629,7 +639,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Models Take Notes at Prefill: KV Cache Can Be Editable and Composable",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：模型在预填充时做笔记：KV缓存可编辑可组合",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -657,8 +667,8 @@
         "id": "636ced5a-e782-5b19-8493-f51fd65dbe35",
         "event_date": "2026-06-17",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜The Critical Role of Model Sel...",
-        "one_sentence_summary": "arXiv:2606.17113v1 Announce Type: new Abstract: Distinguishing causal adverse drug events (ADEs) from spurious correl...",
+        "ai_title": "模型选择在因果推断中的关键作用：基于InferBERT的药物警戒分类比较",
+        "one_sentence_summary": "在药物警戒中，分类模型选择对区分因果不良事件与虚假关联至关重要。",
         "detailed_summary": "arXiv:2606.17113v1 Announce Type: new Abstract: Distinguishing causal adverse drug events (ADEs) from spurious correlations remains a central challenge in pharmacovigilance. The InferBERT framework integrates transformer models with Do-calculus, but its success hinges on the underlying classification model. This study evaluates the impact of model choice in InferBERT, assessing whether simpler models suffice, if domain-specific pre-training helps, whether scaling to LLMs improves causal detec...",
         "key_points": [
           "arXiv:2606.17113v1 Announce Type: new Abstract: Distinguishing causal adverse drug events (ADEs) from spurious correl...",
@@ -674,7 +684,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：The Critical Role of Model Selection in Causal Inference: A Comparative Analysis of Classification Models within the InferBERT Framework for Pharmacovigilance",
+        "topic_angle": "从模型能力、评测和开发者生态角度解读：模型选择在因果推断中的关键作用：基于InferBERT的药物警戒分类比较",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 69.0,
@@ -704,8 +714,8 @@
         "id": "65d78e79-8318-5656-aaa7-6802d51dd761",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Claude Code costs up to $200...",
-        "one_sentence_summary": "<p>The artificial intelligence coding revolution comes with a catch: it's expensive.</p><p><a href=\"https://claude.co...",
+        "ai_title": "Claude Code月费200美元，Goose免费实现相同功能",
+        "one_sentence_summary": "AI编程工具Claude Code月费高达200美元，而Goose提供免费替代方案。",
         "detailed_summary": "<p>The artificial intelligence coding revolution comes with a catch: it's expensive.</p><p><a href=\"https://claude.com/product/claude-code\">Claude Code</a>, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its <a href=\"https://claude.com/pricing\">pricing</a> — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to ser...",
         "key_points": [
           "<p>The artificial intelligence coding revolution comes with a catch: it's expensive.</p><p><a href=\"https://claude.co...",
@@ -721,7 +731,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Claude Code costs up to $200 a month. Goose does the same thing for free.",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：Claude Code月费200美元，Goose免费实现相同功能",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 77.0,
@@ -749,8 +759,8 @@
         "id": "d89db29c-94d8-5fd9-afc7-6fbd221d3d1c",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜HPE AI Factory With NVIDIA Ex...",
-        "one_sentence_summary": "Enterprises are moving agentic AI from proof of concept to production — and the next generation of AI factories are b...",
+        "ai_title": "HPE与NVIDIA扩展AI工厂，迎接智能体时代",
+        "one_sentence_summary": "企业正将智能体AI从概念验证推向生产，下一代AI工厂应运而生。",
         "detailed_summary": "HPE AI Factory With NVIDIA Expands for the Era of Agents | NVIDIA Blog Skip to content HPE AI Factory With NVIDIA Expands for the Era of Agents HPE AI Factory with NVIDIA expands with NVIDIA Vera CPU and NVIDIA Agent Toolkit for HPE Private Cloud AI — plus NVIDIA Confidential Computing and enhanced full-stack NVIDIA integration across HPE AI Factory solutions. June 16, 2026 by Chris Marriott 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! Enterprises are moving...",
         "key_points": [
           "HPE AI Factory With NVIDIA Expands for the Era of Agents | NVIDIA Blog Skip to content HPE AI Factory With NVIDIA Exp...",
@@ -766,7 +776,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：HPE AI Factory With NVIDIA Expands for the Era of Agents",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：HPE与NVIDIA扩展AI工厂，迎接智能体时代",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 76.8,
@@ -791,56 +801,11 @@
         ]
       },
       {
-        "id": "6bb28595-27f8-5e75-bafc-bbae8262b664",
-        "event_date": "2026-06-17",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Fastest, Largest, Strongest:...",
-        "one_sentence_summary": "Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs...",
-        "detailed_summary": "NVIDIA Blackwell Sweeps MLPerf Training 6.0 | NVIDIA Blog Skip to content Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0 NVIDIA delivers the performance, scale and reliability that frontier training requires — in benchmarks and beyond. June 16, 2026 by Shruti Koparkar 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs shapes...",
-        "key_points": [
-          "NVIDIA Blackwell Sweeps MLPerf Training 6.0 | NVIDIA Blog Skip to content Fastest, Largest, Strongest: NVIDIA Blackwe...",
-          "June 16, 2026 by Shruti Koparkar 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
-          "Every breakthrough AI model starts the same way: with a training run.",
-          "The infrastructure running those training jobs shapes everything: how fast teams can iterate, what scale of model the...",
-          "As models grow in size, complexity and intelligence, the demands on training infrastructure are also rising."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 76.8,
-        "confidence": 0.55,
-        "reading_links": [
-          {
-            "source_id": "nvidia_blog",
-            "source_name": "NVIDIA Blog",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
-            "url": "https://blogs.nvidia.com/blog/blackwell-mlperf-training-6-0/",
-            "published_at": "Tue, 16 Jun 2026 15:00:36 +0000",
-            "link_label": "NVIDIA Blog",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
         "id": "8a09a871-d58a-54d0-8363-9ca3a1db9221",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Coherent Breaks Ground on Exp...",
-        "one_sentence_summary": "AI runs at the speed of light. More and more, that light is made in Texas. Coherent broke ground today on an expanded...",
+        "ai_title": "Coherent扩建德州工厂，打造AI光学骨干网",
+        "one_sentence_summary": "AI以光速运行，Coherent在德州破土动工扩建工厂，扩大AI光学骨干网规模。",
         "detailed_summary": "AI runs at the speed of light. More and more, that light is made in Texas. Coherent broke ground today on an expanded manufacturing building in Sherman, Texas. The company makes the lasers, optical components and compound semiconductors that wire AI systems together — and runs what it calls the world’s first 6-inch indium phosphide […]",
         "key_points": [
           "AI runs at the speed of light.",
@@ -855,7 +820,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Coherent Breaks Ground on Expanded Texas Facility, Scaling AI’s Optical Backbone",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：Coherent扩建德州工厂，打造AI光学骨干网",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 72.0,
@@ -883,8 +848,8 @@
         "id": "2a2bf184-a53b-5cb7-a84a-bd76a689f1c9",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Salesforce rolls out new Slac...",
-        "one_sentence_summary": "<p><a href=\"https://www.salesforce.com/\">Salesforce</a> on Tuesday launched an entirely rebuilt version of <a href=\"h...",
+        "ai_title": "Salesforce推出新Slackbot AI代理，激战职场AI",
+        "one_sentence_summary": "Salesforce发布全新Slackbot AI代理，与微软和谷歌在职场AI领域展开竞争。",
         "detailed_summary": "<p><a href=\"https://www.salesforce.com/\">Salesforce</a> on Tuesday launched an entirely rebuilt version of <a href=\"https://slack.com/help/articles/202026038-An-introduction-to-Slackbot\">Slackbot</a>, the company's workplace assistant, transforming it from a simple notification tool into what executives describe as a fully powered AI agent capable of searching enterprise data, drafting documents, and taking action on behalf of employees.</p><p>The new Slackbot, now generally available to <a h...",
         "key_points": [
           "<p><a href=\"https://www.salesforce.com/\">Salesforce</a> on Tuesday launched an entirely rebuilt version of <a href=\"h...",
@@ -900,7 +865,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Salesforce rolls out new Slackbot AI agent as it battles Microsoft and Google in workplace AI",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：Salesforce推出新Slackbot AI代理，激战职场AI",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 65.0,
@@ -928,8 +893,8 @@
         "id": "250ca217-1d51-5f06-8cd8-cd4eca74916f",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜NVIDIA Blackwell Leads on Fir...",
-        "one_sentence_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...",
+        "ai_title": "NVIDIA Blackwell在首个智能体AI基准测试中领先",
+        "one_sentence_summary": "AgentPerf作为首个智能体AI基准测试，为开发者、企业和基础设施提供商提供性能参考。",
         "detailed_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […]",
         "key_points": [
           "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...",
@@ -942,7 +907,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：NVIDIA Blackwell在首个智能体AI基准测试中领先",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 64.8,
@@ -970,8 +935,8 @@
         "id": "10cb3cb5-5c5e-5ba8-baac-582bb905e08c",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Anthropic’s latest feud with...",
-        "one_sentence_summary": "Anthropic's popularity with business users is growing so well that the latest beef with the government might actually...",
+        "ai_title": "销售数据显示Anthropic与政府争端或反助其增长",
+        "one_sentence_summary": "Anthropic在企业用户中人气飙升，与政府的摩擦可能反而有利。",
         "detailed_summary": "Anthropic's popularity with business users is growing so well that the latest beef with the government might actually boost it, data from Ramp suggests.",
         "key_points": [
           "Anthropic's popularity with business users is growing so well that the latest beef with the government might actually..."
@@ -983,7 +948,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Anthropic’s latest feud with the Trump admin may actually help it, sales data suggests",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：销售数据显示Anthropic与政府争端或反助其增长",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 64.0,
@@ -1011,8 +976,8 @@
         "id": "d7c6dd7c-82d9-5ace-9c5e-df0f4b04e352",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Android 17 launches with new...",
-        "one_sentence_summary": "Google has released Android 17 and Wear OS 7, introducing new multitasking features, parental controls, security tool...",
+        "ai_title": "Android 17发布多任务功能，谷歌扩展Gemini",
+        "one_sentence_summary": "谷歌发布Android 17和Wear OS 7，新增多任务、家长控制和安全工具。",
         "detailed_summary": "Google has released Android 17 and Wear OS 7, introducing new multitasking features, parental controls, security tools, and smartwatch upgrades. The launch is also accompanied by a Pixel Drop that brings Google’s latest AI models to its devices.",
         "key_points": [
           "Google has released Android 17 and Wear OS 7, introducing new multitasking features, parental controls, security tool...",
@@ -1025,7 +990,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Android 17 launches with new multitasking tools as Google expands Gemini features",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：Android 17发布多任务功能，谷歌扩展Gemini",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 64.0,
@@ -1053,8 +1018,8 @@
         "id": "50ad03e7-7df4-5b7f-b740-649fb7d0349d",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Microsoft On The Issues",
-        "one_sentence_summary": "Microsoft On The Issues",
+        "ai_title": "微软谈议题",
+        "one_sentence_summary": "微软谈议题",
         "detailed_summary": "Microsoft On The Issues",
         "key_points": [
           "Microsoft On The Issues"
@@ -1066,7 +1031,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Microsoft On The Issues",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：微软谈议题",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1135,8 +1100,8 @@
         "id": "fd39f4d3-2a52-55a9-bf5c-c8e9466f2dc0",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜AI alone won’t change your bu...",
-        "one_sentence_summary": "AI alone won’t change your business.",
+        "ai_title": "仅靠AI无法改变业务，系统才是关键",
+        "one_sentence_summary": "微软AI博客指出，仅靠AI本身无法改变业务，运行它的系统才是关键。",
         "detailed_summary": "AI alone won’t change your business. The system running it will.",
         "key_points": [
           "AI alone won’t change your business.",
@@ -1149,7 +1114,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：AI alone won’t change your business. The system running it will.",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：仅靠AI无法改变业务，系统才是关键",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1177,8 +1142,8 @@
         "id": "01369a8b-1518-52e4-9518-1741b3427072",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜AI, jobs, and the next genera...",
-        "one_sentence_summary": "AI, jobs, and the next generation",
+        "ai_title": "AI、就业与下一代",
+        "one_sentence_summary": "微软AI博客探讨AI对就业和下一代的影响。",
         "detailed_summary": "AI, jobs, and the next generation",
         "key_points": [
           "AI, jobs, and the next generation"
@@ -1190,7 +1155,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：AI, jobs, and the next generation",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：AI、就业与下一代",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1218,8 +1183,8 @@
         "id": "8f80a8c3-46e7-509c-8e73-81cc400aff5a",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜SpaceX valuation balloons to...",
-        "one_sentence_summary": "SpaceX's valuation has increased by $1 trillion since its shares started trading on Friday.",
+        "ai_title": "SpaceX估值飙升至2.6万亿美元，短暂超越亚马逊",
+        "one_sentence_summary": "SpaceX估值自上周五开始交易以来已增加1万亿美元，短暂超越亚马逊。",
         "detailed_summary": "SpaceX's valuation has increased by $1 trillion since its shares started trading on Friday.",
         "key_points": [
           "SpaceX's valuation has increased by $1 trillion since its shares started trading on Friday."
@@ -1231,7 +1196,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：SpaceX valuation balloons to $2.6T, briefly passes Amazon",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：SpaceX估值飙升至2.6万亿美元，短暂超越亚马逊",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1259,8 +1224,8 @@
         "id": "e3e9ec62-e5d3-529d-931f-383f57b60357",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Sixty percent of US consumers...",
-        "one_sentence_summary": "WordPress VIP’s latest survey suggests consumers are wary of AI-generated answers even as companies increasingly view...",
+        "ai_title": "调查：六成美国消费者反感品牌宣传中的AI字眼",
+        "one_sentence_summary": "WordPress VIP调查显示，尽管企业日益采用AI生成答案，消费者仍对其持谨慎态度。",
         "detailed_summary": "WordPress VIP’s latest survey suggests consumers are wary of AI-generated answers even as companies increasingly view AI search as an important referral channel.",
         "key_points": [
           "WordPress VIP’s latest survey suggests consumers are wary of AI-generated answers even as companies increasingly view..."
@@ -1272,7 +1237,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Sixty percent of US consumers say ‘AI’ in brand messaging is a turnoff, survey finds",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：调查：六成美国消费者反感品牌宣传中的AI字眼",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1300,8 +1265,8 @@
         "id": "833bf22f-1cdd-5754-a190-ce4f0f980172",
         "event_date": "2026-06-17",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜SpaceX is public: Everything...",
-        "one_sentence_summary": "TechCrunch has followed SpaceX's start, struggles, and successes from the early days. And we're here for what happens...",
+        "ai_title": "SpaceX上市后你需要知道的一切",
+        "one_sentence_summary": "TechCrunch从早期就跟踪SpaceX的起步、挣扎与成功，并持续关注其上市后发展。",
         "detailed_summary": "TechCrunch has followed SpaceX's start, struggles, and successes from the early days. And we're here for what happens next too. This package of SpaceX IPO coverage includes who stands to win (and maybe some who won't), pre-IPO deals, and what's tucked inside its S-1 registration document.",
         "key_points": [
           "TechCrunch has followed SpaceX's start, struggles, and successes from the early days.",
@@ -1315,7 +1280,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：SpaceX is public: Everything you need to know post-IPO",
+        "topic_angle": "从商业化、算力和产业竞争角度解读：SpaceX上市后你需要知道的一切",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1338,6 +1303,47 @@
         "source_types": [
           "media"
         ]
+      },
+      {
+        "id": "7139f9ff-0b37-5037-a062-0491c78d4fa4",
+        "event_date": "2026-06-17",
+        "category": "AI行业资讯",
+        "ai_title": "英国16岁以下社媒禁令五大疑问",
+        "one_sentence_summary": "禁令即将实施，但对Roblox、YouTube和WhatsApp等平台的具体影响仍不明确。",
+        "detailed_summary": "A ban is coming - but it's still not clear what it will mean for sites including Roblox, YouTube and WhatsApp.",
+        "key_points": [
+          "A ban is coming - but it's still not clear what it will mean for sites including Roblox, YouTube and WhatsApp."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化、算力和产业竞争角度解读：英国16岁以下社媒禁令五大疑问",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "reading_links": [
+          {
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Five big questions about the UK's under-16s social media ban",
+            "url": "https://www.bbc.com/news/articles/c9824zvpz9po?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 16 Jun 2026 15:28:15 GMT",
+            "link_label": "BBC Technology",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
       }
     ],
     "国际形势影响": [
@@ -1345,8 +1351,8 @@
         "id": "f8703491-dded-5376-afbe-7be7eec26732",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Tehran selling deal with US a...",
-        "one_sentence_summary": "For many Iranians, the question is not whether the deal means victory, but whether it lowers prices and reduces fear...",
+        "ai_title": "伊朗将美伊协议宣传为胜利，民众视为无奈之举",
+        "one_sentence_summary": "对许多伊朗人而言，问题不在于协议是否意味着胜利，而在于能否降低物价和减少恐惧。",
         "detailed_summary": "How Iran is trying to sell a deal with the US as victory Skip to content Watch Live Home News Football 2026 Sport Business Technology Health Culture Arts Travel Earth Audio Video Live Documentaries Site search Home News Sport Football 2026 Business Technology Health Culture Arts Travel Earth Audio Video Live Documentaries Weather Newsletters Watch Live Tehran selling deal with US as victory – but for Iranians it was necessity 13 hours ago Share Save Add as preferred on Google Amir Azimi Senio...",
         "key_points": [
           "How Iran is trying to sell a deal with the US as victory Skip to content Watch Live Home News Football 2026 Sport Bus...",
@@ -1362,7 +1368,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Tehran selling deal with US as victory – but for Iranians it was necessity",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：伊朗将美伊协议宣传为胜利，民众视为无奈之举",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1390,8 +1396,8 @@
         "id": "3a8d7238-a1cf-5191-97f0-6a9984fe61a8",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜UK investigating reports Russ...",
-        "one_sentence_summary": "The retired couple tell BBC Newsnight they tried to show the warship they had changed course in the English Channel b...",
+        "ai_title": "英国调查俄军舰在英吉利海峡向游艇鸣枪示警",
+        "one_sentence_summary": "退休夫妇向BBC表示，他们曾试图向军舰表明已改变航向，但对方仍开火警告。",
         "detailed_summary": "Russian warship fires warning shots near UK-registered yacht in Channel Skip to content Watch Live Home News Football 2026 Sport Business Technology Health Culture Arts Travel Earth Audio Video Live Documentaries Site search Home News Sport Football 2026 Business Technology Health Culture Arts Travel Earth Audio Video Live Documentaries Weather Newsletters Watch Live 'It was surreal': British couple describe having warning shots fired near them by Russian warship 4 hours ago Share Save Add as...",
         "key_points": [
           "Russian warship fires warning shots near UK-registered yacht in Channel Skip to content Watch Live Home News Football...",
@@ -1407,7 +1413,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：UK investigating reports Russian warship fired warning shots near yacht in English Channel",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：英国调查俄军舰在英吉利海峡向游艇鸣枪示警",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1435,8 +1441,8 @@
         "id": "a8db6d02-98bd-5b15-96bc-6f787c923a2f",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜German broadcaster removes TV...",
-        "one_sentence_summary": "ZDF TV responded to a \"cease and desist\" letter after the tech trillionaire condemned the broadcaster's \"outrageous l...",
+        "ai_title": "马斯克发律师函，德国电视台删节目片头",
+        "one_sentence_summary": "ZDF电视台因马斯克谴责其“离谱”内容并收到停止侵权函后，删除相关片头。",
         "detailed_summary": "ZDF TV responded to a \"cease and desist\" letter after the tech trillionaire condemned the broadcaster's \"outrageous lies\".",
         "key_points": [
           "ZDF TV responded to a \"cease and desist\" letter after the tech trillionaire condemned the broadcaster's \"outrageous l..."
@@ -1448,7 +1454,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：German broadcaster removes TV intro after Elon Musk takes legal action",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：马斯克发律师函，德国电视台删节目片头",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1476,8 +1482,8 @@
         "id": "8480e16c-72be-5ad5-942f-f5bd4e37cd0b",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Lionel Messi rewrites history...",
-        "one_sentence_summary": "Messi scores three exactly 20 years to the day he made his World Cup debut for Argentina.",
+        "ai_title": "梅西第六次世界杯创纪录，改写历史",
+        "one_sentence_summary": "梅西在世界杯首秀20周年纪念日上演帽子戏法。",
         "detailed_summary": "Messi scores three exactly 20 years to the day he made his World Cup debut for Argentina.",
         "key_points": [
           "Messi scores three exactly 20 years to the day he made his World Cup debut for Argentina."
@@ -1489,7 +1495,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Lionel Messi rewrites history books at record sixth World Cup",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：梅西第六次世界杯创纪录，改写历史",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1517,8 +1523,8 @@
         "id": "4412d66a-4efc-538e-a0eb-6ed579e1299f",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Trump administration seeks to...",
-        "one_sentence_summary": "US Department of Justice claims NAACP lawsuit threatens 'national, economic, and energy security'.",
+        "ai_title": "特朗普政府寻求中止马斯克xAI空气污染诉讼",
+        "one_sentence_summary": "美国司法部称NAACP诉讼威胁国家安全、经济和能源安全。",
         "detailed_summary": "US Department of Justice claims NAACP lawsuit threatens 'national, economic, and energy security'.",
         "key_points": [
           "US Department of Justice claims NAACP lawsuit threatens 'national, economic, and energy security'."
@@ -1530,7 +1536,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Trump administration seeks to halt air pollution lawsuit against Musk’s xAI",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：特朗普政府寻求中止马斯克xAI空气污染诉讼",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1558,8 +1564,8 @@
         "id": "7e1db2e6-b8e8-54bd-9d21-c87e907dff23",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Russian drone strikes residen...",
-        "one_sentence_summary": "A suspected Russian drone attack on a residential building in Ukraine has injured at least seven people.",
+        "ai_title": "俄罗斯无人机袭击乌克兰居民楼致7伤",
+        "one_sentence_summary": "疑似俄军无人机袭击乌克兰一栋居民楼，至少7人受伤。",
         "detailed_summary": "A suspected Russian drone attack on a residential building in Ukraine has injured at least seven people.",
         "key_points": [
           "A suspected Russian drone attack on a residential building in Ukraine has injured at least seven people."
@@ -1571,7 +1577,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Russian drone strikes residential building in Ukraine",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：俄罗斯无人机袭击乌克兰居民楼致7伤",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1600,8 +1606,8 @@
         "event_date": "2026-06-17",
         "category": "国际形势影响",
         "ai_title": "梅西帽子戏法助阿根廷世界杯开门红",
-        "one_sentence_summary": "梅西帽子戏法助阿根廷3-0胜阿尔及利亚，开启卫冕征程。",
-        "detailed_summary": "在2026年世界杯小组赛中，阿根廷凭借梅西的帽子戏法以3-0击败阿尔及利亚，成功开启卫冕之旅。梅西在重大国际赛事中再次展现决定性作用，帮助球队取得开门红。",
+        "one_sentence_summary": "阿根廷在2026年世界杯首战凭借梅西的帽子戏法3-0击败阿尔及利亚。",
+        "detailed_summary": "Argentina open defence of their World Cup crown with a Lionel Messi-inspired 3-0 win against Algeria at 2026 edition.",
         "key_points": [
           "Argentina open defence of their World Cup crown with a Lionel Messi-inspired 3-0 win against Algeria at 2026 edition."
         ],
@@ -1640,9 +1646,9 @@
         "id": "1283ad98-830e-5b7a-9a4f-794d3ca1b904",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "哈兰德双响挪威4-1伊拉克重返世界杯",
-        "one_sentence_summary": "哈兰德梅开二度，挪威4-1大胜伊拉克，取得世界杯回归首胜。",
-        "detailed_summary": "挪威在重返世界杯的首场比赛中，凭借曼城前锋哈兰德的两粒进球，以4-1战胜伊拉克。这是哈兰德在重大国际赛事中的首次进球，帮助球队强势开局。",
+        "ai_title": "哈兰德梅开二度挪威4-1大胜伊拉克",
+        "one_sentence_summary": "曼城前锋哈兰德在挪威重返世界杯的首场比赛中打入两球，帮助球队4-1战胜伊拉克。",
+        "detailed_summary": "The Manchester City striker scored his first goals at a major international tournament as Norway powered past Iraq.",
         "key_points": [
           "The Manchester City striker scored his first goals at a major international tournament as Norway powered past Iraq."
         ],
@@ -1653,7 +1659,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：哈兰德双响挪威4-1伊拉克重返世界杯",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：哈兰德梅开二度挪威4-1大胜伊拉克",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
@@ -1681,9 +1687,9 @@
         "id": "87d52462-0b43-5bfc-ba68-f6391694b728",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "CFR呼吁支持",
-        "one_sentence_summary": "外交关系委员会呼吁支持其工作。",
-        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）的募捐或支持呼吁，无更多详细信息。",
+        "ai_title": "支持CFR",
+        "one_sentence_summary": "支持CFR",
+        "detailed_summary": "Support CFR",
         "key_points": [
           "Support CFR"
         ],
@@ -1694,7 +1700,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：CFR呼吁支持",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：支持CFR",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1722,9 +1728,9 @@
         "id": "320857e5-c6ee-5eeb-ae42-d4cc64d894c3",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "CFR会员登录",
-        "one_sentence_summary": "外交关系委员会会员登录入口。",
-        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）网站的会员登录页面，无更多详细信息。",
+        "ai_title": "会员登录",
+        "one_sentence_summary": "会员登录",
+        "detailed_summary": "Member Login",
         "key_points": [
           "Member Login"
         ],
@@ -1735,7 +1741,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：CFR会员登录",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：会员登录",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1763,9 +1769,9 @@
         "id": "81118d99-e6c7-51cf-b9ed-b33798b5284f",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "CFR活动",
-        "one_sentence_summary": "外交关系委员会活动页面。",
-        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）的活动列表或介绍，无更多详细信息。",
+        "ai_title": "国际形势影响｜Events",
+        "one_sentence_summary": "Events",
+        "detailed_summary": "Events",
         "key_points": [
           "Events"
         ],
@@ -1776,7 +1782,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：CFR活动",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Events",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1805,8 +1811,8 @@
         "event_date": "2026-06-17",
         "category": "国际形势影响",
         "ai_title": "美国战略的未来",
-        "one_sentence_summary": "探讨美国战略的未来方向。",
-        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）关于美国战略未来的分析或讨论，无更多详细信息。",
+        "one_sentence_summary": "The Future of American Strategy",
+        "detailed_summary": "The Future of American Strategy",
         "key_points": [
           "The Future of American Strategy"
         ],
@@ -1846,8 +1852,8 @@
         "event_date": "2026-06-17",
         "category": "国际形势影响",
         "ai_title": "特朗普伊朗协议：已知、争议与未解",
-        "one_sentence_summary": "分析特朗普伊朗协议的已知事实、争议点和未解决问题。",
-        "detailed_summary": "基于标题和来源判断，该条目为外交关系委员会（CFR）对特朗普政府伊朗协议的分析，涵盖已知信息、存在争议的方面以及尚未解决的议题，无更多详细信息。",
+        "one_sentence_summary": "特朗普伊朗协议：已知、争议与未解问题",
+        "detailed_summary": "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved",
         "key_points": [
           "Trump’s Iran Deal: What We Know, What's Contested, and What Remains Unresolved"
         ],
@@ -1886,9 +1892,9 @@
         "id": "64f6dc04-ea6e-59d0-9dbe-ef74dee3632c",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "CSIS专家",
-        "one_sentence_summary": "战略与国际研究中心专家页面。",
-        "detailed_summary": "基于标题和来源判断，该条目为战略与国际研究中心（CSIS）的专家列表或介绍，无更多详细信息。",
+        "ai_title": "国际形势影响｜Experts",
+        "one_sentence_summary": "Experts",
+        "detailed_summary": "Experts",
         "key_points": [
           "Experts"
         ],
@@ -1899,7 +1905,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：CSIS专家",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Experts",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1927,9 +1933,9 @@
         "id": "a14754a0-d2b6-58f0-b702-b27dcfba2e20",
         "event_date": "2026-06-17",
         "category": "国际形势影响",
-        "ai_title": "CSIS项目",
-        "one_sentence_summary": "战略与国际研究中心项目页面。",
-        "detailed_summary": "基于标题和来源判断，该条目为战略与国际研究中心（CSIS）的项目列表或介绍，无更多详细信息。",
+        "ai_title": "CSIS发布新项目",
+        "one_sentence_summary": "CSIS发布新项目",
+        "detailed_summary": "Programs",
         "key_points": [
           "Programs"
         ],
@@ -1940,7 +1946,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：CSIS项目",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：CSIS发布新项目",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": false,
         "priority_score": 50.0,
@@ -1971,8 +1977,8 @@
         "event_date": "2026-06-17",
         "category": "国际金融",
         "ai_title": "美国4月国际货物和服务贸易数据发布",
-        "one_sentence_summary": "美国4月国际货物和服务贸易数据发布。",
-        "detailed_summary": "美国经济分析局发布2026年4月国际货物和服务贸易数据。该数据可能影响利率、汇率、风险资产和科技股估值，建议结合原文关注其对金融市场的影响。",
+        "one_sentence_summary": "美国4月国际货物和服务贸易数据发布",
+        "detailed_summary": "美国4月国际货物和服务贸易数据发布。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "美国4月国际货物和服务贸易数据发布",
           "原文为英文，发布前需复核具体日期、金额和政策表述。"
@@ -2024,9 +2030,9 @@
         "id": "076e239f-262e-5ae7-81fa-72d728a4f360",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "FinCEN发布信息共享指引打击欺诈",
-        "one_sentence_summary": "FinCEN发布指引，帮助金融机构通过信息共享消除欺诈。",
-        "detailed_summary": "美国财政部金融犯罪执法网络（FinCEN）发布新指引，旨在帮助金融机构通过信息共享机制更有效地识别和消除欺诈行为。该指引可能对金融监管和合规产生影响，建议结合原文关注其对利率、汇率、风险资产和科技股估值的潜在影响。",
+        "ai_title": "FinCEN发布信息共享指引，帮助金融机构打击欺诈",
+        "one_sentence_summary": "FinCEN发布信息共享指引，帮助金融机构打击欺诈",
+        "detailed_summary": "FinCEN发布信息共享指引，帮助金融机构打击欺诈。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "FinCEN发布信息共享指引，帮助金融机构打击欺诈",
           "原文为英文，发布前需复核具体日期、金额和政策表述。"
@@ -2038,7 +2044,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从利率、汇率和科技股估值角度解读：FinCEN发布信息共享指引打击欺诈",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：FinCEN发布信息共享指引，帮助金融机构打击欺诈",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2066,9 +2072,9 @@
         "id": "ea3998be-945c-503b-b6c5-05a01478415e",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "美财长贝森特在休斯敦石油俱乐部讲话",
-        "one_sentence_summary": "美国财政部长贝森特在休斯敦石油俱乐部发表讲话。",
-        "detailed_summary": "美国财政部长斯科特·贝森特在休斯敦石油俱乐部发表讲话，内容可能涉及经济政策、能源市场或财政议题。该讲话可能影响利率、汇率、风险资产和科技股估值，建议结合原文关注其对金融市场的影响。",
+        "ai_title": "美国财政部长贝森特在休斯敦石油俱乐部发表讲话",
+        "one_sentence_summary": "美国财政部长贝森特在休斯敦石油俱乐部发表讲话",
+        "detailed_summary": "美国财政部长贝森特在休斯敦石油俱乐部发表讲话。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "美国财政部长贝森特在休斯敦石油俱乐部发表讲话",
           "原文为英文，发布前需复核具体日期、金额和政策表述。"
@@ -2080,7 +2086,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从利率、汇率和科技股估值角度解读：美财长贝森特在休斯敦石油俱乐部讲话",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：美国财政部长贝森特在休斯敦石油俱乐部发表讲话",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2108,8 +2114,8 @@
         "id": "53c702b7-169e-586b-9244-b69c4459be6c",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "美国财政部宣布寄养青年可获得“特朗普账户”支持",
-        "one_sentence_summary": "美国财政部宣布寄养青年可获得“特朗普账户”支持",
+        "ai_title": "美财长与第一夫人宣布寄养青年可获特朗普账户",
+        "one_sentence_summary": "美国财政部长贝森特与第一夫人梅拉尼娅宣布，寄养青年可通过“Fostering the Future”计划获得特朗普账户支持。",
         "detailed_summary": "美国财政部宣布寄养青年可获得“特朗普账户”支持。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "美国财政部宣布寄养青年可获得“特朗普账户”支持",
@@ -2122,7 +2128,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Treasury Secretary Scott Bessent and First Lady Melania Trump Announce Access to Trump Accounts for Foster Youth, under Mrs. Trump’s Fostering the Future Initiative",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：美财长与第一夫人宣布寄养青年可获特朗普账户",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2150,8 +2156,8 @@
         "id": "bff10703-bf06-5887-bbb7-ca51d4253a75",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "美国财政部长贝森特与德州银行家活动讲话",
-        "one_sentence_summary": "美国财政部长贝森特与德州银行家活动讲话",
+        "ai_title": "美财长贝森特在休斯顿与德州银行家活动讲话",
+        "one_sentence_summary": "美国财政部长贝森特在休斯顿与德州银行家活动上发表讲话。",
         "detailed_summary": "美国财政部长贝森特与德州银行家活动讲话。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "美国财政部长贝森特与德州银行家活动讲话",
@@ -2164,7 +2170,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Remarks from Secretary of the Treasury Scott Bessent at Event with Texas Bankers in Houston",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：美财长贝森特在休斯顿与德州银行家活动讲话",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2192,8 +2198,8 @@
         "id": "ad78791e-71ce-58b9-9236-40edbf26d016",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "美国财政部宣布寄养青年可获得“特朗普账户”支持",
-        "one_sentence_summary": "美国财政部宣布寄养青年可获得“特朗普账户”支持",
+        "ai_title": "美财长贝森特在寄养青年特朗普账户活动上讲话",
+        "one_sentence_summary": "美国财政部长贝森特在寄养青年特朗普账户活动上发表讲话。",
         "detailed_summary": "美国财政部宣布寄养青年可获得“特朗普账户”支持。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "美国财政部宣布寄养青年可获得“特朗普账户”支持",
@@ -2206,7 +2212,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Remarks by Treasury Secretary Scott Bessent at The Trump Accounts for Foster Youth Event",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：美财长贝森特在寄养青年特朗普账户活动上讲话",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2235,7 +2241,7 @@
         "event_date": "2026-06-17",
         "category": "国际金融",
         "ai_title": "2025年美国新增外国直接投资数据发布",
-        "one_sentence_summary": "2025年美国新增外国直接投资数据发布",
+        "one_sentence_summary": "美国经济分析局发布2025年美国新增外国直接投资数据。",
         "detailed_summary": "2025年美国新增外国直接投资数据发布。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "2025年美国新增外国直接投资数据发布",
@@ -2248,7 +2254,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：New Foreign Direct Investment in the United States, 2025",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：2025年美国新增外国直接投资数据发布",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2276,7 +2282,7 @@
         "id": "58045d3b-c6b2-589c-974d-78327b522d2e",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "美国4月个人收入和支出数据发布",
+        "ai_title": "美国4月个人收支数据出炉",
         "one_sentence_summary": "美国4月个人收入和支出数据发布",
         "detailed_summary": "美国4月个人收入和支出数据发布。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
@@ -2290,7 +2296,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Personal Income and Outlays, April 2026",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：美国4月个人收支数据出炉",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2318,7 +2324,7 @@
         "id": "350a3910-a782-5457-92c8-52e1409ba4ec",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "美国一季度GDP二次估算和企业利润公布",
+        "ai_title": "美一季度GDP二次估算及企业利润公布",
         "one_sentence_summary": "美国一季度GDP二次估算和企业利润公布",
         "detailed_summary": "美国一季度GDP二次估算和企业利润公布。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
@@ -2332,7 +2338,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：GDP (Second Estimate) and Corporate Profits, 1st Quarter 2026",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：美一季度GDP二次估算及企业利润公布",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2360,7 +2366,7 @@
         "id": "cac9e699-3b56-5496-925c-7562131eba24",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "欧洲央行启动保密统计数据研究访问试点",
+        "ai_title": "欧央行启动保密统计数据研究访问试点",
         "one_sentence_summary": "欧洲央行启动保密统计数据研究访问试点",
         "detailed_summary": "欧洲央行启动保密统计数据研究访问试点。该条来自European Central Bank Press，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
@@ -2374,7 +2380,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：PRESS RELEASE - ECB launches pilot project for research access to confidential statistical data 13 March 2025",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：欧央行启动保密统计数据研究访问试点",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2402,7 +2408,7 @@
         "id": "3bb548fd-2dd2-58aa-bdcf-0b44ea7b58f5",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "预算可信度成为改善非洲经济结果的关键锚点",
+        "ai_title": "预算可信度成非洲经济改善锚点",
         "one_sentence_summary": "预算可信度成为改善非洲经济结果的关键锚点",
         "detailed_summary": "预算可信度成为改善非洲经济结果的关键锚点。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
@@ -2416,7 +2422,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Budget Credibility as an Anchor for Better Economic Outcomes for Africa Policy priorities include more realistic forecasting, stronger expenditure controls, improved cash management, and institutional reforms to better a",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：预算可信度成非洲经济改善锚点",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2445,7 +2451,7 @@
         "event_date": "2026-06-17",
         "category": "国际金融",
         "ai_title": "IMF谈非洲“黄金未来”",
-        "one_sentence_summary": "IMF谈非洲“黄金未来”",
+        "one_sentence_summary": "IMF探讨非洲经济发展的光明前景。",
         "detailed_summary": "IMF谈非洲“黄金未来”。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "IMF谈非洲“黄金未来”",
@@ -2458,7 +2464,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Africa's Golden Future",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：IMF谈非洲“黄金未来”",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2486,8 +2492,8 @@
         "id": "b2cf24b3-9224-590f-92ff-d9123877eb92",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "国际金融｜June 17, 2026 IMF Staff Complet...",
-        "one_sentence_summary": "国际金融｜June 17, 2026 IMF Staff Complet...",
+        "ai_title": "IMF完成对马尔代夫2026年第四条款磋商",
+        "one_sentence_summary": "IMF工作人员结束对马尔代夫的2026年第四条款磋商访问。",
         "detailed_summary": "国际金融｜June 17, 2026 IMF Staff Complet...。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "国际金融｜June 17, 2026 IMF Staff Complet...",
@@ -2500,7 +2506,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：June 17, 2026 IMF Staff Completes 2026 Article IV Mission to the Maldives",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：IMF完成对马尔代夫2026年第四条款磋商",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2528,8 +2534,8 @@
         "id": "935a53c7-3504-5161-a85f-05a216910870",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "国际金融｜June 16, 2026 Stablecoins in Ni...",
-        "one_sentence_summary": "国际金融｜June 16, 2026 Stablecoins in Ni...",
+        "ai_title": "尼日利亚稳定币成为跨境支付新渠道",
+        "one_sentence_summary": "IMF指出稳定币在尼日利亚日益成为重要的跨境支付工具。",
         "detailed_summary": "国际金融｜June 16, 2026 Stablecoins in Ni...。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "国际金融｜June 16, 2026 Stablecoins in Ni...",
@@ -2542,7 +2548,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：June 16, 2026 Stablecoins in Nigeria: A Growing Cross-Border Channel",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：尼日利亚稳定币成为跨境支付新渠道",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2570,8 +2576,8 @@
         "id": "ec766023-5bc6-5e9b-aa2a-10ee7616c96c",
         "event_date": "2026-06-17",
         "category": "国际金融",
-        "ai_title": "国际金融｜June 16, 2026 Bosnia and Herzeg...",
-        "one_sentence_summary": "国际金融｜June 16, 2026 Bosnia and Herzeg...",
+        "ai_title": "IMF发布波黑2026年第四条款磋商结论声明",
+        "one_sentence_summary": "IMF工作人员公布对波黑的2026年第四条款磋商总结声明。",
         "detailed_summary": "国际金融｜June 16, 2026 Bosnia and Herzeg...。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
         "key_points": [
           "国际金融｜June 16, 2026 Bosnia and Herzeg...",
@@ -2584,7 +2590,7 @@
           "policy": "",
           "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
         },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：June 16, 2026 Bosnia and Herzegovina; Staff Concluding Statement of the 2026 Article IV Mission",
+        "topic_angle": "从利率、汇率和科技股估值角度解读：IMF发布波黑2026年第四条款磋商结论声明",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.5,
@@ -2615,8 +2621,8 @@
       "id": "65d78e79-8318-5656-aaa7-6802d51dd761",
       "event_date": "2026-06-17",
       "category": "AI行业资讯",
-      "ai_title": "AI行业资讯｜Claude Code costs up to $200...",
-      "one_sentence_summary": "<p>The artificial intelligence coding revolution comes with a catch: it's expensive.</p><p><a href=\"https://claude.co...",
+      "ai_title": "Claude Code月费200美元，Goose免费实现相同功能",
+      "one_sentence_summary": "AI编程工具Claude Code月费高达200美元，而Goose提供免费替代方案。",
       "detailed_summary": "<p>The artificial intelligence coding revolution comes with a catch: it's expensive.</p><p><a href=\"https://claude.com/product/claude-code\">Claude Code</a>, Anthropic's terminal-based AI agent that can write, debug, and deploy code autonomously, has captured the imagination of software developers worldwide. But its <a href=\"https://claude.com/pricing\">pricing</a> — ranging from $20 to $200 per month depending on usage — has sparked a growing rebellion among the very programmers it aims to ser...",
       "key_points": [
         "<p>The artificial intelligence coding revolution comes with a catch: it's expensive.</p><p><a href=\"https://claude.co...",
@@ -2632,7 +2638,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从商业化和产业竞争角度解读：Claude Code costs up to $200 a month. Goose does the same thing for free.",
+      "topic_angle": "从商业化、算力和产业竞争角度解读：Claude Code月费200美元，Goose免费实现相同功能",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 77.0,
@@ -2660,8 +2666,8 @@
       "id": "d89db29c-94d8-5fd9-afc7-6fbd221d3d1c",
       "event_date": "2026-06-17",
       "category": "AI行业资讯",
-      "ai_title": "AI行业资讯｜HPE AI Factory With NVIDIA Ex...",
-      "one_sentence_summary": "Enterprises are moving agentic AI from proof of concept to production — and the next generation of AI factories are b...",
+      "ai_title": "HPE与NVIDIA扩展AI工厂，迎接智能体时代",
+      "one_sentence_summary": "企业正将智能体AI从概念验证推向生产，下一代AI工厂应运而生。",
       "detailed_summary": "HPE AI Factory With NVIDIA Expands for the Era of Agents | NVIDIA Blog Skip to content HPE AI Factory With NVIDIA Expands for the Era of Agents HPE AI Factory with NVIDIA expands with NVIDIA Vera CPU and NVIDIA Agent Toolkit for HPE Private Cloud AI — plus NVIDIA Confidential Computing and enhanced full-stack NVIDIA integration across HPE AI Factory solutions. June 16, 2026 by Chris Marriott 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! Enterprises are moving...",
       "key_points": [
         "HPE AI Factory With NVIDIA Expands for the Era of Agents | NVIDIA Blog Skip to content HPE AI Factory With NVIDIA Exp...",
@@ -2677,7 +2683,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从商业化和产业竞争角度解读：HPE AI Factory With NVIDIA Expands for the Era of Agents",
+      "topic_angle": "从商业化、算力和产业竞争角度解读：HPE与NVIDIA扩展AI工厂，迎接智能体时代",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 76.8,
@@ -2702,56 +2708,11 @@
       ]
     },
     {
-      "id": "6bb28595-27f8-5e75-bafc-bbae8262b664",
-      "event_date": "2026-06-17",
-      "category": "AI行业资讯",
-      "ai_title": "AI行业资讯｜Fastest, Largest, Strongest:...",
-      "one_sentence_summary": "Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs...",
-      "detailed_summary": "NVIDIA Blackwell Sweeps MLPerf Training 6.0 | NVIDIA Blog Skip to content Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0 NVIDIA delivers the performance, scale and reliability that frontier training requires — in benchmarks and beyond. June 16, 2026 by Shruti Koparkar 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs shapes...",
-      "key_points": [
-        "NVIDIA Blackwell Sweeps MLPerf Training 6.0 | NVIDIA Blog Skip to content Fastest, Largest, Strongest: NVIDIA Blackwe...",
-        "June 16, 2026 by Shruti Koparkar 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
-        "Every breakthrough AI model starts the same way: with a training run.",
-        "The infrastructure running those training jobs shapes everything: how fast teams can iterate, what scale of model the...",
-        "As models grow in size, complexity and intelligence, the demands on training infrastructure are also rising."
-      ],
-      "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从商业化和产业竞争角度解读：Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 76.8,
-      "confidence": 0.55,
-      "reading_links": [
-        {
-          "source_id": "nvidia_blog",
-          "source_name": "NVIDIA Blog",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
-          "url": "https://blogs.nvidia.com/blog/blackwell-mlperf-training-6-0/",
-          "published_at": "Tue, 16 Jun 2026 15:00:36 +0000",
-          "link_label": "NVIDIA Blog",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "official"
-      ]
-    },
-    {
       "id": "8a09a871-d58a-54d0-8363-9ca3a1db9221",
       "event_date": "2026-06-17",
       "category": "AI行业资讯",
-      "ai_title": "AI行业资讯｜Coherent Breaks Ground on Exp...",
-      "one_sentence_summary": "AI runs at the speed of light. More and more, that light is made in Texas. Coherent broke ground today on an expanded...",
+      "ai_title": "Coherent扩建德州工厂，打造AI光学骨干网",
+      "one_sentence_summary": "AI以光速运行，Coherent在德州破土动工扩建工厂，扩大AI光学骨干网规模。",
       "detailed_summary": "AI runs at the speed of light. More and more, that light is made in Texas. Coherent broke ground today on an expanded manufacturing building in Sherman, Texas. The company makes the lasers, optical components and compound semiconductors that wire AI systems together — and runs what it calls the world’s first 6-inch indium phosphide […]",
       "key_points": [
         "AI runs at the speed of light.",
@@ -2766,7 +2727,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从商业化和产业竞争角度解读：Coherent Breaks Ground on Expanded Texas Facility, Scaling AI’s Optical Backbone",
+      "topic_angle": "从商业化、算力和产业竞争角度解读：Coherent扩建德州工厂，打造AI光学骨干网",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 72.0,
@@ -2794,8 +2755,8 @@
       "id": "bd0cb0bf-5082-5cd1-9f9d-f90d880ea2e8",
       "event_date": "2026-06-17",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Predicting model behavior befo...",
-      "one_sentence_summary": "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversat...",
+      "ai_title": "OpenAI推出部署模拟，提前预测模型行为",
+      "one_sentence_summary": "OpenAI发布部署模拟方法，通过真实对话在发布前预测AI模型行为。",
       "detailed_summary": "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversation data to improve safety and evaluation accuracy.",
       "key_points": [
         "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversat..."
@@ -2807,7 +2768,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Predicting model behavior before release by simulating deployment",
+      "topic_angle": "从模型能力、评测和开发者生态角度解读：OpenAI推出部署模拟，提前预测模型行为",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 70.8,
@@ -2835,8 +2796,8 @@
       "id": "9b044100-c1a7-52c4-bb6b-18724809ca90",
       "event_date": "2026-06-17",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Introducing the OpenAI Partner...",
-      "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...",
+      "ai_title": "OpenAI启动合作伙伴网络，投资1.5亿美元",
+      "one_sentence_summary": "OpenAI推出合作伙伴网络，投资1.5亿助全球伙伴加速企业AI落地。",
       "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
       "key_points": [
         "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."
@@ -2848,7 +2809,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network",
+      "topic_angle": "从模型能力、评测和开发者生态角度解读：OpenAI启动合作伙伴网络，投资1.5亿美元",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 70.8,
@@ -2876,8 +2837,8 @@
       "id": "3d437827-c016-56d4-9417-064909f7e1ed",
       "event_date": "2026-06-17",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Beyond Parallel Sampling: Dive...",
-      "one_sentence_summary": "arXiv:2606.17209v1 Announce Type: new Abstract: Test-time scaling for agentic search typically increases depth (i.e.,...",
+      "ai_title": "超越并行采样：智能体搜索的多样化查询初始化",
+      "one_sentence_summary": "论文提出多样化查询初始化，提升智能体搜索的测试时扩展效果。",
       "detailed_summary": "arXiv:2606.17209v1 Announce Type: new Abstract: Test-time scaling for agentic search typically increases depth (i.e., more turns and tokens per trajectory) or breadth (i.e., more parallel rollouts). Here we focus on breadth scaling, showing that standard parallel sampling yields diminishing returns, tracing this to query redundancy at the first turn. When models issue similar first queries across rollouts, the threads retrieve overlapping evidence, and subsequent turns are conditioned on this...",
       "key_points": [
         "arXiv:2606.17209v1 Announce Type: new Abstract: Test-time scaling for agentic search typically increases depth (i.e.,...",
@@ -2893,7 +2854,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search",
+      "topic_angle": "从模型能力、评测和开发者生态角度解读：超越并行采样：智能体搜索的多样化查询初始化",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 69.0,
@@ -2921,8 +2882,8 @@
       "id": "b9383628-4634-5a7c-b35d-006b9a4059fb",
       "event_date": "2026-06-17",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜When Rules Learn: A Self-Evolv...",
-      "one_sentence_summary": "arXiv:2606.17220v1 Announce Type: new Abstract: Legal case retrieval remains challenging due to the complexity of leg...",
+      "ai_title": "当规则学习：自进化智能体用于法律案例检索",
+      "one_sentence_summary": "论文提出自进化智能体，应对法律案例检索的复杂性挑战。",
       "detailed_summary": "arXiv:2606.17220v1 Announce Type: new Abstract: Legal case retrieval remains challenging due to the complexity of legal language and the need for precise lexical alignment between queries and relevant cases. Although dense retrieval models have achieved notable progress, empirical studies show that BM25 continues to serve as a strong baseline in this domain. It motivates us to propose a self-evolving framework for rule-driven query rewriting that enhances BM25 without any parameter training....",
       "key_points": [
         "arXiv:2606.17220v1 Announce Type: new Abstract: Legal case retrieval remains challenging due to the complexity of leg...",
@@ -2938,7 +2899,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：When Rules Learn: A Self-Evolving Agent for Legal Case Retrieval",
+      "topic_angle": "从模型能力、评测和开发者生态角度解读：当规则学习：自进化智能体用于法律案例检索",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 69.0,
@@ -2966,8 +2927,8 @@
       "id": "81b76f6d-4018-501d-abf9-ab8b6ada01f5",
       "event_date": "2026-06-17",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜SkillChAIn-Gym: A Benchmark fo...",
-      "one_sentence_summary": "arXiv:2606.17266v1 Announce Type: new Abstract: Production planning increasingly has to treat workforce capability as...",
+      "ai_title": "SkillChain-Gym：面向中断的再培训生产库存控制基准",
+      "one_sentence_summary": "提出SkillChain-Gym基准，评估生产规划中劳动力再培训与库存控制的联合决策。",
       "detailed_summary": "arXiv:2606.17266v1 Announce Type: new Abstract: Production planning increasingly has to treat workforce capability as a decision variable: certifications lapse when skills are not maintained, new products require skills the current workforce does not hold, and reskilling competes for the same worker hours needed for production. Existing operations benchmarks usually treat labor as exogenous, while workforce-planning models with skills and learning are rarely released as reusable testbeds. We...",
       "key_points": [
         "arXiv:2606.17266v1 Announce Type: new Abstract: Production planning increasingly has to treat workforce capability as...",
@@ -2983,7 +2944,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：SkillChain-Gym: A Benchmark for Reskilling-Aware Production-Inventory Control under Disruptions",
+      "topic_angle": "从模型能力、评测和开发者生态角度解读：SkillChain-Gym：面向中断的再培训生产库存控制基准",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 69.0,
@@ -3011,8 +2972,8 @@
       "id": "c5feafbe-a3db-57d0-9990-986572eea2da",
       "event_date": "2026-06-17",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Skill-ConstrAIned Model Predic...",
-      "one_sentence_summary": "arXiv:2606.17269v1 Announce Type: new Abstract: In skill-constrained production-inventory systems, the qualified huma...",
+      "ai_title": "技能约束模型预测控制实现弹性制造供应链",
+      "one_sentence_summary": "研究技能受限生产库存系统的模型预测控制，提升供应链韧性。",
       "detailed_summary": "arXiv:2606.17269v1 Announce Type: new Abstract: In skill-constrained production-inventory systems, the qualified human capacity available tomorrow depends on training decisions made today: production requires certified workers, certifications decay unless maintained, and training consumes the same scarce worker hours that production needs now. We study a closed-loop skill-constrained model predictive controller that, at every shift, solves a finite-horizon mixed-integer program over productio...",
       "key_points": [
         "arXiv:2606.17269v1 Announce Type: new Abstract: In skill-constrained production-inventory systems, the qualified huma...",
@@ -3028,7 +2989,7 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Skill-Constrained Model Predictive Control for Resilient Manufacturing Supply Chains",
+      "topic_angle": "从模型能力、评测和开发者生态角度解读：技能约束模型预测控制实现弹性制造供应链",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 69.0,
@@ -3051,116 +3012,161 @@
       "source_types": [
         "research"
       ]
+    },
+    {
+      "id": "60a2e606-9dd7-524d-8085-b003f2bed6ac",
+      "event_date": "2026-06-17",
+      "category": "大模型动态",
+      "ai_title": "PhoneHarness：混合GUI、CLI与工具操作的手机智能体",
+      "one_sentence_summary": "提出PhoneHarness框架，让手机智能体通过混合界面完成真实移动工作流。",
+      "detailed_summary": "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workflows rather than merely predict the next screen action. However, much of the current mobile-agent literature still evaluates agents primarily as GUI controllers that observe a screen, emit taps and swipes, and are scored by target app state. Real phone-use tasks are broader: they require deciding when to use app GUIs, device-side commands, or structured tools, while leaving evid...",
+      "key_points": [
+        "arXiv:2606.14832v1 Announce Type: new Abstract: Phone agents are increasingly expected to complete real mobile workfl...",
+        "However, much of the current mobile-agent literature still evaluates agents primarily as GUI controllers that observe...",
+        "Real phone-use tasks are broader: they require deciding when to use app GUIs, device-side commands, or structured too...",
+        "We introduce PhoneHarness, a mixed-action benchmark and execution harness for studying phone-use agents on verifiable...",
+        "PhoneHarness runs a device-side agent loop over GUI, CLI, and host-side tool actions, combining deterministic action..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从模型能力、评测和开发者生态角度解读：PhoneHarness：混合GUI、CLI与工具操作的手机智能体",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 69.0,
+      "confidence": 0.55,
+      "reading_links": [
+        {
+          "source_id": "arxiv_cs_cl",
+          "source_name": "arXiv cs.CL",
+          "source_type": "research",
+          "source_role": "primary",
+          "original_title": "PhoneHarness: Harnessing Phone-Use Agents through Mixed GUI, CLI, and Tool Actions",
+          "url": "https://arxiv.org/abs/2606.14832",
+          "published_at": "Wed, 17 Jun 2026 00:00:00 -0400",
+          "link_label": "arXiv cs.CL",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "research"
+      ]
     }
   ],
   "topic_pool": [
     {
       "rank": 1,
-      "title": "从商业化和产业竞争角度解读：Claude Code costs up to $200 a month. Goose does the same thing for free.",
+      "title": "从商业化、算力和产业竞争角度解读：Claude Code月费200美元，Goose免费实现相同功能",
       "source_event_ids": [
         "65d78e79-8318-5656-aaa7-6802d51dd761"
       ],
       "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-      "why_today": "<p>The artificial intelligence coding revolution comes with a catch: it's expensive.</p><p><a href=\"https://claude.co...",
+      "why_today": "AI编程工具Claude Code月费高达200美元，而Goose提供免费替代方案。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 2,
-      "title": "从商业化和产业竞争角度解读：HPE AI Factory With NVIDIA Expands for the Era of Agents",
+      "title": "从商业化、算力和产业竞争角度解读：HPE与NVIDIA扩展AI工厂，迎接智能体时代",
       "source_event_ids": [
         "d89db29c-94d8-5fd9-afc7-6fbd221d3d1c"
       ],
       "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-      "why_today": "Enterprises are moving agentic AI from proof of concept to production — and the next generation of AI factories are b...",
+      "why_today": "企业正将智能体AI从概念验证推向生产，下一代AI工厂应运而生。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 3,
-      "title": "从商业化和产业竞争角度解读：Fastest, Largest, Strongest: NVIDIA Blackwell Sweeps MLPerf Training 6.0",
+      "title": "从商业化、算力和产业竞争角度解读：Coherent扩建德州工厂，打造AI光学骨干网",
       "source_event_ids": [
-        "6bb28595-27f8-5e75-bafc-bbae8262b664"
+        "8a09a871-d58a-54d0-8363-9ca3a1db9221"
       ],
       "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-      "why_today": "Every breakthrough AI model starts the same way: with a training run. The infrastructure running those training jobs...",
+      "why_today": "AI以光速运行，Coherent在德州破土动工扩建工厂，扩大AI光学骨干网规模。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 4,
-      "title": "从商业化和产业竞争角度解读：Coherent Breaks Ground on Expanded Texas Facility, Scaling AI’s Optical Backbone",
+      "title": "从模型能力、评测和开发者生态角度解读：OpenAI推出部署模拟，提前预测模型行为",
       "source_event_ids": [
-        "8a09a871-d58a-54d0-8363-9ca3a1db9221"
+        "bd0cb0bf-5082-5cd1-9f9d-f90d880ea2e8"
       ],
-      "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-      "why_today": "AI runs at the speed of light. More and more, that light is made in Texas. Coherent broke ground today on an expanded...",
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "OpenAI发布部署模拟方法，通过真实对话在发布前预测AI模型行为。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 5,
-      "title": "从能力、成本和生态角度解读：Predicting model behavior before release by simulating deployment",
+      "title": "从模型能力、评测和开发者生态角度解读：OpenAI启动合作伙伴网络，投资1.5亿美元",
       "source_event_ids": [
-        "bd0cb0bf-5082-5cd1-9f9d-f90d880ea2e8"
+        "9b044100-c1a7-52c4-bb6b-18724809ca90"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "OpenAI introduces Deployment Simulation, a method to predict AI model behavior before deployment using real conversat...",
+      "why_today": "OpenAI推出合作伙伴网络，投资1.5亿助全球伙伴加速企业AI落地。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 6,
-      "title": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network",
+      "title": "从模型能力、评测和开发者生态角度解读：超越并行采样：智能体搜索的多样化查询初始化",
       "source_event_ids": [
-        "9b044100-c1a7-52c4-bb6b-18724809ca90"
+        "3d437827-c016-56d4-9417-064909f7e1ed"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...",
+      "why_today": "论文提出多样化查询初始化，提升智能体搜索的测试时扩展效果。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 7,
-      "title": "从能力、成本和生态角度解读：Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search",
+      "title": "从模型能力、评测和开发者生态角度解读：当规则学习：自进化智能体用于法律案例检索",
       "source_event_ids": [
-        "3d437827-c016-56d4-9417-064909f7e1ed"
+        "b9383628-4634-5a7c-b35d-006b9a4059fb"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2606.17209v1 Announce Type: new Abstract: Test-time scaling for agentic search typically increases depth (i.e.,...",
+      "why_today": "论文提出自进化智能体，应对法律案例检索的复杂性挑战。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 8,
-      "title": "从能力、成本和生态角度解读：When Rules Learn: A Self-Evolving Agent for Legal Case Retrieval",
+      "title": "从模型能力、评测和开发者生态角度解读：SkillChain-Gym：面向中断的再培训生产库存控制基准",
       "source_event_ids": [
-        "b9383628-4634-5a7c-b35d-006b9a4059fb"
+        "81b76f6d-4018-501d-abf9-ab8b6ada01f5"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2606.17220v1 Announce Type: new Abstract: Legal case retrieval remains challenging due to the complexity of leg...",
+      "why_today": "提出SkillChain-Gym基准，评估生产规划中劳动力再培训与库存控制的联合决策。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 9,
-      "title": "从能力、成本和生态角度解读：SkillChain-Gym: A Benchmark for Reskilling-Aware Production-Inventory Control under Disruptions",
+      "title": "从模型能力、评测和开发者生态角度解读：技能约束模型预测控制实现弹性制造供应链",
       "source_event_ids": [
-        "81b76f6d-4018-501d-abf9-ab8b6ada01f5"
+        "c5feafbe-a3db-57d0-9990-986572eea2da"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2606.17266v1 Announce Type: new Abstract: Production planning increasingly has to treat workforce capability as...",
+      "why_today": "研究技能受限生产库存系统的模型预测控制，提升供应链韧性。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     },
     {
       "rank": 10,
-      "title": "从能力、成本和生态角度解读：Skill-Constrained Model Predictive Control for Resilient Manufacturing Supply Chains",
+      "title": "从模型能力、评测和开发者生态角度解读：PhoneHarness：混合GUI、CLI与工具操作的手机智能体",
       "source_event_ids": [
-        "c5feafbe-a3db-57d0-9990-986572eea2da"
+        "60a2e606-9dd7-524d-8085-b003f2bed6ac"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2606.17269v1 Announce Type: new Abstract: In skill-constrained production-inventory systems, the qualified huma...",
+      "why_today": "提出PhoneHarness框架，让手机智能体通过混合界面完成真实移动工作流。",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     }
@@ -3168,9 +3174,9 @@
   "archive_entries": [
     {
       "date": "2026-06-17",
-      "generated_at": "2026-06-17T04:35:02.231910+00:00",
+      "generated_at": "2026-06-17T04:41:58.718373+00:00",
       "selected_event_count": 60,
-      "event_count": 128,
+      "event_count": 118,
       "top10_count": 10,
       "url": "archive/2026-06-17/",
       "json_url": "archive/2026-06-17/daily-digest.json"
