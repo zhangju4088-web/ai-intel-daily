@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import os
 import re
+import sys
 import uuid
 from dataclasses import asdict, dataclass, field
 from datetime import date, datetime, timezone
@@ -21,6 +22,12 @@ from .scoring import rough_priority_score
 
 
 CATEGORIES = ["大模型动态", "AI行业资讯", "国际形势影响", "国际金融"]
+
+
+def log_progress(message: str) -> None:
+    enabled = os.getenv("INTELHUB_PROGRESS", "").lower() in {"1", "true", "yes", "on"}
+    if enabled:
+        print(f"[intelhub] {message}", file=sys.stderr, flush=True)
 
 
 @dataclass
@@ -111,17 +118,28 @@ def build_daily_digest(
     candidates: list[ArticleCandidate] = []
     fetch_errors: list[dict[str, str]] = []
 
-    if manual_links_path.exists():
-        candidates.extend(load_manual_candidates(manual_links_path, source_map))
+    log_progress(
+        f"starting digest date={digest_date.isoformat()} sources={len(web_sources)} "
+        f"per_source={per_source} extract_text={extract_text} extract_limit={extract_limit} summarize={summarize_with}"
+    )
 
-    for source in web_sources:
+    if manual_links_path.exists():
+        manual_candidates = load_manual_candidates(manual_links_path, source_map)
+        candidates.extend(manual_candidates)
+        log_progress(f"loaded manual links count={len(manual_candidates)}")
+
+    for source_index, source in enumerate(web_sources, start=1):
+        log_progress(f"fetch {source_index}/{len(web_sources)} source={source.id} method={source.method}")
         result = fetch_source(source, limit=per_source)
         if result.error:
             fetch_errors.append({"source_id": source.id, "source_name": source.name, "error": result.error})
+            log_progress(f"fetch failed source={source.id} error={result.error}")
             continue
         candidates.extend(result.candidates)
+        log_progress(f"fetched source={source.id} candidates={len(result.candidates)} total={len(candidates)}")
 
     unique_candidates = dedupe_candidates(candidates)
+    log_progress(f"deduped candidates raw={len(candidates)} unique={len(unique_candidates)} errors={len(fetch_errors)}")
     analyses = analyze_candidates(
         unique_candidates,
         source_map=source_map,
@@ -134,6 +152,7 @@ def build_daily_digest(
     selected = select_top_events(events, top_per_category=top_per_category)
     topic_pool = build_topic_pool(selected)
     top10 = sorted(selected, key=lambda item: item.priority_score, reverse=True)[:10]
+    log_progress(f"selected events total={len(events)} selected={len(selected)} topic_pool={len(topic_pool)}")
 
     return {
         "digest_date": digest_date.isoformat(),
@@ -182,24 +201,39 @@ def analyze_candidates(
         client = DeepSeekClient(DeepSeekSettings.from_env())
 
     extraction_indexes = choose_extraction_indexes(candidates, extract_limit) if extract_text else set()
+    log_progress(f"analysis candidates={len(candidates)} extraction_targets={len(extraction_indexes)} deepseek={'on' if client else 'off'}")
     analyses: list[ArticleAnalysis] = []
+    extracted_seen = 0
     for index, candidate in enumerate(candidates):
         extracted_text = None
         extraction_error = None
         if index in extraction_indexes:
+            extracted_seen += 1
+            log_progress(
+                f"extract {extracted_seen}/{len(extraction_indexes)} source={candidate.source_id} "
+                f"title={trim(candidate.title, 80)}"
+            )
             try:
                 extracted_text = extract_url_text(candidate.url)
+                log_progress(f"extract ok chars={len(extracted_text)} source={candidate.source_id}")
             except Exception as exc:
                 extraction_error = str(exc)
+                log_progress(f"extract failed source={candidate.source_id} error={extraction_error}")
 
         analysis = None
         if client and extracted_text:
+            log_progress(f"deepseek start source={candidate.source_id} title={trim(candidate.title, 80)}")
             analysis = deepseek_analysis(client, candidate, extracted_text, digest_date)
+            if analysis:
+                log_progress(f"deepseek ok source={candidate.source_id} category={analysis.category}")
+            else:
+                log_progress(f"deepseek fallback source={candidate.source_id}")
         if not analysis:
             analysis = local_analysis(candidate, extracted_text)
         analysis.extracted_text = extracted_text
         analysis.extraction_error = extraction_error
         analyses.append(analysis)
+    log_progress(f"analysis complete total={len(analyses)}")
     return analyses
 
 

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import html
+import os
 import re
 import urllib.parse
 import urllib.request
@@ -11,6 +12,7 @@ from html.parser import HTMLParser
 from .config import Source
 from .dedupe import canonicalize_url
 from .models import ArticleCandidate
+from .timeouts import operation_timeout
 
 
 USER_AGENT = "AIIntelBot/0.1 (+personal research dashboard)"
@@ -97,6 +99,7 @@ def fetch_links(source: Source, *, limit: int = 10) -> list[ArticleCandidate]:
 
 
 def http_get(url: str) -> bytes:
+    timeout_seconds = float(os.getenv("FETCH_TIMEOUT_SECONDS", "20"))
     request = urllib.request.Request(
         url,
         headers={
@@ -104,8 +107,9 @@ def http_get(url: str) -> bytes:
             "Accept": "text/html,application/rss+xml,application/atom+xml,application/xml;q=0.9,*/*;q=0.8",
         },
     )
-    with urllib.request.urlopen(request, timeout=45) as response:
-        return response.read()
+    with operation_timeout(timeout_seconds):
+        with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
+            return response.read()
 
 
 def _candidate(source: Source, title: str, url: str, published_at: str | None, summary: str | None) -> ArticleCandidate:
