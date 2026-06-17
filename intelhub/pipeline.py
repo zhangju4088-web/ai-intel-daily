@@ -308,19 +308,19 @@ def deepseek_localize_event_chunk(
                 "original_title": primary_link.original_title if primary_link else event.ai_title,
                 "current_title": event.ai_title,
                 "current_one_sentence_summary": event.one_sentence_summary,
-                "current_detailed_summary": event.detailed_summary,
             }
         )
 
     system = """
-你是一个中文 AI 情报站的标题编辑。你的任务是把入选资讯的英文标题和英文摘要改写成简洁中文，供公众号博主快速浏览。
+你是一个中文 AI 情报站的标题编辑。你的任务是把入选资讯的英文标题和一句话摘要改写成简洁中文，供公众号博主快速浏览。
 
 要求：
 1. 只基于输入中的标题和已有摘要，不新增输入没有的事实。
 2. 公司名、模型名、产品名、论文名可以保留英文，例如 OpenAI、Claude Code、Blackwell、MLPerf。
 3. 不要保留栏目名前缀，例如“AI行业资讯｜”“大模型动态｜”。
 4. 不要使用省略号，不要输出 Markdown。
-5. 输出必须是合法 JSON。
+5. 标题必须优先中文化，不要直接照抄英文标题。
+6. 输出必须是合法 JSON。
 """.strip()
     user = json.dumps(
         {
@@ -332,14 +332,13 @@ def deepseek_localize_event_chunk(
                         "id": "原样返回",
                         "ai_title": "不超过32个中文字符；必要专名可保留英文",
                         "one_sentence_summary": "不超过60个中文字符",
-                        "detailed_summary": "80-160字中文摘要；信息不足时说明基于标题和来源判断",
                     }
                 ]
             },
         },
         ensure_ascii=False,
     )
-    result = client.complete_json(system, user, max_tokens=3600)
+    result = client.complete_json(system, user, max_tokens=1400)
     value = result.get("items", [])
     if not isinstance(value, list):
         return []
