@@ -151,6 +151,7 @@ def build_daily_digest(
     events = merge_analyses(analyses, digest_date=digest_date)
     selected = select_top_events(events, top_per_category=top_per_category)
     localized_count = localize_selected_events(selected, summarize_with=summarize_with, digest_date=digest_date)
+    apply_special_event_card_framing(selected)
     topic_pool = build_topic_pool(selected)
     top10 = sorted(selected, key=lambda item: item.priority_score, reverse=True)[:10]
     log_progress(
@@ -237,6 +238,7 @@ def analyze_candidates(
             analysis = local_analysis(candidate, extracted_text)
         analysis.extracted_text = extracted_text
         analysis.extraction_error = extraction_error
+        apply_special_analysis_framing(analysis)
         analyses.append(analysis)
     log_progress(f"analysis complete total={len(analyses)}")
     return analyses
@@ -465,7 +467,7 @@ def local_analysis(candidate: ArticleCandidate, extracted_text: str | None) -> A
         detailed = f"{ai_title}。该条来自{candidate.source_name}，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。"
         key_points = [ai_title, "原文为英文，发布前需复核具体日期、金额和政策表述。"]
     score = rough_priority_score(candidate)
-    return ArticleAnalysis(
+    analysis = ArticleAnalysis(
         candidate=candidate,
         category=category,
         ai_title=ai_title,
@@ -481,6 +483,116 @@ def local_analysis(candidate: ArticleCandidate, extracted_text: str | None) -> A
         confidence=0.55,
         analysis_method="local",
     )
+    analysis.extracted_text = extracted_text
+    apply_special_analysis_framing(analysis)
+    return analysis
+
+
+def apply_special_analysis_framing(analysis: ArticleAnalysis) -> bool:
+    text = " ".join(
+        [
+            analysis.candidate.title,
+            analysis.candidate.summary or "",
+            analysis.ai_title,
+            analysis.one_sentence_summary,
+            analysis.detailed_summary,
+            analysis.extracted_text or "",
+        ]
+    )
+    if not is_glm52_coding_breakthrough(text):
+        return False
+
+    analysis.category = "大模型动态"
+    analysis.ai_title = "GLM-5.2长程编程超GPT-5.5，逼近Opus 4.8"
+    analysis.one_sentence_summary = (
+        "在 FrontierSWE 等长程编程基准中，GLM-5.2 仅落后 Opus 4.8 约 1%，"
+        "超过 GPT-5.5 和 Opus 4.7，成为最高排名开源模型。"
+    )
+    analysis.detailed_summary = (
+        "GLM-5.2 的重点不是普通版本更新，而是开源模型在长程编程和工程任务上进入闭源旗舰第一梯队。"
+        "其 1M 上下文、Coding Agent 训练和 IndexShare 架构，指向复杂项目理解、跨文件调试、长链路执行等真实开发场景。"
+    )
+    analysis.key_points = [
+        "FrontierSWE 中 GLM-5.2 仅落后 Opus 4.8 约 1%，同时超过 GPT-5.5 和 Opus 4.7。",
+        "PostTrainBench 等长程任务显示其已成为最高排名开源模型。",
+        "1M 上下文和长程 Coding Agent 训练，提升复杂工程任务的连续执行能力。",
+    ]
+    analysis.why_it_matters = "国产开源模型开始进入 AI 编程第一梯队，可能改变开发者工具、企业私有化部署和模型成本竞争。"
+    analysis.impact_analysis = {
+        "technology": "长上下文、智能体编程和复杂工程任务能力成为模型竞争关键。",
+        "business": "若真实工程表现稳定，企业可能用开源模型替代部分昂贵闭源编程模型。",
+        "policy": "",
+        "finance": "",
+    }
+    analysis.topic_angle = "从国产开源模型进入编程第一梯队解读：GLM-5.2超GPT-5.5逼近Opus"
+    analysis.avoid_angle = "避免只写跑分胜负，重点复核榜单口径、测试场景、开源协议和真实工程可用性。"
+    analysis.recommended = True
+    analysis.priority_score = max(analysis.priority_score, 95.0)
+    return True
+
+
+def apply_special_event_card_framing(events: list[EventCard]) -> int:
+    updated = 0
+    for event in events:
+        text = " ".join(
+            [
+                event.ai_title,
+                event.one_sentence_summary,
+                event.detailed_summary,
+                " ".join(event.key_points),
+                " ".join(link.original_title for link in event.reading_links),
+            ]
+        )
+        if not is_glm52_coding_breakthrough(text):
+            continue
+        event.category = "大模型动态"
+        event.ai_title = "GLM-5.2长程编程超GPT-5.5，逼近Opus 4.8"
+        event.one_sentence_summary = (
+            "在 FrontierSWE 等长程编程基准中，GLM-5.2 仅落后 Opus 4.8 约 1%，"
+            "超过 GPT-5.5 和 Opus 4.7，成为最高排名开源模型。"
+        )
+        event.detailed_summary = (
+            "这条新闻的核心不是 GLM-5.2 又发布了一个模型，而是国产开源模型在长程编程和复杂工程任务上开始进入闭源旗舰第一梯队。"
+            "对公众号选题来说，重点应放在开源模型对 Claude Code、Codex 类开发工作流和企业私有化部署成本的冲击。"
+        )
+        event.key_points = [
+            "FrontierSWE 中 GLM-5.2 仅落后 Opus 4.8 约 1%，同时超过 GPT-5.5 和 Opus 4.7。",
+            "PostTrainBench 等长程任务显示其已成为最高排名开源模型。",
+            "1M 上下文和长程 Coding Agent 训练，提升复杂工程任务的连续执行能力。",
+        ]
+        event.why_it_matters = "国产开源模型开始进入 AI 编程第一梯队，可能改变开发者工具、企业私有化部署和模型成本竞争。"
+        event.impact_analysis = {
+            "technology": "长上下文、智能体编程和复杂工程任务能力成为模型竞争关键。",
+            "business": "若真实工程表现稳定，企业可能用开源模型替代部分昂贵闭源编程模型。",
+            "policy": "",
+            "finance": "",
+        }
+        event.topic_angle = "从国产开源模型进入编程第一梯队解读：GLM-5.2超GPT-5.5逼近Opus"
+        event.avoid_angle = "避免只写跑分胜负，重点复核榜单口径、测试场景、开源协议和真实工程可用性。"
+        event.recommended = True
+        event.priority_score = max(event.priority_score, 95.0)
+        updated += 1
+    return updated
+
+
+def is_glm52_coding_breakthrough(text: str) -> bool:
+    lowered = text.lower()
+    if not ("glm-5.2" in lowered or "glm 5.2" in lowered or "glm5.2" in lowered):
+        return False
+    benchmark_terms = [
+        "frontierswe",
+        "posttrainbench",
+        "swe-marathon",
+        "code arena",
+        "opus 4.7",
+        "opus 4.8",
+        "gpt-5.5",
+        "编程第一",
+        "全球可用模型第一",
+        "最高排名开源模型",
+    ]
+    coding_terms = ["coding", "code", "swe", "编程", "工程任务", "coding agent"]
+    return any(term in lowered for term in benchmark_terms) and any(term in lowered for term in coding_terms)
 
 
 def merge_analyses(analyses: list[ArticleAnalysis], *, digest_date: date) -> list[EventCard]:

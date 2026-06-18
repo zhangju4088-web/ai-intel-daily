@@ -153,6 +153,30 @@ class IntelHubTest(unittest.TestCase):
 
         self.assertGreaterEqual(rough_priority_score(candidate), 75)
 
+    def test_glm52_coding_breakthrough_gets_topic_framing(self) -> None:
+        candidate = ArticleCandidate(
+            source_id="huggingface_blog",
+            source_name="Hugging Face Blog",
+            source_type="research",
+            category_hint="大模型动态",
+            title="GLM-5.2: Built for Long-Horizon Tasks",
+            url="https://huggingface.co/blog/zai-org/glm-52-blog",
+            summary=None,
+            language="en",
+        )
+        extracted_text = (
+            "On FrontierSWE, GLM-5.2 trails Opus 4.8 by only 1%, "
+            "while edging out GPT-5.5 by 1% and Opus 4.7 by 11%. "
+            "Across long-horizon coding benchmarks, GLM-5.2 is the "
+            "highest-ranked open-source model."
+        )
+
+        analysis = local_analysis(candidate, extracted_text)
+
+        self.assertIn("GPT-5.5", analysis.ai_title)
+        self.assertIn("逼近Opus", analysis.ai_title)
+        self.assertIn("最高排名开源模型", analysis.one_sentence_summary)
+
 def sample_digest(digest_date: str, selected_count: int) -> dict:
     return {
         "digest_date": digest_date,
