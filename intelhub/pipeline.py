@@ -719,15 +719,13 @@ def should_attach_supporting_link(event: EventCard, analysis: ArticleAnalysis) -
         return True
     event_title = normalize_title(event.ai_title)
     analysis_title = normalize_title(analysis.ai_title or analysis.candidate.title)
-    if event_title and analysis_title and SequenceMatcher(None, event_title, analysis_title).ratio() >= 0.62:
-        return True
+    title_similarity = SequenceMatcher(None, event_title, analysis_title).ratio() if event_title and analysis_title else 0.0
     event_terms = title_terms(event_text)
     analysis_terms = title_terms(analysis_text)
     if not event_terms or not analysis_terms:
         return False
-    overlap = len(event_terms & analysis_terms) / len(event_terms | analysis_terms)
     shared = event_terms & analysis_terms
-    return overlap >= 0.50 or (overlap >= 0.38 and count_strong_named_entities(shared) >= 2)
+    return title_similarity >= 0.72 and count_strong_named_entities(shared) >= 1
 
 
 def event_relation_text(event: EventCard) -> str:

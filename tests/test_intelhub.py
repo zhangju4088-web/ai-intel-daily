@@ -256,6 +256,38 @@ class IntelHubTest(unittest.TestCase):
         self.assertEqual(events[0].source_count, 2)
         self.assertEqual(len(events[0].reading_links), 2)
 
+    def test_unrelated_research_is_not_added_as_supporting_link(self) -> None:
+        glm = ArticleCandidate(
+            source_id="huggingface_blog",
+            source_name="Hugging Face Blog",
+            source_type="research",
+            category_hint="大模型动态",
+            title="GLM-5.2: Built for Long-Horizon Tasks",
+            url="https://huggingface.co/blog/zai-org/glm-52-blog",
+            summary=(
+                "On FrontierSWE, GLM-5.2 trails Opus 4.8 by only 1%, "
+                "while edging out GPT-5.5 and Opus 4.7."
+            ),
+            language="en",
+        )
+        unrelated = ArticleCandidate(
+            source_id="arxiv_cs_cl",
+            source_name="arXiv cs.CL",
+            source_type="research",
+            category_hint="大模型动态",
+            title="PromptMN: Pseudo Prompting Language",
+            url="https://arxiv.org/abs/2606.00000",
+            summary="A paper about pseudo prompting language methods.",
+            language="en",
+        )
+        analyses = [local_analysis(glm, None), local_analysis(unrelated, None)]
+        events = merge_analyses([analyses[0]], digest_date=date(2026, 6, 18))
+
+        added = enrich_event_reading_links(events, analyses)
+
+        self.assertEqual(added, 0)
+        self.assertEqual(len(events[0].reading_links), 1)
+
     def test_topic_pool_carries_reading_links(self) -> None:
         candidate = ArticleCandidate(
             source_id="openai_news",
