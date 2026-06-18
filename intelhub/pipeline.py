@@ -22,6 +22,23 @@ from .scoring import rough_priority_score
 
 
 CATEGORIES = ["大模型动态", "AI行业资讯", "国际形势影响", "国际金融"]
+MODEL_VERSION_PREFIXES = {
+    "gpt",
+    "glm",
+    "claude",
+    "opus",
+    "gemini",
+    "qwen",
+    "deepseek",
+    "kimi",
+    "llama",
+    "mistral",
+    "ernie",
+    "hunyuan",
+    "doubao",
+    "baichuan",
+    "yi",
+}
 
 
 def log_progress(message: str) -> None:
@@ -713,8 +730,10 @@ def should_attach_supporting_link(event: EventCard, analysis: ArticleAnalysis) -
         return False
     event_text = event_relation_text(event)
     analysis_text = analysis_merge_text(analysis)
-    if is_glm52_coding_breakthrough(event_text) and is_glm52_coding_breakthrough(analysis_text):
-        return True
+    event_is_glm52 = is_glm52_coding_breakthrough(event_text)
+    analysis_is_glm52 = is_glm52_coding_breakthrough(analysis_text)
+    if event_is_glm52 or analysis_is_glm52:
+        return event_is_glm52 and analysis_is_glm52
     if normalized_model_versions(event_text) & normalized_model_versions(analysis_text):
         return True
     event_title = normalize_title(event.ai_title)
@@ -743,8 +762,12 @@ def event_relation_text(event: EventCard) -> str:
 
 def normalized_model_versions(text: str) -> set[str]:
     lowered = text.lower()
-    versions = set(re.findall(r"\b[a-z]{2,}[- ]?\d+(?:\.\d+)+\b", lowered))
-    return {re.sub(r"\s+", "-", item) for item in versions}
+    versions = set()
+    for match in re.finditer(r"\b([a-z]{2,})[- ]?(\d+(?:\.\d+)+)\b", lowered):
+        prefix, version = match.groups()
+        if prefix in MODEL_VERSION_PREFIXES:
+            versions.add(f"{prefix}-{version}")
+    return versions
 
 
 def has_named_entity_overlap(terms: set[str]) -> bool:

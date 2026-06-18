@@ -8,7 +8,14 @@ from pathlib import Path
 from intelhub.config import Source
 from intelhub.models import ArticleCandidate
 from intelhub.fetch import is_navigation_text
-from intelhub.pipeline import build_topic_pool, choose_extraction_indexes, enrich_event_reading_links, local_analysis, merge_analyses
+from intelhub.pipeline import (
+    apply_special_event_card_framing,
+    build_topic_pool,
+    choose_extraction_indexes,
+    enrich_event_reading_links,
+    local_analysis,
+    merge_analyses,
+)
 from intelhub.render import render_digest_html
 from intelhub.scoring import priority_score_breakdown, rough_priority_score
 from intelhub.site import publish_static_site
@@ -282,6 +289,7 @@ class IntelHubTest(unittest.TestCase):
         )
         analyses = [local_analysis(glm, None), local_analysis(unrelated, None)]
         events = merge_analyses([analyses[0]], digest_date=date(2026, 6, 18))
+        apply_special_event_card_framing(events)
 
         added = enrich_event_reading_links(events, analyses)
 
