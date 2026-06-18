@@ -4,6 +4,7 @@ import unittest
 import tempfile
 from datetime import date
 from pathlib import Path
+from unittest.mock import patch
 
 from intelhub.config import Source
 from intelhub.models import ArticleCandidate
@@ -102,6 +103,29 @@ class IntelHubTest(unittest.TestCase):
         self.assertIn("2026-06-17", rendered)
         self.assertNotIn('data-view="archive"', rendered)
         self.assertNotIn(">归档</button>", rendered)
+
+    def test_render_includes_refresh_button(self) -> None:
+        rendered = render_digest_html(sample_digest("2026-06-18", 1))
+
+        self.assertIn('id="refreshButton"', rendered)
+        self.assertIn("即时抓取", rendered)
+        self.assertIn("actions/workflows/pages-digest.yml", rendered)
+
+    def test_render_auth_config_from_environment(self) -> None:
+        with patch.dict(
+            "os.environ",
+            {
+                "SITE_AUTH_USERNAME": "admin",
+                "SITE_AUTH_PASSWORD_SHA256": "abc123",
+                "SITE_REFRESH_WEBHOOK_URL": "https://refresh.example.com/run",
+            },
+        ):
+            rendered = render_digest_html(sample_digest("2026-06-18", 1))
+
+        self.assertIn('"enabled": true', rendered)
+        self.assertIn('"username": "admin"', rendered)
+        self.assertIn('"password_sha256": "abc123"', rendered)
+        self.assertIn("https://refresh.example.com/run", rendered)
 
     def test_fetch_filters_navigation_text(self) -> None:
         self.assertTrue(is_navigation_text("Subscribe to RSS"))

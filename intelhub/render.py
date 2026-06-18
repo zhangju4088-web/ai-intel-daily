@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import html
+import hashlib
 import json
+import os
 import re
 from pathlib import Path
 from typing import Any
@@ -9,9 +11,12 @@ from typing import Any
 
 def render_digest_html(digest: dict[str, Any]) -> str:
     digest_date = html.escape(str(digest.get("digest_date", "")))
+    generated_at = html.escape(str(digest.get("generated_at", "")))
     stats = digest.get("stats", {})
     categories = digest.get("categories", {})
     archive_entries = digest.get("archive_entries", [])
+    site_config = build_site_config()
+    site_config_json = html.escape(json.dumps(site_config, ensure_ascii=False), quote=False)
     digest_json = html.escape(json.dumps(digest, ensure_ascii=False), quote=False)
     return f"""<!doctype html>
 <html lang="zh-CN">
@@ -117,7 +122,7 @@ def render_digest_html(digest: dict[str, Any]) -> str:
     .search:focus {{ border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(94, 231, 255, .12); }}
     .controls {{
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 190px;
+      grid-template-columns: minmax(0, 1fr) 190px 112px;
       gap: 10px;
       align-items: center;
     }}
@@ -133,6 +138,25 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       outline: none;
     }}
     .date-select:focus {{ border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(94, 231, 255, .12); }}
+    .refresh-btn {{
+      height: 38px;
+      border: 1px solid rgba(94, 231, 255, .45);
+      border-radius: 8px;
+      background: rgba(94, 231, 255, .12);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 680;
+      cursor: pointer;
+      white-space: nowrap;
+    }}
+    .refresh-btn:hover {{ background: rgba(94, 231, 255, .18); }}
+    .refresh-btn:disabled {{ cursor: wait; opacity: .65; }}
+    .refresh-status {{
+      margin-top: -4px;
+      color: var(--muted);
+      font-size: 12px;
+      min-height: 16px;
+    }}
     .tabs {{
       display: flex;
       gap: 8px;
@@ -247,6 +271,57 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       color: var(--muted);
       background: rgba(8, 18, 32, .52);
     }}
+    .auth-screen {{
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background:
+        radial-gradient(circle at 22% 16%, rgba(94, 231, 255, .18), transparent 30%),
+        radial-gradient(circle at 82% 8%, rgba(167, 139, 250, .15), transparent 28%),
+        rgba(3, 6, 11, .94);
+      backdrop-filter: blur(16px);
+    }}
+    body.auth-required .auth-screen {{ display: flex; }}
+    body.auth-required #appShell {{ visibility: hidden; pointer-events: none; }}
+    .auth-card {{
+      width: min(420px, 100%);
+      border: 1px solid var(--line-strong);
+      border-radius: 10px;
+      background: rgba(7, 17, 32, .92);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .38);
+      padding: 22px;
+    }}
+    .auth-card h2 {{ font-size: 22px; margin-bottom: 6px; }}
+    .auth-card p {{ margin: 0 0 16px; color: var(--muted); font-size: 14px; }}
+    .auth-field {{ display: grid; gap: 6px; margin-top: 12px; color: #b9d4ef; font-size: 13px; }}
+    .auth-field input {{
+      height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      color: var(--text);
+      background: rgba(8, 18, 32, .82);
+      outline: none;
+      font-size: 14px;
+    }}
+    .auth-field input:focus {{ border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(94, 231, 255, .12); }}
+    .auth-row {{ display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; }}
+    .auth-remember {{ display: inline-flex; align-items: center; gap: 6px; color: var(--muted); font-size: 13px; }}
+    .auth-submit {{
+      height: 38px;
+      min-width: 112px;
+      border: 1px solid rgba(94, 231, 255, .50);
+      border-radius: 8px;
+      background: rgba(94, 231, 255, .16);
+      color: var(--text);
+      font-weight: 760;
+      cursor: pointer;
+    }}
+    .auth-error {{ min-height: 18px; margin-top: 12px; color: #fecaca; font-size: 13px; }}
     .hidden-json {{ display: none; }}
     @media (max-width: 720px) {{
       .wrap {{ padding: 0 14px; }}
@@ -263,6 +338,26 @@ def render_digest_html(digest: dict[str, Any]) -> str:
 <body>
   <canvas id="digital-bg" aria-hidden="true"></canvas>
   <div class="grid-glow" aria-hidden="true"></div>
+  <section id="authScreen" class="auth-screen" aria-label="登录">
+    <form id="authForm" class="auth-card">
+      <h2>登录 AI 情报日报</h2>
+      <p>请输入账号密码后查看内部选题池。</p>
+      <label class="auth-field">
+        <span>账号</span>
+        <input id="authUsername" name="username" autocomplete="username" required>
+      </label>
+      <label class="auth-field">
+        <span>密码</span>
+        <input id="authPassword" name="password" type="password" autocomplete="current-password" required>
+      </label>
+      <div class="auth-row">
+        <label class="auth-remember"><input id="authRemember" type="checkbox"> 记住登录</label>
+        <button class="auth-submit" type="submit">登录</button>
+      </div>
+      <div id="authError" class="auth-error" role="alert"></div>
+    </form>
+  </section>
+  <div id="appShell">
   <header>
     <div class="wrap head">
       <div class="topline">
@@ -275,12 +370,15 @@ def render_digest_html(digest: dict[str, Any]) -> str:
           <span class="stat">去重 {stats.get("unique_candidate_count", 0)}</span>
           <span class="stat">事件 {stats.get("event_count", 0)}</span>
           <span class="stat">精选 {stats.get("selected_event_count", 0)}</span>
+          <span class="stat">更新 {generated_at[:16] if generated_at else ""}</span>
         </div>
       </div>
       <div class="controls">
         <input id="searchInput" class="search" type="search" placeholder="搜索当前视图">
         {render_date_select(archive_entries, digest_date)}
+        <button id="refreshButton" class="refresh-btn" type="button">即时抓取</button>
       </div>
+      <div id="refreshStatus" class="refresh-status"></div>
       <nav class="tabs" aria-label="栏目">
         <button class="tab" type="button" data-view="topics" aria-selected="true">今日选题池</button>
         {render_tab_buttons(categories)}
@@ -293,13 +391,59 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       {''.join(render_category_view(category, events) for category, events in categories.items())}
     </div>
   </main>
+  </div>
+  <script id="site-config" class="hidden-json" type="application/json">{site_config_json}</script>
   <script id="digest-data" class="hidden-json" type="application/json">{digest_json}</script>
   <script>
+    const siteConfig = JSON.parse(document.getElementById('site-config').textContent || '{{}}');
     const input = document.getElementById('searchInput');
     const dateSelect = document.getElementById('dateSelect');
+    const refreshButton = document.getElementById('refreshButton');
+    const refreshStatus = document.getElementById('refreshStatus');
     const tabs = Array.from(document.querySelectorAll('.tab'));
     const views = Array.from(document.querySelectorAll('.view'));
     let currentView = 'topics';
+
+    async function sha256(text) {{
+      const data = new TextEncoder().encode(text);
+      const hash = await crypto.subtle.digest('SHA-256', data);
+      return Array.from(new Uint8Array(hash)).map(byte => byte.toString(16).padStart(2, '0')).join('');
+    }}
+
+    function unlockApp(persist) {{
+      document.body.classList.remove('auth-required');
+      if (persist) localStorage.setItem('intelhub-auth-ok', '1');
+      sessionStorage.setItem('intelhub-auth-ok', '1');
+    }}
+
+    async function initAuth() {{
+      const auth = siteConfig.auth || {{}};
+      if (!auth.enabled) return;
+      if (localStorage.getItem('intelhub-auth-ok') === '1' || sessionStorage.getItem('intelhub-auth-ok') === '1') {{
+        unlockApp(false);
+        return;
+      }}
+      document.body.classList.add('auth-required');
+      const form = document.getElementById('authForm');
+      const username = document.getElementById('authUsername');
+      const password = document.getElementById('authPassword');
+      const remember = document.getElementById('authRemember');
+      const error = document.getElementById('authError');
+      form.addEventListener('submit', async event => {{
+        event.preventDefault();
+        error.textContent = '';
+        const userOk = username.value.trim() === auth.username;
+        const passwordOk = await sha256(password.value) === auth.password_sha256;
+        if (!userOk || !passwordOk) {{
+          error.textContent = '账号或密码不正确';
+          password.value = '';
+          password.focus();
+          return;
+        }}
+        unlockApp(remember.checked);
+      }});
+      username.focus();
+    }}
 
     function setView(name) {{
       currentView = name;
@@ -330,6 +474,31 @@ def render_digest_html(digest: dict[str, Any]) -> str:
         if (!date || date === {json.dumps(str(digest.get("digest_date", "")))}) return;
         const inArchive = /\\/archive\\/\\d{{4}}-\\d{{2}}-\\d{{2}}\\/?/.test(location.pathname);
         location.href = inArchive ? `../${{date}}/` : `archive/${{date}}/`;
+      }});
+    }}
+    if (refreshButton) {{
+      refreshButton.addEventListener('click', async () => {{
+        const refresh = siteConfig.refresh || {{}};
+        if (!refresh.webhook_url) {{
+          refreshStatus.textContent = '未配置即时抓取接口，已打开 GitHub Actions 手动触发页面。';
+          window.open(refresh.action_url, '_blank', 'noopener');
+          return;
+        }}
+        refreshButton.disabled = true;
+        refreshStatus.textContent = '正在触发抓取...';
+        try {{
+          const response = await fetch(refresh.webhook_url, {{
+            method: 'POST',
+            headers: {{ 'content-type': 'application/json' }},
+            body: JSON.stringify({{ digest_date: {json.dumps(str(digest.get("digest_date", "")))}, source: 'site-button' }}),
+          }});
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          refreshStatus.textContent = '已触发抓取，通常 4-6 分钟后刷新页面可看到最新结果。';
+        }} catch (error) {{
+          refreshStatus.textContent = '触发失败，请检查即时抓取接口配置。';
+        }} finally {{
+          refreshButton.disabled = false;
+        }}
       }});
     }}
 
@@ -381,11 +550,37 @@ def render_digest_html(digest: dict[str, Any]) -> str:
     window.addEventListener('mouseleave', () => {{ pointer.x = -9999; pointer.y = -9999; }});
     resizeCanvas();
     draw();
+    initAuth();
     setView('topics');
   </script>
 </body>
 </html>
 """
+
+
+def build_site_config() -> dict[str, Any]:
+    password_hash = os.getenv("SITE_AUTH_PASSWORD_SHA256", "").strip().lower()
+    password = os.getenv("SITE_AUTH_PASSWORD", "")
+    if password and not password_hash:
+        password_hash = hashlib.sha256(password.encode("utf-8")).hexdigest()
+    username = os.getenv("SITE_AUTH_USERNAME", "").strip()
+    auth_enabled = bool(username and password_hash)
+    refresh_webhook_url = os.getenv("SITE_REFRESH_WEBHOOK_URL", "").strip()
+    action_url = os.getenv(
+        "SITE_REFRESH_ACTION_URL",
+        "https://github.com/zhangju4088-web/ai-intel-daily/actions/workflows/pages-digest.yml",
+    ).strip()
+    return {
+        "auth": {
+            "enabled": auth_enabled,
+            "username": username if auth_enabled else "",
+            "password_sha256": password_hash if auth_enabled else "",
+        },
+        "refresh": {
+            "webhook_url": refresh_webhook_url,
+            "action_url": action_url,
+        },
+    }
 
 
 def render_tab_buttons(categories: dict[str, list[dict[str, Any]]]) -> str:

@@ -43,6 +43,10 @@ jobs:
       INTELHUB_PROGRESS: "1"
       DIGEST_DATE: ${{ github.event.inputs.digest_date }}
       EXTRACT_LIMIT_INPUT: ${{ github.event.inputs.extract_limit }}
+      SITE_AUTH_USERNAME: ${{ vars.SITE_AUTH_USERNAME }}
+      SITE_AUTH_PASSWORD_SHA256: ${{ secrets.SITE_AUTH_PASSWORD_SHA256 }}
+      SITE_REFRESH_WEBHOOK_URL: ${{ vars.SITE_REFRESH_WEBHOOK_URL }}
+      SITE_REFRESH_ACTION_URL: https://github.com/zhangju4088-web/ai-intel-daily/actions/workflows/pages-digest.yml
 
     steps:
       - name: Checkout
