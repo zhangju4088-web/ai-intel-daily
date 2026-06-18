@@ -717,13 +717,17 @@ def should_attach_supporting_link(event: EventCard, analysis: ArticleAnalysis) -
         return True
     if normalized_model_versions(event_text) & normalized_model_versions(analysis_text):
         return True
+    event_title = normalize_title(event.ai_title)
+    analysis_title = normalize_title(analysis.ai_title or analysis.candidate.title)
+    if event_title and analysis_title and SequenceMatcher(None, event_title, analysis_title).ratio() >= 0.62:
+        return True
     event_terms = title_terms(event_text)
     analysis_terms = title_terms(analysis_text)
     if not event_terms or not analysis_terms:
         return False
     overlap = len(event_terms & analysis_terms) / len(event_terms | analysis_terms)
     shared = event_terms & analysis_terms
-    return overlap >= 0.34 or (len(shared) >= 2 and has_named_entity_overlap(shared))
+    return overlap >= 0.50 or (overlap >= 0.38 and count_strong_named_entities(shared) >= 2)
 
 
 def event_relation_text(event: EventCard) -> str:
@@ -747,6 +751,34 @@ def normalized_model_versions(text: str) -> set[str]:
 
 def has_named_entity_overlap(terms: set[str]) -> bool:
     return any(re.search(r"[a-z]", term) and len(term) >= 4 for term in terms)
+
+
+def count_strong_named_entities(terms: set[str]) -> int:
+    generic = {
+        "ai",
+        "agent",
+        "agents",
+        "model",
+        "models",
+        "language",
+        "benchmark",
+        "benchmarks",
+        "framework",
+        "learning",
+        "research",
+        "data",
+        "using",
+        "based",
+        "智能体",
+        "模型",
+        "语言",
+        "基准",
+        "研究",
+        "数据",
+        "学习",
+        "能力",
+    }
+    return sum(1 for term in terms if term not in generic and re.search(r"[a-z]", term) and len(term) >= 4)
 
 
 def build_reading_links(bucket: list[ArticleAnalysis], primary: ArticleAnalysis) -> list[ReadingLink]:
@@ -824,7 +856,44 @@ def keyword_overlap(left: str, right: str) -> float:
 
 def title_terms(title: str) -> set[str]:
     terms = set(re.findall(r"[A-Za-z][A-Za-z0-9-]{2,}|[\u4e00-\u9fff]{2,}", title))
-    stop = {"the", "and", "for", "with", "from", "this", "that", "new", "news", "发布", "推出", "最新"}
+    stop = {
+        "the",
+        "and",
+        "for",
+        "with",
+        "from",
+        "this",
+        "that",
+        "new",
+        "news",
+        "how",
+        "why",
+        "what",
+        "using",
+        "based",
+        "model",
+        "models",
+        "agent",
+        "agents",
+        "language",
+        "benchmark",
+        "framework",
+        "learning",
+        "research",
+        "data",
+        "发布",
+        "推出",
+        "最新",
+        "模型",
+        "智能体",
+        "语言",
+        "研究",
+        "基准",
+        "数据",
+        "学习",
+        "能力",
+        "应用",
+    }
     return {term.lower() for term in terms if term.lower() not in stop}
 
 
