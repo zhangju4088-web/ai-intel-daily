@@ -15,10 +15,10 @@ class ArticleCandidate:
     published_at: str | None = None
     summary: str | None = None
     language: str = "zh"
+    source_weight: float = 1.0
 
     def as_dict(self) -> dict[str, Any]:
         return asdict(self)
 
     def with_url(self, url: str) -> "ArticleCandidate":
         return replace(self, url=url)
-

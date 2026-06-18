@@ -9,7 +9,7 @@ from intelhub.config import Source
 from intelhub.models import ArticleCandidate
 from intelhub.fetch import is_navigation_text
 from intelhub.pipeline import choose_extraction_indexes, local_analysis, merge_analyses
-from intelhub.scoring import rough_priority_score
+from intelhub.scoring import priority_score_breakdown, rough_priority_score
 from intelhub.site import publish_static_site
 
 
@@ -176,6 +176,90 @@ class IntelHubTest(unittest.TestCase):
         self.assertIn("GPT-5.5", analysis.ai_title)
         self.assertIn("逼近Opus", analysis.ai_title)
         self.assertIn("最高排名开源模型", analysis.one_sentence_summary)
+
+    def test_source_weight_affects_priority_score(self) -> None:
+        title = "NVIDIA Blackwell benchmark shows stronger AI training performance"
+        high_weight = ArticleCandidate(
+            source_id="nvidia_blog",
+            source_name="NVIDIA Blog",
+            source_type="official",
+            category_hint="AI行业资讯",
+            title=title,
+            url="https://example.com/high",
+            source_weight=1.20,
+            language="en",
+        )
+        low_weight = ArticleCandidate(
+            source_id="generic_ai",
+            source_name="Generic AI Site",
+            source_type="official",
+            category_hint="AI行业资讯",
+            title=title,
+            url="https://example.com/low",
+            source_weight=0.80,
+            language="en",
+        )
+
+        self.assertGreater(rough_priority_score(high_weight), rough_priority_score(low_weight))
+
+    def test_finance_context_gets_category_boost(self) -> None:
+        candidate = ArticleCandidate(
+            source_id="fed",
+            source_name="Federal Reserve",
+            source_type="finance",
+            category_hint="国际金融",
+            title="Federal Reserve signals interest rate cuts as inflation cools",
+            url="https://example.com/fed",
+            language="en",
+        )
+        breakdown = priority_score_breakdown(candidate)
+
+        self.assertGreaterEqual(breakdown["finance"], 10)
+        self.assertGreaterEqual(breakdown["score"], 60)
+
+    def test_low_value_promotional_items_are_penalized(self) -> None:
+        candidate = ArticleCandidate(
+            source_id="generic_ai",
+            source_name="Generic AI Site",
+            source_type="media",
+            category_hint="AI行业资讯",
+            title="Subscribe to our AI newsletter and webinar roundup",
+            url="https://example.com/newsletter",
+            language="en",
+        )
+        breakdown = priority_score_breakdown(candidate)
+
+        self.assertLess(breakdown["low_value_penalty"], 0)
+        self.assertLess(breakdown["score"], 45)
+
+    def test_finance_short_terms_do_not_match_inside_other_words(self) -> None:
+        candidate = ArticleCandidate(
+            source_id="arxiv_cs_ai",
+            source_name="arXiv cs.AI",
+            source_type="research",
+            category_hint="大模型动态",
+            title="Federated learning benchmark for medical AI",
+            url="https://example.com/federated-learning",
+            language="en",
+        )
+        breakdown = priority_score_breakdown(candidate)
+
+        self.assertEqual(breakdown["finance"], 0)
+
+    def test_chip_export_controls_are_high_impact_geopolitics(self) -> None:
+        candidate = ArticleCandidate(
+            source_id="reuters_world",
+            source_name="Reuters",
+            source_type="media",
+            category_hint="国际形势影响",
+            title="U.S. expands AI chip export controls on China",
+            url="https://example.com/export-controls",
+            language="en",
+        )
+        breakdown = priority_score_breakdown(candidate)
+
+        self.assertGreaterEqual(breakdown["geopolitical"], 10)
+        self.assertGreaterEqual(breakdown["score"], 60)
 
 def sample_digest(digest_date: str, selected_count: int) -> dict:
     return {

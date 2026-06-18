@@ -123,6 +123,7 @@ def _candidate(source: Source, title: str, url: str, published_at: str | None, s
         published_at=published_at,
         summary=html.unescape(re.sub(r"\s+", " ", summary or "")).strip() or None,
         language=source.language,
+        source_weight=source.weight,
     )
 
 

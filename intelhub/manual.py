@@ -61,5 +61,5 @@ def _candidate_from_record(record: dict[str, Any], sources: dict[str, Source]) -
         published_at=record.get("published_at"),
         summary=record.get("summary"),
         language=source.language,
+        source_weight=source.weight,
     )
-
