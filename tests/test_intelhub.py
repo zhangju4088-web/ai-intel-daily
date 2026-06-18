@@ -177,6 +177,40 @@ class IntelHubTest(unittest.TestCase):
         self.assertIn("逼近Opus", analysis.ai_title)
         self.assertIn("最高排名开源模型", analysis.one_sentence_summary)
 
+    def test_glm52_coding_breakthrough_merges_multiple_sources(self) -> None:
+        huggingface = ArticleCandidate(
+            source_id="huggingface_blog",
+            source_name="Hugging Face Blog",
+            source_type="research",
+            category_hint="大模型动态",
+            title="GLM-5.2: Built for Long-Horizon Tasks",
+            url="https://huggingface.co/blog/zai-org/glm-52-blog",
+            summary=(
+                "On FrontierSWE, GLM-5.2 trails Opus 4.8 by only 1%, "
+                "while edging out GPT-5.5 and Opus 4.7."
+            ),
+            language="en",
+        )
+        qbitai = ArticleCandidate(
+            source_id="qbitai_site",
+            source_name="量子位",
+            source_type="media",
+            category_hint="AI行业资讯",
+            title="刚刚，Fable-5之下，智谱开源的GLM-5.2拿下AI编程第一！",
+            url="https://www.qbitai.com/2026/06/436085.html",
+            summary="GLM-5.2 在 AI 编程榜单中表现突出，接近 Claude Opus 4.8，超过 GPT-5.5。",
+            language="zh",
+        )
+
+        events = merge_analyses(
+            [local_analysis(huggingface, None), local_analysis(qbitai, None)],
+            digest_date=date(2026, 6, 18),
+        )
+
+        self.assertEqual(len(events), 1)
+        self.assertEqual(events[0].source_count, 2)
+        self.assertEqual(len(events[0].reading_links), 2)
+
     def test_source_weight_affects_priority_score(self) -> None:
         title = "NVIDIA Blackwell benchmark shows stronger AI training performance"
         high_weight = ArticleCandidate(

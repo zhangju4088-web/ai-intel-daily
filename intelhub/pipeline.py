@@ -700,6 +700,15 @@ def choose_primary(bucket: list[ArticleAnalysis]) -> ArticleAnalysis:
 def should_merge(left: ArticleAnalysis, right: ArticleAnalysis) -> bool:
     if left.category != right.category:
         return False
+    left_ai_title = normalize_title(left.ai_title)
+    right_ai_title = normalize_title(right.ai_title)
+    if left_ai_title and right_ai_title:
+        if left_ai_title == right_ai_title:
+            return True
+        if SequenceMatcher(None, left_ai_title, right_ai_title).ratio() >= 0.86:
+            return True
+    if is_glm52_coding_breakthrough(analysis_merge_text(left)) and is_glm52_coding_breakthrough(analysis_merge_text(right)):
+        return True
     left_title = normalize_title(left.candidate.title)
     right_title = normalize_title(right.candidate.title)
     if not left_title or not right_title:
@@ -710,6 +719,18 @@ def should_merge(left: ArticleAnalysis, right: ArticleAnalysis) -> bool:
     if ratio >= 0.72:
         return True
     return keyword_overlap(left.candidate.title, right.candidate.title) >= 0.62
+
+
+def analysis_merge_text(analysis: ArticleAnalysis) -> str:
+    return " ".join(
+        [
+            analysis.candidate.title,
+            analysis.candidate.summary or "",
+            analysis.ai_title,
+            analysis.one_sentence_summary,
+            analysis.detailed_summary,
+        ]
+    )
 
 
 def keyword_overlap(left: str, right: str) -> float:
