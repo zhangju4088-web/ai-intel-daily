@@ -9,6 +9,7 @@ from intelhub.config import Source
 from intelhub.models import ArticleCandidate
 from intelhub.fetch import is_navigation_text
 from intelhub.pipeline import choose_extraction_indexes, local_analysis, merge_analyses
+from intelhub.scoring import rough_priority_score
 from intelhub.site import publish_static_site
 
 
@@ -113,6 +114,30 @@ class IntelHubTest(unittest.TestCase):
         selected = choose_extraction_indexes(candidates, 4)
 
         self.assertTrue(any(candidates[index].category_hint == "国际金融" for index in selected))
+
+    def test_hot_model_release_gets_domestic_model_boost(self) -> None:
+        glm = ArticleCandidate(
+            source_id="huggingface_blog",
+            source_name="Hugging Face Blog",
+            source_type="research",
+            category_hint="大模型动态",
+            title="GLM-5.2: Built for Long-Horizon Tasks",
+            url="https://huggingface.co/blog/zai-org/glm-52-blog",
+            summary=None,
+            language="en",
+        )
+        generic = ArticleCandidate(
+            source_id="huggingface_blog",
+            source_name="Hugging Face Blog",
+            source_type="research",
+            category_hint="大模型动态",
+            title="Language-guided 3D motion forecasting",
+            url="https://example.com/research",
+            summary=None,
+            language="en",
+        )
+
+        self.assertGreater(rough_priority_score(glm), rough_priority_score(generic) + 15)
 
 def sample_digest(digest_date: str, selected_count: int) -> dict:
     return {

@@ -37,6 +37,53 @@ HIGH_VALUE_KEYWORDS = [
     "通胀",
 ]
 
+HOT_MODEL_KEYWORDS = [
+    "GLM",
+    "ChatGLM",
+    "Zhipu",
+    "智谱",
+    "Qwen",
+    "通义",
+    "DeepSeek",
+    "Kimi",
+    "Moonshot",
+    "MiniMax",
+    "StepFun",
+    "阶跃星辰",
+    "Doubao",
+    "豆包",
+    "ERNIE",
+    "文心",
+    "Hunyuan",
+    "混元",
+    "Baichuan",
+    "百川",
+    "Yi-Lightning",
+    "零一万物",
+]
+
+MODEL_RELEASE_CONTEXT = [
+    "release",
+    "launch",
+    "introduce",
+    "open-source",
+    "open source",
+    "built for",
+    "long-horizon",
+    "reasoning",
+    "agent",
+    "benchmark",
+    "model",
+    "发布",
+    "推出",
+    "开源",
+    "模型",
+    "推理",
+    "长周期",
+    "智能体",
+    "评测",
+]
+
 
 def rough_priority_score(candidate: ArticleCandidate) -> float:
     score = 45.0
@@ -45,9 +92,24 @@ def rough_priority_score(candidate: ArticleCandidate) -> float:
     for keyword in HIGH_VALUE_KEYWORDS:
         if keyword.lower() in text.lower():
             score += 4
+    score += hot_model_release_bonus(text)
     score += recency_bonus(candidate.published_at)
     score *= source_weight
     return min(round(score, 2), 100.0)
+
+
+def hot_model_release_bonus(text: str) -> float:
+    lowered = text.lower()
+    has_hot_model = any(keyword.lower() in lowered for keyword in HOT_MODEL_KEYWORDS)
+    if not has_hot_model:
+        return 0.0
+
+    bonus = 8.0
+    if any(keyword.lower() in lowered for keyword in MODEL_RELEASE_CONTEXT):
+        bonus += 4.0
+    if "glm-5.2" in lowered or "glm 5.2" in lowered or "glm5.2" in lowered:
+        bonus += 6.0
+    return bonus
 
 
 def recency_bonus(published_at: str | None) -> float:
@@ -67,4 +129,3 @@ def recency_bonus(published_at: str | None) -> float:
     if age_hours <= 168:
         return 5.0
     return 0.0
-
