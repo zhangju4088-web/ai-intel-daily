@@ -1,0 +1,14 @@
+name = "ai-intel-auth-refresh"
+main = "src/index.js"
+compatibility_date = "2026-06-18"
+
+kv_namespaces = [
+  { binding = "AUTH_KV", id = "REPLACE_WITH_KV_NAMESPACE_ID" }
+]
+
+[vars]
+ALLOWED_ORIGIN = "https://zhangju4088-web.github.io"
+GITHUB_OWNER = "zhangju4088-web"
+GITHUB_REPO = "ai-intel-daily"
+GITHUB_WORKFLOW = "pages-digest.yml"
+ADMIN_USERNAME = "admin"

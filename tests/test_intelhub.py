@@ -127,6 +127,19 @@ class IntelHubTest(unittest.TestCase):
         self.assertIn('"password_sha256": "abc123"', rendered)
         self.assertIn("https://refresh.example.com/run", rendered)
 
+    def test_render_api_auth_user_management_controls(self) -> None:
+        with patch.dict("os.environ", {"SITE_AUTH_API_URL": "https://auth.example.com"}):
+            rendered = render_digest_html(sample_digest("2026-06-18", 1))
+
+        self.assertIn('"mode": "api"', rendered)
+        self.assertIn('"api_url": "https://auth.example.com"', rendered)
+        self.assertIn('id="adminUsersButton"', rendered)
+        self.assertIn("用户管理", rendered)
+        self.assertIn('id="passwordForm"', rendered)
+        self.assertIn("修改密码", rendered)
+        self.assertIn("/admin/users", rendered)
+        self.assertIn("/password", rendered)
+
     def test_fetch_filters_navigation_text(self) -> None:
         self.assertTrue(is_navigation_text("Subscribe to RSS"))
         self.assertTrue(is_navigation_text("Back to Home"))

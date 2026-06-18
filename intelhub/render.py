@@ -157,6 +157,27 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       font-size: 12px;
       min-height: 16px;
     }}
+    .account-bar {{
+      display: none;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 13px;
+    }}
+    .account-bar[data-visible="true"] {{ display: flex; }}
+    .mini-btn {{
+      min-height: 28px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 10px;
+      color: #cfe0f2;
+      background: rgba(8, 18, 32, .72);
+      font-size: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }}
+    .mini-btn:hover {{ border-color: var(--cyan); color: #fff; }}
     .tabs {{
       display: flex;
       gap: 8px;
@@ -322,6 +343,82 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       cursor: pointer;
     }}
     .auth-error {{ min-height: 18px; margin-top: 12px; color: #fecaca; font-size: 13px; }}
+    .modal-screen {{
+      position: fixed;
+      inset: 0;
+      z-index: 45;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(3, 6, 11, .72);
+      backdrop-filter: blur(10px);
+    }}
+    .modal-screen[data-open="true"] {{ display: flex; }}
+    .modal-card {{
+      width: min(520px, 100%);
+      max-height: min(680px, 86vh);
+      overflow: auto;
+      border: 1px solid var(--line-strong);
+      border-radius: 10px;
+      background: rgba(7, 17, 32, .96);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, .38);
+      padding: 18px;
+    }}
+    .modal-head {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 10px;
+    }}
+    .modal-head h2 {{ font-size: 18px; }}
+    .modal-close {{
+      width: 30px;
+      height: 30px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(8, 18, 32, .72);
+      color: var(--text);
+      cursor: pointer;
+    }}
+    .form-grid {{ display: grid; gap: 10px; }}
+    .form-grid label {{ display: grid; gap: 5px; color: #b9d4ef; font-size: 13px; }}
+    .form-grid input,
+    .form-grid select {{
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 10px;
+      color: var(--text);
+      background: rgba(8, 18, 32, .82);
+      outline: none;
+    }}
+    .form-actions {{ display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }}
+    .primary-btn {{
+      min-height: 36px;
+      border: 1px solid rgba(94, 231, 255, .50);
+      border-radius: 8px;
+      padding: 6px 12px;
+      background: rgba(94, 231, 255, .16);
+      color: var(--text);
+      font-weight: 760;
+      cursor: pointer;
+    }}
+    .modal-note, .modal-status {{ color: var(--muted); font-size: 13px; }}
+    .modal-status {{ min-height: 18px; margin-top: 10px; }}
+    .user-list {{ display: grid; gap: 6px; margin-top: 14px; }}
+    .user-row {{
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      background: rgba(8, 18, 32, .54);
+      color: #cfe0f2;
+      font-size: 13px;
+    }}
     .hidden-json {{ display: none; }}
     @media (max-width: 720px) {{
       .wrap {{ padding: 0 14px; }}
@@ -379,6 +476,12 @@ def render_digest_html(digest: dict[str, Any]) -> str:
         <button id="refreshButton" class="refresh-btn" type="button">即时抓取</button>
       </div>
       <div id="refreshStatus" class="refresh-status"></div>
+      <div id="accountBar" class="account-bar" data-visible="false">
+        <span id="currentUserLabel"></span>
+        <button id="changePasswordButton" class="mini-btn" type="button">修改密码</button>
+        <button id="adminUsersButton" class="mini-btn" type="button" hidden>用户管理</button>
+        <button id="logoutButton" class="mini-btn" type="button">退出登录</button>
+      </div>
       <nav class="tabs" aria-label="栏目">
         <button class="tab" type="button" data-view="topics" aria-selected="true">今日选题池</button>
         {render_tab_buttons(categories)}
@@ -392,6 +495,43 @@ def render_digest_html(digest: dict[str, Any]) -> str:
     </div>
   </main>
   </div>
+  <section id="passwordModal" class="modal-screen" aria-label="修改密码">
+    <form id="passwordForm" class="modal-card">
+      <div class="modal-head">
+        <h2>修改密码</h2>
+        <button class="modal-close" type="button" data-close-modal="passwordModal">×</button>
+      </div>
+      <p class="modal-note">请输入旧密码和新密码。</p>
+      <div class="form-grid">
+        <label><span>旧密码</span><input id="oldPassword" type="password" autocomplete="current-password" required></label>
+        <label><span>新密码</span><input id="newPassword" type="password" autocomplete="new-password" minlength="8" required></label>
+      </div>
+      <div class="form-actions"><button class="primary-btn" type="submit">保存新密码</button></div>
+      <div id="passwordStatus" class="modal-status" role="alert"></div>
+    </form>
+  </section>
+  <section id="adminModal" class="modal-screen" aria-label="用户管理">
+    <div class="modal-card">
+      <div class="modal-head">
+        <h2>用户管理</h2>
+        <button class="modal-close" type="button" data-close-modal="adminModal">×</button>
+      </div>
+      <form id="adminUserForm" class="form-grid">
+        <label><span>新用户账号</span><input id="newUsername" autocomplete="off" required></label>
+        <label><span>初始密码</span><input id="newUserPassword" type="password" minlength="8" autocomplete="new-password" required></label>
+        <label>
+          <span>角色</span>
+          <select id="newUserRole">
+            <option value="user">普通用户</option>
+            <option value="admin">高级管理员</option>
+          </select>
+        </label>
+        <div class="form-actions"><button class="primary-btn" type="submit">新增用户</button></div>
+      </form>
+      <div id="adminStatus" class="modal-status" role="alert"></div>
+      <div id="userList" class="user-list"></div>
+    </div>
+  </section>
   <script id="site-config" class="hidden-json" type="application/json">{site_config_json}</script>
   <script id="digest-data" class="hidden-json" type="application/json">{digest_json}</script>
   <script>
@@ -400,9 +540,16 @@ def render_digest_html(digest: dict[str, Any]) -> str:
     const dateSelect = document.getElementById('dateSelect');
     const refreshButton = document.getElementById('refreshButton');
     const refreshStatus = document.getElementById('refreshStatus');
+    const accountBar = document.getElementById('accountBar');
+    const currentUserLabel = document.getElementById('currentUserLabel');
+    const changePasswordButton = document.getElementById('changePasswordButton');
+    const adminUsersButton = document.getElementById('adminUsersButton');
+    const logoutButton = document.getElementById('logoutButton');
     const tabs = Array.from(document.querySelectorAll('.tab'));
     const views = Array.from(document.querySelectorAll('.view'));
     let currentView = 'topics';
+    let currentUser = null;
+    let authToken = localStorage.getItem('intelhub-auth-token') || sessionStorage.getItem('intelhub-auth-token') || '';
 
     async function sha256(text) {{
       const data = new TextEncoder().encode(text);
@@ -410,17 +557,73 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       return Array.from(new Uint8Array(hash)).map(byte => byte.toString(16).padStart(2, '0')).join('');
     }}
 
-    function unlockApp(persist) {{
+    function authMode() {{
+      return (siteConfig.auth || {{}}).mode || 'static';
+    }}
+
+    function authApiUrl(path) {{
+      const base = ((siteConfig.auth || {{}}).api_url || '').replace(/\\/$/, '');
+      return base + path;
+    }}
+
+    async function apiRequest(path, options = {{}}) {{
+      const headers = Object.assign({{ 'content-type': 'application/json' }}, options.headers || {{}});
+      if (authToken) headers.authorization = `Bearer ${{authToken}}`;
+      const response = await fetch(authApiUrl(path), Object.assign({{}}, options, {{ headers }}));
+      const payload = await response.json().catch(() => ({{}}));
+      if (!response.ok) {{
+        throw new Error(payload.error || `HTTP ${{response.status}}`);
+      }}
+      return payload;
+    }}
+
+    function tokenStorage(persist) {{
+      return persist ? localStorage : sessionStorage;
+    }}
+
+    function setAuthToken(token, persist) {{
+      authToken = token || '';
+      localStorage.removeItem('intelhub-auth-token');
+      sessionStorage.removeItem('intelhub-auth-token');
+      if (token) tokenStorage(persist).setItem('intelhub-auth-token', token);
+    }}
+
+    function renderAccount(user) {{
+      currentUser = user || {{ username: 'admin', role: 'admin' }};
+      accountBar.dataset.visible = 'true';
+      currentUserLabel.textContent = `${{currentUser.username}} · ${{currentUser.role === 'admin' ? '高级管理员' : '普通用户'}}`;
+      adminUsersButton.hidden = currentUser.role !== 'admin';
+    }}
+
+    function unlockApp(persist, user) {{
       document.body.classList.remove('auth-required');
       if (persist) localStorage.setItem('intelhub-auth-ok', '1');
       sessionStorage.setItem('intelhub-auth-ok', '1');
+      renderAccount(user);
+    }}
+
+    function logout() {{
+      localStorage.removeItem('intelhub-auth-ok');
+      sessionStorage.removeItem('intelhub-auth-ok');
+      setAuthToken('', false);
+      currentUser = null;
+      location.reload();
     }}
 
     async function initAuth() {{
       const auth = siteConfig.auth || {{}};
       if (!auth.enabled) return;
-      if (localStorage.getItem('intelhub-auth-ok') === '1' || sessionStorage.getItem('intelhub-auth-ok') === '1') {{
-        unlockApp(false);
+      if (auth.mode === 'api' && authToken) {{
+        try {{
+          const me = await apiRequest('/me');
+          unlockApp(false, me.user);
+          return;
+        }} catch (error) {{
+          setAuthToken('', false);
+        }}
+      }}
+      if (auth.mode !== 'api' && (localStorage.getItem('intelhub-auth-ok') === '1' || sessionStorage.getItem('intelhub-auth-ok') === '1')) {{
+        unlockApp(false, {{ username: auth.username || 'admin', role: 'admin' }});
         return;
       }}
       document.body.classList.add('auth-required');
@@ -432,6 +635,24 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       form.addEventListener('submit', async event => {{
         event.preventDefault();
         error.textContent = '';
+        if (auth.mode === 'api') {{
+          try {{
+            const login = await fetch(authApiUrl('/login'), {{
+              method: 'POST',
+              headers: {{ 'content-type': 'application/json' }},
+              body: JSON.stringify({{ username: username.value.trim(), password: password.value }}),
+            }});
+            const payload = await login.json().catch(() => ({{}}));
+            if (!login.ok) throw new Error(payload.error || 'login_failed');
+            setAuthToken(payload.token, remember.checked);
+            unlockApp(remember.checked, payload.user);
+          }} catch (loginError) {{
+            error.textContent = '账号或密码不正确';
+            password.value = '';
+            password.focus();
+          }}
+          return;
+        }}
         const userOk = username.value.trim() === auth.username;
         const passwordOk = await sha256(password.value) === auth.password_sha256;
         if (!userOk || !passwordOk) {{
@@ -440,9 +661,30 @@ def render_digest_html(digest: dict[str, Any]) -> str:
           password.focus();
           return;
         }}
-        unlockApp(remember.checked);
+        unlockApp(remember.checked, {{ username: auth.username || 'admin', role: 'admin' }});
       }});
       username.focus();
+    }}
+
+    function openModal(id) {{
+      document.getElementById(id).dataset.open = 'true';
+    }}
+
+    function closeModal(id) {{
+      document.getElementById(id).dataset.open = 'false';
+    }}
+
+    async function loadUsers() {{
+      const userList = document.getElementById('userList');
+      userList.innerHTML = '';
+      if (authMode() !== 'api') {{
+        userList.innerHTML = '<div class="modal-note">当前是静态登录模式。部署 Cloudflare Worker 并配置 SITE_AUTH_API_URL 后，可在这里新增用户。</div>';
+        return;
+      }}
+      const payload = await apiRequest('/admin/users');
+      userList.innerHTML = payload.users.map(user => (
+        `<div class="user-row"><span>${{user.username}}</span><span>${{user.role === 'admin' ? '高级管理员' : '普通用户'}}</span></div>`
+      )).join('');
     }}
 
     function setView(name) {{
@@ -479,7 +721,8 @@ def render_digest_html(digest: dict[str, Any]) -> str:
     if (refreshButton) {{
       refreshButton.addEventListener('click', async () => {{
         const refresh = siteConfig.refresh || {{}};
-        if (!refresh.webhook_url) {{
+        const refreshUrl = refresh.webhook_url || (authMode() === 'api' ? authApiUrl('/refresh') : '');
+        if (!refreshUrl) {{
           refreshStatus.textContent = '未配置即时抓取接口，已打开 GitHub Actions 手动触发页面。';
           window.open(refresh.action_url, '_blank', 'noopener');
           return;
@@ -487,9 +730,11 @@ def render_digest_html(digest: dict[str, Any]) -> str:
         refreshButton.disabled = true;
         refreshStatus.textContent = '正在触发抓取...';
         try {{
-          const response = await fetch(refresh.webhook_url, {{
+          const headers = {{ 'content-type': 'application/json' }};
+          if (authToken) headers.authorization = `Bearer ${{authToken}}`;
+          const response = await fetch(refreshUrl, {{
             method: 'POST',
-            headers: {{ 'content-type': 'application/json' }},
+            headers,
             body: JSON.stringify({{ digest_date: {json.dumps(str(digest.get("digest_date", "")))}, source: 'site-button' }}),
           }});
           if (!response.ok) throw new Error('HTTP ' + response.status);
@@ -508,6 +753,74 @@ def render_digest_html(digest: dict[str, Any]) -> str:
         const details = summary.closest('details');
         details.open = !details.open;
       }});
+    }});
+    document.querySelectorAll('[data-close-modal]').forEach(button => {{
+      button.addEventListener('click', () => closeModal(button.dataset.closeModal));
+    }});
+    logoutButton.addEventListener('click', logout);
+    changePasswordButton.addEventListener('click', () => {{
+      document.getElementById('passwordStatus').textContent = authMode() === 'api'
+        ? ''
+        : '当前是静态登录模式。请在 GitHub Secrets 修改 SITE_AUTH_PASSWORD_SHA256 后重新发布。';
+      openModal('passwordModal');
+    }});
+    adminUsersButton.addEventListener('click', async () => {{
+      openModal('adminModal');
+      const status = document.getElementById('adminStatus');
+      status.textContent = '';
+      try {{
+        await loadUsers();
+      }} catch (error) {{
+        status.textContent = '用户列表读取失败。';
+      }}
+    }});
+    document.getElementById('passwordForm').addEventListener('submit', async event => {{
+      event.preventDefault();
+      const status = document.getElementById('passwordStatus');
+      if (authMode() !== 'api') {{
+        status.textContent = '当前是静态登录模式，暂不能在页面内修改密码。';
+        return;
+      }}
+      const oldPassword = document.getElementById('oldPassword');
+      const newPassword = document.getElementById('newPassword');
+      status.textContent = '正在保存...';
+      try {{
+        await apiRequest('/password', {{
+          method: 'PATCH',
+          body: JSON.stringify({{ old_password: oldPassword.value, new_password: newPassword.value }}),
+        }});
+        status.textContent = '密码已修改，请用新密码重新登录。';
+        oldPassword.value = '';
+        newPassword.value = '';
+        setTimeout(logout, 900);
+      }} catch (error) {{
+        status.textContent = '修改失败，请检查旧密码。';
+      }}
+    }});
+    document.getElementById('adminUserForm').addEventListener('submit', async event => {{
+      event.preventDefault();
+      const status = document.getElementById('adminStatus');
+      if (authMode() !== 'api') {{
+        status.textContent = '当前是静态登录模式。部署 Cloudflare Worker 后可新增用户。';
+        return;
+      }}
+      const username = document.getElementById('newUsername');
+      const password = document.getElementById('newUserPassword');
+      const role = document.getElementById('newUserRole');
+      status.textContent = '正在新增用户...';
+      try {{
+        await apiRequest('/admin/users', {{
+          method: 'POST',
+          body: JSON.stringify({{ username: username.value.trim(), password: password.value, role: role.value }}),
+        }});
+        status.textContent = '用户已新增。';
+        username.value = '';
+        password.value = '';
+        role.value = 'user';
+        await loadUsers();
+      }} catch (error) {{
+        status.textContent = '新增失败：账号可能已存在或权限不足。';
+      }}
     }});
 
     const canvas = document.getElementById('digital-bg');
@@ -564,7 +877,9 @@ def build_site_config() -> dict[str, Any]:
     if password and not password_hash:
         password_hash = hashlib.sha256(password.encode("utf-8")).hexdigest()
     username = os.getenv("SITE_AUTH_USERNAME", "").strip()
-    auth_enabled = bool(username and password_hash)
+    auth_api_url = os.getenv("SITE_AUTH_API_URL", "").strip().rstrip("/")
+    static_auth_enabled = bool(username and password_hash)
+    auth_enabled = bool(auth_api_url or static_auth_enabled)
     refresh_webhook_url = os.getenv("SITE_REFRESH_WEBHOOK_URL", "").strip()
     action_url = os.getenv(
         "SITE_REFRESH_ACTION_URL",
@@ -573,8 +888,10 @@ def build_site_config() -> dict[str, Any]:
     return {
         "auth": {
             "enabled": auth_enabled,
-            "username": username if auth_enabled else "",
-            "password_sha256": password_hash if auth_enabled else "",
+            "mode": "api" if auth_api_url else "static",
+            "api_url": auth_api_url,
+            "username": username if static_auth_enabled else "",
+            "password_sha256": password_hash if static_auth_enabled else "",
         },
         "refresh": {
             "webhook_url": refresh_webhook_url,
