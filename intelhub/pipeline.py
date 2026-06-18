@@ -152,6 +152,7 @@ def build_daily_digest(
     selected = select_top_events(events, top_per_category=top_per_category)
     localized_count = localize_selected_events(selected, summarize_with=summarize_with, digest_date=digest_date)
     apply_special_event_card_framing(selected)
+    supporting_link_count = enrich_event_reading_links(selected, analyses)
     topic_pool = build_topic_pool(selected)
     top10 = sorted(selected, key=lambda item: item.priority_score, reverse=True)[:10]
     log_progress(
@@ -182,6 +183,7 @@ def build_daily_digest(
             "selected_event_count": len(selected),
             "fetch_error_count": len(fetch_errors),
             "title_localized_count": localized_count,
+            "supporting_link_count": supporting_link_count,
         },
         "fetch_errors": fetch_errors,
         "categories": {
@@ -663,9 +665,88 @@ def build_topic_pool(events: list[EventCard], *, limit: int = 10) -> list[dict[s
                 "why_today": event.one_sentence_summary,
                 "differentiation": event.avoid_angle,
                 "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+                "reading_links": [asdict(link) for link in event.reading_links],
             }
         )
     return topics
+
+
+def enrich_event_reading_links(events: list[EventCard], analyses: list[ArticleAnalysis], *, max_links: int = 4) -> int:
+    added = 0
+    analyses_by_score = sorted(analyses, key=lambda item: item.priority_score, reverse=True)
+    for event in events:
+        seen_urls = {link.url for link in event.reading_links}
+        seen_sources = {link.source_id for link in event.reading_links}
+        next_order = len(event.reading_links) + 1
+        for analysis in analyses_by_score:
+            if len(event.reading_links) >= max_links:
+                break
+            if analysis.candidate.url in seen_urls or analysis.candidate.source_id in seen_sources:
+                continue
+            if not should_attach_supporting_link(event, analysis):
+                continue
+            event.reading_links.append(
+                ReadingLink(
+                    source_id=analysis.candidate.source_id,
+                    source_name=analysis.candidate.source_name,
+                    source_type=analysis.candidate.source_type,
+                    source_role="related",
+                    original_title=analysis.candidate.title,
+                    url=analysis.candidate.url,
+                    published_at=analysis.candidate.published_at,
+                    link_label=analysis.candidate.source_name,
+                    is_primary_reading_link=False,
+                    display_order=next_order,
+                )
+            )
+            seen_urls.add(analysis.candidate.url)
+            seen_sources.add(analysis.candidate.source_id)
+            next_order += 1
+            added += 1
+        event.source_count = len({link.source_id for link in event.reading_links})
+        event.source_types = sorted({link.source_type for link in event.reading_links})
+    return added
+
+
+def should_attach_supporting_link(event: EventCard, analysis: ArticleAnalysis) -> bool:
+    if event.category != analysis.category:
+        return False
+    event_text = event_relation_text(event)
+    analysis_text = analysis_merge_text(analysis)
+    if is_glm52_coding_breakthrough(event_text) and is_glm52_coding_breakthrough(analysis_text):
+        return True
+    if normalized_model_versions(event_text) & normalized_model_versions(analysis_text):
+        return True
+    event_terms = title_terms(event_text)
+    analysis_terms = title_terms(analysis_text)
+    if not event_terms or not analysis_terms:
+        return False
+    overlap = len(event_terms & analysis_terms) / len(event_terms | analysis_terms)
+    shared = event_terms & analysis_terms
+    return overlap >= 0.34 or (len(shared) >= 2 and has_named_entity_overlap(shared))
+
+
+def event_relation_text(event: EventCard) -> str:
+    return " ".join(
+        [
+            event.ai_title,
+            event.one_sentence_summary,
+            event.detailed_summary,
+            event.topic_angle,
+            " ".join(event.key_points),
+            " ".join(link.original_title for link in event.reading_links),
+        ]
+    )
+
+
+def normalized_model_versions(text: str) -> set[str]:
+    lowered = text.lower()
+    versions = set(re.findall(r"\b[a-z]{2,}[- ]?\d+(?:\.\d+)+\b", lowered))
+    return {re.sub(r"\s+", "-", item) for item in versions}
+
+
+def has_named_entity_overlap(terms: set[str]) -> bool:
+    return any(re.search(r"[a-z]", term) and len(term) >= 4 for term in terms)
 
 
 def build_reading_links(bucket: list[ArticleAnalysis], primary: ArticleAnalysis) -> list[ReadingLink]:

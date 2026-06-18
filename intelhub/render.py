@@ -115,14 +115,32 @@ def render_digest_html(digest: dict[str, Any]) -> str:
     }}
     .search::placeholder {{ color: #6f849d; }}
     .search:focus {{ border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(94, 231, 255, .12); }}
-    .tabs, .dates {{
+    .controls {{
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 190px;
+      gap: 10px;
+      align-items: center;
+    }}
+    .date-select {{
+      width: 100%;
+      height: 38px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 10px;
+      color: var(--text);
+      background: rgba(8, 18, 32, .76);
+      font-size: 14px;
+      outline: none;
+    }}
+    .date-select:focus {{ border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(94, 231, 255, .12); }}
+    .tabs {{
       display: flex;
       gap: 8px;
       overflow-x: auto;
       padding-bottom: 2px;
       scrollbar-width: thin;
     }}
-    .tab, .date-link {{
+    .tab {{
       flex: 0 0 auto;
       border: 1px solid var(--line);
       border-radius: 999px;
@@ -135,7 +153,7 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       cursor: pointer;
       white-space: nowrap;
     }}
-    .tab[aria-selected="true"], .date-link.active {{
+    .tab[aria-selected="true"] {{
       border-color: var(--cyan);
       color: #fff;
       background: var(--cyan-soft);
@@ -234,6 +252,7 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       .wrap {{ padding: 0 14px; }}
       .topline {{ align-items: flex-start; flex-direction: column; }}
       .stats {{ justify-content: flex-start; }}
+      .controls {{ grid-template-columns: 1fr; }}
       h1 {{ font-size: 23px; }}
       .item summary {{ grid-template-columns: 40px minmax(0, 1fr); }}
       .side {{ grid-column: 2; }}
@@ -258,11 +277,13 @@ def render_digest_html(digest: dict[str, Any]) -> str:
           <span class="stat">精选 {stats.get("selected_event_count", 0)}</span>
         </div>
       </div>
-      <input id="searchInput" class="search" type="search" placeholder="搜索当前视图">
+      <div class="controls">
+        <input id="searchInput" class="search" type="search" placeholder="搜索当前视图">
+        {render_date_select(archive_entries, digest_date)}
+      </div>
       <nav class="tabs" aria-label="栏目">
         <button class="tab" type="button" data-view="topics" aria-selected="true">今日选题池</button>
         {render_tab_buttons(categories)}
-        <button class="tab" type="button" data-view="archive">归档</button>
       </nav>
     </div>
   </header>
@@ -270,12 +291,12 @@ def render_digest_html(digest: dict[str, Any]) -> str:
     <div class="wrap">
       {render_topics_view(digest.get("topic_pool", []))}
       {''.join(render_category_view(category, events) for category, events in categories.items())}
-      {render_archive_view(archive_entries, digest_date)}
     </div>
   </main>
   <script id="digest-data" class="hidden-json" type="application/json">{digest_json}</script>
   <script>
     const input = document.getElementById('searchInput');
+    const dateSelect = document.getElementById('dateSelect');
     const tabs = Array.from(document.querySelectorAll('.tab'));
     const views = Array.from(document.querySelectorAll('.view'));
     let currentView = 'topics';
@@ -303,6 +324,14 @@ def render_digest_html(digest: dict[str, Any]) -> str:
       }});
     }}
     input.addEventListener('input', applySearch);
+    if (dateSelect) {{
+      dateSelect.addEventListener('change', () => {{
+        const date = dateSelect.value;
+        if (!date || date === {json.dumps(str(digest.get("digest_date", "")))}) return;
+        const inArchive = /\\/archive\\/\\d{{4}}-\\d{{2}}-\\d{{2}}\\/?/.test(location.pathname);
+        location.href = inArchive ? `../${{date}}/` : `archive/${{date}}/`;
+      }});
+    }}
 
     document.querySelectorAll('.item summary').forEach(summary => {{
       summary.addEventListener('click', event => {{
@@ -366,6 +395,23 @@ def render_tab_buttons(categories: dict[str, list[dict[str, Any]]]) -> str:
     )
 
 
+def render_date_select(entries: list[dict[str, Any]], current_date: str) -> str:
+    if not entries:
+        entries = [{"date": current_date}]
+    options = []
+    seen: set[str] = set()
+    for item in entries:
+        date = str(item.get("date", "")).strip()
+        if not date or date in seen:
+            continue
+        seen.add(date)
+        selected = " selected" if date == current_date else ""
+        options.append(f'<option value="{html.escape(date, quote=True)}"{selected}>{html.escape(date)}</option>')
+    if current_date and current_date not in seen:
+        options.insert(0, f'<option value="{html.escape(current_date, quote=True)}" selected>{html.escape(current_date)}</option>')
+    return f'<select id="dateSelect" class="date-select" aria-label="选择日期">{"".join(options)}</select>'
+
+
 def render_topics_view(topics: list[dict[str, Any]]) -> str:
     rows = []
     for topic in topics[:12]:
@@ -375,6 +421,7 @@ def render_topics_view(topics: list[dict[str, Any]]) -> str:
         diff = html.escape(str(topic.get("differentiation", "")))
         rank = html.escape(str(topic.get("rank", "")))
         search = html.escape(" ".join([title, argument, why, diff]), quote=True)
+        links = render_links(topic.get("reading_links", []))
         rows.append(
             f"""
             <details class="item" data-search="{search}" data-hidden="false">
@@ -387,6 +434,7 @@ def render_topics_view(topics: list[dict[str, Any]]) -> str:
                 <p class="summary">{argument}</p>
                 <p class="why">{why}</p>
                 <p class="why"><strong>差异化：</strong>{diff}</p>
+                <div class="links">{links}</div>
               </div>
             </details>
             """
@@ -397,27 +445,6 @@ def render_topics_view(topics: list[dict[str, Any]]) -> str:
 def render_category_view(category: str, events: list[dict[str, Any]]) -> str:
     rows = [render_event(event) for event in events]
     return render_view(slug(category), category, rows, len(events))
-
-
-def render_archive_view(entries: list[dict[str, Any]], current_date: str) -> str:
-    if not entries:
-        entries = [{"date": current_date, "url": "./", "selected_event_count": ""}]
-    rows = []
-    for item in entries:
-        date = html.escape(str(item.get("date", "")))
-        url = html.escape(str(item.get("url") or "./"), quote=True)
-        count = html.escape(str(item.get("selected_event_count", "")))
-        active = " active" if date == current_date else ""
-        rows.append(f'<a class="date-link{active}" href="{url}">{date} · {count}条</a>')
-    return f"""
-    <section class="view" data-view="archive">
-      <div class="view-head">
-        <h2>归档日期</h2>
-        <span class="count">可上下滑动页面，也可左右滑动日期</span>
-      </div>
-      <div class="dates">{''.join(rows)}</div>
-    </section>
-    """
 
 
 def render_view(view_id: str, title: str, rows: list[str], total: int, *, active: bool = False) -> str:

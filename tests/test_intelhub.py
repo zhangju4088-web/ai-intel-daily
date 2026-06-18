@@ -8,7 +8,8 @@ from pathlib import Path
 from intelhub.config import Source
 from intelhub.models import ArticleCandidate
 from intelhub.fetch import is_navigation_text
-from intelhub.pipeline import choose_extraction_indexes, local_analysis, merge_analyses
+from intelhub.pipeline import build_topic_pool, choose_extraction_indexes, enrich_event_reading_links, local_analysis, merge_analyses
+from intelhub.render import render_digest_html
 from intelhub.scoring import priority_score_breakdown, rough_priority_score
 from intelhub.site import publish_static_site
 
@@ -76,6 +77,20 @@ class IntelHubTest(unittest.TestCase):
 
             archive_json = (site_dir / "archive" / "index.json").read_text(encoding="utf-8")
             self.assertLess(archive_json.find("2026-06-15"), archive_json.find("2026-06-14"))
+
+    def test_render_uses_date_picker_instead_of_archive_tab(self) -> None:
+        digest = sample_digest("2026-06-18", 1)
+        digest["archive_entries"] = [
+            {"date": "2026-06-18", "url": "archive/2026-06-18/", "selected_event_count": 1},
+            {"date": "2026-06-17", "url": "archive/2026-06-17/", "selected_event_count": 1},
+        ]
+
+        rendered = render_digest_html(digest)
+
+        self.assertIn('id="dateSelect"', rendered)
+        self.assertIn("2026-06-17", rendered)
+        self.assertNotIn('data-view="archive"', rendered)
+        self.assertNotIn(">归档</button>", rendered)
 
     def test_fetch_filters_navigation_text(self) -> None:
         self.assertTrue(is_navigation_text("Subscribe to RSS"))
@@ -210,6 +225,53 @@ class IntelHubTest(unittest.TestCase):
         self.assertEqual(len(events), 1)
         self.assertEqual(events[0].source_count, 2)
         self.assertEqual(len(events[0].reading_links), 2)
+
+    def test_supporting_links_are_added_to_related_event(self) -> None:
+        primary = ArticleCandidate(
+            source_id="openai_news",
+            source_name="OpenAI News",
+            source_type="official",
+            category_hint="大模型动态",
+            title="OpenAI releases GPT-5.5 coding benchmark results",
+            url="https://openai.com/gpt-55-coding",
+            summary="GPT-5.5 improves coding benchmark results.",
+            language="en",
+        )
+        supporting = ArticleCandidate(
+            source_id="techcrunch_ai",
+            source_name="TechCrunch AI",
+            source_type="media",
+            category_hint="大模型动态",
+            title="GPT-5.5 coding benchmarks show OpenAI gains",
+            url="https://techcrunch.com/gpt-55-coding",
+            summary="Coverage of GPT-5.5 coding benchmarks and developer impact.",
+            language="en",
+        )
+        analyses = [local_analysis(primary, None), local_analysis(supporting, None)]
+        events = merge_analyses([analyses[0]], digest_date=date(2026, 6, 18))
+
+        added = enrich_event_reading_links(events, analyses)
+
+        self.assertEqual(added, 1)
+        self.assertEqual(events[0].source_count, 2)
+        self.assertEqual(len(events[0].reading_links), 2)
+
+    def test_topic_pool_carries_reading_links(self) -> None:
+        candidate = ArticleCandidate(
+            source_id="openai_news",
+            source_name="OpenAI News",
+            source_type="official",
+            category_hint="大模型动态",
+            title="OpenAI releases GPT-5.5 coding benchmark results",
+            url="https://openai.com/gpt-55-coding",
+            summary="GPT-5.5 improves coding benchmark results.",
+            language="en",
+        )
+        events = merge_analyses([local_analysis(candidate, None)], digest_date=date(2026, 6, 18))
+
+        topics = build_topic_pool(events)
+
+        self.assertEqual(topics[0]["reading_links"][0]["url"], "https://openai.com/gpt-55-coding")
 
     def test_source_weight_affects_priority_score(self) -> None:
         title = "NVIDIA Blackwell benchmark shows stronger AI training performance"
