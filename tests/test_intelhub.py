@@ -139,6 +139,20 @@ class IntelHubTest(unittest.TestCase):
 
         self.assertGreater(rough_priority_score(glm), rough_priority_score(generic) + 15)
 
+    def test_hot_model_release_still_ranks_high_without_timestamp(self) -> None:
+        candidate = ArticleCandidate(
+            source_id="qbitai_site",
+            source_name="量子位",
+            source_type="media",
+            category_hint="AI行业资讯",
+            title="智谱开源GLM-5.2登顶AI编程榜首",
+            url="https://www.qbitai.com/2026/06/436085.html",
+            summary=None,
+            language="zh",
+        )
+
+        self.assertGreaterEqual(rough_priority_score(candidate), 75)
+
 def sample_digest(digest_date: str, selected_count: int) -> dict:
     return {
         "digest_date": digest_date,

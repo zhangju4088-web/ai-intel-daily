@@ -73,6 +73,7 @@ MODEL_RELEASE_CONTEXT = [
     "reasoning",
     "agent",
     "benchmark",
+    "leaderboard",
     "model",
     "发布",
     "推出",
@@ -82,6 +83,18 @@ MODEL_RELEASE_CONTEXT = [
     "长周期",
     "智能体",
     "评测",
+    "榜首",
+    "登顶",
+    "第一",
+]
+
+MODEL_LEADERBOARD_CONTEXT = [
+    "leaderboard",
+    "top",
+    "rank",
+    "榜首",
+    "登顶",
+    "第一",
 ]
 
 
@@ -108,7 +121,9 @@ def hot_model_release_bonus(text: str) -> float:
     if any(keyword.lower() in lowered for keyword in MODEL_RELEASE_CONTEXT):
         bonus += 4.0
     if "glm-5.2" in lowered or "glm 5.2" in lowered or "glm5.2" in lowered:
-        bonus += 6.0
+        bonus += 12.0
+    if any(keyword.lower() in lowered for keyword in MODEL_LEADERBOARD_CONTEXT):
+        bonus += 4.0
     return bonus
 
 
