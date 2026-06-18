@@ -2,8 +2,10 @@ name: Publish Daily Digest to GitHub Pages
 
 on:
   schedule:
-    # Beijing 08:00 = UTC 00:00
-    - cron: "0 0 * * *"
+    # Beijing 08:17 = UTC 00:17. Avoid the top-of-hour GitHub Actions rush.
+    - cron: "17 0 * * *"
+    # Beijing 08:47 backup trigger. The build step skips this if today's archive already exists.
+    - cron: "47 0 * * *"
   workflow_dispatch:
     inputs:
       digest_date:
@@ -55,13 +57,18 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p outputs public
+          digest_date="${DIGEST_DATE:-$(TZ=Asia/Shanghai date +%F)}"
           date_args=()
-          if [ -n "${DIGEST_DATE:-}" ]; then
-            date_args=(--date "${DIGEST_DATE}")
+          if [ -n "${digest_date}" ]; then
+            date_args=(--date "${digest_date}")
+          fi
+          if [ "${GITHUB_EVENT_NAME}" = "schedule" ] && [ -f "public/archive/${digest_date}/daily-digest.json" ]; then
+            echo "Archive for ${digest_date} already exists; skipping backup scheduled build."
+            exit 0
           fi
           extract_limit="${EXTRACT_LIMIT_INPUT:-16}"
           echo "::group::Digest settings"
-          echo "digest_date=${DIGEST_DATE:-today}"
+          echo "digest_date=${digest_date}"
           echo "extract_limit=${extract_limit}"
           echo "deepseek=$([ -n "${DEEPSEEK_API_KEY:-}" ] && echo enabled || echo disabled)"
           echo "fetch_timeout=${FETCH_TIMEOUT_SECONDS}s extract_timeout=${EXTRACT_TIMEOUT_SECONDS}s deepseek_timeout=${DEEPSEEK_TIMEOUT_SECONDS}s"
@@ -92,7 +99,7 @@ jobs:
           if git diff --cached --quiet; then
             echo "No public archive changes to commit"
           else
-            git commit -m "chore: update daily digest archive [skip ci]"
+            git commit -m "chore: update daily digest archive"
             git push
           fi
 
