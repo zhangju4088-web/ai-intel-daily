@@ -84,6 +84,10 @@ class IntelHubTest(unittest.TestCase):
 
             archive_json = (site_dir / "archive" / "index.json").read_text(encoding="utf-8")
             self.assertLess(archive_json.find("2026-06-15"), archive_json.find("2026-06-14"))
+            old_archive_html = (site_dir / "archive" / "2026-06-14" / "index.html").read_text(encoding="utf-8")
+            self.assertIn('id="dateSelect"', old_archive_html)
+            self.assertIn("2026-06-15", old_archive_html)
+            self.assertNotIn(">归档</button>", old_archive_html)
 
     def test_render_uses_date_picker_instead_of_archive_tab(self) -> None:
         digest = sample_digest("2026-06-18", 1)

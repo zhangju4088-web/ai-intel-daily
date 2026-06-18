@@ -6,237 +6,254 @@
   <title>AI 情报日报 2026-06-14</title>
   <style>
     :root {
-      --bg: #f6f7f9;
-      --panel: #ffffff;
-      --text: #18212f;
-      --muted: #667085;
-      --line: #d7dde8;
-      --accent: #0f766e;
-      --accent-soft: #e8f5f2;
-      --violet: #6d28d9;
-      --violet-soft: #f4f0ff;
-      --red: #b42318;
-      --yellow: #f7f0d5;
-      --shadow: 0 1px 2px rgba(16, 24, 40, .05);
+      --bg: #050912;
+      --panel: rgba(7, 17, 32, .82);
+      --panel-strong: rgba(10, 24, 44, .94);
+      --text: #e7f1ff;
+      --muted: #8da3bd;
+      --line: rgba(118, 154, 190, .22);
+      --line-strong: rgba(96, 214, 255, .30);
+      --cyan: #5ee7ff;
+      --cyan-soft: rgba(94, 231, 255, .10);
+      --green: #60f0b7;
+      --violet: #a78bfa;
     }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(20, 184, 166, .16), transparent 34%),
+        radial-gradient(circle at 80% 12%, rgba(59, 130, 246, .14), transparent 30%),
+        linear-gradient(180deg, #06111f 0%, #050912 52%, #03060b 100%);
       color: var(--text);
       line-height: 1.55;
+      overflow-x: hidden;
     }
-    a { color: inherit; }
+    #digital-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      pointer-events: none;
+    }
+    .grid-glow {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(94, 231, 255, .035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(94, 231, 255, .035) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 0 20px; }
     header {
       position: sticky;
       top: 0;
-      z-index: 20;
-      background: rgba(255, 255, 255, .96);
+      z-index: 10;
+      background: rgba(4, 9, 18, .82);
       border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(10px);
+      backdrop-filter: blur(14px);
     }
-    .header-inner {
-      max-width: 1220px;
-      margin: 0 auto;
-      padding: 18px 24px 16px;
+    .head {
+      padding: 18px 0 12px;
+      display: grid;
+      gap: 12px;
     }
-    .title-row {
+    .topline {
       display: flex;
-      align-items: flex-end;
+      align-items: end;
       justify-content: space-between;
-      gap: 16px;
+      gap: 14px;
     }
-    h1 { margin: 0; font-size: 26px; line-height: 1.2; letter-spacing: 0; }
-    h2 { margin: 30px 0 12px; font-size: 21px; letter-spacing: 0; }
-    h3 { margin: 0; font-size: 17px; line-height: 1.38; letter-spacing: 0; }
-    .meta { color: var(--muted); font-size: 13px; }
-    .stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
+    h1 {
+      margin: 0 0 4px;
+      font-size: 26px;
+      line-height: 1.18;
+      letter-spacing: 0;
     }
+    .sub { color: var(--muted); font-size: 13px; }
+    .stats { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 7px; }
     .stat {
+      min-height: 28px;
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
       border: 1px solid var(--line);
       border-radius: 999px;
-      padding: 4px 9px;
-      color: var(--muted);
-      font-size: 13px;
-      background: #fff;
+      color: #b9d4ef;
+      background: rgba(9, 22, 40, .62);
+      font-size: 12px;
       white-space: nowrap;
-    }
-    .toolbar {
-      display: grid;
-      grid-template-columns: minmax(220px, 1fr) auto;
-      gap: 12px;
-      margin-top: 16px;
-      align-items: center;
     }
     .search {
       width: 100%;
-      min-height: 40px;
+      height: 38px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 9px 12px;
+      padding: 8px 11px;
       color: var(--text);
-      background: #fff;
+      background: rgba(8, 18, 32, .76);
       font-size: 14px;
       outline: none;
     }
-    .search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(15, 118, 110, .12); }
-    .nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
-    }
-    .nav a, .small-link {
-      text-decoration: none;
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 7px 10px;
-      background: #fff;
-      color: #344054;
-      font-size: 13px;
-      white-space: nowrap;
-    }
-    main { max-width: 1220px; margin: 0 auto; padding: 22px 24px 36px; }
-    .section-head {
-      display: flex;
+    .search::placeholder { color: #6f849d; }
+    .search:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(94, 231, 255, .12); }
+    .controls {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 190px;
+      gap: 10px;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
     }
-    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-    .compact-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
-    .card {
-      background: var(--panel);
+    .date-select {
+      width: 100%;
+      height: 38px;
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 15px;
-      box-shadow: var(--shadow);
+      padding: 7px 10px;
+      color: var(--text);
+      background: rgba(8, 18, 32, .76);
+      font-size: 14px;
+      outline: none;
     }
-    .event-card[data-hidden="true"] { display: none; }
-    .event-top {
+    .date-select:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(94, 231, 255, .12); }
+    .tabs {
       display: flex;
-      align-items: flex-start;
-      gap: 9px;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+      scrollbar-width: thin;
     }
-    .score {
+    .tab {
       flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(8, 18, 32, .72);
+      color: #b9d4ef;
+      min-height: 32px;
+      padding: 6px 10px;
+      font-size: 13px;
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .tab[aria-selected="true"] {
+      border-color: var(--cyan);
+      color: #fff;
+      background: var(--cyan-soft);
+    }
+    main { padding: 18px 0 40px; }
+    .view { display: none; }
+    .view.active { display: block; }
+    .view-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 8px 0 10px;
+    }
+    h2 { margin: 0; font-size: 19px; letter-spacing: 0; }
+    .count { color: var(--muted); font-size: 13px; }
+    .list { display: flex; flex-direction: column; gap: 8px; }
+    .item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      overflow: hidden;
+    }
+    .item[data-hidden="true"] { display: none; }
+    .item[open] { border-color: var(--line-strong); background: var(--panel-strong); }
+    .item summary {
+      display: grid;
+      grid-template-columns: 44px minmax(0, 1fr) auto;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      cursor: pointer;
+      list-style: none;
+    }
+    .item summary::-webkit-details-marker { display: none; }
+    .score {
+      width: 40px;
+      height: 26px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 45px;
-      height: 26px;
       border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 13px;
-    }
-    .badge-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      border: 1px solid #e4e7ec;
-      border-radius: 999px;
-      padding: 2px 8px;
-      color: var(--muted);
-      background: #fff;
+      border: 1px solid rgba(94, 231, 255, .30);
+      background: var(--cyan-soft);
+      color: var(--cyan);
+      font-weight: 800;
       font-size: 12px;
     }
-    .summary { margin: 10px 0 0; }
-    .details { color: #344054; font-size: 14px; margin: 8px 0 0; }
-    .key-points {
-      margin: 10px 0 0;
-      padding-left: 18px;
-      color: #344054;
-      font-size: 14px;
-    }
-    .key-points li { margin: 3px 0; }
-    details {
-      margin-top: 10px;
-      border-top: 1px solid #edf0f5;
-      padding-top: 9px;
-    }
-    summary { cursor: pointer; color: var(--muted); font-size: 13px; }
-    .links { margin-top: 9px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .links a {
-      color: var(--violet);
-      text-decoration: none;
-      border: 1px solid #ddd6fe;
-      border-radius: 999px;
-      padding: 4px 9px;
-      font-size: 13px;
-      background: var(--violet-soft);
-      max-width: 100%;
+    .title {
+      min-width: 0;
+      font-size: 16px;
+      font-weight: 680;
+      line-height: 1.36;
       overflow-wrap: anywhere;
     }
-    .topic-list {
-      margin: 0;
-      background: #fff;
-      border: 1px solid var(--line);
-      border-radius: 8px;
-      padding: 14px 18px 14px 34px;
-      box-shadow: var(--shadow);
+    .side {
+      color: var(--muted);
+      font-size: 12px;
+      white-space: nowrap;
     }
-    .topic-list li { margin: 8px 0; }
-    .rank-card {
-      min-height: 132px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    .body { padding: 0 12px 12px 66px; color: #cfe0f2; }
+    .summary { margin: 0; color: #dbeafe; }
+    .why { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .badge {
+      display: inline-flex;
+      border: 1px solid rgba(141, 163, 189, .24);
+      border-radius: 999px;
+      padding: 2px 8px;
+      color: #a9bdd3;
+      font-size: 12px;
+    }
+    .points { margin: 10px 0 0; padding-left: 18px; color: #c5d5e8; font-size: 14px; }
+    .points li { margin: 3px 0; }
+    .links { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 11px; }
+    .links a {
+      max-width: 100%;
+      overflow-wrap: anywhere;
+      padding: 4px 9px;
+      border: 1px solid rgba(167, 139, 250, .36);
+      border-radius: 999px;
+      background: rgba(88, 54, 168, .18);
+      color: #ddd6fe;
       text-decoration: none;
-    }
-    .rank {
-      color: var(--accent);
-      font-weight: 700;
       font-size: 13px;
     }
-    .warning {
-      background: var(--yellow);
-      border: 1px solid #ead99b;
-      border-radius: 8px;
-      padding: 12px 14px;
-      color: #5f4b00;
-      font-size: 14px;
-    }
     .empty {
-      background: #fff;
+      padding: 16px;
       border: 1px dashed var(--line);
       border-radius: 8px;
-      padding: 16px;
       color: var(--muted);
-      font-size: 14px;
+      background: rgba(8, 18, 32, .52);
     }
     .hidden-json { display: none; }
-    @media (max-width: 980px) {
-      .compact-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-      .title-row { align-items: flex-start; flex-direction: column; }
+    @media (max-width: 720px) {
+      .wrap { padding: 0 14px; }
+      .topline { align-items: flex-start; flex-direction: column; }
       .stats { justify-content: flex-start; }
-    }
-    @media (max-width: 800px) {
-      .header-inner { padding: 16px; }
-      main { padding: 16px; }
-      .toolbar { grid-template-columns: 1fr; }
-      .nav { justify-content: flex-start; }
-      .grid { grid-template-columns: 1fr; }
-      .compact-grid { grid-template-columns: 1fr; }
+      .controls { grid-template-columns: 1fr; }
       h1 { font-size: 23px; }
-      h2 { font-size: 19px; }
+      .item summary { grid-template-columns: 40px minmax(0, 1fr); }
+      .side { grid-column: 2; }
+      .body { padding: 0 12px 12px 12px; }
     }
   </style>
 </head>
 <body>
+  <canvas id="digital-bg" aria-hidden="true"></canvas>
+  <div class="grid-glow" aria-hidden="true"></div>
   <header>
-    <div class="header-inner">
-      <div class="title-row">
+    <div class="wrap head">
+      <div class="topline">
         <div>
           <h1>AI 情报日报 2026-06-14</h1>
-          <div class="meta">每天 08:00 自动更新。内容卡片聚合多个来源，带 * 的链接为主事实来源。</div>
+          <div class="sub">主页只看今日选题池。切换栏目查看对应情报。</div>
         </div>
         <div class="stats">
           <span class="stat">候选 4</span>
@@ -245,238 +262,287 @@
           <span class="stat">精选 4</span>
         </div>
       </div>
-      <div class="toolbar">
-        <input id="searchInput" class="search" type="search" placeholder="搜索标题、摘要、来源、选题角度">
-        <nav class="nav">
-          <a href="#top10">Top 10</a>
-          <a href="#topics">选题池</a>
-          <a href="#models">大模型动态</a><a href="#industry">AI行业资讯</a><a href="#geopolitics">国际形势影响</a><a href="#finance">国际金融</a>
-          <a href="daily-digest.json" target="_blank" rel="noopener noreferrer">JSON</a>
-        </nav>
+      <div class="controls">
+        <input id="searchInput" class="search" type="search" placeholder="搜索当前视图">
+        <select id="dateSelect" class="date-select" aria-label="选择日期"><option value="2026-06-18">2026-06-18</option><option value="2026-06-17">2026-06-17</option><option value="2026-06-16">2026-06-16</option><option value="2026-06-15">2026-06-15</option><option value="2026-06-14" selected>2026-06-14</option></select>
       </div>
+      <nav class="tabs" aria-label="栏目">
+        <button class="tab" type="button" data-view="topics" aria-selected="true">今日选题池</button>
+        <button class="tab" type="button" data-view="models">大模型动态</button><button class="tab" type="button" data-view="industry">AI行业资讯</button><button class="tab" type="button" data-view="geopolitics">国际形势影响</button><button class="tab" type="button" data-view="finance">国际金融</button>
+      </nav>
     </div>
   </header>
   <main>
-    
-    
-    <section id="top10">
-      <div class="section-head">
-        <h2>全站 Top 10</h2>
-        <a class="small-link" href="#searchInput">搜索</a>
+    <div class="wrap">
+      
+    <section class="view active" data-view="topics">
+      <div class="view-head">
+        <h2>今日选题池</h2>
+        <span class="count">显示 <span data-visible-count>4</span> / 4</span>
       </div>
-      <div class="compact-grid">
-            <a class="card rank-card event-card" href="#event-f5f378ed-0dda-5dc6-b16e-348d9a11d68e" data-event-id="f5f378ed-0dda-5dc6-b16e-348d9a11d68e" data-category="大模型动态" data-search="大模型动态 Introducing the OpenAI Partner Network OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Introducing the OpenAI Partner Network 避免只复述消息本身，优先补充产业、政策或商业影响。 OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... OpenAI News official Introducing the OpenAI Partner Network" data-hidden="false">
-              <span class="rank">#1 · 大模型动态 · 76.8</span>
-              <strong>Introducing the OpenAI Partner Network</strong>
-              <span class="meta">OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...</span>
-            </a>
+      <div class="list">
+            <details class="item" data-search="从能力、成本和生态角度解读：Introducing the OpenAI Partner Network 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">1</span>
+                <span class="title">从能力、成本和生态角度解读：Introducing the OpenAI Partner Network</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+                <div class="links"></div>
+              </div>
+            </details>
             
-            <a class="card rank-card event-card" href="#event-b23d33f5-6032-5181-ac19-3a6bfe1cdd87" data-event-id="b23d33f5-6032-5181-ac19-3a6bfe1cdd87" data-category="大模型动态" data-search="大模型动态 New OpenAI Academy courses for the n... OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work 避免只复述消息本身，优先补充产业、政策或商业影响。 OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... OpenAI News official New OpenAI Academy courses for the next era of work" data-hidden="false">
-              <span class="rank">#2 · 大模型动态 · 70.8</span>
-              <strong>New OpenAI Academy courses for the n...</strong>
-              <span class="meta">OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...</span>
-            </a>
+            <details class="item" data-search="从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">2</span>
+                <span class="title">从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+                <p class="why">OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+                <div class="links"></div>
+              </div>
+            </details>
             
-            <a class="card rank-card event-card" href="#event-39f213cf-1f4c-5586-a852-5987bcc2ba62" data-event-id="39f213cf-1f4c-5586-a852-5987bcc2ba62" data-category="AI行业资讯" data-search="AI行业资讯 NVIDIA Blackwell Leads on First Agen... AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr... AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […] 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark 避免只复述消息本身，优先补充产业、政策或商业影响。 AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr... In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros... NVIDIA Blog official NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark" data-hidden="false">
-              <span class="rank">#3 · AI行业资讯 · 70.8</span>
-              <strong>NVIDIA Blackwell Leads on First Agen...</strong>
-              <span class="meta">AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...</span>
-            </a>
+            <details class="item" data-search="从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">3</span>
+                <span class="title">从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+                <p class="why">AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+                <div class="links"></div>
+              </div>
+            </details>
             
-            <a class="card rank-card event-card" href="#event-642d2593-7184-5b45-86f0-12313a447ce3" data-event-id="642d2593-7184-5b45-86f0-12313a447ce3" data-category="AI行业资讯" data-search="AI行业资讯 Save Big and Play Bigger: GeForce NO... The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making... The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game. 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings 避免只复述消息本身，优先补充产业、政策或商业影响。 The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making... PC gamers are driven by one thing: the love of the game. NVIDIA Blog official Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings" data-hidden="false">
-              <span class="rank">#4 · AI行业资讯 · 60.0</span>
-              <strong>Save Big and Play Bigger: GeForce NO...</strong>
-              <span class="meta">The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...</span>
-            </a>
+            <details class="item" data-search="从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making... 避免只复述消息本身，优先补充产业、政策或商业影响。" data-hidden="false">
+              <summary>
+                <span class="score">4</span>
+                <span class="title">从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings</span>
+                <span class="side">展开</span>
+              </summary>
+              <div class="body">
+                <p class="summary">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+                <p class="why">The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...</p>
+                <p class="why"><strong>差异化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+                <div class="links"></div>
+              </div>
+            </details>
             </div>
     </section>
     
-    
-    <section id="topics">
-      <div class="section-head">
-        <h2>今日选题池</h2>
-        <a class="small-link" href="#top10">回到顶部</a>
-      </div>
-      <ol class="topic-list">
-            <li>
-              <strong>1. 从能力、成本和生态角度解读：Introducing the OpenAI Partner Network</strong>
-              <div class="meta">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</div>
-              <div class="meta">差异化：避免只复述消息本身，优先补充产业、政策或商业影响。</div>
-            </li>
-            
-            <li>
-              <strong>2. 从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work</strong>
-              <div class="meta">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</div>
-              <div class="meta">差异化：避免只复述消息本身，优先补充产业、政策或商业影响。</div>
-            </li>
-            
-            <li>
-              <strong>3. 从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark</strong>
-              <div class="meta">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</div>
-              <div class="meta">差异化：避免只复述消息本身，优先补充产业、政策或商业影响。</div>
-            </li>
-            
-            <li>
-              <strong>4. 从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings</strong>
-              <div class="meta">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</div>
-              <div class="meta">差异化：避免只复述消息本身，优先补充产业、政策或商业影响。</div>
-            </li>
-            </ol>
-    </section>
-    
-    
-    <section id="models">
-      <div class="section-head">
-        <h2>大模型动态 <span class="meta">Top <span data-visible-count="大模型动态">2</span> / 2</span></h2>
-        <a class="small-link" href="#top10">回到顶部</a>
-      </div>
       
-      <div class="grid">
-      <article id="event-f5f378ed-0dda-5dc6-b16e-348d9a11d68e" class="card event-card" data-event-id="f5f378ed-0dda-5dc6-b16e-348d9a11d68e" data-category="大模型动态" data-search="大模型动态 Introducing the OpenAI Partner Network OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Introducing the OpenAI Partner Network 避免只复述消息本身，优先补充产业、政策或商业影响。 OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... OpenAI News official Introducing the OpenAI Partner Network" data-hidden="false">
-        <div class="event-top">
-          <span class="score">76.8</span>
-          <h3>Introducing the OpenAI Partner Network</h3>
-        </div>
-        <div class="badge-row">
-          <span class="badge">来源 1</span>
-          <span class="badge">official</span>
-          <span class="badge">推荐写</span>
-        </div>
+    <section class="view" data-view="models">
+      <div class="view-head">
+        <h2>大模型动态</h2>
+        <span class="count">显示 <span data-visible-count>2</span> / 2</span>
+      </div>
+      <div class="list">
+    <details class="item" data-search="大模型｜OpenAI News：Introducing the OpenAI Partner Network Introducing the OpenAI Partner Network OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：Introducing the OpenAI Partner Network 避免只复述消息本身，优先补充产业、政策或商业影响。 OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo... OpenAI News official Introducing the OpenAI Partner Network" data-hidden="false">
+      <summary>
+        <span class="score">76.8</span>
+        <span class="title">大模型｜OpenAI News：Introducing the OpenAI Partner Network</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
         <p class="summary">OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...</p>
-        <p class="details">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
-        <ul class="key-points"><li>OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...</li></ul>
-        <details>
-          <summary>选题角度与阅读原文</summary>
-          <p class="details"><strong>选题角度：</strong>从能力、成本和生态角度解读：Introducing the OpenAI Partner Network</p>
-          <p class="details"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
-          <div class="links"><a href="https://openai.com/index/introducing-openai-partner-network" target="_blank" rel="noopener noreferrer">OpenAI News * · official</a></div>
-        </details>
-      </article>
-    
-      <article id="event-b23d33f5-6032-5181-ac19-3a6bfe1cdd87" class="card event-card" data-event-id="b23d33f5-6032-5181-ac19-3a6bfe1cdd87" data-category="大模型动态" data-search="大模型动态 New OpenAI Academy courses for the n... OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work 避免只复述消息本身，优先补充产业、政策或商业影响。 OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... OpenAI News official New OpenAI Academy courses for the next era of work" data-hidden="false">
-        <div class="event-top">
-          <span class="score">70.8</span>
-          <h3>New OpenAI Academy courses for the n...</h3>
-        </div>
-        <div class="badge-row">
-          <span class="badge">来源 1</span>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
           <span class="badge">official</span>
           <span class="badge">推荐写</span>
         </div>
+        <ul class="points"><li>OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：Introducing the OpenAI Partner Network</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://openai.com/index/introducing-openai-partner-network" target="_blank" rel="noopener noreferrer">OpenAI News * · official</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="大模型｜OpenAI News：New OpenAI Academy courses for the n... New OpenAI Academy courses for the n... OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work. 可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。 从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work 避免只复述消息本身，优先补充产业、政策或商业影响。 OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and... OpenAI News official New OpenAI Academy courses for the next era of work" data-hidden="false">
+      <summary>
+        <span class="score">70.8</span>
+        <span class="title">大模型｜OpenAI News：New OpenAI Academy courses for the n...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
         <p class="summary">OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...</p>
-        <p class="details">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
-        <ul class="key-points"><li>OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...</li></ul>
-        <details>
-          <summary>选题角度与阅读原文</summary>
-          <p class="details"><strong>选题角度：</strong>从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work</p>
-          <p class="details"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
-          <div class="links"><a href="https://openai.com/index/academy-courses-applying-ai-at-work" target="_blank" rel="noopener noreferrer">OpenAI News * · official</a></div>
-        </details>
-      </article>
-    </div>
-    </section>
-    
-    <section id="industry">
-      <div class="section-head">
-        <h2>AI行业资讯 <span class="meta">Top <span data-visible-count="AI行业资讯">2</span> / 2</span></h2>
-        <a class="small-link" href="#top10">回到顶部</a>
-      </div>
-      
-      <div class="grid">
-      <article id="event-39f213cf-1f4c-5586-a852-5987bcc2ba62" class="card event-card" data-event-id="39f213cf-1f4c-5586-a852-5987bcc2ba62" data-category="AI行业资讯" data-search="AI行业资讯 NVIDIA Blackwell Leads on First Agen... AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr... AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […] 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark 避免只复述消息本身，优先补充产业、政策或商业影响。 AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr... In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros... NVIDIA Blog official NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark" data-hidden="false">
-        <div class="event-top">
-          <span class="score">70.8</span>
-          <h3>NVIDIA Blackwell Leads on First Agen...</h3>
-        </div>
-        <div class="badge-row">
-          <span class="badge">来源 1</span>
+        <p class="why">可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。</p>
+        <div class="badges">
           <span class="badge">official</span>
           <span class="badge">推荐写</span>
         </div>
+        <ul class="points"><li>OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://openai.com/index/academy-courses-applying-ai-at-work" target="_blank" rel="noopener noreferrer">OpenAI News * · official</a></div>
+      </div>
+    </details>
+    </div>
+    </section>
+    
+    <section class="view" data-view="industry">
+      <div class="view-head">
+        <h2>AI行业资讯</h2>
+        <span class="count">显示 <span data-visible-count>2</span> / 2</span>
+      </div>
+      <div class="list">
+    <details class="item" data-search="AI产业｜NVIDIA Blog：NVIDIA Blackwell Leads on First Agen... NVIDIA Blackwell Leads on First Agen... AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr... AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […] 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark 避免只复述消息本身，优先补充产业、政策或商业影响。 AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr... In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros... NVIDIA Blog official NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark" data-hidden="false">
+      <summary>
+        <span class="score">70.8</span>
+        <span class="title">AI产业｜NVIDIA Blog：NVIDIA Blackwell Leads on First Agen...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
         <p class="summary">AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...</p>
-        <p class="details">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
-        <ul class="key-points"><li>AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...</li><li>In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros...</li></ul>
-        <details>
-          <summary>选题角度与阅读原文</summary>
-          <p class="details"><strong>选题角度：</strong>从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark</p>
-          <p class="details"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
-          <div class="links"><a href="https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/" target="_blank" rel="noopener noreferrer">NVIDIA Blog * · official</a></div>
-        </details>
-      </article>
-    
-      <article id="event-642d2593-7184-5b45-86f0-12313a447ce3" class="card event-card" data-event-id="642d2593-7184-5b45-86f0-12313a447ce3" data-category="AI行业资讯" data-search="AI行业资讯 Save Big and Play Bigger: GeForce NO... The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making... The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game. 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings 避免只复述消息本身，优先补充产业、政策或商业影响。 The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making... PC gamers are driven by one thing: the love of the game. NVIDIA Blog official Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings" data-hidden="false">
-        <div class="event-top">
-          <span class="score">60.0</span>
-          <h3>Save Big and Play Bigger: GeForce NO...</h3>
-        </div>
-        <div class="badge-row">
-          <span class="badge">来源 1</span>
+        <p class="why">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+        <div class="badges">
           <span class="badge">official</span>
           <span class="badge">推荐写</span>
         </div>
+        <ul class="points"><li>AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...</li><li>In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros...</li></ul>
+        <p class="why"><strong>选题角度：</strong>从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/" target="_blank" rel="noopener noreferrer">NVIDIA Blog * · official</a></div>
+      </div>
+    </details>
+    
+    <details class="item" data-search="AI产业｜NVIDIA Blog：Save Big and Play Bigger: GeForce NO... Save Big and Play Bigger: GeForce NO... The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making... The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game. 可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。 从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings 避免只复述消息本身，优先补充产业、政策或商业影响。 The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making... PC gamers are driven by one thing: the love of the game. NVIDIA Blog official Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings" data-hidden="false">
+      <summary>
+        <span class="score">60.0</span>
+        <span class="title">AI产业｜NVIDIA Blog：Save Big and Play Bigger: GeForce NO...</span>
+        <span class="side">来源 1</span>
+      </summary>
+      <div class="body">
         <p class="summary">The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...</p>
-        <p class="details">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
-        <ul class="key-points"><li>The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...</li><li>PC gamers are driven by one thing: the love of the game.</li></ul>
-        <details>
-          <summary>选题角度与阅读原文</summary>
-          <p class="details"><strong>选题角度：</strong>从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings</p>
-          <p class="details"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
-          <div class="links"><a href="https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/" target="_blank" rel="noopener noreferrer">NVIDIA Blog * · official</a></div>
-        </details>
-      </article>
+        <p class="why">可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。</p>
+        <div class="badges">
+          <span class="badge">official</span>
+          <span class="badge">推荐写</span>
+        </div>
+        <ul class="points"><li>The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...</li><li>PC gamers are driven by one thing: the love of the game.</li></ul>
+        <p class="why"><strong>选题角度：</strong>从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings</p>
+        <p class="why"><strong>避开同质化：</strong>避免只复述消息本身，优先补充产业、政策或商业影响。</p>
+        <div class="links"><a href="https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/" target="_blank" rel="noopener noreferrer">NVIDIA Blog * · official</a></div>
+      </div>
+    </details>
     </div>
     </section>
     
-    <section id="geopolitics">
-      <div class="section-head">
-        <h2>国际形势影响 <span class="meta">Top <span data-visible-count="国际形势影响">0</span> / 0</span></h2>
-        <a class="small-link" href="#top10">回到顶部</a>
+    <section class="view" data-view="geopolitics">
+      <div class="view-head">
+        <h2>国际形势影响</h2>
+        <span class="count">显示 <span data-visible-count>0</span> / 0</span>
       </div>
-      <div class="empty">今天这个栏目暂时没有入选内容。</div>
-      <div class="grid"></div>
+      <div class="list"><div class="empty">暂无内容。</div></div>
     </section>
     
-    <section id="finance">
-      <div class="section-head">
-        <h2>国际金融 <span class="meta">Top <span data-visible-count="国际金融">0</span> / 0</span></h2>
-        <a class="small-link" href="#top10">回到顶部</a>
+    <section class="view" data-view="finance">
+      <div class="view-head">
+        <h2>国际金融</h2>
+        <span class="count">显示 <span data-visible-count>0</span> / 0</span>
       </div>
-      <div class="empty">今天这个栏目暂时没有入选内容。</div>
-      <div class="grid"></div>
+      <div class="list"><div class="empty">暂无内容。</div></div>
     </section>
     
+    </div>
   </main>
-  <script id="digest-data" class="hidden-json" type="application/json">{"digest_date": "2026-06-14", "generated_at": "2026-06-15T09:03:34.504376+00:00", "generated_by": "intelhub-local-pipeline", "settings": {"per_source": 2, "top_per_category": 15, "extract_text": false, "extract_limit": 20, "summarize_with": "local"}, "stats": {"fetched_candidate_count": 4, "unique_candidate_count": 4, "analysis_count": 4, "event_count": 4, "selected_event_count": 4, "fetch_error_count": 0}, "fetch_errors": [], "categories": {"大模型动态": [{"id": "f5f378ed-0dda-5dc6-b16e-348d9a11d68e", "event_date": "2026-06-14", "category": "大模型动态", "ai_title": "Introducing the OpenAI Partner Network", "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.", "key_points": ["OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 76.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "Introducing the OpenAI Partner Network", "url": "https://openai.com/index/introducing-openai-partner-network", "published_at": "Sun, 14 Jun 2026 17:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "b23d33f5-6032-5181-ac19-3a6bfe1cdd87", "event_date": "2026-06-14", "category": "大模型动态", "ai_title": "New OpenAI Academy courses for the n...", "one_sentence_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "detailed_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.", "key_points": ["OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "New OpenAI Academy courses for the next era of work", "url": "https://openai.com/index/academy-courses-applying-ai-at-work", "published_at": "Fri, 12 Jun 2026 10:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}], "AI行业资讯": [{"id": "39f213cf-1f4c-5586-a852-5987bcc2ba62", "event_date": "2026-06-14", "category": "AI行业资讯", "ai_title": "NVIDIA Blackwell Leads on First Agen...", "one_sentence_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "detailed_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […]", "key_points": ["AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros..."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/", "published_at": "Fri, 12 Jun 2026 21:00:08 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "642d2593-7184-5b45-86f0-12313a447ce3", "event_date": "2026-06-14", "category": "AI行业资讯", "ai_title": "Save Big and Play Bigger: GeForce NO...", "one_sentence_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "detailed_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game.", "key_points": ["The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "PC gamers are driven by one thing: the love of the game."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/", "published_at": "Thu, 11 Jun 2026 13:00:17 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}], "国际形势影响": [], "国际金融": []}, "top10": [{"id": "f5f378ed-0dda-5dc6-b16e-348d9a11d68e", "event_date": "2026-06-14", "category": "大模型动态", "ai_title": "Introducing the OpenAI Partner Network", "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.", "key_points": ["OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 76.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "Introducing the OpenAI Partner Network", "url": "https://openai.com/index/introducing-openai-partner-network", "published_at": "Sun, 14 Jun 2026 17:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "b23d33f5-6032-5181-ac19-3a6bfe1cdd87", "event_date": "2026-06-14", "category": "大模型动态", "ai_title": "New OpenAI Academy courses for the n...", "one_sentence_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "detailed_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.", "key_points": ["OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "New OpenAI Academy courses for the next era of work", "url": "https://openai.com/index/academy-courses-applying-ai-at-work", "published_at": "Fri, 12 Jun 2026 10:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "39f213cf-1f4c-5586-a852-5987bcc2ba62", "event_date": "2026-06-14", "category": "AI行业资讯", "ai_title": "NVIDIA Blackwell Leads on First Agen...", "one_sentence_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "detailed_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […]", "key_points": ["AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros..."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/", "published_at": "Fri, 12 Jun 2026 21:00:08 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "642d2593-7184-5b45-86f0-12313a447ce3", "event_date": "2026-06-14", "category": "AI行业资讯", "ai_title": "Save Big and Play Bigger: GeForce NO...", "one_sentence_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "detailed_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game.", "key_points": ["The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "PC gamers are driven by one thing: the love of the game."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/", "published_at": "Thu, 11 Jun 2026 13:00:17 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}], "topic_pool": [{"rank": 1, "title": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "source_event_ids": ["f5f378ed-0dda-5dc6-b16e-348d9a11d68e"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 2, "title": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "source_event_ids": ["b23d33f5-6032-5181-ac19-3a6bfe1cdd87"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 3, "title": "从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "source_event_ids": ["39f213cf-1f4c-5586-a852-5987bcc2ba62"], "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "why_today": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 4, "title": "从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "source_event_ids": ["642d2593-7184-5b45-86f0-12313a447ce3"], "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "why_today": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}]}</script>
+  <script id="digest-data" class="hidden-json" type="application/json">{"digest_date": "2026-06-14", "generated_at": "2026-06-15T09:03:34.504376+00:00", "generated_by": "intelhub-local-pipeline", "settings": {"per_source": 2, "top_per_category": 15, "extract_text": false, "extract_limit": 20, "summarize_with": "local"}, "stats": {"fetched_candidate_count": 4, "unique_candidate_count": 4, "analysis_count": 4, "event_count": 4, "selected_event_count": 4, "fetch_error_count": 0}, "fetch_errors": [], "categories": {"大模型动态": [{"id": "f5f378ed-0dda-5dc6-b16e-348d9a11d68e", "event_date": "2026-06-14", "category": "大模型动态", "ai_title": "Introducing the OpenAI Partner Network", "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.", "key_points": ["OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 76.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "Introducing the OpenAI Partner Network", "url": "https://openai.com/index/introducing-openai-partner-network", "published_at": "Sun, 14 Jun 2026 17:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "b23d33f5-6032-5181-ac19-3a6bfe1cdd87", "event_date": "2026-06-14", "category": "大模型动态", "ai_title": "New OpenAI Academy courses for the n...", "one_sentence_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "detailed_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.", "key_points": ["OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "New OpenAI Academy courses for the next era of work", "url": "https://openai.com/index/academy-courses-applying-ai-at-work", "published_at": "Fri, 12 Jun 2026 10:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}], "AI行业资讯": [{"id": "39f213cf-1f4c-5586-a852-5987bcc2ba62", "event_date": "2026-06-14", "category": "AI行业资讯", "ai_title": "NVIDIA Blackwell Leads on First Agen...", "one_sentence_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "detailed_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […]", "key_points": ["AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros..."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/", "published_at": "Fri, 12 Jun 2026 21:00:08 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "642d2593-7184-5b45-86f0-12313a447ce3", "event_date": "2026-06-14", "category": "AI行业资讯", "ai_title": "Save Big and Play Bigger: GeForce NO...", "one_sentence_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "detailed_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game.", "key_points": ["The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "PC gamers are driven by one thing: the love of the game."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/", "published_at": "Thu, 11 Jun 2026 13:00:17 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}], "国际形势影响": [], "国际金融": []}, "top10": [{"id": "f5f378ed-0dda-5dc6-b16e-348d9a11d68e", "event_date": "2026-06-14", "category": "大模型动态", "ai_title": "Introducing the OpenAI Partner Network", "one_sentence_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "detailed_summary": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.", "key_points": ["OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 76.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "Introducing the OpenAI Partner Network", "url": "https://openai.com/index/introducing-openai-partner-network", "published_at": "Sun, 14 Jun 2026 17:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "b23d33f5-6032-5181-ac19-3a6bfe1cdd87", "event_date": "2026-06-14", "category": "大模型动态", "ai_title": "New OpenAI Academy courses for the n...", "one_sentence_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "detailed_summary": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and apply agents in everyday work.", "key_points": ["OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and..."], "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "openai_news", "source_name": "OpenAI News", "source_type": "official", "source_role": "primary", "original_title": "New OpenAI Academy courses for the next era of work", "url": "https://openai.com/index/academy-courses-applying-ai-at-work", "published_at": "Fri, 12 Jun 2026 10:00:00 GMT", "link_label": "OpenAI News", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "39f213cf-1f4c-5586-a852-5987bcc2ba62", "event_date": "2026-06-14", "category": "AI行业资讯", "ai_title": "NVIDIA Blackwell Leads on First Agen...", "one_sentence_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "detailed_summary": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infrastructure providers a clear way to compare systems for agentic AI. In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance across the agentic AI workloads tested, running 20x more agents per megawatt than NVIDIA […]", "key_points": ["AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "In the first round of published results, the NVIDIA Blackwell Ultra NVL72 platform delivers leading performance acros..."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 70.8, "confidence": 0.55, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "url": "https://blogs.nvidia.com/blog/nvidia-blackwell-agentperf-artificial-analysis/", "published_at": "Fri, 12 Jun 2026 21:00:08 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}, {"id": "642d2593-7184-5b45-86f0-12313a447ce3", "event_date": "2026-06-14", "category": "AI行业资讯", "ai_title": "Save Big and Play Bigger: GeForce NO...", "one_sentence_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "detailed_summary": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making now the perfect time to upgrade to get the best of the cloud and see just how far Ultimate gaming can go. PC gamers are driven by one thing: the love of the game.", "key_points": ["The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "PC gamers are driven by one thing: the love of the game."], "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "impact_analysis": {"technology": "需结合原文判断技术路线和能力边界。", "business": "可关注对企业采购、产品竞争和商业模式的影响。", "policy": "", "finance": ""}, "topic_angle": "从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。", "recommended": true, "priority_score": 60.0, "confidence": 0.55, "reading_links": [{"source_id": "nvidia_blog", "source_name": "NVIDIA Blog", "source_type": "official", "source_role": "primary", "original_title": "Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-summer-sale-2026/", "published_at": "Thu, 11 Jun 2026 13:00:17 +0000", "link_label": "NVIDIA Blog", "is_primary_reading_link": true, "display_order": 1}], "source_count": 1, "source_types": ["official"]}], "topic_pool": [{"rank": 1, "title": "从能力、成本和生态角度解读：Introducing the OpenAI Partner Network", "source_event_ids": ["f5f378ed-0dda-5dc6-b16e-348d9a11d68e"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deplo...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 2, "title": "从能力、成本和生态角度解读：New OpenAI Academy courses for the next era of work", "source_event_ids": ["b23d33f5-6032-5181-ac19-3a6bfe1cdd87"], "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。", "why_today": "OpenAI introduces three Academy courses that help people build practical AI skills, create repeatable workflows, and...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 3, "title": "从商业化和产业竞争角度解读：NVIDIA Blackwell Leads on First Agentic AI Infrastructure Benchmark", "source_event_ids": ["39f213cf-1f4c-5586-a852-5987bcc2ba62"], "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "why_today": "AgentPerf from Artificial Analysis, the industry’s first agentic AI benchmark, gives developers, enterprises and infr...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}, {"rank": 4, "title": "从商业化和产业竞争角度解读：Save Big and Play Bigger: GeForce NOW Summer Sale Brings Major Membership Savings", "source_event_ids": ["642d2593-7184-5b45-86f0-12313a447ce3"], "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。", "why_today": "The GeForce NOW summer sale kicked off today with limited-time savings of up to $70 off a 12-month membership, making...", "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。", "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"}], "archive_entries": [{"date": "2026-06-18", "generated_at": "2026-06-18T03:09:07.202389+00:00", "selected_event_count": 60, "event_count": 125, "top10_count": 10, "url": "archive/2026-06-18/", "json_url": "archive/2026-06-18/daily-digest.json"}, {"date": "2026-06-17", "generated_at": "2026-06-17T04:41:58.718373+00:00", "selected_event_count": 60, "event_count": 118, "top10_count": 10, "url": "archive/2026-06-17/", "json_url": "archive/2026-06-17/daily-digest.json"}, {"date": "2026-06-16", "generated_at": "2026-06-16T03:25:50.900961+00:00", "selected_event_count": 60, "event_count": 123, "top10_count": 10, "url": "archive/2026-06-16/", "json_url": "archive/2026-06-16/daily-digest.json"}, {"date": "2026-06-15", "generated_at": "2026-06-15T09:19:30.574219+00:00", "selected_event_count": 29, "event_count": 30, "top10_count": 10, "url": "archive/2026-06-15/", "json_url": "archive/2026-06-15/daily-digest.json"}, {"date": "2026-06-14", "generated_at": "2026-06-15T09:03:34.504376+00:00", "selected_event_count": 4, "event_count": 4, "top10_count": 4, "url": "archive/2026-06-14/", "json_url": "archive/2026-06-14/daily-digest.json"}]}</script>
   <script>
     const input = document.getElementById('searchInput');
-    const countLabels = Array.from(document.querySelectorAll('[data-visible-count]'));
+    const dateSelect = document.getElementById('dateSelect');
+    const tabs = Array.from(document.querySelectorAll('.tab'));
+    const views = Array.from(document.querySelectorAll('.view'));
+    let currentView = 'topics';
+
+    function setView(name) {
+      currentView = name;
+      tabs.forEach(tab => tab.setAttribute('aria-selected', tab.dataset.view === name ? 'true' : 'false'));
+      views.forEach(view => view.classList.toggle('active', view.dataset.view === name));
+      input.value = '';
+      applySearch();
+    }
+    tabs.forEach(tab => tab.addEventListener('click', () => setView(tab.dataset.view)));
+
     function applySearch() {
       const query = input.value.trim().toLowerCase();
-      const cards = Array.from(document.querySelectorAll('.event-card'));
-      const seen = new Set();
-      const counts = new Map();
-      cards.forEach((card) => {
-        const id = card.dataset.eventId;
-        if (seen.has(id)) {
-          return;
-        }
-        seen.add(id);
-        const haystack = (card.dataset.search || '').toLowerCase();
-        const visible = !query || haystack.includes(query);
-        document.querySelectorAll(`[data-event-id="${id}"]`).forEach((node) => {
-          node.dataset.hidden = visible ? 'false' : 'true';
-        });
-        if (visible) {
-          counts.set(card.dataset.category, (counts.get(card.dataset.category) || 0) + 1);
-        }
+      const active = document.querySelector(`.view[data-view="${currentView}"]`);
+      if (!active) return;
+      active.querySelectorAll('.item').forEach(item => {
+        const visible = !query || (item.dataset.search || '').toLowerCase().includes(query);
+        item.dataset.hidden = visible ? 'false' : 'true';
       });
-      countLabels.forEach((label) => {
-        const category = label.dataset.visibleCount;
-        label.textContent = counts.get(category) || 0;
+      active.querySelectorAll('[data-visible-count]').forEach(label => {
+        const visibleCount = active.querySelectorAll('.item[data-hidden="false"]').length;
+        label.textContent = visibleCount;
       });
     }
     input.addEventListener('input', applySearch);
-    applySearch();
+    if (dateSelect) {
+      dateSelect.addEventListener('change', () => {
+        const date = dateSelect.value;
+        if (!date || date === "2026-06-14") return;
+        const inArchive = /\/archive\/\d{4}-\d{2}-\d{2}\/?/.test(location.pathname);
+        location.href = inArchive ? `../${date}/` : `archive/${date}/`;
+      });
+    }
+
+    document.querySelectorAll('.item summary').forEach(summary => {
+      summary.addEventListener('click', event => {
+        event.preventDefault();
+        const details = summary.closest('details');
+        details.open = !details.open;
+      });
+    });
+
+    const canvas = document.getElementById('digital-bg');
+    const ctx = canvas.getContext('2d');
+    const pointer = { x: -9999, y: -9999 };
+    let cells = [];
+    function resizeCanvas() {
+      const ratio = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.floor(innerWidth * ratio);
+      canvas.height = Math.floor(innerHeight * ratio);
+      canvas.style.width = innerWidth + 'px';
+      canvas.style.height = innerHeight + 'px';
+      ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+      cells = [];
+      for (let y = 10; y < innerHeight; y += 18) {
+        for (let x = 10; x < innerWidth; x += 18) {
+          cells.push({ x, y, bit: Math.random() > .5 ? '1' : '0', seed: Math.random() });
+        }
+      }
+    }
+    function draw() {
+      ctx.clearRect(0, 0, innerWidth, innerHeight);
+      ctx.font = '10px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      for (const cell of cells) {
+        const dx = cell.x - pointer.x;
+        const dy = cell.y - pointer.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        const hover = Math.max(0, 1 - dist / 150);
+        const alpha = Math.min(.95, .025 + cell.seed * .025 + hover * .82);
+        if (alpha < .04) continue;
+        ctx.fillStyle = `rgba(94, 231, 255, ${alpha})`;
+        ctx.fillText(cell.bit, cell.x, cell.y);
+      }
+      requestAnimationFrame(draw);
+    }
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('mousemove', event => { pointer.x = event.clientX; pointer.y = event.clientY; });
+    window.addEventListener('mouseleave', () => { pointer.x = -9999; pointer.y = -9999; });
+    resizeCanvas();
+    draw();
+    setView('topics');
   </script>
 </body>
 </html>

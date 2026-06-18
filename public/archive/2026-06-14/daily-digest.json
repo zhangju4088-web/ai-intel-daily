@@ -405,5 +405,52 @@
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。"
     }
+  ],
+  "archive_entries": [
+    {
+      "date": "2026-06-18",
+      "generated_at": "2026-06-18T03:09:07.202389+00:00",
+      "selected_event_count": 60,
+      "event_count": 125,
+      "top10_count": 10,
+      "url": "archive/2026-06-18/",
+      "json_url": "archive/2026-06-18/daily-digest.json"
+    },
+    {
+      "date": "2026-06-17",
+      "generated_at": "2026-06-17T04:41:58.718373+00:00",
+      "selected_event_count": 60,
+      "event_count": 118,
+      "top10_count": 10,
+      "url": "archive/2026-06-17/",
+      "json_url": "archive/2026-06-17/daily-digest.json"
+    },
+    {
+      "date": "2026-06-16",
+      "generated_at": "2026-06-16T03:25:50.900961+00:00",
+      "selected_event_count": 60,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-06-16/",
+      "json_url": "archive/2026-06-16/daily-digest.json"
+    },
+    {
+      "date": "2026-06-15",
+      "generated_at": "2026-06-15T09:19:30.574219+00:00",
+      "selected_event_count": 29,
+      "event_count": 30,
+      "top10_count": 10,
+      "url": "archive/2026-06-15/",
+      "json_url": "archive/2026-06-15/daily-digest.json"
+    },
+    {
+      "date": "2026-06-14",
+      "generated_at": "2026-06-15T09:03:34.504376+00:00",
+      "selected_event_count": 4,
+      "event_count": 4,
+      "top10_count": 4,
+      "url": "archive/2026-06-14/",
+      "json_url": "archive/2026-06-14/daily-digest.json"
+    }
   ]
 }

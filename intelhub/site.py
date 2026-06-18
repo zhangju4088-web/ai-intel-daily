@@ -27,6 +27,7 @@ def publish_static_site(digest: dict[str, Any], site_dir: Path) -> None:
 
     write_archive_entries(site_dir / "archive" / "index.json", entries)
     (site_dir / "archive" / "index.html").write_text(render_archive_index(entries), encoding="utf-8")
+    refresh_archive_pages(site_dir, entries)
 
 
 def load_archive_entries(path: Path) -> list[dict[str, Any]]:
@@ -44,6 +45,25 @@ def load_archive_entries(path: Path) -> list[dict[str, Any]]:
 def write_archive_entries(path: Path, entries: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(entries, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+def refresh_archive_pages(site_dir: Path, entries: list[dict[str, Any]]) -> None:
+    for entry in entries:
+        digest_date = str(entry.get("date", "")).strip()
+        if not digest_date:
+            continue
+        digest_path = site_dir / "archive" / digest_date / "daily-digest.json"
+        if not digest_path.exists():
+            continue
+        try:
+            digest = json.loads(digest_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(digest, dict):
+            continue
+        digest["archive_entries"] = entries
+        write_digest_json(digest, digest_path)
+        write_digest_html(digest, site_dir / "archive" / digest_date / "index.html")
 
 
 def upsert_archive_entry(entries: list[dict[str, Any]], digest: dict[str, Any]) -> list[dict[str, Any]]:
