@@ -2,10 +2,13 @@ name: Publish Daily Digest to GitHub Pages
 
 on:
   schedule:
-    # Beijing 08:17 = UTC 00:17. Avoid the top-of-hour GitHub Actions rush.
-    - cron: "17 0 * * *"
-    # Beijing 08:47 backup trigger. The build step skips this if today's archive already exists.
-    - cron: "47 0 * * *"
+    # Beijing 08:13 = UTC 00:13. Avoid the top-of-hour GitHub Actions rush.
+    - cron: "13 0 * * *"
+    # Backup triggers. The build step skips these if today's archive already exists.
+    - cron: "43 0 * * *"
+    - cron: "13 1 * * *"
+    - cron: "13 2 * * *"
+    - cron: "13 4 * * *"
   workflow_dispatch:
     inputs:
       digest_date:
