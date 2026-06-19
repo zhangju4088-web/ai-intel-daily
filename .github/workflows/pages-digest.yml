@@ -108,6 +108,7 @@ jobs:
             echo "No public archive changes to commit"
           else
             git commit -m "chore: update daily digest archive"
+            git pull --rebase origin main
             git push
           fi
 
