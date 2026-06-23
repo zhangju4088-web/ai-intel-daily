@@ -3264,9 +3264,9 @@
   "archive_entries": [
     {
       "date": "2026-06-23",
-      "generated_at": "2026-06-22T18:09:18.596731+00:00",
+      "generated_at": "2026-06-23T02:31:39.844892+00:00",
       "selected_event_count": 60,
-      "event_count": 112,
+      "event_count": 130,
       "top10_count": 10,
       "url": "archive/2026-06-23/",
       "json_url": "archive/2026-06-23/daily-digest.json"
