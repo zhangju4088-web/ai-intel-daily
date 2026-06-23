@@ -931,8 +931,12 @@ def render_topics_view(topics: list[dict[str, Any]]) -> str:
         argument = html.escape(str(topic.get("core_argument", "")))
         why = html.escape(str(topic.get("why_today", "")))
         diff = html.escape(str(topic.get("differentiation", "")))
+        reason = html.escape(str(topic.get("recommendation_reason", "")))
         rank = html.escape(str(topic.get("rank", "")))
-        search = html.escape(" ".join([title, argument, why, diff]), quote=True)
+        source_count = html.escape(str(topic.get("source_count", 0)))
+        signal = html.escape(str(topic.get("signal_strength", "")))
+        tags = render_tags(topic.get("tags", []))
+        search = html.escape(" ".join([title, argument, why, diff, reason, " ".join(str(tag) for tag in topic.get("tags", []))]), quote=True)
         links = render_links(topic.get("reading_links", []))
         rows.append(
             f"""
@@ -940,11 +944,13 @@ def render_topics_view(topics: list[dict[str, Any]]) -> str:
               <summary>
                 <span class="score">{rank}</span>
                 <span class="title">{title}</span>
-                <span class="side">展开</span>
+                <span class="side">{source_count} 信源 · {signal}</span>
               </summary>
               <div class="body">
                 <p class="summary">{argument}</p>
                 <p class="why">{why}</p>
+                <div class="badges">{tags}</div>
+                <p class="why"><strong>推荐理由：</strong>{reason}</p>
                 <p class="why"><strong>差异化：</strong>{diff}</p>
                 <div class="links">{links}</div>
               </div>
@@ -981,19 +987,21 @@ def render_event(event: dict[str, Any]) -> str:
     score = html.escape(str(event.get("priority_score", "")))
     source_count = html.escape(str(event.get("source_count", 0)))
     source_types = html.escape(" / ".join(str(item) for item in event.get("source_types", [])))
+    signal = html.escape(str(event.get("signal_strength", "")))
     search = event_search_text(event)
     return f"""
     <details class="item" data-search="{search}" data-hidden="false">
       <summary>
         <span class="score">{score}</span>
         <span class="title">{title}</span>
-        <span class="side">来源 {source_count}</span>
+        <span class="side">{source_count} 信源 · {signal}</span>
       </summary>
       <div class="body">
         <p class="summary">{summary}</p>
         <p class="why">{why}</p>
         <div class="badges">
           <span class="badge">{source_types}</span>
+          {render_tags(event.get("tags", []))}
           {render_recommended_badge(event)}
         </div>
         {render_key_points(event.get("key_points", []))}
@@ -1038,6 +1046,10 @@ def render_recommended_badge(event: dict[str, Any]) -> str:
     return '<span class="badge">推荐写</span>' if event.get("recommended") else '<span class="badge">观察</span>'
 
 
+def render_tags(tags: list[Any]) -> str:
+    return "".join(f'<span class="badge">{html.escape(str(tag))}</span>' for tag in tags[:5] if str(tag).strip())
+
+
 def render_links(links: list[dict[str, Any]]) -> str:
     rows = []
     for link in sorted(links, key=lambda item: int(item.get("display_order") or 100)):
@@ -1062,6 +1074,7 @@ def event_search_text(event: dict[str, Any]) -> str:
         event.get("why_it_matters", ""),
         event.get("topic_angle", ""),
         event.get("avoid_angle", ""),
+        " ".join(str(tag) for tag in event.get("tags", [])),
     ]
     parts.extend(str(item) for item in event.get("key_points", []))
     for link in event.get("reading_links", []):

@@ -102,6 +102,8 @@ class EventCard:
     recommended: bool
     priority_score: float
     confidence: float
+    tags: list[str] = field(default_factory=list)
+    signal_strength: float = 0.0
     reading_links: list[ReadingLink] = field(default_factory=list)
     source_count: int = 0
     source_types: list[str] = field(default_factory=list)
@@ -201,6 +203,8 @@ def build_daily_digest(
             "fetch_error_count": len(fetch_errors),
             "title_localized_count": localized_count,
             "supporting_link_count": supporting_link_count,
+            "multi_source_event_count": sum(1 for event in selected if event.source_count >= 2),
+            "tag_count": len({tag for event in selected for tag in event.tags}),
         },
         "fetch_errors": fetch_errors,
         "categories": {
@@ -634,6 +638,8 @@ def merge_analyses(analyses: list[ArticleAnalysis], *, digest_date: date) -> lis
         source_types = sorted({item.candidate.source_type for item in bucket})
         source_bonus = min((len(bucket) - 1) * 2.5, 10)
         score = min(round(primary.priority_score + source_bonus, 2), 100)
+        tags = classify_event_tags(primary, bucket)
+        signal_strength = event_signal_strength(score, links, tags)
         events.append(
             EventCard(
                 id=stable_event_id(primary, digest_date),
@@ -650,6 +656,8 @@ def merge_analyses(analyses: list[ArticleAnalysis], *, digest_date: date) -> lis
                 recommended=primary.recommended,
                 priority_score=score,
                 confidence=max(item.confidence for item in bucket),
+                tags=tags,
+                signal_strength=signal_strength,
                 reading_links=links,
                 source_count=len({item.candidate.source_id for item in bucket}),
                 source_types=source_types,
@@ -682,6 +690,12 @@ def build_topic_pool(events: list[EventCard], *, limit: int = 10) -> list[dict[s
                 "why_today": event.one_sentence_summary,
                 "differentiation": event.avoid_angle,
                 "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+                "tags": event.tags,
+                "source_count": event.source_count,
+                "source_names": [link.source_name for link in event.reading_links],
+                "source_types": event.source_types,
+                "signal_strength": event.signal_strength,
+                "recommendation_reason": build_recommendation_reason(event),
                 "reading_links": [asdict(link) for link in event.reading_links],
             }
         )
@@ -722,7 +736,80 @@ def enrich_event_reading_links(events: list[EventCard], analyses: list[ArticleAn
             added += 1
         event.source_count = len({link.source_id for link in event.reading_links})
         event.source_types = sorted({link.source_type for link in event.reading_links})
+        event.tags = classify_event_tags_from_text(event_relation_text(event), event.category, event.source_types)
+        event.signal_strength = event_signal_strength(event.priority_score, event.reading_links, event.tags)
     return added
+
+
+def event_signal_strength(score: float, links: list[ReadingLink], tags: list[str]) -> float:
+    source_bonus = min(max(len({link.source_id for link in links}) - 1, 0) * 7.5, 22.5)
+    official_bonus = 5 if any(link.source_type == "official" for link in links) else 0
+    discussion_bonus = 4 if any(link.source_type in {"social", "wechat"} for link in links) else 0
+    tag_bonus = min(len(tags) * 1.5, 6)
+    return round(min(score * 0.68 + source_bonus + official_bonus + discussion_bonus + tag_bonus, 100), 2)
+
+
+def build_recommendation_reason(event: EventCard) -> str:
+    parts = []
+    if event.source_count >= 2:
+        parts.append(f"{event.source_count} 个信源交叉确认")
+    if any(source_type == "official" for source_type in event.source_types):
+        parts.append("含官方来源")
+    if any(source_type in {"wechat", "social"} for source_type in event.source_types):
+        parts.append("已有讨论热度")
+    if event.tags:
+        parts.append("标签：" + "、".join(event.tags[:3]))
+    if not parts:
+        parts.append("评分较高，适合继续核验")
+    return "；".join(parts)
+
+
+def classify_event_tags(primary: ArticleAnalysis, bucket: list[ArticleAnalysis]) -> list[str]:
+    text = " ".join(analysis_merge_text(item) for item in bucket)
+    source_types = sorted({item.candidate.source_type for item in bucket})
+    return classify_event_tags_from_text(text, primary.category, source_types)
+
+
+def classify_event_tags_from_text(text: str, category: str, source_types: list[str]) -> list[str]:
+    lowered = text.lower()
+    tags = []
+    if "official" in source_types:
+        tags.append("官方消息")
+    if "wechat" in source_types:
+        tags.append("公众号讨论")
+    if "social" in source_types:
+        tags.append("社区讨论")
+    rules = [
+        ("模型发布", ["release", "launch", "introduce", "unveil", "发布", "推出", "开源", "上线"]),
+        ("评测榜单", ["benchmark", "leaderboard", "arena", "swe-bench", "mlperf", "榜单", "评测", "基准", "登顶"]),
+        ("智能体", ["agent", "agents", "agentic", "智能体", "代理"]),
+        ("编程工具", ["coding", "code", "developer", "swe", "编程", "代码", "开发者"]),
+        ("产品更新", ["product", "feature", "app", "platform", "产品", "功能", "应用", "平台"]),
+        ("商业化", ["pricing", "subscription", "revenue", "enterprise", "定价", "订阅", "收入", "企业"]),
+        ("融资并购", ["funding", "valuation", "acquisition", "investment", "融资", "估值", "收购", "投资"]),
+        ("算力芯片", ["nvidia", "gpu", "chip", "semiconductor", "datacenter", "data center", "芯片", "算力", "半导体", "数据中心"]),
+        ("政策监管", ["regulation", "policy", "antitrust", "export control", "sanction", "监管", "政策", "反垄断", "出口管制", "制裁"]),
+        ("国际金融", ["fed", "ecb", "boj", "inflation", "rate", "yield", "dollar", "美联储", "通胀", "利率", "美元"]),
+        ("论文研究", ["arxiv", "paper", "research", "论文", "研究"]),
+        ("开源生态", ["open-source", "open source", "github", "hugging face", "开源", "社区"]),
+    ]
+    for tag, keywords in rules:
+        if any(keyword in lowered for keyword in keywords):
+            tags.append(tag)
+    if category == "国际形势影响" and "政策监管" not in tags:
+        tags.append("地缘影响")
+    return dedupe_preserve_order(tags)[:6]
+
+
+def dedupe_preserve_order(items: list[str]) -> list[str]:
+    seen: set[str] = set()
+    result = []
+    for item in items:
+        if item in seen:
+            continue
+        seen.add(item)
+        result.append(item)
+    return result
 
 
 def should_attach_supporting_link(event: EventCard, analysis: ArticleAnalysis) -> bool:
@@ -824,7 +911,7 @@ def build_reading_links(bucket: list[ArticleAnalysis], primary: ArticleAnalysis)
 
 
 def choose_primary(bucket: list[ArticleAnalysis]) -> ArticleAnalysis:
-    source_rank = {"official": 0, "research": 1, "finance": 1, "media": 2, "wechat": 3, "other": 4}
+    source_rank = {"official": 0, "research": 1, "finance": 1, "media": 2, "blog": 2, "social": 3, "wechat": 3, "other": 4}
     return sorted(
         bucket,
         key=lambda item: (source_rank.get(item.candidate.source_type, 5), -item.priority_score),

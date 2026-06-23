@@ -21,17 +21,21 @@ class Source:
 
     @classmethod
     def from_mapping(cls, data: dict[str, Any]) -> "Source":
+        url = _expand_env(_optional_str(data.get("url")))
+        enabled = bool(data.get("enabled", True))
+        if data.get("method") == "rsshub" and not url:
+            enabled = False
         return cls(
             id=str(data["id"]),
             name=str(data["name"]),
             category_hint=str(data.get("category_hint", "auto")),
             source_type=str(data.get("source_type", "other")),
             method=str(data.get("method", "crawl")),
-            url=_optional_str(data.get("url")),
+            url=url,
             account_id=_optional_str(data.get("account_id")),
             language=str(data.get("language", "zh")),
             weight=float(data.get("weight", 1.0)),
-            enabled=bool(data.get("enabled", True)),
+            enabled=enabled,
             notes=_optional_str(data.get("notes")),
         )
 
@@ -48,7 +52,9 @@ class SourceConfig:
 
 def load_sources(path: Path) -> SourceConfig:
     data = _load_yaml(path)
-    raw_sources = data.get("sources", []) + data.get("wechat_sources", [])
+    raw_sources = []
+    for section in ("sources", "blog_sources", "social_sources", "wechat_sources"):
+        raw_sources.extend(data.get(section, []))
     sources = [Source.from_mapping(item) for item in raw_sources]
     return SourceConfig(
         defaults=dict(data.get("defaults", {})),
@@ -90,7 +96,7 @@ def _load_simple_yaml(text: str) -> dict[str, Any]:
             key = stripped.rstrip(":")
             section = key
             current_item = None
-            if key in {"sources", "wechat_sources", "categories"}:
+            if key in {"sources", "blog_sources", "social_sources", "wechat_sources", "categories"}:
                 result[key] = []
             else:
                 result[key] = {}
@@ -103,7 +109,7 @@ def _load_simple_yaml(text: str) -> dict[str, Any]:
                 result[section].append(stripped[2:].strip())
             continue
 
-        if section in {"sources", "wechat_sources"}:
+        if section in {"sources", "blog_sources", "social_sources", "wechat_sources"}:
             if stripped.startswith("- "):
                 current_item = {}
                 result[section].append(current_item)
@@ -153,3 +159,26 @@ def _optional_str(value: Any) -> str | None:
     text = str(value).strip()
     return text or None
 
+
+def _expand_env(value: str | None) -> str | None:
+    if value is None:
+        return None
+    text = value
+    for match in re_find_env_vars(text):
+        replacement = os_env(match)
+        if replacement is None:
+            return None
+        text = text.replace("${" + match + "}", replacement)
+    return text or None
+
+
+def re_find_env_vars(text: str) -> list[str]:
+    import re
+
+    return re.findall(r"\$\{([A-Za-z_][A-Za-z0-9_]*)\}", text)
+
+
+def os_env(name: str) -> str | None:
+    import os
+
+    return os.getenv(name)

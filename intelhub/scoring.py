@@ -13,6 +13,8 @@ SOURCE_TYPE_BONUS = {
     "research": 11.0,
     "finance": 10.0,
     "media": 7.0,
+    "blog": 7.0,
+    "social": 4.0,
     "wechat": 5.0,
     "other": -4.0,
 }

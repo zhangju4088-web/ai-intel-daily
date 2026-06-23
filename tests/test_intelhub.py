@@ -6,7 +6,7 @@ from datetime import date
 from pathlib import Path
 from unittest.mock import patch
 
-from intelhub.config import Source
+from intelhub.config import Source, load_sources
 from intelhub.models import ArticleCandidate
 from intelhub.fetch import is_navigation_text
 from intelhub.pipeline import (
@@ -71,6 +71,47 @@ class IntelHubTest(unittest.TestCase):
         self.assertEqual(source.category_hint, "auto")
         self.assertEqual(source.language, "zh")
         self.assertTrue(source.enabled)
+
+    def test_load_sources_includes_blog_and_social_sections(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            config_path = Path(tmp) / "sources.yaml"
+            config_path.write_text(
+                """
+sources:
+  - id: official
+    name: Official
+    source_type: official
+    method: rss
+    url: https://example.com/feed.xml
+blog_sources:
+  - id: blog
+    name: Blog
+    source_type: blog
+    method: crawl
+    url: https://example.com/blog
+social_sources:
+  - id: x_openai
+    name: X OpenAI
+    source_type: social
+    method: rsshub
+    url: ${RSSHUB_BASE_URL}/x/user/OpenAI
+wechat_sources:
+  - id: wx
+    name: WeChat
+    source_type: wechat
+    method: manual_link
+""",
+                encoding="utf-8",
+            )
+
+            with patch.dict("os.environ", {}, clear=True):
+                config = load_sources(config_path)
+
+        source_ids = {source.id for source in config.sources}
+        self.assertEqual(source_ids, {"official", "blog", "x_openai", "wx"})
+        x_source = next(source for source in config.sources if source.id == "x_openai")
+        self.assertFalse(x_source.enabled)
+        self.assertIsNone(x_source.url)
 
     def test_static_site_archive_keeps_latest_first(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -303,6 +344,42 @@ class IntelHubTest(unittest.TestCase):
         self.assertEqual(added, 1)
         self.assertEqual(events[0].source_count, 2)
         self.assertEqual(len(events[0].reading_links), 2)
+
+    def test_topic_pool_carries_tags_sources_and_recommendation_reason(self) -> None:
+        primary = ArticleCandidate(
+            source_id="openai_news",
+            source_name="OpenAI News",
+            source_type="official",
+            category_hint="大模型动态",
+            title="OpenAI launches new coding agent benchmark",
+            url="https://openai.com/benchmark",
+            summary="OpenAI launches a new coding benchmark for agentic software development.",
+            language="en",
+        )
+        social = ArticleCandidate(
+            source_id="hackernews_ai",
+            source_name="Hacker News AI",
+            source_type="social",
+            category_hint="大模型动态",
+            title="OpenAI launches new coding agent benchmark",
+            url="https://news.ycombinator.com/item?id=1",
+            summary="Developers discuss the OpenAI coding benchmark.",
+            language="en",
+        )
+        events = merge_analyses(
+            [local_analysis(primary, None), local_analysis(social, None)],
+            digest_date=date(2026, 6, 23),
+        )
+
+        topics = build_topic_pool(events)
+
+        self.assertGreaterEqual(events[0].source_count, 2)
+        self.assertIn("编程工具", events[0].tags)
+        self.assertIn("社区讨论", events[0].tags)
+        self.assertGreater(events[0].signal_strength, 0)
+        self.assertEqual(topics[0]["source_count"], 2)
+        self.assertIn("recommendation_reason", topics[0])
+        self.assertIn("reading_links", topics[0])
 
     def test_unrelated_research_is_not_added_as_supporting_link(self) -> None:
         glm = ArticleCandidate(

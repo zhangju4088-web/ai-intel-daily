@@ -329,6 +329,107 @@ sources:
     language: en
     weight: 0.90
 
+blog_sources:
+  - id: openrouter_blog
+    name: OpenRouter Blog
+    category_hint: AI行业资讯
+    source_type: blog
+    method: crawl
+    url: https://openrouter.ai/blog
+    language: en
+    weight: 1.05
+
+  - id: runway_news
+    name: Runway News
+    category_hint: AI行业资讯
+    source_type: blog
+    method: crawl
+    url: https://runwayml.com/research/
+    language: en
+    weight: 1.00
+
+  - id: cursor_blog
+    name: Cursor Blog
+    category_hint: AI行业资讯
+    source_type: blog
+    method: crawl
+    url: https://cursor.com/blog
+    language: en
+    weight: 1.00
+
+  - id: perplexity_hub
+    name: Perplexity Hub
+    category_hint: AI行业资讯
+    source_type: blog
+    method: crawl
+    url: https://www.perplexity.ai/hub
+    language: en
+    weight: 1.00
+
+  - id: elevenlabs_blog
+    name: ElevenLabs Blog
+    category_hint: AI行业资讯
+    source_type: blog
+    method: crawl
+    url: https://elevenlabs.io/blog
+    language: en
+    weight: 0.95
+
+  - id: vercel_ai_blog
+    name: Vercel AI Blog
+    category_hint: AI行业资讯
+    source_type: blog
+    method: crawl
+    url: https://vercel.com/blog/category/ai
+    language: en
+    weight: 0.95
+
+social_sources:
+  - id: x_openai
+    name: X · OpenAI
+    category_hint: 大模型动态
+    source_type: social
+    method: rsshub
+    url: ${RSSHUB_BASE_URL}/x/user/OpenAI
+    language: en
+    weight: 0.85
+
+  - id: x_anthropic
+    name: X · Anthropic
+    category_hint: 大模型动态
+    source_type: social
+    method: rsshub
+    url: ${RSSHUB_BASE_URL}/x/user/AnthropicAI
+    language: en
+    weight: 0.85
+
+  - id: x_deepmind
+    name: X · Google DeepMind
+    category_hint: 大模型动态
+    source_type: social
+    method: rsshub
+    url: ${RSSHUB_BASE_URL}/x/user/GoogleDeepMind
+    language: en
+    weight: 0.85
+
+  - id: x_huggingface
+    name: X · Hugging Face
+    category_hint: 大模型动态
+    source_type: social
+    method: rsshub
+    url: ${RSSHUB_BASE_URL}/x/user/huggingface
+    language: en
+    weight: 0.85
+
+  - id: hackernews_ai
+    name: Hacker News AI
+    category_hint: AI行业资讯
+    source_type: social
+    method: rss
+    url: https://hnrss.org/newest?q=AI
+    language: en
+    weight: 0.85
+
 wechat_sources:
   - id: wx_qbitai
     name: 量子位
@@ -449,4 +550,3 @@ wechat_sources:
     source_type: wechat
     method: manual_link
     weight: 0.85
-
