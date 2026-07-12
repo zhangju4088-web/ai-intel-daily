@@ -3263,6 +3263,15 @@
   ],
   "archive_entries": [
     {
+      "date": "2026-07-12",
+      "generated_at": "2026-07-12T07:55:03.027163+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-07-12/",
+      "json_url": "archive/2026-07-12/daily-digest.json"
+    },
+    {
       "date": "2026-07-11",
       "generated_at": "2026-07-11T07:28:37.599307+00:00",
       "selected_event_count": 60,
