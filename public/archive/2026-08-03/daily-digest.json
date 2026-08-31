@@ -3828,6 +3828,15 @@
   ],
   "archive_entries": [
     {
+      "date": "2026-08-31",
+      "generated_at": "2026-08-31T05:36:43.096092+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-08-31/",
+      "json_url": "archive/2026-08-31/daily-digest.json"
+    },
+    {
       "date": "2026-08-30",
       "generated_at": "2026-08-30T05:25:58.124188+00:00",
       "selected_event_count": 60,
