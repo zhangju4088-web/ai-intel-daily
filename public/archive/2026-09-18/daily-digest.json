@@ -3769,6 +3769,15 @@
   ],
   "archive_entries": [
     {
+      "date": "2026-09-19",
+      "generated_at": "2026-09-19T04:39:21.006677+00:00",
+      "selected_event_count": 59,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-09-19/",
+      "json_url": "archive/2026-09-19/daily-digest.json"
+    },
+    {
       "date": "2026-09-18",
       "generated_at": "2026-09-18T04:45:18.502018+00:00",
       "selected_event_count": 59,
