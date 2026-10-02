@@ -3867,6 +3867,15 @@
   ],
   "archive_entries": [
     {
+      "date": "2026-10-02",
+      "generated_at": "2026-10-02T05:38:55.039776+00:00",
+      "selected_event_count": 59,
+      "event_count": 139,
+      "top10_count": 10,
+      "url": "archive/2026-10-02/",
+      "json_url": "archive/2026-10-02/daily-digest.json"
+    },
+    {
       "date": "2026-10-01",
       "generated_at": "2026-10-01T05:55:42.264248+00:00",
       "selected_event_count": 59,
