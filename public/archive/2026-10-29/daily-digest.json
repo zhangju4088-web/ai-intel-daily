@@ -1,0 +1,5062 @@
+{
+  "digest_date": "2026-10-29",
+  "generated_at": "2026-10-29T05:49:36.409130+00:00",
+  "generated_by": "intelhub-local-pipeline",
+  "settings": {
+    "per_source": 5,
+    "top_per_category": 15,
+    "extract_text": true,
+    "extract_limit": 16,
+    "summarize_with": "deepseek"
+  },
+  "stats": {
+    "fetched_candidate_count": 147,
+    "unique_candidate_count": 135,
+    "analysis_count": 135,
+    "deepseek_analysis_count": 0,
+    "local_analysis_count": 135,
+    "extracted_text_count": 9,
+    "extraction_error_count": 7,
+    "event_count": 133,
+    "selected_event_count": 60,
+    "fetch_error_count": 4,
+    "title_localized_count": 0,
+    "supporting_link_count": 1,
+    "multi_source_event_count": 1,
+    "tag_count": 15
+  },
+  "fetch_errors": [
+    {
+      "source_id": "venturebeat_ai",
+      "source_name": "VentureBeat AI",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "source_id": "bls_news",
+      "source_name": "U.S. Bureau of Labor Statistics",
+      "error": "HTTP Error 503: Service Unavailable"
+    },
+    {
+      "source_id": "perplexity_hub",
+      "source_name": "Perplexity Hub",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "source_id": "vercel_ai_blog",
+      "source_name": "Vercel AI Blog",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "categories": {
+    "大模型动态": [
+      {
+        "id": "9db17b25-50a1-5b06-9e71-d5d145888ba3",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Retell uses OpenAI models to h...",
+        "one_sentence_summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per emplo...",
+        "detailed_summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+        "key_points": [
+          "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per emplo..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Retell uses OpenAI models to help power 100M monthly calls",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 92.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "评测榜单",
+          "智能体",
+          "编程工具",
+          "商业化",
+          "国际金融"
+        ],
+        "signal_strength": 73.56,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Retell uses OpenAI models to help power 100M monthly calls",
+            "url": "https://openai.com/index/retell-ai",
+            "published_at": "Tue, 27 Oct 2026 15:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "c414dfc4-dbe8-595b-a1ad-733ebe883ada",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜OpenAI and ServiceNow expand p...",
+        "one_sentence_summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workf...",
+        "detailed_summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
+        "key_points": [
+          "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workf..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：OpenAI and ServiceNow expand partnership across enterprise workflows",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 91.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "智能体",
+          "编程工具",
+          "商业化"
+        ],
+        "signal_strength": 72.88,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+            "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+            "published_at": "Wed, 28 Oct 2026 13:15:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "262fb3f0-292f-5490-b84a-1bee531231d7",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Introducing Claude Opus 5.5 Cl...",
+        "one_sentence_summary": "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Intr...",
+        "detailed_summary": "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Introduction Performance and cost-effectiveness Safety Availability Claude Opus 5.5 September 22, 2026 (1) Introduction (2) Performance and cost (3) Safety (4) Availability Scroll down We’re introducing Claude Opus 5.5, the first model in our new Claude 5.5 family. It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5. Claude Opus 5.5 is ou...",
+        "key_points": [
+          "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Intr...",
+          "It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5.",
+          "Claude Opus 5.5 is our first release since we called for pacing the frontier .",
+          "It was tested before release by external evaluators, including Frontier Design and METR .",
+          "On our automated behavioral audit, the most comprehensive alignment test we run, Opus 5.5 is the strongest-performing..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Introducing Claude Opus 5.5 Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 88.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "模型发布",
+          "智能体",
+          "编程工具",
+          "政策监管",
+          "论文研究"
+        ],
+        "signal_strength": 70.84,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Introducing Claude Opus 5.5 Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
+            "url": "https://www.anthropic.com/claude-opus-5-5",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "08cddb0a-8cfa-51b4-8d4e-03c71071afdc",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Legora is building the agentic...",
+        "one_sentence_summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and fr...",
+        "detailed_summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
+        "key_points": [
+          "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and fr..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Legora is building the agentic operating system for legal work",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 87.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "智能体",
+          "编程工具",
+          "国际金融"
+        ],
+        "signal_strength": 70.16,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Legora is building the agentic operating system for legal work",
+            "url": "https://openai.com/index/legora",
+            "published_at": "Wed, 28 Oct 2026 09:30:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "740d2c42-f7dd-5698-b243-09f056ffb1f1",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜OpenAI expands partnership wit...",
+        "one_sentence_summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power...",
+        "detailed_summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
+        "key_points": [
+          "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 86.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "智能体",
+          "产品更新"
+        ],
+        "signal_strength": 67.98,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+            "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+            "published_at": "Tue, 27 Oct 2026 07:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "397d3d67-fb73-5cca-92f6-2a2b85165b28",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜An update on recent Claude Cod...",
+        "one_sentence_summary": "An update on recent Claude Code quality reports",
+        "detailed_summary": "An update on recent Claude Code quality reports",
+        "key_points": [
+          "An update on recent Claude Code quality reports"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：An update on recent Claude Code quality reports",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 86.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "编程工具"
+        ],
+        "signal_strength": 66.48,
+        "reading_links": [
+          {
+            "source_id": "anthropic_engineering",
+            "source_name": "Anthropic Engineering",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "An update on recent Claude Code quality reports",
+            "url": "https://www.anthropic.com/research/april-23-postmortem",
+            "published_at": null,
+            "link_label": "Anthropic Engineering",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "d250ff39-387c-5f48-99fd-089980d49980",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Counting the Bandages: On meas...",
+        "one_sentence_summary": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a...",
+        "detailed_summary": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a counterfactual that has to be read next to the errors the work lets through, and I argue for the latter. The argument has four parts. I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from them: the break-even defe...",
+        "key_points": [
+          "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time.",
+          "I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a...",
+          "The argument has four parts.",
+          "I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from t...",
+          "I give a baseline model of checking in which, until the model is good enough not to check, a calibrated worker's esca..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Counting the Bandages: On measuring the time that AI saves",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 84.0,
+        "confidence": 0.55,
+        "tags": [
+          "国际金融",
+          "论文研究"
+        ],
+        "signal_strength": 60.12,
+        "reading_links": [
+          {
+            "source_id": "arxiv_cs_ai",
+            "source_name": "arXiv cs.AI",
+            "source_type": "research",
+            "source_role": "primary",
+            "original_title": "Counting the Bandages: On measuring the time that AI saves",
+            "url": "https://arxiv.org/abs/2610.35942",
+            "published_at": "Thu, 29 Oct 2026 00:00:00 -0400",
+            "link_label": "arXiv cs.AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "research"
+        ]
+      },
+      {
+        "id": "a4417432-6f09-5eca-a74a-05537046a557",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜How we contAIn Claude across p...",
+        "one_sentence_summary": "How we contain Claude across products",
+        "detailed_summary": "How we contain Claude across products",
+        "key_points": [
+          "How we contain Claude across products"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：How we contain Claude across products",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 82.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "产品更新"
+        ],
+        "signal_strength": 63.76,
+        "reading_links": [
+          {
+            "source_id": "anthropic_engineering",
+            "source_name": "Anthropic Engineering",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "How we contain Claude across products",
+            "url": "https://www.anthropic.com/research/how-we-contain-claude",
+            "published_at": null,
+            "link_label": "Anthropic Engineering",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "32f43b7b-aecb-5780-8228-0103f1152b00",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Gemini Build intelligent agents",
+        "one_sentence_summary": "Gemini Build intelligent agents",
+        "detailed_summary": "Gemini Build intelligent agents",
+        "key_points": [
+          "Gemini Build intelligent agents"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 82.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "智能体"
+        ],
+        "signal_strength": 63.76,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Build intelligent agents",
+            "url": "https://deepmind.google/models/gemini/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "723b1632-23c5-5c52-a920-90f0790ef85e",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Gemini Omni Create anything fr...",
+        "one_sentence_summary": "Gemini Omni Create anything from anything",
+        "detailed_summary": "Gemini Omni Create anything from anything",
+        "key_points": [
+          "Gemini Omni Create anything from anything"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Gemini Omni Create anything from anything",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 82.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 62.26,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Omni Create anything from anything",
+            "url": "https://deepmind.google/models/gemini-omni/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "92b5ca82-2070-5233-92f6-183d5cfd2114",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Gemini Audio Talk, create and...",
+        "one_sentence_summary": "Gemini Audio Talk, create and control audio",
+        "detailed_summary": "Gemini Audio Talk, create and control audio",
+        "key_points": [
+          "Gemini Audio Talk, create and control audio"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Gemini Audio Talk, create and control audio",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 82.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 62.26,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Audio Talk, create and control audio",
+            "url": "https://deepmind.google/models/gemini-audio/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "3c67d21b-781b-515f-bd38-6183b8b7f879",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Gemini models",
+        "one_sentence_summary": "Gemini models",
+        "detailed_summary": "Gemini models",
+        "key_points": [
+          "Gemini models"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Gemini models",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 78.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 59.54,
+        "reading_links": [
+          {
+            "source_id": "google_ai_blog",
+            "source_name": "Google AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini models",
+            "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
+            "published_at": null,
+            "link_label": "Google AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "687cd2b5-94b4-5df4-9ad9-0cd3a9599379",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜The future of the firm",
+        "one_sentence_summary": "How AI might enter the org chart—beneath, beside, and between us.",
+        "detailed_summary": "How AI might enter the org chart—beneath, beside, and between us.",
+        "key_points": [
+          "How AI might enter the org chart—beneath, beside, and between us."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：The future of the firm",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 73.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 56.14,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "The future of the firm",
+            "url": "https://openai.com/index/the-future-of-the-firm",
+            "published_at": "Wed, 28 Oct 2026 10:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "2eadcd18-3ea1-5ce7-9713-822c3336416c",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜NVIDIA Nemotron 3.5 Transcribe...",
+        "one_sentence_summary": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+        "detailed_summary": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+        "key_points": [
+          "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 67.0,
+        "confidence": 0.55,
+        "tags": [
+          "算力芯片"
+        ],
+        "signal_strength": 47.06,
+        "reading_links": [
+          {
+            "source_id": "huggingface_blog",
+            "source_name": "Hugging Face Blog",
+            "source_type": "research",
+            "source_role": "primary",
+            "original_title": "NVIDIA Nemotron 3.5 Transcribe and Granary v2: Intelligent Multilingual Transcription You Can Prompt and Adapt",
+            "url": "https://huggingface.co/blog/nvidia/nemotron-transcribe-granary",
+            "published_at": "Wed, 28 Oct 2026 14:58:17 GMT",
+            "link_label": "Hugging Face Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "research"
+        ]
+      },
+      {
+        "id": "99d77634-41f7-551b-b7b3-5ee600d12189",
+        "event_date": "2026-10-29",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Announcements",
+        "one_sentence_summary": "Announcements",
+        "detailed_summary": "Announcements",
+        "key_points": [
+          "Announcements"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Announcements",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 65.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 50.7,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Announcements",
+            "url": "https://www.anthropic.com/news/announcements",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      }
+    ],
+    "AI行业资讯": [
+      {
+        "id": "6c7f0190-e411-5ba4-ab16-ad38f4996acd",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Thin, Light and Built for Eve...",
+        "one_sentence_summary": "NVIDIA RTX Spark powers thin and light laptops built for everything that developers, creators and gamers do. RTX Spar...",
+        "detailed_summary": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games | NVIDIA Blog Skip to content Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games NVIDIA Nemotron 3.5 Transcribe and Liquid AI’s LFM3 models arrive for local AI; plus, Hermes Agent adds NVIDIA OpenShell and Switchyard, and ‘Phantom Blade Zero’ launches with NVIDIA DLSS 4.5. October 28, 2026 by Shreevar Rastogi 0 Comments Share...",
+        "key_points": [
+          "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games | NVIDI...",
+          "October 28, 2026 by Shreevar Rastogi 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+          "NVIDIA RTX Spark powers thin and light laptops built for everything that developers, creators and gamers do.",
+          "RTX Spark laptops are now available from ASUS, Dell, HP, Lenovo, Microsoft and MSI.",
+          "These powerful systems combine an NVIDIA Blackwell RTX GPU and an NVIDIA Grace CPU in a single superchip with up to 1..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 85.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "模型发布",
+          "智能体",
+          "编程工具",
+          "算力芯片"
+        ],
+        "signal_strength": 68.8,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+            "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+            "published_at": "Wed, 28 Oct 2026 15:00:46 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "60196f31-68c0-5ce3-a7d6-310845ff6d8f",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜How AI Is Changing the Pace o...",
+        "one_sentence_summary": "There are 57 million people worldwide living with dementia today. For the researchers working to help them, the obsta...",
+        "detailed_summary": "How AI Is Changing the Pace of Discovery for Millions Living With Dementia Skip to content How AI Is Changing the Pace of Discovery for Millions Living With Dementia The Consortium for Biomedical Research and AI in Neurodegeneration is working with NVIDIA to deploy open source AI tools to accelerate the science that makes new treatments possible. October 27, 2026 by Anthony Costa 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! There are 57 million people worldwi...",
+        "key_points": [
+          "How AI Is Changing the Pace of Discovery for Millions Living With Dementia Skip to content How AI Is Changing the Pac...",
+          "October 27, 2026 by Anthony Costa 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+          "There are 57 million people worldwide living with dementia today.",
+          "For the researchers working to help them, the obstacle isn’t a lack of effort — it’s too much data, too few experts t...",
+          "The Consortium for Biomedical Research and AI in Neurodegeneration (C-BRAIN), working with NVIDIA, is using AI to cha..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：How AI Is Changing the Pace of Discovery for Millions Living With Dementia",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 69.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "算力芯片",
+          "国际金融",
+          "论文研究",
+          "开源生态"
+        ],
+        "signal_strength": 57.92,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "How AI Is Changing the Pace of Discovery for Millions Living With Dementia",
+            "url": "https://blogs.nvidia.com/blog/open-source-ai-tools-cbrain-dementia/",
+            "published_at": "Tue, 27 Oct 2026 15:00:20 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "a4732411-6a08-57dd-a44f-e643b799827b",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Microsoft recorded $10 billio...",
+        "one_sentence_summary": "Microsoft said it made $10 billion in revenue from commercial arrangements with OpenAI, including revenue-sharing pay...",
+        "detailed_summary": "Microsoft recorded $10 billion in revenue from OpenAI | TechCrunch –:–:–:– Buy One Founder Summit Ticket, Get a Second for Free. Register now. Disrupt doors open Oct. Get your pass and bring someone with you at 50% off.",
+        "key_points": [
+          "Microsoft recorded $10 billion in revenue from OpenAI | TechCrunch –:–:–:– Buy One Founder Summit Ticket, Get a Secon...",
+          "Register now.",
+          "Disrupt doors open Oct.",
+          "Get your pass and bring someone with you at 50% off.",
+          "REGISTER NOW."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Microsoft recorded $10 billion in revenue from OpenAI",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 67.0,
+        "confidence": 0.55,
+        "tags": [
+          "商业化"
+        ],
+        "signal_strength": 47.06,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Microsoft recorded $10 billion in revenue from OpenAI",
+            "url": "https://techcrunch.com/2026/10/28/microsoft-recorded-10-billion-in-revenue-from-openai/",
+            "published_at": "Wed, 28 Oct 2026 21:34:30 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "e6824be3-64d5-5a2a-8d4c-4d36cf35e325",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Google expands AI Search ads...",
+        "one_sentence_summary": "The announcement came alongside parent company Alphabet's third-quarter earnings report, which saw revenue grow 25% y...",
+        "detailed_summary": "Google expands AI Search ads globally as core ad growth slows | TechCrunch –:–:–:– Buy One Founder Summit Ticket, Get a Second for Free. Register now. Disrupt doors open Oct. Get your pass and bring someone with you at 50% off.",
+        "key_points": [
+          "Google expands AI Search ads globally as core ad growth slows | TechCrunch –:–:–:– Buy One Founder Summit Ticket, Get...",
+          "Register now.",
+          "Disrupt doors open Oct.",
+          "Get your pass and bring someone with you at 50% off.",
+          "REGISTER NOW."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Google expands AI Search ads globally as core ad growth slows",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 65.5,
+        "confidence": 0.55,
+        "tags": [
+          "商业化"
+        ],
+        "signal_strength": 46.04,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Google expands AI Search ads globally as core ad growth slows",
+            "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/",
+            "published_at": "Wed, 28 Oct 2026 21:48:37 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "e4741204-811a-5087-b10a-7a6a0870d606",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Microsoft On The Issues",
+        "one_sentence_summary": "Microsoft On The Issues",
+        "detailed_summary": "Microsoft On The Issues",
+        "key_points": [
+          "Microsoft On The Issues"
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Microsoft On The Issues",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 64.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 50.02,
+        "reading_links": [
+          {
+            "source_id": "microsoft_ai_blog",
+            "source_name": "Microsoft AI Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Microsoft On The Issues",
+            "url": "https://blogs.microsoft.com/on-the-issues/",
+            "published_at": null,
+            "link_label": "Microsoft AI Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "d7031a6e-13b0-57a1-9593-d522ae08101d",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Kazakhstan Expands Compute fo...",
+        "one_sentence_summary": "Kazakhstan’s AI ecosystem is moving from infrastructure plans to deployment. The shift is visible across the full AI...",
+        "detailed_summary": "Kazakhstan’s AI ecosystem is moving from infrastructure plans to deployment. The shift is visible across the full AI stack — from infrastructure to models to applications. The announcements below — coinciding with a visit to Astana by NVIDIA founder and CEO Jensen Huang — point to the nation’s increasing supply of accelerated computing, along with […]",
+        "key_points": [
+          "Kazakhstan’s AI ecosystem is moving from infrastructure plans to deployment.",
+          "The shift is visible across the full AI stack — from infrastructure to models to applications.",
+          "The announcements below — coinciding with a visit to Astana by NVIDIA founder and CEO Jensen Huang — point to the nat..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Kazakhstan Expands Compute for Its AI Future",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 64.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "产品更新",
+          "算力芯片",
+          "国际金融"
+        ],
+        "signal_strength": 54.52,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Kazakhstan Expands Compute for Its AI Future",
+            "url": "https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/",
+            "published_at": "Fri, 23 Oct 2026 02:00:13 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "a12f8714-2211-5964-ace6-59e0192fb04b",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Cloud Deployment Incoming: ‘C...",
+        "one_sentence_summary": "Lock in and load out this GFN Thursday. Call of Duty: Modern Warfare 4 arrives on GeForce NOW at launch, bringing a n...",
+        "detailed_summary": "Lock in and load out this GFN Thursday. Call of Duty: Modern Warfare 4 arrives on GeForce NOW at launch, bringing a new campaign, multiplayer action and DMZ, high-stakes extraction mode to supported devices. The campaign also gets an enhanced look: GeForce RTX 5080-class performance arrives for Ultimate members, bringing support for ray-tracing features in […]",
+        "key_points": [
+          "Lock in and load out this GFN Thursday.",
+          "Call of Duty: Modern Warfare 4 arrives on GeForce NOW at launch, bringing a new campaign, multiplayer action and DMZ,...",
+          "The campaign also gets an enhanced look: GeForce RTX 5080-class performance arrives for Ultimate members, bringing su..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Cloud Deployment Incoming: ‘Call of Duty: Modern Warfare 4’ Arrives on GeForce NOW",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 64.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "模型发布",
+          "产品更新"
+        ],
+        "signal_strength": 53.02,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Cloud Deployment Incoming: ‘Call of Duty: Modern Warfare 4’ Arrives on GeForce NOW",
+            "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-call-of-duty-modern-warfare-4/",
+            "published_at": "Thu, 22 Oct 2026 13:00:20 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "e6e05438-6227-533d-b615-77702596ddef",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜NVIDIA Unveils Minerva to Bri...",
+        "one_sentence_summary": "Launched today, NVIDIA Minerva is an AIOps platform built to help teams find problems earlier and keep AI factories p...",
+        "detailed_summary": "Launched today, NVIDIA Minerva is an AIOps platform built to help teams find problems earlier and keep AI factories productive. It brings together telemetry from infrastructure and AI workloads, then applies purpose-built AI models to turn that data into timely, actionable insight. AI factories are among the most complex operations in the world, with vast […]",
+        "key_points": [
+          "Launched today, NVIDIA Minerva is an AIOps platform built to help teams find problems earlier and keep AI factories p...",
+          "It brings together telemetry from infrastructure and AI workloads, then applies purpose-built AI models to turn that...",
+          "AI factories are among the most complex operations in the world, with vast […]"
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 62.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "模型发布",
+          "产品更新",
+          "算力芯片"
+        ],
+        "signal_strength": 53.16,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "NVIDIA Unveils Minerva to Bring End-to-End Observability for AI Factories",
+            "url": "https://blogs.nvidia.com/blog/minerva-platform-infrastructure/",
+            "published_at": "Thu, 22 Oct 2026 15:00:02 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "db048c86-27bd-5882-b344-33c8d480593b",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "Microsoft just shared Azure’s actual...",
+        "one_sentence_summary": "Microsoft has never disclosed Azure's quarterly revenue in dollars. But for the first time, we can see just how close...",
+        "detailed_summary": "Microsoft has never disclosed Azure's quarterly revenue in dollars. But for the first time, we can see just how close it is getting to besting the biggest competitor in the market, AWS.",
+        "key_points": [
+          "Microsoft has never disclosed Azure's quarterly revenue in dollars.",
+          "But for the first time, we can see just how close it is getting to besting the biggest competitor in the market, AWS."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 62.0,
+        "confidence": 0.55,
+        "tags": [
+          "商业化",
+          "国际金融"
+        ],
+        "signal_strength": 45.16,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Microsoft just shared Azure’s actual revenue in dollars: $33.2 billion",
+            "url": "https://techcrunch.com/2026/10/28/microsoft-just-shared-azures-actual-revenue-in-dollars-33-2-billion/",
+            "published_at": "Wed, 28 Oct 2026 21:58:32 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "de787400-2d39-52a0-a539-c2c760cbb40a",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Microsoft hits 10 quarters of...",
+        "one_sentence_summary": "Whatever the future of AI might be, the current situation is still very good for Microsoft. The tech giant reported y...",
+        "detailed_summary": "Whatever the future of AI might be, the current situation is still very good for Microsoft. The tech giant reported yet another record for quarterly revenue on Wednesday: $92.3 billion, a 19% increase over the year-ago quarter.",
+        "key_points": [
+          "Whatever the future of AI might be, the current situation is still very good for Microsoft.",
+          "The tech giant reported yet another record for quarterly revenue on Wednesday: $92.3 billion, a 19% increase over the..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Microsoft hits 10 quarters of record-breaking revenue in a row",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 62.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "商业化"
+        ],
+        "signal_strength": 57.66,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Microsoft hits 10 quarters of record-breaking revenue in a row",
+            "url": "https://techcrunch.com/2026/10/28/microsoft-hits-10-quarters-of-record-breaking-revenue-in-a-row/",
+            "published_at": "Wed, 28 Oct 2026 21:25:30 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          },
+          {
+            "source_id": "microsoft_ai_blog",
+            "source_name": "Microsoft AI Blog",
+            "source_type": "official",
+            "source_role": "related",
+            "original_title": "Microsoft On The Issues",
+            "url": "https://blogs.microsoft.com/on-the-issues/",
+            "published_at": null,
+            "link_label": "Microsoft AI Blog",
+            "is_primary_reading_link": false,
+            "display_order": 2
+          }
+        ],
+        "source_count": 2,
+        "source_types": [
+          "media",
+          "official"
+        ]
+      },
+      {
+        "id": "8d4515f1-a992-5167-8747-5205c7769f98",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Microsoft profits soar days a...",
+        "one_sentence_summary": "The week, the Windows developer said it would offer buyouts to 60,000 workers as it looks to curb costs.",
+        "detailed_summary": "The week, the Windows developer said it would offer buyouts to 60,000 workers as it looks to curb costs.",
+        "key_points": [
+          "The week, the Windows developer said it would offer buyouts to 60,000 workers as it looks to curb costs."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Microsoft profits soar days after announcing thousands of layoffs",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 61.0,
+        "confidence": 0.55,
+        "tags": [
+          "编程工具"
+        ],
+        "signal_strength": 42.98,
+        "reading_links": [
+          {
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Microsoft profits soar days after announcing thousands of layoffs",
+            "url": "https://www.bbc.co.uk/news/articles/c6m24klyjr8no?at_medium=RSS&at_campaign=rss",
+            "published_at": "Thu, 29 Oct 2026 01:27:40 GMT",
+            "link_label": "BBC Technology",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "f5777bb8-0069-5107-ad10-d39c799edfd6",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Anthropic just launched tools...",
+        "one_sentence_summary": "The frontier lab is lifting the curtain on how users spend money on its models ahead of a planned IPO.",
+        "detailed_summary": "The frontier lab is lifting the curtain on how users spend money on its models ahead of a planned IPO.",
+        "key_points": [
+          "The frontier lab is lifting the curtain on how users spend money on its models ahead of a planned IPO."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Anthropic just launched tools to show companies what their AI spending is buying",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布"
+        ],
+        "signal_strength": 42.3,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Anthropic just launched tools to show companies what their AI spending is buying",
+            "url": "https://techcrunch.com/2026/10/28/anthropic-just-launched-tools-to-show-companies-what-their-ai-spending-is-buying/",
+            "published_at": "Wed, 28 Oct 2026 19:19:58 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "de60de92-e162-5ea7-a907-0575e0e63b0d",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜DetAIls of thousands of US im...",
+        "one_sentence_summary": "A group called the Department of Peace released information on more than 41,000 DHS staff.",
+        "detailed_summary": "A group called the Department of Peace released information on more than 41,000 DHS staff.",
+        "key_points": [
+          "A group called the Department of Peace released information on more than 41,000 DHS staff."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Details of thousands of US immigration agents leaked in major hack",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "智能体"
+        ],
+        "signal_strength": 41.08,
+        "reading_links": [
+          {
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Details of thousands of US immigration agents leaked in major hack",
+            "url": "https://www.bbc.co.uk/news/articles/cq8jzkpjr28vo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Thu, 29 Oct 2026 01:30:43 GMT",
+            "link_label": "BBC Technology",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "00b7c6d1-797f-5ea5-9722-979781edf9b0",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Elon Musk is a 'real genius',...",
+        "one_sentence_summary": "The Russian President praised Musk and said they are in \"close\" contact.",
+        "detailed_summary": "The Russian President praised Musk and said they are in \"close\" contact.",
+        "key_points": [
+          "The Russian President praised Musk and said they are in \"close\" contact."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Elon Musk is a 'real genius', Putin says after satellite talks with SpaceX boss",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [],
+        "signal_strength": 38.08,
+        "reading_links": [
+          {
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Elon Musk is a 'real genius', Putin says after satellite talks with SpaceX boss",
+            "url": "https://www.bbc.co.uk/news/articles/c63djl148n3eo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 28 Oct 2026 19:15:58 GMT",
+            "link_label": "BBC Technology",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "d5a107d9-e232-5099-a2a6-b5fedd207eb5",
+        "event_date": "2026-10-29",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Alphabet's Revenue Miss Reign...",
+        "one_sentence_summary": "<p>Article URL: <a href=\"https://www.bloomberg.com/news/articles/2026-10-28/alphabet-reports-disappointing-revenue-in...",
+        "detailed_summary": "<p>Article URL: <a href=\"https://www.bloomberg.com/news/articles/2026-10-28/alphabet-reports-disappointing-revenue-income-shares-drop\">https://www.bloomberg.com/news/articles/2026-10-28/alphabet-reports-disappointing-revenue-income-shares-drop</a></p> <p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50284841\">https://news.ycombinator.com/item?id=50284841</a></p> <p>Points: 1</p> <p># Comments: 0</p>",
+        "key_points": [
+          "<p>Article URL: <a href=\"https://www.bloomberg.com/news/articles/2026-10-28/alphabet-reports-disappointing-revenue-in..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Alphabet's Revenue Miss Reignites Fears over AI Spending Binge",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 53.0,
+        "confidence": 0.55,
+        "tags": [
+          "社区讨论",
+          "产品更新",
+          "商业化"
+        ],
+        "signal_strength": 44.54,
+        "reading_links": [
+          {
+            "source_id": "hackernews_ai",
+            "source_name": "Hacker News AI",
+            "source_type": "social",
+            "source_role": "primary",
+            "original_title": "Alphabet's Revenue Miss Reignites Fears over AI Spending Binge",
+            "url": "https://www.bloomberg.com/news/articles/2026-10-28/alphabet-reports-disappointing-revenue-income-shares-drop",
+            "published_at": "Thu, 29 Oct 2026 05:18:44 +0000",
+            "link_label": "Hacker News AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "social"
+        ]
+      }
+    ],
+    "国际形势影响": [
+      {
+        "id": "06e7064c-5daa-5392-ab23-1d193db839ad",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Netanyahu's bloc leading Isra...",
+        "one_sentence_summary": "With 85% of ballots counted, Netanyahu's Likud party and its allies are set to win 53 seats in the 120-seat Knesset.",
+        "detailed_summary": "Netanyahu's bloc leading Israel election but short of majority, partial results show - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat...",
+        "key_points": [
+          "Netanyahu's bloc leading Israel election but short of majority, partial results show - BBC News BBC Homepage Skip to...",
+          "With 85% of ballots counted, Netanyahu's Likud party and its far-right and ultra-Orthodox Jewish allies were on track...",
+          "Eisenkot's Yashar party and three other Jewish opposition parties in his bloc were set for 48.",
+          "Both leaders have said they will try to form a governing coalition.",
+          "Arab-led parties, who are on course to win an unprecedented 19 seats, could emerge as kingmakers, but all but one of..."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Netanyahu's bloc leading Israel election but short of majority, partial results show",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 63.5,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 44.68,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Netanyahu's bloc leading Israel election but short of majority, partial results show",
+            "url": "https://www.bbc.co.uk/news/articles/cmdx3knq1xexo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 28 Oct 2026 20:24:39 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "b56ebce3-7f47-5d31-b484-fd9a58b780ab",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜How could Israel break electi...",
+        "one_sentence_summary": "With 85% of votes counted, all signs point to an impasse. The most likely outcome may be new elections.",
+        "detailed_summary": "How could Israel break political deadlock? Here are four scenarios - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat World Africa Asia...",
+        "key_points": [
+          "How could Israel break political deadlock?",
+          "Here are four scenarios - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth...",
+          "Here are four scenarios Image source, AFP via Getty Images Image caption, Neither Gadi Eisenkot (left) or Benjamin Ne...",
+          "With 85% of votes counted after Tuesday's election, neither the incumbent Prime Minister Benjamin Netanyahu's coaliti...",
+          "In order to form a government, it looks likely one of the leading parties would have to break their campaign promises..."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：How could Israel break election deadlock? Here are four scenarios",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 61.5,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 43.32,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "How could Israel break election deadlock? Here are four scenarios",
+            "url": "https://www.bbc.co.uk/news/articles/cm62y46d97wwo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 28 Oct 2026 14:30:31 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "2723d96a-3a4c-5350-b7db-2e4c7e3879be",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜High-speed trAIn crash kills...",
+        "one_sentence_summary": "The crash, between a moving train and another that was stopped further up the track, was caused by an \"inexplicable\"...",
+        "detailed_summary": "High-speed train crash kills at least 68 people in Spain - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat World Africa Asia Australia...",
+        "key_points": [
+          "High-speed train crash kills at least 68 people in Spain - BBC News BBC Homepage Skip to content Accessibility Help Y...",
+          "It occurred when a train travelling from Madrid to Seville barrelled into another train - which was stationary on the...",
+          "The force saw several carriages fall down an embankment.",
+          "The transport minister said a computer failure followed by human error caused the crash, which is one of the worst in...",
+          "Survivors described harrowing scenes of passengers being thrown into the air, trapped in the wreckage and smashing wi..."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：High-speed train crash kills at least 68 people in Spain",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.0,
+        "confidence": 0.55,
+        "tags": [
+          "产品更新",
+          "地缘影响"
+        ],
+        "signal_strength": 41.76,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "High-speed train crash kills at least 68 people in Spain",
+            "url": "https://www.bbc.co.uk/news/articles/c6p3g84kjqjlo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 28 Oct 2026 21:38:54 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "42f0914c-4ea2-5bb5-8ab4-02c6a4884252",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Bloodied, dazed and angry - h...",
+        "one_sentence_summary": "Survivors of the train crash in Spain have spoken of their shock, panic and anger at the accident in Toledo province...",
+        "detailed_summary": "Spanish rail crash: Bloodied, dazed and angry - how passengers' rail journey turned to disaster - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Veri...",
+        "key_points": [
+          "Spanish rail crash: Bloodied, dazed and angry - how passengers' rail journey turned to disaster - BBC News BBC Homepa...",
+          "Two high-speed trains were travelling south from the Spanish capital, Madrid, to Seville.",
+          "One, run by state-owned operator Renfe had 397 passengers on board.",
+          "Ahead of it on the same line was a train of Iryo private operator with 147 passengers.",
+          "A reported issue with the automatic signalling system - a computer failure - had forced all trains to halt on the aff..."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Bloodied, dazed and angry - how passengers' rail journey turned to disaster in Spain",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 40.26,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Bloodied, dazed and angry - how passengers' rail journey turned to disaster in Spain",
+            "url": "https://www.bbc.co.uk/news/articles/cm9qzd47ng98o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 28 Oct 2026 21:24:41 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "8d1c769f-be56-5cfb-aaef-f33c95e48664",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Flávio Bolsonaro denies fleei...",
+        "one_sentence_summary": "The defeated Brazilian candidate claims to be the victim of a coup d’état and political persecution, recycling unsubs...",
+        "detailed_summary": "The defeated Brazilian candidate claims to be the victim of a coup d’état and political persecution, recycling unsubstantiated allegations of “electoral fraud”.",
+        "key_points": [
+          "The defeated Brazilian candidate claims to be the victim of a coup d’état and political persecution, recycling unsubs..."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Flávio Bolsonaro denies fleeing Brazil after landing in Miami",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 40.26,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Flávio Bolsonaro denies fleeing Brazil after landing in Miami",
+            "url": "https://www.bbc.co.uk/news/articles/c6kglwe4lxwzo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Thu, 29 Oct 2026 01:14:01 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "f11a9695-3be9-5c0a-a293-de311e786592",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Can Turkiye’s Libya breakthro...",
+        "one_sentence_summary": "Ankara wins backing from former adversaries in Libya for maritime border agreement, but other diplomatic tests remain.",
+        "detailed_summary": "Ankara wins backing from former adversaries in Libya for maritime border agreement, but other diplomatic tests remain.",
+        "key_points": [
+          "Ankara wins backing from former adversaries in Libya for maritime border agreement, but other diplomatic tests remain."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Can Turkiye’s Libya breakthrough reshape Eastern Mediterranean diplomacy?",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 39.58,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Can Turkiye’s Libya breakthrough reshape Eastern Mediterranean diplomacy?",
+            "url": "https://www.aljazeera.com/news-analysis/2026/10/29/can-turkiyes-libya-breakthrough-reshape-eastern-mediterranean-diplomacy?traffic_source=rss",
+            "published_at": "Thu, 29 Oct 2026 05:29:20 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "8d01d591-0a27-5d17-9143-de7a1f6815f7",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Russia says more than 600 dro...",
+        "one_sentence_summary": "The attack is the latest in a series of major drone assaults targeting the Moscow region.",
+        "detailed_summary": "The attack is the latest in a series of major drone assaults targeting the Moscow region.",
+        "key_points": [
+          "The attack is the latest in a series of major drone assaults targeting the Moscow region."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Russia says more than 600 drones launched towards Moscow overnight",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "地缘影响"
+        ],
+        "signal_strength": 41.08,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Russia says more than 600 drones launched towards Moscow overnight",
+            "url": "https://www.aljazeera.com/news/2026/10/29/russia-says-more-than-600-drones-launched-towards-moscow-overnight?traffic_source=rss",
+            "published_at": "Thu, 29 Oct 2026 05:22:21 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "56a503c1-f843-517f-9bab-8fe39d63a33c",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Judge rejects Trump effort to...",
+        "one_sentence_summary": "More than 100 subpoenas issued across 13 states as government ramps up search for alleged noncitizen voters.",
+        "detailed_summary": "More than 100 subpoenas issued across 13 states as government ramps up search for alleged noncitizen voters.",
+        "key_points": [
+          "More than 100 subpoenas issued across 13 states as government ramps up search for alleged noncitizen voters."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Judge rejects Trump effort to block California ‘noncitizen’ ballots",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 39.58,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Judge rejects Trump effort to block California ‘noncitizen’ ballots",
+            "url": "https://www.aljazeera.com/news/2026/10/29/judge-rejects-trump-effort-to-block-california-noncitizen-ballots?traffic_source=rss",
+            "published_at": "Thu, 29 Oct 2026 05:06:23 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "c14ef293-512c-530e-88d1-63a137014fb1",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Obama mocks Trump team’s Chee...",
+        "one_sentence_summary": "Obama mocks Trump team’s Cheesecake Factory response",
+        "detailed_summary": "Obama mocks Trump team’s Cheesecake Factory response",
+        "key_points": [
+          "Obama mocks Trump team’s Cheesecake Factory response"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Obama mocks Trump team’s Cheesecake Factory response",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 39.58,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Obama mocks Trump team’s Cheesecake Factory response",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/29/obama-mocks-trump-teams-cheesecake-factory-response?traffic_source=rss",
+            "published_at": "Thu, 29 Oct 2026 04:30:04 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "41faaee8-a47b-5ae0-9508-3c6313121dfd",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Incredible celebrations as la...",
+        "one_sentence_summary": "Footage shows healthcare workers celebrating at an Ebola treatment centre in DR Congo after the last patient left.",
+        "detailed_summary": "Footage shows healthcare workers celebrating at an Ebola treatment centre in DR Congo after the last patient left.",
+        "key_points": [
+          "Footage shows healthcare workers celebrating at an Ebola treatment centre in DR Congo after the last patient left."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Incredible celebrations as last patient leaves a DRC Ebola centre",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 39.58,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Incredible celebrations as last patient leaves a DRC Ebola centre",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/10/29/incredible-celebrations-as-last-patient-leaves-a-drc-ebola-centre?traffic_source=rss",
+            "published_at": "Thu, 29 Oct 2026 03:39:02 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "9d2fbf9e-eca4-563f-ace0-47d47c988d13",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Support CFR",
+        "one_sentence_summary": "Support CFR",
+        "detailed_summary": "Support CFR",
+        "key_points": [
+          "Support CFR"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Support CFR",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 48.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 34.14,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Support CFR",
+            "url": "https://www.cfr.org/support-cfr",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "5d47aa05-35e1-53e6-b677-3ea8bfc1d786",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Member Login",
+        "one_sentence_summary": "Member Login",
+        "detailed_summary": "Member Login",
+        "key_points": [
+          "Member Login"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Member Login",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 48.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 34.14,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Member Login",
+            "url": "https://www.cfr.org/members",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "1a655dc5-8010-573b-96a8-42308c107d8c",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Regions",
+        "one_sentence_summary": "Regions",
+        "detailed_summary": "Regions",
+        "key_points": [
+          "Regions"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Regions",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 48.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 34.14,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Regions",
+            "url": "https://www.cfr.org/regions",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "5ecc3c9e-edf2-591a-9d48-916b5f7ed074",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Topics",
+        "one_sentence_summary": "Topics",
+        "detailed_summary": "Topics",
+        "key_points": [
+          "Topics"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Topics",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 48.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 34.14,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Topics",
+            "url": "https://www.cfr.org/topics",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "b5a72f84-6d8b-517e-bf36-a753f5745286",
+        "event_date": "2026-10-29",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Research",
+        "one_sentence_summary": "Research",
+        "detailed_summary": "Research",
+        "key_points": [
+          "Research"
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Research",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 48.0,
+        "confidence": 0.55,
+        "tags": [
+          "论文研究",
+          "地缘影响"
+        ],
+        "signal_strength": 35.64,
+        "reading_links": [
+          {
+            "source_id": "cfr",
+            "source_name": "Council on Foreign Relations",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Research",
+            "url": "https://www.cfr.org/research-analysis",
+            "published_at": null,
+            "link_label": "Council on Foreign Relations",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      }
+    ],
+    "国际金融": [
+      {
+        "id": "52cfdc78-6300-5c13-ab9d-03d939bec7e8",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "美国财政部 Sanctions Facilitators of DPRK...",
+        "one_sentence_summary": "美国财政部 Sanctions Facilitators of DPRK...",
+        "detailed_summary": "美国财政部 Sanctions Facilitators of DPRK...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "美国财政部 Sanctions Facilitators of DPRK...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Treasury Sanctions Facilitators of DPRK IT Worker Fraud Targeting U.S. Businesses",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 66.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 50.88,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Treasury Sanctions Facilitators of DPRK IT Worker Fraud Targeting U.S. Businesses",
+            "url": "https://home.treasury.gov/news/press-releases/sb0669/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "a2c68958-c622-536f-a933-9125124b6e48",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "美国财政部 Sanctions Rwandan Ministry of...",
+        "one_sentence_summary": "美国财政部 Sanctions Rwandan Ministry of...",
+        "detailed_summary": "美国财政部 Sanctions Rwandan Ministry of...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "美国财政部 Sanctions Rwandan Ministry of...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Treasury Sanctions Rwandan Ministry of Defence and Financial Institution Supporting M23",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 66.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 50.88,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Treasury Sanctions Rwandan Ministry of Defence and Financial Institution Supporting M23",
+            "url": "https://home.treasury.gov/news/press-releases/sb0668/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "637c7cb1-7520-526a-ad77-957adcec7e0b",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "美国财政部 Issues Proposed Rule to Implem...",
+        "one_sentence_summary": "美国财政部 Issues Proposed Rule to Implem...",
+        "detailed_summary": "美国财政部 Issues Proposed Rule to Implem...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "美国财政部 Issues Proposed Rule to Implem...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Treasury Issues Proposed Rule to Implement Comprehensive Outbound Investment National Security Act",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 66.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 50.88,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Treasury Issues Proposed Rule to Implement Comprehensive Outbound Investment National Security Act",
+            "url": "https://home.treasury.gov/news/press-releases/sb0667/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "78d5f349-cd57-5a3d-829c-4dc2f9225216",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "国际金融｜September 29, 2026IMF Executive...",
+        "one_sentence_summary": "国际金融｜September 29, 2026IMF Executive...",
+        "detailed_summary": "国际金融｜September 29, 2026IMF Executive...。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜September 29, 2026IMF Executive...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：September 29, 2026IMF Executive Board Concludes 2026 Article IV Consultation with the People’s Republic of China—Macao Special Administrative Region",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 60.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 46.8,
+        "reading_links": [
+          {
+            "source_id": "imf_news",
+            "source_name": "IMF News",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "September 29, 2026IMF Executive Board Concludes 2026 Article IV Consultation with the People’s Republic of China—Macao Special Administrative Region",
+            "url": "https://www.imf.org/en/news/articles/2026/09/29/pr26311-macao-imf-executive-board-concludes-2026-article-iv-consultation",
+            "published_at": null,
+            "link_label": "IMF News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          },
+          {
+            "source_id": "imf_news",
+            "source_name": "IMF News",
+            "source_type": "finance",
+            "source_role": "supporting",
+            "original_title": "September 30, 2026IMF Executive Board Completes the Combined Third and Fourth Reviews Under the Extended Credit Facility and the Resilience and Sustainability Facility Arrangements with the Republic of Madagascar",
+            "url": "https://www.imf.org/en/news/articles/2026/09/30/pr26312-republic-of-madagascar",
+            "published_at": null,
+            "link_label": "IMF News",
+            "is_primary_reading_link": false,
+            "display_order": 2
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "a869cda0-a3dd-50ad-903b-da0f21ac2f2a",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "READOUT: Secretary of the 美国财政部 Scot...",
+        "one_sentence_summary": "READOUT: Secretary of the 美国财政部 Scot...",
+        "detailed_summary": "READOUT: Secretary of the 美国财政部 Scot...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "READOUT: Secretary of the 美国财政部 Scot...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：READOUT: Secretary of the Treasury Scott Bessent’s Meeting with President Santiago Peña of Paraguay",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 46.46,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "READOUT: Secretary of the Treasury Scott Bessent’s Meeting with President Santiago Peña of Paraguay",
+            "url": "https://home.treasury.gov/news/press-releases/sb0666/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "a6cc974c-46b5-5bef-aaac-2d7285623521",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "国际金融｜The Trump Administration is Mak...",
+        "one_sentence_summary": "国际金融｜The Trump Administration is Mak...",
+        "detailed_summary": "国际金融｜The Trump Administration is Mak...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜The Trump Administration is Mak...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：The Trump Administration is Making Homeownership More Affordable",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 46.46,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "The Trump Administration is Making Homeownership More Affordable",
+            "url": "https://home.treasury.gov/news/press-releases/sb0665/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "63b96860-9f19-5d6f-915a-8590869ae084",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "GDP (Third Estimate), Industries, Co...",
+        "one_sentence_summary": "GDP (Third Estimate), Industries, Co...",
+        "detailed_summary": "GDP (Third Estimate), Industries, Co...。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "GDP (Third Estimate), Industries, Co...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 2nd Quarter 2026; State PCE, 2025",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 46.46,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "GDP (Third Estimate), Industries, Corporate Profits, State GDP, and State Personal Income, 2nd Quarter 2026; State PCE, 2025",
+            "url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-2nd",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "533ba349-513f-5db7-81fe-d5925599a85c",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "欧洲央行启动保密统计数据研究访问试点",
+        "one_sentence_summary": "欧洲央行启动保密统计数据研究访问试点",
+        "detailed_summary": "欧洲央行启动保密统计数据研究访问试点。该条来自European Central Bank Press，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "欧洲央行启动保密统计数据研究访问试点",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：PRESS RELEASE - ECB launches pilot project for research access to confidential statistical data 13 March 2025",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融",
+          "论文研究"
+        ],
+        "signal_strength": 46.46,
+        "reading_links": [
+          {
+            "source_id": "ecb_press",
+            "source_name": "European Central Bank Press",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "PRESS RELEASE - ECB launches pilot project for research access to confidential statistical data 13 March 2025",
+            "url": "https://www.ecb.europa.eu/press/pr/date/2025/html/ecb.pr250313~9d160bc6e2.en.html",
+            "published_at": null,
+            "link_label": "European Central Bank Press",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "b3b78108-7e75-58e0-90a0-6ad4ae1eb86b",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "美国4月国际货物和服务贸易数据发布",
+        "one_sentence_summary": "美国4月国际货物和服务贸易数据发布",
+        "detailed_summary": "美国4月国际货物和服务贸易数据发布。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "美国4月国际货物和服务贸易数据发布",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：U.S. International Trade in Goods and Services, August 2026",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 53.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 42.04,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "U.S. International Trade in Goods and Services, August 2026",
+            "url": "https://www.bea.gov/news/2026/us-international-trade-goods-and-services-august-2026",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "60432fb9-2723-573a-a07f-9763618dee46",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "美国4月个人收入和支出数据发布",
+        "one_sentence_summary": "美国4月个人收入和支出数据发布",
+        "detailed_summary": "美国4月个人收入和支出数据发布。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "美国4月个人收入和支出数据发布",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Personal Income and Outlays, August 2026",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 53.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "商业化",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 42.04,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Personal Income and Outlays, August 2026",
+            "url": "https://www.bea.gov/news/2026/personal-income-and-outlays-august-2026",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "678ac5f4-392a-5bd7-8a73-c99a2bb210ba",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "国际金融｜U.S. International Transactions...",
+        "one_sentence_summary": "国际金融｜U.S. International Transactions...",
+        "detailed_summary": "国际金融｜U.S. International Transactions...。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜U.S. International Transactions...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：U.S. International Transactions and Investment Position, 2nd Quarter 2026",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 53.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 42.04,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "U.S. International Transactions and Investment Position, 2nd Quarter 2026",
+            "url": "https://www.bea.gov/news/2026/us-international-transactions-and-investment-position-2nd-quarter-2026",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "3d4b22f0-edef-57d7-a297-3582c84b4872",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "国际金融｜Direct Investment by Country an...",
+        "one_sentence_summary": "国际金融｜Direct Investment by Country an...",
+        "detailed_summary": "国际金融｜Direct Investment by Country an...。该条来自U.S. Bureau of Economic Analysis，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜Direct Investment by Country an...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Direct Investment by Country and Industry, 2025",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 53.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 42.04,
+        "reading_links": [
+          {
+            "source_id": "bea_news",
+            "source_name": "U.S. Bureau of Economic Analysis",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Direct Investment by Country and Industry, 2025",
+            "url": "https://www.bea.gov/news/2026/direct-investment-country-and-industry-2025",
+            "published_at": null,
+            "link_label": "U.S. Bureau of Economic Analysis",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "62b0e87f-45c7-54b6-a6f5-618cdb3ec8b6",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "国际金融｜October 7, 2026Coming Soon: 202...",
+        "one_sentence_summary": "国际金融｜October 7, 2026Coming Soon: 202...",
+        "detailed_summary": "国际金融｜October 7, 2026Coming Soon: 202...。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜October 7, 2026Coming Soon: 202...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：October 7, 2026Coming Soon: 2026 Annual Meetings Curtain Raiser",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 51.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 40.68,
+        "reading_links": [
+          {
+            "source_id": "imf_news",
+            "source_name": "IMF News",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "October 7, 2026Coming Soon: 2026 Annual Meetings Curtain Raiser",
+            "url": "https://www.imf.org/en/news/articles/2026/10/07/sp100726-2026-annual-meetings-curtain-raiser",
+            "published_at": null,
+            "link_label": "IMF News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "83b39e9d-d260-5eb6-b94c-600b0b110911",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "国际金融｜October 1, 2026Managing Directo...",
+        "one_sentence_summary": "国际金融｜October 1, 2026Managing Directo...",
+        "detailed_summary": "国际金融｜October 1, 2026Managing Directo...。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜October 1, 2026Managing Directo...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：October 1, 2026Managing Director’s Remarks at the Meeting of the Ministers of Finance and Central Bank Governors of the Gulf Cooperation Council",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 51.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 40.68,
+        "reading_links": [
+          {
+            "source_id": "imf_news",
+            "source_name": "IMF News",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "October 1, 2026Managing Director’s Remarks at the Meeting of the Ministers of Finance and Central Bank Governors of the Gulf Cooperation Council",
+            "url": "https://www.imf.org/en/news/articles/2026/10/01/sp10012026-managing-director-remarks-meeting-gulf-cooperation-council",
+            "published_at": null,
+            "link_label": "IMF News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "c68446a3-ba37-5e28-b37b-41c04f653a3f",
+        "event_date": "2026-10-29",
+        "category": "国际金融",
+        "ai_title": "国际金融｜September 29, 2026IMF Staff Con...",
+        "one_sentence_summary": "国际金融｜September 29, 2026IMF Staff Con...",
+        "detailed_summary": "国际金融｜September 29, 2026IMF Staff Con...。该条来自IMF News，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜September 29, 2026IMF Staff Con...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：September 29, 2026IMF Staff Concludes Post-Financing Assessment Mission to Seychelles",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 51.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 40.68,
+        "reading_links": [
+          {
+            "source_id": "imf_news",
+            "source_name": "IMF News",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "September 29, 2026IMF Staff Concludes Post-Financing Assessment Mission to Seychelles",
+            "url": "https://www.imf.org/en/news/articles/2026/09/29/pr26310-seychelles-imf-staff-concludes-mission",
+            "published_at": null,
+            "link_label": "IMF News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      }
+    ]
+  },
+  "top10": [
+    {
+      "id": "9db17b25-50a1-5b06-9e71-d5d145888ba3",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Retell uses OpenAI models to h...",
+      "one_sentence_summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per emplo...",
+      "detailed_summary": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per employee.",
+      "key_points": [
+        "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per emplo..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Retell uses OpenAI models to help power 100M monthly calls",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 92.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "评测榜单",
+        "智能体",
+        "编程工具",
+        "商业化",
+        "国际金融"
+      ],
+      "signal_strength": 73.56,
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Retell uses OpenAI models to help power 100M monthly calls",
+          "url": "https://openai.com/index/retell-ai",
+          "published_at": "Tue, 27 Oct 2026 15:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "c414dfc4-dbe8-595b-a1ad-733ebe883ada",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜OpenAI and ServiceNow expand p...",
+      "one_sentence_summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workf...",
+      "detailed_summary": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workflows into ChatGPT and Codex.",
+      "key_points": [
+        "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workf..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：OpenAI and ServiceNow expand partnership across enterprise workflows",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 91.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "智能体",
+        "编程工具",
+        "商业化"
+      ],
+      "signal_strength": 72.88,
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+          "published_at": "Wed, 28 Oct 2026 13:15:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "262fb3f0-292f-5490-b84a-1bee531231d7",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Introducing Claude Opus 5.5 Cl...",
+      "one_sentence_summary": "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Intr...",
+      "detailed_summary": "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Introduction Performance and cost-effectiveness Safety Availability Claude Opus 5.5 September 22, 2026 (1) Introduction (2) Performance and cost (3) Safety (4) Availability Scroll down We’re introducing Claude Opus 5.5, the first model in our new Claude 5.5 family. It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5. Claude Opus 5.5 is ou...",
+      "key_points": [
+        "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Intr...",
+        "It performs at the level of Claude Fable 5.1 on most work and costs 40% less to run than Opus 5.",
+        "Claude Opus 5.5 is our first release since we called for pacing the frontier .",
+        "It was tested before release by external evaluators, including Frontier Design and METR .",
+        "On our automated behavioral audit, the most comprehensive alignment test we run, Opus 5.5 is the strongest-performing..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Introducing Claude Opus 5.5 Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 88.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "模型发布",
+        "智能体",
+        "编程工具",
+        "政策监管",
+        "论文研究"
+      ],
+      "signal_strength": 70.84,
+      "reading_links": [
+        {
+          "source_id": "anthropic_news",
+          "source_name": "Anthropic News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Introducing Claude Opus 5.5 Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "published_at": null,
+          "link_label": "Anthropic News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "08cddb0a-8cfa-51b4-8d4e-03c71071afdc",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Legora is building the agentic...",
+      "one_sentence_summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and fr...",
+      "detailed_summary": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and free lawyers to focus on higher-value work.",
+      "key_points": [
+        "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and fr..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Legora is building the agentic operating system for legal work",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 87.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "智能体",
+        "编程工具",
+        "国际金融"
+      ],
+      "signal_strength": 70.16,
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Legora is building the agentic operating system for legal work",
+          "url": "https://openai.com/index/legora",
+          "published_at": "Wed, 28 Oct 2026 09:30:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "740d2c42-f7dd-5698-b243-09f056ffb1f1",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜OpenAI expands partnership wit...",
+      "one_sentence_summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power...",
+      "detailed_summary": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power new Oracle offerings.",
+      "key_points": [
+        "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 86.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "智能体",
+        "产品更新"
+      ],
+      "signal_strength": 67.98,
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+          "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+          "published_at": "Tue, 27 Oct 2026 07:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "397d3d67-fb73-5cca-92f6-2a2b85165b28",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜An update on recent Claude Cod...",
+      "one_sentence_summary": "An update on recent Claude Code quality reports",
+      "detailed_summary": "An update on recent Claude Code quality reports",
+      "key_points": [
+        "An update on recent Claude Code quality reports"
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：An update on recent Claude Code quality reports",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 86.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "编程工具"
+      ],
+      "signal_strength": 66.48,
+      "reading_links": [
+        {
+          "source_id": "anthropic_engineering",
+          "source_name": "Anthropic Engineering",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "An update on recent Claude Code quality reports",
+          "url": "https://www.anthropic.com/research/april-23-postmortem",
+          "published_at": null,
+          "link_label": "Anthropic Engineering",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "6c7f0190-e411-5ba4-ab16-ad38f4996acd",
+      "event_date": "2026-10-29",
+      "category": "AI行业资讯",
+      "ai_title": "AI行业资讯｜Thin, Light and Built for Eve...",
+      "one_sentence_summary": "NVIDIA RTX Spark powers thin and light laptops built for everything that developers, creators and gamers do. RTX Spar...",
+      "detailed_summary": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games | NVIDIA Blog Skip to content Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games NVIDIA Nemotron 3.5 Transcribe and Liquid AI’s LFM3 models arrive for local AI; plus, Hermes Agent adds NVIDIA OpenShell and Switchyard, and ‘Phantom Blade Zero’ launches with NVIDIA DLSS 4.5. October 28, 2026 by Shreevar Rastogi 0 Comments Share...",
+      "key_points": [
+        "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games | NVIDI...",
+        "October 28, 2026 by Shreevar Rastogi 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+        "NVIDIA RTX Spark powers thin and light laptops built for everything that developers, creators and gamers do.",
+        "RTX Spark laptops are now available from ASUS, Dell, HP, Lenovo, Microsoft and MSI.",
+        "These powerful systems combine an NVIDIA Blackwell RTX GPU and an NVIDIA Grace CPU in a single superchip with up to 1..."
+      ],
+      "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从商业化和产业竞争角度解读：Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 85.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "模型发布",
+        "智能体",
+        "编程工具",
+        "算力芯片"
+      ],
+      "signal_strength": 68.8,
+      "reading_links": [
+        {
+          "source_id": "nvidia_blog",
+          "source_name": "NVIDIA Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+          "published_at": "Wed, 28 Oct 2026 15:00:46 +0000",
+          "link_label": "NVIDIA Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "d250ff39-387c-5f48-99fd-089980d49980",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Counting the Bandages: On meas...",
+      "one_sentence_summary": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a...",
+      "detailed_summary": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a counterfactual that has to be read next to the errors the work lets through, and I argue for the latter. The argument has four parts. I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from them: the break-even defe...",
+      "key_points": [
+        "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time.",
+        "I contrast a stopwatch view, on which time saved is whatever the clock records, with a ledger view, on which it is a...",
+        "The argument has four parts.",
+        "I define a model-free pair of quantities, time saved and excess escaped defects, and one decision number built from t...",
+        "I give a baseline model of checking in which, until the model is good enough not to check, a calibrated worker's esca..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Counting the Bandages: On measuring the time that AI saves",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 84.0,
+      "confidence": 0.55,
+      "tags": [
+        "国际金融",
+        "论文研究"
+      ],
+      "signal_strength": 60.12,
+      "reading_links": [
+        {
+          "source_id": "arxiv_cs_ai",
+          "source_name": "arXiv cs.AI",
+          "source_type": "research",
+          "source_role": "primary",
+          "original_title": "Counting the Bandages: On measuring the time that AI saves",
+          "url": "https://arxiv.org/abs/2610.35942",
+          "published_at": "Thu, 29 Oct 2026 00:00:00 -0400",
+          "link_label": "arXiv cs.AI",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "research"
+      ]
+    },
+    {
+      "id": "a4417432-6f09-5eca-a74a-05537046a557",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜How we contAIn Claude across p...",
+      "one_sentence_summary": "How we contain Claude across products",
+      "detailed_summary": "How we contain Claude across products",
+      "key_points": [
+        "How we contain Claude across products"
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：How we contain Claude across products",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 82.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "产品更新"
+      ],
+      "signal_strength": 63.76,
+      "reading_links": [
+        {
+          "source_id": "anthropic_engineering",
+          "source_name": "Anthropic Engineering",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "How we contain Claude across products",
+          "url": "https://www.anthropic.com/research/how-we-contain-claude",
+          "published_at": null,
+          "link_label": "Anthropic Engineering",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "32f43b7b-aecb-5780-8228-0103f1152b00",
+      "event_date": "2026-10-29",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Gemini Build intelligent agents",
+      "one_sentence_summary": "Gemini Build intelligent agents",
+      "detailed_summary": "Gemini Build intelligent agents",
+      "key_points": [
+        "Gemini Build intelligent agents"
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 82.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "智能体"
+      ],
+      "signal_strength": 63.76,
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Build intelligent agents",
+          "url": "https://deepmind.google/models/gemini/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    }
+  ],
+  "topic_pool": [
+    {
+      "rank": 1,
+      "title": "从能力、成本和生态角度解读：Retell uses OpenAI models to help power 100M monthly calls",
+      "source_event_ids": [
+        "9db17b25-50a1-5b06-9e71-d5d145888ba3"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "GPT-6 Astra tops Retell’s voice agent benchmark, while Codex helps it reach a $1.6M annual revenue run rate per emplo...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "评测榜单",
+        "智能体",
+        "编程工具",
+        "商业化",
+        "国际金融"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "OpenAI News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 73.56,
+      "recommendation_reason": "含官方来源；标签：官方消息、评测榜单、智能体",
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Retell uses OpenAI models to help power 100M monthly calls",
+          "url": "https://openai.com/index/retell-ai",
+          "published_at": "Tue, 27 Oct 2026 15:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "从能力、成本和生态角度解读：OpenAI and ServiceNow expand partnership across enterprise workflows",
+      "source_event_ids": [
+        "c414dfc4-dbe8-595b-a1ad-733ebe883ada"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "OpenAI and ServiceNow expand their partnership to bring OpenAI models and agents into ServiceNow and ServiceNow workf...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "智能体",
+        "编程工具",
+        "商业化"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "OpenAI News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 72.88,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体、编程工具",
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "OpenAI and ServiceNow expand partnership across enterprise workflows",
+          "url": "https://openai.com/index/openai-servicenow-partnership-expansion",
+          "published_at": "Wed, 28 Oct 2026 13:15:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "从能力、成本和生态角度解读：Introducing Claude Opus 5.5 Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
+      "source_event_ids": [
+        "262fb3f0-292f-5490-b84a-1bee531231d7"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Intr...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "模型发布",
+        "智能体",
+        "编程工具",
+        "政策监管",
+        "论文研究"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "Anthropic News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 70.84,
+      "recommendation_reason": "含官方来源；标签：官方消息、模型发布、智能体",
+      "reading_links": [
+        {
+          "source_id": "anthropic_news",
+          "source_name": "Anthropic News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Introducing Claude Opus 5.5 Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
+          "url": "https://www.anthropic.com/claude-opus-5-5",
+          "published_at": null,
+          "link_label": "Anthropic News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "从能力、成本和生态角度解读：Legora is building the agentic operating system for legal work",
+      "source_event_ids": [
+        "08cddb0a-8cfa-51b4-8d4e-03c71071afdc"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "See how Legora uses OpenAI models, ChatGPT, and Codex to accelerate legal workflows, expand contract analysis, and fr...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "智能体",
+        "编程工具",
+        "国际金融"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "OpenAI News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 70.16,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体、编程工具",
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Legora is building the agentic operating system for legal work",
+          "url": "https://openai.com/index/legora",
+          "published_at": "Wed, 28 Oct 2026 09:30:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "从能力、成本和生态角度解读：OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+      "source_event_ids": [
+        "740d2c42-f7dd-5698-b243-09f056ffb1f1"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "OpenAI and Oracle are expanding their partnership to bring business applications and AI agents into ChatGPT and power...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "智能体",
+        "产品更新"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "OpenAI News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 67.98,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体、产品更新",
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "OpenAI expands partnership with Oracle to bring its apps to ChatGPT",
+          "url": "https://openai.com/index/oracle-apps-in-chatgpt",
+          "published_at": "Tue, 27 Oct 2026 07:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "从能力、成本和生态角度解读：An update on recent Claude Code quality reports",
+      "source_event_ids": [
+        "397d3d67-fb73-5cca-92f6-2a2b85165b28"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "An update on recent Claude Code quality reports",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "编程工具"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "Anthropic Engineering"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 66.48,
+      "recommendation_reason": "含官方来源；标签：官方消息、编程工具",
+      "reading_links": [
+        {
+          "source_id": "anthropic_engineering",
+          "source_name": "Anthropic Engineering",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "An update on recent Claude Code quality reports",
+          "url": "https://www.anthropic.com/research/april-23-postmortem",
+          "published_at": null,
+          "link_label": "Anthropic Engineering",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "从商业化和产业竞争角度解读：Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+      "source_event_ids": [
+        "6c7f0190-e411-5ba4-ab16-ad38f4996acd"
+      ],
+      "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+      "why_today": "NVIDIA RTX Spark powers thin and light laptops built for everything that developers, creators and gamers do. RTX Spar...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "模型发布",
+        "智能体",
+        "编程工具",
+        "算力芯片"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "NVIDIA Blog"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 68.8,
+      "recommendation_reason": "含官方来源；标签：官方消息、模型发布、智能体",
+      "reading_links": [
+        {
+          "source_id": "nvidia_blog",
+          "source_name": "NVIDIA Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Thin, Light and Built for Everything: NVIDIA RTX Spark Windows Laptops Gain New Models, Agent Tools and Games",
+          "url": "https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/",
+          "published_at": "Wed, 28 Oct 2026 15:00:46 +0000",
+          "link_label": "NVIDIA Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "从能力、成本和生态角度解读：Counting the Bandages: On measuring the time that AI saves",
+      "source_event_ids": [
+        "d250ff39-387c-5f48-99fd-089980d49980"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "arXiv:2610.35942v1 Announce Type: new Abstract: I consider what it means for AI assistance to save time. I contrast a...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "国际金融",
+        "论文研究"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "arXiv cs.AI"
+      ],
+      "source_types": [
+        "research"
+      ],
+      "signal_strength": 60.12,
+      "recommendation_reason": "标签：国际金融、论文研究",
+      "reading_links": [
+        {
+          "source_id": "arxiv_cs_ai",
+          "source_name": "arXiv cs.AI",
+          "source_type": "research",
+          "source_role": "primary",
+          "original_title": "Counting the Bandages: On measuring the time that AI saves",
+          "url": "https://arxiv.org/abs/2610.35942",
+          "published_at": "Thu, 29 Oct 2026 00:00:00 -0400",
+          "link_label": "arXiv cs.AI",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "title": "从能力、成本和生态角度解读：How we contain Claude across products",
+      "source_event_ids": [
+        "a4417432-6f09-5eca-a74a-05537046a557"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "How we contain Claude across products",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "产品更新"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "Anthropic Engineering"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 63.76,
+      "recommendation_reason": "含官方来源；标签：官方消息、产品更新",
+      "reading_links": [
+        {
+          "source_id": "anthropic_engineering",
+          "source_name": "Anthropic Engineering",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "How we contain Claude across products",
+          "url": "https://www.anthropic.com/research/how-we-contain-claude",
+          "published_at": null,
+          "link_label": "Anthropic Engineering",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 10,
+      "title": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
+      "source_event_ids": [
+        "32f43b7b-aecb-5780-8228-0103f1152b00"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "Gemini Build intelligent agents",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "智能体"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "Google DeepMind Blog"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 63.76,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体",
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Build intelligent agents",
+          "url": "https://deepmind.google/models/gemini/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    }
+  ],
+  "archive_entries": [
+    {
+      "date": "2026-10-29",
+      "generated_at": "2026-10-29T05:49:36.409130+00:00",
+      "selected_event_count": 60,
+      "event_count": 133,
+      "top10_count": 10,
+      "url": "archive/2026-10-29/",
+      "json_url": "archive/2026-10-29/daily-digest.json"
+    },
+    {
+      "date": "2026-10-28",
+      "generated_at": "2026-10-28T05:43:59.322328+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-10-28/",
+      "json_url": "archive/2026-10-28/daily-digest.json"
+    },
+    {
+      "date": "2026-10-27",
+      "generated_at": "2026-10-27T05:06:43.338921+00:00",
+      "selected_event_count": 60,
+      "event_count": 139,
+      "top10_count": 10,
+      "url": "archive/2026-10-27/",
+      "json_url": "archive/2026-10-27/daily-digest.json"
+    },
+    {
+      "date": "2026-10-26",
+      "generated_at": "2026-10-26T04:49:07.384363+00:00",
+      "selected_event_count": 60,
+      "event_count": 134,
+      "top10_count": 10,
+      "url": "archive/2026-10-26/",
+      "json_url": "archive/2026-10-26/daily-digest.json"
+    },
+    {
+      "date": "2026-10-25",
+      "generated_at": "2026-10-25T04:42:51.030319+00:00",
+      "selected_event_count": 60,
+      "event_count": 129,
+      "top10_count": 10,
+      "url": "archive/2026-10-25/",
+      "json_url": "archive/2026-10-25/daily-digest.json"
+    },
+    {
+      "date": "2026-10-24",
+      "generated_at": "2026-10-24T04:38:21.635868+00:00",
+      "selected_event_count": 60,
+      "event_count": 134,
+      "top10_count": 10,
+      "url": "archive/2026-10-24/",
+      "json_url": "archive/2026-10-24/daily-digest.json"
+    },
+    {
+      "date": "2026-10-23",
+      "generated_at": "2026-10-23T04:50:59.193041+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-10-23/",
+      "json_url": "archive/2026-10-23/daily-digest.json"
+    },
+    {
+      "date": "2026-10-22",
+      "generated_at": "2026-10-22T04:47:45.914329+00:00",
+      "selected_event_count": 60,
+      "event_count": 135,
+      "top10_count": 10,
+      "url": "archive/2026-10-22/",
+      "json_url": "archive/2026-10-22/daily-digest.json"
+    },
+    {
+      "date": "2026-10-21",
+      "generated_at": "2026-10-21T04:49:28.430513+00:00",
+      "selected_event_count": 60,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-10-21/",
+      "json_url": "archive/2026-10-21/daily-digest.json"
+    },
+    {
+      "date": "2026-10-20",
+      "generated_at": "2026-10-20T04:52:35.646227+00:00",
+      "selected_event_count": 60,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-10-20/",
+      "json_url": "archive/2026-10-20/daily-digest.json"
+    },
+    {
+      "date": "2026-10-19",
+      "generated_at": "2026-10-19T04:42:11.240507+00:00",
+      "selected_event_count": 60,
+      "event_count": 137,
+      "top10_count": 10,
+      "url": "archive/2026-10-19/",
+      "json_url": "archive/2026-10-19/daily-digest.json"
+    },
+    {
+      "date": "2026-10-18",
+      "generated_at": "2026-10-18T04:35:39.651930+00:00",
+      "selected_event_count": 60,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-10-18/",
+      "json_url": "archive/2026-10-18/daily-digest.json"
+    },
+    {
+      "date": "2026-10-17",
+      "generated_at": "2026-10-17T04:27:51.798896+00:00",
+      "selected_event_count": 60,
+      "event_count": 133,
+      "top10_count": 10,
+      "url": "archive/2026-10-17/",
+      "json_url": "archive/2026-10-17/daily-digest.json"
+    },
+    {
+      "date": "2026-10-16",
+      "generated_at": "2026-10-16T04:33:54.209285+00:00",
+      "selected_event_count": 60,
+      "event_count": 135,
+      "top10_count": 10,
+      "url": "archive/2026-10-16/",
+      "json_url": "archive/2026-10-16/daily-digest.json"
+    },
+    {
+      "date": "2026-10-15",
+      "generated_at": "2026-10-15T04:40:46.845380+00:00",
+      "selected_event_count": 60,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-10-15/",
+      "json_url": "archive/2026-10-15/daily-digest.json"
+    },
+    {
+      "date": "2026-10-14",
+      "generated_at": "2026-10-14T04:55:30.429957+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-10-14/",
+      "json_url": "archive/2026-10-14/daily-digest.json"
+    },
+    {
+      "date": "2026-10-13",
+      "generated_at": "2026-10-13T06:48:42.261288+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-10-13/",
+      "json_url": "archive/2026-10-13/daily-digest.json"
+    },
+    {
+      "date": "2026-10-12",
+      "generated_at": "2026-10-12T05:59:55.709201+00:00",
+      "selected_event_count": 60,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-10-12/",
+      "json_url": "archive/2026-10-12/daily-digest.json"
+    },
+    {
+      "date": "2026-10-11",
+      "generated_at": "2026-10-11T05:48:39.000068+00:00",
+      "selected_event_count": 60,
+      "event_count": 120,
+      "top10_count": 10,
+      "url": "archive/2026-10-11/",
+      "json_url": "archive/2026-10-11/daily-digest.json"
+    },
+    {
+      "date": "2026-10-10",
+      "generated_at": "2026-10-10T05:54:32.245439+00:00",
+      "selected_event_count": 60,
+      "event_count": 133,
+      "top10_count": 10,
+      "url": "archive/2026-10-10/",
+      "json_url": "archive/2026-10-10/daily-digest.json"
+    },
+    {
+      "date": "2026-10-09",
+      "generated_at": "2026-10-09T06:10:27.567938+00:00",
+      "selected_event_count": 60,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-10-09/",
+      "json_url": "archive/2026-10-09/daily-digest.json"
+    },
+    {
+      "date": "2026-10-08",
+      "generated_at": "2026-10-08T06:05:48.712740+00:00",
+      "selected_event_count": 60,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-10-08/",
+      "json_url": "archive/2026-10-08/daily-digest.json"
+    },
+    {
+      "date": "2026-10-07",
+      "generated_at": "2026-10-07T06:01:41.932848+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-10-07/",
+      "json_url": "archive/2026-10-07/daily-digest.json"
+    },
+    {
+      "date": "2026-10-06",
+      "generated_at": "2026-10-06T06:22:28.090815+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-10-06/",
+      "json_url": "archive/2026-10-06/daily-digest.json"
+    },
+    {
+      "date": "2026-10-05",
+      "generated_at": "2026-10-05T05:42:03.219106+00:00",
+      "selected_event_count": 59,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-10-05/",
+      "json_url": "archive/2026-10-05/daily-digest.json"
+    },
+    {
+      "date": "2026-10-04",
+      "generated_at": "2026-10-04T05:54:47.383439+00:00",
+      "selected_event_count": 59,
+      "event_count": 119,
+      "top10_count": 10,
+      "url": "archive/2026-10-04/",
+      "json_url": "archive/2026-10-04/daily-digest.json"
+    },
+    {
+      "date": "2026-10-03",
+      "generated_at": "2026-10-03T05:20:33.577875+00:00",
+      "selected_event_count": 59,
+      "event_count": 119,
+      "top10_count": 10,
+      "url": "archive/2026-10-03/",
+      "json_url": "archive/2026-10-03/daily-digest.json"
+    },
+    {
+      "date": "2026-10-02",
+      "generated_at": "2026-10-02T05:38:55.039776+00:00",
+      "selected_event_count": 59,
+      "event_count": 139,
+      "top10_count": 10,
+      "url": "archive/2026-10-02/",
+      "json_url": "archive/2026-10-02/daily-digest.json"
+    },
+    {
+      "date": "2026-10-01",
+      "generated_at": "2026-10-01T05:55:42.264248+00:00",
+      "selected_event_count": 59,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-10-01/",
+      "json_url": "archive/2026-10-01/daily-digest.json"
+    },
+    {
+      "date": "2026-09-30",
+      "generated_at": "2026-09-30T05:34:31.722987+00:00",
+      "selected_event_count": 59,
+      "event_count": 136,
+      "top10_count": 10,
+      "url": "archive/2026-09-30/",
+      "json_url": "archive/2026-09-30/daily-digest.json"
+    },
+    {
+      "date": "2026-09-29",
+      "generated_at": "2026-09-29T05:45:37.717242+00:00",
+      "selected_event_count": 59,
+      "event_count": 133,
+      "top10_count": 10,
+      "url": "archive/2026-09-29/",
+      "json_url": "archive/2026-09-29/daily-digest.json"
+    },
+    {
+      "date": "2026-09-28",
+      "generated_at": "2026-09-28T05:25:41.846944+00:00",
+      "selected_event_count": 59,
+      "event_count": 139,
+      "top10_count": 10,
+      "url": "archive/2026-09-28/",
+      "json_url": "archive/2026-09-28/daily-digest.json"
+    },
+    {
+      "date": "2026-09-27",
+      "generated_at": "2026-09-27T05:20:06.894434+00:00",
+      "selected_event_count": 59,
+      "event_count": 118,
+      "top10_count": 10,
+      "url": "archive/2026-09-27/",
+      "json_url": "archive/2026-09-27/daily-digest.json"
+    },
+    {
+      "date": "2026-09-26",
+      "generated_at": "2026-09-26T04:59:48.230688+00:00",
+      "selected_event_count": 59,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-09-26/",
+      "json_url": "archive/2026-09-26/daily-digest.json"
+    },
+    {
+      "date": "2026-09-25",
+      "generated_at": "2026-09-25T04:59:58.773389+00:00",
+      "selected_event_count": 59,
+      "event_count": 133,
+      "top10_count": 10,
+      "url": "archive/2026-09-25/",
+      "json_url": "archive/2026-09-25/daily-digest.json"
+    },
+    {
+      "date": "2026-09-24",
+      "generated_at": "2026-09-24T04:52:54.958508+00:00",
+      "selected_event_count": 59,
+      "event_count": 133,
+      "top10_count": 10,
+      "url": "archive/2026-09-24/",
+      "json_url": "archive/2026-09-24/daily-digest.json"
+    },
+    {
+      "date": "2026-09-23",
+      "generated_at": "2026-09-23T04:46:56.219901+00:00",
+      "selected_event_count": 59,
+      "event_count": 137,
+      "top10_count": 10,
+      "url": "archive/2026-09-23/",
+      "json_url": "archive/2026-09-23/daily-digest.json"
+    },
+    {
+      "date": "2026-09-22",
+      "generated_at": "2026-09-22T04:58:05.282029+00:00",
+      "selected_event_count": 59,
+      "event_count": 139,
+      "top10_count": 10,
+      "url": "archive/2026-09-22/",
+      "json_url": "archive/2026-09-22/daily-digest.json"
+    },
+    {
+      "date": "2026-09-21",
+      "generated_at": "2026-09-21T04:57:48.295182+00:00",
+      "selected_event_count": 59,
+      "event_count": 139,
+      "top10_count": 10,
+      "url": "archive/2026-09-21/",
+      "json_url": "archive/2026-09-21/daily-digest.json"
+    },
+    {
+      "date": "2026-09-20",
+      "generated_at": "2026-09-20T04:55:33.870028+00:00",
+      "selected_event_count": 59,
+      "event_count": 124,
+      "top10_count": 10,
+      "url": "archive/2026-09-20/",
+      "json_url": "archive/2026-09-20/daily-digest.json"
+    },
+    {
+      "date": "2026-09-19",
+      "generated_at": "2026-09-19T04:39:21.006677+00:00",
+      "selected_event_count": 59,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-09-19/",
+      "json_url": "archive/2026-09-19/daily-digest.json"
+    },
+    {
+      "date": "2026-09-18",
+      "generated_at": "2026-09-18T04:45:18.502018+00:00",
+      "selected_event_count": 59,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-09-18/",
+      "json_url": "archive/2026-09-18/daily-digest.json"
+    },
+    {
+      "date": "2026-09-17",
+      "generated_at": "2026-09-17T04:55:00.645971+00:00",
+      "selected_event_count": 59,
+      "event_count": 137,
+      "top10_count": 10,
+      "url": "archive/2026-09-17/",
+      "json_url": "archive/2026-09-17/daily-digest.json"
+    },
+    {
+      "date": "2026-09-16",
+      "generated_at": "2026-09-16T04:50:52.327923+00:00",
+      "selected_event_count": 59,
+      "event_count": 137,
+      "top10_count": 10,
+      "url": "archive/2026-09-16/",
+      "json_url": "archive/2026-09-16/daily-digest.json"
+    },
+    {
+      "date": "2026-09-15",
+      "generated_at": "2026-09-15T04:56:33.106487+00:00",
+      "selected_event_count": 59,
+      "event_count": 137,
+      "top10_count": 10,
+      "url": "archive/2026-09-15/",
+      "json_url": "archive/2026-09-15/daily-digest.json"
+    },
+    {
+      "date": "2026-09-14",
+      "generated_at": "2026-09-14T04:58:46.195829+00:00",
+      "selected_event_count": 60,
+      "event_count": 136,
+      "top10_count": 10,
+      "url": "archive/2026-09-14/",
+      "json_url": "archive/2026-09-14/daily-digest.json"
+    },
+    {
+      "date": "2026-09-13",
+      "generated_at": "2026-09-13T04:49:40.459623+00:00",
+      "selected_event_count": 60,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-09-13/",
+      "json_url": "archive/2026-09-13/daily-digest.json"
+    },
+    {
+      "date": "2026-09-12",
+      "generated_at": "2026-09-12T04:35:50.457149+00:00",
+      "selected_event_count": 60,
+      "event_count": 129,
+      "top10_count": 10,
+      "url": "archive/2026-09-12/",
+      "json_url": "archive/2026-09-12/daily-digest.json"
+    },
+    {
+      "date": "2026-09-11",
+      "generated_at": "2026-09-11T04:42:16.510145+00:00",
+      "selected_event_count": 60,
+      "event_count": 140,
+      "top10_count": 10,
+      "url": "archive/2026-09-11/",
+      "json_url": "archive/2026-09-11/daily-digest.json"
+    },
+    {
+      "date": "2026-09-10",
+      "generated_at": "2026-09-10T04:44:26.084112+00:00",
+      "selected_event_count": 60,
+      "event_count": 140,
+      "top10_count": 10,
+      "url": "archive/2026-09-10/",
+      "json_url": "archive/2026-09-10/daily-digest.json"
+    },
+    {
+      "date": "2026-09-09",
+      "generated_at": "2026-09-09T04:43:49.138257+00:00",
+      "selected_event_count": 60,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-09-09/",
+      "json_url": "archive/2026-09-09/daily-digest.json"
+    },
+    {
+      "date": "2026-09-08",
+      "generated_at": "2026-09-08T04:38:15.199272+00:00",
+      "selected_event_count": 60,
+      "event_count": 118,
+      "top10_count": 10,
+      "url": "archive/2026-09-08/",
+      "json_url": "archive/2026-09-08/daily-digest.json"
+    },
+    {
+      "date": "2026-09-07",
+      "generated_at": "2026-09-07T04:43:31.882836+00:00",
+      "selected_event_count": 60,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-09-07/",
+      "json_url": "archive/2026-09-07/daily-digest.json"
+    },
+    {
+      "date": "2026-09-06",
+      "generated_at": "2026-09-06T04:40:57.669829+00:00",
+      "selected_event_count": 60,
+      "event_count": 118,
+      "top10_count": 10,
+      "url": "archive/2026-09-06/",
+      "json_url": "archive/2026-09-06/daily-digest.json"
+    },
+    {
+      "date": "2026-09-05",
+      "generated_at": "2026-09-05T04:31:05.167540+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-09-05/",
+      "json_url": "archive/2026-09-05/daily-digest.json"
+    },
+    {
+      "date": "2026-09-04",
+      "generated_at": "2026-09-04T04:35:09.935437+00:00",
+      "selected_event_count": 60,
+      "event_count": 138,
+      "top10_count": 10,
+      "url": "archive/2026-09-04/",
+      "json_url": "archive/2026-09-04/daily-digest.json"
+    },
+    {
+      "date": "2026-09-03",
+      "generated_at": "2026-09-03T04:35:25.509027+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-09-03/",
+      "json_url": "archive/2026-09-03/daily-digest.json"
+    },
+    {
+      "date": "2026-09-02",
+      "generated_at": "2026-09-02T04:36:02.144651+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-09-02/",
+      "json_url": "archive/2026-09-02/daily-digest.json"
+    },
+    {
+      "date": "2026-09-01",
+      "generated_at": "2026-09-01T05:10:06.828659+00:00",
+      "selected_event_count": 60,
+      "event_count": 145,
+      "top10_count": 10,
+      "url": "archive/2026-09-01/",
+      "json_url": "archive/2026-09-01/daily-digest.json"
+    },
+    {
+      "date": "2026-08-31",
+      "generated_at": "2026-08-31T05:36:43.096092+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-08-31/",
+      "json_url": "archive/2026-08-31/daily-digest.json"
+    },
+    {
+      "date": "2026-08-30",
+      "generated_at": "2026-08-30T05:25:58.124188+00:00",
+      "selected_event_count": 60,
+      "event_count": 129,
+      "top10_count": 10,
+      "url": "archive/2026-08-30/",
+      "json_url": "archive/2026-08-30/daily-digest.json"
+    },
+    {
+      "date": "2026-08-29",
+      "generated_at": "2026-08-28T16:38:16.525841+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-08-29/",
+      "json_url": "archive/2026-08-29/daily-digest.json"
+    },
+    {
+      "date": "2026-08-28",
+      "generated_at": "2026-08-28T11:25:05.729187+00:00",
+      "selected_event_count": 60,
+      "event_count": 145,
+      "top10_count": 10,
+      "url": "archive/2026-08-28/",
+      "json_url": "archive/2026-08-28/daily-digest.json"
+    },
+    {
+      "date": "2026-08-27",
+      "generated_at": "2026-08-27T09:50:28.180369+00:00",
+      "selected_event_count": 60,
+      "event_count": 145,
+      "top10_count": 10,
+      "url": "archive/2026-08-27/",
+      "json_url": "archive/2026-08-27/daily-digest.json"
+    },
+    {
+      "date": "2026-08-26",
+      "generated_at": "2026-08-26T01:59:39.412407+00:00",
+      "selected_event_count": 55,
+      "event_count": 140,
+      "top10_count": 10,
+      "url": "archive/2026-08-26/",
+      "json_url": "archive/2026-08-26/daily-digest.json"
+    },
+    {
+      "date": "2026-08-25",
+      "generated_at": "2026-08-25T01:53:28.041826+00:00",
+      "selected_event_count": 60,
+      "event_count": 146,
+      "top10_count": 10,
+      "url": "archive/2026-08-25/",
+      "json_url": "archive/2026-08-25/daily-digest.json"
+    },
+    {
+      "date": "2026-08-24",
+      "generated_at": "2026-08-24T01:58:44.388951+00:00",
+      "selected_event_count": 60,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-08-24/",
+      "json_url": "archive/2026-08-24/daily-digest.json"
+    },
+    {
+      "date": "2026-08-23",
+      "generated_at": "2026-08-23T02:00:55.314904+00:00",
+      "selected_event_count": 60,
+      "event_count": 124,
+      "top10_count": 10,
+      "url": "archive/2026-08-23/",
+      "json_url": "archive/2026-08-23/daily-digest.json"
+    },
+    {
+      "date": "2026-08-22",
+      "generated_at": "2026-08-22T01:50:59.270273+00:00",
+      "selected_event_count": 60,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-08-22/",
+      "json_url": "archive/2026-08-22/daily-digest.json"
+    },
+    {
+      "date": "2026-08-21",
+      "generated_at": "2026-08-21T01:58:43.635218+00:00",
+      "selected_event_count": 60,
+      "event_count": 141,
+      "top10_count": 10,
+      "url": "archive/2026-08-21/",
+      "json_url": "archive/2026-08-21/daily-digest.json"
+    },
+    {
+      "date": "2026-08-20",
+      "generated_at": "2026-08-20T01:52:27.423541+00:00",
+      "selected_event_count": 59,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-08-20/",
+      "json_url": "archive/2026-08-20/daily-digest.json"
+    },
+    {
+      "date": "2026-08-19",
+      "generated_at": "2026-08-19T01:54:00.975097+00:00",
+      "selected_event_count": 54,
+      "event_count": 137,
+      "top10_count": 10,
+      "url": "archive/2026-08-19/",
+      "json_url": "archive/2026-08-19/daily-digest.json"
+    },
+    {
+      "date": "2026-08-18",
+      "generated_at": "2026-08-18T01:56:47.273334+00:00",
+      "selected_event_count": 59,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-08-18/",
+      "json_url": "archive/2026-08-18/daily-digest.json"
+    },
+    {
+      "date": "2026-08-17",
+      "generated_at": "2026-08-17T01:56:26.818648+00:00",
+      "selected_event_count": 59,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-08-17/",
+      "json_url": "archive/2026-08-17/daily-digest.json"
+    },
+    {
+      "date": "2026-08-16",
+      "generated_at": "2026-08-16T01:58:14.863405+00:00",
+      "selected_event_count": 59,
+      "event_count": 133,
+      "top10_count": 10,
+      "url": "archive/2026-08-16/",
+      "json_url": "archive/2026-08-16/daily-digest.json"
+    },
+    {
+      "date": "2026-08-15",
+      "generated_at": "2026-08-15T01:50:31.101968+00:00",
+      "selected_event_count": 59,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-08-15/",
+      "json_url": "archive/2026-08-15/daily-digest.json"
+    },
+    {
+      "date": "2026-08-14",
+      "generated_at": "2026-08-14T02:47:28.424346+00:00",
+      "selected_event_count": 59,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-08-14/",
+      "json_url": "archive/2026-08-14/daily-digest.json"
+    },
+    {
+      "date": "2026-08-13",
+      "generated_at": "2026-08-13T02:48:18.536601+00:00",
+      "selected_event_count": 59,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-08-13/",
+      "json_url": "archive/2026-08-13/daily-digest.json"
+    },
+    {
+      "date": "2026-08-12",
+      "generated_at": "2026-08-12T02:45:33.191459+00:00",
+      "selected_event_count": 59,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-08-12/",
+      "json_url": "archive/2026-08-12/daily-digest.json"
+    },
+    {
+      "date": "2026-08-11",
+      "generated_at": "2026-08-11T02:28:49.043448+00:00",
+      "selected_event_count": 59,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-08-11/",
+      "json_url": "archive/2026-08-11/daily-digest.json"
+    },
+    {
+      "date": "2026-08-10",
+      "generated_at": "2026-08-10T02:35:25.998027+00:00",
+      "selected_event_count": 59,
+      "event_count": 127,
+      "top10_count": 10,
+      "url": "archive/2026-08-10/",
+      "json_url": "archive/2026-08-10/daily-digest.json"
+    },
+    {
+      "date": "2026-08-09",
+      "generated_at": "2026-08-09T02:29:47.962411+00:00",
+      "selected_event_count": 59,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-08-09/",
+      "json_url": "archive/2026-08-09/daily-digest.json"
+    },
+    {
+      "date": "2026-08-08",
+      "generated_at": "2026-08-08T02:22:33.192358+00:00",
+      "selected_event_count": 59,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-08-08/",
+      "json_url": "archive/2026-08-08/daily-digest.json"
+    },
+    {
+      "date": "2026-08-07",
+      "generated_at": "2026-08-07T03:15:39.310139+00:00",
+      "selected_event_count": 58,
+      "event_count": 141,
+      "top10_count": 10,
+      "url": "archive/2026-08-07/",
+      "json_url": "archive/2026-08-07/daily-digest.json"
+    },
+    {
+      "date": "2026-08-06",
+      "generated_at": "2026-08-06T03:38:35.401168+00:00",
+      "selected_event_count": 59,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-08-06/",
+      "json_url": "archive/2026-08-06/daily-digest.json"
+    },
+    {
+      "date": "2026-08-05",
+      "generated_at": "2026-08-05T03:34:02.722469+00:00",
+      "selected_event_count": 59,
+      "event_count": 134,
+      "top10_count": 10,
+      "url": "archive/2026-08-05/",
+      "json_url": "archive/2026-08-05/daily-digest.json"
+    },
+    {
+      "date": "2026-08-04",
+      "generated_at": "2026-08-04T03:38:12.704390+00:00",
+      "selected_event_count": 59,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-08-04/",
+      "json_url": "archive/2026-08-04/daily-digest.json"
+    },
+    {
+      "date": "2026-08-03",
+      "generated_at": "2026-08-03T03:56:01.505531+00:00",
+      "selected_event_count": 60,
+      "event_count": 129,
+      "top10_count": 10,
+      "url": "archive/2026-08-03/",
+      "json_url": "archive/2026-08-03/daily-digest.json"
+    },
+    {
+      "date": "2026-08-02",
+      "generated_at": "2026-08-02T03:54:10.276693+00:00",
+      "selected_event_count": 60,
+      "event_count": 129,
+      "top10_count": 10,
+      "url": "archive/2026-08-02/",
+      "json_url": "archive/2026-08-02/daily-digest.json"
+    },
+    {
+      "date": "2026-08-01",
+      "generated_at": "2026-08-01T03:51:41.200794+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-08-01/",
+      "json_url": "archive/2026-08-01/daily-digest.json"
+    },
+    {
+      "date": "2026-07-31",
+      "generated_at": "2026-07-31T03:51:09.474634+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-07-31/",
+      "json_url": "archive/2026-07-31/daily-digest.json"
+    },
+    {
+      "date": "2026-07-30",
+      "generated_at": "2026-07-30T03:29:46.946765+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-07-30/",
+      "json_url": "archive/2026-07-30/daily-digest.json"
+    },
+    {
+      "date": "2026-07-29",
+      "generated_at": "2026-07-29T03:41:38.307462+00:00",
+      "selected_event_count": 60,
+      "event_count": 144,
+      "top10_count": 10,
+      "url": "archive/2026-07-29/",
+      "json_url": "archive/2026-07-29/daily-digest.json"
+    },
+    {
+      "date": "2026-07-28",
+      "generated_at": "2026-07-28T03:36:44.162929+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-07-28/",
+      "json_url": "archive/2026-07-28/daily-digest.json"
+    },
+    {
+      "date": "2026-07-27",
+      "generated_at": "2026-07-27T04:03:27.639698+00:00",
+      "selected_event_count": 59,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-07-27/",
+      "json_url": "archive/2026-07-27/daily-digest.json"
+    },
+    {
+      "date": "2026-07-26",
+      "generated_at": "2026-07-26T03:57:06.263744+00:00",
+      "selected_event_count": 59,
+      "event_count": 132,
+      "top10_count": 10,
+      "url": "archive/2026-07-26/",
+      "json_url": "archive/2026-07-26/daily-digest.json"
+    },
+    {
+      "date": "2026-07-25",
+      "generated_at": "2026-07-25T03:38:32.482270+00:00",
+      "selected_event_count": 59,
+      "event_count": 141,
+      "top10_count": 10,
+      "url": "archive/2026-07-25/",
+      "json_url": "archive/2026-07-25/daily-digest.json"
+    },
+    {
+      "date": "2026-07-24",
+      "generated_at": "2026-07-24T03:48:35.566750+00:00",
+      "selected_event_count": 59,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-07-24/",
+      "json_url": "archive/2026-07-24/daily-digest.json"
+    },
+    {
+      "date": "2026-07-23",
+      "generated_at": "2026-07-23T03:48:57.616831+00:00",
+      "selected_event_count": 59,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-07-23/",
+      "json_url": "archive/2026-07-23/daily-digest.json"
+    },
+    {
+      "date": "2026-07-22",
+      "generated_at": "2026-07-22T03:50:49.097597+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-07-22/",
+      "json_url": "archive/2026-07-22/daily-digest.json"
+    },
+    {
+      "date": "2026-07-21",
+      "generated_at": "2026-07-21T03:49:57.936441+00:00",
+      "selected_event_count": 55,
+      "event_count": 140,
+      "top10_count": 10,
+      "url": "archive/2026-07-21/",
+      "json_url": "archive/2026-07-21/daily-digest.json"
+    },
+    {
+      "date": "2026-07-20",
+      "generated_at": "2026-07-20T04:09:20.121883+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-07-20/",
+      "json_url": "archive/2026-07-20/daily-digest.json"
+    },
+    {
+      "date": "2026-07-19",
+      "generated_at": "2026-07-19T04:00:13.019596+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-07-19/",
+      "json_url": "archive/2026-07-19/daily-digest.json"
+    },
+    {
+      "date": "2026-07-18",
+      "generated_at": "2026-07-18T03:36:30.001489+00:00",
+      "selected_event_count": 60,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-07-18/",
+      "json_url": "archive/2026-07-18/daily-digest.json"
+    },
+    {
+      "date": "2026-07-17",
+      "generated_at": "2026-07-17T07:40:47.275254+00:00",
+      "selected_event_count": 60,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-07-17/",
+      "json_url": "archive/2026-07-17/daily-digest.json"
+    },
+    {
+      "date": "2026-07-16",
+      "generated_at": "2026-07-16T07:52:40.263699+00:00",
+      "selected_event_count": 60,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-07-16/",
+      "json_url": "archive/2026-07-16/daily-digest.json"
+    },
+    {
+      "date": "2026-07-15",
+      "generated_at": "2026-07-15T07:35:16.847415+00:00",
+      "selected_event_count": 60,
+      "event_count": 141,
+      "top10_count": 10,
+      "url": "archive/2026-07-15/",
+      "json_url": "archive/2026-07-15/daily-digest.json"
+    },
+    {
+      "date": "2026-07-14",
+      "generated_at": "2026-07-14T07:30:20.365060+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-07-14/",
+      "json_url": "archive/2026-07-14/daily-digest.json"
+    },
+    {
+      "date": "2026-07-13",
+      "generated_at": "2026-07-13T11:48:56.102953+00:00",
+      "selected_event_count": 60,
+      "event_count": 143,
+      "top10_count": 10,
+      "url": "archive/2026-07-13/",
+      "json_url": "archive/2026-07-13/daily-digest.json"
+    },
+    {
+      "date": "2026-07-12",
+      "generated_at": "2026-07-12T07:55:03.027163+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-07-12/",
+      "json_url": "archive/2026-07-12/daily-digest.json"
+    },
+    {
+      "date": "2026-07-11",
+      "generated_at": "2026-07-11T07:28:37.599307+00:00",
+      "selected_event_count": 60,
+      "event_count": 132,
+      "top10_count": 10,
+      "url": "archive/2026-07-11/",
+      "json_url": "archive/2026-07-11/daily-digest.json"
+    },
+    {
+      "date": "2026-07-10",
+      "generated_at": "2026-07-10T11:31:26.812504+00:00",
+      "selected_event_count": 60,
+      "event_count": 148,
+      "top10_count": 10,
+      "url": "archive/2026-07-10/",
+      "json_url": "archive/2026-07-10/daily-digest.json"
+    },
+    {
+      "date": "2026-07-09",
+      "generated_at": "2026-07-09T11:34:17.280092+00:00",
+      "selected_event_count": 60,
+      "event_count": 150,
+      "top10_count": 10,
+      "url": "archive/2026-07-09/",
+      "json_url": "archive/2026-07-09/daily-digest.json"
+    },
+    {
+      "date": "2026-07-08",
+      "generated_at": "2026-07-08T09:36:58.778696+00:00",
+      "selected_event_count": 60,
+      "event_count": 149,
+      "top10_count": 10,
+      "url": "archive/2026-07-08/",
+      "json_url": "archive/2026-07-08/daily-digest.json"
+    },
+    {
+      "date": "2026-07-07",
+      "generated_at": "2026-07-06T16:37:10.616212+00:00",
+      "selected_event_count": 60,
+      "event_count": 132,
+      "top10_count": 10,
+      "url": "archive/2026-07-07/",
+      "json_url": "archive/2026-07-07/daily-digest.json"
+    },
+    {
+      "date": "2026-07-06",
+      "generated_at": "2026-07-06T14:13:06.491248+00:00",
+      "selected_event_count": 60,
+      "event_count": 132,
+      "top10_count": 10,
+      "url": "archive/2026-07-06/",
+      "json_url": "archive/2026-07-06/daily-digest.json"
+    },
+    {
+      "date": "2026-07-05",
+      "generated_at": "2026-07-05T09:53:17.242806+00:00",
+      "selected_event_count": 60,
+      "event_count": 133,
+      "top10_count": 10,
+      "url": "archive/2026-07-05/",
+      "json_url": "archive/2026-07-05/daily-digest.json"
+    },
+    {
+      "date": "2026-07-04",
+      "generated_at": "2026-07-04T09:15:21.675582+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-07-04/",
+      "json_url": "archive/2026-07-04/daily-digest.json"
+    },
+    {
+      "date": "2026-07-03",
+      "generated_at": "2026-07-03T10:22:09.027103+00:00",
+      "selected_event_count": 60,
+      "event_count": 148,
+      "top10_count": 10,
+      "url": "archive/2026-07-03/",
+      "json_url": "archive/2026-07-03/daily-digest.json"
+    },
+    {
+      "date": "2026-07-02",
+      "generated_at": "2026-07-02T10:24:56.870873+00:00",
+      "selected_event_count": 60,
+      "event_count": 148,
+      "top10_count": 10,
+      "url": "archive/2026-07-02/",
+      "json_url": "archive/2026-07-02/daily-digest.json"
+    },
+    {
+      "date": "2026-07-01",
+      "generated_at": "2026-07-01T11:51:45.869773+00:00",
+      "selected_event_count": 60,
+      "event_count": 147,
+      "top10_count": 10,
+      "url": "archive/2026-07-01/",
+      "json_url": "archive/2026-07-01/daily-digest.json"
+    },
+    {
+      "date": "2026-06-30",
+      "generated_at": "2026-06-29T16:50:00.183938+00:00",
+      "selected_event_count": 60,
+      "event_count": 146,
+      "top10_count": 10,
+      "url": "archive/2026-06-30/",
+      "json_url": "archive/2026-06-30/daily-digest.json"
+    },
+    {
+      "date": "2026-06-29",
+      "generated_at": "2026-06-29T14:56:37.433282+00:00",
+      "selected_event_count": 60,
+      "event_count": 148,
+      "top10_count": 10,
+      "url": "archive/2026-06-29/",
+      "json_url": "archive/2026-06-29/daily-digest.json"
+    },
+    {
+      "date": "2026-06-28",
+      "generated_at": "2026-06-28T10:19:50.193845+00:00",
+      "selected_event_count": 60,
+      "event_count": 132,
+      "top10_count": 10,
+      "url": "archive/2026-06-28/",
+      "json_url": "archive/2026-06-28/daily-digest.json"
+    },
+    {
+      "date": "2026-06-27",
+      "generated_at": "2026-06-27T09:38:24.324869+00:00",
+      "selected_event_count": 60,
+      "event_count": 132,
+      "top10_count": 10,
+      "url": "archive/2026-06-27/",
+      "json_url": "archive/2026-06-27/daily-digest.json"
+    },
+    {
+      "date": "2026-06-26",
+      "generated_at": "2026-06-26T11:31:18.224876+00:00",
+      "selected_event_count": 60,
+      "event_count": 146,
+      "top10_count": 10,
+      "url": "archive/2026-06-26/",
+      "json_url": "archive/2026-06-26/daily-digest.json"
+    },
+    {
+      "date": "2026-06-25",
+      "generated_at": "2026-06-25T10:35:21.924208+00:00",
+      "selected_event_count": 60,
+      "event_count": 145,
+      "top10_count": 10,
+      "url": "archive/2026-06-25/",
+      "json_url": "archive/2026-06-25/daily-digest.json"
+    },
+    {
+      "date": "2026-06-24",
+      "generated_at": "2026-06-24T11:27:24.625687+00:00",
+      "selected_event_count": 60,
+      "event_count": 145,
+      "top10_count": 10,
+      "url": "archive/2026-06-24/",
+      "json_url": "archive/2026-06-24/daily-digest.json"
+    },
+    {
+      "date": "2026-06-23",
+      "generated_at": "2026-06-23T02:31:39.844892+00:00",
+      "selected_event_count": 60,
+      "event_count": 130,
+      "top10_count": 10,
+      "url": "archive/2026-06-23/",
+      "json_url": "archive/2026-06-23/daily-digest.json"
+    },
+    {
+      "date": "2026-06-21",
+      "generated_at": "2026-06-21T11:38:20.661556+00:00",
+      "selected_event_count": 60,
+      "event_count": 113,
+      "top10_count": 10,
+      "url": "archive/2026-06-21/",
+      "json_url": "archive/2026-06-21/daily-digest.json"
+    },
+    {
+      "date": "2026-06-20",
+      "generated_at": "2026-06-20T10:24:56.073192+00:00",
+      "selected_event_count": 60,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-06-20/",
+      "json_url": "archive/2026-06-20/daily-digest.json"
+    },
+    {
+      "date": "2026-06-19",
+      "generated_at": "2026-06-19T04:31:40.614619+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-06-19/",
+      "json_url": "archive/2026-06-19/daily-digest.json"
+    },
+    {
+      "date": "2026-06-18",
+      "generated_at": "2026-06-18T04:07:57.592830+00:00",
+      "selected_event_count": 60,
+      "event_count": 116,
+      "top10_count": 10,
+      "url": "archive/2026-06-18/",
+      "json_url": "archive/2026-06-18/daily-digest.json"
+    },
+    {
+      "date": "2026-06-17",
+      "generated_at": "2026-06-17T04:41:58.718373+00:00",
+      "selected_event_count": 60,
+      "event_count": 118,
+      "top10_count": 10,
+      "url": "archive/2026-06-17/",
+      "json_url": "archive/2026-06-17/daily-digest.json"
+    },
+    {
+      "date": "2026-06-16",
+      "generated_at": "2026-06-16T03:25:50.900961+00:00",
+      "selected_event_count": 60,
+      "event_count": 123,
+      "top10_count": 10,
+      "url": "archive/2026-06-16/",
+      "json_url": "archive/2026-06-16/daily-digest.json"
+    },
+    {
+      "date": "2026-06-15",
+      "generated_at": "2026-06-15T09:19:30.574219+00:00",
+      "selected_event_count": 29,
+      "event_count": 30,
+      "top10_count": 10,
+      "url": "archive/2026-06-15/",
+      "json_url": "archive/2026-06-15/daily-digest.json"
+    },
+    {
+      "date": "2026-06-14",
+      "generated_at": "2026-06-15T09:03:34.504376+00:00",
+      "selected_event_count": 4,
+      "event_count": 4,
+      "top10_count": 4,
+      "url": "archive/2026-06-14/",
+      "json_url": "archive/2026-06-14/daily-digest.json"
+    }
+  ]
+}
