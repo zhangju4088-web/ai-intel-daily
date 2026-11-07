@@ -1,6 +1,6 @@
 {
-  "digest_date": "2026-11-06",
-  "generated_at": "2026-11-06T06:47:59.713899+00:00",
+  "digest_date": "2026-11-07",
+  "generated_at": "2026-11-07T05:59:35.267089+00:00",
   "generated_by": "intelhub-local-pipeline",
   "settings": {
     "per_source": 5,
@@ -10,14 +10,14 @@
     "summarize_with": "deepseek"
   },
   "stats": {
-    "fetched_candidate_count": 152,
-    "unique_candidate_count": 139,
-    "analysis_count": 139,
+    "fetched_candidate_count": 142,
+    "unique_candidate_count": 129,
+    "analysis_count": 129,
     "deepseek_analysis_count": 0,
-    "local_analysis_count": 139,
+    "local_analysis_count": 129,
     "extracted_text_count": 10,
     "extraction_error_count": 6,
-    "event_count": 138,
+    "event_count": 128,
     "selected_event_count": 60,
     "fetch_error_count": 4,
     "title_localized_count": 0,
@@ -50,105 +50,8 @@
   "categories": {
     "大模型动态": [
       {
-        "id": "7d321b04-2554-5c8d-a2d0-efd47e2088e7",
-        "event_date": "2026-11-06",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Merge builds product and busin...",
-        "one_sentence_summary": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to pla...",
-        "detailed_summary": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.",
-        "key_points": [
-          "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing.",
-          "Its teams also use AI to plan executive dinners and prepare sales updates."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Merge builds product and business tools with OpenAI technology",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 93.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "编程工具",
-          "产品更新"
-        ],
-        "signal_strength": 72.74,
-        "reading_links": [
-          {
-            "source_id": "openai_news",
-            "source_name": "OpenAI News",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Merge builds product and business tools with OpenAI technology",
-            "url": "https://openai.com/index/merge-builds-with-openai",
-            "published_at": "Thu, 05 Nov 2026 08:00:00 GMT",
-            "link_label": "OpenAI News",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "9ad3d005-8769-54de-a995-fb6a321d912c",
-        "event_date": "2026-11-06",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜BlockLock: Reproducible LLM In...",
-        "one_sentence_summary": "arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same...",
-        "detailed_summary": "[2611.06977] BlockLock: Reproducible LLM Inference with Fixed Batch Geometry Skip to main content Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search Computer Science > Artificial Intelligence arXiv:2611.06977 (cs) [Submitted on 4 Nov 2026] Title: BlockLock: Reproducible LLM Inference with Fixed Batch Geometry Authors: Xiuyuan Qi , Pedro Reviriego , Javier Conde , Shanshan Liu View a PDF of the paper titled BlockLock: Reproducible LLM Inference with Fixed Batch Ge...",
-        "key_points": [
-          "[2611.06977] BlockLock: Reproducible LLM Inference with Fixed Batch Geometry Skip to main content Search Submit Donat...",
-          "Existing solutions pay for this in different ways: batch-invariant kernels constrain every operator, and isolating pr...",
-          "We present BlockLock, which keeps shared batched prefill and pins only the numerical path of the protected request: i...",
-          "Under a stated per-deployment contract, both modes preserve the target's output bitwise when its companions change.}...",
-          "Both modes preserve target sequences and Top20-logit bits in the reported tests.} At equal delivered work, {BlockLock..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 91.0,
-        "confidence": 0.55,
-        "tags": [
-          "论文研究"
-        ],
-        "signal_strength": 63.38,
-        "reading_links": [
-          {
-            "source_id": "arxiv_cs_ai",
-            "source_name": "arXiv cs.AI",
-            "source_type": "research",
-            "source_role": "primary",
-            "original_title": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
-            "url": "https://arxiv.org/abs/2611.06977",
-            "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.AI",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "research"
-        ]
-      },
-      {
-        "id": "07915106-64a5-5928-8f6f-87a1f8f72069",
-        "event_date": "2026-11-06",
+        "id": "f5e63714-2917-5734-905a-e665d9ef85a5",
+        "event_date": "2026-11-07",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Introducing Claude Opus 5.5 Cl...",
         "one_sentence_summary": "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Intr...",
@@ -201,8 +104,8 @@
         ]
       },
       {
-        "id": "d047fbfd-2aa3-5d33-8ca0-c5de4ddc86fd",
-        "event_date": "2026-11-06",
+        "id": "40b33f3c-26a8-5ccd-96ca-1b581e3215da",
+        "event_date": "2026-11-07",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Australian universities are cr...",
         "one_sentence_summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare student...",
@@ -220,12 +123,12 @@
         "topic_angle": "从能力、成本和生态角度解读：Australian universities are creating AI-native graduates",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 87.0,
+        "priority_score": 84.0,
         "confidence": 0.55,
         "tags": [
           "官方消息"
         ],
-        "signal_strength": 65.66,
+        "signal_strength": 63.62,
         "reading_links": [
           {
             "source_id": "openai_news",
@@ -246,8 +149,8 @@
         ]
       },
       {
-        "id": "7e17cdd4-c2c1-52d3-879a-632669a7c0e5",
-        "event_date": "2026-11-06",
+        "id": "45eb9168-85c8-53a3-9b03-b7fce307c274",
+        "event_date": "2026-11-07",
         "category": "大模型动态",
         "ai_title": "大模型动态｜GPT‑6 Cyber: Advancing the fro...",
         "one_sentence_summary": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, t...",
@@ -265,13 +168,13 @@
         "topic_angle": "从能力、成本和生态角度解读：GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 87.0,
+        "priority_score": 84.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
           "智能体"
         ],
-        "signal_strength": 67.16,
+        "signal_strength": 65.12,
         "reading_links": [
           {
             "source_id": "openai_news",
@@ -292,163 +195,18 @@
         ]
       },
       {
-        "id": "5aca109d-4729-5525-bd23-5546580e0049",
-        "event_date": "2026-11-06",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜An update on recent Claude Cod...",
-        "one_sentence_summary": "An update on recent Claude Code quality reports",
-        "detailed_summary": "An update on recent Claude Code quality reports",
-        "key_points": [
-          "An update on recent Claude Code quality reports"
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：An update on recent Claude Code quality reports",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 86.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "编程工具"
-        ],
-        "signal_strength": 66.48,
-        "reading_links": [
-          {
-            "source_id": "anthropic_engineering",
-            "source_name": "Anthropic Engineering",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "An update on recent Claude Code quality reports",
-            "url": "https://www.anthropic.com/research/april-23-postmortem",
-            "published_at": null,
-            "link_label": "Anthropic Engineering",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "59a06542-92e3-593a-9ffc-ef504cd7dd61",
-        "event_date": "2026-11-06",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜DS@GT ARC at CheckThat! 2026:...",
-        "one_sentence_summary": "arXiv:2611.05382v1 Announce Type: new Abstract: Misinformation spreads faster than professional fact-checkers can man...",
-        "detailed_summary": "arXiv:2611.05382v1 Announce Type: new Abstract: Misinformation spreads faster than professional fact-checkers can manually verify it and write articles explaining their verdicts. This creates a need to automate the production of fact-checking articles. This paper details work done by the DS@GT ARC team for CLEF 2026 CheckThat! Lab Task 3 Fact-Checking Article Generation.",
-        "key_points": [
-          "arXiv:2611.05382v1 Announce Type: new Abstract: Misinformation spreads faster than professional fact-checkers can man...",
-          "This creates a need to automate the production of fact-checking articles.",
-          "This paper details work done by the DS@GT ARC team for CLEF 2026 CheckThat!",
-          "Lab Task 3 Fact-Checking Article Generation.",
-          "We seek to generate a full fact-checking article from a claim, its original verdict, and a set of scraped source docu..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：DS@GT ARC at CheckThat! 2026: A Verdict-Anchored Pipeline for Generating Fact-Checking Articles",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 85.0,
-        "confidence": 0.55,
-        "tags": [
-          "产品更新",
-          "国际金融",
-          "论文研究"
-        ],
-        "signal_strength": 62.3,
-        "reading_links": [
-          {
-            "source_id": "arxiv_cs_cl",
-            "source_name": "arXiv cs.CL",
-            "source_type": "research",
-            "source_role": "primary",
-            "original_title": "DS@GT ARC at CheckThat! 2026: A Verdict-Anchored Pipeline for Generating Fact-Checking Articles",
-            "url": "https://arxiv.org/abs/2611.05382",
-            "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.CL",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "research"
-        ]
-      },
-      {
-        "id": "1a711b51-3d99-5069-b69c-5a503d8ab735",
-        "event_date": "2026-11-06",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Octopus: One BrAIn, Many Branc...",
-        "one_sentence_summary": "arXiv:2611.06956v1 Announce Type: new Abstract: Multi-agent LLM systems explore in parallel by spawning sub-agents wi...",
-        "detailed_summary": "arXiv:2611.06956v1 Announce Type: new Abstract: Multi-agent LLM systems explore in parallel by spawning sub-agents with isolated context windows, whereas single-agent systems append every search and verification step into one growing trajectory. However, existing multi-agent frameworks duplicate prefix KV caches across branches, exchange findings by re-prefilling text summaries, and flatten or drop cross-branch dependencies during reinforcement learning (RL). We introduce Octopus, a single-mo...",
-        "key_points": [
-          "arXiv:2611.06956v1 Announce Type: new Abstract: Multi-agent LLM systems explore in parallel by spawning sub-agents wi...",
-          "However, existing multi-agent frameworks duplicate prefix KV caches across branches, exchange findings by re-prefilli...",
-          "We introduce Octopus, a single-model multi-agent RL framework in which all threads share one backbone and coordinate...",
-          "Octopus combines three co-designed mechanisms: (1) Zero-Copy Radix Forking, which spawns branches as $\\mathcal{O}(1)$...",
-          "Trained end-to-end with GRPO on Qwen3.5-4B over a sparse BM25 corpus, Octopus reaches $49.6\\%$ accuracy on BrowseComp..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 83.0,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "智能体",
-          "产品更新",
-          "论文研究"
-        ],
-        "signal_strength": 62.44,
-        "reading_links": [
-          {
-            "source_id": "arxiv_cs_lg",
-            "source_name": "arXiv cs.LG",
-            "source_type": "research",
-            "source_role": "primary",
-            "original_title": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
-            "url": "https://arxiv.org/abs/2611.06956",
-            "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.LG",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "research"
-        ]
-      },
-      {
-        "id": "83f721b3-cc85-51f6-8157-f7f8e38ef008",
-        "event_date": "2026-11-06",
+        "id": "2e8d7255-aa0a-52e8-81b9-df8843ccf680",
+        "event_date": "2026-11-07",
         "category": "大模型动态",
         "ai_title": "大模型动态｜How we contAIn Claude across p...",
-        "one_sentence_summary": "How we contain Claude across products",
-        "detailed_summary": "How we contain Claude across products",
+        "one_sentence_summary": "How we contain Claude across products \\ Anthropic Skip to main content News Research Policy Commitments Company Try C...",
+        "detailed_summary": "How we contain Claude across products \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude 01 Three types of risk, three components of defense How we contain Claude across products 01 Three types of risk, three components of defense 02 Patterns for containing agents 03 Trusting what the agent reads 04 Looking ahead 05 Summary Published May 25, 2026 Team Engineering Topics Safeguards Agents Claude Code Cybersecurity Jailbreaks Reward hacking See more... Related...",
         "key_points": [
-          "How we contain Claude across products"
+          "How we contain Claude across products \\ Anthropic Skip to main content News Research Policy Commitments Company Try C...",
+          "Related articles Frontier Red Team Apr 9, 2026 Trustworthy agents in practice View more Twelve months ago, we'd have...",
+          "Today that level of access is routine, and Anthropic developers are more productive for it.",
+          "The risk of these deployments has two components: how likely a failure is, and how much damage one could do.",
+          "Progress on safeguards and model training has steadily driven down the first; the second—the theoretical blast radius..."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -464,9 +222,13 @@
         "confidence": 0.55,
         "tags": [
           "官方消息",
-          "产品更新"
+          "智能体",
+          "编程工具",
+          "产品更新",
+          "政策监管",
+          "论文研究"
         ],
-        "signal_strength": 63.76,
+        "signal_strength": 66.76,
         "reading_links": [
           {
             "source_id": "anthropic_engineering",
@@ -487,8 +249,144 @@
         ]
       },
       {
-        "id": "43bfbeae-b2de-5abf-ac58-20d503abbe3e",
-        "event_date": "2026-11-06",
+        "id": "d49ea355-32f9-5738-a761-2356e7c70aa3",
+        "event_date": "2026-11-07",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Gemini Build intelligent agents",
+        "one_sentence_summary": "Gemini Build intelligent agents",
+        "detailed_summary": "Gemini Build intelligent agents",
+        "key_points": [
+          "Gemini Build intelligent agents"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 82.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "智能体"
+        ],
+        "signal_strength": 63.76,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Build intelligent agents",
+            "url": "https://deepmind.google/models/gemini/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "f6e2d3b3-e777-553f-b85c-432f3a371e68",
+        "event_date": "2026-11-07",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Gemini Omni Create anything fr...",
+        "one_sentence_summary": "Gemini Omni Create anything from anything",
+        "detailed_summary": "Gemini Omni Create anything from anything",
+        "key_points": [
+          "Gemini Omni Create anything from anything"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Gemini Omni Create anything from anything",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 82.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 62.26,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Omni Create anything from anything",
+            "url": "https://deepmind.google/models/gemini-omni/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "9a5cc7ca-02dc-52a9-a58a-90b900c50b73",
+        "event_date": "2026-11-07",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Gemini Audio Talk, create and...",
+        "one_sentence_summary": "Gemini Audio Talk, create and control audio",
+        "detailed_summary": "Gemini Audio Talk, create and control audio",
+        "key_points": [
+          "Gemini Audio Talk, create and control audio"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Gemini Audio Talk, create and control audio",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 82.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 62.26,
+        "reading_links": [
+          {
+            "source_id": "google_deepmind_blog",
+            "source_name": "Google DeepMind Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Gemini Audio Talk, create and control audio",
+            "url": "https://deepmind.google/models/gemini-audio/",
+            "published_at": null,
+            "link_label": "Google DeepMind Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "b260e0a8-9598-584a-854a-c2cc1d331343",
+        "event_date": "2026-11-07",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Gemini models",
         "one_sentence_summary": "Gemini models",
@@ -532,8 +430,101 @@
         ]
       },
       {
-        "id": "17b75766-7ff4-523e-af67-b968b58a5483",
-        "event_date": "2026-11-06",
+        "id": "486b9362-6802-50ef-8fc8-f73f0e4fc502",
+        "event_date": "2026-11-07",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Partnering with Hacktron to fi...",
+        "one_sentence_summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthe...",
+        "detailed_summary": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
+        "key_points": [
+          "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthe..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 73.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 56.14,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+            "url": "https://openai.com/index/partnering-with-hacktron",
+            "published_at": "Fri, 06 Nov 2026 08:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "0c677727-d33d-5528-b829-35507b9978d8",
+        "event_date": "2026-11-07",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Measuring how AI agents handle...",
+        "one_sentence_summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data a...",
+        "detailed_summary": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+        "key_points": [
+          "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data a..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Measuring how AI agents handle everyday wet-lab science",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 70.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "模型发布",
+          "评测榜单",
+          "智能体"
+        ],
+        "signal_strength": 58.6,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Measuring how AI agents handle everyday wet-lab science",
+            "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+            "published_at": "Fri, 06 Nov 2026 00:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "2d547999-641c-5f30-b3b7-f7c8d6d37115",
+        "event_date": "2026-11-07",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Cult.fit builds operational mu...",
         "one_sentence_summary": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
@@ -551,13 +542,13 @@
         "topic_angle": "从能力、成本和生态角度解读：Cult.fit builds operational muscle with Codex",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 75.0,
+        "priority_score": 70.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
           "编程工具"
         ],
-        "signal_strength": 59.0,
+        "signal_strength": 55.6,
         "reading_links": [
           {
             "source_id": "openai_news",
@@ -578,100 +569,8 @@
         ]
       },
       {
-        "id": "8cd35c2e-1ff1-5e78-a6f5-6167f4aa7e66",
-        "event_date": "2026-11-06",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Setting a new standard for res...",
-        "one_sentence_summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, crea...",
-        "detailed_summary": "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, create jobs, and guide responsible AI infrastructure development.",
-        "key_points": [
-          "OpenAI introduces its National Community Compact and Compute Campus Policy Blueprint to protect local resources, crea..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Setting a new standard for responsible AI infrastructure",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 74.5,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "模型发布",
-          "政策监管"
-        ],
-        "signal_strength": 60.16,
-        "reading_links": [
-          {
-            "source_id": "openai_news",
-            "source_name": "OpenAI News",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Setting a new standard for responsible AI infrastructure",
-            "url": "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
-            "published_at": "Thu, 05 Nov 2026 02:00:00 GMT",
-            "link_label": "OpenAI News",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "1493a4e8-9cb8-5a44-993d-0808367236d6",
-        "event_date": "2026-11-06",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜New NVIDIA Cosmos 3 Open Model...",
-        "one_sentence_summary": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
-        "detailed_summary": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
-        "key_points": [
-          "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation"
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 69.0,
-        "confidence": 0.55,
-        "tags": [
-          "算力芯片"
-        ],
-        "signal_strength": 48.42,
-        "reading_links": [
-          {
-            "source_id": "huggingface_blog",
-            "source_name": "Hugging Face Blog",
-            "source_type": "research",
-            "source_role": "primary",
-            "original_title": "New NVIDIA Cosmos 3 Open Models for Interactive World Simulation",
-            "url": "https://huggingface.co/blog/nvidia/cosmos-interactive-world-simulation",
-            "published_at": "Thu, 05 Nov 2026 19:35:16 GMT",
-            "link_label": "Hugging Face Blog",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "research"
-        ]
-      },
-      {
-        "id": "e8ce3d3b-3fc1-5226-9676-18f1a075151a",
-        "event_date": "2026-11-06",
+        "id": "ccea36e3-de1b-521b-ba08-b5242ff1ded7",
+        "event_date": "2026-11-07",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Announcements",
         "one_sentence_summary": "Announcements",
@@ -715,8 +614,8 @@
         ]
       },
       {
-        "id": "c0861761-a01d-552f-87e5-9f3f5927eec4",
-        "event_date": "2026-11-06",
+        "id": "1b2f7119-795c-5416-b784-e8a098714fb0",
+        "event_date": "2026-11-07",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Investing in the public benefi...",
         "one_sentence_summary": "Investing in the public benefit We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund...",
@@ -758,12 +657,103 @@
         "source_types": [
           "official"
         ]
+      },
+      {
+        "id": "b633479b-8e69-52d6-92d6-94ec50108f91",
+        "event_date": "2026-11-07",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Anthropic files S-1 with the S...",
+        "one_sentence_summary": "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration stat...",
+        "detailed_summary": "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration statement on Form S-1 with the U.S. Securities and Exchange Commission relating to its proposed initial pub",
+        "key_points": [
+          "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration stat...",
+          "Securities and Exchange Commission relating to its proposed initial pub"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration statement on Form S-1 with the U.S. Securities and Exchange Commission relating to its proposed initial pub",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 65.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 50.7,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration statement on Form S-1 with the U.S. Securities and Exchange Commission relating to its proposed initial pub",
+            "url": "https://www.anthropic.com/news/s1-sec",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "dc3cf849-bb12-59a0-8108-67bac9f99eb2",
+        "event_date": "2026-11-07",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Science",
+        "one_sentence_summary": "Science",
+        "detailed_summary": "Science",
+        "key_points": [
+          "Science"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Science",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 65.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 50.7,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Science",
+            "url": "https://www.anthropic.com/science",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
       }
     ],
     "AI行业资讯": [
       {
-        "id": "bf225853-0c68-52e7-b057-fe8c3d0193fa",
-        "event_date": "2026-11-06",
+        "id": "1d987f32-c65d-5349-af9e-a2dcce7696a5",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Vera Delivers the Best of Bot...",
         "one_sentence_summary": "AI agents do more than generate answers. They search for information, query databases, write and test code and take a...",
@@ -785,7 +775,7 @@
         "topic_angle": "从商业化和产业竞争角度解读：Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 79.0,
+        "priority_score": 74.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
@@ -794,7 +784,7 @@
           "算力芯片",
           "国际金融"
         ],
-        "signal_strength": 64.72,
+        "signal_strength": 61.32,
         "reading_links": [
           {
             "source_id": "nvidia_blog",
@@ -815,8 +805,8 @@
         ]
       },
       {
-        "id": "c323d4a6-669e-5d32-8bc9-50bfd8b4b914",
-        "event_date": "2026-11-06",
+        "id": "be7decb1-145a-5808-b773-a703b8f29e5d",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜More Performance From Every B...",
         "one_sentence_summary": "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and...",
@@ -838,7 +828,7 @@
         "topic_angle": "从商业化和产业竞争角度解读：More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 77.0,
+        "priority_score": 74.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
@@ -848,7 +838,7 @@
           "算力芯片",
           "国际金融"
         ],
-        "signal_strength": 63.36,
+        "signal_strength": 61.32,
         "reading_links": [
           {
             "source_id": "nvidia_blog",
@@ -869,8 +859,60 @@
         ]
       },
       {
-        "id": "79eaa111-c4c6-52b2-bb8f-8f37632153f5",
-        "event_date": "2026-11-06",
+        "id": "eaf9db49-9d1d-5936-9507-27c1529e0d07",
+        "event_date": "2026-11-07",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜How NVIDIA Open Source Tools...",
+        "one_sentence_summary": "A year ago, NVIDIA open sourced its Aerial wireless software, joining Sionna and a broader suite of open source tools...",
+        "detailed_summary": "How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks | NVIDIA Blog Skip to content How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks With over a million downloads, NVIDIA’s open source 5G/6G tools are equipping research institutions worldwide to develop wireless systems that help robots react faster, improve signal reception and match network capacity to demand. November 6, 2026 by Soma Velayutham 0 Comments Share Share Th...",
+        "key_points": [
+          "How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks | NVIDIA Blog Skip to content...",
+          "November 6, 2026 by Soma Velayutham 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+          "Your browser doesn't support HTML5 video.",
+          "Here is a link to the video instead.",
+          "A year ago, NVIDIA open sourced its Aerial wireless software , joining Sionna and a broader suite of open source tool..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 72.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "算力芯片",
+          "论文研究",
+          "开源生态"
+        ],
+        "signal_strength": 59.96,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "How NVIDIA Open Source Tools Are Helping Researchers Build Next-Generation 6G Networks",
+            "url": "https://blogs.nvidia.com/blog/telco-open-source-tools-research-6g-networks/",
+            "published_at": "Fri, 06 Nov 2026 16:00:35 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "f4aa107c-c8ae-5a23-973d-8463e4078978",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜The Wizard of Open Weights: C...",
         "one_sentence_summary": "Chris Alexiuk has a simple rule about open source AI: If you believe in it, be loud about it. “We should be shouting...",
@@ -892,7 +934,7 @@
         "topic_angle": "从商业化和产业竞争角度解读：The Wizard of Open Weights: Chris Alexiuk Makes AI Easy With Open Models",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 74.0,
+        "priority_score": 71.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
@@ -900,7 +942,7 @@
           "算力芯片",
           "开源生态"
         ],
-        "signal_strength": 61.32,
+        "signal_strength": 59.28,
         "reading_links": [
           {
             "source_id": "nvidia_blog",
@@ -921,18 +963,16 @@
         ]
       },
       {
-        "id": "4797e34f-3659-5121-88ef-40a1e78a6629",
-        "event_date": "2026-11-06",
+        "id": "4679d553-8d4c-598f-8645-3f2e50a459b1",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Into the Omniverse: How Devel...",
         "one_sentence_summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and c...",
-        "detailed_summary": "How Developers Turn Ideas Into Simulations With Frontier AI Agents | NVIDIA Blog Skip to content Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents See how developers are combining AI agents with NVIDIA Omniverse libraries to build simulation applications, test physical behavior and guide improvements. November 5, 2026 by NVIDIA Writers 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! Your browser doesn't support HTML5 video. H...",
+        "detailed_summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and checking that the scene behaves as intended. Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building applications for exploring scenarios, investigating failures and improving designs. Developers direct AI agents through […]",
         "key_points": [
-          "How Developers Turn Ideas Into Simulations With Frontier AI Agents | NVIDIA Blog Skip to content Into the Omniverse:...",
-          "November 5, 2026 by NVIDIA Writers 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
-          "Your browser doesn't support HTML5 video.",
-          "Here is a link to the video instead.",
-          "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and c..."
+          "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and c...",
+          "Developers are combining frontier AI models with NVIDIA Omniverse libraries to help carry out that work — building ap...",
+          "Developers direct AI agents through […]"
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -944,7 +984,7 @@
         "topic_angle": "从商业化和产业竞争角度解读：Into the Omniverse: How Developers Turn Ideas Into Simulations With Frontier AI Agents",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 72.0,
+        "priority_score": 69.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
@@ -953,7 +993,7 @@
           "产品更新",
           "算力芯片"
         ],
-        "signal_strength": 59.96,
+        "signal_strength": 57.92,
         "reading_links": [
           {
             "source_id": "nvidia_blog",
@@ -974,16 +1014,14 @@
         ]
       },
       {
-        "id": "28e64abb-43dd-51ec-b9fe-ac725d8c70c4",
-        "event_date": "2026-11-06",
+        "id": "f5d18aa4-4fe9-5e59-b2c4-eebee28307fa",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜‘Hogwarts Legacy’ Gets a Magi...",
-        "one_sentence_summary": "Hogwarts Legacy receives an NVIDIA DLSS 5 upgrade with 3D-Guided Neural Rendering today, bringing lifelike lighting a...",
-        "detailed_summary": "Hogwarts Legacy receives an NVIDIA DLSS 5 upgrade with 3D-Guided Neural Rendering today, bringing lifelike lighting and materials to the wizarding world on GeForce NOW. Blizzard Entertainment’s World of Warcraft: Forever also opens a new chapter in Azeroth, with a launch-week access reward available for GeForce NOW members. Meanwhile, Ubisoft brings fresh challenges with expansions […]",
+        "ai_title": "AI行业资讯｜Why the US midterms sparked a...",
+        "one_sentence_summary": "Fears of more AI regulation appear to have sparked fear among investors, but concerns about the industry have been gr...",
+        "detailed_summary": "Fears of more AI regulation appear to have sparked fear among investors, but concerns about the industry have been growing for some time.",
         "key_points": [
-          "Hogwarts Legacy receives an NVIDIA DLSS 5 upgrade with 3D-Guided Neural Rendering today, bringing lifelike lighting a...",
-          "Blizzard Entertainment’s World of Warcraft: Forever also opens a new chapter in Azeroth, with a launch-week access re...",
-          "Meanwhile, Ubisoft brings fresh challenges with expansions […]"
+          "Fears of more AI regulation appear to have sparked fear among investors, but concerns about the industry have been gr..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -992,39 +1030,38 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：‘Hogwarts Legacy’ Gets a Magical NVIDIA DLSS 5 Upgrade on GeForce NOW",
+        "topic_angle": "从商业化和产业竞争角度解读：Why the US midterms sparked an AI stock selloff",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 72.0,
+        "priority_score": 69.0,
         "confidence": 0.55,
         "tags": [
-          "官方消息",
-          "模型发布",
-          "算力芯片"
+          "产品更新",
+          "政策监管"
         ],
-        "signal_strength": 58.46,
+        "signal_strength": 49.92,
         "reading_links": [
           {
-            "source_id": "nvidia_blog",
-            "source_name": "NVIDIA Blog",
-            "source_type": "official",
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
+            "source_type": "media",
             "source_role": "primary",
-            "original_title": "‘Hogwarts Legacy’ Gets a Magical NVIDIA DLSS 5 Upgrade on GeForce NOW",
-            "url": "https://blogs.nvidia.com/blog/geforce-now-thursday-hogwarts-legacy-dlss-5/",
-            "published_at": "Thu, 05 Nov 2026 14:00:34 +0000",
-            "link_label": "NVIDIA Blog",
+            "original_title": "Why the US midterms sparked an AI stock selloff",
+            "url": "https://www.bbc.co.uk/news/articles/crlykkzwwpydo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Fri, 06 Nov 2026 18:32:16 GMT",
+            "link_label": "BBC Technology",
             "is_primary_reading_link": true,
             "display_order": 1
           }
         ],
         "source_count": 1,
         "source_types": [
-          "official"
+          "media"
         ]
       },
       {
-        "id": "3a76dfe1-8741-5672-ad07-7863e5a4ccd8",
-        "event_date": "2026-11-06",
+        "id": "914736f6-6c9c-5439-8dbb-7f7b7c1f117b",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Microsoft On The Issues",
         "one_sentence_summary": "Microsoft On The Issues",
@@ -1068,14 +1105,14 @@
         ]
       },
       {
-        "id": "7c3d113e-ab4c-5b46-bc5f-a6d1c6506c92",
-        "event_date": "2026-11-06",
+        "id": "420910f4-5a9e-5cec-80b7-820a083b0ee2",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Meta warns that election back...",
-        "one_sentence_summary": "Meta warns that growing political opposition to data centers could threaten future AI investments, as communities pus...",
-        "detailed_summary": "Meta warns that growing political opposition to data centers could threaten future AI investments, as communities push back against massive infrastructure projects.",
+        "ai_title": "AI行业资讯｜OpenAI reportedly rAIses an a...",
+        "one_sentence_summary": "OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expec...",
+        "detailed_summary": "OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expected to in the coming weeks.",
         "key_points": [
-          "Meta warns that growing political opposition to data centers could threaten future AI investments, as communities pus..."
+          "OpenAI has reportedly raised an additional $11 billion as part of a funding round that hasn't closed yet but is expec..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1084,25 +1121,69 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Meta warns that election backlash against data centers could make AI expansion harder",
+        "topic_angle": "从商业化和产业竞争角度解读：OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 63.5,
+        "priority_score": 64.0,
         "confidence": 0.55,
         "tags": [
-          "融资并购",
+          "融资并购"
+        ],
+        "signal_strength": 45.02,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "OpenAI reportedly raises an additional $11 billion at a $1.25 trillion valuation",
+            "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+            "published_at": "Fri, 06 Nov 2026 22:53:46 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "34417e38-6a9d-573c-a7fd-22a932644db9",
+        "event_date": "2026-11-07",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Crusoe sells troubled Wyoming...",
+        "one_sentence_summary": "The deal highlights the challenges of developing massive AI data centers.",
+        "detailed_summary": "The deal highlights the challenges of developing massive AI data centers.",
+        "key_points": [
+          "The deal highlights the challenges of developing massive AI data centers."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Crusoe sells troubled Wyoming data center project to Google",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.0,
+        "confidence": 0.55,
+        "tags": [
           "算力芯片"
         ],
-        "signal_strength": 46.18,
+        "signal_strength": 41.62,
         "reading_links": [
           {
             "source_id": "techcrunch_ai",
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Meta warns that election backlash against data centers could make AI expansion harder",
-            "url": "https://techcrunch.com/2026/11/05/metas-warns-that-election-backlash-against-data-centers-could-make-ai-expansion-harder/",
-            "published_at": "Thu, 05 Nov 2026 19:12:39 +0000",
+            "original_title": "Crusoe sells troubled Wyoming data center project to Google",
+            "url": "https://techcrunch.com/2026/11/06/crusoe-sells-troubled-wyoming-data-center-project-to-google/",
+            "published_at": "Sat, 07 Nov 2026 01:40:28 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1114,14 +1195,17 @@
         ]
       },
       {
-        "id": "a5eb8b35-c742-5e2c-ae1a-9ee6a18ea229",
-        "event_date": "2026-11-06",
+        "id": "94cd8b6e-c099-51b6-9261-c9181e898297",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜OpenAI released a new cyberse...",
-        "one_sentence_summary": "OpenAI's newest cybersecurity model comes out as AI labs face scrutiny of their work to protect digital infrastructure.",
-        "detailed_summary": "OpenAI's newest cybersecurity model comes out as AI labs face scrutiny of their work to protect digital infrastructure.",
+        "ai_title": "AI行业资讯｜How a Blue Wave midterm might...",
+        "one_sentence_summary": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The publi...",
+        "detailed_summary": "Democrats’ historic victories in this week’s U.S. midterm elections could also transform the tech industry. The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose more restrictions on data center development. And even when data centers weren’t on the ballot directly, they were a […]",
         "key_points": [
-          "OpenAI's newest cybersecurity model comes out as AI labs face scrutiny of their work to protect digital infrastructure."
+          "Democrats’ historic victories in this week’s U.S.",
+          "midterm elections could also transform the tech industry.",
+          "The public voted on 41 data center-related ballot measures on Tuesday — in all but one, the majority voted to impose...",
+          "And even when data centers weren’t on the ballot directly, they were a […]"
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1130,24 +1214,24 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：OpenAI released a new cybersecurity model. Is that enough?",
+        "topic_angle": "从商业化和产业竞争角度解读：How a Blue Wave midterm might reshape the AI industry",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 60.0,
+        "priority_score": 59.0,
         "confidence": 0.55,
         "tags": [
-          "模型发布"
+          "算力芯片"
         ],
-        "signal_strength": 42.3,
+        "signal_strength": 41.62,
         "reading_links": [
           {
             "source_id": "techcrunch_ai",
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "OpenAI released a new cybersecurity model. Is that enough?",
-            "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/",
-            "published_at": "Thu, 05 Nov 2026 19:06:12 +0000",
+            "original_title": "How a Blue Wave midterm might reshape the AI industry",
+            "url": "https://techcrunch.com/podcast/how-a-blue-wave-midterm-might-reshape-the-ai-industry/",
+            "published_at": "Fri, 06 Nov 2026 18:00:00 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1159,14 +1243,14 @@
         ]
       },
       {
-        "id": "5ee82ba5-367e-5cc7-8ab3-5313de1250e0",
-        "event_date": "2026-11-06",
+        "id": "4b055b58-1ba9-54ee-afc3-c3658e916773",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Elon Musk's millions fAIled t...",
-        "one_sentence_summary": "Musk spent nearly $500m in the 2026 US midterm elections, an individual election spending record.",
-        "detailed_summary": "Musk spent nearly $500m in the 2026 US midterm elections, an individual election spending record.",
+        "ai_title": "AI行业资讯｜Hundreds of Artex AI hacking...",
+        "one_sentence_summary": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, al...",
+        "detailed_summary": "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, allowing anyone access to the hacking tool.",
         "key_points": [
-          "Musk spent nearly $500m in the 2026 US midterm elections, an individual election spending record."
+          "Security researchers found hundreds of servers hosting the penetration testing tool Artex exposed to the internet, al..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1175,22 +1259,118 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Elon Musk's millions failed to deliver Republican wins in fierce midterms",
+        "topic_angle": "从商业化和产业竞争角度解读：Hundreds of Artex AI hacking tools found publicly exposed to the web",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 57.5,
+        "priority_score": 57.0,
         "confidence": 0.55,
-        "tags": [],
-        "signal_strength": 39.1,
+        "tags": [
+          "论文研究"
+        ],
+        "signal_strength": 40.26,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+            "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/",
+            "published_at": "Fri, 06 Nov 2026 18:44:38 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "c1f7470b-43c3-51e2-9166-c569760247ec",
+        "event_date": "2026-11-07",
+        "category": "AI行业资讯",
+        "ai_title": "Meta introduces Spaces, a new way to...",
+        "one_sentence_summary": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with th...",
+        "detailed_summary": "Meta's Muse agents continue to get new features and integrations. Spaces promises to be a new way to interact with the AI helpers.",
+        "key_points": [
+          "Meta's Muse agents continue to get new features and integrations.",
+          "Spaces promises to be a new way to interact with the AI helpers."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Meta introduces Spaces, a new way to collaborate with your Muse agent",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "智能体",
+          "产品更新",
+          "国际金融"
+        ],
+        "signal_strength": 44.76,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+            "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/",
+            "published_at": "Fri, 06 Nov 2026 18:44:20 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "1a612857-9362-5b09-bcb3-89dced72fe79",
+        "event_date": "2026-11-07",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Elon Musk appears to signal t...",
+        "one_sentence_summary": "Musk said it was to make room for production of its Cybercabs - autonomous taxis without a driver.",
+        "detailed_summary": "Musk said it was to make room for production of its Cybercabs - autonomous taxis without a driver.",
+        "key_points": [
+          "Musk said it was to make room for production of its Cybercabs - autonomous taxis without a driver."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Elon Musk appears to signal the end of the road for Cybertruck",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "产品更新"
+        ],
+        "signal_strength": 39.58,
         "reading_links": [
           {
             "source_id": "bbc_technology",
             "source_name": "BBC Technology",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Elon Musk's millions failed to deliver Republican wins in fierce midterms",
-            "url": "https://www.bbc.co.uk/news/articles/cv8ez3p3ge5ko?at_medium=RSS&at_campaign=rss",
-            "published_at": "Wed, 04 Nov 2026 21:41:15 GMT",
+            "original_title": "Elon Musk appears to signal the end of the road for Cybertruck",
+            "url": "https://www.bbc.co.uk/news/articles/cq1j33w7d232o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Fri, 06 Nov 2026 21:49:50 GMT",
             "link_label": "BBC Technology",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1202,14 +1382,14 @@
         ]
       },
       {
-        "id": "9fb656ee-21a6-5be8-b07e-d11c26c3c261",
-        "event_date": "2026-11-06",
+        "id": "5c0d4c80-4ad5-537a-8331-ad673a8e7803",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
-        "ai_title": "TAIwan 股市 in steepest-ever fall, Sou...",
-        "one_sentence_summary": "<p>Article URL: <a href=\"https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-hal...",
-        "detailed_summary": "<p>Article URL: <a href=\"https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-halts-trading-amid-ai-rout\">https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-halts-trading-amid-ai-rout</a></p> <p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50388734\">https://news.ycombinator.com/item?id=50388734</a></p> <p>Points: 2</p> <p># Comments: 1</p>",
+        "ai_title": "Global 股市 plunge as fears over US AI...",
+        "one_sentence_summary": "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry.",
+        "detailed_summary": "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry.",
         "key_points": [
-          "<p>Article URL: <a href=\"https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-hal..."
+          "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1218,70 +1398,23 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Taiwan stocks in steepest-ever fall, South Korea halts trading amid AI rout",
+        "topic_angle": "从商业化和产业竞争角度解读：Global stocks plunge as fears over US AI slowdown spread to Asia and Europe",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.5,
+        "recommended": false,
+        "priority_score": 54.0,
         "confidence": 0.55,
-        "tags": [
-          "社区讨论"
-        ],
-        "signal_strength": 44.6,
+        "tags": [],
+        "signal_strength": 36.72,
         "reading_links": [
           {
-            "source_id": "hackernews_ai",
-            "source_name": "Hacker News AI",
-            "source_type": "social",
-            "source_role": "primary",
-            "original_title": "Taiwan stocks in steepest-ever fall, South Korea halts trading amid AI rout",
-            "url": "https://asia.nikkei.com/business/markets/taiwan-stocks-in-steepest-ever-fall-south-korea-halts-trading-amid-ai-rout",
-            "published_at": "Fri, 06 Nov 2026 06:02:01 +0000",
-            "link_label": "Hacker News AI",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "social"
-        ]
-      },
-      {
-        "id": "a02da3ca-fbf8-5ffd-8914-c8c2a8917c93",
-        "event_date": "2026-11-06",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Palo Alto Networks in talks t...",
-        "one_sentence_summary": "Clutch, backed by Lightspeed and SignalFire, was last valued at $85 million, according to a source.",
-        "detailed_summary": "Clutch, backed by Lightspeed and SignalFire, was last valued at $85 million, according to a source.",
-        "key_points": [
-          "Clutch, backed by Lightspeed and SignalFire, was last valued at $85 million, according to a source."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "智能体"
-        ],
-        "signal_strength": 40.26,
-        "reading_links": [
-          {
-            "source_id": "techcrunch_ai",
-            "source_name": "TechCrunch AI",
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
-            "url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
-            "published_at": "Fri, 06 Nov 2026 06:28:32 +0000",
-            "link_label": "TechCrunch AI",
+            "original_title": "Global stocks plunge as fears over US AI slowdown spread to Asia and Europe",
+            "url": "https://www.bbc.co.uk/news/articles/cmn04705rd8jo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Fri, 06 Nov 2026 13:25:50 GMT",
+            "link_label": "BBC Technology",
             "is_primary_reading_link": true,
             "display_order": 1
           }
@@ -1292,100 +1425,8 @@
         ]
       },
       {
-        "id": "0f29aabc-78db-5c33-8845-d7222ded8ee1",
-        "event_date": "2026-11-06",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜AIrbnb says it’s launching an...",
-        "one_sentence_summary": "Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistanc...",
-        "detailed_summary": "Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistance throughout their stay.",
-        "key_points": [
-          "Airbnb says its upcoming AI agent will help travelers plan trips, compare options, manage bookings, and get assistanc..."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：Airbnb says it’s launching an AI travel agent in the first half of 2027",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "智能体"
-        ],
-        "signal_strength": 41.76,
-        "reading_links": [
-          {
-            "source_id": "techcrunch_ai",
-            "source_name": "TechCrunch AI",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Airbnb says it’s launching an AI travel agent in the first half of 2027",
-            "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/",
-            "published_at": "Thu, 05 Nov 2026 22:40:55 +0000",
-            "link_label": "TechCrunch AI",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "16c81fa4-f170-5e0f-ad4a-3b4b3fb9dc39",
-        "event_date": "2026-11-06",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Meta says US users can now vi...",
-        "one_sentence_summary": "Meta's AI agent can now take calls as a customizable animated avatar, ahead of the launch of a Tamagotchi-like wearab...",
-        "detailed_summary": "Meta's AI agent can now take calls as a customizable animated avatar, ahead of the launch of a Tamagotchi-like wearable designed to bring Muse to life.",
-        "key_points": [
-          "Meta's AI agent can now take calls as a customizable animated avatar, ahead of the launch of a Tamagotchi-like wearab..."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：Meta says US users can now video chat with their Muse AI avatar",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "智能体"
-        ],
-        "signal_strength": 41.76,
-        "reading_links": [
-          {
-            "source_id": "techcrunch_ai",
-            "source_name": "TechCrunch AI",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Meta says US users can now video chat with their Muse AI avatar",
-            "url": "https://techcrunch.com/2026/11/05/meta-says-us-users-can-now-video-chat-with-their-muse-ai-avatar/",
-            "published_at": "Thu, 05 Nov 2026 19:48:28 +0000",
-            "link_label": "TechCrunch AI",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "07c44fd9-ba51-524a-bf23-b728d69013c9",
-        "event_date": "2026-11-06",
+        "id": "480977b8-6231-50a2-b14b-76653652acf0",
+        "event_date": "2026-11-07",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜The engine parts that 'fight...",
         "one_sentence_summary": "Investment has surged into the making of jet turbine blades - an extremely difficult component to make.",
@@ -1402,13 +1443,13 @@
         },
         "topic_angle": "从商业化和产业竞争角度解读：The engine parts that 'fight the laws of the universe'",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 56.0,
+        "recommended": false,
+        "priority_score": 51.0,
         "confidence": 0.55,
         "tags": [
           "融资并购"
         ],
-        "signal_strength": 39.58,
+        "signal_strength": 36.18,
         "reading_links": [
           {
             "source_id": "bbc_technology",
@@ -1427,67 +1468,22 @@
         "source_types": [
           "media"
         ]
-      },
-      {
-        "id": "c91a8511-c24d-5f1e-9f54-b8b4b08988fb",
-        "event_date": "2026-11-06",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜AI is changing mathematics –...",
-        "one_sentence_summary": "<p>Article URL: <a href=\"https://www.npr.org/2026/11/04/nx-s1-6010471/ai-math-navier-stokes-mathematicians-openai\">ht...",
-        "detailed_summary": "<p>Article URL: <a href=\"https://www.npr.org/2026/11/04/nx-s1-6010471/ai-math-navier-stokes-mathematicians-openai\">https://www.npr.org/2026/11/04/nx-s1-6010471/ai-math-navier-stokes-mathematicians-openai</a></p> <p>Comments URL: <a href=\"https://news.ycombinator.com/item?id=50388872\">https://news.ycombinator.com/item?id=50388872</a></p> <p>Points: 1</p> <p># Comments: 0</p>",
-        "key_points": [
-          "<p>Article URL: <a href=\"https://www.npr.org/2026/11/04/nx-s1-6010471/ai-math-navier-stokes-mathematicians-openai\">ht..."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：AI is changing mathematics – but not how you think",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": false,
-        "priority_score": 54.0,
-        "confidence": 0.55,
-        "tags": [
-          "社区讨论"
-        ],
-        "signal_strength": 42.22,
-        "reading_links": [
-          {
-            "source_id": "hackernews_ai",
-            "source_name": "Hacker News AI",
-            "source_type": "social",
-            "source_role": "primary",
-            "original_title": "AI is changing mathematics – but not how you think",
-            "url": "https://www.npr.org/2026/11/04/nx-s1-6010471/ai-math-navier-stokes-mathematicians-openai",
-            "published_at": "Fri, 06 Nov 2026 06:25:40 +0000",
-            "link_label": "Hacker News AI",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "social"
-        ]
       }
     ],
     "国际形势影响": [
       {
-        "id": "47c9e183-d750-5b58-b606-f9627536d6bc",
-        "event_date": "2026-11-06",
+        "id": "a7085d07-9db0-5c75-9047-4b2449d47630",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜White House denies Hegseth an...",
-        "one_sentence_summary": "US media reports there are calls to replace Pete Hegseth, who also faces a possible impeachment vote, while Mark Rubi...",
-        "detailed_summary": "White House denies Hegseth, Rubio will leave jobs amid Republican election fallout - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat W...",
+        "ai_title": "国际形势影响｜Four midterms takeaways for 2...",
+        "one_sentence_summary": "The buzz about the presidential election is already under way - here's what we learned this week.",
+        "detailed_summary": "Four midterms takeaways for 2028 White House race - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat US & Canada Four midterms takeaway...",
         "key_points": [
-          "White House denies Hegseth, Rubio will leave jobs amid Republican election fallout - BBC News BBC Homepage Skip to co...",
-          "US media have reported there are calls to replace Hegseth - in particular over his handling of the Iran war, which is...",
-          "One outgoing congressional Republican has threatened to force an impeachment vote against Hegseth as early as next week.",
-          "The defence secretary posted a video statement defending his record and denouncing the effort.",
-          "\"You see, they attack me."
+          "Four midterms takeaways for 2028 White House race - BBC News BBC Homepage Skip to content Accessibility Help Your acc...",
+          "Buoyed by major gains in Congress, Democrats will have momentum as they prepare for the contest to succeed President...",
+          "But a good showing in the midterms does not guarantee a White House win two years later.",
+          "Barack Obama was re-elected in 2012 despite huge Republican gains in 2010.",
+          "No one has yet entered the presidential race but potential candidates will be preparing behind the scenes."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1496,24 +1492,24 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：White House denies Hegseth and Rubio to leave jobs after Republican election losses",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Four midterms takeaways for 2028 White House race",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 72.5,
+        "priority_score": 64.0,
         "confidence": 0.55,
         "tags": [
           "地缘影响"
         ],
-        "signal_strength": 50.8,
+        "signal_strength": 45.02,
         "reading_links": [
           {
             "source_id": "bbc_world",
             "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "White House denies Hegseth and Rubio to leave jobs after Republican election losses",
-            "url": "https://www.bbc.co.uk/news/articles/cqg7xxg4jdv5o?at_medium=RSS&at_campaign=rss",
-            "published_at": "Fri, 06 Nov 2026 02:08:57 GMT",
+            "original_title": "Four midterms takeaways for 2028 White House race",
+            "url": "https://www.bbc.co.uk/news/articles/cq1m41n3v7mmo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Fri, 06 Nov 2026 16:12:22 GMT",
             "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1525,18 +1521,18 @@
         ]
       },
       {
-        "id": "c733879f-af07-56c2-887a-bf748919b5d7",
-        "event_date": "2026-11-06",
+        "id": "1d421856-6bbd-5f0f-955a-bb5b032a8593",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Trump signs order preventing...",
-        "one_sentence_summary": "The order comes after Trump made a series of big changes to the decor of the Oval Office and tore down the White Hous...",
-        "detailed_summary": "Trump signs order to prevent future presidents from changing Oval Office - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat US & Canada...",
+        "ai_title": "AI 股市 climb after trillions wiped fr...",
+        "one_sentence_summary": "Investors had been selling off tech shares in part due to concerns the Democrat election victory would mean slower AI...",
+        "detailed_summary": "AI stocks bounce back after trillions wiped from market values - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Business New Tech Eco...",
         "key_points": [
-          "Trump signs order to prevent future presidents from changing Oval Office - BBC News BBC Homepage Skip to content Acce...",
-          "Trump, a former real estate mogul, has drastically altered the look of the president's official office during his sec...",
-          "\"We're making it a national monument, and it will not be allowed to be touched by anybody, destroyed, ripped down by...",
-          "The order comes months after Trump tore down the entirety of the White House East Wing in a project that has faced le...",
-          "The project was also approved by the US Congress."
+          "AI stocks bounce back after trillions wiped from market values - BBC News BBC Homepage Skip to content Accessibility...",
+          "The tech-heavy Nasdaq stock index closed in positive territory following a market rout that began in the US on Thursd...",
+          "Investors had been selling off tech shares in part due to concerns the Democrat victory in the midterm elections woul...",
+          "However the latest US employment figures added to a mixed picture for American markets on Friday morning, with an une...",
+          "On Thursday, businesses closely linked to artificial intelligence development took a hammering on stock markets, part..."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1545,25 +1541,24 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Trump signs order preventing future presidents from changing Oval Office",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：AI stocks climb after trillions wiped from market values",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 63.5,
         "confidence": 0.55,
         "tags": [
-          "产品更新",
           "地缘影响"
         ],
-        "signal_strength": 46.18,
+        "signal_strength": 44.68,
         "reading_links": [
           {
             "source_id": "bbc_world",
             "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Trump signs order preventing future presidents from changing Oval Office",
-            "url": "https://www.bbc.co.uk/news/articles/cmy0eeg101djo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Fri, 06 Nov 2026 04:29:25 GMT",
+            "original_title": "AI stocks climb after trillions wiped from market values",
+            "url": "https://www.bbc.co.uk/news/articles/c35ynnpzdq51o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Fri, 06 Nov 2026 21:06:25 GMT",
             "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1575,18 +1570,16 @@
         ]
       },
       {
-        "id": "f45e3a43-2e2a-50f4-9b9c-a0d36df789e8",
-        "event_date": "2026-11-06",
+        "id": "496d94a0-0b9a-522f-92b2-9b123c98e2a4",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Why is Iran exempting India,...",
-        "one_sentence_summary": "Tehran says ships from four countries can cross Hormuz freely, but analysts say the deals carry political risks.",
-        "detailed_summary": "Why is Iran exempting India, China, Qatar, Iraq from Hormuz restrictions? | US-Israel war on Iran News | Al Jazeera Skip links Skip to Content Live Sign up Navigation menu News Show more news sections Middle East Africa Asia US & Canada Latin America Europe Asia Pacific Explained Sport Opinion Video Interactives More Show more sections Originals Features Economy Human Rights Climate Crisis Investigations In Pictures Science & Technology Podcasts Travel Sponsored Content Live Click here to sea...",
+        "ai_title": "国际形势影响｜Paraguay’s Pena under militar...",
+        "one_sentence_summary": "Paraguay moves ex-President Santiago Pena to military base for protection after dramatic day in Asuncion.",
+        "detailed_summary": "Paraguay’s Pena under military protection in bank collapse chaos | Corruption | Al Jazeera Skip links Skip to Content Live Sign up Navigation menu News Show more news sections Middle East Africa Asia US & Canada Latin America Europe Asia Pacific Explained Sport Opinion Video Interactives More Show more sections Originals Features Economy Human Rights Climate Crisis Investigations In Pictures Science & Technology Podcasts Travel Sponsored Content Live Click here to search Sign up Navigation me...",
         "key_points": [
-          "Why is Iran exempting India, China, Qatar, Iraq from Hormuz restrictions?",
-          "| US-Israel war on Iran News | Al Jazeera Skip links Skip to Content Live Sign up Navigation menu News Show more news...",
-          "Why have strikes resumed?",
-          "Al Jazeera Originals News EXPLAINER News | US-Israel war on Iran Why is Iran exempting India, China, Qatar, Iraq from...",
-          "Tehran says ships from four countries can cross Hormuz freely, but analysts say the deals carry political risks."
+          "Paraguay’s Pena under military protection in bank collapse chaos | Corruption | Al Jazeera Skip links Skip to Content...",
+          "Earlier, he was put under house arrest after the collapse of UENO bank.",
+          "Published On 7 Nov 2026 7 Nov 2026 Save Share Paraguay’s Pena under military protection in bank collapse chaos on soc..."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1595,7 +1588,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Why is Iran exempting India, China, Qatar, Iraq from Hormuz restrictions?",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Paraguay’s Pena under military protection in bank collapse chaos",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 62.5,
@@ -1611,9 +1604,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Why is Iran exempting India, China, Qatar, Iraq from Hormuz restrictions?",
-            "url": "https://www.aljazeera.com/news/2026/11/6/why-is-iran-exempting-india-china-qatar-iraq-from-hormuz-restrictions?traffic_source=rss",
-            "published_at": "Fri, 06 Nov 2026 06:06:24 +0000",
+            "original_title": "Paraguay’s Pena under military protection in bank collapse chaos",
+            "url": "https://www.aljazeera.com/video/newsfeed/2026/11/7/aje-onl-nf_paraguays-pena-under-house-arrest-061126?traffic_source=rss",
+            "published_at": "Sat, 07 Nov 2026 05:51:23 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1625,18 +1618,18 @@
         ]
       },
       {
-        "id": "a37ea7a8-436b-5aa7-8346-7ae06449f465",
-        "event_date": "2026-11-06",
+        "id": "899fa151-105d-55b7-8d14-c8379c1289ca",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Iraq’s al-ZAIdi talks to Trum...",
-        "one_sentence_summary": "Call comes as Iraq's top diplomat urges armed groups not to join any Iranian retaliation to US attacks.",
-        "detailed_summary": "Iraq’s al-Zaidi talks to Trump as Baghdad seeks to stay out of war on Iran | US-Israel war on Iran News | Al Jazeera Skip links Skip to Content Live Sign up Navigation menu News Show more news sections Middle East Africa Asia US & Canada Latin America Europe Asia Pacific Explained Sport Opinion Video Interactives More Show more sections Originals Features Economy Human Rights Climate Crisis Investigations In Pictures Science & Technology Podcasts Travel Sponsored Content Live Click here to se...",
+        "ai_title": "国际形势影响｜Paraguay's President Santiago...",
+        "one_sentence_summary": "Santiago Peña was ousted due to a banking crisis which left millions of people unable to access their money.",
+        "detailed_summary": "Paraguay's President Santiago Peña impeached and arrested - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat World Africa Asia Australi...",
         "key_points": [
-          "Iraq’s al-Zaidi talks to Trump as Baghdad seeks to stay out of war on Iran | US-Israel war on Iran News | Al Jazeera...",
-          "Why have strikes resumed?",
-          "Al Jazeera Originals News News | US-Israel war on Iran Iraq’s al-Zaidi talks to Trump as Baghdad seeks to stay out of...",
-          "Listen (3 mins) Save Share Iraq’s al-Zaidi talks to Trump as Baghdad seeks to stay out of war on Iran on social media...",
-          "Al-Zaidi spoke to US President Donald Trump over the phone on Thursday, according to his office, as diplomatic effort..."
+          "Paraguay's President Santiago Peña impeached and arrested - BBC News BBC Homepage Skip to content Accessibility Help...",
+          "Peña was arrested on Friday minutes after lawmakers, including from his own party, unanimously voted to remove him fr...",
+          "He had offered to step down on Thursday.",
+          "Rather than accept his resignation, senators impeached Peña and charged him with misconduct, meaning he has been stri...",
+          "Peña, who until last year held shares in the company that owned the bank, has denied any wrongdoing."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1645,53 +1638,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Iraq’s al-Zaidi talks to Trump as Baghdad seeks to stay out of war on Iran",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 62.5,
-        "confidence": 0.55,
-        "tags": [
-          "产品更新",
-          "地缘影响"
-        ],
-        "signal_strength": 45.5,
-        "reading_links": [
-          {
-            "source_id": "aljazeera_all",
-            "source_name": "Al Jazeera",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Iraq’s al-Zaidi talks to Trump as Baghdad seeks to stay out of war on Iran",
-            "url": "https://www.aljazeera.com/news/2026/11/6/iraqs-al-zaidi-talks-to-trump-as-baghdad-seeks-to-stay-out-of-war-on-iran?traffic_source=rss",
-            "published_at": "Fri, 06 Nov 2026 05:00:47 +0000",
-            "link_label": "Al Jazeera",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "eff29fe4-20cc-5a10-9adc-63fa38f71f52",
-        "event_date": "2026-11-06",
-        "category": "国际形势影响",
-        "ai_title": "Global tech 股市 plunge as US midterms...",
-        "one_sentence_summary": "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry.",
-        "detailed_summary": "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry.",
-        "key_points": [
-          "Investors have reacted to possible tougher scrutiny of data centre construction and the AI industry."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Global tech stocks plunge as US midterms add to AI slowdown fears",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Paraguay's President Santiago Peña impeached and arrested",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.0,
@@ -1706,9 +1653,9 @@
             "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Global tech stocks plunge as US midterms add to AI slowdown fears",
-            "url": "https://www.bbc.co.uk/news/articles/cmn04705rd8jo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Fri, 06 Nov 2026 06:00:59 GMT",
+            "original_title": "Paraguay's President Santiago Peña impeached and arrested",
+            "url": "https://www.bbc.co.uk/news/articles/c68jzzvjgdy9o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Sat, 07 Nov 2026 03:25:00 GMT",
             "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1720,14 +1667,14 @@
         ]
       },
       {
-        "id": "6ecb3624-0b8e-5776-b7db-718ed58c02d8",
-        "event_date": "2026-11-06",
+        "id": "e02712f4-ec5b-5fc3-91c0-0d8016061ec5",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Pope begins lengthy trip to L...",
-        "one_sentence_summary": "Pope Leo, who had part of a lung removed last month, will visit Uruguay, Argentina and Peru.",
-        "detailed_summary": "Pope Leo, who had part of a lung removed last month, will visit Uruguay, Argentina and Peru.",
+        "ai_title": "国际形势影响｜Khawaja clAIms entire Austral...",
+        "one_sentence_summary": "The 'Sandpapergate' scandal saw ⁠Australia scuffing the ball with sandpaper in the March 2018 test ​in Cape Town.",
+        "detailed_summary": "The 'Sandpapergate' scandal saw ⁠Australia scuffing the ball with sandpaper in the March 2018 test ​in Cape Town.",
         "key_points": [
-          "Pope Leo, who had part of a lung removed last month, will visit Uruguay, Argentina and Peru."
+          "The 'Sandpapergate' scandal saw ⁠Australia scuffing the ball with sandpaper in the March 2018 test ​in Cape Town."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1736,149 +1683,14 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Pope begins lengthy trip to Latin America weeks after lung cancer surgery",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "地缘影响"
-        ],
-        "signal_strength": 40.26,
-        "reading_links": [
-          {
-            "source_id": "bbc_world",
-            "source_name": "BBC World",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Pope begins lengthy trip to Latin America weeks after lung cancer surgery",
-            "url": "https://www.bbc.co.uk/news/articles/cqn06j0y61k6o?at_medium=RSS&at_campaign=rss",
-            "published_at": "Fri, 06 Nov 2026 00:02:57 GMT",
-            "link_label": "BBC World",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "98e9d8cd-2b22-533f-856b-d6ba3a91b2a7",
-        "event_date": "2026-11-06",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜California governor commutes...",
-        "one_sentence_summary": "California has historically had the largest population of people on death row in the US.",
-        "detailed_summary": "California has historically had the largest population of people on death row in the US.",
-        "key_points": [
-          "California has historically had the largest population of people on death row in the US."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：California governor commutes sentences for state's 548 death row inmates",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "地缘影响"
-        ],
-        "signal_strength": 40.26,
-        "reading_links": [
-          {
-            "source_id": "bbc_world",
-            "source_name": "BBC World",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "California governor commutes sentences for state's 548 death row inmates",
-            "url": "https://www.bbc.co.uk/news/articles/cqrkyyd2j8mvo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Thu, 05 Nov 2026 23:09:33 GMT",
-            "link_label": "BBC World",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "a19caad1-e50c-5b33-a968-5652c83ce9c6",
-        "event_date": "2026-11-06",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜In Athens’s pro-Palestinian h...",
-        "one_sentence_summary": "In Athens’s pro-Palestinian heartland, Israeli buyers spark resentment",
-        "detailed_summary": "In Athens’s pro-Palestinian heartland, Israeli buyers spark resentment",
-        "key_points": [
-          "In Athens’s pro-Palestinian heartland, Israeli buyers spark resentment"
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：In Athens’s pro-Palestinian heartland, Israeli buyers spark resentment",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Khawaja claims entire Australia team knew about 2018 ball-tampering scandal",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
         "confidence": 0.55,
         "tags": [
+          "论文研究",
           "地缘影响"
-        ],
-        "signal_strength": 39.58,
-        "reading_links": [
-          {
-            "source_id": "aljazeera_all",
-            "source_name": "Al Jazeera",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "In Athens’s pro-Palestinian heartland, Israeli buyers spark resentment",
-            "url": "https://www.aljazeera.com/video/newsfeed/2026/11/6/in-athenss-pro-palestinian-heartland-israeli-buyers-spark-resentment?traffic_source=rss",
-            "published_at": "Fri, 06 Nov 2026 05:59:54 +0000",
-            "link_label": "Al Jazeera",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "83b61cec-b87c-5278-8bf7-9f75bd488611",
-        "event_date": "2026-11-06",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜US Justice Department sues Pe...",
-        "one_sentence_summary": "The lawsuit challenges Penn State's policy that allows undocumented students to qualify for reduced tuition rates.",
-        "detailed_summary": "The lawsuit challenges Penn State's policy that allows undocumented students to qualify for reduced tuition rates.",
-        "key_points": [
-          "The lawsuit challenges Penn State's policy that allows undocumented students to qualify for reduced tuition rates."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：US Justice Department sues Penn State over undocumented students’ tuition",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 56.0,
-        "confidence": 0.55,
-        "tags": [
-          "政策监管",
-          "国际金融"
         ],
         "signal_strength": 41.08,
         "reading_links": [
@@ -1887,9 +1699,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "US Justice Department sues Penn State over undocumented students’ tuition",
-            "url": "https://www.aljazeera.com/news/2026/11/6/us-justice-department-sues-penn-state-over-undocumented-students-tuition?traffic_source=rss",
-            "published_at": "Fri, 06 Nov 2026 05:57:27 +0000",
+            "original_title": "Khawaja claims entire Australia team knew about 2018 ball-tampering scandal",
+            "url": "https://www.aljazeera.com/sports/2026/11/7/australia-cricket-ball-tampering-sandpapergate-usman-khawaja?traffic_source=rss",
+            "published_at": "Sat, 07 Nov 2026 05:46:54 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1901,14 +1713,14 @@
         ]
       },
       {
-        "id": "b9f2c54c-5918-530b-a1bd-b7b57d32bda3",
-        "event_date": "2026-11-06",
+        "id": "4c709a15-0317-52ed-983f-7b47f151b705",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Why one Republican won a redr...",
-        "one_sentence_summary": "Republican redistricting largely backfired in Texas and beyond, but one redrawn district delivered for the party.",
-        "detailed_summary": "Republican redistricting largely backfired in Texas and beyond, but one redrawn district delivered for the party.",
+        "ai_title": "国际形势影响｜President Herzog faces key ch...",
+        "one_sentence_summary": "Eisenkot's bloc and Arab-led parties seek to oust Netanyahu, but failure to form government could leave him in power.",
+        "detailed_summary": "Eisenkot's bloc and Arab-led parties seek to oust Netanyahu, but failure to form government could leave him in power.",
         "key_points": [
-          "Republican redistricting largely backfired in Texas and beyond, but one redrawn district delivered for the party."
+          "Eisenkot's bloc and Arab-led parties seek to oust Netanyahu, but failure to form government could leave him in power."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1917,7 +1729,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Why one Republican won a redrawn Texas district despite blue tsunami",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：President Herzog faces key choice as Israel struggles to form government",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1932,9 +1744,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Why one Republican won a redrawn Texas district despite blue tsunami",
-            "url": "https://www.aljazeera.com/news/2026/11/6/why-one-republican-won-a-redrawn-texas-district-despite-blue-tsunami?traffic_source=rss",
-            "published_at": "Fri, 06 Nov 2026 05:03:57 +0000",
+            "original_title": "President Herzog faces key choice as Israel struggles to form government",
+            "url": "https://www.aljazeera.com/news/2026/11/7/president-herzog-faces-key-choice-as-israel-struggles-to-form-government?traffic_source=rss",
+            "published_at": "Sat, 07 Nov 2026 05:16:18 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1946,8 +1758,190 @@
         ]
       },
       {
-        "id": "57b8324a-7e89-5805-8c60-70debdbffaac",
-        "event_date": "2026-11-06",
+        "id": "3d26ef07-fc13-52dc-a705-dc99ef0e9264",
+        "event_date": "2026-11-07",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Russia launches missile attac...",
+        "one_sentence_summary": "Air strikes damage buildings and injure two civilians after Zelenskyy warns of potential for new attacks.",
+        "detailed_summary": "Air strikes damage buildings and injure two civilians after Zelenskyy warns of potential for new attacks.",
+        "key_points": [
+          "Air strikes damage buildings and injure two civilians after Zelenskyy warns of potential for new attacks."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Russia launches missile attack on Kyiv, injuring residents",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "地缘影响"
+        ],
+        "signal_strength": 41.08,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Russia launches missile attack on Kyiv, injuring residents",
+            "url": "https://www.aljazeera.com/news/2026/11/7/russia-launches-missile-attack-on-kyiv-injuring-residents?traffic_source=rss",
+            "published_at": "Sat, 07 Nov 2026 05:11:03 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "774fd14c-eea1-50f2-a378-63dcb6a53b74",
+        "event_date": "2026-11-07",
+        "category": "国际形势影响",
+        "ai_title": "‘One less gang leader’: HAIti’s prim...",
+        "one_sentence_summary": "Haiti's National Police announced that alleged gang leader Mathias Saintil was killed in an exchange of gunfire.",
+        "detailed_summary": "Haiti's National Police announced that alleged gang leader Mathias Saintil was killed in an exchange of gunfire.",
+        "key_points": [
+          "Haiti's National Police announced that alleged gang leader Mathias Saintil was killed in an exchange of gunfire."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：‘One less gang leader’: Haiti’s prime minister celebrates police operation",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "国际金融",
+          "地缘影响"
+        ],
+        "signal_strength": 41.08,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "‘One less gang leader’: Haiti’s prime minister celebrates police operation",
+            "url": "https://www.aljazeera.com/news/2026/11/7/one-less-gang-leader-haitis-prime-minister-celebrates-police-operation?traffic_source=rss",
+            "published_at": "Sat, 07 Nov 2026 05:02:49 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "88718750-e18a-5e91-9ae8-4aec65db2024",
+        "event_date": "2026-11-07",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Two dead after bus crashes in...",
+        "one_sentence_summary": "One child and one young adult were killed in the crash, local authorities say, with more injured.",
+        "detailed_summary": "One child and one young adult were killed in the crash, local authorities say, with more injured.",
+        "key_points": [
+          "One child and one young adult were killed in the crash, local authorities say, with more injured."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Two dead after bus crashes in France, officials say",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 55.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 38.9,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Two dead after bus crashes in France, officials say",
+            "url": "https://www.bbc.co.uk/news/articles/cmly00l4p3lwo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Fri, 06 Nov 2026 15:33:52 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "7e09ac9b-786b-5a3c-a21a-4bb29692072a",
+        "event_date": "2026-11-07",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜New wave of bomb threats hit...",
+        "one_sentence_summary": "No link has been established between the threats against the airlines and those against the media outlets.",
+        "detailed_summary": "No link has been established between the threats against the airlines and those against the media outlets.",
+        "key_points": [
+          "No link has been established between the threats against the airlines and those against the media outlets."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：New wave of bomb threats hit European airlines",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 55.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 38.9,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "New wave of bomb threats hit European airlines",
+            "url": "https://www.bbc.co.uk/news/articles/cq62yy064vjpo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Fri, 06 Nov 2026 15:25:35 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "728dabbc-1b4c-5a1f-a6db-fd6336b5348f",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Support CFR",
         "one_sentence_summary": "Support CFR",
@@ -1991,8 +1985,8 @@
         ]
       },
       {
-        "id": "0afbe126-f471-5e8f-9415-ee9e0f0e935e",
-        "event_date": "2026-11-06",
+        "id": "170b561e-47a5-5bdb-8609-d35e5ca50980",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Member Login",
         "one_sentence_summary": "Member Login",
@@ -2036,8 +2030,8 @@
         ]
       },
       {
-        "id": "1f039da2-2782-5072-9f29-5dbb7309f8b1",
-        "event_date": "2026-11-06",
+        "id": "91a1db78-5a18-5a8d-94ec-c403e8f7b161",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Regions",
         "one_sentence_summary": "Regions",
@@ -2081,8 +2075,8 @@
         ]
       },
       {
-        "id": "b2a5c742-c630-54eb-b47d-d8789b82d3dc",
-        "event_date": "2026-11-06",
+        "id": "07a740e0-62dd-5c1e-b6ae-1cae093dc4db",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Topics",
         "one_sentence_summary": "Topics",
@@ -2126,8 +2120,8 @@
         ]
       },
       {
-        "id": "868a7cec-d66c-5556-9a44-5fba13d2fa92",
-        "event_date": "2026-11-06",
+        "id": "bfecc42b-79bd-5c94-ae22-1354e1bbbe6a",
+        "event_date": "2026-11-07",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Research",
         "one_sentence_summary": "Research",
@@ -2174,8 +2168,106 @@
     ],
     "国际金融": [
       {
-        "id": "798cc771-1a5d-5bae-bea4-361a7aaf7f93",
-        "event_date": "2026-11-06",
+        "id": "e5423a5a-9aa5-5be4-b968-e72813fcbcfe",
+        "event_date": "2026-11-07",
+        "category": "国际金融",
+        "ai_title": "Operation 经济 Outcast Sanctions Eight...",
+        "one_sentence_summary": "Operation 经济 Outcast Sanctions Eight...",
+        "detailed_summary": "Operation 经济 Outcast Sanctions Eight...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "Operation 经济 Outcast Sanctions Eight...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Operation Economic Outcast Sanctions Eight Canadian Money Services Businesses Enabling Iranian Regime",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 66.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 50.88,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Operation Economic Outcast Sanctions Eight Canadian Money Services Businesses Enabling Iranian Regime",
+            "url": "https://home.treasury.gov/news/press-releases/sb0686/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "e1611fe7-dc67-5b70-bbb6-aeb362342c43",
+        "event_date": "2026-11-07",
+        "category": "国际金融",
+        "ai_title": "READOUT: Secretary of the 美国财政部 Scot...",
+        "one_sentence_summary": "READOUT: Secretary of the 美国财政部 Scot...",
+        "detailed_summary": "READOUT: Secretary of the 美国财政部 Scot...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "READOUT: Secretary of the 美国财政部 Scot...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：READOUT: Secretary of the Treasury Scott Bessent’s Call with China’s Vice Premier He Lifeng",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 66.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 50.88,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "READOUT: Secretary of the Treasury Scott Bessent’s Call with China’s Vice Premier He Lifeng",
+            "url": "https://home.treasury.gov/news/press-releases/sb0684/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "5be010a6-7d14-5f51-b5f0-67be190583d7",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "国际金融｜September 29, 2026IMF Executive...",
         "one_sentence_summary": "国际金融｜September 29, 2026IMF Executive...",
@@ -2235,8 +2327,106 @@
         ]
       },
       {
-        "id": "98cdd393-a798-5e2b-8c19-8c4dbd71bc5c",
-        "event_date": "2026-11-06",
+        "id": "c8ae6430-df67-5f8c-a316-37a35ba0d02a",
+        "event_date": "2026-11-07",
+        "category": "国际金融",
+        "ai_title": "国际金融｜FATF Recognizes Effectiveness o...",
+        "one_sentence_summary": "国际金融｜FATF Recognizes Effectiveness o...",
+        "detailed_summary": "国际金融｜FATF Recognizes Effectiveness o...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜FATF Recognizes Effectiveness o...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：FATF Recognizes Effectiveness of U.S. AML/CFT System, Advances Key Illicit Finance Initiatives",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 46.46,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "FATF Recognizes Effectiveness of U.S. AML/CFT System, Advances Key Illicit Finance Initiatives",
+            "url": "https://home.treasury.gov/news/press-releases/sb0687/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "99ddc428-a1b2-58c7-9dad-202466360ec4",
+        "event_date": "2026-11-07",
+        "category": "国际金融",
+        "ai_title": "Operation 经济 Outcast Severs MEXC Glo...",
+        "one_sentence_summary": "Operation 经济 Outcast Severs MEXC Glo...",
+        "detailed_summary": "Operation 经济 Outcast Severs MEXC Glo...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "Operation 经济 Outcast Severs MEXC Glo...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Operation Economic Outcast Severs MEXC Global’s Access to the U.S. Financial System",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 46.46,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Operation Economic Outcast Severs MEXC Global’s Access to the U.S. Financial System",
+            "url": "https://home.treasury.gov/news/press-releases/sb0685/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "4c9ae353-61e3-5afa-8be0-0a750c965892",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "美国财政部 Targets Global Scam Networks a...",
         "one_sentence_summary": "美国财政部 Targets Global Scam Networks a...",
@@ -2284,204 +2474,8 @@
         ]
       },
       {
-        "id": "facbb607-9197-525a-8a4f-07b40de05263",
-        "event_date": "2026-11-06",
-        "category": "国际金融",
-        "ai_title": "美国财政部, IRS Announce Opportunity Zone...",
-        "one_sentence_summary": "美国财政部, IRS Announce Opportunity Zone...",
-        "detailed_summary": "美国财政部, IRS Announce Opportunity Zone...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
-        "key_points": [
-          "美国财政部, IRS Announce Opportunity Zone...",
-          "原文为英文，发布前需复核具体日期、金额和政策表述。"
-        ],
-        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "",
-          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
-        },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Treasury, IRS Announce Opportunity Zones Designations for Over 6,500 Communities Across America",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 59.5,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "融资并购",
-          "政策监管",
-          "国际金融"
-        ],
-        "signal_strength": 46.46,
-        "reading_links": [
-          {
-            "source_id": "us_treasury_press",
-            "source_name": "U.S. Treasury Press Releases",
-            "source_type": "finance",
-            "source_role": "primary",
-            "original_title": "Treasury, IRS Announce Opportunity Zones Designations for Over 6,500 Communities Across America",
-            "url": "https://home.treasury.gov/news/press-releases/sb0682/",
-            "published_at": null,
-            "link_label": "U.S. Treasury Press Releases",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "finance"
-        ]
-      },
-      {
-        "id": "c9214fac-a502-5b52-adf5-6868212a6f95",
-        "event_date": "2026-11-06",
-        "category": "国际金融",
-        "ai_title": "Operation 经济 Outcast Targets Global...",
-        "one_sentence_summary": "Operation 经济 Outcast Targets Global...",
-        "detailed_summary": "Operation 经济 Outcast Targets Global...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
-        "key_points": [
-          "Operation 经济 Outcast Targets Global...",
-          "原文为英文，发布前需复核具体日期、金额和政策表述。"
-        ],
-        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "",
-          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
-        },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Operation Economic Outcast Targets Global Maritime Fraud Network Supporting Iranian Regime",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 59.5,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "融资并购",
-          "政策监管",
-          "国际金融"
-        ],
-        "signal_strength": 46.46,
-        "reading_links": [
-          {
-            "source_id": "us_treasury_press",
-            "source_name": "U.S. Treasury Press Releases",
-            "source_type": "finance",
-            "source_role": "primary",
-            "original_title": "Operation Economic Outcast Targets Global Maritime Fraud Network Supporting Iranian Regime",
-            "url": "https://home.treasury.gov/news/press-releases/sb0681/",
-            "published_at": null,
-            "link_label": "U.S. Treasury Press Releases",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "finance"
-        ]
-      },
-      {
-        "id": "a926b97a-4ad1-5a72-86f1-7bacc608810f",
-        "event_date": "2026-11-06",
-        "category": "国际金融",
-        "ai_title": "Quarterly Refunding Statement of Ass...",
-        "one_sentence_summary": "Quarterly Refunding Statement of Ass...",
-        "detailed_summary": "Quarterly Refunding Statement of Ass...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
-        "key_points": [
-          "Quarterly Refunding Statement of Ass...",
-          "原文为英文，发布前需复核具体日期、金额和政策表述。"
-        ],
-        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "",
-          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
-        },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Quarterly Refunding Statement of Assistant Secretary for Financial Markets Hunter McMaster",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 59.5,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "融资并购",
-          "政策监管",
-          "国际金融"
-        ],
-        "signal_strength": 46.46,
-        "reading_links": [
-          {
-            "source_id": "us_treasury_press",
-            "source_name": "U.S. Treasury Press Releases",
-            "source_type": "finance",
-            "source_role": "primary",
-            "original_title": "Quarterly Refunding Statement of Assistant Secretary for Financial Markets Hunter McMaster",
-            "url": "https://home.treasury.gov/news/press-releases/sb0678/",
-            "published_at": null,
-            "link_label": "U.S. Treasury Press Releases",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "finance"
-        ]
-      },
-      {
-        "id": "4918d88c-3993-5a11-b91b-323d51587544",
-        "event_date": "2026-11-06",
-        "category": "国际金融",
-        "ai_title": "Report to the Secretary of the 美国财政部...",
-        "one_sentence_summary": "Report to the Secretary of the 美国财政部...",
-        "detailed_summary": "Report to the Secretary of the 美国财政部...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
-        "key_points": [
-          "Report to the Secretary of the 美国财政部...",
-          "原文为英文，发布前需复核具体日期、金额和政策表述。"
-        ],
-        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "",
-          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
-        },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 59.5,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "融资并购",
-          "政策监管",
-          "国际金融"
-        ],
-        "signal_strength": 46.46,
-        "reading_links": [
-          {
-            "source_id": "us_treasury_press",
-            "source_name": "U.S. Treasury Press Releases",
-            "source_type": "finance",
-            "source_role": "primary",
-            "original_title": "Report to the Secretary of the Treasury from the Treasury Borrowing Advisory Committee",
-            "url": "https://home.treasury.gov/news/press-releases/sb0679/",
-            "published_at": null,
-            "link_label": "U.S. Treasury Press Releases",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "finance"
-        ]
-      },
-      {
-        "id": "000e6ca4-fde8-5ed9-a15a-79cc8cb1065d",
-        "event_date": "2026-11-06",
+        "id": "627ecbad-897f-5b7c-b592-ec3bf4ff4b85",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "国际金融｜GDP (Advance Estimate), 3rd Qua...",
         "one_sentence_summary": "国际金融｜GDP (Advance Estimate), 3rd Qua...",
@@ -2529,8 +2523,8 @@
         ]
       },
       {
-        "id": "49addbf2-d021-57db-9e3d-0db6f2b8be5f",
-        "event_date": "2026-11-06",
+        "id": "512b8d91-c020-5bdd-bf37-25fc7982d4b9",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "欧洲央行启动保密统计数据研究访问试点",
         "one_sentence_summary": "欧洲央行启动保密统计数据研究访问试点",
@@ -2579,8 +2573,8 @@
         ]
       },
       {
-        "id": "266d0d5c-deb7-53bc-a098-724e76708f07",
-        "event_date": "2026-11-06",
+        "id": "9af522f4-1d36-57fe-90af-632f5c6d3d0f",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "美国4月国际货物和服务贸易数据发布",
         "one_sentence_summary": "美国4月国际货物和服务贸易数据发布",
@@ -2628,8 +2622,8 @@
         ]
       },
       {
-        "id": "3ddc278d-9105-58cb-8842-c8ee924c13a4",
-        "event_date": "2026-11-06",
+        "id": "9843443a-02c4-5ff3-aa27-8e2f8ab93ec5",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "美国4月个人收入和支出数据发布",
         "one_sentence_summary": "美国4月个人收入和支出数据发布",
@@ -2678,8 +2672,8 @@
         ]
       },
       {
-        "id": "d82be5db-4c52-571e-ace8-ba13becf797f",
-        "event_date": "2026-11-06",
+        "id": "1ea9bb73-42a7-544d-b98f-b895930b3761",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "国际金融｜U.S. International Transactions...",
         "one_sentence_summary": "国际金融｜U.S. International Transactions...",
@@ -2727,8 +2721,8 @@
         ]
       },
       {
-        "id": "991ef57c-87f2-5a08-a15a-5669614f58f3",
-        "event_date": "2026-11-06",
+        "id": "079697a1-26a0-58c9-bd0a-1e3918039172",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "国际金融｜Direct Investment by Country an...",
         "one_sentence_summary": "国际金融｜Direct Investment by Country an...",
@@ -2776,8 +2770,8 @@
         ]
       },
       {
-        "id": "8997c4d6-aeeb-5352-a65a-44fba3f172eb",
-        "event_date": "2026-11-06",
+        "id": "18d7f80a-c586-54a4-94c3-d2f4d578cc8f",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "国际金融｜October 7, 2026Coming Soon: 202...",
         "one_sentence_summary": "国际金融｜October 7, 2026Coming Soon: 202...",
@@ -2825,8 +2819,8 @@
         ]
       },
       {
-        "id": "d9caa217-61b8-54d3-a486-08eb5de042a4",
-        "event_date": "2026-11-06",
+        "id": "b659946c-8e2c-5cf6-86c0-448cec9641d5",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "国际金融｜October 1, 2026Managing Directo...",
         "one_sentence_summary": "国际金融｜October 1, 2026Managing Directo...",
@@ -2874,8 +2868,8 @@
         ]
       },
       {
-        "id": "6c28f601-07f5-5346-86b4-e59f7148f605",
-        "event_date": "2026-11-06",
+        "id": "cb6d949d-167d-5617-a76d-9c0a8e5f803b",
+        "event_date": "2026-11-07",
         "category": "国际金融",
         "ai_title": "国际金融｜September 29, 2026IMF Staff Con...",
         "one_sentence_summary": "国际金融｜September 29, 2026IMF Staff Con...",
@@ -2926,105 +2920,8 @@
   },
   "top10": [
     {
-      "id": "7d321b04-2554-5c8d-a2d0-efd47e2088e7",
-      "event_date": "2026-11-06",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜Merge builds product and busin...",
-      "one_sentence_summary": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to pla...",
-      "detailed_summary": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to plan executive dinners and prepare sales updates.",
-      "key_points": [
-        "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing.",
-        "Its teams also use AI to plan executive dinners and prepare sales updates."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：Merge builds product and business tools with OpenAI technology",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 93.0,
-      "confidence": 0.55,
-      "tags": [
-        "官方消息",
-        "编程工具",
-        "产品更新"
-      ],
-      "signal_strength": 72.74,
-      "reading_links": [
-        {
-          "source_id": "openai_news",
-          "source_name": "OpenAI News",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Merge builds product and business tools with OpenAI technology",
-          "url": "https://openai.com/index/merge-builds-with-openai",
-          "published_at": "Thu, 05 Nov 2026 08:00:00 GMT",
-          "link_label": "OpenAI News",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "official"
-      ]
-    },
-    {
-      "id": "9ad3d005-8769-54de-a995-fb6a321d912c",
-      "event_date": "2026-11-06",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜BlockLock: Reproducible LLM In...",
-      "one_sentence_summary": "arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same...",
-      "detailed_summary": "[2611.06977] BlockLock: Reproducible LLM Inference with Fixed Batch Geometry Skip to main content Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search Computer Science > Artificial Intelligence arXiv:2611.06977 (cs) [Submitted on 4 Nov 2026] Title: BlockLock: Reproducible LLM Inference with Fixed Batch Geometry Authors: Xiuyuan Qi , Pedro Reviriego , Javier Conde , Shanshan Liu View a PDF of the paper titled BlockLock: Reproducible LLM Inference with Fixed Batch Ge...",
-      "key_points": [
-        "[2611.06977] BlockLock: Reproducible LLM Inference with Fixed Batch Geometry Skip to main content Search Submit Donat...",
-        "Existing solutions pay for this in different ways: batch-invariant kernels constrain every operator, and isolating pr...",
-        "We present BlockLock, which keeps shared batched prefill and pins only the numerical path of the protected request: i...",
-        "Under a stated per-deployment contract, both modes preserve the target's output bitwise when its companions change.}...",
-        "Both modes preserve target sequences and Top20-logit bits in the reported tests.} At equal delivered work, {BlockLock..."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 91.0,
-      "confidence": 0.55,
-      "tags": [
-        "论文研究"
-      ],
-      "signal_strength": 63.38,
-      "reading_links": [
-        {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
-          "source_type": "research",
-          "source_role": "primary",
-          "original_title": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
-          "url": "https://arxiv.org/abs/2611.06977",
-          "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "research"
-      ]
-    },
-    {
-      "id": "07915106-64a5-5928-8f6f-87a1f8f72069",
-      "event_date": "2026-11-06",
+      "id": "f5e63714-2917-5734-905a-e665d9ef85a5",
+      "event_date": "2026-11-07",
       "category": "大模型动态",
       "ai_title": "大模型动态｜Introducing Claude Opus 5.5 Cl...",
       "one_sentence_summary": "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Intr...",
@@ -3077,8 +2974,8 @@
       ]
     },
     {
-      "id": "d047fbfd-2aa3-5d33-8ca0-c5de4ddc86fd",
-      "event_date": "2026-11-06",
+      "id": "40b33f3c-26a8-5ccd-96ca-1b581e3215da",
+      "event_date": "2026-11-07",
       "category": "大模型动态",
       "ai_title": "大模型动态｜Australian universities are cr...",
       "one_sentence_summary": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare student...",
@@ -3096,12 +2993,12 @@
       "topic_angle": "从能力、成本和生态角度解读：Australian universities are creating AI-native graduates",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 87.0,
+      "priority_score": 84.0,
       "confidence": 0.55,
       "tags": [
         "官方消息"
       ],
-      "signal_strength": 65.66,
+      "signal_strength": 63.62,
       "reading_links": [
         {
           "source_id": "openai_news",
@@ -3122,8 +3019,8 @@
       ]
     },
     {
-      "id": "7e17cdd4-c2c1-52d3-879a-632669a7c0e5",
-      "event_date": "2026-11-06",
+      "id": "45eb9168-85c8-53a3-9b03-b7fce307c274",
+      "event_date": "2026-11-07",
       "category": "大模型动态",
       "ai_title": "大模型动态｜GPT‑6 Cyber: Advancing the fro...",
       "one_sentence_summary": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, t...",
@@ -3141,13 +3038,13 @@
       "topic_angle": "从能力、成本和生态角度解读：GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 87.0,
+      "priority_score": 84.0,
       "confidence": 0.55,
       "tags": [
         "官方消息",
         "智能体"
       ],
-      "signal_strength": 67.16,
+      "signal_strength": 65.12,
       "reading_links": [
         {
           "source_id": "openai_news",
@@ -3168,163 +3065,18 @@
       ]
     },
     {
-      "id": "5aca109d-4729-5525-bd23-5546580e0049",
-      "event_date": "2026-11-06",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜An update on recent Claude Cod...",
-      "one_sentence_summary": "An update on recent Claude Code quality reports",
-      "detailed_summary": "An update on recent Claude Code quality reports",
-      "key_points": [
-        "An update on recent Claude Code quality reports"
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：An update on recent Claude Code quality reports",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 86.0,
-      "confidence": 0.55,
-      "tags": [
-        "官方消息",
-        "编程工具"
-      ],
-      "signal_strength": 66.48,
-      "reading_links": [
-        {
-          "source_id": "anthropic_engineering",
-          "source_name": "Anthropic Engineering",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "An update on recent Claude Code quality reports",
-          "url": "https://www.anthropic.com/research/april-23-postmortem",
-          "published_at": null,
-          "link_label": "Anthropic Engineering",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "official"
-      ]
-    },
-    {
-      "id": "59a06542-92e3-593a-9ffc-ef504cd7dd61",
-      "event_date": "2026-11-06",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜DS@GT ARC at CheckThat! 2026:...",
-      "one_sentence_summary": "arXiv:2611.05382v1 Announce Type: new Abstract: Misinformation spreads faster than professional fact-checkers can man...",
-      "detailed_summary": "arXiv:2611.05382v1 Announce Type: new Abstract: Misinformation spreads faster than professional fact-checkers can manually verify it and write articles explaining their verdicts. This creates a need to automate the production of fact-checking articles. This paper details work done by the DS@GT ARC team for CLEF 2026 CheckThat! Lab Task 3 Fact-Checking Article Generation.",
-      "key_points": [
-        "arXiv:2611.05382v1 Announce Type: new Abstract: Misinformation spreads faster than professional fact-checkers can man...",
-        "This creates a need to automate the production of fact-checking articles.",
-        "This paper details work done by the DS@GT ARC team for CLEF 2026 CheckThat!",
-        "Lab Task 3 Fact-Checking Article Generation.",
-        "We seek to generate a full fact-checking article from a claim, its original verdict, and a set of scraped source docu..."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：DS@GT ARC at CheckThat! 2026: A Verdict-Anchored Pipeline for Generating Fact-Checking Articles",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 85.0,
-      "confidence": 0.55,
-      "tags": [
-        "产品更新",
-        "国际金融",
-        "论文研究"
-      ],
-      "signal_strength": 62.3,
-      "reading_links": [
-        {
-          "source_id": "arxiv_cs_cl",
-          "source_name": "arXiv cs.CL",
-          "source_type": "research",
-          "source_role": "primary",
-          "original_title": "DS@GT ARC at CheckThat! 2026: A Verdict-Anchored Pipeline for Generating Fact-Checking Articles",
-          "url": "https://arxiv.org/abs/2611.05382",
-          "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.CL",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "research"
-      ]
-    },
-    {
-      "id": "1a711b51-3d99-5069-b69c-5a503d8ab735",
-      "event_date": "2026-11-06",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜Octopus: One BrAIn, Many Branc...",
-      "one_sentence_summary": "arXiv:2611.06956v1 Announce Type: new Abstract: Multi-agent LLM systems explore in parallel by spawning sub-agents wi...",
-      "detailed_summary": "arXiv:2611.06956v1 Announce Type: new Abstract: Multi-agent LLM systems explore in parallel by spawning sub-agents with isolated context windows, whereas single-agent systems append every search and verification step into one growing trajectory. However, existing multi-agent frameworks duplicate prefix KV caches across branches, exchange findings by re-prefilling text summaries, and flatten or drop cross-branch dependencies during reinforcement learning (RL). We introduce Octopus, a single-mo...",
-      "key_points": [
-        "arXiv:2611.06956v1 Announce Type: new Abstract: Multi-agent LLM systems explore in parallel by spawning sub-agents wi...",
-        "However, existing multi-agent frameworks duplicate prefix KV caches across branches, exchange findings by re-prefilli...",
-        "We introduce Octopus, a single-model multi-agent RL framework in which all threads share one backbone and coordinate...",
-        "Octopus combines three co-designed mechanisms: (1) Zero-Copy Radix Forking, which spawns branches as $\\mathcal{O}(1)$...",
-        "Trained end-to-end with GRPO on Qwen3.5-4B over a sparse BM25 corpus, Octopus reaches $49.6\\%$ accuracy on BrowseComp..."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 83.0,
-      "confidence": 0.55,
-      "tags": [
-        "模型发布",
-        "智能体",
-        "产品更新",
-        "论文研究"
-      ],
-      "signal_strength": 62.44,
-      "reading_links": [
-        {
-          "source_id": "arxiv_cs_lg",
-          "source_name": "arXiv cs.LG",
-          "source_type": "research",
-          "source_role": "primary",
-          "original_title": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
-          "url": "https://arxiv.org/abs/2611.06956",
-          "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.LG",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "research"
-      ]
-    },
-    {
-      "id": "83f721b3-cc85-51f6-8157-f7f8e38ef008",
-      "event_date": "2026-11-06",
+      "id": "2e8d7255-aa0a-52e8-81b9-df8843ccf680",
+      "event_date": "2026-11-07",
       "category": "大模型动态",
       "ai_title": "大模型动态｜How we contAIn Claude across p...",
-      "one_sentence_summary": "How we contain Claude across products",
-      "detailed_summary": "How we contain Claude across products",
+      "one_sentence_summary": "How we contain Claude across products \\ Anthropic Skip to main content News Research Policy Commitments Company Try C...",
+      "detailed_summary": "How we contain Claude across products \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude 01 Three types of risk, three components of defense How we contain Claude across products 01 Three types of risk, three components of defense 02 Patterns for containing agents 03 Trusting what the agent reads 04 Looking ahead 05 Summary Published May 25, 2026 Team Engineering Topics Safeguards Agents Claude Code Cybersecurity Jailbreaks Reward hacking See more... Related...",
       "key_points": [
-        "How we contain Claude across products"
+        "How we contain Claude across products \\ Anthropic Skip to main content News Research Policy Commitments Company Try C...",
+        "Related articles Frontier Red Team Apr 9, 2026 Trustworthy agents in practice View more Twelve months ago, we'd have...",
+        "Today that level of access is routine, and Anthropic developers are more productive for it.",
+        "The risk of these deployments has two components: how likely a failure is, and how much damage one could do.",
+        "Progress on safeguards and model training has steadily driven down the first; the second—the theoretical blast radius..."
       ],
       "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
@@ -3340,9 +3092,13 @@
       "confidence": 0.55,
       "tags": [
         "官方消息",
-        "产品更新"
+        "智能体",
+        "编程工具",
+        "产品更新",
+        "政策监管",
+        "论文研究"
       ],
-      "signal_strength": 63.76,
+      "signal_strength": 66.76,
       "reading_links": [
         {
           "source_id": "anthropic_engineering",
@@ -3363,8 +3119,189 @@
       ]
     },
     {
-      "id": "bf225853-0c68-52e7-b057-fe8c3d0193fa",
-      "event_date": "2026-11-06",
+      "id": "d49ea355-32f9-5738-a761-2356e7c70aa3",
+      "event_date": "2026-11-07",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Gemini Build intelligent agents",
+      "one_sentence_summary": "Gemini Build intelligent agents",
+      "detailed_summary": "Gemini Build intelligent agents",
+      "key_points": [
+        "Gemini Build intelligent agents"
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 82.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "智能体"
+      ],
+      "signal_strength": 63.76,
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Build intelligent agents",
+          "url": "https://deepmind.google/models/gemini/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "f6e2d3b3-e777-553f-b85c-432f3a371e68",
+      "event_date": "2026-11-07",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Gemini Omni Create anything fr...",
+      "one_sentence_summary": "Gemini Omni Create anything from anything",
+      "detailed_summary": "Gemini Omni Create anything from anything",
+      "key_points": [
+        "Gemini Omni Create anything from anything"
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Gemini Omni Create anything from anything",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 82.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息"
+      ],
+      "signal_strength": 62.26,
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Omni Create anything from anything",
+          "url": "https://deepmind.google/models/gemini-omni/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "9a5cc7ca-02dc-52a9-a58a-90b900c50b73",
+      "event_date": "2026-11-07",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Gemini Audio Talk, create and...",
+      "one_sentence_summary": "Gemini Audio Talk, create and control audio",
+      "detailed_summary": "Gemini Audio Talk, create and control audio",
+      "key_points": [
+        "Gemini Audio Talk, create and control audio"
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Gemini Audio Talk, create and control audio",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 82.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息"
+      ],
+      "signal_strength": 62.26,
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Audio Talk, create and control audio",
+          "url": "https://deepmind.google/models/gemini-audio/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "b260e0a8-9598-584a-854a-c2cc1d331343",
+      "event_date": "2026-11-07",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Gemini models",
+      "one_sentence_summary": "Gemini models",
+      "detailed_summary": "Gemini models",
+      "key_points": [
+        "Gemini models"
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Gemini models",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 78.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息"
+      ],
+      "signal_strength": 59.54,
+      "reading_links": [
+        {
+          "source_id": "google_ai_blog",
+          "source_name": "Google AI Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini models",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
+          "published_at": null,
+          "link_label": "Google AI Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "1d987f32-c65d-5349-af9e-a2dcce7696a5",
+      "event_date": "2026-11-07",
       "category": "AI行业资讯",
       "ai_title": "AI行业资讯｜Vera Delivers the Best of Bot...",
       "one_sentence_summary": "AI agents do more than generate answers. They search for information, query databases, write and test code and take a...",
@@ -3386,7 +3323,7 @@
       "topic_angle": "从商业化和产业竞争角度解读：Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 79.0,
+      "priority_score": 74.0,
       "confidence": 0.55,
       "tags": [
         "官方消息",
@@ -3395,7 +3332,7 @@
         "算力芯片",
         "国际金融"
       ],
-      "signal_strength": 64.72,
+      "signal_strength": 61.32,
       "reading_links": [
         {
           "source_id": "nvidia_blog",
@@ -3414,90 +3351,68 @@
       "source_types": [
         "official"
       ]
+    },
+    {
+      "id": "be7decb1-145a-5808-b773-a703b8f29e5d",
+      "event_date": "2026-11-07",
+      "category": "AI行业资讯",
+      "ai_title": "AI行业资讯｜More Performance From Every B...",
+      "one_sentence_summary": "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and...",
+      "detailed_summary": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge | NVIDIA Blog Skip to content More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge November 5, 2026 by Amr Elmeleegy 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and prices rise — a trend expected to continue through the near ter...",
+      "key_points": [
+        "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge | NVIDIA Blog Skip to content...",
+        "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and...",
+        "NVIDIA works closely with memory partners to rapidly adopt the latest memory technologies.",
+        "NVIDIA was first to adopt HBM3e and HBM4 technologies into an accelerated computing stack.",
+        "But the approach isn’t to simply pack more memory onto the GPU."
+      ],
+      "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从商业化和产业竞争角度解读：More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 74.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "智能体",
+        "编程工具",
+        "产品更新",
+        "算力芯片",
+        "国际金融"
+      ],
+      "signal_strength": 61.32,
+      "reading_links": [
+        {
+          "source_id": "nvidia_blog",
+          "source_name": "NVIDIA Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+          "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
+          "published_at": "Thu, 05 Nov 2026 16:00:00 +0000",
+          "link_label": "NVIDIA Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
     }
   ],
   "topic_pool": [
     {
       "rank": 1,
-      "title": "从能力、成本和生态角度解读：Merge builds product and business tools with OpenAI technology",
-      "source_event_ids": [
-        "7d321b04-2554-5c8d-a2d0-efd47e2088e7"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "Merge uses GPT-6 Astra, ChatGPT, and Codex to review product code and support marketing. Its teams also use AI to pla...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "官方消息",
-        "编程工具",
-        "产品更新"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "OpenAI News"
-      ],
-      "source_types": [
-        "official"
-      ],
-      "signal_strength": 72.74,
-      "recommendation_reason": "含官方来源；标签：官方消息、编程工具、产品更新",
-      "reading_links": [
-        {
-          "source_id": "openai_news",
-          "source_name": "OpenAI News",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Merge builds product and business tools with OpenAI technology",
-          "url": "https://openai.com/index/merge-builds-with-openai",
-          "published_at": "Thu, 05 Nov 2026 08:00:00 GMT",
-          "link_label": "OpenAI News",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 2,
-      "title": "从能力、成本和生态角度解读：BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
-      "source_event_ids": [
-        "9ad3d005-8769-54de-a995-fb6a321d912c"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.06977v1 Announce Type: new Abstract: Reproducible LLM inference requires that a request produces the same...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "论文研究"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "arXiv cs.AI"
-      ],
-      "source_types": [
-        "research"
-      ],
-      "signal_strength": 63.38,
-      "recommendation_reason": "标签：论文研究",
-      "reading_links": [
-        {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
-          "source_type": "research",
-          "source_role": "primary",
-          "original_title": "BlockLock: Reproducible LLM Inference with Fixed Batch Geometry",
-          "url": "https://arxiv.org/abs/2611.06977",
-          "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 3,
       "title": "从能力、成本和生态角度解读：Introducing Claude Opus 5.5 Claude Opus 5.5 leads in agentic coding and knowledge work, and costs 40% less to run than Opus 5 on typical workloads.",
       "source_event_ids": [
-        "07915106-64a5-5928-8f6f-87a1f8f72069"
+        "f5e63714-2917-5734-905a-e665d9ef85a5"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "why_today": "Introducing Claude Opus 5.5 \\ Anthropic Skip to main content News Research Policy Commitments Company Try Claude Intr...",
@@ -3536,10 +3451,10 @@
       ]
     },
     {
-      "rank": 4,
+      "rank": 2,
       "title": "从能力、成本和生态角度解读：Australian universities are creating AI-native graduates",
       "source_event_ids": [
-        "d047fbfd-2aa3-5d33-8ca0-c5de4ddc86fd"
+        "40b33f3c-26a8-5ccd-96ca-1b581e3215da"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "why_today": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare student...",
@@ -3555,7 +3470,7 @@
       "source_types": [
         "official"
       ],
-      "signal_strength": 65.66,
+      "signal_strength": 63.62,
       "recommendation_reason": "含官方来源；标签：官方消息",
       "reading_links": [
         {
@@ -3573,10 +3488,10 @@
       ]
     },
     {
-      "rank": 5,
+      "rank": 3,
       "title": "从能力、成本和生态角度解读：GPT‑6 Cyber: Advancing the frontier of aligned cybersecurity agents",
       "source_event_ids": [
-        "7e17cdd4-c2c1-52d3-879a-632669a7c0e5"
+        "45eb9168-85c8-53a3-9b03-b7fce307c274"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "why_today": "Introducing GPT‑6 Cyber, OpenAI’s cybersecurity model for finding exploitable vulnerabilities and developing fixes, t...",
@@ -3593,7 +3508,7 @@
       "source_types": [
         "official"
       ],
-      "signal_strength": 67.16,
+      "signal_strength": 65.12,
       "recommendation_reason": "含官方来源；标签：官方消息、智能体",
       "reading_links": [
         {
@@ -3611,135 +3526,22 @@
       ]
     },
     {
-      "rank": 6,
-      "title": "从能力、成本和生态角度解读：An update on recent Claude Code quality reports",
-      "source_event_ids": [
-        "5aca109d-4729-5525-bd23-5546580e0049"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "An update on recent Claude Code quality reports",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "官方消息",
-        "编程工具"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "Anthropic Engineering"
-      ],
-      "source_types": [
-        "official"
-      ],
-      "signal_strength": 66.48,
-      "recommendation_reason": "含官方来源；标签：官方消息、编程工具",
-      "reading_links": [
-        {
-          "source_id": "anthropic_engineering",
-          "source_name": "Anthropic Engineering",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "An update on recent Claude Code quality reports",
-          "url": "https://www.anthropic.com/research/april-23-postmortem",
-          "published_at": null,
-          "link_label": "Anthropic Engineering",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 7,
-      "title": "从能力、成本和生态角度解读：DS@GT ARC at CheckThat! 2026: A Verdict-Anchored Pipeline for Generating Fact-Checking Articles",
-      "source_event_ids": [
-        "59a06542-92e3-593a-9ffc-ef504cd7dd61"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.05382v1 Announce Type: new Abstract: Misinformation spreads faster than professional fact-checkers can man...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "产品更新",
-        "国际金融",
-        "论文研究"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "arXiv cs.CL"
-      ],
-      "source_types": [
-        "research"
-      ],
-      "signal_strength": 62.3,
-      "recommendation_reason": "标签：产品更新、国际金融、论文研究",
-      "reading_links": [
-        {
-          "source_id": "arxiv_cs_cl",
-          "source_name": "arXiv cs.CL",
-          "source_type": "research",
-          "source_role": "primary",
-          "original_title": "DS@GT ARC at CheckThat! 2026: A Verdict-Anchored Pipeline for Generating Fact-Checking Articles",
-          "url": "https://arxiv.org/abs/2611.05382",
-          "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.CL",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 8,
-      "title": "从能力、成本和生态角度解读：Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
-      "source_event_ids": [
-        "1a711b51-3d99-5069-b69c-5a503d8ab735"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.06956v1 Announce Type: new Abstract: Multi-agent LLM systems explore in parallel by spawning sub-agents wi...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "模型发布",
-        "智能体",
-        "产品更新",
-        "论文研究"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "arXiv cs.LG"
-      ],
-      "source_types": [
-        "research"
-      ],
-      "signal_strength": 62.44,
-      "recommendation_reason": "标签：模型发布、智能体、产品更新",
-      "reading_links": [
-        {
-          "source_id": "arxiv_cs_lg",
-          "source_name": "arXiv cs.LG",
-          "source_type": "research",
-          "source_role": "primary",
-          "original_title": "Octopus: One Brain, Many Branches for Latent-KV Multi-Agent Reinforcement Learning",
-          "url": "https://arxiv.org/abs/2611.06956",
-          "published_at": "Fri, 06 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.LG",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 9,
+      "rank": 4,
       "title": "从能力、成本和生态角度解读：How we contain Claude across products",
       "source_event_ids": [
-        "83f721b3-cc85-51f6-8157-f7f8e38ef008"
+        "2e8d7255-aa0a-52e8-81b9-df8843ccf680"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "How we contain Claude across products",
+      "why_today": "How we contain Claude across products \\ Anthropic Skip to main content News Research Policy Commitments Company Try C...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
         "官方消息",
-        "产品更新"
+        "智能体",
+        "编程工具",
+        "产品更新",
+        "政策监管",
+        "论文研究"
       ],
       "source_count": 1,
       "source_names": [
@@ -3748,8 +3550,8 @@
       "source_types": [
         "official"
       ],
-      "signal_strength": 63.76,
-      "recommendation_reason": "含官方来源；标签：官方消息、产品更新",
+      "signal_strength": 66.76,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体、编程工具",
       "reading_links": [
         {
           "source_id": "anthropic_engineering",
@@ -3766,10 +3568,159 @@
       ]
     },
     {
-      "rank": 10,
+      "rank": 5,
+      "title": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
+      "source_event_ids": [
+        "d49ea355-32f9-5738-a761-2356e7c70aa3"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "Gemini Build intelligent agents",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "智能体"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "Google DeepMind Blog"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 63.76,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体",
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Build intelligent agents",
+          "url": "https://deepmind.google/models/gemini/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "从能力、成本和生态角度解读：Gemini Omni Create anything from anything",
+      "source_event_ids": [
+        "f6e2d3b3-e777-553f-b85c-432f3a371e68"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "Gemini Omni Create anything from anything",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "Google DeepMind Blog"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 62.26,
+      "recommendation_reason": "含官方来源；标签：官方消息",
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Omni Create anything from anything",
+          "url": "https://deepmind.google/models/gemini-omni/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "从能力、成本和生态角度解读：Gemini Audio Talk, create and control audio",
+      "source_event_ids": [
+        "9a5cc7ca-02dc-52a9-a58a-90b900c50b73"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "Gemini Audio Talk, create and control audio",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "Google DeepMind Blog"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 62.26,
+      "recommendation_reason": "含官方来源；标签：官方消息",
+      "reading_links": [
+        {
+          "source_id": "google_deepmind_blog",
+          "source_name": "Google DeepMind Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini Audio Talk, create and control audio",
+          "url": "https://deepmind.google/models/gemini-audio/",
+          "published_at": null,
+          "link_label": "Google DeepMind Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "从能力、成本和生态角度解读：Gemini models",
+      "source_event_ids": [
+        "b260e0a8-9598-584a-854a-c2cc1d331343"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "Gemini models",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "Google AI Blog"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 59.54,
+      "recommendation_reason": "含官方来源；标签：官方消息",
+      "reading_links": [
+        {
+          "source_id": "google_ai_blog",
+          "source_name": "Google AI Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Gemini models",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/",
+          "published_at": null,
+          "link_label": "Google AI Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 9,
       "title": "从商业化和产业竞争角度解读：Vera Delivers the Best of Both Worlds: Highest Throughput and Fastest Agents",
       "source_event_ids": [
-        "bf225853-0c68-52e7-b057-fe8c3d0193fa"
+        "1d987f32-c65d-5349-af9e-a2dcce7696a5"
       ],
       "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
       "why_today": "AI agents do more than generate answers. They search for information, query databases, write and test code and take a...",
@@ -3789,7 +3740,7 @@
       "source_types": [
         "official"
       ],
-      "signal_strength": 64.72,
+      "signal_strength": 61.32,
       "recommendation_reason": "含官方来源；标签：官方消息、智能体、编程工具",
       "reading_links": [
         {
@@ -3805,9 +3756,60 @@
           "display_order": 1
         }
       ]
+    },
+    {
+      "rank": 10,
+      "title": "从商业化和产业竞争角度解读：More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+      "source_event_ids": [
+        "be7decb1-145a-5808-b773-a703b8f29e5d"
+      ],
+      "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+      "why_today": "Larger models, longer contexts and agentic applications are increasing GPU memory pressure while supply tightens and...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "智能体",
+        "编程工具",
+        "产品更新",
+        "算力芯片",
+        "国际金融"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "NVIDIA Blog"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 61.32,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体、编程工具",
+      "reading_links": [
+        {
+          "source_id": "nvidia_blog",
+          "source_name": "NVIDIA Blog",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "More Performance From Every Byte: How Full-Stack Codesign Solves AI’s Memory Challenge",
+          "url": "https://blogs.nvidia.com/blog/memory-full-stack-codesign/",
+          "published_at": "Thu, 05 Nov 2026 16:00:00 +0000",
+          "link_label": "NVIDIA Blog",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
     }
   ],
   "archive_entries": [
+    {
+      "date": "2026-11-07",
+      "generated_at": "2026-11-07T05:59:35.267089+00:00",
+      "selected_event_count": 60,
+      "event_count": 128,
+      "top10_count": 10,
+      "url": "archive/2026-11-07/",
+      "json_url": "archive/2026-11-07/daily-digest.json"
+    },
     {
       "date": "2026-11-06",
       "generated_at": "2026-11-06T06:47:59.713899+00:00",
