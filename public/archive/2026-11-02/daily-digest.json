@@ -3840,6 +3840,15 @@
   ],
   "archive_entries": [
     {
+      "date": "2026-11-11",
+      "generated_at": "2026-11-11T06:22:23.505218+00:00",
+      "selected_event_count": 60,
+      "event_count": 142,
+      "top10_count": 10,
+      "url": "archive/2026-11-11/",
+      "json_url": "archive/2026-11-11/daily-digest.json"
+    },
+    {
       "date": "2026-11-10",
       "generated_at": "2026-11-10T07:19:32.528128+00:00",
       "selected_event_count": 60,
