@@ -1,6 +1,6 @@
 {
-  "digest_date": "2026-11-17",
-  "generated_at": "2026-11-17T07:56:21.952277+00:00",
+  "digest_date": "2026-11-18",
+  "generated_at": "2026-11-18T07:30:07.153536+00:00",
   "generated_by": "intelhub-local-pipeline",
   "settings": {
     "per_source": 5,
@@ -10,19 +10,19 @@
     "summarize_with": "deepseek"
   },
   "stats": {
-    "fetched_candidate_count": 140,
-    "unique_candidate_count": 126,
-    "analysis_count": 126,
+    "fetched_candidate_count": 155,
+    "unique_candidate_count": 142,
+    "analysis_count": 142,
     "deepseek_analysis_count": 0,
-    "local_analysis_count": 126,
-    "extracted_text_count": 10,
-    "extraction_error_count": 6,
-    "event_count": 125,
+    "local_analysis_count": 142,
+    "extracted_text_count": 9,
+    "extraction_error_count": 7,
+    "event_count": 141,
     "selected_event_count": 60,
-    "fetch_error_count": 5,
+    "fetch_error_count": 4,
     "title_localized_count": 0,
-    "supporting_link_count": 0,
-    "multi_source_event_count": 0,
+    "supporting_link_count": 2,
+    "multi_source_event_count": 2,
     "tag_count": 14
   },
   "fetch_errors": [
@@ -45,28 +45,19 @@
       "source_id": "vercel_ai_blog",
       "source_name": "Vercel AI Blog",
       "error": "HTTP Error 404: Not Found"
-    },
-    {
-      "source_id": "hackernews_ai",
-      "source_name": "Hacker News AI",
-      "error": "<urlopen error operation timed out after 12s>"
     }
   ],
   "categories": {
     "大模型动态": [
       {
-        "id": "c74f00ad-bfa3-5852-8386-49257ae6434b",
-        "event_date": "2026-11-17",
+        "id": "13d4d9f3-d159-5add-8364-ca068e039de2",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Does the Ranking Hold? A Pract...",
-        "one_sentence_summary": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by met...",
-        "detailed_summary": "[2611.17339] Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs Skip to main content Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search Computer Science > Artificial Intelligence arXiv:2611.17339 (cs) [Submitted on 31 Aug 2026] Title: Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs Authors: Shubhra Mittal , Gaurav Naresh Mittal View a P...",
+        "ai_title": "大模型动态｜Introducing GPT-6.2 Astra and...",
+        "one_sentence_summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower co...",
+        "detailed_summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
         "key_points": [
-          "[2611.17339] Does the Ranking Hold?",
-          "A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs Skip to main content Searc...",
-          "A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs Authors: Shubhra Mittal ,...",
-          "A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs, by Shubhra Mittal and Gau...",
-          "The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and G..."
+          "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower co..."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -75,37 +66,38 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+        "topic_angle": "从能力、成本和生态角度解读：Introducing GPT-6.2 Astra and Sol",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 92.0,
+        "priority_score": 93.0,
         "confidence": 0.55,
         "tags": [
-          "论文研究"
+          "官方消息",
+          "编程工具"
         ],
-        "signal_strength": 64.06,
+        "signal_strength": 71.24,
         "reading_links": [
           {
-            "source_id": "arxiv_cs_ai",
-            "source_name": "arXiv cs.AI",
-            "source_type": "research",
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
             "source_role": "primary",
-            "original_title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
-            "url": "https://arxiv.org/abs/2611.17339",
-            "published_at": "Tue, 17 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.AI",
+            "original_title": "Introducing GPT-6.2 Astra and Sol",
+            "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+            "published_at": "Tue, 17 Nov 2026 17:45:00 GMT",
+            "link_label": "OpenAI News",
             "is_primary_reading_link": true,
             "display_order": 1
           }
         ],
         "source_count": 1,
         "source_types": [
-          "research"
+          "official"
         ]
       },
       {
-        "id": "faff7c68-f274-5920-b3ed-00206137351f",
-        "event_date": "2026-11-17",
+        "id": "5afc05a2-0510-57e5-8e1d-023ba226e0e9",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Introducing Claude Fable 5.2 a...",
         "one_sentence_summary": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 \\ Anthropic Skip to main content News Research Policy Commitments...",
@@ -136,7 +128,7 @@
           "政策监管",
           "论文研究"
         ],
-        "signal_strength": 70.84,
+        "signal_strength": 78.34,
         "reading_links": [
           {
             "source_id": "anthropic_news",
@@ -149,22 +141,34 @@
             "link_label": "Anthropic News",
             "is_primary_reading_link": true,
             "display_order": 1
+          },
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "related",
+            "original_title": "Introducing ChatGPT for Sales",
+            "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+            "published_at": "Tue, 17 Nov 2026 08:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": false,
+            "display_order": 2
           }
         ],
-        "source_count": 1,
+        "source_count": 2,
         "source_types": [
           "official"
         ]
       },
       {
-        "id": "30cd1d92-4f22-5730-b1c7-84f5633cc31f",
-        "event_date": "2026-11-17",
+        "id": "2dda4e8d-046c-58a4-ba98-8bff5ac941d1",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Broadening access to AI for sc...",
-        "one_sentence_summary": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to ou...",
-        "detailed_summary": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+        "ai_title": "大模型动态｜Introducing ChatGPT for Sales",
+        "one_sentence_summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitch...",
+        "detailed_summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
         "key_points": [
-          "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to ou..."
+          "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitch..."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -173,25 +177,87 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Broadening access to AI for scientists",
+        "topic_angle": "从能力、成本和生态角度解读：Introducing ChatGPT for Sales",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 87.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
+          "编程工具",
           "论文研究"
         ],
-        "signal_strength": 67.16,
+        "signal_strength": 76.16,
         "reading_links": [
           {
             "source_id": "openai_news",
             "source_name": "OpenAI News",
             "source_type": "official",
             "source_role": "primary",
-            "original_title": "Broadening access to AI for scientists",
-            "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
-            "published_at": "Mon, 16 Nov 2026 17:00:00 GMT",
+            "original_title": "Introducing ChatGPT for Sales",
+            "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+            "published_at": "Tue, 17 Nov 2026 08:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          },
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "related",
+            "original_title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 Our most capable models for daunting technical work, Claude Fable 5.2 and Claude Mythos 5.2 set a new bar in coding, finance, and the sciences.",
+            "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": false,
+            "display_order": 2
+          }
+        ],
+        "source_count": 2,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "0d6cdf24-265c-5199-9827-b26bfc5248db",
+        "event_date": "2026-11-18",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Astra for Law leads in legal i...",
+        "one_sentence_summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now...",
+        "detailed_summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+        "key_points": [
+          "Astra for Law ranked first in a launch evaluation spanning 24 areas of law.",
+          "Every ChatGPT Enterprise customer can now request access."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Astra for Law leads in legal intelligence",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 86.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "模型发布",
+          "商业化",
+          "融资并购"
+        ],
+        "signal_strength": 69.48,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Astra for Law leads in legal intelligence",
+            "url": "https://openai.com/index/astra-law-6-2",
+            "published_at": "Tue, 17 Nov 2026 00:00:00 GMT",
             "link_label": "OpenAI News",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -203,15 +269,18 @@
         ]
       },
       {
-        "id": "508ef65b-1eb9-57b0-99c9-ea64b01737cb",
-        "event_date": "2026-11-17",
+        "id": "236f12d0-2c17-5f77-8838-cd0fc3e0a06b",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Science at the Frontier: How s...",
-        "one_sentence_summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivit...",
-        "detailed_summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
+        "ai_title": "大模型动态｜ChAIn-of-Thought Controllabili...",
+        "one_sentence_summary": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting h...",
+        "detailed_summary": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors. We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces rewritten in the voices of diverse personas. This induces a broader ability to control CoT, even though...",
         "key_points": [
-          "Explore how more than 1,800 scientists use ChatGPT in research.",
-          "See findings on daily workflows, reported productivity, and expectations for discovery."
+          "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting h...",
+          "One risk is that models could deliberately shape their reasoning to make it opaque to monitors.",
+          "We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces re...",
+          "This induces a broader ability to control CoT, even though training contains no monitor-evasion examples.",
+          "In covert side-task evaluations, traces in which a gpt-oss-20b model organism completes the hidden side task contain..."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -220,76 +289,27 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Science at the Frontier: How scientists use ChatGPT",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 87.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "产品更新",
-          "论文研究"
-        ],
-        "signal_strength": 68.66,
-        "reading_links": [
-          {
-            "source_id": "openai_news",
-            "source_name": "OpenAI News",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Science at the Frontier: How scientists use ChatGPT",
-            "url": "https://openai.com/index/science-at-the-frontier",
-            "published_at": "Mon, 16 Nov 2026 12:00:00 GMT",
-            "link_label": "OpenAI News",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "ed3d9ce0-7451-55db-a425-868b5aa4db1a",
-        "event_date": "2026-11-17",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜LoRAWeaver: Directional Adapte...",
-        "one_sentence_summary": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining...",
-        "detailed_summary": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings.",
-        "key_points": [
-          "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining.",
-          "Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of tas...",
-          "This pool complicates adapter selection during inference.",
-          "Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their u...",
-          "This paper treats adapter routing as a representation alignment problem in the adapter-output space."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+        "topic_angle": "从能力、成本和生态角度解读：Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 85.0,
         "confidence": 0.55,
         "tags": [
-          "编程工具",
+          "智能体",
+          "融资并购",
+          "国际金融",
           "论文研究"
         ],
-        "signal_strength": 60.8,
+        "signal_strength": 63.8,
         "reading_links": [
           {
             "source_id": "arxiv_cs_ai",
             "source_name": "arXiv cs.AI",
             "source_type": "research",
             "source_role": "primary",
-            "original_title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
-            "url": "https://arxiv.org/abs/2611.17340",
-            "published_at": "Tue, 17 Nov 2026 00:00:00 -0500",
+            "original_title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+            "url": "https://arxiv.org/abs/2611.21799",
+            "published_at": "Wed, 18 Nov 2026 00:00:00 -0500",
             "link_label": "arXiv cs.AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -301,8 +321,8 @@
         ]
       },
       {
-        "id": "3ae0a6b7-002f-573d-8289-e5eba6228b74",
-        "event_date": "2026-11-17",
+        "id": "60df5bb2-09c7-50e9-a1ab-464fc868ddfb",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Gemini models",
         "one_sentence_summary": "Gemini models",
@@ -346,14 +366,18 @@
         ]
       },
       {
-        "id": "62f3c850-5aa6-534a-8fb6-391cdd04b939",
-        "event_date": "2026-11-17",
+        "id": "3b64a22f-f9c1-5f25-af9d-4137ab74507a",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Strengthening the fight agAIns...",
-        "one_sentence_summary": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploita...",
-        "detailed_summary": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploitation and abuse.",
+        "ai_title": "大模型动态｜CrisisBench: an evaluation sui...",
+        "one_sentence_summary": "arXiv:2611.21622v1 Announce Type: new Abstract: Background: Crisis helplines are essential to mental health systems b...",
+        "detailed_summary": "arXiv:2611.21622v1 Announce Type: new Abstract: Background: Crisis helplines are essential to mental health systems but are often understaffed and underfunded. LLMs could support counselors, but existing benchmarks do not capture the escalation, risk assessment, and de-escalation central to crisis conversations, while privacy restrictions limit use of real transcripts. Methods: We present CrisisBench, a privacy-preserving suite for single- and multi-turn crisis counseling evaluation. It inclu...",
         "key_points": [
-          "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploita..."
+          "arXiv:2611.21622v1 Announce Type: new Abstract: Background: Crisis helplines are essential to mental health systems b...",
+          "LLMs could support counselors, but existing benchmarks do not capture the escalation, risk assessment, and de-escalat...",
+          "Methods: We present CrisisBench, a privacy-preserving suite for single- and multi-turn crisis counseling evaluation.",
+          "It includes 1,085 single-turn tasks from 200 de-identified conversations and 1,185 patient LLMs derived from hotline...",
+          "Patient models and a 23-item LLM judge were calibrated against expert counselors."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -362,128 +386,40 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Strengthening the fight against online child sexual abuse with new tools and support",
+        "topic_angle": "从能力、成本和生态角度解读：CrisisBench: an evaluation suite for crisis counseling AI",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 75.5,
+        "priority_score": 78.0,
         "confidence": 0.55,
         "tags": [
-          "官方消息"
+          "评测榜单",
+          "融资并购",
+          "国际金融",
+          "论文研究"
         ],
-        "signal_strength": 57.84,
+        "signal_strength": 59.04,
         "reading_links": [
           {
-            "source_id": "openai_news",
-            "source_name": "OpenAI News",
-            "source_type": "official",
+            "source_id": "arxiv_cs_cl",
+            "source_name": "arXiv cs.CL",
+            "source_type": "research",
             "source_role": "primary",
-            "original_title": "Strengthening the fight against online child sexual abuse with new tools and support",
-            "url": "https://openai.com/index/strengthening-online-child-safety",
-            "published_at": "Mon, 16 Nov 2026 17:00:00 GMT",
-            "link_label": "OpenAI News",
+            "original_title": "CrisisBench: an evaluation suite for crisis counseling AI",
+            "url": "https://arxiv.org/abs/2611.21622",
+            "published_at": "Wed, 18 Nov 2026 00:00:00 -0500",
+            "link_label": "arXiv cs.CL",
             "is_primary_reading_link": true,
             "display_order": 1
           }
         ],
         "source_count": 1,
         "source_types": [
-          "official"
+          "research"
         ]
       },
       {
-        "id": "9dc95317-8bc0-5aa8-a80f-e5b30d549a39",
-        "event_date": "2026-11-17",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Strengthening NATO and allied...",
-        "one_sentence_summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes...",
-        "detailed_summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
-        "key_points": [
-          "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Strengthening NATO and allied cyber defenses with AI",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 75.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息"
-        ],
-        "signal_strength": 57.5,
-        "reading_links": [
-          {
-            "source_id": "openai_news",
-            "source_name": "OpenAI News",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Strengthening NATO and allied cyber defenses with AI",
-            "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
-            "published_at": "Tue, 17 Nov 2026 00:00:00 GMT",
-            "link_label": "OpenAI News",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "dfa596e3-0230-51fe-b3ab-c0fccefb9b57",
-        "event_date": "2026-11-17",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜How Revolut rAIses ambition wi...",
-        "one_sentence_summary": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations,...",
-        "detailed_summary": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security.",
-        "key_points": [
-          "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations,..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：How Revolut raises ambition without lowering the bar",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 73.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "编程工具"
-        ],
-        "signal_strength": 57.64,
-        "reading_links": [
-          {
-            "source_id": "openai_news",
-            "source_name": "OpenAI News",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "How Revolut raises ambition without lowering the bar",
-            "url": "https://openai.com/business/customer-stories/revolut",
-            "published_at": "Mon, 16 Nov 2026 09:30:00 GMT",
-            "link_label": "OpenAI News",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "274d5d18-d8d1-5e39-b231-b8ebbc2580ce",
-        "event_date": "2026-11-17",
+        "id": "e6c13f00-d45e-5699-ae46-cd4c47af6242",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
         "ai_title": "大模型动态｜llama.cpp v1.0.0 : A stronger...",
         "one_sentence_summary": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
@@ -525,8 +461,200 @@
         ]
       },
       {
-        "id": "5030899f-bf51-5eda-9392-a1228d419de5",
-        "event_date": "2026-11-17",
+        "id": "bd7f3316-7f6f-57c6-a37d-25fc84af3618",
+        "event_date": "2026-11-18",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Strengthening NATO and allied...",
+        "one_sentence_summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes...",
+        "detailed_summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+        "key_points": [
+          "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Strengthening NATO and allied cyber defenses with AI",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 70.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 54.1,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Strengthening NATO and allied cyber defenses with AI",
+            "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+            "published_at": "Tue, 17 Nov 2026 00:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "ab49e29e-a786-5c23-b8b9-f4acfd850ff7",
+        "event_date": "2026-11-18",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Introducing OpenAI for Chile",
+        "one_sentence_summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and...",
+        "detailed_summary": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+        "key_points": [
+          "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Introducing OpenAI for Chile",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 70.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "产品更新"
+        ],
+        "signal_strength": 55.6,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Introducing OpenAI for Chile",
+            "url": "https://openai.com/index/introducing-openai-for-chile",
+            "published_at": "Tue, 17 Nov 2026 00:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "1916eca6-37dd-5497-a5bd-362a3e9ce024",
+        "event_date": "2026-11-18",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Language Models Can Rewrite Th...",
+        "one_sentence_summary": "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one...",
+        "detailed_summary": "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one again takes another training run, and a prompt, a scaffold or extra computation at inference is gone once the task ends. A frontier model has been shown to edit the weights of a much smaller one. We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning, with no gradients and no training; we call this self-rewriting. Gi...",
+        "key_points": [
+          "arXiv:2611.21885v1 Announce Type: new Abstract: Language models are trained once, frozen and deployed: improving one...",
+          "A frontier model has been shown to edit the weights of a much smaller one.",
+          "We ask whether a model can rewrite its own weights to make itself better, and find that it can, by its own reasoning,...",
+          "Given its weights, graded answers and the ability to run itself, a 27B model diagnoses its failure and edits the weig...",
+          "It surpasses itself: its own edit makes it 6.6 points more accurate on 490 problems it never saw, in a test fixed in..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Language Models Can Rewrite Their Own Weights",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 67.0,
+        "confidence": 0.55,
+        "tags": [
+          "编程工具",
+          "国际金融",
+          "论文研究"
+        ],
+        "signal_strength": 50.06,
+        "reading_links": [
+          {
+            "source_id": "arxiv_cs_ai",
+            "source_name": "arXiv cs.AI",
+            "source_type": "research",
+            "source_role": "primary",
+            "original_title": "Language Models Can Rewrite Their Own Weights",
+            "url": "https://arxiv.org/abs/2611.21885",
+            "published_at": "Wed, 18 Nov 2026 00:00:00 -0500",
+            "link_label": "arXiv cs.AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "research"
+        ]
+      },
+      {
+        "id": "87084f1f-f38d-5e87-accf-fdbefbdc2df4",
+        "event_date": "2026-11-18",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Sleep2Word: Peripheral-to-EEG...",
+        "one_sentence_summary": "arXiv:2611.21643v1 Announce Type: new Abstract: Estimating full-night electroencephalography (EEG) spectrograms from...",
+        "detailed_summary": "arXiv:2611.21643v1 Announce Type: new Abstract: Estimating full-night electroencephalography (EEG) spectrograms from peripheral measurements could extend EEG-informed sleep analysis to recordings acquired without EEG. This task requires compact representations of signals with different temporal structures. We introduce Sleep2Word, a framework for translating respiration, electrocardiography (ECG), or photoplethysmography (PPG) into EEG spectrograms through duration-aware physiological words....",
+        "key_points": [
+          "arXiv:2611.21643v1 Announce Type: new Abstract: Estimating full-night electroencephalography (EEG) spectrograms from...",
+          "This task requires compact representations of signals with different temporal structures.",
+          "We introduce Sleep2Word, a framework for translating respiration, electrocardiography (ECG), or photoplethysmography...",
+          "Building on context-dependent chunking, Sleep2Word groups physiological embeddings into variable-duration chunks and...",
+          "A block-autoregressive translator then predicts target EEG word identities and occurrence-specific duration refinemen..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Sleep2Word: Peripheral-to-EEG Translation via Duration-Aware Wordization",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 66.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "论文研究"
+        ],
+        "signal_strength": 48.22,
+        "reading_links": [
+          {
+            "source_id": "arxiv_cs_cl",
+            "source_name": "arXiv cs.CL",
+            "source_type": "research",
+            "source_role": "primary",
+            "original_title": "Sleep2Word: Peripheral-to-EEG Translation via Duration-Aware Wordization",
+            "url": "https://arxiv.org/abs/2611.21643",
+            "published_at": "Wed, 18 Nov 2026 00:00:00 -0500",
+            "link_label": "arXiv cs.CL",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "research"
+        ]
+      },
+      {
+        "id": "652fb53b-68a6-5391-aaf4-3bc1dfd39d44",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Announcements",
         "one_sentence_summary": "Announcements",
@@ -570,8 +698,8 @@
         ]
       },
       {
-        "id": "3d5366f3-d29a-5213-862c-28aee0dd03af",
-        "event_date": "2026-11-17",
+        "id": "246524cf-b641-50f8-9c0a-1f04322b652b",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Investing in the public benefi...",
         "one_sentence_summary": "Investing in the public benefit We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund...",
@@ -615,8 +743,8 @@
         ]
       },
       {
-        "id": "af923325-d2c9-5930-81af-d55b8545beae",
-        "event_date": "2026-11-17",
+        "id": "329682be-d084-5f88-8ea2-1fdf7379a832",
+        "event_date": "2026-11-18",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Anthropic files S-1 with the S...",
         "one_sentence_summary": "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration stat...",
@@ -659,103 +787,65 @@
         "source_types": [
           "official"
         ]
-      },
-      {
-        "id": "58e39bb5-3a7c-58c5-9f54-56ac5fe1ade3",
-        "event_date": "2026-11-17",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Science",
-        "one_sentence_summary": "Science",
-        "detailed_summary": "Science",
-        "key_points": [
-          "Science"
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Science",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 65.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息"
-        ],
-        "signal_strength": 50.7,
-        "reading_links": [
-          {
-            "source_id": "anthropic_news",
-            "source_name": "Anthropic News",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Science",
-            "url": "https://www.anthropic.com/science",
-            "published_at": null,
-            "link_label": "Anthropic News",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "53cb989b-9cb9-541b-9f4c-caed0a53ba3b",
-        "event_date": "2026-11-17",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜The components of agent memory",
-        "one_sentence_summary": "The components of agent memory",
-        "detailed_summary": "The components of agent memory",
-        "key_points": [
-          "The components of agent memory"
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：The components of agent memory",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 65.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "智能体"
-        ],
-        "signal_strength": 52.2,
-        "reading_links": [
-          {
-            "source_id": "anthropic_engineering",
-            "source_name": "Anthropic Engineering",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "The components of agent memory",
-            "url": "https://www.anthropic.com/research/components-of-agent-memory",
-            "published_at": null,
-            "link_label": "Anthropic Engineering",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
       }
     ],
     "AI行业资讯": [
       {
-        "id": "af1fd0e7-e987-5472-bf58-d5cd39e109c4",
-        "event_date": "2026-11-17",
+        "id": "cd7d6d07-ac25-5251-b61f-f6de4b8c91d4",
+        "event_date": "2026-11-18",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Ian Buck Kicks Off NVIDIA’s W...",
+        "one_sentence_summary": "NVIDIA’s Ian Buck kicked off the company’s week at SC26 in Chicago on Monday with new tools for AI agents, software t...",
+        "detailed_summary": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents | NVIDIA Blog Skip to content Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents At SC26, NVIDIA’s VP of Hyperscale and HPC laid out how researchers can combine simulation, AI and agents to accelerate scientific discovery. November 17, 2026 by Brian Caulfield 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! NVIDIA’s Ian Buck kicked off the company’s week at SC26...",
+        "key_points": [
+          "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents | NVIDIA Blog Skip to content Ian Buck K...",
+          "November 17, 2026 by Brian Caulfield 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+          "NVIDIA’s Ian Buck kicked off the company’s week at SC26 in Chicago on Monday with new tools for AI agents, software t...",
+          "In NVIDIA’s special address, Buck announced Nemotron for Science , the Rubin HPC GPU and an expanded Vera CPU platfor...",
+          "He also detailed a new collaboration in quantum computing with IBM and Fermi National Accelerator Laboratory ."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 77.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "智能体",
+          "算力芯片",
+          "国际金融",
+          "论文研究"
+        ],
+        "signal_strength": 63.36,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+            "url": "https://blogs.nvidia.com/blog/ian-buck-sc26/",
+            "published_at": "Tue, 17 Nov 2026 14:00:10 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "e2bc3bf5-6a8e-5e69-97ec-79df702fbdf1",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜NVIDIA DGX Spark Developer Ki...",
         "one_sentence_summary": "At SC26, an annual supercomputing conference taking place this week in Chicago, NVIDIA is introducing the DGX Spark H...",
@@ -777,7 +867,7 @@
         "topic_angle": "从商业化和产业竞争角度解读：NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 76.0,
+        "priority_score": 71.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
@@ -786,7 +876,7 @@
           "算力芯片",
           "论文研究"
         ],
-        "signal_strength": 62.68,
+        "signal_strength": 59.28,
         "reading_links": [
           {
             "source_id": "nvidia_blog",
@@ -807,60 +897,8 @@
         ]
       },
       {
-        "id": "a18bbe08-1e9d-536a-98d9-5aa97fd3bea3",
-        "event_date": "2026-11-17",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜How the World’s Most Advanced...",
-        "one_sentence_summary": "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms. That...",
-        "detailed_summary": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future | NVIDIA Blog Skip to content How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future Over two decades running the most complex manufacturing on the planet, NVIDIA operations chief Deb Shoquist has required three things of every supply chain partner: extreme technical skill, unshakeable trust and a willingness to always try something new. November 16, 2026 by NVIDIA Writers 0 Comments Share...",
-        "key_points": [
-          "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future | NVIDIA Blog Skip to content How the...",
-          "November 16, 2026 by NVIDIA Writers 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
-          "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms.",
-          "That description sums up the job, but it doesn’t begin to encompass what Shoquist has made possible over decades.",
-          "Shoquist, her team and their global network of manufacturing partners enable NVIDIA to introduce world-leading techno..."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 74.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "模型发布",
-          "产品更新",
-          "算力芯片"
-        ],
-        "signal_strength": 61.32,
-        "reading_links": [
-          {
-            "source_id": "nvidia_blog",
-            "source_name": "NVIDIA Blog",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
-            "url": "https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/",
-            "published_at": "Mon, 16 Nov 2026 20:00:37 +0000",
-            "link_label": "NVIDIA Blog",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "194c501d-e57f-5b62-8b9a-2ca86876505b",
-        "event_date": "2026-11-17",
+        "id": "7df958d0-20ed-5f4e-b0c7-c9a4dec94c72",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Lambda Boosts AI Factory Resi...",
         "one_sentence_summary": "To train an AI model, thousands of GPUs have to work together, requiring a network that’s fast, efficient and resilie...",
@@ -882,13 +920,13 @@
         "topic_angle": "从商业化和产业竞争角度解读：Lambda Boosts AI Factory Resiliency and Efficiency With NVIDIA Photonics",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 74.0,
+        "priority_score": 71.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
           "算力芯片"
         ],
-        "signal_strength": 58.32,
+        "signal_strength": 56.28,
         "reading_links": [
           {
             "source_id": "nvidia_blog",
@@ -909,18 +947,67 @@
         ]
       },
       {
-        "id": "426621d6-3709-5061-a2a8-7f2eb0b90506",
-        "event_date": "2026-11-17",
+        "id": "611a0a2f-9e9f-5f3d-af8e-435863eff27a",
+        "event_date": "2026-11-18",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜How the World’s Most Advanced...",
+        "one_sentence_summary": "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms. That...",
+        "detailed_summary": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future | NVIDIA Blog Skip to content How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future Over two decades running the most complex manufacturing on the planet, NVIDIA operations chief Deb Shoquist has required three things of every supply chain partner: extreme technical skill, unshakeable trust and a willingness to always try something new. November 16, 2026 by NVIDIA Writers 0 Comments Share...",
+        "key_points": [
+          "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future | NVIDIA Blog Skip to content How the...",
+          "November 16, 2026 by NVIDIA Writers 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+          "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms.",
+          "That description sums up the job, but it doesn’t begin to encompass what Shoquist has made possible over decades.",
+          "Shoquist, her team and their global network of manufacturing partners enable NVIDIA to introduce world-leading techno..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 69.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "模型发布",
+          "产品更新",
+          "算力芯片"
+        ],
+        "signal_strength": 57.92,
+        "reading_links": [
+          {
+            "source_id": "nvidia_blog",
+            "source_name": "NVIDIA Blog",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
+            "url": "https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/",
+            "published_at": "Mon, 16 Nov 2026 20:00:37 +0000",
+            "link_label": "NVIDIA Blog",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "2e82497a-a027-55b6-9a55-9e63ad1e3cd2",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜NVIDIA Expands Slurm to Bring...",
         "one_sentence_summary": "Quantum processor deployments at supercomputing centers have grown nearly sevenfold over the past five years, with ne...",
-        "detailed_summary": "NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing Skip to content NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing Quantum hardware developers, software providers and supercomputing centers are adopting the community-built Slurm workloads manager and the NVIDIA quantum platform to integrate quantum processors, design future systems and develop scientific applications. November 16, 2026 by Sam Stanwyck 0 Comments Share Share This Article X Facebook LinkedIn...",
+        "detailed_summary": "Quantum processor deployments at supercomputing centers have grown nearly sevenfold over the past five years, with nearly 30 supercomputing centers around the world now in the process of deploying over 50 quantum processors. Many of these centers use Slurm to run scientific supercomputing workloads, so expanding its support for quantum processors builds on familiar workflows […]",
         "key_points": [
-          "NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing Skip to content NVIDIA Expands Slurm to Bring Qua...",
-          "November 16, 2026 by Sam Stanwyck 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
           "Quantum processor deployments at supercomputing centers have grown nearly sevenfold over the past five years, with ne...",
-          "Many of these centers use Slurm to run scientific supercomputing workloads, so expanding its support for quantum proc...",
-          "In a new release, Slurm builds on previous work with IBM, Pasqal and the wider quantum computing community to allow Q..."
+          "Many of these centers use Slurm to run scientific supercomputing workloads, so expanding its support for quantum proc..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -932,17 +1019,13 @@
         "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Expands Slurm to Bring Quantum Computing Into Supercomputing",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 72.0,
+        "priority_score": 69.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
-          "模型发布",
-          "编程工具",
-          "产品更新",
-          "算力芯片",
-          "国际金融"
+          "算力芯片"
         ],
-        "signal_strength": 59.96,
+        "signal_strength": 54.92,
         "reading_links": [
           {
             "source_id": "nvidia_blog",
@@ -963,15 +1046,15 @@
         ]
       },
       {
-        "id": "f0b34ef0-27c8-58be-ad0b-6772a128af23",
-        "event_date": "2026-11-17",
+        "id": "d48d2ae6-3f1b-5f3e-9ae5-b00083a12dd9",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜NVIDIA Sweeps MLPerf TrAIning...",
-        "one_sentence_summary": "In its MLPerf benchmarks debut, with results released today, the NVIDIA Vera Rubin platform delivers leading performa...",
-        "detailed_summary": "In its MLPerf benchmarks debut, with results released today, the NVIDIA Vera Rubin platform delivers leading performance across training, post-training and agentic inference. NVIDIA swept every MLPerf Training v6.1 benchmark and, in its first MLPerf Endpoints submission, delivered more than 10x generational gains in throughput per watt for agentic AI — measuring how much agentic […]",
+        "ai_title": "AI行业资讯｜Nvidia is abandoning China af...",
+        "one_sentence_summary": "Nvidia's interim CEO says the company is done selling chips to China. How much will that cost?",
+        "detailed_summary": "Nvidia's interim CEO says the company is done selling chips to China. How much will that cost?",
         "key_points": [
-          "In its MLPerf benchmarks debut, with results released today, the NVIDIA Vera Rubin platform delivers leading performa...",
-          "NVIDIA swept every MLPerf Training v6.1 benchmark and, in its first MLPerf Endpoints submission, delivered more than..."
+          "Nvidia's interim CEO says the company is done selling chips to China.",
+          "How much will that cost?"
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -980,74 +1063,24 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance",
+        "topic_angle": "从商业化和产业竞争角度解读：Nvidia is abandoning China after Jensen Huang’s ouster",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 72.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "模型发布",
-          "评测榜单",
-          "智能体",
-          "编程工具",
-          "产品更新"
-        ],
-        "signal_strength": 59.96,
-        "reading_links": [
-          {
-            "source_id": "nvidia_blog",
-            "source_name": "NVIDIA Blog",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "NVIDIA Sweeps MLPerf Training and Endpoints as Vera Rubin Debuts With Leading Performance",
-            "url": "https://blogs.nvidia.com/blog/mlperf-training-endpoints-vera-rubin/",
-            "published_at": "Mon, 16 Nov 2026 16:00:25 +0000",
-            "link_label": "NVIDIA Blog",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "caab99e0-87d7-5d68-b18b-0489142978fd",
-        "event_date": "2026-11-17",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Trump says ex-Nvidia CEO Jens...",
-        "one_sentence_summary": "Trump contradicted his own government's intelligence officials, who reportedly concluded that Alice Huang is a Chines...",
-        "detailed_summary": "Trump contradicted his own government's intelligence officials, who reportedly concluded that Alice Huang is a Chinese spy.",
-        "key_points": [
-          "Trump contradicted his own government's intelligence officials, who reportedly concluded that Alice Huang is a Chines..."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：Trump says ex-Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy did not threaten national security",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 64.5,
+        "priority_score": 69.0,
         "confidence": 0.55,
         "tags": [
           "算力芯片"
         ],
-        "signal_strength": 45.36,
+        "signal_strength": 48.42,
         "reading_links": [
           {
             "source_id": "techcrunch_ai",
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Trump says ex-Nvidia CEO Jensen Huang’s affair with an alleged Chinese spy did not threaten national security",
-            "url": "https://techcrunch.com/2026/11/16/trump-says-ex-nvidia-ceo-jensen-huangs-affair-with-an-alleged-chinese-spy-did-not-threaten-national-security/",
-            "published_at": "Mon, 16 Nov 2026 19:12:02 +0000",
+            "original_title": "Nvidia is abandoning China after Jensen Huang’s ouster",
+            "url": "https://techcrunch.com/2026/11/17/nvidia-is-abandoning-china-after-jensen-huangs-ouster/",
+            "published_at": "Tue, 17 Nov 2026 23:37:48 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1059,8 +1092,8 @@
         ]
       },
       {
-        "id": "7413c031-e773-5530-bfd2-a42178740e5c",
-        "event_date": "2026-11-17",
+        "id": "33ab85a4-3033-5555-97f0-7134579dac3e",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Microsoft On The Issues",
         "one_sentence_summary": "Microsoft On The Issues",
@@ -1104,14 +1137,14 @@
         ]
       },
       {
-        "id": "93c54421-db65-5ffe-aa5d-258f82b13cc1",
-        "event_date": "2026-11-17",
+        "id": "60090d34-50e1-5bcc-aa0a-b1c71bfb9534",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Cybersecurity AI startup Corm...",
-        "one_sentence_summary": "Three months since introducing its product, AI cybersecurity startup Corba has raised a $125 million Series A at a $1...",
-        "detailed_summary": "Three months since introducing its product, AI cybersecurity startup Corba has raised a $125 million Series A at a $1 billion valuation led by NEA.",
+        "ai_title": "Nvidia says its open source AI st利率g...",
+        "one_sentence_summary": "Nvidia's interim CEO reaffirmed its open source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's...",
+        "detailed_summary": "Nvidia's interim CEO reaffirmed its open source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's sudden departure.",
         "key_points": [
-          "Three months since introducing its product, AI cybersecurity startup Corba has raised a $125 million Series A at a $1..."
+          "Nvidia's interim CEO reaffirmed its open source AI strategy and plans to acquire Hugging Face, despite Jensen Huang's..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1120,25 +1153,26 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
+        "topic_angle": "从商业化和产业竞争角度解读：Nvidia says its open source AI strategy remains intact after Jensen Huang’s exit",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 61.0,
+        "priority_score": 63.0,
         "confidence": 0.55,
         "tags": [
-          "产品更新",
-          "融资并购"
+          "算力芯片",
+          "国际金融",
+          "开源生态"
         ],
-        "signal_strength": 44.48,
+        "signal_strength": 47.34,
         "reading_links": [
           {
             "source_id": "techcrunch_ai",
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Cybersecurity AI startup Corma reaches $1B valuation in about 3 months",
-            "url": "https://techcrunch.com/2026/11/16/cybersecurity-ai-startup-corma-reaches-1b-valuation-in-about-3-months/",
-            "published_at": "Mon, 16 Nov 2026 23:32:32 +0000",
+            "original_title": "Nvidia says its open source AI strategy remains intact after Jensen Huang’s exit",
+            "url": "https://techcrunch.com/2026/11/17/nvidia-says-its-open-source-ai-strategy-remains-intact-after-jensen-huangs-exit/",
+            "published_at": "Tue, 17 Nov 2026 23:04:35 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1150,14 +1184,14 @@
         ]
       },
       {
-        "id": "d78f85b1-db9a-5d51-aee3-a956b2f2fa42",
-        "event_date": "2026-11-17",
+        "id": "1aff1642-7cc7-5e73-b31c-ef2413dff50a",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Sam Altman on Nvidia without...",
-        "one_sentence_summary": "OpenAI CEO Sam Altman acknowledged the special role Nvidia CEO Jensen Huang has played in the AI boom, but ultimately...",
-        "detailed_summary": "OpenAI CEO Sam Altman acknowledged the special role Nvidia CEO Jensen Huang has played in the AI boom, but ultimately thinks the industry will be “fine” without him at the helm.",
+        "ai_title": "AI行业资讯｜Nvidia promises that revenue...",
+        "one_sentence_summary": "Despite the turmoil Nvidia is in after the departure of its disgraced founder and CEO Jensen Huang, the company proje...",
+        "detailed_summary": "Despite the turmoil Nvidia is in after the departure of its disgraced founder and CEO Jensen Huang, the company projected that its streak of record-breaking revenue isn't about to stop.",
         "key_points": [
-          "OpenAI CEO Sam Altman acknowledged the special role Nvidia CEO Jensen Huang has played in the AI boom, but ultimately..."
+          "Despite the turmoil Nvidia is in after the departure of its disgraced founder and CEO Jensen Huang, the company proje..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1166,24 +1200,25 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Sam Altman on Nvidia without Jensen Huang: The industry will be ‘fine’",
+        "topic_angle": "从商业化和产业竞争角度解读：Nvidia promises that revenue will keep soaring — for now",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 61.0,
+        "priority_score": 62.0,
         "confidence": 0.55,
         "tags": [
+          "商业化",
           "算力芯片"
         ],
-        "signal_strength": 42.98,
+        "signal_strength": 45.16,
         "reading_links": [
           {
             "source_id": "techcrunch_ai",
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Sam Altman on Nvidia without Jensen Huang: The industry will be ‘fine’",
-            "url": "https://techcrunch.com/2026/11/16/sam-altman-on-nvidia-without-jensen-huang-the-industry-will-be-fine/",
-            "published_at": "Mon, 16 Nov 2026 18:11:10 +0000",
+            "original_title": "Nvidia promises that revenue will keep soaring — for now",
+            "url": "https://techcrunch.com/2026/11/17/nvidia-promises-that-revenue-will-keep-soaring-for-now/",
+            "published_at": "Wed, 18 Nov 2026 00:16:50 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1195,15 +1230,14 @@
         ]
       },
       {
-        "id": "bdc33325-0a0c-57f6-bde7-14db1c63834b",
-        "event_date": "2026-11-17",
+        "id": "51961e9f-c070-5e6b-be48-93fb77de9847",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜All the questions Nvidia shou...",
-        "one_sentence_summary": "Nvidia interim CEO and longtime CFO Colette Kress is about to have one of the biggest days of her career on Tuesday w...",
-        "detailed_summary": "Nvidia interim CEO and longtime CFO Colette Kress is about to have one of the biggest days of her career on Tuesday when the company reports its third-quarter results. Given the turmoil Nvidia is in, there are a number of questions that Nvidia should answer.",
+        "ai_title": "AI行业资讯｜Nvidia’s startup stakes ballo...",
+        "one_sentence_summary": "The value of Nvidia’s private investments has nearly tripled over the past nine months, fueled by Jensen Huang’s aggr...",
+        "detailed_summary": "The value of Nvidia’s private investments has nearly tripled over the past nine months, fueled by Jensen Huang’s aggressive dealmaking and rising valuations of its existing portfolio companies.",
         "key_points": [
-          "Nvidia interim CEO and longtime CFO Colette Kress is about to have one of the biggest days of her career on Tuesday w...",
-          "Given the turmoil Nvidia is in, there are a number of questions that Nvidia should answer."
+          "The value of Nvidia’s private investments has nearly tripled over the past nine months, fueled by Jensen Huang’s aggr..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1212,13 +1246,13 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：All the questions Nvidia should answer on Tuesday — but probably won’t",
+        "topic_angle": "从商业化和产业竞争角度解读：Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future deals in doubt",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
         "confidence": 0.55,
         "tags": [
-          "编程工具",
+          "融资并购",
           "算力芯片"
         ],
         "signal_strength": 43.8,
@@ -1228,9 +1262,9 @@
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "All the questions Nvidia should answer on Tuesday — but probably won’t",
-            "url": "https://techcrunch.com/2026/11/16/all-the-questions-nvidia-should-answer-on-tuesday-but-probably-wont/",
-            "published_at": "Mon, 16 Nov 2026 22:03:02 +0000",
+            "original_title": "Nvidia’s startup stakes ballooned to $65B, but Huang’s exit puts future deals in doubt",
+            "url": "https://techcrunch.com/2026/11/17/nvidias-startup-stakes-ballooned-to-65b-but-huangs-exit-puts-future-deals-in-doubt/",
+            "published_at": "Wed, 18 Nov 2026 01:44:21 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1242,14 +1276,14 @@
         ]
       },
       {
-        "id": "e15f9710-91a3-5332-a687-e991f927973f",
-        "event_date": "2026-11-17",
+        "id": "57fb3e3a-9d5d-5497-987b-f02c2fb2efe5",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜California state AG sues Open...",
-        "one_sentence_summary": "The California lawsuit represents one of the first attempts to hold an AI lab legally accountable for a rogue agent i...",
-        "detailed_summary": "The California lawsuit represents one of the first attempts to hold an AI lab legally accountable for a rogue agent incident.",
+        "ai_title": "AI行业资讯｜Nvidia says it doesn’t plan t...",
+        "one_sentence_summary": "The former CEO offered to return to his top role at the company after his resignation last week.",
+        "detailed_summary": "The former CEO offered to return to his top role at the company after his resignation last week.",
         "key_points": [
-          "The California lawsuit represents one of the first attempts to hold an AI lab legally accountable for a rogue agent i..."
+          "The former CEO offered to return to his top role at the company after his resignation last week."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1258,24 +1292,25 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：California state AG sues OpenAI over rogue agent incidents",
+        "topic_angle": "从商业化和产业竞争角度解读：Nvidia says it doesn’t plan to reappoint Jensen Huang as CEO",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 60.0,
         "confidence": 0.55,
         "tags": [
-          "智能体"
+          "产品更新",
+          "算力芯片"
         ],
-        "signal_strength": 42.3,
+        "signal_strength": 43.8,
         "reading_links": [
           {
             "source_id": "techcrunch_ai",
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "California state AG sues OpenAI over rogue agent incidents",
-            "url": "https://techcrunch.com/2026/11/16/california-state-ag-sues-openai-over-rogue-agent-incidents/",
-            "published_at": "Mon, 16 Nov 2026 20:07:13 +0000",
+            "original_title": "Nvidia says it doesn’t plan to reappoint Jensen Huang as CEO",
+            "url": "https://techcrunch.com/2026/11/17/nvidia-says-it-doesnt-plan-to-reappoint-jensen-huang-as-ceo/",
+            "published_at": "Tue, 17 Nov 2026 22:42:27 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1287,14 +1322,14 @@
         ]
       },
       {
-        "id": "5f503101-ddf3-5625-9e8f-27a10f43938f",
-        "event_date": "2026-11-17",
+        "id": "58ddcad7-348c-53df-b66e-23cfee3ba75b",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜New Zealand tricks and annual...",
-        "one_sentence_summary": "Sensor Tower estimates the game has already made $1.18bn from pre-orders across PlayStation and Xbox",
-        "detailed_summary": "Sensor Tower estimates the game has already made $1.18bn from pre-orders across PlayStation and Xbox",
+        "ai_title": "How important are Nvidia and Jensen...",
+        "one_sentence_summary": "The former Nvidia chief executive has been at the centre of the artificial intelligence boom.",
+        "detailed_summary": "The former Nvidia chief executive has been at the centre of the artificial intelligence boom.",
         "key_points": [
-          "Sensor Tower estimates the game has already made $1.18bn from pre-orders across PlayStation and Xbox"
+          "The former Nvidia chief executive has been at the centre of the artificial intelligence boom."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1303,7 +1338,97 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：New Zealand tricks and annual leave - the lengths fans are going to for GTA 6",
+        "topic_angle": "从商业化和产业竞争角度解读：How important are Nvidia and Jensen Huang to the US economy?",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.0,
+        "confidence": 0.55,
+        "tags": [
+          "算力芯片"
+        ],
+        "signal_strength": 41.62,
+        "reading_links": [
+          {
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "How important are Nvidia and Jensen Huang to the US economy?",
+            "url": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 18 Nov 2026 06:04:21 GMT",
+            "link_label": "BBC Technology",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "fd43577e-c67e-585a-9c65-bfd4b4403d50",
+        "event_date": "2026-11-18",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Watch: Marco Rubio says recen...",
+        "one_sentence_summary": "Microsoft, major US banks, Apple and Air Traffic authorities have been hit over recent days by tech glitches.",
+        "detailed_summary": "Microsoft, major US banks, Apple and Air Traffic authorities have been hit over recent days by tech glitches.",
+        "key_points": [
+          "Microsoft, major US banks, Apple and Air Traffic authorities have been hit over recent days by tech glitches."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Watch: Marco Rubio says recent tech outages are 'completely unrelated' to one another",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.0,
+        "confidence": 0.55,
+        "tags": [
+          "产品更新"
+        ],
+        "signal_strength": 41.62,
+        "reading_links": [
+          {
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Watch: Marco Rubio says recent tech outages are 'completely unrelated' to one another",
+            "url": "https://www.bbc.co.uk/news/videos/cx1l0vm87yl9o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 18 Nov 2026 05:10:02 GMT",
+            "link_label": "BBC Technology",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "105c9d08-836f-5eaf-91d0-bd57935f49cd",
+        "event_date": "2026-11-18",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Security flaw found in Java,...",
+        "one_sentence_summary": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's mo...",
+        "detailed_summary": "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's most popular computer language programs.",
+        "key_points": [
+          "The same tech start-up that discovered a PHP flaw used AI to uncover a critical software bug in one of the world's mo..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Security flaw found in Java, world's third-largest programming language",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1316,9 +1441,9 @@
             "source_name": "BBC Technology",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "New Zealand tricks and annual leave - the lengths fans are going to for GTA 6",
-            "url": "https://www.bbc.co.uk/news/articles/cm4gn9xnn1ppo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 17 Nov 2026 01:04:45 GMT",
+            "original_title": "Security flaw found in Java, world's third-largest programming language",
+            "url": "https://www.bbc.co.uk/news/articles/cke89jevqm1vo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 18 Nov 2026 05:33:13 GMT",
             "link_label": "BBC Technology",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1330,14 +1455,14 @@
         ]
       },
       {
-        "id": "2f072936-4a9a-5f0f-851e-fc0a8d45fae2",
-        "event_date": "2026-11-17",
+        "id": "521a013d-1cf9-5637-8c7e-14ceec903414",
+        "event_date": "2026-11-18",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜The AI start-ups fixing India...",
-        "one_sentence_summary": "From legal-tech to healthcare, dozens of Indian AI start-ups are solving uniquely Indian challenges.",
-        "detailed_summary": "From legal-tech to healthcare, dozens of Indian AI start-ups are solving uniquely Indian challenges.",
+        "ai_title": "AI行业资讯｜Waymo pulls driverless taxis...",
+        "one_sentence_summary": "The decision comes after California banned Waymo's driverless vehicles from operating on the state's highways followi...",
+        "detailed_summary": "The decision comes after California banned Waymo's driverless vehicles from operating on the state's highways following a series of traffic incidents.",
         "key_points": [
-          "From legal-tech to healthcare, dozens of Indian AI start-ups are solving uniquely Indian challenges."
+          "The decision comes after California banned Waymo's driverless vehicles from operating on the state's highways followi..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1346,7 +1471,7 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：The AI start-ups fixing India's broken roads and messy land records",
+        "topic_angle": "从商业化和产业竞争角度解读：Waymo pulls driverless taxis from all US freeways",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1359,9 +1484,9 @@
             "source_name": "BBC Technology",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "The AI start-ups fixing India's broken roads and messy land records",
-            "url": "https://www.bbc.co.uk/news/articles/c820vnln2lzpo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Mon, 16 Nov 2026 23:25:53 GMT",
+            "original_title": "Waymo pulls driverless taxis from all US freeways",
+            "url": "https://www.bbc.co.uk/news/articles/cmy86pp336qlo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 18 Nov 2026 03:07:22 GMT",
             "link_label": "BBC Technology",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1370,113 +1495,23 @@
         "source_count": 1,
         "source_types": [
           "media"
-        ]
-      },
-      {
-        "id": "22a1a8b2-36dd-58f7-ae38-15b781a0985f",
-        "event_date": "2026-11-17",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜GTA 6 hacker pleads guilty af...",
-        "one_sentence_summary": "21-year-old Arion Kurtaj pleaded guilty to the Rockstar Games hack and others he carried out when he was a teenager.",
-        "detailed_summary": "21-year-old Arion Kurtaj pleaded guilty to the Rockstar Games hack and others he carried out when he was a teenager.",
-        "key_points": [
-          "21-year-old Arion Kurtaj pleaded guilty to the Rockstar Games hack and others he carried out when he was a teenager."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：GTA 6 hacker pleads guilty after release from secure hospital",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": false,
-        "priority_score": 54.0,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布"
-        ],
-        "signal_strength": 38.22,
-        "reading_links": [
-          {
-            "source_id": "bbc_technology",
-            "source_name": "BBC Technology",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "GTA 6 hacker pleads guilty after release from secure hospital",
-            "url": "https://www.bbc.co.uk/news/articles/cq99exy89dngo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Mon, 16 Nov 2026 13:34:22 GMT",
-            "link_label": "BBC Technology",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "7d49b93f-215e-59d0-977e-e4aae171dbb7",
-        "event_date": "2026-11-17",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Pricing",
-        "one_sentence_summary": "Pricing",
-        "detailed_summary": "Pricing",
-        "key_points": [
-          "Pricing"
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：Pricing",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": false,
-        "priority_score": 50.0,
-        "confidence": 0.55,
-        "tags": [
-          "商业化"
-        ],
-        "signal_strength": 35.5,
-        "reading_links": [
-          {
-            "source_id": "openrouter_blog",
-            "source_name": "OpenRouter Blog",
-            "source_type": "blog",
-            "source_role": "primary",
-            "original_title": "Pricing",
-            "url": "https://openrouter.ai/pricing",
-            "published_at": null,
-            "link_label": "OpenRouter Blog",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "blog"
         ]
       }
     ],
     "国际形势影响": [
       {
-        "id": "a22ad55c-ca4e-5429-b98a-a8d069836756",
-        "event_date": "2026-11-17",
+        "id": "54602e1b-b4f5-5e5c-80a3-14947c302cd1",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Nvidia dismisses 'Bring Jense...",
-        "one_sentence_summary": "A number of tech figures have backed an effort asking the AI chip giant to give Jensen Huang his job back.",
-        "detailed_summary": "Nvidia dismisses campaign to bring back Jensen Huang as Trump backs effort - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Business...",
+        "ai_title": "国际形势影响｜Nvidia says it won't reinstat...",
+        "one_sentence_summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang.",
+        "detailed_summary": "Nvidia reports bumper results as firm says it's not reinstating Jensen Huang - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Tech Nv...",
         "key_points": [
-          "Nvidia dismisses campaign to bring back Jensen Huang as Trump backs effort - BBC News BBC Homepage Skip to content Ac...",
-          "Trump said on Monday that he \"would certainly not mind\" if Huang was reinstated, joining a list of supporters includi...",
-          "But the BBC has been told the board of the AI chip giant is not interested in reinstating him after he resigned last...",
-          "The same day, the White House also said it will further restrict China's access to AI chips from firms like Nvidia.",
-          "The reported affairs created a crisis for one of the world's most valuable firms - a central company in AI and the US..."
+          "Nvidia reports bumper results as firm says it's not reinstating Jensen Huang - BBC News BBC Homepage Skip to content...",
+          "In the company's first results since Huang's dramatic exit last week, interim chief executive Colette Kress said it i...",
+          "But Nvidia's chair Harvey Jones, said \"The board does not intend to reinstate him.\" Nvidia reported that sales for th...",
+          "The company's profits also doubled from a year ago rising to $65bn.",
+          "Sales from data centres, a significant part of Nvidia's business, also doubled to $107bn."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1485,25 +1520,25 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex boss",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Nvidia says it won't reinstate Huang as it reports soaring sales",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 68.5,
+        "priority_score": 75.0,
         "confidence": 0.55,
         "tags": [
           "算力芯片",
           "地缘影响"
         ],
-        "signal_strength": 49.58,
+        "signal_strength": 54.0,
         "reading_links": [
           {
             "source_id": "bbc_world",
             "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex boss",
-            "url": "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 17 Nov 2026 02:37:53 GMT",
+            "original_title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
+            "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 18 Nov 2026 01:18:18 GMT",
             "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1515,18 +1550,18 @@
         ]
       },
       {
-        "id": "3fff7868-3975-5d1b-9890-bf31fd430b8e",
-        "event_date": "2026-11-17",
+        "id": "336ccd2d-365e-51db-a87b-ba099f7fb476",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜OpenAI sued by California ove...",
-        "one_sentence_summary": "Attorney General Rob Bonta alleges that the artificial intelligence misled and endangered the public.",
-        "detailed_summary": "OpenAI sued by California over Hugging Face attack - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Tech OpenAI sued by California ov...",
+        "ai_title": "国际形势影响｜How the Houthis fund war effo...",
+        "one_sentence_summary": "The Houthis’ expanding war economy fuels military recruitment while poverty deepens and public services deteriorate.",
+        "detailed_summary": "How the Houthis fund war effort and tighten grip on Yemen | Houthis News | Al Jazeera Skip links Skip to Content Live Sign up Navigation menu News Show more news sections Middle East Africa Asia US & Canada Latin America Europe Asia Pacific Explained Sport Opinion Video Interactives More Show more sections Originals Features Economy Human Rights Climate Crisis Investigations In Pictures Science & Technology Podcasts Travel Sponsored Content Live Click here to search Sign up Navigation menu US...",
         "key_points": [
-          "OpenAI sued by California over Hugging Face attack - BBC News BBC Homepage Skip to content Accessibility Help Your ac...",
-          "In the lawsuit, Bonta cited the July 2026 attack on the AI platform Hugging Face by experimental OpenAI agents which...",
-          "Bonta claimed OpenAI created a public nuisance and violated the state's unfair competition laws.",
-          "OpenAI spokesperson Drew Pusateri told the BBC in a statement that Bonta's lawsuit \"appears to single out OpenAI over...",
-          "Other major AI developers including Anthropic, Meta, and Google have also said their models have staged similar attacks."
+          "How the Houthis fund war effort and tighten grip on Yemen | Houthis News | Al Jazeera Skip links Skip to Content Live...",
+          "Listen (6 mins) Save Share How the Houthis fund war effort and tighten grip on Yemen on social media Share Add Al Jaz...",
+          "The fighting has been relentless over the past few months, as the Houthis advance.",
+          "The Houthis have faced pro-government forces, as well as Saudi-led coalition air strikes.",
+          "They have also faced international sanctions and attempts by Saudi Arabia and the Yemeni government to restrict their..."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1535,28 +1570,127 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：OpenAI sued by California over Hugging Face attack",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：How the Houthis fund war effort and tighten grip on Yemen",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 63.0,
+        "priority_score": 65.0,
+        "confidence": 0.55,
+        "tags": [
+          "产品更新",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 48.7,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "How the Houthis fund war effort and tighten grip on Yemen",
+            "url": "https://www.aljazeera.com/news/2026/11/18/how-the-houthis-fund-war-effort-and-tighten-grip-on-yemen?traffic_source=rss",
+            "published_at": "Wed, 18 Nov 2026 06:19:17 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "d1d96321-3e24-5d3f-960b-1dd56b8fb7ac",
+        "event_date": "2026-11-18",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Putin's Crimean Bridge partly...",
+        "one_sentence_summary": "Ukraine says the missile and drone attack on the strategic bridge in the Russian-annexed Crimea took weeks to plan.",
+        "detailed_summary": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify N...",
+        "key_points": [
+          "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine - BBC News BBC Homepage S...",
+          "Images shared by Ukrainian officials show a section of the Crimean Bridge collapsed into the water, dealing a logisti...",
+          "The Kremlin said it would rebuild the bridge \"better than before\".",
+          "Meanwhile in Kyiv, Mayor Vitaliy Klitschko said traffic had partially resumed on the Pivnichnyi (Northern) and Pivden...",
+          "Ukraine has long targeted the Crimean Bridge, which provides a road and rail route for Russian soldiers heading towar..."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.0,
+        "confidence": 0.55,
+        "tags": [
+          "国际金融",
+          "地缘影响"
+        ],
+        "signal_strength": 41.76,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+            "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 17 Nov 2026 21:24:35 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "e3ab300a-76ab-52bf-8bdb-1a974e0199f7",
+        "event_date": "2026-11-18",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Philippines police ask prosec...",
+        "one_sentence_summary": "Markle is being held in custody in the US after one charge and has previously denied all of the allegations.",
+        "detailed_summary": "Philippines police ask prosecutors to charge Thomas Markle over child sex abuse material - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify News...",
+        "key_points": [
+          "Philippines police ask prosecutors to charge Thomas Markle over child sex abuse material - BBC News BBC Homepage Skip...",
+          "Cebu province prosecutor Graeme Elmido told the BBC that police had filed documents requesting that Markle be charged...",
+          "Earlier this month, Markle, 82, was separately arrested and charged in the US with possession of child sexual abuse m...",
+          "The FBI said agents seized about 78 items, including film negatives, slides and books that they allege contained chil...",
+          "Markle, who is in custody in the US, has previously denied the allegations."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Philippines police ask prosecutors to charge Thomas Markle over child sex abuse material",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.0,
         "confidence": 0.55,
         "tags": [
           "智能体",
-          "编程工具",
-          "产品更新",
-          "开源生态",
+          "国际金融",
           "地缘影响"
         ],
-        "signal_strength": 48.84,
+        "signal_strength": 43.26,
         "reading_links": [
           {
             "source_id": "bbc_world",
             "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "OpenAI sued by California over Hugging Face attack",
-            "url": "https://www.bbc.co.uk/news/articles/c6wy4xv2mxglo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Mon, 16 Nov 2026 23:12:24 GMT",
+            "original_title": "Philippines police ask prosecutors to charge Thomas Markle over child sex abuse material",
+            "url": "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 17 Nov 2026 22:44:15 GMT",
             "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1568,18 +1702,14 @@
         ]
       },
       {
-        "id": "fa51405e-01a2-5109-930b-855350165b08",
-        "event_date": "2026-11-17",
+        "id": "6494630d-2eae-54c4-b5dc-1424224dc2fd",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Stories of survival and pAIn:...",
-        "one_sentence_summary": "The ongoing Israeli assault continues to have disastrous consequences for the people of southern Lebanon.",
-        "detailed_summary": "Stories of survival and pain: Children amid Israel’s war on south Lebanon | Israel attacks Lebanon News | Al Jazeera Skip links Skip to Content Live Sign up Navigation menu News Show more news sections Middle East Africa Asia US & Canada Latin America Europe Asia Pacific Explained Sport Opinion Video Interactives More Show more sections Originals Features Economy Human Rights Climate Crisis Investigations In Pictures Science & Technology Podcasts Travel Sponsored Content Live Click here to se...",
+        "ai_title": "国际形势影响｜Hungry, unpAId and afrAId: Af...",
+        "one_sentence_summary": "The exploitation of journalists is undermining independent reporting and the public’s right to know.",
+        "detailed_summary": "The exploitation of journalists is undermining independent reporting and the public’s right to know.",
         "key_points": [
-          "Stories of survival and pain: Children amid Israel’s war on south Lebanon | Israel attacks Lebanon News | Al Jazeera...",
-          "Has Hezbollah been weakened?",
-          "Why is Israel attacking Nabatieh?",
-          "REPORTER'S NOTEBOOK Features | Israel attacks Lebanon Stories of survival and pain: Children amid Israel’s war on sou...",
-          "Listen (4 mins) Save Share Stories of survival and pain: Children endure Israel’s war on south Lebanon on social medi..."
+          "The exploitation of journalists is undermining independent reporting and the public’s right to know."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1588,192 +1718,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Stories of survival and pain: Children amid Israel’s war on south Lebanon",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 62.5,
-        "confidence": 0.55,
-        "tags": [
-          "产品更新",
-          "地缘影响"
-        ],
-        "signal_strength": 45.5,
-        "reading_links": [
-          {
-            "source_id": "aljazeera_all",
-            "source_name": "Al Jazeera",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Stories of survival and pain: Children amid Israel’s war on south Lebanon",
-            "url": "https://www.aljazeera.com/features/2026/11/17/stories-of-survival-and-pain-children-amid-israels-war-on-south-lebanon?traffic_source=rss",
-            "published_at": "Tue, 17 Nov 2026 05:50:29 +0000",
-            "link_label": "Al Jazeera",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "e1d801c0-d73f-5a2b-8192-c2fc1c668bb2",
-        "event_date": "2026-11-17",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜UkrAIne and Russia trade stri...",
-        "one_sentence_summary": "A bridge linking Crimea and Russia has reportedly been damaged, while two major routes through Kyiv are closed.",
-        "detailed_summary": "Two major Kyiv bridges hit in Russian attack, mayor says - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat World Africa Asia Australia...",
-        "key_points": [
-          "Two major Kyiv bridges hit in Russian attack, mayor says - BBC News BBC Homepage Skip to content Accessibility Help Y...",
-          "A former adviser to Ukrainian President Volodymyr Zelensky shared images purporting to show that a section of the Cri...",
-          "Meanwhile, Kyiv Mayor Vitali Klitschko said the Northern and Southern bridges, important routes over the Dnipro River...",
-          "Those attacks came a day after Ukraine began its most recent attempt to disable the Crimea bridge, a prized Kremlin a...",
-          "Two people were killed in that strike overnight on Sunday, the Russian-installed governor of Crimea said."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Ukraine and Russia trade strikes on key bridges",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "地缘影响"
-        ],
-        "signal_strength": 40.26,
-        "reading_links": [
-          {
-            "source_id": "bbc_world",
-            "source_name": "BBC World",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Ukraine and Russia trade strikes on key bridges",
-            "url": "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 17 Nov 2026 07:30:43 GMT",
-            "link_label": "BBC World",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "7f088ca4-c010-550f-98d9-81359fd38603",
-        "event_date": "2026-11-17",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜UkrAIne accuses Russia of tar...",
-        "one_sentence_summary": "Efforts to recover bodies after a “double-tap” attack in southern Ukraine are being hampered by continuing Russian st...",
-        "detailed_summary": "Efforts to recover bodies after a “double-tap” attack in southern Ukraine are being hampered by continuing Russian strikes, officials say.",
-        "key_points": [
-          "Efforts to recover bodies after a “double-tap” attack in southern Ukraine are being hampered by continuing Russian st..."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "地缘影响"
-        ],
-        "signal_strength": 40.26,
-        "reading_links": [
-          {
-            "source_id": "bbc_world",
-            "source_name": "BBC World",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
-            "url": "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 17 Nov 2026 05:59:01 GMT",
-            "link_label": "BBC World",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "801aa157-f309-5350-b7d4-65dc222be143",
-        "event_date": "2026-11-17",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Imran Khan seeks urgent medic...",
-        "one_sentence_summary": "Pakistan's ex-prime minister, who has been in prison since August 2023, says he has been denied justice.",
-        "detailed_summary": "Pakistan's ex-prime minister, who has been in prison since August 2023, says he has been denied justice.",
-        "key_points": [
-          "Pakistan's ex-prime minister, who has been in prison since August 2023, says he has been denied justice."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Imran Khan seeks urgent medical care fearing he 'may not return alive'",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "地缘影响"
-        ],
-        "signal_strength": 40.26,
-        "reading_links": [
-          {
-            "source_id": "bbc_world",
-            "source_name": "BBC World",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Imran Khan seeks urgent medical care fearing he 'may not return alive'",
-            "url": "https://www.bbc.co.uk/news/articles/cr894xq5yeyko?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 17 Nov 2026 01:26:01 GMT",
-            "link_label": "BBC World",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "6f113187-9030-508b-a277-fa5ff04e3b6a",
-        "event_date": "2026-11-17",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Portugal coach Jorge Jesus re...",
-        "one_sentence_summary": "Ronaldo's mother said she was glad to see Jesus suffer his first defeat after he had 'deceived' her son.",
-        "detailed_summary": "Ronaldo's mother said she was glad to see Jesus suffer his first defeat after he had 'deceived' her son.",
-        "key_points": [
-          "Ronaldo's mother said she was glad to see Jesus suffer his first defeat after he had 'deceived' her son."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Portugal coach Jorge Jesus responds to criticism from Ronaldo’s mother",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Hungry, unpaid and afraid: Africa’s journalists pushed to the brink",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1788,9 +1733,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Portugal coach Jorge Jesus responds to criticism from Ronaldo’s mother",
-            "url": "https://www.aljazeera.com/sports/2026/11/17/cristiano-ronaldo-mother-portugal-coach-jorge-jesus?traffic_source=rss",
-            "published_at": "Tue, 17 Nov 2026 07:21:25 +0000",
+            "original_title": "Hungry, unpaid and afraid: Africa’s journalists pushed to the brink",
+            "url": "https://www.aljazeera.com/opinions/2026/11/18/hungry-unpaid-and-afraid-africas-journalists-pushed-to-the-brink?traffic_source=rss",
+            "published_at": "Wed, 18 Nov 2026 07:09:22 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1802,14 +1747,14 @@
         ]
       },
       {
-        "id": "e6649b4e-91db-5bd9-909c-39bd268e5500",
-        "event_date": "2026-11-17",
+        "id": "0567365b-22d9-52a0-b1d4-555201a60242",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜The new French malAIse",
-        "one_sentence_summary": "The ongoing student protests in France are a symptom of a much larger crisis affecting French society.",
-        "detailed_summary": "The ongoing student protests in France are a symptom of a much larger crisis affecting French society.",
+        "ai_title": "Africa’s 经济 future cannot depend on...",
+        "one_sentence_summary": "Trump's move to exclude South Africa and Rwanda from AGOA shows why Africa must accelerate its own economic integration.",
+        "detailed_summary": "Trump's move to exclude South Africa and Rwanda from AGOA shows why Africa must accelerate its own economic integration.",
         "key_points": [
-          "The ongoing student protests in France are a symptom of a much larger crisis affecting French society."
+          "Trump's move to exclude South Africa and Rwanda from AGOA shows why Africa must accelerate its own economic integration."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1818,7 +1763,54 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：The new French malaise",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Africa’s economic future cannot depend on Washington",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "国际金融",
+          "地缘影响"
+        ],
+        "signal_strength": 41.08,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Africa’s economic future cannot depend on Washington",
+            "url": "https://www.aljazeera.com/opinions/2026/11/18/africas-economic-future-cannot-depend-on-washington?traffic_source=rss",
+            "published_at": "Wed, 18 Nov 2026 06:22:59 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "b65077cd-dbba-5050-bcea-925ebb3a7553",
+        "event_date": "2026-11-18",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜What’s in the AIr you breathe...",
+        "one_sentence_summary": "India and Pakistan had 42 of the world’s 50 most polluted cities in 2025. Millions now face another toxic winter.",
+        "detailed_summary": "India and Pakistan had 42 of the world’s 50 most polluted cities in 2025. Millions now face another toxic winter.",
+        "key_points": [
+          "India and Pakistan had 42 of the world’s 50 most polluted cities in 2025.",
+          "Millions now face another toxic winter."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：What’s in the air you breathe? How to stay safe during smog season",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1833,9 +1825,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "The new French malaise",
-            "url": "https://www.aljazeera.com/opinions/2026/11/17/the-new-french-malaise?traffic_source=rss",
-            "published_at": "Tue, 17 Nov 2026 07:03:12 +0000",
+            "original_title": "What’s in the air you breathe? How to stay safe during smog season",
+            "url": "https://www.aljazeera.com/news/2026/11/18/whats-in-the-air-you-breathe-how-to-stay-safe-during-smog-season-2?traffic_source=rss",
+            "published_at": "Wed, 18 Nov 2026 05:55:08 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1847,15 +1839,14 @@
         ]
       },
       {
-        "id": "04a8300e-d9a2-5ec3-976e-dd38d99d281b",
-        "event_date": "2026-11-17",
+        "id": "22333598-2233-5823-89da-7a825b575eea",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Will Netanyahu lose this time?",
-        "one_sentence_summary": "The Israeli prime minister has manoeuvred out of tough situations to retain power. But he may find it hard this time.",
-        "detailed_summary": "The Israeli prime minister has manoeuvred out of tough situations to retain power. But he may find it hard this time.",
+        "ai_title": "国际形势影响｜Rafael Grossi is eyeing the U...",
+        "one_sentence_summary": "The nuclear watchdog chief is seen as technically competent, but questions remain about his plans for UN reform.",
+        "detailed_summary": "The nuclear watchdog chief is seen as technically competent, but questions remain about his plans for UN reform.",
         "key_points": [
-          "The Israeli prime minister has manoeuvred out of tough situations to retain power.",
-          "But he may find it hard this time."
+          "The nuclear watchdog chief is seen as technically competent, but questions remain about his plans for UN reform."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1864,7 +1855,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Will Netanyahu lose this time?",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Rafael Grossi is eyeing the UN’s top job. Will US support nuke his chances?",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1879,9 +1870,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Will Netanyahu lose this time?",
-            "url": "https://www.aljazeera.com/opinions/2026/11/17/will-netanyahu-finally-lose?traffic_source=rss",
-            "published_at": "Tue, 17 Nov 2026 06:53:23 +0000",
+            "original_title": "Rafael Grossi is eyeing the UN’s top job. Will US support nuke his chances?",
+            "url": "https://www.aljazeera.com/news/2026/11/18/rafael-grossi-wants-to-be-un-chief-will-trumps-support-nuke-his-chances?traffic_source=rss",
+            "published_at": "Wed, 18 Nov 2026 05:24:02 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1893,14 +1884,14 @@
         ]
       },
       {
-        "id": "ad2306d3-e87d-5909-b3a8-ee2f77020463",
-        "event_date": "2026-11-17",
+        "id": "91c653e0-c7a8-56da-a351-ce02787dde23",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Palestine Weekly: Israel’s po...",
-        "one_sentence_summary": "As Eisenkot’s bloc moves to form a government and courts the ultra-Orthodox, Gaza genocide and settler pogroms continue.",
-        "detailed_summary": "As Eisenkot’s bloc moves to form a government and courts the ultra-Orthodox, Gaza genocide and settler pogroms continue.",
+        "ai_title": "国际形势影响｜How the attack on Crimean Bri...",
+        "one_sentence_summary": "One of the key symbols of Russia's occupation of Ukraine has suffered major damage after a seven-stage attack by Kyiv.",
+        "detailed_summary": "One of the key symbols of Russia's occupation of Ukraine has suffered major damage after a seven-stage attack by Kyiv.",
         "key_points": [
-          "As Eisenkot’s bloc moves to form a government and courts the ultra-Orthodox, Gaza genocide and settler pogroms continue."
+          "One of the key symbols of Russia's occupation of Ukraine has suffered major damage after a seven-stage attack by Kyiv."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1909,25 +1900,25 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Palestine Weekly: Israel’s political reshuffle as the occupation grinds on",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：How the attack on Crimean Bridge unfolded",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 56.0,
+        "priority_score": 55.0,
         "confidence": 0.55,
         "tags": [
           "地缘影响"
         ],
-        "signal_strength": 39.58,
+        "signal_strength": 38.9,
         "reading_links": [
           {
-            "source_id": "aljazeera_all",
-            "source_name": "Al Jazeera",
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Palestine Weekly: Israel’s political reshuffle as the occupation grinds on",
-            "url": "https://www.aljazeera.com/news/2026/11/17/palestine-weekly-israels-political-reshuffle-as-the-occupation-grinds-on?traffic_source=rss",
-            "published_at": "Tue, 17 Nov 2026 06:06:58 +0000",
-            "link_label": "Al Jazeera",
+            "original_title": "How the attack on Crimean Bridge unfolded",
+            "url": "https://www.bbc.co.uk/news/articles/crz9dgz28zwdo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 17 Nov 2026 15:38:10 GMT",
+            "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
           }
@@ -1938,8 +1929,53 @@
         ]
       },
       {
-        "id": "a0a42e37-0bd7-5c78-851a-db33e50d1aa7",
-        "event_date": "2026-11-17",
+        "id": "5f33195e-48e7-57ec-85ee-0fd63ad2a400",
+        "event_date": "2026-11-18",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜'It was really scary': Mother...",
+        "one_sentence_summary": "Moscow has targeted bridges in Kyiv, while Ukraine severely damaged a critical bridge linking Russia to occupied Crimea.",
+        "detailed_summary": "Moscow has targeted bridges in Kyiv, while Ukraine severely damaged a critical bridge linking Russia to occupied Crimea.",
+        "key_points": [
+          "Moscow has targeted bridges in Kyiv, while Ukraine severely damaged a critical bridge linking Russia to occupied Crimea."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 55.0,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 38.9,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
+            "url": "https://www.bbc.co.uk/news/articles/cq7825234lgmo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 17 Nov 2026 17:19:57 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "44dafc1b-4c65-5d78-b1f7-1d512fb1560e",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Support CFR",
         "one_sentence_summary": "Support CFR",
@@ -1983,8 +2019,8 @@
         ]
       },
       {
-        "id": "b80bc315-d6ba-5e25-9cc7-528c7373d7ee",
-        "event_date": "2026-11-17",
+        "id": "8be7fcea-92e2-5e30-af00-f4d8903b0f53",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Member Login",
         "one_sentence_summary": "Member Login",
@@ -2028,8 +2064,8 @@
         ]
       },
       {
-        "id": "3282bb53-1c6b-5f93-91d3-176884b0a570",
-        "event_date": "2026-11-17",
+        "id": "6136df34-8e80-5133-b7eb-3e1cce4e476b",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Regions",
         "one_sentence_summary": "Regions",
@@ -2073,8 +2109,8 @@
         ]
       },
       {
-        "id": "e376053a-0b65-5d71-acd8-0c38e541248f",
-        "event_date": "2026-11-17",
+        "id": "c56a4e7e-0839-52dc-be9c-9b49202da277",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Topics",
         "one_sentence_summary": "Topics",
@@ -2118,8 +2154,8 @@
         ]
       },
       {
-        "id": "cfb055d9-e992-536d-acb6-8d91f0d644dc",
-        "event_date": "2026-11-17",
+        "id": "228247fd-6db0-51d4-995b-c3256fd9ac20",
+        "event_date": "2026-11-18",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Research",
         "one_sentence_summary": "Research",
@@ -2166,8 +2202,8 @@
     ],
     "国际金融": [
       {
-        "id": "2964b4a7-2469-59e6-ab43-b60334d81f4e",
-        "event_date": "2026-11-17",
+        "id": "c496a8e2-79ec-5588-8634-9c3880585ccf",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "美国财政部 Sanctions Guatemalan Drug Traf...",
         "one_sentence_summary": "美国财政部 Sanctions Guatemalan Drug Traf...",
@@ -2215,8 +2251,8 @@
         ]
       },
       {
-        "id": "3294e045-914b-5459-aee2-e00abb136d2a",
-        "event_date": "2026-11-17",
+        "id": "76154dc6-528a-5f2c-ad8f-64a89115ebc8",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "Remarks from Secretary of the 美国财政部...",
         "one_sentence_summary": "Remarks from Secretary of the 美国财政部...",
@@ -2264,57 +2300,8 @@
         ]
       },
       {
-        "id": "ce40e302-ae2e-57d1-950b-cc4720ad427e",
-        "event_date": "2026-11-17",
-        "category": "国际金融",
-        "ai_title": "Operation 经济 Outcast Sanctions Eight...",
-        "one_sentence_summary": "Operation 经济 Outcast Sanctions Eight...",
-        "detailed_summary": "Operation 经济 Outcast Sanctions Eight...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
-        "key_points": [
-          "Operation 经济 Outcast Sanctions Eight...",
-          "原文为英文，发布前需复核具体日期、金额和政策表述。"
-        ],
-        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "",
-          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
-        },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Operation Economic Outcast Sanctions Eight Canadian Money Services Businesses Enabling Iranian Regime",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 66.0,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "融资并购",
-          "政策监管",
-          "国际金融"
-        ],
-        "signal_strength": 50.88,
-        "reading_links": [
-          {
-            "source_id": "us_treasury_press",
-            "source_name": "U.S. Treasury Press Releases",
-            "source_type": "finance",
-            "source_role": "primary",
-            "original_title": "Operation Economic Outcast Sanctions Eight Canadian Money Services Businesses Enabling Iranian Regime",
-            "url": "https://home.treasury.gov/news/press-releases/sb0686/",
-            "published_at": null,
-            "link_label": "U.S. Treasury Press Releases",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "finance"
-        ]
-      },
-      {
-        "id": "14a57a8c-8277-52d3-a866-308a9268cf82",
-        "event_date": "2026-11-17",
+        "id": "a8dfd8d9-5ea8-51bb-b553-c7f32f0e3067",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "国际金融｜September 29, 2026IMF Executive...",
         "one_sentence_summary": "国际金融｜September 29, 2026IMF Executive...",
@@ -2374,8 +2361,106 @@
         ]
       },
       {
-        "id": "43def4a2-2055-5af7-94fb-3698d8501bd4",
-        "event_date": "2026-11-17",
+        "id": "ff143d8e-f35d-5f48-b809-bdee35f2fb8a",
+        "event_date": "2026-11-18",
+        "category": "国际金融",
+        "ai_title": "国际金融｜FinCEN Issues Proposed Rule to...",
+        "one_sentence_summary": "国际金融｜FinCEN Issues Proposed Rule to...",
+        "detailed_summary": "国际金融｜FinCEN Issues Proposed Rule to...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "国际金融｜FinCEN Issues Proposed Rule to...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：FinCEN Issues Proposed Rule to Strengthen Customer Due Diligence Requirements for Covered Financial Institutions",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 46.46,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "FinCEN Issues Proposed Rule to Strengthen Customer Due Diligence Requirements for Covered Financial Institutions",
+            "url": "https://home.treasury.gov/news/press-releases/sb0691/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "8303d1fa-4151-5884-a534-06b5842d45f6",
+        "event_date": "2026-11-18",
+        "category": "国际金融",
+        "ai_title": "美国财政部, IRS Issue Final Rules to Help...",
+        "one_sentence_summary": "美国财政部, IRS Issue Final Rules to Help...",
+        "detailed_summary": "美国财政部, IRS Issue Final Rules to Help...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
+        "key_points": [
+          "美国财政部, IRS Issue Final Rules to Help...",
+          "原文为英文，发布前需复核具体日期、金额和政策表述。"
+        ],
+        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "",
+          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
+        },
+        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Treasury, IRS Issue Final Rules to Help Hardworking Americans Build a Financially Secure Retirement",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 59.5,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "融资并购",
+          "政策监管",
+          "国际金融"
+        ],
+        "signal_strength": 46.46,
+        "reading_links": [
+          {
+            "source_id": "us_treasury_press",
+            "source_name": "U.S. Treasury Press Releases",
+            "source_type": "finance",
+            "source_role": "primary",
+            "original_title": "Treasury, IRS Issue Final Rules to Help Hardworking Americans Build a Financially Secure Retirement",
+            "url": "https://home.treasury.gov/news/press-releases/sb0690/",
+            "published_at": null,
+            "link_label": "U.S. Treasury Press Releases",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "finance"
+        ]
+      },
+      {
+        "id": "1000cbca-62a8-5090-b23b-73cb36ed0ad9",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "国际金融｜FATF Recognizes Effectiveness o...",
         "one_sentence_summary": "国际金融｜FATF Recognizes Effectiveness o...",
@@ -2423,57 +2508,8 @@
         ]
       },
       {
-        "id": "7e458a6a-f04e-5355-af6b-5a20cfc7c38a",
-        "event_date": "2026-11-17",
-        "category": "国际金融",
-        "ai_title": "Operation 经济 Outcast Severs MEXC Glo...",
-        "one_sentence_summary": "Operation 经济 Outcast Severs MEXC Glo...",
-        "detailed_summary": "Operation 经济 Outcast Severs MEXC Glo...。该条来自U.S. Treasury Press Releases，建议结合原文关注其对利率、汇率、风险资产和科技股估值的影响。",
-        "key_points": [
-          "Operation 经济 Outcast Severs MEXC Glo...",
-          "原文为英文，发布前需复核具体日期、金额和政策表述。"
-        ],
-        "why_it_matters": "可能影响美元利率、风险资产、科技股估值或全球资金流向。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "",
-          "finance": "可关注利率、汇率、商品、科技股和风险偏好的变化。"
-        },
-        "topic_angle": "从国际金融变量对 AI 与科技股的影响解读：Operation Economic Outcast Severs MEXC Global’s Access to the U.S. Financial System",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 59.5,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "融资并购",
-          "政策监管",
-          "国际金融"
-        ],
-        "signal_strength": 46.46,
-        "reading_links": [
-          {
-            "source_id": "us_treasury_press",
-            "source_name": "U.S. Treasury Press Releases",
-            "source_type": "finance",
-            "source_role": "primary",
-            "original_title": "Operation Economic Outcast Severs MEXC Global’s Access to the U.S. Financial System",
-            "url": "https://home.treasury.gov/news/press-releases/sb0685/",
-            "published_at": null,
-            "link_label": "U.S. Treasury Press Releases",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "finance"
-        ]
-      },
-      {
-        "id": "96dc67a0-f7d3-5e35-a1ad-369c4347f4d1",
-        "event_date": "2026-11-17",
+        "id": "af68b113-fc99-5ee5-b4e3-589f9c0e1829",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "国际金融｜GDP (Advance Estimate), 3rd Qua...",
         "one_sentence_summary": "国际金融｜GDP (Advance Estimate), 3rd Qua...",
@@ -2521,8 +2557,8 @@
         ]
       },
       {
-        "id": "fc03f39f-505b-55bd-93f0-cf9f6fe37548",
-        "event_date": "2026-11-17",
+        "id": "c2da01a7-2a4f-542e-a431-258dfdef65a0",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "欧洲央行启动保密统计数据研究访问试点",
         "one_sentence_summary": "欧洲央行启动保密统计数据研究访问试点",
@@ -2571,8 +2607,8 @@
         ]
       },
       {
-        "id": "0ce7e696-4384-5787-b137-e2d2781456c4",
-        "event_date": "2026-11-17",
+        "id": "bb796a7e-df3c-565a-854f-b4c3cbd8d003",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "美国4月国际货物和服务贸易数据发布",
         "one_sentence_summary": "美国4月国际货物和服务贸易数据发布",
@@ -2620,8 +2656,8 @@
         ]
       },
       {
-        "id": "7bd948d4-cf8d-51da-bcdf-9242dc170c81",
-        "event_date": "2026-11-17",
+        "id": "4fdae981-648c-5097-b4f9-f162bc5bba6a",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "美国4月个人收入和支出数据发布",
         "one_sentence_summary": "美国4月个人收入和支出数据发布",
@@ -2670,8 +2706,8 @@
         ]
       },
       {
-        "id": "6b27885a-16e3-5aa5-a80c-6d44443d32b3",
-        "event_date": "2026-11-17",
+        "id": "dda04c79-4ad9-5e0b-962d-0a2eed63e1b7",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "国际金融｜U.S. International Transactions...",
         "one_sentence_summary": "国际金融｜U.S. International Transactions...",
@@ -2719,8 +2755,8 @@
         ]
       },
       {
-        "id": "76a282ca-525e-5762-82df-06d2b162aa91",
-        "event_date": "2026-11-17",
+        "id": "b61499d7-b718-59ae-9035-cdab377a5435",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "国际金融｜Direct Investment by Country an...",
         "one_sentence_summary": "国际金融｜Direct Investment by Country an...",
@@ -2768,8 +2804,8 @@
         ]
       },
       {
-        "id": "2f8d0605-b1aa-53c1-89fa-71876b843a84",
-        "event_date": "2026-11-17",
+        "id": "fca9657d-a5b3-5834-be4e-9ca7b403694b",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "国际金融｜October 7, 2026Coming Soon: 202...",
         "one_sentence_summary": "国际金融｜October 7, 2026Coming Soon: 202...",
@@ -2817,8 +2853,8 @@
         ]
       },
       {
-        "id": "8a1eabec-a564-5b7a-b272-fd943b9d5616",
-        "event_date": "2026-11-17",
+        "id": "0ae65264-1ac0-54a5-a5f3-9acf696089e8",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "国际金融｜October 1, 2026Managing Directo...",
         "one_sentence_summary": "国际金融｜October 1, 2026Managing Directo...",
@@ -2866,8 +2902,8 @@
         ]
       },
       {
-        "id": "73fb8ffa-5497-5387-8ece-f772b40bb916",
-        "event_date": "2026-11-17",
+        "id": "cd0c5e7f-de39-575e-9a3e-4c3126bdd257",
+        "event_date": "2026-11-18",
         "category": "国际金融",
         "ai_title": "国际金融｜September 29, 2026IMF Staff Con...",
         "one_sentence_summary": "国际金融｜September 29, 2026IMF Staff Con...",
@@ -2918,18 +2954,14 @@
   },
   "top10": [
     {
-      "id": "c74f00ad-bfa3-5852-8386-49257ae6434b",
-      "event_date": "2026-11-17",
+      "id": "13d4d9f3-d159-5add-8364-ca068e039de2",
+      "event_date": "2026-11-18",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Does the Ranking Hold? A Pract...",
-      "one_sentence_summary": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by met...",
-      "detailed_summary": "[2611.17339] Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs Skip to main content Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search Computer Science > Artificial Intelligence arXiv:2611.17339 (cs) [Submitted on 31 Aug 2026] Title: Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs Authors: Shubhra Mittal , Gaurav Naresh Mittal View a P...",
+      "ai_title": "大模型动态｜Introducing GPT-6.2 Astra and...",
+      "one_sentence_summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower co...",
+      "detailed_summary": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
       "key_points": [
-        "[2611.17339] Does the Ranking Hold?",
-        "A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs Skip to main content Searc...",
-        "A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs Authors: Shubhra Mittal ,...",
-        "A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs, by Shubhra Mittal and Gau...",
-        "The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and G..."
+        "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower co..."
       ],
       "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
@@ -2938,37 +2970,38 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "topic_angle": "从能力、成本和生态角度解读：Introducing GPT-6.2 Astra and Sol",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 92.0,
+      "priority_score": 93.0,
       "confidence": 0.55,
       "tags": [
-        "论文研究"
+        "官方消息",
+        "编程工具"
       ],
-      "signal_strength": 64.06,
+      "signal_strength": 71.24,
       "reading_links": [
         {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
-          "source_type": "research",
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
           "source_role": "primary",
-          "original_title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
-          "url": "https://arxiv.org/abs/2611.17339",
-          "published_at": "Tue, 17 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
+          "original_title": "Introducing GPT-6.2 Astra and Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "published_at": "Tue, 17 Nov 2026 17:45:00 GMT",
+          "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
         }
       ],
       "source_count": 1,
       "source_types": [
-        "research"
+        "official"
       ]
     },
     {
-      "id": "faff7c68-f274-5920-b3ed-00206137351f",
-      "event_date": "2026-11-17",
+      "id": "5afc05a2-0510-57e5-8e1d-023ba226e0e9",
+      "event_date": "2026-11-18",
       "category": "大模型动态",
       "ai_title": "大模型动态｜Introducing Claude Fable 5.2 a...",
       "one_sentence_summary": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 \\ Anthropic Skip to main content News Research Policy Commitments...",
@@ -2999,7 +3032,7 @@
         "政策监管",
         "论文研究"
       ],
-      "signal_strength": 70.84,
+      "signal_strength": 78.34,
       "reading_links": [
         {
           "source_id": "anthropic_news",
@@ -3012,22 +3045,34 @@
           "link_label": "Anthropic News",
           "is_primary_reading_link": true,
           "display_order": 1
+        },
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "related",
+          "original_title": "Introducing ChatGPT for Sales",
+          "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+          "published_at": "Tue, 17 Nov 2026 08:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": false,
+          "display_order": 2
         }
       ],
-      "source_count": 1,
+      "source_count": 2,
       "source_types": [
         "official"
       ]
     },
     {
-      "id": "30cd1d92-4f22-5730-b1c7-84f5633cc31f",
-      "event_date": "2026-11-17",
+      "id": "2dda4e8d-046c-58a4-ba98-8bff5ac941d1",
+      "event_date": "2026-11-18",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Broadening access to AI for sc...",
-      "one_sentence_summary": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to ou...",
-      "detailed_summary": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+      "ai_title": "大模型动态｜Introducing ChatGPT for Sales",
+      "one_sentence_summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitch...",
+      "detailed_summary": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitches, update your CRM, and move deals forward.",
       "key_points": [
-        "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to ou..."
+        "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitch..."
       ],
       "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
@@ -3036,25 +3081,87 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Broadening access to AI for scientists",
+      "topic_angle": "从能力、成本和生态角度解读：Introducing ChatGPT for Sales",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 87.0,
       "confidence": 0.55,
       "tags": [
         "官方消息",
+        "编程工具",
         "论文研究"
       ],
-      "signal_strength": 67.16,
+      "signal_strength": 76.16,
       "reading_links": [
         {
           "source_id": "openai_news",
           "source_name": "OpenAI News",
           "source_type": "official",
           "source_role": "primary",
-          "original_title": "Broadening access to AI for scientists",
-          "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
-          "published_at": "Mon, 16 Nov 2026 17:00:00 GMT",
+          "original_title": "Introducing ChatGPT for Sales",
+          "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+          "published_at": "Tue, 17 Nov 2026 08:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        },
+        {
+          "source_id": "anthropic_news",
+          "source_name": "Anthropic News",
+          "source_type": "official",
+          "source_role": "related",
+          "original_title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 Our most capable models for daunting technical work, Claude Fable 5.2 and Claude Mythos 5.2 set a new bar in coding, finance, and the sciences.",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "published_at": null,
+          "link_label": "Anthropic News",
+          "is_primary_reading_link": false,
+          "display_order": 2
+        }
+      ],
+      "source_count": 2,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "0d6cdf24-265c-5199-9827-b26bfc5248db",
+      "event_date": "2026-11-18",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Astra for Law leads in legal i...",
+      "one_sentence_summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now...",
+      "detailed_summary": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+      "key_points": [
+        "Astra for Law ranked first in a launch evaluation spanning 24 areas of law.",
+        "Every ChatGPT Enterprise customer can now request access."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Astra for Law leads in legal intelligence",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 86.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "模型发布",
+        "商业化",
+        "融资并购"
+      ],
+      "signal_strength": 69.48,
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Astra for Law leads in legal intelligence",
+          "url": "https://openai.com/index/astra-law-6-2",
+          "published_at": "Tue, 17 Nov 2026 00:00:00 GMT",
           "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
@@ -3066,15 +3173,18 @@
       ]
     },
     {
-      "id": "508ef65b-1eb9-57b0-99c9-ea64b01737cb",
-      "event_date": "2026-11-17",
+      "id": "236f12d0-2c17-5f77-8838-cd0fc3e0a06b",
+      "event_date": "2026-11-18",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Science at the Frontier: How s...",
-      "one_sentence_summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivit...",
-      "detailed_summary": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivity, and expectations for discovery.",
+      "ai_title": "大模型动态｜ChAIn-of-Thought Controllabili...",
+      "one_sentence_summary": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting h...",
+      "detailed_summary": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors. We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces rewritten in the voices of diverse personas. This induces a broader ability to control CoT, even though...",
       "key_points": [
-        "Explore how more than 1,800 scientists use ChatGPT in research.",
-        "See findings on daily workflows, reported productivity, and expectations for discovery."
+        "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting h...",
+        "One risk is that models could deliberately shape their reasoning to make it opaque to monitors.",
+        "We stress-test this risk through persona-control training: supervised fine-tuning on mathematical reasoning traces re...",
+        "This induces a broader ability to control CoT, even though training contains no monitor-evasion examples.",
+        "In covert side-task evaluations, traces in which a gpt-oss-20b model organism completes the hidden side task contain..."
       ],
       "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
@@ -3083,76 +3193,27 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Science at the Frontier: How scientists use ChatGPT",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 87.0,
-      "confidence": 0.55,
-      "tags": [
-        "官方消息",
-        "产品更新",
-        "论文研究"
-      ],
-      "signal_strength": 68.66,
-      "reading_links": [
-        {
-          "source_id": "openai_news",
-          "source_name": "OpenAI News",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Science at the Frontier: How scientists use ChatGPT",
-          "url": "https://openai.com/index/science-at-the-frontier",
-          "published_at": "Mon, 16 Nov 2026 12:00:00 GMT",
-          "link_label": "OpenAI News",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "official"
-      ]
-    },
-    {
-      "id": "ed3d9ce0-7451-55db-a425-868b5aa4db1a",
-      "event_date": "2026-11-17",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜LoRAWeaver: Directional Adapte...",
-      "one_sentence_summary": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining...",
-      "detailed_summary": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings.",
-      "key_points": [
-        "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining.",
-        "Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of tas...",
-        "This pool complicates adapter selection during inference.",
-        "Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their u...",
-        "This paper treats adapter routing as a representation alignment problem in the adapter-output space."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+      "topic_angle": "从能力、成本和生态角度解读：Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 85.0,
       "confidence": 0.55,
       "tags": [
-        "编程工具",
+        "智能体",
+        "融资并购",
+        "国际金融",
         "论文研究"
       ],
-      "signal_strength": 60.8,
+      "signal_strength": 63.8,
       "reading_links": [
         {
           "source_id": "arxiv_cs_ai",
           "source_name": "arXiv cs.AI",
           "source_type": "research",
           "source_role": "primary",
-          "original_title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
-          "url": "https://arxiv.org/abs/2611.17340",
-          "published_at": "Tue, 17 Nov 2026 00:00:00 -0500",
+          "original_title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+          "url": "https://arxiv.org/abs/2611.21799",
+          "published_at": "Wed, 18 Nov 2026 00:00:00 -0500",
           "link_label": "arXiv cs.AI",
           "is_primary_reading_link": true,
           "display_order": 1
@@ -3164,8 +3225,8 @@
       ]
     },
     {
-      "id": "3ae0a6b7-002f-573d-8289-e5eba6228b74",
-      "event_date": "2026-11-17",
+      "id": "60df5bb2-09c7-50e9-a1ab-464fc868ddfb",
+      "event_date": "2026-11-18",
       "category": "大模型动态",
       "ai_title": "大模型动态｜Gemini models",
       "one_sentence_summary": "Gemini models",
@@ -3209,18 +3270,70 @@
       ]
     },
     {
-      "id": "af1fd0e7-e987-5472-bf58-d5cd39e109c4",
-      "event_date": "2026-11-17",
-      "category": "AI行业资讯",
-      "ai_title": "AI行业资讯｜NVIDIA DGX Spark Developer Ki...",
-      "one_sentence_summary": "At SC26, an annual supercomputing conference taking place this week in Chicago, NVIDIA is introducing the DGX Spark H...",
-      "detailed_summary": "NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab | NVIDIA Blog Skip to content NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab November 16, 2026 by Allen Bourgoyne 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! At SC26, an annual supercomputing conference taking place this week in Chicago, NVIDIA is introducing the DGX Spark HPC Developer Kit for researchers, academics and developers. The kit is a four-node cluster of...",
+      "id": "3b64a22f-f9c1-5f25-af9d-4137ab74507a",
+      "event_date": "2026-11-18",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜CrisisBench: an evaluation sui...",
+      "one_sentence_summary": "arXiv:2611.21622v1 Announce Type: new Abstract: Background: Crisis helplines are essential to mental health systems b...",
+      "detailed_summary": "arXiv:2611.21622v1 Announce Type: new Abstract: Background: Crisis helplines are essential to mental health systems but are often understaffed and underfunded. LLMs could support counselors, but existing benchmarks do not capture the escalation, risk assessment, and de-escalation central to crisis conversations, while privacy restrictions limit use of real transcripts. Methods: We present CrisisBench, a privacy-preserving suite for single- and multi-turn crisis counseling evaluation. It inclu...",
       "key_points": [
-        "NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab | NVIDIA Blog Skip to content NVIDIA DGX Spark...",
-        "At SC26, an annual supercomputing conference taking place this week in Chicago, NVIDIA is introducing the DGX Spark H...",
-        "The kit is a four-node cluster of NVIDIA DGX Spark systems , each connected directly to its two neighbors in a ring,...",
-        "Researchers get a place at their desk to run multi-node scientific workloads, AI models and agents, instead of waitin...",
-        "The kit puts the GB10 Grace Blackwell Superchip on researchers’ desks."
+        "arXiv:2611.21622v1 Announce Type: new Abstract: Background: Crisis helplines are essential to mental health systems b...",
+        "LLMs could support counselors, but existing benchmarks do not capture the escalation, risk assessment, and de-escalat...",
+        "Methods: We present CrisisBench, a privacy-preserving suite for single- and multi-turn crisis counseling evaluation.",
+        "It includes 1,085 single-turn tasks from 200 de-identified conversations and 1,185 patient LLMs derived from hotline...",
+        "Patient models and a 23-item LLM judge were calibrated against expert counselors."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：CrisisBench: an evaluation suite for crisis counseling AI",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 78.0,
+      "confidence": 0.55,
+      "tags": [
+        "评测榜单",
+        "融资并购",
+        "国际金融",
+        "论文研究"
+      ],
+      "signal_strength": 59.04,
+      "reading_links": [
+        {
+          "source_id": "arxiv_cs_cl",
+          "source_name": "arXiv cs.CL",
+          "source_type": "research",
+          "source_role": "primary",
+          "original_title": "CrisisBench: an evaluation suite for crisis counseling AI",
+          "url": "https://arxiv.org/abs/2611.21622",
+          "published_at": "Wed, 18 Nov 2026 00:00:00 -0500",
+          "link_label": "arXiv cs.CL",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "research"
+      ]
+    },
+    {
+      "id": "cd7d6d07-ac25-5251-b61f-f6de4b8c91d4",
+      "event_date": "2026-11-18",
+      "category": "AI行业资讯",
+      "ai_title": "AI行业资讯｜Ian Buck Kicks Off NVIDIA’s W...",
+      "one_sentence_summary": "NVIDIA’s Ian Buck kicked off the company’s week at SC26 in Chicago on Monday with new tools for AI agents, software t...",
+      "detailed_summary": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents | NVIDIA Blog Skip to content Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents At SC26, NVIDIA’s VP of Hyperscale and HPC laid out how researchers can combine simulation, AI and agents to accelerate scientific discovery. November 17, 2026 by Brian Caulfield 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! NVIDIA’s Ian Buck kicked off the company’s week at SC26...",
+      "key_points": [
+        "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents | NVIDIA Blog Skip to content Ian Buck K...",
+        "November 17, 2026 by Brian Caulfield 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
+        "NVIDIA’s Ian Buck kicked off the company’s week at SC26 in Chicago on Monday with new tools for AI agents, software t...",
+        "In NVIDIA’s special address, Buck announced Nemotron for Science , the Rubin HPC GPU and an expanded Vera CPU platfor...",
+        "He also detailed a new collaboration in quantum computing with IBM and Fermi National Accelerator Laboratory ."
       ],
       "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
       "impact_analysis": {
@@ -3229,28 +3342,28 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从商业化和产业竞争角度解读：NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab",
+      "topic_angle": "从商业化和产业竞争角度解读：Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 76.0,
+      "priority_score": 77.0,
       "confidence": 0.55,
       "tags": [
         "官方消息",
         "智能体",
-        "编程工具",
         "算力芯片",
+        "国际金融",
         "论文研究"
       ],
-      "signal_strength": 62.68,
+      "signal_strength": 63.36,
       "reading_links": [
         {
           "source_id": "nvidia_blog",
           "source_name": "NVIDIA Blog",
           "source_type": "official",
           "source_role": "primary",
-          "original_title": "NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab",
-          "url": "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/",
-          "published_at": "Mon, 16 Nov 2026 23:00:05 +0000",
+          "original_title": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+          "url": "https://blogs.nvidia.com/blog/ian-buck-sc26/",
+          "published_at": "Tue, 17 Nov 2026 14:00:10 +0000",
           "link_label": "NVIDIA Blog",
           "is_primary_reading_link": true,
           "display_order": 1
@@ -3262,181 +3375,133 @@
       ]
     },
     {
-      "id": "62f3c850-5aa6-534a-8fb6-391cdd04b939",
-      "event_date": "2026-11-17",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜Strengthening the fight agAIns...",
-      "one_sentence_summary": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploita...",
-      "detailed_summary": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploitation and abuse.",
+      "id": "54602e1b-b4f5-5e5c-80a3-14947c302cd1",
+      "event_date": "2026-11-18",
+      "category": "国际形势影响",
+      "ai_title": "国际形势影响｜Nvidia says it won't reinstat...",
+      "one_sentence_summary": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang.",
+      "detailed_summary": "Nvidia reports bumper results as firm says it's not reinstating Jensen Huang - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Tech Nv...",
       "key_points": [
-        "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploita..."
+        "Nvidia reports bumper results as firm says it's not reinstating Jensen Huang - BBC News BBC Homepage Skip to content...",
+        "In the company's first results since Huang's dramatic exit last week, interim chief executive Colette Kress said it i...",
+        "But Nvidia's chair Harvey Jones, said \"The board does not intend to reinstate him.\" Nvidia reported that sales for th...",
+        "The company's profits also doubled from a year ago rising to $65bn.",
+        "Sales from data centres, a significant part of Nvidia's business, also doubled to $107bn."
       ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
       "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
+        "technology": "",
+        "business": "",
+        "policy": "可关注监管、地缘政治和跨境产业链影响。",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Strengthening the fight against online child sexual abuse with new tools and support",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 75.5,
-      "confidence": 0.55,
-      "tags": [
-        "官方消息"
-      ],
-      "signal_strength": 57.84,
-      "reading_links": [
-        {
-          "source_id": "openai_news",
-          "source_name": "OpenAI News",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Strengthening the fight against online child sexual abuse with new tools and support",
-          "url": "https://openai.com/index/strengthening-online-child-safety",
-          "published_at": "Mon, 16 Nov 2026 17:00:00 GMT",
-          "link_label": "OpenAI News",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "official"
-      ]
-    },
-    {
-      "id": "9dc95317-8bc0-5aa8-a80f-e5b30d549a39",
-      "event_date": "2026-11-17",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜Strengthening NATO and allied...",
-      "one_sentence_summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes...",
-      "detailed_summary": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
-      "key_points": [
-        "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes..."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：Strengthening NATO and allied cyber defenses with AI",
+      "topic_angle": "从国际形势对 AI 产业链的影响解读：Nvidia says it won't reinstate Huang as it reports soaring sales",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 75.0,
       "confidence": 0.55,
       "tags": [
-        "官方消息"
+        "算力芯片",
+        "地缘影响"
       ],
-      "signal_strength": 57.5,
+      "signal_strength": 54.0,
       "reading_links": [
         {
-          "source_id": "openai_news",
-          "source_name": "OpenAI News",
-          "source_type": "official",
+          "source_id": "bbc_world",
+          "source_name": "BBC World",
+          "source_type": "media",
           "source_role": "primary",
-          "original_title": "Strengthening NATO and allied cyber defenses with AI",
-          "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
-          "published_at": "Tue, 17 Nov 2026 00:00:00 GMT",
-          "link_label": "OpenAI News",
+          "original_title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
+          "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+          "published_at": "Wed, 18 Nov 2026 01:18:18 GMT",
+          "link_label": "BBC World",
           "is_primary_reading_link": true,
           "display_order": 1
         }
       ],
       "source_count": 1,
       "source_types": [
-        "official"
+        "media"
       ]
     },
     {
-      "id": "a18bbe08-1e9d-536a-98d9-5aa97fd3bea3",
-      "event_date": "2026-11-17",
-      "category": "AI行业资讯",
-      "ai_title": "AI行业资讯｜How the World’s Most Advanced...",
-      "one_sentence_summary": "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms. That...",
-      "detailed_summary": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future | NVIDIA Blog Skip to content How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future Over two decades running the most complex manufacturing on the planet, NVIDIA operations chief Deb Shoquist has required three things of every supply chain partner: extreme technical skill, unshakeable trust and a willingness to always try something new. November 16, 2026 by NVIDIA Writers 0 Comments Share...",
+      "id": "e6c13f00-d45e-5699-ae46-cd4c47af6242",
+      "event_date": "2026-11-18",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜llama.cpp v1.0.0 : A stronger...",
+      "one_sentence_summary": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "detailed_summary": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
       "key_points": [
-        "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future | NVIDIA Blog Skip to content How the...",
-        "November 16, 2026 by NVIDIA Writers 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
-        "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms.",
-        "That description sums up the job, but it doesn’t begin to encompass what Shoquist has made possible over decades.",
-        "Shoquist, her team and their global network of manufacturing partners enable NVIDIA to introduce world-leading techno..."
+        "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem"
       ],
-      "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
         "technology": "需结合原文判断技术路线和能力边界。",
         "business": "可关注对企业采购、产品竞争和商业模式的影响。",
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从商业化和产业竞争角度解读：How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
+      "topic_angle": "从能力、成本和生态角度解读：llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 74.0,
+      "priority_score": 71.0,
       "confidence": 0.55,
-      "tags": [
-        "官方消息",
-        "模型发布",
-        "产品更新",
-        "算力芯片"
-      ],
-      "signal_strength": 61.32,
+      "tags": [],
+      "signal_strength": 48.28,
       "reading_links": [
         {
-          "source_id": "nvidia_blog",
-          "source_name": "NVIDIA Blog",
-          "source_type": "official",
+          "source_id": "huggingface_blog",
+          "source_name": "Hugging Face Blog",
+          "source_type": "research",
           "source_role": "primary",
-          "original_title": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
-          "url": "https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/",
-          "published_at": "Mon, 16 Nov 2026 20:00:37 +0000",
-          "link_label": "NVIDIA Blog",
+          "original_title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+          "published_at": "Fri, 13 Nov 2026 14:05:22 GMT",
+          "link_label": "Hugging Face Blog",
           "is_primary_reading_link": true,
           "display_order": 1
         }
       ],
       "source_count": 1,
       "source_types": [
-        "official"
+        "research"
       ]
     }
   ],
   "topic_pool": [
     {
       "rank": 1,
-      "title": "从能力、成本和生态角度解读：Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "title": "从能力、成本和生态角度解读：Introducing GPT-6.2 Astra and Sol",
       "source_event_ids": [
-        "c74f00ad-bfa3-5852-8386-49257ae6434b"
+        "13d4d9f3-d159-5add-8364-ca068e039de2"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.17339v1 Announce Type: new Abstract: Hallucination detection for large language models is dominated by met...",
+      "why_today": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower co...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
-        "论文研究"
+        "官方消息",
+        "编程工具"
       ],
       "source_count": 1,
       "source_names": [
-        "arXiv cs.AI"
+        "OpenAI News"
       ],
       "source_types": [
-        "research"
+        "official"
       ],
-      "signal_strength": 64.06,
-      "recommendation_reason": "标签：论文研究",
+      "signal_strength": 71.24,
+      "recommendation_reason": "含官方来源；标签：官方消息、编程工具",
       "reading_links": [
         {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
-          "source_type": "research",
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
           "source_role": "primary",
-          "original_title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
-          "url": "https://arxiv.org/abs/2611.17339",
-          "published_at": "Tue, 17 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
+          "original_title": "Introducing GPT-6.2 Astra and Sol",
+          "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+          "published_at": "Tue, 17 Nov 2026 17:45:00 GMT",
+          "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
         }
@@ -3446,7 +3511,7 @@
       "rank": 2,
       "title": "从能力、成本和生态角度解读：Introducing Claude Fable 5.2 and Claude Mythos 5.2 Our most capable models for daunting technical work, Claude Fable 5.2 and Claude Mythos 5.2 set a new bar in coding, finance, and the sciences.",
       "source_event_ids": [
-        "faff7c68-f274-5920-b3ed-00206137351f"
+        "5afc05a2-0510-57e5-8e1d-023ba226e0e9"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "why_today": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 \\ Anthropic Skip to main content News Research Policy Commitments...",
@@ -3459,15 +3524,16 @@
         "政策监管",
         "论文研究"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "source_names": [
-        "Anthropic News"
+        "Anthropic News",
+        "OpenAI News"
       ],
       "source_types": [
         "official"
       ],
-      "signal_strength": 70.84,
-      "recommendation_reason": "含官方来源；标签：官方消息、模型发布、编程工具",
+      "signal_strength": 78.34,
+      "recommendation_reason": "2 个信源交叉确认；含官方来源；标签：官方消息、模型发布、编程工具",
       "reading_links": [
         {
           "source_id": "anthropic_news",
@@ -3480,61 +3546,88 @@
           "link_label": "Anthropic News",
           "is_primary_reading_link": true,
           "display_order": 1
+        },
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "related",
+          "original_title": "Introducing ChatGPT for Sales",
+          "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+          "published_at": "Tue, 17 Nov 2026 08:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": false,
+          "display_order": 2
         }
       ]
     },
     {
       "rank": 3,
-      "title": "从能力、成本和生态角度解读：Broadening access to AI for scientists",
+      "title": "从能力、成本和生态角度解读：Introducing ChatGPT for Sales",
       "source_event_ids": [
-        "30cd1d92-4f22-5730-b1c7-84f5633cc31f"
+        "2dda4e8d-046c-58a4-ba98-8bff5ac941d1"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to ou...",
+      "why_today": "Explore the new Sales plugin and 30+ new and expanded partner plugins in ChatGPT to research prospects, prepare pitch...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
         "官方消息",
+        "编程工具",
         "论文研究"
       ],
-      "source_count": 1,
+      "source_count": 2,
       "source_names": [
-        "OpenAI News"
+        "OpenAI News",
+        "Anthropic News"
       ],
       "source_types": [
         "official"
       ],
-      "signal_strength": 67.16,
-      "recommendation_reason": "含官方来源；标签：官方消息、论文研究",
+      "signal_strength": 76.16,
+      "recommendation_reason": "2 个信源交叉确认；含官方来源；标签：官方消息、编程工具、论文研究",
       "reading_links": [
         {
           "source_id": "openai_news",
           "source_name": "OpenAI News",
           "source_type": "official",
           "source_role": "primary",
-          "original_title": "Broadening access to AI for scientists",
-          "url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
-          "published_at": "Mon, 16 Nov 2026 17:00:00 GMT",
+          "original_title": "Introducing ChatGPT for Sales",
+          "url": "https://openai.com/index/introducing-chatgpt-for-sales",
+          "published_at": "Tue, 17 Nov 2026 08:00:00 GMT",
           "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
+        },
+        {
+          "source_id": "anthropic_news",
+          "source_name": "Anthropic News",
+          "source_type": "official",
+          "source_role": "related",
+          "original_title": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 Our most capable models for daunting technical work, Claude Fable 5.2 and Claude Mythos 5.2 set a new bar in coding, finance, and the sciences.",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "published_at": null,
+          "link_label": "Anthropic News",
+          "is_primary_reading_link": false,
+          "display_order": 2
         }
       ]
     },
     {
       "rank": 4,
-      "title": "从能力、成本和生态角度解读：Science at the Frontier: How scientists use ChatGPT",
+      "title": "从能力、成本和生态角度解读：Astra for Law leads in legal intelligence",
       "source_event_ids": [
-        "508ef65b-1eb9-57b0-99c9-ea64b01737cb"
+        "0d6cdf24-265c-5199-9827-b26bfc5248db"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "Explore how more than 1,800 scientists use ChatGPT in research. See findings on daily workflows, reported productivit...",
+      "why_today": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
         "官方消息",
-        "产品更新",
-        "论文研究"
+        "模型发布",
+        "商业化",
+        "融资并购"
       ],
       "source_count": 1,
       "source_names": [
@@ -3543,17 +3636,17 @@
       "source_types": [
         "official"
       ],
-      "signal_strength": 68.66,
-      "recommendation_reason": "含官方来源；标签：官方消息、产品更新、论文研究",
+      "signal_strength": 69.48,
+      "recommendation_reason": "含官方来源；标签：官方消息、模型发布、商业化",
       "reading_links": [
         {
           "source_id": "openai_news",
           "source_name": "OpenAI News",
           "source_type": "official",
           "source_role": "primary",
-          "original_title": "Science at the Frontier: How scientists use ChatGPT",
-          "url": "https://openai.com/index/science-at-the-frontier",
-          "published_at": "Mon, 16 Nov 2026 12:00:00 GMT",
+          "original_title": "Astra for Law leads in legal intelligence",
+          "url": "https://openai.com/index/astra-law-6-2",
+          "published_at": "Tue, 17 Nov 2026 00:00:00 GMT",
           "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
@@ -3562,16 +3655,18 @@
     },
     {
       "rank": 5,
-      "title": "从能力、成本和生态角度解读：LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+      "title": "从能力、成本和生态角度解读：Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
       "source_event_ids": [
-        "ed3d9ce0-7451-55db-a425-868b5aa4db1a"
+        "236f12d0-2c17-5f77-8838-cd0fc3e0a06b"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.17340v1 Announce Type: new Abstract: Large language models are expensive to update through full retraining...",
+      "why_today": "arXiv:2611.21799v1 Announce Type: new Abstract: Chain-of-thought (CoT) monitoring is a promising tool for detecting h...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
-        "编程工具",
+        "智能体",
+        "融资并购",
+        "国际金融",
         "论文研究"
       ],
       "source_count": 1,
@@ -3581,17 +3676,17 @@
       "source_types": [
         "research"
       ],
-      "signal_strength": 60.8,
-      "recommendation_reason": "标签：编程工具、论文研究",
+      "signal_strength": 63.8,
+      "recommendation_reason": "标签：智能体、融资并购、国际金融",
       "reading_links": [
         {
           "source_id": "arxiv_cs_ai",
           "source_name": "arXiv cs.AI",
           "source_type": "research",
           "source_role": "primary",
-          "original_title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
-          "url": "https://arxiv.org/abs/2611.17340",
-          "published_at": "Tue, 17 Nov 2026 00:00:00 -0500",
+          "original_title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+          "url": "https://arxiv.org/abs/2611.21799",
+          "published_at": "Wed, 18 Nov 2026 00:00:00 -0500",
           "link_label": "arXiv cs.AI",
           "is_primary_reading_link": true,
           "display_order": 1
@@ -3602,7 +3697,7 @@
       "rank": 6,
       "title": "从能力、成本和生态角度解读：Gemini models",
       "source_event_ids": [
-        "3ae0a6b7-002f-573d-8289-e5eba6228b74"
+        "60df5bb2-09c7-50e9-a1ab-464fc868ddfb"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "why_today": "Gemini models",
@@ -3637,19 +3732,59 @@
     },
     {
       "rank": 7,
-      "title": "从商业化和产业竞争角度解读：NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab",
+      "title": "从能力、成本和生态角度解读：CrisisBench: an evaluation suite for crisis counseling AI",
       "source_event_ids": [
-        "af1fd0e7-e987-5472-bf58-d5cd39e109c4"
+        "3b64a22f-f9c1-5f25-af9d-4137ab74507a"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "arXiv:2611.21622v1 Announce Type: new Abstract: Background: Crisis helplines are essential to mental health systems b...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "评测榜单",
+        "融资并购",
+        "国际金融",
+        "论文研究"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "arXiv cs.CL"
+      ],
+      "source_types": [
+        "research"
+      ],
+      "signal_strength": 59.04,
+      "recommendation_reason": "标签：评测榜单、融资并购、国际金融",
+      "reading_links": [
+        {
+          "source_id": "arxiv_cs_cl",
+          "source_name": "arXiv cs.CL",
+          "source_type": "research",
+          "source_role": "primary",
+          "original_title": "CrisisBench: an evaluation suite for crisis counseling AI",
+          "url": "https://arxiv.org/abs/2611.21622",
+          "published_at": "Wed, 18 Nov 2026 00:00:00 -0500",
+          "link_label": "arXiv cs.CL",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "从商业化和产业竞争角度解读：Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+      "source_event_ids": [
+        "cd7d6d07-ac25-5251-b61f-f6de4b8c91d4"
       ],
       "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-      "why_today": "At SC26, an annual supercomputing conference taking place this week in Chicago, NVIDIA is introducing the DGX Spark H...",
+      "why_today": "NVIDIA’s Ian Buck kicked off the company’s week at SC26 in Chicago on Monday with new tools for AI agents, software t...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
         "官方消息",
         "智能体",
-        "编程工具",
         "算力芯片",
+        "国际金融",
         "论文研究"
       ],
       "source_count": 1,
@@ -3659,55 +3794,18 @@
       "source_types": [
         "official"
       ],
-      "signal_strength": 62.68,
-      "recommendation_reason": "含官方来源；标签：官方消息、智能体、编程工具",
+      "signal_strength": 63.36,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体、算力芯片",
       "reading_links": [
         {
           "source_id": "nvidia_blog",
           "source_name": "NVIDIA Blog",
           "source_type": "official",
           "source_role": "primary",
-          "original_title": "NVIDIA DGX Spark Developer Kit Turns a Desk Into a Supercomputing Lab",
-          "url": "https://blogs.nvidia.com/blog/dgx-spark-hpc-developer-kit-sc26/",
-          "published_at": "Mon, 16 Nov 2026 23:00:05 +0000",
+          "original_title": "Ian Buck Kicks Off NVIDIA’s Week at SC26 as Science Enters the Age of Agents",
+          "url": "https://blogs.nvidia.com/blog/ian-buck-sc26/",
+          "published_at": "Tue, 17 Nov 2026 14:00:10 +0000",
           "link_label": "NVIDIA Blog",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 8,
-      "title": "从能力、成本和生态角度解读：Strengthening the fight against online child sexual abuse with new tools and support",
-      "source_event_ids": [
-        "62f3c850-5aa6-534a-8fb6-391cdd04b939"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "New tools, practical guidance, and partnerships will help prevent, detect and respond to online child sexual exploita...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "官方消息"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "OpenAI News"
-      ],
-      "source_types": [
-        "official"
-      ],
-      "signal_strength": 57.84,
-      "recommendation_reason": "含官方来源；标签：官方消息",
-      "reading_links": [
-        {
-          "source_id": "openai_news",
-          "source_name": "OpenAI News",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Strengthening the fight against online child sexual abuse with new tools and support",
-          "url": "https://openai.com/index/strengthening-online-child-safety",
-          "published_at": "Mon, 16 Nov 2026 17:00:00 GMT",
-          "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
         }
@@ -3715,36 +3813,37 @@
     },
     {
       "rank": 9,
-      "title": "从能力、成本和生态角度解读：Strengthening NATO and allied cyber defenses with AI",
+      "title": "从国际形势对 AI 产业链的影响解读：Nvidia says it won't reinstate Huang as it reports soaring sales",
       "source_event_ids": [
-        "9dc95317-8bc0-5aa8-a80f-e5b30d549a39"
+        "54602e1b-b4f5-5e5c-80a3-14947c302cd1"
       ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes...",
+      "core_argument": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+      "why_today": "The AI chip giant reported strong quarterly earnings on Tuesday after the dramatic exit of Jensen Huang.",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
-        "官方消息"
+        "算力芯片",
+        "地缘影响"
       ],
       "source_count": 1,
       "source_names": [
-        "OpenAI News"
+        "BBC World"
       ],
       "source_types": [
-        "official"
+        "media"
       ],
-      "signal_strength": 57.5,
-      "recommendation_reason": "含官方来源；标签：官方消息",
+      "signal_strength": 54.0,
+      "recommendation_reason": "标签：算力芯片、地缘影响",
       "reading_links": [
         {
-          "source_id": "openai_news",
-          "source_name": "OpenAI News",
-          "source_type": "official",
+          "source_id": "bbc_world",
+          "source_name": "BBC World",
+          "source_type": "media",
           "source_role": "primary",
-          "original_title": "Strengthening NATO and allied cyber defenses with AI",
-          "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
-          "published_at": "Tue, 17 Nov 2026 00:00:00 GMT",
-          "link_label": "OpenAI News",
+          "original_title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
+          "url": "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss",
+          "published_at": "Wed, 18 Nov 2026 01:18:18 GMT",
+          "link_label": "BBC World",
           "is_primary_reading_link": true,
           "display_order": 1
         }
@@ -3752,39 +3851,34 @@
     },
     {
       "rank": 10,
-      "title": "从商业化和产业竞争角度解读：How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
+      "title": "从能力、成本和生态角度解读：llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
       "source_event_ids": [
-        "a18bbe08-1e9d-536a-98d9-5aa97fd3bea3"
+        "e6c13f00-d45e-5699-ae46-cd4c47af6242"
       ],
-      "core_argument": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-      "why_today": "Deb Shoquist leads operations at NVIDIA, overseeing the supply chain and manufacturing behind its AI platforms. That...",
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "官方消息",
-        "模型发布",
-        "产品更新",
-        "算力芯片"
-      ],
+      "tags": [],
       "source_count": 1,
       "source_names": [
-        "NVIDIA Blog"
+        "Hugging Face Blog"
       ],
       "source_types": [
-        "official"
+        "research"
       ],
-      "signal_strength": 61.32,
-      "recommendation_reason": "含官方来源；标签：官方消息、模型发布、产品更新",
+      "signal_strength": 48.28,
+      "recommendation_reason": "评分较高，适合继续核验",
       "reading_links": [
         {
-          "source_id": "nvidia_blog",
-          "source_name": "NVIDIA Blog",
-          "source_type": "official",
+          "source_id": "huggingface_blog",
+          "source_name": "Hugging Face Blog",
+          "source_type": "research",
           "source_role": "primary",
-          "original_title": "How the World’s Most Advanced AI Infrastructure Supply Chain Invents the Future",
-          "url": "https://blogs.nvidia.com/blog/ai-infrastructure-supply-chain/",
-          "published_at": "Mon, 16 Nov 2026 20:00:37 +0000",
-          "link_label": "NVIDIA Blog",
+          "original_title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+          "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1",
+          "published_at": "Fri, 13 Nov 2026 14:05:22 GMT",
+          "link_label": "Hugging Face Blog",
           "is_primary_reading_link": true,
           "display_order": 1
         }
@@ -3792,6 +3886,15 @@
     }
   ],
   "archive_entries": [
+    {
+      "date": "2026-11-18",
+      "generated_at": "2026-11-18T07:30:07.153536+00:00",
+      "selected_event_count": 60,
+      "event_count": 141,
+      "top10_count": 10,
+      "url": "archive/2026-11-18/",
+      "json_url": "archive/2026-11-18/daily-digest.json"
+    },
     {
       "date": "2026-11-17",
       "generated_at": "2026-11-17T07:56:21.952277+00:00",
