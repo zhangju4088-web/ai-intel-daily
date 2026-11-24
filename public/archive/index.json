@@ -1,5 +1,14 @@
 [
   {
+    "date": "2026-11-24",
+    "generated_at": "2026-11-24T09:55:34.390402+00:00",
+    "selected_event_count": 60,
+    "event_count": 147,
+    "top10_count": 10,
+    "url": "archive/2026-11-24/",
+    "json_url": "archive/2026-11-24/daily-digest.json"
+  },
+  {
     "date": "2026-11-23",
     "generated_at": "2026-11-23T07:40:23.534625+00:00",
     "selected_event_count": 60,
