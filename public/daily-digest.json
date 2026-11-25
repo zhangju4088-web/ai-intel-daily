@@ -1,6 +1,6 @@
 {
-  "digest_date": "2026-11-24",
-  "generated_at": "2026-11-24T09:55:34.390402+00:00",
+  "digest_date": "2026-11-25",
+  "generated_at": "2026-11-25T08:35:34.557008+00:00",
   "generated_by": "intelhub-local-pipeline",
   "settings": {
     "per_source": 5,
@@ -10,19 +10,19 @@
     "summarize_with": "deepseek"
   },
   "stats": {
-    "fetched_candidate_count": 160,
-    "unique_candidate_count": 148,
-    "analysis_count": 148,
+    "fetched_candidate_count": 155,
+    "unique_candidate_count": 141,
+    "analysis_count": 141,
     "deepseek_analysis_count": 0,
-    "local_analysis_count": 148,
+    "local_analysis_count": 141,
     "extracted_text_count": 12,
     "extraction_error_count": 4,
-    "event_count": 147,
+    "event_count": 140,
     "selected_event_count": 60,
     "fetch_error_count": 4,
     "title_localized_count": 0,
-    "supporting_link_count": 2,
-    "multi_source_event_count": 2,
+    "supporting_link_count": 0,
+    "multi_source_event_count": 0,
     "tag_count": 13
   },
   "fetch_errors": [
@@ -50,8 +50,61 @@
   "categories": {
     "大模型动态": [
       {
-        "id": "14bc5464-ae70-5384-9b84-ef01c96e8e3b",
-        "event_date": "2026-11-24",
+        "id": "514aa170-2ca2-56d3-8056-26dfb63c7dba",
+        "event_date": "2026-11-25",
+        "category": "大模型动态",
+        "ai_title": "GPT-6 models demonst利率 intrinsic pro...",
+        "one_sentence_summary": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding ac...",
+        "detailed_summary": "GPT-6 models demonstrate intrinsic protein-design capabilities | OpenAI Skip to main content Research Products Business Developers Company Foundation (opens in a new window) Log in Try ChatGPT (opens in a new window) Research Products Business Developers Company Foundation (opens in a new window) Try ChatGPT (opens in a new window) Login OpenAI November 24, 2026 Science Publication GPT‑6 models demonstrate intrinsic protein-design capabilities Read the paper (opens in a new window) Share Key...",
+        "key_points": [
+          "GPT-6 models demonstrate intrinsic protein-design capabilities | OpenAI Skip to main content Research Products Busine...",
+          "Limitations What’s next Key findings: A closer look at our models’ protein designs Laboratory Experiment 1: Designing...",
+          "Limitations What’s next Key findings: Our GPT‑6 family of models can design new protein shapes and the sequence of th...",
+          "An internal research model matched or outperformed specialized models on many protein design tasks.",
+          "Researchers could also guide designs by prompting the model on where a protein should attach and what shape it should..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：GPT-6 models demonstrate intrinsic protein-design capabilities",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 91.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "编程工具",
+          "产品更新",
+          "国际金融",
+          "论文研究"
+        ],
+        "signal_strength": 72.88,
+        "reading_links": [
+          {
+            "source_id": "openai_news",
+            "source_name": "OpenAI News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+            "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+            "published_at": "Tue, 24 Nov 2026 13:00:00 GMT",
+            "link_label": "OpenAI News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "671d56ab-1ee5-54fc-a836-f44c37cf5db4",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Introducing Claude Fable 5.2 a...",
         "one_sentence_summary": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 \\ Anthropic Skip to main content News Research Policy Commitments...",
@@ -103,18 +156,18 @@
         ]
       },
       {
-        "id": "3aef9927-7da3-5214-ad85-39ab19a38aaf",
-        "event_date": "2026-11-24",
+        "id": "c79245f3-ef92-5483-9666-eba87a4a4656",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Richpanel helps companies auto...",
-        "one_sentence_summary": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna f...",
-        "detailed_summary": "Richpanel helps companies automate 50% of support in 30 days | OpenAI Skip to main content Why OpenAI Products Solutions Resources Customers Pricing Try OpenAI Contact sales Why OpenAI Products Solutions Resources Customers Pricing Contact sales Try OpenAI OpenAI November 23, 2026 Startup Richpanel helps companies automate 50% of support in 30 days Richpanel uses GPT‑6 Astra and GPT‑6.1 Sol to equip its AI support agents with tools and procedures, and GPT‑6 Luna for their conversations. Start...",
+        "ai_title": "大模型动态｜MOZAIC: An Audio-Video Deepfak...",
+        "one_sentence_summary": "arXiv:2611.31301v1 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both. Mos...",
+        "detailed_summary": "[2611.31301] MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake Skip to main content Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search Computer Science > Artificial Intelligence arXiv:2611.31301 (cs) [Submitted on 21 Nov 2026] Title: MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake Authors: Shaina Raza , Mohamed Hafez , Ahmed Y. Radwan , Khalid Elgazzar , Kathryn Hume View a PDF of the paper titled MOZAIC: An Audio-Video Deepfak...",
         "key_points": [
-          "Richpanel helps companies automate 50% of support in 30 days | OpenAI Skip to main content Why OpenAI Products Soluti...",
-          "Start building with OpenAI Company size: Startup Region: Asia-Pacific & Oceania Industry: Technology Products: API Sh...",
-          "And for that, they need access to the right tools and instructions.",
-          "According to Richpanel CEO Amit RG, human support agents can use 20 or 30 tools to serve a customer, and the procedur...",
-          "Richpanel ⁠ (opens in a new window) solves that using OpenAI models to both set up the tools and procedures AI suppor..."
+          "[2611.31301] MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake Skip to main content Search Submit Do...",
+          "Radwan , Khalid Elgazzar , Kathryn Hume View a PDF of the paper titled MOZAIC: An Audio-Video Deepfake Benchmark for...",
+          "Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a detector relies on the picture...",
+          "We present MOZAIC, a paired benchmark with a 4-way label in which every source clip is released in all four combinati...",
+          "Fakes cover inner-face swapping, whole-frame video diffusion and voice conversion."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -123,93 +176,83 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Richpanel helps companies automate 50% of support in 30 days",
+        "topic_angle": "从能力、成本和生态角度解读：MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 86.0,
+        "priority_score": 88.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "评测榜单",
+          "产品更新",
+          "论文研究"
+        ],
+        "signal_strength": 65.84,
+        "reading_links": [
+          {
+            "source_id": "arxiv_cs_ai",
+            "source_name": "arXiv cs.AI",
+            "source_type": "research",
+            "source_role": "primary",
+            "original_title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+            "url": "https://arxiv.org/abs/2611.31301",
+            "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
+            "link_label": "arXiv cs.AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "research"
+        ]
+      },
+      {
+        "id": "c2e138e5-16ce-55ef-8d7c-e7265b53ef2d",
+        "event_date": "2026-11-25",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Clay helps sales teams win wit...",
+        "one_sentence_summary": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 mod...",
+        "detailed_summary": "Clay helps sales teams win with Codex and ChatGPT | OpenAI Skip to main content Why OpenAI Products Solutions Resources Customers Pricing Try OpenAI Contact sales Why OpenAI Products Solutions Resources Customers Pricing Contact sales Try OpenAI OpenAI November 24, 2026 Clay helps sales teams win with Codex and ChatGPT ChatGPT and Codex integrations help Clay users research deals and turn data into go-to-market plays, and GPT‑6 models handle the reasoning. Start building with OpenAI Company s...",
+        "key_points": [
+          "Clay helps sales teams win with Codex and ChatGPT | OpenAI Skip to main content Why OpenAI Products Solutions Resourc...",
+          "Start building with OpenAI Company size: Startup Region: North America Industry: Technology Products: API, Codex, Cha...",
+          "Clay ⁠ (opens in a new window) is a self-learning revenue engine designed to help.",
+          "Using GPT‑6 Astra, GPT‑6 Sol, and other models, Clay enables users to build lists of companies and people, enrich tho...",
+          "Clay also brings these capabilities to where customers are already working with plugins for Codex and ChatGPT, making..."
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Clay helps sales teams win with Codex and ChatGPT",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 84.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
-          "智能体",
+          "编程工具",
           "产品更新",
-          "商业化"
+          "商业化",
+          "论文研究"
         ],
-        "signal_strength": 76.98,
+        "signal_strength": 68.12,
         "reading_links": [
           {
             "source_id": "openai_news",
             "source_name": "OpenAI News",
             "source_type": "official",
             "source_role": "primary",
-            "original_title": "Richpanel helps companies automate 50% of support in 30 days",
-            "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
-            "published_at": "Mon, 23 Nov 2026 08:00:00 GMT",
+            "original_title": "Clay helps sales teams win with Codex and ChatGPT",
+            "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+            "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
             "link_label": "OpenAI News",
             "is_primary_reading_link": true,
             "display_order": 1
-          },
-          {
-            "source_id": "arxiv_cs_ai",
-            "source_name": "arXiv cs.AI",
-            "source_type": "research",
-            "source_role": "related",
-            "original_title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
-            "url": "https://arxiv.org/abs/2611.28202",
-            "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.AI",
-            "is_primary_reading_link": false,
-            "display_order": 2
-          }
-        ],
-        "source_count": 2,
-        "source_types": [
-          "official",
-          "research"
-        ]
-      },
-      {
-        "id": "9cc62201-3b95-5a6b-b74f-f45184446cee",
-        "event_date": "2026-11-24",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Gemini Build intelligent agents",
-        "one_sentence_summary": "�\b\u0000\u0000\u0000\u0000\u0000\u0002���v�Ȓ-��>\u0005Z}�S��\u0002E\u0000 �Mu�� WI�d�.��ņHp�@�\u0006H >��ꇸ����|{G\"1p�H�v\u0015O S\u0018\u0012���\u0011����\u0011��� ��\u0017#��\u0007��c�\u001a-ߍ�F��Fn�h�c��\u0007...",
-        "detailed_summary": "�\b\u0000\u0000\u0000\u0000\u0000\u0002���v�Ȓ-��>\u0005Z}�S��\u0002E\u0000 �Mu�� WI�d�.��ņHp�@�\u0006H >��ꇸ����|{G\"1p�H�v\u0015O S\u0018\u0012���\u0011����\u0011��� ��\u0017#��\u0007��c�\u001a-ߍ�F��Fn�h�c��\u0007f��x���|���ާ__�f�������s�ۏ\u0007��5Z=7��qc2�5�,\u0018��ḱ��\u001a^��m������N���ss⚭`0r��cߛ��� �\u0000�i��r�� ��}�7���{ �P�0���k����Q\u0010�� ��c���\u001b���?���\u0017A��=�):t� � o�\u0012������^�A��_���g|�.t哭A���h�+um\u0019��7Z�0\u0018���4��'�1��ǆ\u0017�F�1:!:��B����~�� [�\u0000���V� ��\u0001�0\u0017c)\u0006{\u0014\u0006#/ _4��/1��b\u001bK���gq�\u001b��~ω�>����`*`|�& ��|\u0016���^U� �\u000f��\u0006�*�ާ��׾�z��� ?Wj�^�����^�z�� �j-��>��pT��h��\u001a � �O���o�3���������y���Vз�/�\u000e�޿{�\u001a\u0007�3�.\u0016�^�)...",
-        "key_points": [
-          "�\b\u0000\u0000\u0000\u0000\u0000\u0002���v�Ȓ-��>\u0005Z}�S��\u0002E\u0000 �Mu�� WI�d�.��ņHp�@�\u0006H >��ꇸ����|{G\"1p�H�v\u0015O S\u0018\u0012���\u0011����\u0011��� ��\u0017#��\u0007��c�\u001a-ߍ�F��Fn�h�c��\u0007...",
-          "{�/-7L�)O\u0012B8��\\�� ��G1ב�ø$q�*ZL����B� � ��9� \u001a\u0007!\b,�\u0006wԏ� �큩�r�\u0004U�����ﷶ�`\u0018\b \u0011 M]�i�7���0\u001avE������`����n[wl4�f�i6gD�o^�...",
-          "UpQw �.�2�XAM2����zV (�s���Y��V)\u0007jG�=g�V K�S蹙���Z H� \u0006��k $(\u0000&d < �a��`\u00038�\u0011\u0014�I\u0015I ,_Y�� ҳ �O=s��d�\u0003ް @֩ �}j};�ꆳW����ⰑL...",
-          "lrB\u0005,S�X;$�:\u00172 ��#\u0017� n�X�C:�%!.�M)�A�D�Ċd>\u0007� N\u0015�4�R�j����A \u0005\u0007�\u0011��ۜ\\\u0012\u0015�\u001aA�� *�� �\u0016��a_\b\u0012�\u0016�: B5Z�Q��\u001bA���a\u0005�@\u001a8�j�� W�...",
-          "@����z��\u0015�\u0001�3�� �= \u0004E�O��\u001a��������{�\u0019�?\b\u0011݀~\u0000�lD���@���������� }�A�\u0015� '-���\u000f����D��0k�I\u0013��R��\u000f\u0011K�\\� \\[��T�o� ,'��(���..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 82.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息",
-          "智能体"
-        ],
-        "signal_strength": 63.76,
-        "reading_links": [
-          {
-            "source_id": "google_deepmind_blog",
-            "source_name": "Google DeepMind Blog",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Gemini Build intelligent agents",
-            "url": "https://deepmind.google/models/gemini/",
-            "published_at": null,
-            "link_label": "Google DeepMind Blog",
-            "is_primary_reading_link": true,
-            "display_order": 1
           }
         ],
         "source_count": 1,
@@ -218,18 +261,18 @@
         ]
       },
       {
-        "id": "0308ae20-1cd0-5dea-bd4c-cb2a2f33db38",
-        "event_date": "2026-11-24",
+        "id": "b25f61c2-30bc-5980-a569-0c6d48d6fdcb",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Gemini Omni Create anything fr...",
-        "one_sentence_summary": "Gemini Omni — Google DeepMind Skip to main content Explore our next generation AI systems Explore models Gemini Gemin...",
-        "detailed_summary": "Gemini Omni — Google DeepMind Skip to main content Explore our next generation AI systems Explore models Gemini Gemini Build intelligent agents Gemini Omni Create anything from anything Nano Banana Create and edit detailed images Gemini Audio Talk, create and control audio Specialized models Veo Generate cinematic video with audio Lyria Generate high fidelity music and audio Genie Generate and explore interactive worlds Gemini Robotics Perceive, reason, use tools and interact Open models Gemm...",
+        "ai_title": "大模型动态｜The Date You Didn't Set: The S...",
+        "one_sentence_summary": "arXiv:2611.31254v1 Announce Type: new Abstract: The system prompt of many instruction-tuned models carries a date, us...",
+        "detailed_summary": "arXiv:2611.31254v1 Announce Type: new Abstract: The system prompt of many instruction-tuned models carries a date, usually today's, filled in automatically for conversational and agentic requests alike, so an unchanged evaluation can send a different prompt each day. In this paper, we explore how much this hidden input changes evaluation outcomes. Across six instruction-tuned models and four benchmarks, with prompts, decoding, and configuration fixed, every model is affected: two plausible da...",
         "key_points": [
-          "Gemini Omni — Google DeepMind Skip to main content Explore our next generation AI systems Explore models Gemini Gemin...",
-          "Edit any video through natural, step-by-step conversation Think of Gemini Omni like Nano Banana, but for video.",
-          "Every edit you make builds on the one before – maintaining a consistent, coherent scene.",
-          "Try in Gemini Try in Google Flow Your browser does not support the video tag.",
-          "Apply real world knowledge Gemini Omni combines an intuitive understanding of physics with Gemini's knowledge of hist..."
+          "arXiv:2611.31254v1 Announce Type: new Abstract: The system prompt of many instruction-tuned models carries a date, us...",
+          "In this paper, we explore how much this hidden input changes evaluation outcomes.",
+          "Across six instruction-tuned models and four benchmarks, with prompts, decoding, and configuration fixed, every model...",
+          "Even rerunning the evaluation one day later flips about as many items as changing the batch size, although nothing in...",
+          "In addition, using a grammar-constrained variant of Greedy Coordinate Gradient (GCG) to search dates of any year, we..."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -238,174 +281,28 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Gemini Omni Create anything from anything",
+        "topic_angle": "从能力、成本和生态角度解读：The Date You Didn't Set: The System-Prompt Date as a Hidden Variable in LLM Evaluation",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 82.0,
+        "priority_score": 81.0,
         "confidence": 0.55,
         "tags": [
-          "官方消息",
+          "评测榜单",
           "智能体",
-          "产品更新",
-          "国际金融"
-        ],
-        "signal_strength": 66.76,
-        "reading_links": [
-          {
-            "source_id": "google_deepmind_blog",
-            "source_name": "Google DeepMind Blog",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Gemini Omni Create anything from anything",
-            "url": "https://deepmind.google/models/gemini-omni/",
-            "published_at": null,
-            "link_label": "Google DeepMind Blog",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "67baf472-8842-5032-bf0a-97f772ee8c7d",
-        "event_date": "2026-11-24",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Gemini Audio Talk, create and...",
-        "one_sentence_summary": "Gemini Audio Talk, create and control audio",
-        "detailed_summary": "Gemini Audio Talk, create and control audio",
-        "key_points": [
-          "Gemini Audio Talk, create and control audio"
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Gemini Audio Talk, create and control audio",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 82.0,
-        "confidence": 0.55,
-        "tags": [
-          "官方消息"
-        ],
-        "signal_strength": 62.26,
-        "reading_links": [
-          {
-            "source_id": "google_deepmind_blog",
-            "source_name": "Google DeepMind Blog",
-            "source_type": "official",
-            "source_role": "primary",
-            "original_title": "Gemini Audio Talk, create and control audio",
-            "url": "https://deepmind.google/models/gemini-audio/",
-            "published_at": null,
-            "link_label": "Google DeepMind Blog",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "official"
-        ]
-      },
-      {
-        "id": "70ec19db-92dc-5111-84c0-85d68bb82bdc",
-        "event_date": "2026-11-24",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜FinEvo: Recursive Self-Improve...",
-        "one_sentence_summary": "arXiv:2611.28239v1 Announce Type: new Abstract: Advances in large language models (LLMs) have expanded their role in...",
-        "detailed_summary": "arXiv:2611.28239v1 Announce Type: new Abstract: Advances in large language models (LLMs) have expanded their role in high-value productivity tasks, including financial analysis and modeling, while enabling models to play an increasingly active role in their own improvement. This motivates two complementary lines of inquiry: can financial modeling capabilities provide a foundation for model self-evolution, and can self-evolution, in turn, advance financial capabilities? We introduce FinEvo, a...",
-        "key_points": [
-          "arXiv:2611.28239v1 Announce Type: new Abstract: Advances in large language models (LLMs) have expanded their role in...",
-          "This motivates two complementary lines of inquiry: can financial modeling capabilities provide a foundation for model...",
-          "We introduce FinEvo, a self-evolution framework that integrates autonomous experience construction with financial cap...",
-          "FinEvo prepares financial models, iteratively evolves challenges through self-play, and learns from the resulting int...",
-          "An end-to-end execution with Qwen3.6-27B shows that solving feedback supports both increasing reasoning demands and i..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：FinEvo: Recursive Self-Improvement for Long-Horizon Financial Modeling",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 82.0,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "产品更新",
-          "国际金融",
+          "编程工具",
+          "融资并购",
           "论文研究"
         ],
-        "signal_strength": 61.76,
-        "reading_links": [
-          {
-            "source_id": "arxiv_cs_ai",
-            "source_name": "arXiv cs.AI",
-            "source_type": "research",
-            "source_role": "primary",
-            "original_title": "FinEvo: Recursive Self-Improvement for Long-Horizon Financial Modeling",
-            "url": "https://arxiv.org/abs/2611.28239",
-            "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.AI",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "research"
-        ]
-      },
-      {
-        "id": "c7dc2210-87bf-5360-b5ce-edf818ed4f71",
-        "event_date": "2026-11-24",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Language Model Harnesses can b...",
-        "one_sentence_summary": "arXiv:2611.28298v1 Announce Type: new Abstract: Modern language models (LMs) are post-trained and deployed as agents...",
-        "detailed_summary": "arXiv:2611.28298v1 Announce Type: new Abstract: Modern language models (LMs) are post-trained and deployed as agents inside a \"harness\", but standard harness designs accumulate context that the neural network is forced to generalize to, making training for long-horizon tasks expensive and time-consuming. We study an alternative emerging path: training inherently neurosymbolic LM harnesses, which externalize and manage context programmatically to compose existing LM capabilities. We hypothesiz...",
-        "key_points": [
-          "arXiv:2611.28298v1 Announce Type: new Abstract: Modern language models (LMs) are post-trained and deployed as agents...",
-          "We study an alternative emerging path: training inherently neurosymbolic LM harnesses, which externalize and manage c...",
-          "We hypothesize that training around these harnesses can offer a better return on compute by enabling compositional ge...",
-          "We find that harnesses like the Recursive Language Model (RLM) learn such decompositions readily under reinforcement...",
-          "On messier, complex tasks, we find that we can target individual LLM calls within a harness by generating and trainin..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Language Model Harnesses can be Compositional Generalizers",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 80.0,
-        "confidence": 0.55,
-        "tags": [
-          "智能体",
-          "论文研究"
-        ],
-        "signal_strength": 57.4,
+        "signal_strength": 61.08,
         "reading_links": [
           {
             "source_id": "arxiv_cs_cl",
             "source_name": "arXiv cs.CL",
             "source_type": "research",
             "source_role": "primary",
-            "original_title": "Language Model Harnesses can be Compositional Generalizers",
-            "url": "https://arxiv.org/abs/2611.28298",
-            "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
+            "original_title": "The Date You Didn't Set: The System-Prompt Date as a Hidden Variable in LLM Evaluation",
+            "url": "https://arxiv.org/abs/2611.31254",
+            "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
             "link_label": "arXiv cs.CL",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -417,8 +314,8 @@
         ]
       },
       {
-        "id": "63fb2da5-7502-57d0-8a2a-f2ea4abda257",
-        "event_date": "2026-11-24",
+        "id": "d18ce514-8cb1-5945-92a0-463aafa61aa0",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Gemini models",
         "one_sentence_summary": "Gemini models",
@@ -462,18 +359,18 @@
         ]
       },
       {
-        "id": "c71276b5-a2d1-57a3-abc8-f12bf622054c",
-        "event_date": "2026-11-24",
+        "id": "9fe8123f-9a7d-54e2-aa5b-5974c4bfd2f6",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜AutoPILOT: A Visual Agent Harn...",
-        "one_sentence_summary": "arXiv:2611.28202v1 Announce Type: new Abstract: Multimodal foundation models can play video games well when the game...",
-        "detailed_summary": "arXiv:2611.28202v1 Announce Type: new Abstract: Multimodal foundation models can play video games well when the game waits for them, but often fail when it keeps running. We find that much of this gap lies in the harness, which decides what the model sees, what it remembers, and how its outputs become actions over time. Existing harnesses such as VISTA improve the first two, yet turn each model call into at most one action, so the agent acts only as often as its model thinks. We introduce Aut...",
+        "ai_title": "大模型动态｜Validation Bias in Large Langu...",
+        "one_sentence_summary": "arXiv:2611.31251v1 Announce Type: new Abstract: Large language model (LLM) chatbots are increasingly used by patients...",
+        "detailed_summary": "arXiv:2611.31251v1 Announce Type: new Abstract: Large language model (LLM) chatbots are increasingly used by patients seeking cancer information, but their safety when users present evidence-misaligned beliefs about treatment remains uncharacterized. We hypothesized that LLMs exhibit validation bias, affirming rather than correcting such beliefs, and evaluated this with a 2x2x2 factorial design crossing conversation format (single-turn vs multi-turn), treatment type (evidence-based vs alterna...",
         "key_points": [
-          "arXiv:2611.28202v1 Announce Type: new Abstract: Multimodal foundation models can play video games well when the game...",
-          "We find that much of this gap lies in the harness, which decides what the model sees, what it remembers, and how its...",
-          "Existing harnesses such as VISTA improve the first two, yet turn each model call into at most one action, so the agen...",
-          "We introduce AutoPILOT, which changes the third: in each model call, the model can send a primitive action, start an...",
-          "To evaluate agents in real-time games, we build AFK-Bench, 120 diverse browser games grouped by how they respond to i..."
+          "arXiv:2611.31251v1 Announce Type: new Abstract: Large language model (LLM) chatbots are increasingly used by patients...",
+          "We hypothesized that LLMs exhibit validation bias, affirming rather than correcting such beliefs, and evaluated this...",
+          "Framing was evidence-aligned (supporting evidence-based treatments or questioning alternative therapies) or evidence-...",
+          "We analyzed 1,272 conversations (6,360 interactions) across 14 LLMs from 6 vendors, scored by an LLM judge (GPT-5-min...",
+          "The primary outcome was the unsafe response rate, defined as a Weak classification or any critical failure."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -482,27 +379,26 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
+        "topic_angle": "从能力、成本和生态角度解读：Validation Bias in Large Language Model Responses to Cancer Treatment Queries: A Factorial Cross-Sectional Study",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 78.0,
         "confidence": 0.55,
         "tags": [
-          "模型发布",
-          "智能体",
+          "国际金融",
           "论文研究"
         ],
-        "signal_strength": 57.54,
+        "signal_strength": 56.04,
         "reading_links": [
           {
-            "source_id": "arxiv_cs_ai",
-            "source_name": "arXiv cs.AI",
+            "source_id": "arxiv_cs_cl",
+            "source_name": "arXiv cs.CL",
             "source_type": "research",
             "source_role": "primary",
-            "original_title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
-            "url": "https://arxiv.org/abs/2611.28202",
-            "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.AI",
+            "original_title": "Validation Bias in Large Language Model Responses to Cancer Treatment Queries: A Factorial Cross-Sectional Study",
+            "url": "https://arxiv.org/abs/2611.31251",
+            "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
+            "link_label": "arXiv cs.CL",
             "is_primary_reading_link": true,
             "display_order": 1
           }
@@ -513,18 +409,14 @@
         ]
       },
       {
-        "id": "f22803a3-b0a5-5636-b879-17921e85d421",
-        "event_date": "2026-11-24",
+        "id": "fab78b71-8091-5ff8-bdc5-004472b6a746",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Measuring and Teaching Languag...",
-        "one_sentence_summary": "arXiv:2611.28158v1 Announce Type: new Abstract: Language model agents are increasingly asked to run ongoing multi-day...",
-        "detailed_summary": "arXiv:2611.28158v1 Announce Type: new Abstract: Language model agents are increasingly asked to run ongoing multi-day operations rather than finish isolated single-turn tasks. In daily operations, today's choices reshape later observations and cash constraints because empty shelves hide lost walk-in demand, short-shipped customers quietly shrink future orders weeks later, and emergency buying drains working capital. We introduce SMB Bench, a calibrated 90-day wholesale simulator with 18 causa...",
+        "ai_title": "大模型动态｜Searching for distant planets...",
+        "one_sentence_summary": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler a...",
+        "detailed_summary": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
         "key_points": [
-          "arXiv:2611.28158v1 Announce Type: new Abstract: Language model agents are increasingly asked to run ongoing multi-day...",
-          "In daily operations, today's choices reshape later observations and cash constraints because empty shelves hide lost...",
-          "We introduce SMB Bench, a calibrated 90-day wholesale simulator with 18 causally paired tasks and an 859-run frontier...",
-          "Across 16 frontier models, only 3 outperform a fixed buying rule; models often record a relevant diagnosis in their n...",
-          "To study how experience improves those failures in an open model (Qwen3.8-27B), we used training-business records to..."
+          "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler a..."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -533,87 +425,25 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Measuring and Teaching Language Model Agents to Act on Delayed Consequences",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 78.0,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "智能体",
-          "国际金融",
-          "论文研究"
-        ],
-        "signal_strength": 66.54,
-        "reading_links": [
-          {
-            "source_id": "arxiv_cs_lg",
-            "source_name": "arXiv cs.LG",
-            "source_type": "research",
-            "source_role": "primary",
-            "original_title": "Measuring and Teaching Language Model Agents to Act on Delayed Consequences",
-            "url": "https://arxiv.org/abs/2611.28158",
-            "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.LG",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          },
-          {
-            "source_id": "arxiv_cs_cl",
-            "source_name": "arXiv cs.CL",
-            "source_type": "research",
-            "source_role": "related",
-            "original_title": "Language Model Harnesses can be Compositional Generalizers",
-            "url": "https://arxiv.org/abs/2611.28298",
-            "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.CL",
-            "is_primary_reading_link": false,
-            "display_order": 2
-          }
-        ],
-        "source_count": 2,
-        "source_types": [
-          "research"
-        ]
-      },
-      {
-        "id": "ef205f6a-8d20-59d9-a0b0-5f414ef20194",
-        "event_date": "2026-11-24",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜OpenAI and Cisco introduce Shi...",
-        "one_sentence_summary": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while th...",
-        "detailed_summary": "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux. It helps teams protect running systems while they roll out patches.",
-        "key_points": [
-          "OpenAI and Cisco introduce Shirudo, an open-source runtime for Linux.",
-          "It helps teams protect running systems while they roll out patches."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：OpenAI and Cisco introduce Shirudo",
+        "topic_angle": "从能力、成本和生态角度解读：Searching for distant planets with Astra",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 73.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
-          "模型发布",
-          "开源生态"
+          "编程工具"
         ],
-        "signal_strength": 59.14,
+        "signal_strength": 57.64,
         "reading_links": [
           {
             "source_id": "openai_news",
             "source_name": "OpenAI News",
             "source_type": "official",
             "source_role": "primary",
-            "original_title": "OpenAI and Cisco introduce Shirudo",
-            "url": "https://openai.com/index/introducing-shirudo",
-            "published_at": "Mon, 23 Nov 2026 21:20:00 GMT",
+            "original_title": "Searching for distant planets with Astra",
+            "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+            "published_at": "Tue, 24 Nov 2026 11:00:00 GMT",
             "link_label": "OpenAI News",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -625,14 +455,14 @@
         ]
       },
       {
-        "id": "0e3df78d-c66c-5ea4-8ecc-82efe0e4a205",
-        "event_date": "2026-11-24",
+        "id": "712be492-67b2-5d6e-a19d-b1b7855230fa",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜Connected intelligence for in-...",
-        "one_sentence_summary": "Watch OpenAI’s Stacey Wang and Craig Bruney, Mary O’Carroll of LECG, and Cooley’s Richard Segal explore how AI can he...",
-        "detailed_summary": "Watch OpenAI’s Stacey Wang and Craig Bruney, Mary O’Carroll of LECG, and Cooley’s Richard Segal explore how AI can help in-house legal teams connect business context, build reusable workflows and get more from outside counsel.",
+        "ai_title": "大模型动态｜How Intentful uses dots to mak...",
+        "one_sentence_summary": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolv...",
+        "detailed_summary": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
         "key_points": [
-          "Watch OpenAI’s Stacey Wang and Craig Bruney, Mary O’Carroll of LECG, and Cooley’s Richard Segal explore how AI can he..."
+          "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolv..."
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -641,24 +471,25 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：Connected intelligence for in-house legal",
+        "topic_angle": "从能力、成本和生态角度解读：How Intentful uses dots to make more time for growth",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 70.0,
         "confidence": 0.55,
         "tags": [
-          "官方消息"
+          "官方消息",
+          "论文研究"
         ],
-        "signal_strength": 54.1,
+        "signal_strength": 55.6,
         "reading_links": [
           {
             "source_id": "openai_news",
             "source_name": "OpenAI News",
             "source_type": "official",
             "source_role": "primary",
-            "original_title": "Connected intelligence for in-house legal",
-            "url": "https://openai.com/business/learn/connected-intelligence-for-in-house-legal",
-            "published_at": "Mon, 23 Nov 2026 08:00:00 GMT",
+            "original_title": "How Intentful uses dots to make more time for growth",
+            "url": "https://openai.com/business/customer-stories/intentful-dots",
+            "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
             "link_label": "OpenAI News",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -670,18 +501,14 @@
         ]
       },
       {
-        "id": "c7dace97-814a-5236-b1af-383569252409",
-        "event_date": "2026-11-24",
+        "id": "6734c7a0-f6c1-5071-954b-765a8eae4821",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
-        "ai_title": "大模型动态｜torchtsetlin: Fast, Interpreta...",
-        "one_sentence_summary": "arXiv:2611.28195v1 Announce Type: new Abstract: The Tsetlin machine learns propositional rules with teams of Tsetlin...",
-        "detailed_summary": "arXiv:2611.28195v1 Announce Type: new Abstract: The Tsetlin machine learns propositional rules with teams of Tsetlin automata that are driven by reward and penalty rather than gradients, so its models are interpretable by construction and cheap to evaluate. Its software, however, consists of C and CUDA kernels behind scikit-learn-style wrappers that sit outside the deep learning ecosystem. torchtsetlin implements the Tsetlin machine family as ordinary PyTorch modules: vanilla and weighted, co...",
+        "ai_title": "大模型动态｜How iFood scales coding agents...",
+        "one_sentence_summary": "How iFood scales coding agents across 15,000 repositories",
+        "detailed_summary": "How iFood scales coding agents across 15,000 repositories",
         "key_points": [
-          "arXiv:2611.28195v1 Announce Type: new Abstract: The Tsetlin machine learns propositional rules with teams of Tsetlin...",
-          "Its software, however, consists of C and CUDA kernels behind scikit-learn-style wrappers that sit outside the deep le...",
-          "torchtsetlin implements the Tsetlin machine family as ordinary PyTorch modules: vanilla and weighted, coalesced, regr...",
-          "The automata are a tensor buffer, so a model moves with .to(device), is saved with state_dict() and learns from a min...",
-          "Its core technique is a batched formulation of Type I and Type II feedback, in which automaton transitions become eve..."
+          "How iFood scales coding agents across 15,000 repositories"
         ],
         "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
@@ -690,72 +517,26 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从能力、成本和生态角度解读：torchtsetlin: Fast, Interpretable Tsetlin Machines for PyTorch",
+        "topic_angle": "从能力、成本和生态角度解读：How iFood scales coding agents across 15,000 repositories",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 69.0,
-        "confidence": 0.55,
-        "tags": [
-          "产品更新",
-          "论文研究"
-        ],
-        "signal_strength": 49.92,
-        "reading_links": [
-          {
-            "source_id": "arxiv_cs_ai",
-            "source_name": "arXiv cs.AI",
-            "source_type": "research",
-            "source_role": "primary",
-            "original_title": "torchtsetlin: Fast, Interpretable Tsetlin Machines for PyTorch",
-            "url": "https://arxiv.org/abs/2611.28195",
-            "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-            "link_label": "arXiv cs.AI",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "research"
-        ]
-      },
-      {
-        "id": "c3741293-3043-500a-b6ce-8b1b0402488a",
-        "event_date": "2026-11-24",
-        "category": "大模型动态",
-        "ai_title": "大模型动态｜Perplexity and Intelligence",
-        "one_sentence_summary": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evalua...",
-        "detailed_summary": "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evaluating emerging capabilities.",
-        "key_points": [
-          "How perplexity measures progress in AI models, and why it could help developers establish a shared approach to evalua..."
-        ],
-        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从能力、成本和生态角度解读：Perplexity and Intelligence",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 67.0,
+        "priority_score": 70.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
-          "编程工具",
-          "产品更新"
+          "智能体",
+          "编程工具"
         ],
-        "signal_strength": 55.06,
+        "signal_strength": 57.1,
         "reading_links": [
           {
             "source_id": "openai_news",
             "source_name": "OpenAI News",
             "source_type": "official",
             "source_role": "primary",
-            "original_title": "Perplexity and Intelligence",
-            "url": "https://openai.com/index/perplexity-and-intelligence",
-            "published_at": "Sun, 22 Nov 2026 00:00:00 GMT",
+            "original_title": "How iFood scales coding agents across 15,000 repositories",
+            "url": "https://openai.com/business/customer-stories/ifood",
+            "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
             "link_label": "OpenAI News",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -767,8 +548,8 @@
         ]
       },
       {
-        "id": "bd42d878-2678-5b24-9e2f-c7697cbb9c98",
-        "event_date": "2026-11-24",
+        "id": "acbf4350-013f-5aaa-864f-f64eda596dd1",
+        "event_date": "2026-11-25",
         "category": "大模型动态",
         "ai_title": "大模型动态｜Announcements",
         "one_sentence_summary": "Announcements",
@@ -810,66 +591,194 @@
         "source_types": [
           "official"
         ]
-      }
-    ],
-    "AI行业资讯": [
+      },
       {
-        "id": "2962d512-56f2-5fee-b7ed-0a2c8656622a",
-        "event_date": "2026-11-24",
-        "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Anthropic launches Claude Shi...",
-        "one_sentence_summary": "As AI-generated code piles up, Anthropic's new developer tools aim to eliminate another bottleneck by letting agents...",
-        "detailed_summary": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Disrupt 2026 Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment...",
+        "id": "4c546ecd-7572-5c97-a753-656f43ca396f",
+        "event_date": "2026-11-25",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Investing in the public benefi...",
+        "one_sentence_summary": "Investing in the public benefit We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund...",
+        "detailed_summary": "Investing in the public benefit We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund, a new entity with a structure that increases the stake as the company grows.",
         "key_points": [
-          "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes | TechCrunch TechCrunch Deskt...",
-          "On Monday, the newly public AI company announced the launch of Claude Ship , a suite of AI agents for automating code...",
-          "The latter is the more interesting part of this new set of tools, as AI coding tools already offered code review feat...",
-          "What’s notable about Claude Ship is not just that it can review proposed code changes and identify and address proble...",
-          "Image Credits: Anthropic The launch arrives at a time when AI coding agents have become increasingly capable of gener..."
+          "Investing in the public benefit We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund..."
         ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
         "impact_analysis": {
           "technology": "需结合原文判断技术路线和能力边界。",
           "business": "可关注对企业采购、产品竞争和商业模式的影响。",
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
+        "topic_angle": "从能力、成本和生态角度解读：Investing in the public benefit We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund, a new entity with a structure that increases the stake as the company grows.",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 77.0,
+        "priority_score": 65.0,
         "confidence": 0.55,
         "tags": [
-          "模型发布",
-          "智能体",
-          "编程工具",
-          "产品更新",
-          "商业化",
-          "政策监管"
+          "官方消息"
         ],
-        "signal_strength": 58.36,
+        "signal_strength": 50.7,
         "reading_links": [
           {
-            "source_id": "techcrunch_ai",
-            "source_name": "TechCrunch AI",
-            "source_type": "media",
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
             "source_role": "primary",
-            "original_title": "Anthropic launches Claude Ship, letting AI agents review, fix, and approve code changes",
-            "url": "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
-            "published_at": "Mon, 23 Nov 2026 22:05:50 +0000",
-            "link_label": "TechCrunch AI",
+            "original_title": "Investing in the public benefit We’re committing a portion of Anthropic’s shares to the Anthropic Public Benefit Fund, a new entity with a structure that increases the stake as the company grows.",
+            "url": "https://www.anthropic.com/news/public-benefit-fund",
+            "published_at": null,
+            "link_label": "Anthropic News",
             "is_primary_reading_link": true,
             "display_order": 1
           }
         ],
         "source_count": 1,
         "source_types": [
-          "media"
+          "official"
         ]
       },
       {
-        "id": "aafe1357-b78e-5d24-b3a2-a79328a58715",
-        "event_date": "2026-11-24",
+        "id": "184fc331-c83c-57bb-8562-2b63fa0f504a",
+        "event_date": "2026-11-25",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Anthropic files S-1 with the S...",
+        "one_sentence_summary": "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration stat...",
+        "detailed_summary": "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration statement on Form S-1 with the U.S. Securities and Exchange Commission relating to its proposed initial pub",
+        "key_points": [
+          "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration stat...",
+          "Securities and Exchange Commission relating to its proposed initial pub"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration statement on Form S-1 with the U.S. Securities and Exchange Commission relating to its proposed initial pub",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 65.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 50.7,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Anthropic files S-1 with the SEC for proposed initial public offering Today, Anthropic, PBC filed a registration statement on Form S-1 with the U.S. Securities and Exchange Commission relating to its proposed initial pub",
+            "url": "https://www.anthropic.com/news/s1-sec",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "d53e0368-3c88-560a-a964-8c5ec18253d7",
+        "event_date": "2026-11-25",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜Science",
+        "one_sentence_summary": "Science",
+        "detailed_summary": "Science",
+        "key_points": [
+          "Science"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：Science",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 65.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息"
+        ],
+        "signal_strength": 50.7,
+        "reading_links": [
+          {
+            "source_id": "anthropic_news",
+            "source_name": "Anthropic News",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "Science",
+            "url": "https://www.anthropic.com/science",
+            "published_at": null,
+            "link_label": "Anthropic News",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      },
+      {
+        "id": "8eae26bc-79d6-5c20-945a-061e33fd7ec7",
+        "event_date": "2026-11-25",
+        "category": "大模型动态",
+        "ai_title": "大模型动态｜The components of agent memory",
+        "one_sentence_summary": "The components of agent memory",
+        "detailed_summary": "The components of agent memory",
+        "key_points": [
+          "The components of agent memory"
+        ],
+        "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从能力、成本和生态角度解读：The components of agent memory",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 65.0,
+        "confidence": 0.55,
+        "tags": [
+          "官方消息",
+          "智能体"
+        ],
+        "signal_strength": 52.2,
+        "reading_links": [
+          {
+            "source_id": "anthropic_engineering",
+            "source_name": "Anthropic Engineering",
+            "source_type": "official",
+            "source_role": "primary",
+            "original_title": "The components of agent memory",
+            "url": "https://www.anthropic.com/research/components-of-agent-memory",
+            "published_at": null,
+            "link_label": "Anthropic Engineering",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "official"
+        ]
+      }
+    ],
+    "AI行业资讯": [
+      {
+        "id": "f03e8457-46be-5576-9b4b-ce8e34a7549f",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Merry Making: Play, Build and...",
         "one_sentence_summary": "The elves don’t have to be the only ones busy in the workshop this holiday season. With the lights twinkling and the...",
@@ -891,14 +800,14 @@
         "topic_angle": "从商业化和产业竞争角度解读：Merry Making: Play, Build and Create With NVIDIA Technologies This Holiday Season",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 72.0,
+        "priority_score": 69.0,
         "confidence": 0.55,
         "tags": [
           "官方消息",
           "产品更新",
           "算力芯片"
         ],
-        "signal_strength": 58.46,
+        "signal_strength": 56.42,
         "reading_links": [
           {
             "source_id": "nvidia_blog",
@@ -919,18 +828,18 @@
         ]
       },
       {
-        "id": "1a609d5c-f1f7-5079-9c18-4bf1ae86ee92",
-        "event_date": "2026-11-24",
+        "id": "f3b39740-da21-5882-b0f3-996370166032",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜US to blacklist Asian AI firm...",
-        "one_sentence_summary": "Megaspeed has been accused of funneling AI chips to China after a former executive's affair with Jensen Huang became...",
-        "detailed_summary": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Tech US to blacklist As...",
+        "ai_title": "AI行业资讯｜Yale’s Sonnenfeld: Nvidia is...",
+        "one_sentence_summary": "Yale's Jeffrey Sonnenfeld warns that what the market cheered Monday, Jensen Huang's White House–backed return as Nvid...",
+        "detailed_summary": "Yale's Sonnenfeld: Nvidia is a 'detriment' to US industrial might — not a champion | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Disrupt 2026 Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta...",
         "key_points": [
-          "US to blacklist Asian AI firm Megaspeed after Nvidia scandal - BBC News BBC Homepage Skip to content Accessibility He...",
-          "The Department of Commerce announced it planned to add Megaspeed Ltd to a list of entities that are blacklisted from...",
-          "The company is mainly a developer of data centres, but in recent weeks a former executive of Megaspeed was accused of...",
-          "The relationship led to additional scrutiny by US officials and heightened concern that Megaspeed was funnelling Nvid...",
-          "When exactly the ban against Megaspeed will go into effect was not specified in the commerce department announcement."
+          "Yale's Sonnenfeld: Nvidia is a 'detriment' to US industrial might — not a champion | TechCrunch TechCrunch Desktop Lo...",
+          "He sees a company that is largely responsible for putting sophisticated technology in the hands of the country’s adve...",
+          "Far from a champion of American industry, he says, Nvidia is “a detriment to U.S.",
+          "global industrial might.” As evidence, Sonnenfeld points to research suggesting Nvidia’s most advanced chips have rea...",
+          "export controls and to sinking shares of Anthropic, which he links to the realization that China’s seemingly miraculo..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -939,26 +848,29 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
+        "topic_angle": "从商业化和产业竞争角度解读：Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 68.0,
+        "priority_score": 69.0,
         "confidence": 0.55,
         "tags": [
-          "编程工具",
-          "算力芯片"
+          "产品更新",
+          "商业化",
+          "算力芯片",
+          "政策监管",
+          "论文研究"
         ],
-        "signal_strength": 49.24,
+        "signal_strength": 52.92,
         "reading_links": [
           {
-            "source_id": "bbc_technology",
-            "source_name": "BBC Technology",
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "US to blacklist Asian AI firm Megaspeed after Nvidia scandal",
-            "url": "https://www.bbc.co.uk/news/articles/cv98xpg5dg5zo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Mon, 23 Nov 2026 23:16:08 GMT",
-            "link_label": "BBC Technology",
+            "original_title": "Yale’s Sonnenfeld: Nvidia is a ‘detriment’ to US industrial might — not a champion",
+            "url": "https://techcrunch.com/2026/11/24/yales-sonnenfeld-nvidia-is-a-detriment-to-u-s-industrial-might-not-a-champion/",
+            "published_at": "Wed, 25 Nov 2026 00:12:02 +0000",
+            "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
           }
@@ -969,18 +881,18 @@
         ]
       },
       {
-        "id": "be95c3ca-5d9d-59d6-ab2d-78c91b1bd934",
-        "event_date": "2026-11-24",
+        "id": "1a7c3e62-c40d-5b14-a020-08e688218846",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
-        "ai_title": "Nvidia value climbs by almost $1tn a...",
-        "one_sentence_summary": "The jump in Nvidia shares has also lifted stock markets, with the tech-heavy Nasdaq up 6.5%.",
-        "detailed_summary": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat...",
+        "ai_title": "AI行业资讯｜In all-hands meeting, Jensen...",
+        "one_sentence_summary": "The Nvidia founder apologized to his staff on Tuesday and said he was grateful for a second chance to lead the company.",
+        "detailed_summary": "In all-hands meeting, Jensen Huang thanks White House and says he's in therapy | TechCrunch TechCrunch Desktop Logo TechCrunch Mobile Logo Latest Startups Venture Apple Security AI Apps Disrupt 2026 Events Podcasts Newsletters Search Submit Site Search Toggle Mega Menu Toggle Topics Latest AI Amazon Apps Biotech & Health Climate Cloud Computing Commerce Crypto Enterprise EVs Fintech Fundraising Gadgets Gaming Google Government & Policy Hardware Instagram Layoffs Media & Entertainment Meta Mic...",
         "key_points": [
-          "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns - BBC News BBC Homepage Skip to c...",
-          "His shock reinstatement comes less than two weeks after Huang resigned after admitting an affair with a woman who was...",
-          "Nvidia shares rose by more than 31% which also lifted stock markets, with the tech-heavy Nasdaq climbing by 6.5% and...",
-          "Tech stocks more broadly have also rallied following large falls on Friday , with much of the rally starting in pre-m...",
-          "Other chipmakers experienced large increases following Monday's announcement from the Nvidia board."
+          "In all-hands meeting, Jensen Huang thanks White House and says he's in therapy | TechCrunch TechCrunch Desktop Logo T...",
+          "Huang held Nvidia’s first all-hands meeting on Tuesday since his reinstatement on Monday.",
+          "During that meeting, CNBC reported that Huang struck a “remorseful tone” and told the crowd “I hurt all of you.” The...",
+          "national security, went on to describe how difficult the current moment is for him: “This is going to be the hardest...",
+          "“The hardest meeting I’ve ever done was with my wife,” he added."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -989,25 +901,29 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
+        "topic_angle": "从商业化和产业竞争角度解读：In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 66.0,
+        "priority_score": 66.5,
         "confidence": 0.55,
         "tags": [
-          "算力芯片"
+          "产品更新",
+          "商业化",
+          "算力芯片",
+          "政策监管",
+          "国际金融"
         ],
-        "signal_strength": 46.38,
+        "signal_strength": 51.22,
         "reading_links": [
           {
-            "source_id": "bbc_technology",
-            "source_name": "BBC Technology",
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Nvidia value climbs by almost $1tn and tech stocks rally after Jensen Huang returns",
-            "url": "https://www.bbc.co.uk/news/articles/cq62pn6j42jko?at_medium=RSS&at_campaign=rss",
-            "published_at": "Mon, 23 Nov 2026 21:23:42 GMT",
-            "link_label": "BBC Technology",
+            "original_title": "In all-hands meeting, Jensen Huang thanks White House and says he’s in therapy",
+            "url": "https://techcrunch.com/2026/11/24/in-all-hands-meeting-jensen-huang-thanks-white-house-and-says-hes-in-therapy/",
+            "published_at": "Tue, 24 Nov 2026 21:48:27 +0000",
+            "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
           }
@@ -1018,15 +934,18 @@
         ]
       },
       {
-        "id": "20191d89-cc07-59d9-91c3-af64549a4e67",
-        "event_date": "2026-11-24",
+        "id": "c19396d5-27b0-59f2-b817-93e9b7f7c602",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
         "ai_title": "NVIDIA and Microsoft Expand Accele利率...",
         "one_sentence_summary": "NVIDIA and Microsoft are extending their full-stack collaboration to help organizations build, customize and deploy i...",
-        "detailed_summary": "NVIDIA and Microsoft are extending their full-stack collaboration to help organizations build, customize and deploy intelligent applications — from next-generation infrastructure on Azure to industrial systems and Windows PCs. At Microsoft Ignite, the companies are expanding access to Azure virtual machines powered by NVIDIA Vera Rubin NVL72 systems, as well as adding customer availability to […]",
+        "detailed_summary": "NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs | NVIDIA Blog Skip to content NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs NVIDIA and Microsoft expand tools for enterprises to customize AI models and deploy applications across cloud and local infrastructure. November 19, 2026 by Dave Salvator 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied! NVIDIA and Microsoft are extending their full-stack collaboration...",
         "key_points": [
+          "NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs | NVIDIA Blog Skip to content NVIDIA and...",
+          "November 19, 2026 by Dave Salvator 0 Comments Share Share This Article X Facebook LinkedIn Copy link Link copied!",
           "NVIDIA and Microsoft are extending their full-stack collaboration to help organizations build, customize and deploy i...",
-          "At Microsoft Ignite, the companies are expanding access to Azure virtual machines powered by NVIDIA Vera Rubin NVL72..."
+          "At Microsoft Ignite , the companies are expanding access to Azure virtual machines powered by NVIDIA Vera Rubin NVL72...",
+          "Microsoft is also using NVIDIA technologies to accelerate its own models and services, including NVIDIA Dynamo infere..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1043,6 +962,7 @@
         "tags": [
           "官方消息",
           "产品更新",
+          "商业化",
           "算力芯片",
           "国际金融"
         ],
@@ -1067,8 +987,8 @@
         ]
       },
       {
-        "id": "ea69cfa8-7283-52e2-bfaa-0f4a48054291",
-        "event_date": "2026-11-24",
+        "id": "6bb394d1-afe0-50f8-8916-4192275c63f7",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Microsoft On The Issues",
         "one_sentence_summary": "Microsoft On The Issues",
@@ -1112,54 +1032,8 @@
         ]
       },
       {
-        "id": "dad87432-de01-567b-bbac-9cdf7b0cc042",
-        "event_date": "2026-11-24",
-        "category": "AI行业资讯",
-        "ai_title": "Supertake rAIses $20M to let AI agen...",
-        "one_sentence_summary": "Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without ha...",
-        "detailed_summary": "Think you know where the market is headed? A startup called Supertake lets you put money behind your ideas without having to pick the stocks yourself.",
-        "key_points": [
-          "Think you know where the market is headed?",
-          "A startup called Supertake lets you put money behind your ideas without having to pick the stocks yourself."
-        ],
-        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
-        "impact_analysis": {
-          "technology": "需结合原文判断技术路线和能力边界。",
-          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-          "policy": "",
-          "finance": ""
-        },
-        "topic_angle": "从商业化和产业竞争角度解读：Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 63.5,
-        "confidence": 0.55,
-        "tags": [
-          "智能体"
-        ],
-        "signal_strength": 44.68,
-        "reading_links": [
-          {
-            "source_id": "techcrunch_ai",
-            "source_name": "TechCrunch AI",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Supertake raises $20M to let AI agents turn your market predictions into stock portfolios",
-            "url": "https://techcrunch.com/2026/11/23/supertake-raises-20m-to-let-ai-agents-turn-your-market-predictions-into-stock-portfolios/",
-            "published_at": "Mon, 23 Nov 2026 22:02:05 +0000",
-            "link_label": "TechCrunch AI",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "701b1836-9239-5348-9764-ea39f9a75dd9",
-        "event_date": "2026-11-24",
+        "id": "85e618b4-0261-552d-a985-b000fa3f406c",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Into the Omniverse: How Devel...",
         "one_sentence_summary": "Turning a simulation idea into a working application means assembling assets, connecting physics and rendering, and c...",
@@ -1209,8 +1083,8 @@
         ]
       },
       {
-        "id": "4162d21d-de71-5969-8415-c04c6c2c0d29",
-        "event_date": "2026-11-24",
+        "id": "02c39b98-36ba-51fb-961c-1e39c7501f68",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜Season’s Streamings and Savin...",
         "one_sentence_summary": "GeForce NOW is kicking off Black Friday with more reasons to make time for gaming. Six-month memberships are back for...",
@@ -1259,8 +1133,8 @@
         ]
       },
       {
-        "id": "274b0970-9a9f-5f91-b5b1-ae3b2a578cac",
-        "event_date": "2026-11-24",
+        "id": "8a13ab5c-b090-51e7-a526-1a2e77523855",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
         "ai_title": "AI行业资讯｜NVIDIA RTX Spark Compact Desk...",
         "one_sentence_summary": "New NVIDIA RTX Spark compact desktops from ASUS, Dell and MSI are available today, bringing local AI agents, image an...",
@@ -1308,8 +1182,8 @@
         ]
       },
       {
-        "id": "35de6340-850a-5ca0-b544-530f4cdbfc52",
-        "event_date": "2026-11-24",
+        "id": "38e5e469-32b8-5472-947f-9e5467a1e129",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
         "ai_title": "智谱刚刚发了GLM-5.4，全新架构的那种！网友直呼：超过预期",
         "one_sentence_summary": "智谱刚刚发了GLM-5.4，全新架构的那种！网友直呼：超过预期",
@@ -1351,14 +1225,14 @@
         ]
       },
       {
-        "id": "b498e135-47cb-5a1c-82be-f667128def6b",
-        "event_date": "2026-11-24",
+        "id": "e9a9b9a1-0711-5537-b887-bb2fa7254aa1",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Elon Musk and others rejoice...",
-        "one_sentence_summary": "\"The mistake has been corrected,\" Elon Musk chimed in.",
-        "detailed_summary": "\"The mistake has been corrected,\" Elon Musk chimed in.",
+        "ai_title": "AI行业资讯｜Jensen Huang still thinks a s...",
+        "one_sentence_summary": "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.",
+        "detailed_summary": "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder.",
         "key_points": [
-          "\"The mistake has been corrected,\" Elon Musk chimed in."
+          "It's a remarkable stance for a company that spent the last two weeks finding out what happens without its founder."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1367,24 +1241,24 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal",
+        "topic_angle": "从商业化和产业竞争角度解读：Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 58.0,
+        "priority_score": 57.0,
         "confidence": 0.55,
         "tags": [
-          "算力芯片"
+          "产品更新"
         ],
-        "signal_strength": 40.94,
+        "signal_strength": 40.26,
         "reading_links": [
           {
             "source_id": "techcrunch_ai",
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Elon Musk and others rejoice as Jensen Huang is reinstated at Nvidia amid scandal",
-            "url": "https://techcrunch.com/2026/11/23/elon-musk-and-others-rejoice-as-jensen-huang-is-reinstated-at-nvidia-amid-scandal/",
-            "published_at": "Mon, 23 Nov 2026 21:47:41 +0000",
+            "original_title": "Jensen Huang still thinks a succession plan creates unnecessary hierarchy",
+            "url": "https://techcrunch.com/2026/11/24/jensen-huang-still-thinks-a-succession-plan-creates-unnecessary-hierarchy/",
+            "published_at": "Tue, 24 Nov 2026 22:27:52 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1396,14 +1270,14 @@
         ]
       },
       {
-        "id": "a899e455-ef80-5e04-906b-3d923cf3300b",
-        "event_date": "2026-11-24",
+        "id": "577eea0c-7d34-522e-afed-7cb4e6dd17ef",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜Nvidia employees greet Jensen...",
-        "one_sentence_summary": "\"I'm going to be a better CEO the second time around,\" Huang told employees.",
-        "detailed_summary": "\"I'm going to be a better CEO the second time around,\" Huang told employees.",
+        "ai_title": "AI行业资讯｜Even the best AI agents strug...",
+        "one_sentence_summary": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to...",
+        "detailed_summary": "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to complete everyday tasks reliably and safely without introducing potential new problems.",
         "key_points": [
-          "\"I'm going to be a better CEO the second time around,\" Huang told employees."
+          "As millions embrace personal AI assistants, a new benchmark reveals that even the most advanced AI models struggle to..."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1412,24 +1286,25 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ",
+        "topic_angle": "从商业化和产业竞争角度解读：Even the best AI agents struggle with everyday life",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 58.0,
+        "priority_score": 57.0,
         "confidence": 0.55,
         "tags": [
-          "算力芯片"
+          "评测榜单",
+          "智能体"
         ],
-        "signal_strength": 40.94,
+        "signal_strength": 41.76,
         "reading_links": [
           {
             "source_id": "techcrunch_ai",
             "source_name": "TechCrunch AI",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Nvidia employees greet Jensen Huang like a hero as he returns to company’s HQ",
-            "url": "https://techcrunch.com/2026/11/23/nvidia-employees-greet-jensen-huang-like-a-hero-as-he-returns-to-companys-hq/",
-            "published_at": "Mon, 23 Nov 2026 20:38:53 +0000",
+            "original_title": "Even the best AI agents struggle with everyday life",
+            "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/",
+            "published_at": "Tue, 24 Nov 2026 21:33:29 +0000",
             "link_label": "TechCrunch AI",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1441,14 +1316,14 @@
         ]
       },
       {
-        "id": "d80da5a4-1a17-571b-8472-53214186b467",
-        "event_date": "2026-11-24",
+        "id": "81922c8e-64fb-5487-98aa-06bd762689a5",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
-        "ai_title": "How important are Nvidia and Jensen...",
-        "one_sentence_summary": "The Nvidia chief executive has been at the centre of the artificial intelligence boom.",
-        "detailed_summary": "The Nvidia chief executive has been at the centre of the artificial intelligence boom.",
+        "ai_title": "AI行业资讯｜Walmart teams up with Meta to...",
+        "one_sentence_summary": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent.",
+        "detailed_summary": "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent.",
         "key_points": [
-          "The Nvidia chief executive has been at the centre of the artificial intelligence boom."
+          "Walmart now lets customers shop Black Friday deals through Muse, Meta’s AI agent."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1457,7 +1332,52 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：How important are Nvidia and Jensen Huang to the US economy?",
+        "topic_angle": "从商业化和产业竞争角度解读：Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.0,
+        "confidence": 0.55,
+        "tags": [
+          "智能体"
+        ],
+        "signal_strength": 40.26,
+        "reading_links": [
+          {
+            "source_id": "techcrunch_ai",
+            "source_name": "TechCrunch AI",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Walmart teams up with Meta to bring Black Friday deals to AI agent Muse",
+            "url": "https://techcrunch.com/2026/11/24/walmart-teams-up-with-meta-to-bring-black-friday-deals-to-ai-agent-muse/",
+            "published_at": "Tue, 24 Nov 2026 21:32:38 +0000",
+            "link_label": "TechCrunch AI",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "d55f1095-9426-502f-9d01-6ecc67215660",
+        "event_date": "2026-11-25",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜FAIsal Islam: Fears over the...",
+        "one_sentence_summary": "There were legitimate fears before Huang's abrupt exit from Nvidia - and his return won't fix it",
+        "detailed_summary": "There were legitimate fears before Huang's abrupt exit from Nvidia - and his return won't fix it",
+        "key_points": [
+          "There were legitimate fears before Huang's abrupt exit from Nvidia - and his return won't fix it"
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Faisal Islam: Fears over the AI boom haven't gone away",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.0,
@@ -1472,9 +1392,9 @@
             "source_name": "BBC Technology",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "How important are Nvidia and Jensen Huang to the US economy?",
-            "url": "https://www.bbc.co.uk/news/articles/c68798vdprwpo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Mon, 23 Nov 2026 16:12:35 GMT",
+            "original_title": "Faisal Islam: Fears over the AI boom haven't gone away",
+            "url": "https://www.bbc.co.uk/news/articles/c6894evgpel5o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 24 Nov 2026 18:21:43 GMT",
             "link_label": "BBC Technology",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1486,14 +1406,14 @@
         ]
       },
       {
-        "id": "3bdce652-efe3-5e94-90aa-2e9a31d90a00",
-        "event_date": "2026-11-24",
+        "id": "7de54b4d-2605-5543-93fa-b6d236405aca",
+        "event_date": "2026-11-25",
         "category": "AI行业资讯",
-        "ai_title": "AI行业资讯｜The rise and fall and rise ag...",
-        "one_sentence_summary": "Days after resigning while mired in scandal of extra-marital affairs, Nvidia's Jensen Huang is making a remarkable re...",
-        "detailed_summary": "Days after resigning while mired in scandal of extra-marital affairs, Nvidia's Jensen Huang is making a remarkable return.",
+        "ai_title": "AI行业资讯｜Why tiny cars are taking off...",
+        "one_sentence_summary": "Once seen as a car for elderly, rural people, tiny cars are being embraced by a younger demographic.",
+        "detailed_summary": "Once seen as a car for elderly, rural people, tiny cars are being embraced by a younger demographic.",
         "key_points": [
-          "Days after resigning while mired in scandal of extra-marital affairs, Nvidia's Jensen Huang is making a remarkable re..."
+          "Once seen as a car for elderly, rural people, tiny cars are being embraced by a younger demographic."
         ],
         "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
         "impact_analysis": {
@@ -1502,24 +1422,68 @@
           "policy": "",
           "finance": ""
         },
-        "topic_angle": "从商业化和产业竞争角度解读：The rise and fall and rise again of Jensen Huang",
+        "topic_angle": "从商业化和产业竞争角度解读：Why tiny cars are taking off across Europe",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 57.0,
+        "priority_score": 56.0,
         "confidence": 0.55,
-        "tags": [
-          "算力芯片"
-        ],
-        "signal_strength": 40.26,
+        "tags": [],
+        "signal_strength": 38.08,
         "reading_links": [
           {
             "source_id": "bbc_technology",
             "source_name": "BBC Technology",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "The rise and fall and rise again of Jensen Huang",
-            "url": "https://www.bbc.co.uk/news/articles/cmze750zg0jeo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Mon, 23 Nov 2026 15:49:52 GMT",
+            "original_title": "Why tiny cars are taking off across Europe",
+            "url": "https://www.bbc.co.uk/news/articles/cmwy9jne0g7qo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 25 Nov 2026 00:34:05 GMT",
+            "link_label": "BBC Technology",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "e9bb96ba-c447-5a69-8181-1423f1adca67",
+        "event_date": "2026-11-25",
+        "category": "AI行业资讯",
+        "ai_title": "AI行业资讯｜Helpful but awkward: My week...",
+        "one_sentence_summary": "Meta wants Muse to do for AI what WhatsApp did for messaging - here's what the BBC's technology editor found when she...",
+        "detailed_summary": "Meta wants Muse to do for AI what WhatsApp did for messaging - here's what the BBC's technology editor found when she used it.",
+        "key_points": [
+          "Meta wants Muse to do for AI what WhatsApp did for messaging - here's what the BBC's technology editor found when she..."
+        ],
+        "why_it_matters": "可能反映 AI 商业化、算力、应用落地或公司竞争格局的变化。",
+        "impact_analysis": {
+          "technology": "需结合原文判断技术路线和能力边界。",
+          "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+          "policy": "",
+          "finance": ""
+        },
+        "topic_angle": "从商业化和产业竞争角度解读：Helpful but awkward: My week with Meta's Muse ahead of its UK launch",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": false,
+        "priority_score": 54.0,
+        "confidence": 0.55,
+        "tags": [
+          "模型发布",
+          "产品更新"
+        ],
+        "signal_strength": 39.72,
+        "reading_links": [
+          {
+            "source_id": "bbc_technology",
+            "source_name": "BBC Technology",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Helpful but awkward: My week with Meta's Muse ahead of its UK launch",
+            "url": "https://www.bbc.co.uk/news/articles/c9gkld2l38y6o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Tue, 24 Nov 2026 09:33:00 GMT",
             "link_label": "BBC Technology",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1533,18 +1497,18 @@
     ],
     "国际形势影响": [
       {
-        "id": "9f5a254e-5854-5472-9436-5f92f3b046c4",
-        "event_date": "2026-11-24",
+        "id": "547d9a65-0fc8-594e-835e-25ff4ab3cc82",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Trump faces backlash after sa...",
-        "one_sentence_summary": "Nvidia had come under pressure from President Trump to reappoint Huang, whose comeback helped add $1tn to the company...",
-        "detailed_summary": "Trump faces backlash after he 'convinced' Nvidia to reinstate Jensen Huang - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Business...",
+        "ai_title": "国际形势影响｜Russia's own figures show alm...",
+        "one_sentence_summary": "Leaked data reveal how the full-scale invasion of Ukraine has fundamentally changed mortality patterns in Russia.",
+        "detailed_summary": "Russia's own figures show almost 500,000 deaths in war in Ukraine - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat World Africa Asia...",
         "key_points": [
-          "Trump faces backlash after he 'convinced' Nvidia to reinstate Jensen Huang - BBC News BBC Homepage Skip to content Ac...",
-          "The AI chipmaker handed its co-founder his job back, despite rejecting his initial offer to return, after pressure fr...",
-          "Trump said he \"made the deal\" with the tech giant's board to get Huang his job back, but both the president and Nvidi...",
-          "But his comeback added almost $1 trillion to Nvidia's market value as its share price jumped 31%, ending ended a stre...",
-          "Nvidia's gains helped boost shares in other tech companies and financial markets in Asia while European markets were..."
+          "Russia's own figures show almost 500,000 deaths in war in Ukraine - BBC News BBC Homepage Skip to content Accessibili...",
+          "The leaked Rosstat data reveal how the full-scale invasion of Ukraine has fundamentally changed mortality patterns in...",
+          "BBC Russian has had access to more than 11 million death records from 2021 to September 2026, after a hack by Belarus...",
+          "Russia's statistics agency admitted to a cyber-attack, but denied any protected information had been leaked.",
+          "Together with independent Russian outlet Mediazona, BBC Russian has compared the Rosstat data with its own list of co..."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1553,26 +1517,75 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Russia's own figures show almost 500,000 deaths in war in Ukraine",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 66.5,
+        "priority_score": 63.5,
+        "confidence": 0.55,
+        "tags": [
+          "地缘影响"
+        ],
+        "signal_strength": 44.68,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Russia's own figures show almost 500,000 deaths in war in Ukraine",
+            "url": "https://www.bbc.co.uk/news/articles/cmx27g533zwyo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 25 Nov 2026 00:56:51 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "7f40e496-c65f-5825-8ffb-234a2e718a75",
+        "event_date": "2026-11-25",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜The rising cost of putting fo...",
+        "one_sentence_summary": "India's food inflation is broadening, squeezing household budgets.",
+        "detailed_summary": "Inflation: How rising food prices are squeezing Indian households - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Asia China India T...",
+        "key_points": [
+          "Inflation: How rising food prices are squeezing Indian households - BBC News BBC Homepage Skip to content Accessibili...",
+          "And the biggest worry is what's happening to food prices.",
+          "The latest government data , external shows retail inflation climbed to 6.09% in October, up from 5.54% in September.",
+          "But look more closely at food inflation.",
+          "It has surged to 8.94%."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：The rising cost of putting food on the table in India",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 63.5,
         "confidence": 0.55,
         "tags": [
           "产品更新",
-          "算力芯片",
+          "国际金融",
           "地缘影响"
         ],
-        "signal_strength": 49.72,
+        "signal_strength": 47.68,
         "reading_links": [
           {
             "source_id": "bbc_world",
             "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
-            "url": "https://www.bbc.co.uk/news/articles/cq5y1k8ez407o?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 24 Nov 2026 09:42:54 GMT",
+            "original_title": "The rising cost of putting food on the table in India",
+            "url": "https://www.bbc.co.uk/news/articles/cmy0xj41kl50o?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 25 Nov 2026 01:02:13 GMT",
             "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1584,18 +1597,18 @@
         ]
       },
       {
-        "id": "50c25265-19f3-5593-8f7d-0408da2a0614",
-        "event_date": "2026-11-24",
+        "id": "81d007b0-0d3a-5508-a88c-25ee4dd13596",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜What Jensen Huang's return te...",
-        "one_sentence_summary": "Huang being back at the helm of Nvidia is no guarantee of relief for Beijing.",
-        "detailed_summary": "What Jensen Huang's return to Nvidia teaches China's Xi about Trump - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Asia China India...",
+        "ai_title": "国际形势影响｜Pakistan rejoices as country’...",
+        "one_sentence_summary": "Zeeshan Ali makes history as the first foreign national to board China's space station",
+        "detailed_summary": "Pakistan rejoices as country’s first astronaut enters orbit | Space News | Al Jazeera Skip links Skip to Content Live Sign up Navigation menu News Show more news sections Middle East Africa Asia US & Canada Latin America Europe Asia Pacific Explained Sport Opinion Video Interactives More Show more sections Originals Features Economy Human Rights Climate Crisis Investigations In Pictures Science & Technology Podcasts Travel Sponsored Content Live Click here to search Sign up Navigation menu US...",
         "key_points": [
-          "What Jensen Huang's return to Nvidia teaches China's Xi about Trump - BBC News BBC Homepage Skip to content Accessibi...",
-          "Most users are pleased to see the return of the influential billionaire, who declared that he loved China, before vid...",
-          "Some wondered why - in the video of him returning to Nvidia's headquarters - he is not wearing one of his leather jac...",
-          "But to many, Huang's return, which is being dubbed one of the greatest U-turns of all time, seems like a vindication...",
-          "That's probably how Xi Jinping sees it too."
+          "Pakistan rejoices as country’s first astronaut enters orbit | Space News | Al Jazeera Skip links Skip to Content Live...",
+          "Muhammad Zeeshan Ali docked at the space station in the early hours of Wednesday after taking off from China’s Jiuqua...",
+          "Recommended Stories list of 3 items list 1 of 3 Ten killed in Pakistan as bus crashes into gas tanker list 2 of 3 Pak...",
+          "“I’m not flying for myself.",
+          "I carry the name of Pakistan on my shoulder,” Ali told reporters on Tuesday."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1604,76 +1617,25 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：What Jensen Huang's return teaches China's Xi about Trump",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 66.5,
-        "confidence": 0.55,
-        "tags": [
-          "算力芯片",
-          "地缘影响"
-        ],
-        "signal_strength": 48.22,
-        "reading_links": [
-          {
-            "source_id": "bbc_world",
-            "source_name": "BBC World",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "What Jensen Huang's return teaches China's Xi about Trump",
-            "url": "https://www.bbc.co.uk/news/articles/c63rgpy50x98o?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 24 Nov 2026 07:26:27 GMT",
-            "link_label": "BBC World",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "b0ea4c5b-566e-5e24-b8b7-1e097e358f94",
-        "event_date": "2026-11-24",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Pakistan’s Zeeshan Ali set fo...",
-        "one_sentence_summary": "The Pakistan Air Force pilot will spend about a week on board the Tiangong, conducting experiments with China’s crew.",
-        "detailed_summary": "Pakistan’s Zeeshan Ali set for historic flight to China’s space station | Space News | Al Jazeera Skip links Skip to Content Live Sign up Navigation menu News Show more news sections Middle East Africa Asia US & Canada Latin America Europe Asia Pacific Explained Sport Opinion Video Interactives More Show more sections Originals Features Economy Human Rights Climate Crisis Investigations In Pictures Science & Technology Podcasts Travel Sponsored Content Live Click here to search Sign up Naviga...",
-        "key_points": [
-          "Pakistan’s Zeeshan Ali set for historic flight to China’s space station | Space News | Al Jazeera Skip links Skip to...",
-          "Listen (9 mins) Save Share Pakistan’s Zeeshan Ali set for historic flight to China’s space station on social media Sh...",
-          "Muhammad Zeeshan Ali, 40, will fly as a payload specialist alongside commander Tang Hongbo and flight engineer Wu Yi.",
-          "The spacecraft is scheduled to launch from the Jiuquan Satellite Launch Center in northwest China at 8:18am Beijing t...",
-          "Recommended Stories list of 4 items list 1 of 4 Pakistani astronaut to join China’s next space station mission list 2..."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Pakistan’s Zeeshan Ali set for historic flight to China’s space station",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Pakistan rejoices as country’s first astronaut enters orbit",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 62.5,
         "confidence": 0.55,
         "tags": [
-          "模型发布",
           "产品更新",
           "地缘影响"
         ],
-        "signal_strength": 47.0,
+        "signal_strength": 45.5,
         "reading_links": [
           {
             "source_id": "aljazeera_all",
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Pakistan’s Zeeshan Ali set for historic flight to China’s space station",
-            "url": "https://www.aljazeera.com/news/2026/11/24/pakistans-zeeshan-ali-set-for-historic-flight-to-chinas-space-station?traffic_source=rss",
-            "published_at": "Tue, 24 Nov 2026 07:55:18 +0000",
+            "original_title": "Pakistan rejoices as country’s first astronaut enters orbit",
+            "url": "https://www.aljazeera.com/news/2026/11/25/pakistan-rejoices-as-countrys-first-astronaut-enters-orbit?traffic_source=rss",
+            "published_at": "Wed, 25 Nov 2026 07:05:59 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1685,18 +1647,18 @@
         ]
       },
       {
-        "id": "5d52ff71-04ff-575f-a2ea-047ed4e35442",
-        "event_date": "2026-11-24",
+        "id": "e349edca-d948-5ae0-9ba7-58081d6120df",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜What strike on Russian ship i...",
-        "one_sentence_summary": "Ukraine's sinking of a Russian battleship at a port in Libya raises the stakes of the war a notch, writes Frank Gardner.",
-        "detailed_summary": "What strike on Russian ship in Libya says about spread of Ukraine war - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat World Africa A...",
+        "ai_title": "国际形势影响｜US attorney general dodges qu...",
+        "one_sentence_summary": "Nvidia's share price have fallen 7% as lawmakers demand answers about President Donald Trump's involvement in Huang's...",
+        "detailed_summary": "US attorney general dodges questions about Nvidia investigation - BBC News BBC Homepage Skip to content Accessibility Help Your account Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds More menu More menu Search BBC Home News Sport Earth Reel Worklife Travel Culture Future Music TV Weather Sounds Close menu BBC News Menu Home Climate World US & Canada UK Business Tech Science Entertainment & Arts Health More In Pictures BBC Verify Newsbeat Business New Tech Ec...",
         "key_points": [
-          "What strike on Russian ship in Libya says about spread of Ukraine war - BBC News BBC Homepage Skip to content Accessi...",
-          "It wasn't.",
-          "The audacious and successful night-time attack in Benghazi , co-ordinated by Ukraine's SBU intelligence agency and it...",
-          "The answer is yes, in fact, it was already spreading.",
-          "But this attack, which Ukraine's President Volodymyr Zelensky called \"an exemplary operation\" will inevitably raise t..."
+          "US attorney general dodges questions about Nvidia investigation - BBC News BBC Homepage Skip to content Accessibility...",
+          "Blanche said he had no information about newly reinstated CEO Jensen Huang's security clearance status, as lawmakers...",
+          "Huang was given his job back less than two weeks after being forced to resign over revelations of extramarital affair...",
+          "Asked several times on Tuesday if the justice department or FBI had investigated Huang, Blanche responded: \"I don't k...",
+          "Trump has said he would consider pardoning Huang for any potential criminal activity, though he does not think it wil..."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1705,25 +1667,26 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：What strike on Russian ship in Libya says about spread of Ukraine war",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：US attorney general dodges questions about Nvidia investigation",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
-        "priority_score": 61.5,
+        "priority_score": 60.0,
         "confidence": 0.55,
         "tags": [
           "编程工具",
+          "算力芯片",
           "地缘影响"
         ],
-        "signal_strength": 44.82,
+        "signal_strength": 45.3,
         "reading_links": [
           {
             "source_id": "bbc_world",
             "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "What strike on Russian ship in Libya says about spread of Ukraine war",
-            "url": "https://www.bbc.co.uk/news/articles/cm894p88jzxpo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Mon, 23 Nov 2026 20:48:35 GMT",
+            "original_title": "US attorney general dodges questions about Nvidia investigation",
+            "url": "https://www.bbc.co.uk/news/articles/crpdw1qx7jgxo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 25 Nov 2026 03:44:07 GMT",
             "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1735,14 +1698,14 @@
         ]
       },
       {
-        "id": "72ee99c7-0326-5b13-ac91-654fbe08fd6e",
-        "event_date": "2026-11-24",
+        "id": "bc53cdf5-8c5d-50ae-997a-5f5027c0712d",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Nato chief vows defence agAIn...",
-        "one_sentence_summary": "German media said Russia planned to launch a satellite with a nuclear warhead into space in coming weeks.",
-        "detailed_summary": "German media said Russia planned to launch a satellite with a nuclear warhead into space in coming weeks.",
+        "ai_title": "国际形势影响｜Huawei found guilty of steali...",
+        "one_sentence_summary": "The verdict follows a months-long trial in New York.",
+        "detailed_summary": "The verdict follows a months-long trial in New York.",
         "key_points": [
-          "German media said Russia planned to launch a satellite with a nuclear warhead into space in coming weeks."
+          "The verdict follows a months-long trial in New York."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1751,53 +1714,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Nato chief vows defence against space threat after Russian nuclear satellite reports",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 57.0,
-        "confidence": 0.55,
-        "tags": [
-          "模型发布",
-          "地缘影响"
-        ],
-        "signal_strength": 41.76,
-        "reading_links": [
-          {
-            "source_id": "bbc_world",
-            "source_name": "BBC World",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Nato chief vows defence against space threat after Russian nuclear satellite reports",
-            "url": "https://www.bbc.co.uk/news/articles/c9x2er1ry2mzo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 24 Nov 2026 02:15:59 GMT",
-            "link_label": "BBC World",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "d3588272-f29d-58d3-8525-f5d96bdc35f4",
-        "event_date": "2026-11-24",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜India's 'cockroach' party lea...",
-        "one_sentence_summary": "Saurav Das said that immigration authorities at Delhi airport told him that his passport had been \"flagged\".",
-        "detailed_summary": "Saurav Das said that immigration authorities at Delhi airport told him that his passport had been \"flagged\".",
-        "key_points": [
-          "Saurav Das said that immigration authorities at Delhi airport told him that his passport had been \"flagged\"."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：India's 'cockroach' party leader says he was stopped from flying to UK",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 57.0,
@@ -1812,9 +1729,9 @@
             "source_name": "BBC World",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "India's 'cockroach' party leader says he was stopped from flying to UK",
-            "url": "https://www.bbc.co.uk/news/articles/cm5y1ezx2gqyo?at_medium=RSS&at_campaign=rss",
-            "published_at": "Tue, 24 Nov 2026 05:33:07 GMT",
+            "original_title": "Huawei found guilty of stealing US trade secrets but acquitted of racketeering",
+            "url": "https://www.bbc.co.uk/news/articles/cmy49ngydqzpo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 25 Nov 2026 02:59:27 GMT",
             "link_label": "BBC World",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1826,14 +1743,14 @@
         ]
       },
       {
-        "id": "de621739-5980-56b4-802e-5c679958631b",
-        "event_date": "2026-11-24",
+        "id": "0f440cb8-5342-56c8-aead-c4016ffc52d9",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜US army says detonation of le...",
-        "one_sentence_summary": "Public outcry led to a legal battle when details of the plans to conduct two controlled detonations surfaced.",
-        "detailed_summary": "Public outcry led to a legal battle when details of the plans to conduct two controlled detonations surfaced.",
+        "ai_title": "国际形势影响｜Four years after huge asteroi...",
+        "one_sentence_summary": "The mission is studying an asteroid deliberately knocked off course by a colliding spacecraft.",
+        "detailed_summary": "The mission is studying an asteroid deliberately knocked off course by a colliding spacecraft.",
         "key_points": [
-          "Public outcry led to a legal battle when details of the plans to conduct two controlled detonations surfaced."
+          "The mission is studying an asteroid deliberately knocked off course by a colliding spacecraft."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1842,7 +1759,53 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：US army says detonation of lead explosives in Iowa will proceed",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Four years after huge asteroid crash, a spacecraft has now returned to assess the damage",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 57.0,
+        "confidence": 0.55,
+        "tags": [
+          "国际金融",
+          "地缘影响"
+        ],
+        "signal_strength": 41.76,
+        "reading_links": [
+          {
+            "source_id": "bbc_world",
+            "source_name": "BBC World",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Four years after huge asteroid crash, a spacecraft has now returned to assess the damage",
+            "url": "https://www.bbc.co.uk/news/articles/cw8dv112r5gmo?at_medium=RSS&at_campaign=rss",
+            "published_at": "Wed, 25 Nov 2026 06:00:36 GMT",
+            "link_label": "BBC World",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "180956d9-0856-5fe5-b90c-4a2568f6fa2c",
+        "event_date": "2026-11-25",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜From stargazing to space: Pak...",
+        "one_sentence_summary": "Students and stargazers packed SUPARCO's auditorium before dawn to watch Zeeshan Ali reach orbit on a Chinese rocket.",
+        "detailed_summary": "Students and stargazers packed SUPARCO's auditorium before dawn to watch Zeeshan Ali reach orbit on a Chinese rocket.",
+        "key_points": [
+          "Students and stargazers packed SUPARCO's auditorium before dawn to watch Zeeshan Ali reach orbit on a Chinese rocket."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：From stargazing to space: Pakistan watches its first astronaut take flight",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1857,9 +1820,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "US army says detonation of lead explosives in Iowa will proceed",
-            "url": "https://www.aljazeera.com/news/2026/11/24/us-army-says-detonation-of-lead-explosives-in-iowa-will-proceed?traffic_source=rss",
-            "published_at": "Tue, 24 Nov 2026 08:24:08 +0000",
+            "original_title": "From stargazing to space: Pakistan watches its first astronaut take flight",
+            "url": "https://www.aljazeera.com/features/2026/11/25/from-stargazing-to-space-pakistan-watches-its-first-astronaut-take-flight?traffic_source=rss",
+            "published_at": "Wed, 25 Nov 2026 08:11:19 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1871,14 +1834,14 @@
         ]
       },
       {
-        "id": "11f82a64-c0fe-5773-b3ad-2b0d9b867ab5",
-        "event_date": "2026-11-24",
+        "id": "4b59c7b2-0704-566b-b5e4-0182296ba499",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Malaysia set to return thousa...",
-        "one_sentence_summary": "The announcement comes five days after the ICJ ruled that Myanmar committed genocide against its Rohingya minority.",
-        "detailed_summary": "The announcement comes five days after the ICJ ruled that Myanmar committed genocide against its Rohingya minority.",
+        "ai_title": "国际形势影响｜Rescuers search for dozens tr...",
+        "one_sentence_summary": "Police say 26 workers are yet to be rescued from a mine that flooded when a nearby river overflowed after heavy rain.",
+        "detailed_summary": "Police say 26 workers are yet to be rescued from a mine that flooded when a nearby river overflowed after heavy rain.",
         "key_points": [
-          "The announcement comes five days after the ICJ ruled that Myanmar committed genocide against its Rohingya minority."
+          "Police say 26 workers are yet to be rescued from a mine that flooded when a nearby river overflowed after heavy rain."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1887,7 +1850,53 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Malaysia set to return thousands of Rohingya refugees to Myanmar",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Rescuers search for dozens trapped in flooded Indonesia gold mine",
+        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+        "recommended": true,
+        "priority_score": 56.0,
+        "confidence": 0.55,
+        "tags": [
+          "产品更新",
+          "地缘影响"
+        ],
+        "signal_strength": 41.08,
+        "reading_links": [
+          {
+            "source_id": "aljazeera_all",
+            "source_name": "Al Jazeera",
+            "source_type": "media",
+            "source_role": "primary",
+            "original_title": "Rescuers search for dozens trapped in flooded Indonesia gold mine",
+            "url": "https://www.aljazeera.com/news/2026/11/25/rescuers-search-for-dozens-trapped-in-flooded-indonesia-gold-mine?traffic_source=rss",
+            "published_at": "Wed, 25 Nov 2026 08:08:57 +0000",
+            "link_label": "Al Jazeera",
+            "is_primary_reading_link": true,
+            "display_order": 1
+          }
+        ],
+        "source_count": 1,
+        "source_types": [
+          "media"
+        ]
+      },
+      {
+        "id": "09d2835a-c2e2-5238-b8b6-ab9f8c34cab3",
+        "event_date": "2026-11-25",
+        "category": "国际形势影响",
+        "ai_title": "国际形势影响｜Sentences served, but Gaza pr...",
+        "one_sentence_summary": "Palestinian families in Gaza wait for loved ones who remain in Israeli prisons despite completing their sentences.",
+        "detailed_summary": "Palestinian families in Gaza wait for loved ones who remain in Israeli prisons despite completing their sentences.",
+        "key_points": [
+          "Palestinian families in Gaza wait for loved ones who remain in Israeli prisons despite completing their sentences."
+        ],
+        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
+        "impact_analysis": {
+          "technology": "",
+          "business": "",
+          "policy": "可关注监管、地缘政治和跨境产业链影响。",
+          "finance": ""
+        },
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Sentences served, but Gaza prisoners remain behind Israeli bars",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1902,9 +1911,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Malaysia set to return thousands of Rohingya refugees to Myanmar",
-            "url": "https://www.aljazeera.com/news/2026/11/24/malaysia-set-to-return-thousands-of-rohingya-refugees-to-myanmar-2?traffic_source=rss",
-            "published_at": "Tue, 24 Nov 2026 08:21:41 +0000",
+            "original_title": "Sentences served, but Gaza prisoners remain behind Israeli bars",
+            "url": "https://www.aljazeera.com/news/2026/11/25/sentences-served-but-gaza-prisoners-remain-behind-israeli-bars?traffic_source=rss",
+            "published_at": "Wed, 25 Nov 2026 07:31:44 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1916,14 +1925,14 @@
         ]
       },
       {
-        "id": "0567f398-b5f3-5348-ac6b-eeab7683e905",
-        "event_date": "2026-11-24",
+        "id": "6a5ebde4-7575-51e9-950f-8b29b943f3fd",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Moment Mexican troops capture...",
-        "one_sentence_summary": "Moment Mexican troops captured cartel leader ‘El Chapo Isidro’",
-        "detailed_summary": "Moment Mexican troops captured cartel leader ‘El Chapo Isidro’",
+        "ai_title": "国际形势影响｜Bangladesh garment workers wi...",
+        "one_sentence_summary": "The protests have cost Bangladesh hundreds of millions, but workers are yet to accept the offer.",
+        "detailed_summary": "The protests have cost Bangladesh hundreds of millions, but workers are yet to accept the offer.",
         "key_points": [
-          "Moment Mexican troops captured cartel leader ‘El Chapo Isidro’"
+          "The protests have cost Bangladesh hundreds of millions, but workers are yet to accept the offer."
         ],
         "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
         "impact_analysis": {
@@ -1932,7 +1941,7 @@
           "policy": "可关注监管、地缘政治和跨境产业链影响。",
           "finance": ""
         },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Moment Mexican troops captured cartel leader ‘El Chapo Isidro’",
+        "topic_angle": "从国际形势对 AI 产业链的影响解读：Bangladesh garment workers win 36% pay rise after weeks of protest",
         "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
         "recommended": true,
         "priority_score": 56.0,
@@ -1947,9 +1956,9 @@
             "source_name": "Al Jazeera",
             "source_type": "media",
             "source_role": "primary",
-            "original_title": "Moment Mexican troops captured cartel leader ‘El Chapo Isidro’",
-            "url": "https://www.aljazeera.com/video/newsfeed/2026/11/24/moment-mexican-troops-captured-cartel-leader-el-chapo?traffic_source=rss",
-            "published_at": "Tue, 24 Nov 2026 08:17:26 +0000",
+            "original_title": "Bangladesh garment workers win 36% pay rise after weeks of protest",
+            "url": "https://www.aljazeera.com/news/2026/11/25/bangladesh-garment-workers-win-36-pay-rise-after-weeks-of-protest?traffic_source=rss",
+            "published_at": "Wed, 25 Nov 2026 06:58:02 +0000",
             "link_label": "Al Jazeera",
             "is_primary_reading_link": true,
             "display_order": 1
@@ -1961,53 +1970,8 @@
         ]
       },
       {
-        "id": "804f9a89-a51f-53c6-82ea-a2fdce58ac35",
-        "event_date": "2026-11-24",
-        "category": "国际形势影响",
-        "ai_title": "国际形势影响｜Wars choke global food routes...",
-        "one_sentence_summary": "WFP Executive Director Luke Lindberg decries ‘political problem’ as grain is 'not reaching the people who need it'.",
-        "detailed_summary": "WFP Executive Director Luke Lindberg decries ‘political problem’ as grain is 'not reaching the people who need it'.",
-        "key_points": [
-          "WFP Executive Director Luke Lindberg decries ‘political problem’ as grain is 'not reaching the people who need it'."
-        ],
-        "why_it_matters": "可能影响 AI 产业链、芯片供应、跨境合作或监管预期。",
-        "impact_analysis": {
-          "technology": "",
-          "business": "",
-          "policy": "可关注监管、地缘政治和跨境产业链影响。",
-          "finance": ""
-        },
-        "topic_angle": "从国际形势对 AI 产业链的影响解读：Wars choke global food routes, threatening aid for 7.3 million, WFP warns",
-        "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-        "recommended": true,
-        "priority_score": 56.0,
-        "confidence": 0.55,
-        "tags": [
-          "地缘影响"
-        ],
-        "signal_strength": 39.58,
-        "reading_links": [
-          {
-            "source_id": "aljazeera_all",
-            "source_name": "Al Jazeera",
-            "source_type": "media",
-            "source_role": "primary",
-            "original_title": "Wars choke global food routes, threatening aid for 7.3 million, WFP warns",
-            "url": "https://www.aljazeera.com/news/2026/11/24/wars-choke-global-food-routes-threatening-aid-for-7-3-million-wfp-warns?traffic_source=rss",
-            "published_at": "Tue, 24 Nov 2026 07:52:44 +0000",
-            "link_label": "Al Jazeera",
-            "is_primary_reading_link": true,
-            "display_order": 1
-          }
-        ],
-        "source_count": 1,
-        "source_types": [
-          "media"
-        ]
-      },
-      {
-        "id": "c88b021b-8cf5-50aa-b10e-59561dc9e708",
-        "event_date": "2026-11-24",
+        "id": "22ae80ad-3699-5a14-ada4-c3807b9b664c",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Support CFR",
         "one_sentence_summary": "Support CFR",
@@ -2051,8 +2015,8 @@
         ]
       },
       {
-        "id": "0e37c70c-0027-51e8-9dc7-22e92edb4e5a",
-        "event_date": "2026-11-24",
+        "id": "11d32dcd-9461-5a4a-93bb-8d28a71335ca",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Member Login",
         "one_sentence_summary": "Member Login",
@@ -2096,8 +2060,8 @@
         ]
       },
       {
-        "id": "3a156b41-72ad-5e35-bd4a-6ed50b1cb2ba",
-        "event_date": "2026-11-24",
+        "id": "531f6ea9-8386-5a68-a99d-047408dad350",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Regions",
         "one_sentence_summary": "Regions",
@@ -2141,8 +2105,8 @@
         ]
       },
       {
-        "id": "58875c08-3c3b-55b6-b134-e1d3e3efe361",
-        "event_date": "2026-11-24",
+        "id": "205d0230-d317-5d3c-a774-d473c9aa3ba6",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Topics",
         "one_sentence_summary": "Topics",
@@ -2186,8 +2150,8 @@
         ]
       },
       {
-        "id": "66d8e2ab-174a-5df6-90ec-69740943c68b",
-        "event_date": "2026-11-24",
+        "id": "41b83fe9-23ac-569d-b6d6-7cbc79a108b8",
+        "event_date": "2026-11-25",
         "category": "国际形势影响",
         "ai_title": "国际形势影响｜Research",
         "one_sentence_summary": "Research",
@@ -2234,8 +2198,8 @@
     ],
     "国际金融": [
       {
-        "id": "5ec25058-b363-50d3-8891-ed83829445fc",
-        "event_date": "2026-11-24",
+        "id": "72d0d4b5-cacb-5c27-b783-61c48859ef51",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "美国财政部 Sanctions Major Drug Trafficki...",
         "one_sentence_summary": "美国财政部 Sanctions Major Drug Trafficki...",
@@ -2283,8 +2247,8 @@
         ]
       },
       {
-        "id": "e0a7f9cd-1f09-52cd-b2d0-2f63cb71a02d",
-        "event_date": "2026-11-24",
+        "id": "c6352598-0d32-5d48-8f1f-3d491640b0c7",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "Operation 经济 Outcast Targets Corrupt...",
         "one_sentence_summary": "Operation 经济 Outcast Targets Corrupt...",
@@ -2332,8 +2296,8 @@
         ]
       },
       {
-        "id": "10dc18fd-20e7-51da-9f0c-65b340975894",
-        "event_date": "2026-11-24",
+        "id": "883cdaa1-e7fc-5ffe-a909-728293f734a8",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "国际金融｜September 29, 2026IMF Executive...",
         "one_sentence_summary": "国际金融｜September 29, 2026IMF Executive...",
@@ -2393,8 +2357,8 @@
         ]
       },
       {
-        "id": "85c07e3a-5a74-5e97-ab1b-83f768db53f8",
-        "event_date": "2026-11-24",
+        "id": "d6bd71be-3321-5a5d-b5a3-547b159cb260",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "Operation 经济 Outcast Disrupts Iran’s...",
         "one_sentence_summary": "Operation 经济 Outcast Disrupts Iran’s...",
@@ -2442,8 +2406,8 @@
         ]
       },
       {
-        "id": "5be1cd3c-55c9-5c6c-9e69-d0de5f8b2797",
-        "event_date": "2026-11-24",
+        "id": "2a2a2486-d43a-5374-812f-121ce51553bc",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "美国财政部 Identifies Nearly $15 Billion...",
         "one_sentence_summary": "美国财政部 Identifies Nearly $15 Billion...",
@@ -2491,8 +2455,8 @@
         ]
       },
       {
-        "id": "32c2fb37-fed8-5f92-97a6-9a6ed9d67d96",
-        "event_date": "2026-11-24",
+        "id": "d2e93529-b7c2-5768-9d28-c51842ebe3cf",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "美国财政部 Targets Cyber Scam Operators a...",
         "one_sentence_summary": "美国财政部 Targets Cyber Scam Operators a...",
@@ -2540,8 +2504,8 @@
         ]
       },
       {
-        "id": "56b52e61-f9ab-57b1-babd-56e6b50b3bc9",
-        "event_date": "2026-11-24",
+        "id": "0f3585b5-e9ab-5c3d-b798-2d7cc1e545da",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "国际金融｜GDP (Advance Estimate), 3rd Qua...",
         "one_sentence_summary": "国际金融｜GDP (Advance Estimate), 3rd Qua...",
@@ -2589,8 +2553,8 @@
         ]
       },
       {
-        "id": "aafc2e72-71da-5ac6-9150-119091a87c56",
-        "event_date": "2026-11-24",
+        "id": "1793d962-e97b-545b-a8b5-ba60881021ed",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "欧洲央行启动保密统计数据研究访问试点",
         "one_sentence_summary": "欧洲央行启动保密统计数据研究访问试点",
@@ -2639,8 +2603,8 @@
         ]
       },
       {
-        "id": "0b1ed033-5a47-5382-92e1-b33e35b21a69",
-        "event_date": "2026-11-24",
+        "id": "60c51928-cd99-5a49-b357-b2ae5efb74be",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "国际金融｜Activities of U.S. Multinationa...",
         "one_sentence_summary": "国际金融｜Activities of U.S. Multinationa...",
@@ -2689,8 +2653,8 @@
         ]
       },
       {
-        "id": "91ae712e-7431-58a4-8675-7b27847b69bb",
-        "event_date": "2026-11-24",
+        "id": "e99c19b7-95a3-5183-b687-6d5ca387ab08",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "Outdoor Recreation 经济 Statistics, U....",
         "one_sentence_summary": "Outdoor Recreation 经济 Statistics, U....",
@@ -2738,8 +2702,8 @@
         ]
       },
       {
-        "id": "439c1e5f-39b4-5de2-b95e-f532cf960b9e",
-        "event_date": "2026-11-24",
+        "id": "e40ed007-0cce-52a5-97b4-5f80d3ecf4f3",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "美国4月国际货物和服务贸易数据发布",
         "one_sentence_summary": "美国4月国际货物和服务贸易数据发布",
@@ -2787,8 +2751,8 @@
         ]
       },
       {
-        "id": "65fd1d03-956e-54c5-a589-685d3af67a42",
-        "event_date": "2026-11-24",
+        "id": "b9fae024-4401-532c-990b-60340e273e89",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "美国4月个人收入和支出数据发布",
         "one_sentence_summary": "美国4月个人收入和支出数据发布",
@@ -2837,8 +2801,8 @@
         ]
       },
       {
-        "id": "e62329ff-6541-5a7d-8933-0376f209e6cb",
-        "event_date": "2026-11-24",
+        "id": "9757de4f-bc92-55b3-9246-7153390ec792",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "国际金融｜October 7, 2026Coming Soon: 202...",
         "one_sentence_summary": "国际金融｜October 7, 2026Coming Soon: 202...",
@@ -2886,8 +2850,8 @@
         ]
       },
       {
-        "id": "fbd7048c-63ee-5d61-80d0-7649724aa3a2",
-        "event_date": "2026-11-24",
+        "id": "444d88fd-a8b6-520e-aa9e-b28af0466a5d",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "国际金融｜October 1, 2026Managing Directo...",
         "one_sentence_summary": "国际金融｜October 1, 2026Managing Directo...",
@@ -2935,8 +2899,8 @@
         ]
       },
       {
-        "id": "350ad9ef-2587-5eb1-a7d8-cd93010da13b",
-        "event_date": "2026-11-24",
+        "id": "3b640810-3319-5afe-99e3-00bf0b359fc3",
+        "event_date": "2026-11-25",
         "category": "国际金融",
         "ai_title": "国际金融｜September 29, 2026IMF Staff Con...",
         "one_sentence_summary": "国际金融｜September 29, 2026IMF Staff Con...",
@@ -2987,8 +2951,61 @@
   },
   "top10": [
     {
-      "id": "14bc5464-ae70-5384-9b84-ef01c96e8e3b",
-      "event_date": "2026-11-24",
+      "id": "514aa170-2ca2-56d3-8056-26dfb63c7dba",
+      "event_date": "2026-11-25",
+      "category": "大模型动态",
+      "ai_title": "GPT-6 models demonst利率 intrinsic pro...",
+      "one_sentence_summary": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding ac...",
+      "detailed_summary": "GPT-6 models demonstrate intrinsic protein-design capabilities | OpenAI Skip to main content Research Products Business Developers Company Foundation (opens in a new window) Log in Try ChatGPT (opens in a new window) Research Products Business Developers Company Foundation (opens in a new window) Try ChatGPT (opens in a new window) Login OpenAI November 24, 2026 Science Publication GPT‑6 models demonstrate intrinsic protein-design capabilities Read the paper (opens in a new window) Share Key...",
+      "key_points": [
+        "GPT-6 models demonstrate intrinsic protein-design capabilities | OpenAI Skip to main content Research Products Busine...",
+        "Limitations What’s next Key findings: A closer look at our models’ protein designs Laboratory Experiment 1: Designing...",
+        "Limitations What’s next Key findings: Our GPT‑6 family of models can design new protein shapes and the sequence of th...",
+        "An internal research model matched or outperformed specialized models on many protein design tasks.",
+        "Researchers could also guide designs by prompting the model on where a protein should attach and what shape it should..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 91.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "编程工具",
+        "产品更新",
+        "国际金融",
+        "论文研究"
+      ],
+      "signal_strength": 72.88,
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+          "published_at": "Tue, 24 Nov 2026 13:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "671d56ab-1ee5-54fc-a836-f44c37cf5db4",
+      "event_date": "2026-11-25",
       "category": "大模型动态",
       "ai_title": "大模型动态｜Introducing Claude Fable 5.2 a...",
       "one_sentence_summary": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 \\ Anthropic Skip to main content News Research Policy Commitments...",
@@ -3040,18 +3057,18 @@
       ]
     },
     {
-      "id": "3aef9927-7da3-5214-ad85-39ab19a38aaf",
-      "event_date": "2026-11-24",
+      "id": "c79245f3-ef92-5483-9666-eba87a4a4656",
+      "event_date": "2026-11-25",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Richpanel helps companies auto...",
-      "one_sentence_summary": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna f...",
-      "detailed_summary": "Richpanel helps companies automate 50% of support in 30 days | OpenAI Skip to main content Why OpenAI Products Solutions Resources Customers Pricing Try OpenAI Contact sales Why OpenAI Products Solutions Resources Customers Pricing Contact sales Try OpenAI OpenAI November 23, 2026 Startup Richpanel helps companies automate 50% of support in 30 days Richpanel uses GPT‑6 Astra and GPT‑6.1 Sol to equip its AI support agents with tools and procedures, and GPT‑6 Luna for their conversations. Start...",
+      "ai_title": "大模型动态｜MOZAIC: An Audio-Video Deepfak...",
+      "one_sentence_summary": "arXiv:2611.31301v1 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both. Mos...",
+      "detailed_summary": "[2611.31301] MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake Skip to main content Search Submit Donate Log in Search arXiv Press Enter to search · Advanced search Computer Science > Artificial Intelligence arXiv:2611.31301 (cs) [Submitted on 21 Nov 2026] Title: MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake Authors: Shaina Raza , Mohamed Hafez , Ahmed Y. Radwan , Khalid Elgazzar , Kathryn Hume View a PDF of the paper titled MOZAIC: An Audio-Video Deepfak...",
       "key_points": [
-        "Richpanel helps companies automate 50% of support in 30 days | OpenAI Skip to main content Why OpenAI Products Soluti...",
-        "Start building with OpenAI Company size: Startup Region: Asia-Pacific & Oceania Industry: Technology Products: API Sh...",
-        "And for that, they need access to the right tools and instructions.",
-        "According to Richpanel CEO Amit RG, human support agents can use 20 or 30 tools to serve a customer, and the procedur...",
-        "Richpanel ⁠ (opens in a new window) solves that using OpenAI models to both set up the tools and procedures AI suppor..."
+        "[2611.31301] MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake Skip to main content Search Submit Do...",
+        "Radwan , Khalid Elgazzar , Kathryn Hume View a PDF of the paper titled MOZAIC: An Audio-Video Deepfake Benchmark for...",
+        "Most benchmarks only ask whether a clip is real or fake, so they cannot show whether a detector relies on the picture...",
+        "We present MOZAIC, a paired benchmark with a 4-way label in which every source clip is released in all four combinati...",
+        "Fakes cover inner-face swapping, whole-frame video diffusion and voice conversion."
       ],
       "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
@@ -3060,93 +3077,83 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Richpanel helps companies automate 50% of support in 30 days",
+      "topic_angle": "从能力、成本和生态角度解读：MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 86.0,
+      "priority_score": 88.0,
+      "confidence": 0.55,
+      "tags": [
+        "模型发布",
+        "评测榜单",
+        "产品更新",
+        "论文研究"
+      ],
+      "signal_strength": 65.84,
+      "reading_links": [
+        {
+          "source_id": "arxiv_cs_ai",
+          "source_name": "arXiv cs.AI",
+          "source_type": "research",
+          "source_role": "primary",
+          "original_title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+          "url": "https://arxiv.org/abs/2611.31301",
+          "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
+          "link_label": "arXiv cs.AI",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "research"
+      ]
+    },
+    {
+      "id": "c2e138e5-16ce-55ef-8d7c-e7265b53ef2d",
+      "event_date": "2026-11-25",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜Clay helps sales teams win wit...",
+      "one_sentence_summary": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 mod...",
+      "detailed_summary": "Clay helps sales teams win with Codex and ChatGPT | OpenAI Skip to main content Why OpenAI Products Solutions Resources Customers Pricing Try OpenAI Contact sales Why OpenAI Products Solutions Resources Customers Pricing Contact sales Try OpenAI OpenAI November 24, 2026 Clay helps sales teams win with Codex and ChatGPT ChatGPT and Codex integrations help Clay users research deals and turn data into go-to-market plays, and GPT‑6 models handle the reasoning. Start building with OpenAI Company s...",
+      "key_points": [
+        "Clay helps sales teams win with Codex and ChatGPT | OpenAI Skip to main content Why OpenAI Products Solutions Resourc...",
+        "Start building with OpenAI Company size: Startup Region: North America Industry: Technology Products: API, Codex, Cha...",
+        "Clay ⁠ (opens in a new window) is a self-learning revenue engine designed to help.",
+        "Using GPT‑6 Astra, GPT‑6 Sol, and other models, Clay enables users to build lists of companies and people, enrich tho...",
+        "Clay also brings these capabilities to where customers are already working with plugins for Codex and ChatGPT, making..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：Clay helps sales teams win with Codex and ChatGPT",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 84.0,
       "confidence": 0.55,
       "tags": [
         "官方消息",
-        "智能体",
+        "编程工具",
         "产品更新",
-        "商业化"
+        "商业化",
+        "论文研究"
       ],
-      "signal_strength": 76.98,
+      "signal_strength": 68.12,
       "reading_links": [
         {
           "source_id": "openai_news",
           "source_name": "OpenAI News",
           "source_type": "official",
           "source_role": "primary",
-          "original_title": "Richpanel helps companies automate 50% of support in 30 days",
-          "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
-          "published_at": "Mon, 23 Nov 2026 08:00:00 GMT",
+          "original_title": "Clay helps sales teams win with Codex and ChatGPT",
+          "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+          "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
           "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
-        },
-        {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
-          "source_type": "research",
-          "source_role": "related",
-          "original_title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
-          "url": "https://arxiv.org/abs/2611.28202",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
-          "is_primary_reading_link": false,
-          "display_order": 2
-        }
-      ],
-      "source_count": 2,
-      "source_types": [
-        "official",
-        "research"
-      ]
-    },
-    {
-      "id": "9cc62201-3b95-5a6b-b74f-f45184446cee",
-      "event_date": "2026-11-24",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜Gemini Build intelligent agents",
-      "one_sentence_summary": "�\b\u0000\u0000\u0000\u0000\u0000\u0002���v�Ȓ-��>\u0005Z}�S��\u0002E\u0000 �Mu�� WI�d�.��ņHp�@�\u0006H >��ꇸ����|{G\"1p�H�v\u0015O S\u0018\u0012���\u0011����\u0011��� ��\u0017#��\u0007��c�\u001a-ߍ�F��Fn�h�c��\u0007...",
-      "detailed_summary": "�\b\u0000\u0000\u0000\u0000\u0000\u0002���v�Ȓ-��>\u0005Z}�S��\u0002E\u0000 �Mu�� WI�d�.��ņHp�@�\u0006H >��ꇸ����|{G\"1p�H�v\u0015O S\u0018\u0012���\u0011����\u0011��� ��\u0017#��\u0007��c�\u001a-ߍ�F��Fn�h�c��\u0007f��x���|���ާ__�f�������s�ۏ\u0007��5Z=7��qc2�5�,\u0018��ḱ��\u001a^��m������N���ss⚭`0r��cߛ��� �\u0000�i��r�� ��}�7���{ �P�0���k����Q\u0010�� ��c���\u001b���?���\u0017A��=�):t� � o�\u0012������^�A��_���g|�.t哭A���h�+um\u0019��7Z�0\u0018���4��'�1��ǆ\u0017�F�1:!:��B����~�� [�\u0000���V� ��\u0001�0\u0017c)\u0006{\u0014\u0006#/ _4��/1��b\u001bK���gq�\u001b��~ω�>����`*`|�& ��|\u0016���^U� �\u000f��\u0006�*�ާ��׾�z��� ?Wj�^�����^�z�� �j-��>��pT��h��\u001a � �O���o�3���������y���Vз�/�\u000e�޿{�\u001a\u0007�3�.\u0016�^�)...",
-      "key_points": [
-        "�\b\u0000\u0000\u0000\u0000\u0000\u0002���v�Ȓ-��>\u0005Z}�S��\u0002E\u0000 �Mu�� WI�d�.��ņHp�@�\u0006H >��ꇸ����|{G\"1p�H�v\u0015O S\u0018\u0012���\u0011����\u0011��� ��\u0017#��\u0007��c�\u001a-ߍ�F��Fn�h�c��\u0007...",
-        "{�/-7L�)O\u0012B8��\\�� ��G1ב�ø$q�*ZL����B� � ��9� \u001a\u0007!\b,�\u0006wԏ� �큩�r�\u0004U�����ﷶ�`\u0018\b \u0011 M]�i�7���0\u001avE������`����n[wl4�f�i6gD�o^�...",
-        "UpQw �.�2�XAM2����zV (�s���Y��V)\u0007jG�=g�V K�S蹙���Z H� \u0006��k $(\u0000&d < �a��`\u00038�\u0011\u0014�I\u0015I ,_Y�� ҳ �O=s��d�\u0003ް @֩ �}j};�ꆳW����ⰑL...",
-        "lrB\u0005,S�X;$�:\u00172 ��#\u0017� n�X�C:�%!.�M)�A�D�Ċd>\u0007� N\u0015�4�R�j����A \u0005\u0007�\u0011��ۜ\\\u0012\u0015�\u001aA�� *�� �\u0016��a_\b\u0012�\u0016�: B5Z�Q��\u001bA���a\u0005�@\u001a8�j�� W�...",
-        "@����z��\u0015�\u0001�3�� �= \u0004E�O��\u001a��������{�\u0019�?\b\u0011݀~\u0000�lD���@���������� }�A�\u0015� '-���\u000f����D��0k�I\u0013��R��\u000f\u0011K�\\� \\[��T�o� ,'��(���..."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 82.0,
-      "confidence": 0.55,
-      "tags": [
-        "官方消息",
-        "智能体"
-      ],
-      "signal_strength": 63.76,
-      "reading_links": [
-        {
-          "source_id": "google_deepmind_blog",
-          "source_name": "Google DeepMind Blog",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Gemini Build intelligent agents",
-          "url": "https://deepmind.google/models/gemini/",
-          "published_at": null,
-          "link_label": "Google DeepMind Blog",
-          "is_primary_reading_link": true,
-          "display_order": 1
         }
       ],
       "source_count": 1,
@@ -3155,18 +3162,18 @@
       ]
     },
     {
-      "id": "0308ae20-1cd0-5dea-bd4c-cb2a2f33db38",
-      "event_date": "2026-11-24",
+      "id": "b25f61c2-30bc-5980-a569-0c6d48d6fdcb",
+      "event_date": "2026-11-25",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Gemini Omni Create anything fr...",
-      "one_sentence_summary": "Gemini Omni — Google DeepMind Skip to main content Explore our next generation AI systems Explore models Gemini Gemin...",
-      "detailed_summary": "Gemini Omni — Google DeepMind Skip to main content Explore our next generation AI systems Explore models Gemini Gemini Build intelligent agents Gemini Omni Create anything from anything Nano Banana Create and edit detailed images Gemini Audio Talk, create and control audio Specialized models Veo Generate cinematic video with audio Lyria Generate high fidelity music and audio Genie Generate and explore interactive worlds Gemini Robotics Perceive, reason, use tools and interact Open models Gemm...",
+      "ai_title": "大模型动态｜The Date You Didn't Set: The S...",
+      "one_sentence_summary": "arXiv:2611.31254v1 Announce Type: new Abstract: The system prompt of many instruction-tuned models carries a date, us...",
+      "detailed_summary": "arXiv:2611.31254v1 Announce Type: new Abstract: The system prompt of many instruction-tuned models carries a date, usually today's, filled in automatically for conversational and agentic requests alike, so an unchanged evaluation can send a different prompt each day. In this paper, we explore how much this hidden input changes evaluation outcomes. Across six instruction-tuned models and four benchmarks, with prompts, decoding, and configuration fixed, every model is affected: two plausible da...",
       "key_points": [
-        "Gemini Omni — Google DeepMind Skip to main content Explore our next generation AI systems Explore models Gemini Gemin...",
-        "Edit any video through natural, step-by-step conversation Think of Gemini Omni like Nano Banana, but for video.",
-        "Every edit you make builds on the one before – maintaining a consistent, coherent scene.",
-        "Try in Gemini Try in Google Flow Your browser does not support the video tag.",
-        "Apply real world knowledge Gemini Omni combines an intuitive understanding of physics with Gemini's knowledge of hist..."
+        "arXiv:2611.31254v1 Announce Type: new Abstract: The system prompt of many instruction-tuned models carries a date, us...",
+        "In this paper, we explore how much this hidden input changes evaluation outcomes.",
+        "Across six instruction-tuned models and four benchmarks, with prompts, decoding, and configuration fixed, every model...",
+        "Even rerunning the evaluation one day later flips about as many items as changing the batch size, although nothing in...",
+        "In addition, using a grammar-constrained variant of Greedy Coordinate Gradient (GCG) to search dates of any year, we..."
       ],
       "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
@@ -3175,174 +3182,28 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Gemini Omni Create anything from anything",
+      "topic_angle": "从能力、成本和生态角度解读：The Date You Didn't Set: The System-Prompt Date as a Hidden Variable in LLM Evaluation",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 82.0,
+      "priority_score": 81.0,
       "confidence": 0.55,
       "tags": [
-        "官方消息",
+        "评测榜单",
         "智能体",
-        "产品更新",
-        "国际金融"
-      ],
-      "signal_strength": 66.76,
-      "reading_links": [
-        {
-          "source_id": "google_deepmind_blog",
-          "source_name": "Google DeepMind Blog",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Gemini Omni Create anything from anything",
-          "url": "https://deepmind.google/models/gemini-omni/",
-          "published_at": null,
-          "link_label": "Google DeepMind Blog",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "official"
-      ]
-    },
-    {
-      "id": "67baf472-8842-5032-bf0a-97f772ee8c7d",
-      "event_date": "2026-11-24",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜Gemini Audio Talk, create and...",
-      "one_sentence_summary": "Gemini Audio Talk, create and control audio",
-      "detailed_summary": "Gemini Audio Talk, create and control audio",
-      "key_points": [
-        "Gemini Audio Talk, create and control audio"
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：Gemini Audio Talk, create and control audio",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 82.0,
-      "confidence": 0.55,
-      "tags": [
-        "官方消息"
-      ],
-      "signal_strength": 62.26,
-      "reading_links": [
-        {
-          "source_id": "google_deepmind_blog",
-          "source_name": "Google DeepMind Blog",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Gemini Audio Talk, create and control audio",
-          "url": "https://deepmind.google/models/gemini-audio/",
-          "published_at": null,
-          "link_label": "Google DeepMind Blog",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "official"
-      ]
-    },
-    {
-      "id": "70ec19db-92dc-5111-84c0-85d68bb82bdc",
-      "event_date": "2026-11-24",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜FinEvo: Recursive Self-Improve...",
-      "one_sentence_summary": "arXiv:2611.28239v1 Announce Type: new Abstract: Advances in large language models (LLMs) have expanded their role in...",
-      "detailed_summary": "arXiv:2611.28239v1 Announce Type: new Abstract: Advances in large language models (LLMs) have expanded their role in high-value productivity tasks, including financial analysis and modeling, while enabling models to play an increasingly active role in their own improvement. This motivates two complementary lines of inquiry: can financial modeling capabilities provide a foundation for model self-evolution, and can self-evolution, in turn, advance financial capabilities? We introduce FinEvo, a...",
-      "key_points": [
-        "arXiv:2611.28239v1 Announce Type: new Abstract: Advances in large language models (LLMs) have expanded their role in...",
-        "This motivates two complementary lines of inquiry: can financial modeling capabilities provide a foundation for model...",
-        "We introduce FinEvo, a self-evolution framework that integrates autonomous experience construction with financial cap...",
-        "FinEvo prepares financial models, iteratively evolves challenges through self-play, and learns from the resulting int...",
-        "An end-to-end execution with Qwen3.6-27B shows that solving feedback supports both increasing reasoning demands and i..."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：FinEvo: Recursive Self-Improvement for Long-Horizon Financial Modeling",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 82.0,
-      "confidence": 0.55,
-      "tags": [
-        "模型发布",
-        "产品更新",
-        "国际金融",
+        "编程工具",
+        "融资并购",
         "论文研究"
       ],
-      "signal_strength": 61.76,
-      "reading_links": [
-        {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
-          "source_type": "research",
-          "source_role": "primary",
-          "original_title": "FinEvo: Recursive Self-Improvement for Long-Horizon Financial Modeling",
-          "url": "https://arxiv.org/abs/2611.28239",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ],
-      "source_count": 1,
-      "source_types": [
-        "research"
-      ]
-    },
-    {
-      "id": "c7dc2210-87bf-5360-b5ce-edf818ed4f71",
-      "event_date": "2026-11-24",
-      "category": "大模型动态",
-      "ai_title": "大模型动态｜Language Model Harnesses can b...",
-      "one_sentence_summary": "arXiv:2611.28298v1 Announce Type: new Abstract: Modern language models (LMs) are post-trained and deployed as agents...",
-      "detailed_summary": "arXiv:2611.28298v1 Announce Type: new Abstract: Modern language models (LMs) are post-trained and deployed as agents inside a \"harness\", but standard harness designs accumulate context that the neural network is forced to generalize to, making training for long-horizon tasks expensive and time-consuming. We study an alternative emerging path: training inherently neurosymbolic LM harnesses, which externalize and manage context programmatically to compose existing LM capabilities. We hypothesiz...",
-      "key_points": [
-        "arXiv:2611.28298v1 Announce Type: new Abstract: Modern language models (LMs) are post-trained and deployed as agents...",
-        "We study an alternative emerging path: training inherently neurosymbolic LM harnesses, which externalize and manage c...",
-        "We hypothesize that training around these harnesses can offer a better return on compute by enabling compositional ge...",
-        "We find that harnesses like the Recursive Language Model (RLM) learn such decompositions readily under reinforcement...",
-        "On messier, complex tasks, we find that we can target individual LLM calls within a harness by generating and trainin..."
-      ],
-      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "impact_analysis": {
-        "technology": "需结合原文判断技术路线和能力边界。",
-        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
-        "policy": "",
-        "finance": ""
-      },
-      "topic_angle": "从能力、成本和生态角度解读：Language Model Harnesses can be Compositional Generalizers",
-      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "recommended": true,
-      "priority_score": 80.0,
-      "confidence": 0.55,
-      "tags": [
-        "智能体",
-        "论文研究"
-      ],
-      "signal_strength": 57.4,
+      "signal_strength": 61.08,
       "reading_links": [
         {
           "source_id": "arxiv_cs_cl",
           "source_name": "arXiv cs.CL",
           "source_type": "research",
           "source_role": "primary",
-          "original_title": "Language Model Harnesses can be Compositional Generalizers",
-          "url": "https://arxiv.org/abs/2611.28298",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
+          "original_title": "The Date You Didn't Set: The System-Prompt Date as a Hidden Variable in LLM Evaluation",
+          "url": "https://arxiv.org/abs/2611.31254",
+          "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
           "link_label": "arXiv cs.CL",
           "is_primary_reading_link": true,
           "display_order": 1
@@ -3354,8 +3215,8 @@
       ]
     },
     {
-      "id": "63fb2da5-7502-57d0-8a2a-f2ea4abda257",
-      "event_date": "2026-11-24",
+      "id": "d18ce514-8cb1-5945-92a0-463aafa61aa0",
+      "event_date": "2026-11-25",
       "category": "大模型动态",
       "ai_title": "大模型动态｜Gemini models",
       "one_sentence_summary": "Gemini models",
@@ -3399,18 +3260,18 @@
       ]
     },
     {
-      "id": "c71276b5-a2d1-57a3-abc8-f12bf622054c",
-      "event_date": "2026-11-24",
+      "id": "9fe8123f-9a7d-54e2-aa5b-5974c4bfd2f6",
+      "event_date": "2026-11-25",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜AutoPILOT: A Visual Agent Harn...",
-      "one_sentence_summary": "arXiv:2611.28202v1 Announce Type: new Abstract: Multimodal foundation models can play video games well when the game...",
-      "detailed_summary": "arXiv:2611.28202v1 Announce Type: new Abstract: Multimodal foundation models can play video games well when the game waits for them, but often fail when it keeps running. We find that much of this gap lies in the harness, which decides what the model sees, what it remembers, and how its outputs become actions over time. Existing harnesses such as VISTA improve the first two, yet turn each model call into at most one action, so the agent acts only as often as its model thinks. We introduce Aut...",
+      "ai_title": "大模型动态｜Validation Bias in Large Langu...",
+      "one_sentence_summary": "arXiv:2611.31251v1 Announce Type: new Abstract: Large language model (LLM) chatbots are increasingly used by patients...",
+      "detailed_summary": "arXiv:2611.31251v1 Announce Type: new Abstract: Large language model (LLM) chatbots are increasingly used by patients seeking cancer information, but their safety when users present evidence-misaligned beliefs about treatment remains uncharacterized. We hypothesized that LLMs exhibit validation bias, affirming rather than correcting such beliefs, and evaluated this with a 2x2x2 factorial design crossing conversation format (single-turn vs multi-turn), treatment type (evidence-based vs alterna...",
       "key_points": [
-        "arXiv:2611.28202v1 Announce Type: new Abstract: Multimodal foundation models can play video games well when the game...",
-        "We find that much of this gap lies in the harness, which decides what the model sees, what it remembers, and how its...",
-        "Existing harnesses such as VISTA improve the first two, yet turn each model call into at most one action, so the agen...",
-        "We introduce AutoPILOT, which changes the third: in each model call, the model can send a primitive action, start an...",
-        "To evaluate agents in real-time games, we build AFK-Bench, 120 diverse browser games grouped by how they respond to i..."
+        "arXiv:2611.31251v1 Announce Type: new Abstract: Large language model (LLM) chatbots are increasingly used by patients...",
+        "We hypothesized that LLMs exhibit validation bias, affirming rather than correcting such beliefs, and evaluated this...",
+        "Framing was evidence-aligned (supporting evidence-based treatments or questioning alternative therapies) or evidence-...",
+        "We analyzed 1,272 conversations (6,360 interactions) across 14 LLMs from 6 vendors, scored by an LLM judge (GPT-5-min...",
+        "The primary outcome was the unsafe response rate, defined as a Weak classification or any critical failure."
       ],
       "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
@@ -3419,27 +3280,26 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
+      "topic_angle": "从能力、成本和生态角度解读：Validation Bias in Large Language Model Responses to Cancer Treatment Queries: A Factorial Cross-Sectional Study",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
       "priority_score": 78.0,
       "confidence": 0.55,
       "tags": [
-        "模型发布",
-        "智能体",
+        "国际金融",
         "论文研究"
       ],
-      "signal_strength": 57.54,
+      "signal_strength": 56.04,
       "reading_links": [
         {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
+          "source_id": "arxiv_cs_cl",
+          "source_name": "arXiv cs.CL",
           "source_type": "research",
           "source_role": "primary",
-          "original_title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
-          "url": "https://arxiv.org/abs/2611.28202",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
+          "original_title": "Validation Bias in Large Language Model Responses to Cancer Treatment Queries: A Factorial Cross-Sectional Study",
+          "url": "https://arxiv.org/abs/2611.31251",
+          "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
+          "link_label": "arXiv cs.CL",
           "is_primary_reading_link": true,
           "display_order": 1
         }
@@ -3450,18 +3310,14 @@
       ]
     },
     {
-      "id": "f22803a3-b0a5-5636-b879-17921e85d421",
-      "event_date": "2026-11-24",
+      "id": "fab78b71-8091-5ff8-bdc5-004472b6a746",
+      "event_date": "2026-11-25",
       "category": "大模型动态",
-      "ai_title": "大模型动态｜Measuring and Teaching Languag...",
-      "one_sentence_summary": "arXiv:2611.28158v1 Announce Type: new Abstract: Language model agents are increasingly asked to run ongoing multi-day...",
-      "detailed_summary": "arXiv:2611.28158v1 Announce Type: new Abstract: Language model agents are increasingly asked to run ongoing multi-day operations rather than finish isolated single-turn tasks. In daily operations, today's choices reshape later observations and cash constraints because empty shelves hide lost walk-in demand, short-shipped customers quietly shrink future orders weeks later, and emergency buying drains working capital. We introduce SMB Bench, a calibrated 90-day wholesale simulator with 18 causa...",
+      "ai_title": "大模型动态｜Searching for distant planets...",
+      "one_sentence_summary": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler a...",
+      "detailed_summary": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler and TESS space telescopes.",
       "key_points": [
-        "arXiv:2611.28158v1 Announce Type: new Abstract: Language model agents are increasingly asked to run ongoing multi-day...",
-        "In daily operations, today's choices reshape later observations and cash constraints because empty shelves hide lost...",
-        "We introduce SMB Bench, a calibrated 90-day wholesale simulator with 18 causally paired tasks and an 859-run frontier...",
-        "Across 16 frontier models, only 3 outperform a fixed buying rule; models often record a relevant diagnosis in their n...",
-        "To study how experience improves those failures in an open model (Qwen3.8-27B), we used training-business records to..."
+        "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler a..."
       ],
       "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "impact_analysis": {
@@ -3470,56 +3326,176 @@
         "policy": "",
         "finance": ""
       },
-      "topic_angle": "从能力、成本和生态角度解读：Measuring and Teaching Language Model Agents to Act on Delayed Consequences",
+      "topic_angle": "从能力、成本和生态角度解读：Searching for distant planets with Astra",
       "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "recommended": true,
-      "priority_score": 78.0,
+      "priority_score": 73.0,
       "confidence": 0.55,
       "tags": [
-        "模型发布",
-        "智能体",
-        "国际金融",
-        "论文研究"
+        "官方消息",
+        "编程工具"
       ],
-      "signal_strength": 66.54,
+      "signal_strength": 57.64,
       "reading_links": [
         {
-          "source_id": "arxiv_cs_lg",
-          "source_name": "arXiv cs.LG",
-          "source_type": "research",
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
           "source_role": "primary",
-          "original_title": "Measuring and Teaching Language Model Agents to Act on Delayed Consequences",
-          "url": "https://arxiv.org/abs/2611.28158",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.LG",
+          "original_title": "Searching for distant planets with Astra",
+          "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+          "published_at": "Tue, 24 Nov 2026 11:00:00 GMT",
+          "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
-        },
-        {
-          "source_id": "arxiv_cs_cl",
-          "source_name": "arXiv cs.CL",
-          "source_type": "research",
-          "source_role": "related",
-          "original_title": "Language Model Harnesses can be Compositional Generalizers",
-          "url": "https://arxiv.org/abs/2611.28298",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.CL",
-          "is_primary_reading_link": false,
-          "display_order": 2
         }
       ],
-      "source_count": 2,
+      "source_count": 1,
       "source_types": [
-        "research"
+        "official"
+      ]
+    },
+    {
+      "id": "712be492-67b2-5d6e-a19d-b1b7855230fa",
+      "event_date": "2026-11-25",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜How Intentful uses dots to mak...",
+      "one_sentence_summary": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolv...",
+      "detailed_summary": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolving issues.",
+      "key_points": [
+        "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolv..."
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：How Intentful uses dots to make more time for growth",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 70.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "论文研究"
+      ],
+      "signal_strength": 55.6,
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "How Intentful uses dots to make more time for growth",
+          "url": "https://openai.com/business/customer-stories/intentful-dots",
+          "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
+      ]
+    },
+    {
+      "id": "6734c7a0-f6c1-5071-954b-765a8eae4821",
+      "event_date": "2026-11-25",
+      "category": "大模型动态",
+      "ai_title": "大模型动态｜How iFood scales coding agents...",
+      "one_sentence_summary": "How iFood scales coding agents across 15,000 repositories",
+      "detailed_summary": "How iFood scales coding agents across 15,000 repositories",
+      "key_points": [
+        "How iFood scales coding agents across 15,000 repositories"
+      ],
+      "why_it_matters": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "impact_analysis": {
+        "technology": "需结合原文判断技术路线和能力边界。",
+        "business": "可关注对企业采购、产品竞争和商业模式的影响。",
+        "policy": "",
+        "finance": ""
+      },
+      "topic_angle": "从能力、成本和生态角度解读：How iFood scales coding agents across 15,000 repositories",
+      "avoid_angle": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "recommended": true,
+      "priority_score": 70.0,
+      "confidence": 0.55,
+      "tags": [
+        "官方消息",
+        "智能体",
+        "编程工具"
+      ],
+      "signal_strength": 57.1,
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "How iFood scales coding agents across 15,000 repositories",
+          "url": "https://openai.com/business/customer-stories/ifood",
+          "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ],
+      "source_count": 1,
+      "source_types": [
+        "official"
       ]
     }
   ],
   "topic_pool": [
     {
       "rank": 1,
+      "title": "从能力、成本和生态角度解读：GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "source_event_ids": [
+        "514aa170-2ca2-56d3-8056-26dfb63c7dba"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "GPT-6 models design protein structures and sequences using reasoning and code. Lab tests found evidence of binding ac...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "编程工具",
+        "产品更新",
+        "国际金融",
+        "论文研究"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "OpenAI News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 72.88,
+      "recommendation_reason": "含官方来源；标签：官方消息、编程工具、产品更新",
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+          "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities",
+          "published_at": "Tue, 24 Nov 2026 13:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 2,
       "title": "从能力、成本和生态角度解读：Introducing Claude Fable 5.2 and Claude Mythos 5.2 Our most capable models for daunting technical work, Claude Fable 5.2 and Claude Mythos 5.2 set a new bar in coding, finance, and the sciences.",
       "source_event_ids": [
-        "14bc5464-ae70-5384-9b84-ef01c96e8e3b"
+        "671d56ab-1ee5-54fc-a836-f44c37cf5db4"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "why_today": "Introducing Claude Fable 5.2 and Claude Mythos 5.2 \\ Anthropic Skip to main content News Research Policy Commitments...",
@@ -3557,188 +3533,19 @@
       ]
     },
     {
-      "rank": 2,
-      "title": "从能力、成本和生态角度解读：Richpanel helps companies automate 50% of support in 30 days",
-      "source_event_ids": [
-        "3aef9927-7da3-5214-ad85-39ab19a38aaf"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "Richpanel uses GPT-6 Astra and GPT-6.1 Sol to equip its AI support agents with tools and procedures, and GPT-6 Luna f...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "官方消息",
-        "智能体",
-        "产品更新",
-        "商业化"
-      ],
-      "source_count": 2,
-      "source_names": [
-        "OpenAI News",
-        "arXiv cs.AI"
-      ],
-      "source_types": [
-        "official",
-        "research"
-      ],
-      "signal_strength": 76.98,
-      "recommendation_reason": "2 个信源交叉确认；含官方来源；标签：官方消息、智能体、产品更新",
-      "reading_links": [
-        {
-          "source_id": "openai_news",
-          "source_name": "OpenAI News",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Richpanel helps companies automate 50% of support in 30 days",
-          "url": "https://openai.com/business/customer-stories/richpanel-ai-customer-support",
-          "published_at": "Mon, 23 Nov 2026 08:00:00 GMT",
-          "link_label": "OpenAI News",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        },
-        {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
-          "source_type": "research",
-          "source_role": "related",
-          "original_title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
-          "url": "https://arxiv.org/abs/2611.28202",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
-          "is_primary_reading_link": false,
-          "display_order": 2
-        }
-      ]
-    },
-    {
       "rank": 3,
-      "title": "从能力、成本和生态角度解读：Gemini Build intelligent agents",
+      "title": "从能力、成本和生态角度解读：MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
       "source_event_ids": [
-        "9cc62201-3b95-5a6b-b74f-f45184446cee"
+        "c79245f3-ef92-5483-9666-eba87a4a4656"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "�\b\u0000\u0000\u0000\u0000\u0000\u0002���v�Ȓ-��>\u0005Z}�S��\u0002E\u0000 �Mu�� WI�d�.��ņHp�@�\u0006H >��ꇸ����|{G\"1p�H�v\u0015O S\u0018\u0012���\u0011����\u0011��� ��\u0017#��\u0007��c�\u001a-ߍ�F��Fn�h�c��\u0007...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "官方消息",
-        "智能体"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "Google DeepMind Blog"
-      ],
-      "source_types": [
-        "official"
-      ],
-      "signal_strength": 63.76,
-      "recommendation_reason": "含官方来源；标签：官方消息、智能体",
-      "reading_links": [
-        {
-          "source_id": "google_deepmind_blog",
-          "source_name": "Google DeepMind Blog",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Gemini Build intelligent agents",
-          "url": "https://deepmind.google/models/gemini/",
-          "published_at": null,
-          "link_label": "Google DeepMind Blog",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 4,
-      "title": "从能力、成本和生态角度解读：Gemini Omni Create anything from anything",
-      "source_event_ids": [
-        "0308ae20-1cd0-5dea-bd4c-cb2a2f33db38"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "Gemini Omni — Google DeepMind Skip to main content Explore our next generation AI systems Explore models Gemini Gemin...",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "官方消息",
-        "智能体",
-        "产品更新",
-        "国际金融"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "Google DeepMind Blog"
-      ],
-      "source_types": [
-        "official"
-      ],
-      "signal_strength": 66.76,
-      "recommendation_reason": "含官方来源；标签：官方消息、智能体、产品更新",
-      "reading_links": [
-        {
-          "source_id": "google_deepmind_blog",
-          "source_name": "Google DeepMind Blog",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Gemini Omni Create anything from anything",
-          "url": "https://deepmind.google/models/gemini-omni/",
-          "published_at": null,
-          "link_label": "Google DeepMind Blog",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 5,
-      "title": "从能力、成本和生态角度解读：Gemini Audio Talk, create and control audio",
-      "source_event_ids": [
-        "67baf472-8842-5032-bf0a-97f772ee8c7d"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "Gemini Audio Talk, create and control audio",
-      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
-      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
-      "tags": [
-        "官方消息"
-      ],
-      "source_count": 1,
-      "source_names": [
-        "Google DeepMind Blog"
-      ],
-      "source_types": [
-        "official"
-      ],
-      "signal_strength": 62.26,
-      "recommendation_reason": "含官方来源；标签：官方消息",
-      "reading_links": [
-        {
-          "source_id": "google_deepmind_blog",
-          "source_name": "Google DeepMind Blog",
-          "source_type": "official",
-          "source_role": "primary",
-          "original_title": "Gemini Audio Talk, create and control audio",
-          "url": "https://deepmind.google/models/gemini-audio/",
-          "published_at": null,
-          "link_label": "Google DeepMind Blog",
-          "is_primary_reading_link": true,
-          "display_order": 1
-        }
-      ]
-    },
-    {
-      "rank": 6,
-      "title": "从能力、成本和生态角度解读：FinEvo: Recursive Self-Improvement for Long-Horizon Financial Modeling",
-      "source_event_ids": [
-        "70ec19db-92dc-5111-84c0-85d68bb82bdc"
-      ],
-      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.28239v1 Announce Type: new Abstract: Advances in large language models (LLMs) have expanded their role in...",
+      "why_today": "arXiv:2611.31301v1 Announce Type: new Abstract: Audio-video (AV) deepfakes can fake the face, the voice, or both. Mos...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
         "模型发布",
+        "评测榜单",
         "产品更新",
-        "国际金融",
         "论文研究"
       ],
       "source_count": 1,
@@ -3748,17 +3555,17 @@
       "source_types": [
         "research"
       ],
-      "signal_strength": 61.76,
-      "recommendation_reason": "标签：模型发布、产品更新、国际金融",
+      "signal_strength": 65.84,
+      "recommendation_reason": "标签：模型发布、评测榜单、产品更新",
       "reading_links": [
         {
           "source_id": "arxiv_cs_ai",
           "source_name": "arXiv cs.AI",
           "source_type": "research",
           "source_role": "primary",
-          "original_title": "FinEvo: Recursive Self-Improvement for Long-Horizon Financial Modeling",
-          "url": "https://arxiv.org/abs/2611.28239",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
+          "original_title": "MOZAIC: An Audio-Video Deepfake Benchmark for Telling What Is Fake",
+          "url": "https://arxiv.org/abs/2611.31301",
+          "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
           "link_label": "arXiv cs.AI",
           "is_primary_reading_link": true,
           "display_order": 1
@@ -3766,17 +3573,61 @@
       ]
     },
     {
-      "rank": 7,
-      "title": "从能力、成本和生态角度解读：Language Model Harnesses can be Compositional Generalizers",
+      "rank": 4,
+      "title": "从能力、成本和生态角度解读：Clay helps sales teams win with Codex and ChatGPT",
       "source_event_ids": [
-        "c7dc2210-87bf-5360-b5ce-edf818ed4f71"
+        "c2e138e5-16ce-55ef-8d7c-e7265b53ef2d"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.28298v1 Announce Type: new Abstract: Modern language models (LMs) are post-trained and deployed as agents...",
+      "why_today": "ChatGPT and Codex integrations help Clay’s users research deals and turn data into go-to-market plays, with GPT-6 mod...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
+        "官方消息",
+        "编程工具",
+        "产品更新",
+        "商业化",
+        "论文研究"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "OpenAI News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 68.12,
+      "recommendation_reason": "含官方来源；标签：官方消息、编程工具、产品更新",
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Clay helps sales teams win with Codex and ChatGPT",
+          "url": "https://openai.com/business/customer-stories/clay-plugins-openai",
+          "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "从能力、成本和生态角度解读：The Date You Didn't Set: The System-Prompt Date as a Hidden Variable in LLM Evaluation",
+      "source_event_ids": [
+        "b25f61c2-30bc-5980-a569-0c6d48d6fdcb"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "arXiv:2611.31254v1 Announce Type: new Abstract: The system prompt of many instruction-tuned models carries a date, us...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "评测榜单",
         "智能体",
+        "编程工具",
+        "融资并购",
         "论文研究"
       ],
       "source_count": 1,
@@ -3786,17 +3637,17 @@
       "source_types": [
         "research"
       ],
-      "signal_strength": 57.4,
-      "recommendation_reason": "标签：智能体、论文研究",
+      "signal_strength": 61.08,
+      "recommendation_reason": "标签：评测榜单、智能体、编程工具",
       "reading_links": [
         {
           "source_id": "arxiv_cs_cl",
           "source_name": "arXiv cs.CL",
           "source_type": "research",
           "source_role": "primary",
-          "original_title": "Language Model Harnesses can be Compositional Generalizers",
-          "url": "https://arxiv.org/abs/2611.28298",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
+          "original_title": "The Date You Didn't Set: The System-Prompt Date as a Hidden Variable in LLM Evaluation",
+          "url": "https://arxiv.org/abs/2611.31254",
+          "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
           "link_label": "arXiv cs.CL",
           "is_primary_reading_link": true,
           "display_order": 1
@@ -3804,10 +3655,10 @@
       ]
     },
     {
-      "rank": 8,
+      "rank": 6,
       "title": "从能力、成本和生态角度解读：Gemini models",
       "source_event_ids": [
-        "63fb2da5-7502-57d0-8a2a-f2ea4abda257"
+        "d18ce514-8cb1-5945-92a0-463aafa61aa0"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
       "why_today": "Gemini models",
@@ -3841,39 +3692,114 @@
       ]
     },
     {
-      "rank": 9,
-      "title": "从能力、成本和生态角度解读：AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
+      "rank": 7,
+      "title": "从能力、成本和生态角度解读：Validation Bias in Large Language Model Responses to Cancer Treatment Queries: A Factorial Cross-Sectional Study",
       "source_event_ids": [
-        "c71276b5-a2d1-57a3-abc8-f12bf622054c"
+        "9fe8123f-9a7d-54e2-aa5b-5974c4bfd2f6"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.28202v1 Announce Type: new Abstract: Multimodal foundation models can play video games well when the game...",
+      "why_today": "arXiv:2611.31251v1 Announce Type: new Abstract: Large language model (LLM) chatbots are increasingly used by patients...",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
-        "模型发布",
-        "智能体",
+        "国际金融",
         "论文研究"
       ],
       "source_count": 1,
       "source_names": [
-        "arXiv cs.AI"
+        "arXiv cs.CL"
       ],
       "source_types": [
         "research"
       ],
-      "signal_strength": 57.54,
-      "recommendation_reason": "标签：模型发布、智能体、论文研究",
+      "signal_strength": 56.04,
+      "recommendation_reason": "标签：国际金融、论文研究",
       "reading_links": [
         {
-          "source_id": "arxiv_cs_ai",
-          "source_name": "arXiv cs.AI",
+          "source_id": "arxiv_cs_cl",
+          "source_name": "arXiv cs.CL",
           "source_type": "research",
           "source_role": "primary",
-          "original_title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
-          "url": "https://arxiv.org/abs/2611.28202",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.AI",
+          "original_title": "Validation Bias in Large Language Model Responses to Cancer Treatment Queries: A Factorial Cross-Sectional Study",
+          "url": "https://arxiv.org/abs/2611.31251",
+          "published_at": "Wed, 25 Nov 2026 00:00:00 -0500",
+          "link_label": "arXiv cs.CL",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "从能力、成本和生态角度解读：Searching for distant planets with Astra",
+      "source_event_ids": [
+        "fab78b71-8091-5ff8-bdc5-004472b6a746"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "See how two amateur astronomers used Codex and Astra to find potential exoplanets in public data from NASA’s Kepler a...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "编程工具"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "OpenAI News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 57.64,
+      "recommendation_reason": "含官方来源；标签：官方消息、编程工具",
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "Searching for distant planets with Astra",
+          "url": "https://openai.com/index/searching-for-distant-planets-with-astra",
+          "published_at": "Tue, 24 Nov 2026 11:00:00 GMT",
+          "link_label": "OpenAI News",
+          "is_primary_reading_link": true,
+          "display_order": 1
+        }
+      ]
+    },
+    {
+      "rank": 9,
+      "title": "从能力、成本和生态角度解读：How Intentful uses dots to make more time for growth",
+      "source_event_ids": [
+        "712be492-67b2-5d6e-a19d-b1b7855230fa"
+      ],
+      "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
+      "why_today": "Marina Petrova’s dot Aria helps research websites and build proposals, while proactively flagging messages and resolv...",
+      "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
+      "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
+      "tags": [
+        "官方消息",
+        "论文研究"
+      ],
+      "source_count": 1,
+      "source_names": [
+        "OpenAI News"
+      ],
+      "source_types": [
+        "official"
+      ],
+      "signal_strength": 55.6,
+      "recommendation_reason": "含官方来源；标签：官方消息、论文研究",
+      "reading_links": [
+        {
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
+          "source_role": "primary",
+          "original_title": "How Intentful uses dots to make more time for growth",
+          "url": "https://openai.com/business/customer-stories/intentful-dots",
+          "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
+          "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
         }
@@ -3881,59 +3807,54 @@
     },
     {
       "rank": 10,
-      "title": "从能力、成本和生态角度解读：Measuring and Teaching Language Model Agents to Act on Delayed Consequences",
+      "title": "从能力、成本和生态角度解读：How iFood scales coding agents across 15,000 repositories",
       "source_event_ids": [
-        "f22803a3-b0a5-5636-b879-17921e85d421"
+        "6734c7a0-f6c1-5071-954b-765a8eae4821"
       ],
       "core_argument": "可能影响模型能力、成本、产品节奏或开发者生态，适合作为 AI 选题线索继续跟进。",
-      "why_today": "arXiv:2611.28158v1 Announce Type: new Abstract: Language model agents are increasingly asked to run ongoing multi-day...",
+      "why_today": "How iFood scales coding agents across 15,000 repositories",
       "differentiation": "避免只复述消息本身，优先补充产业、政策或商业影响。",
       "risk_notes": "发布前复核原文链接、时间、数字和政策表述。",
       "tags": [
-        "模型发布",
+        "官方消息",
         "智能体",
-        "国际金融",
-        "论文研究"
+        "编程工具"
       ],
-      "source_count": 2,
+      "source_count": 1,
       "source_names": [
-        "arXiv cs.LG",
-        "arXiv cs.CL"
+        "OpenAI News"
       ],
       "source_types": [
-        "research"
+        "official"
       ],
-      "signal_strength": 66.54,
-      "recommendation_reason": "2 个信源交叉确认；标签：模型发布、智能体、国际金融",
+      "signal_strength": 57.1,
+      "recommendation_reason": "含官方来源；标签：官方消息、智能体、编程工具",
       "reading_links": [
         {
-          "source_id": "arxiv_cs_lg",
-          "source_name": "arXiv cs.LG",
-          "source_type": "research",
+          "source_id": "openai_news",
+          "source_name": "OpenAI News",
+          "source_type": "official",
           "source_role": "primary",
-          "original_title": "Measuring and Teaching Language Model Agents to Act on Delayed Consequences",
-          "url": "https://arxiv.org/abs/2611.28158",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.LG",
+          "original_title": "How iFood scales coding agents across 15,000 repositories",
+          "url": "https://openai.com/business/customer-stories/ifood",
+          "published_at": "Tue, 24 Nov 2026 00:00:00 GMT",
+          "link_label": "OpenAI News",
           "is_primary_reading_link": true,
           "display_order": 1
-        },
-        {
-          "source_id": "arxiv_cs_cl",
-          "source_name": "arXiv cs.CL",
-          "source_type": "research",
-          "source_role": "related",
-          "original_title": "Language Model Harnesses can be Compositional Generalizers",
-          "url": "https://arxiv.org/abs/2611.28298",
-          "published_at": "Tue, 24 Nov 2026 00:00:00 -0500",
-          "link_label": "arXiv cs.CL",
-          "is_primary_reading_link": false,
-          "display_order": 2
         }
       ]
     }
   ],
   "archive_entries": [
+    {
+      "date": "2026-11-25",
+      "generated_at": "2026-11-25T08:35:34.557008+00:00",
+      "selected_event_count": 60,
+      "event_count": 140,
+      "top10_count": 10,
+      "url": "archive/2026-11-25/",
+      "json_url": "archive/2026-11-25/daily-digest.json"
+    },
     {
       "date": "2026-11-24",
       "generated_at": "2026-11-24T09:55:34.390402+00:00",
